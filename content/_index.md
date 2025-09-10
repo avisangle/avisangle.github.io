@@ -21,6 +21,7 @@ I'm **Avinash Sangle**, a Software Engineer specializing in:
 {{< cards >}}
 {{< card link="/projects/project1" title="Jenkins MCP Server" subtitle="AI integration for Jenkins through Model Context Protocol" >}}
 {{< card link="/projects/project2" title="Jenkins Chatbot Plugin" subtitle="Conversational AI interface for Jenkins operations" >}}
+{{< card link="/projects/project3" title="Calculator Server" subtitle="Go-based MCP server for mathematical computation capabilities" >}}
 {{< /cards >}}
 
 ### What You'll Find Here
