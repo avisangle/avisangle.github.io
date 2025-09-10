@@ -14,6 +14,7 @@ weight: 1
 
 {{< cards >}}
 {{< card link="../project1" title="Jenkins MCP Server" subtitle="MCP server for Jenkins integration - AI agents interaction" icon="server" >}}
+{{< card link="../project3" title="Calculator Server" subtitle="Go-based MCP server for mathematical computations" icon="calculator" >}}
 {{< card link="https://github.com/avisangle/SMSSync" title="SMSSync" subtitle="SMS gateway for Android (Java)" icon="device-mobile" >}}
 {{< card link="https://github.com/avisangle?tab=repositories" title="View All Projects" subtitle="Complete portfolio on GitHub" icon="folder-open" >}}
 {{< /cards >}}
