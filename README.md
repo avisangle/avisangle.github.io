@@ -1,7 +1,7 @@
 # Hi there, I'm Avinash Sangle 👋
 
 ![Profile Views](https://komarev.com/ghpv/?username=avisangle&color=blue&style=flat-square)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://linkedin.com/in/avinash-sangle)](https://linkedin.com/in/avinash-sangle)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/avinash-sangle-0394481a/)](https://www.linkedin.com/in/avinash-sangle-0394481a/)
 [![Website](https://img.shields.io/badge/-Portfolio-orange?style=flat-square&logo=firefox&logoColor=white&link=https://avisangle.github.io/)](https://avisangle.github.io/)
 [![Email](https://img.shields.io/badge/-Email-red?style=flat-square&logo=gmail&logoColor=white&link=mailto:aavi.sangle@gmail.com)](mailto:aavi.sangle@gmail.com)
 
@@ -34,6 +34,7 @@ I'm a **Software Engineer** specializing in **AI integration**, **DevOps automat
 ![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 
 ### Databases & Cloud
+![Oracle](https://img.shields.io/badge/-Oracle-F80000?style=flat-square&logo=oracle&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
 ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
 ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
@@ -102,7 +103,7 @@ I'm a **Software Engineer** specializing in **AI integration**, **DevOps automat
 ## 🌐 Let's Connect!
 
 - 🌍 **Portfolio**: [avisangle.github.io](https://avisangle.github.io/)
-- 💼 **LinkedIn**: [Avinash Sangle](https://linkedin.com/in/avinash-sangle)
+- 💼 **LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinash-sangle-0394481a/)
 - 📧 **Email**: [aavi.sangle@gmail.com](mailto:aavi.sangle@gmail.com)
 - 💻 **GitHub**: You're already here!
 
