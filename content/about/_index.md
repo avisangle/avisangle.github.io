@@ -46,7 +46,7 @@ I'm currently exploring the intersection of AI and DevOps, building tools that m
 ## Get In Touch
 
 - **Email**: [aavi.sangle@gmail.com](mailto:aavi.sangle@gmail.com)
-- **LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinash-sangle-0394481a/)
+- **LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinashsangle/)
 
 ---
 

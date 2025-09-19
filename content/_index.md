@@ -5,7 +5,7 @@ toc: false
 
 
 **Email**: [aavi.sangle@gmail.com](mailto:aavi.sangle@gmail.com)
-**LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinash-sangle-0394481a/)
+**LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinashsangle/)
 **GitHub**: [avisangle](https://github.com/avisangle)
 ## Welcome to My Portfolio 👋
 

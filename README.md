@@ -1,7 +1,7 @@
 # Hi there, I'm Avinash Sangle 👋
 
 ![Profile Views](https://komarev.com/ghpv/?username=avisangle&color=blue&style=flat-square)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/avinash-sangle-0394481a/)](https://www.linkedin.com/in/avinash-sangle-0394481a/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/avinashsangle/)](https://www.linkedin.com/in/avinashsangle/)
 [![Website](https://img.shields.io/badge/-Portfolio-orange?style=flat-square&logo=firefox&logoColor=white&link=https://avisangle.github.io/)](https://avisangle.github.io/)
 [![Email](https://img.shields.io/badge/-Email-red?style=flat-square&logo=gmail&logoColor=white&link=mailto:aavi.sangle@gmail.com)](mailto:aavi.sangle@gmail.com)
 
@@ -103,7 +103,7 @@ I'm a **Software Engineer** specializing in **AI integration**, **DevOps automat
 ## 🌐 Let's Connect!
 
 - 🌍 **Portfolio**: [avisangle.github.io](https://avisangle.github.io/)
-- 💼 **LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinash-sangle-0394481a/)
+- 💼 **LinkedIn**: [Avinash Sangle](https://www.linkedin.com/in/avinashsangle/)
 - 📧 **Email**: [aavi.sangle@gmail.com](mailto:aavi.sangle@gmail.com)
 - 💻 **GitHub**: You're already here!
 
