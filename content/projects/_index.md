@@ -11,6 +11,7 @@ Here are some of my projects that showcase my expertise in AI integration, DevOp
 {{< card link="project1" title="Jenkins MCP Server" subtitle="MCP server for Jenkins integration - enabling AI agents to interact with Jenkins" >}}
 {{< card link="project2" title="Jenkins Chatbot Plugin" subtitle="Conversational AI interface for Jenkins operations and build management" >}}
 {{< card link="project3" title="Calculator Server" subtitle="Go-based MCP server providing mathematical computation capabilities for AI applications" >}}
+{{< card link="project4" title="WP Coding / Error Corrections using MCP" subtitle="WordPress development and error correction services enhanced with AI-assisted debugging" >}}
 {{< /cards >}}
 
 ## All Repositories
