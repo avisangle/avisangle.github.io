@@ -8,6 +8,15 @@ theme = "hextra"
     [markup.goldmark.renderer]
       unsafe = true
 
+[params]
+  # Search configuration
+  [params.search]
+    enable = true
+    type = "flexsearch"
+
+    [params.search.flexsearch]
+      index = "content"
+      tokenize = "forward"
 
 # Navigation Menu
 [[menu.main]]
