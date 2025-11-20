@@ -884,6 +884,11 @@ section {
     overflow: hidden;
 }
 
+.project-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
 .breadcrumb {
     font-size: 0.9rem;
     color: var(--text-secondary);
