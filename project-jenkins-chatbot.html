@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jenkins Chatbot Plugin - Conversational AI interface for Jenkins operations">
+    <meta name="author" content="Avinash Sangle">
+    <title>Jenkins Chatbot Plugin | Avinash Sangle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AS</a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <span>Jenkins Chatbot Plugin</span>
+            </div>
+            <h1 class="project-hero-title">Jenkins Chatbot Plugin</h1>
+            <p class="project-hero-subtitle">Conversational AI interface for Jenkins to manage builds and deployments</p>
+            <div class="project-meta">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">AI</span>
+                <span class="tech-badge">Jenkins</span>
+            </div>
+            <div class="project-hero-cta">
+                <a href="https://github.com/avisangle/jenkins-chatbot-plugin" target="_blank" class="btn btn-primary">
+                    View on GitHub →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <article class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <!-- Overview -->
+                    <section class="content-section">
+                        <h2>Project Overview</h2>
+                        <p>The Jenkins Chatbot Plugin revolutionizes how teams interact with their CI/CD infrastructure by embedding an AI-powered conversational interface directly within Jenkins. This project transforms complex Jenkins operations into simple, natural language commands.</p>
+
+                        <h3>What It Does</h3>
+                        <p>This plugin embeds an intelligent chatbot interface within Jenkins, enabling users to manage builds, deployments, and system tasks using natural language. Key capabilities include:</p>
+                        <ul>
+                            <li><strong>Natural Language Operations:</strong> Trigger builds, check status, and manage pipelines through conversational commands</li>
+                            <li><strong>Security Integration:</strong> Fully respects Jenkins authentication and authorization models</li>
+                            <li><strong>Context-Aware Responses:</strong> Understands project context and provides relevant suggestions</li>
+                            <li><strong>Multi-User Support:</strong> Handles concurrent conversations from multiple team members</li>
+                        </ul>
+
+                        <h3>Why It Matters</h3>
+                        <p>Traditional Jenkins interfaces require knowledge of specific UI locations, job names, and parameter configurations. The Chatbot Plugin solves these challenges by:</p>
+                        <ul>
+                            <li>Reducing friction in CI/CD workflows through conversational interactions</li>
+                            <li>Lowering the barrier to entry for new team members</li>
+                            <li>Accelerating common operations through natural language shortcuts</li>
+                            <li>Providing intelligent assistance for troubleshooting build failures</li>
+                            <li>Enabling mobile-friendly access through chat-based interactions</li>
+                        </ul>
+
+                        <div class="highlight-box">
+                            <h4>💡 Real-World Impact</h4>
+                            <p>Developed as part of my drive to explore AI-enhanced DevOps tooling, this plugin demonstrates how conversational AI can make complex technical systems more accessible and efficient for development teams.</p>
+                        </div>
+                    </section>
+
+                    <!-- Implementation Highlights -->
+                    <section class="content-section">
+                        <h2>Implementation Highlights</h2>
+
+                        <h3>Technical Architecture</h3>
+                        <p>The chatbot is built with Python and integrates seamlessly with Jenkins infrastructure. The architecture emphasizes:</p>
+
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🤖</div>
+                                <h4>NLP Engine</h4>
+                                <p>Advanced natural language processing to understand user intent and context</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔐</div>
+                                <h4>Security Layer</h4>
+                                <p>All operations respect user permissions and Jenkins access controls</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">💬</div>
+                                <h4>Conversational Flow</h4>
+                                <p>Multi-turn conversations with context retention for complex operations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📊</div>
+                                <h4>Smart Suggestions</h4>
+                                <p>Proactive recommendations based on project state and history</p>
+                            </div>
+                        </div>
+
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><strong>Build Management:</strong> "Start a build for project-X" or "What's the status of the latest build?"</li>
+                            <li><strong>Log Analysis:</strong> "Why did the last build fail?" with intelligent error extraction</li>
+                            <li><strong>Parameter Handling:</strong> Conversational parameter collection for parameterized builds</li>
+                            <li><strong>Status Reports:</strong> "Show me all failed builds from today"</li>
+                            <li><strong>Pipeline Control:</strong> Manage pipeline stages through natural commands</li>
+                        </ul>
+
+                        <h3>Example Interactions</h3>
+                        <div class="code-example">
+                            <div class="code-header">Conversational Examples</div>
+                            <pre><code>User: "Trigger a build for the backend API"
+Bot: "Starting build for backend-api-main. Build #47 is now running."
+
+User: "Why did build #46 fail?"
+Bot: "Build #46 failed due to test failures in AuthenticationTest.java:42.
+     The error indicates a connection timeout to the test database."
+
+User: "Deploy version 2.3.1 to staging"
+Bot: "Deployment initiated. Parameters:
+     - Version: 2.3.1
+     - Environment: staging
+     Would you like to watch the progress?"</code></pre>
+                        </div>
+                    </section>
+
+                    <!-- Screenshots/Demo -->
+                    <section class="content-section">
+                        <h2>Demo & Usage</h2>
+                        <div class="demo-placeholder">
+                            <div class="demo-icon">🎬</div>
+                            <p>Demo video and screenshots coming soon</p>
+                            <p class="demo-text">This section will showcase:</p>
+                            <ul>
+                                <li>Chatbot interface within Jenkins UI</li>
+                                <li>Natural language build triggering</li>
+                                <li>Intelligent error analysis and troubleshooting</li>
+                                <li>Multi-turn conversational flows</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Tech Stack -->
+                    <section class="content-section">
+                        <h2>Technology Stack</h2>
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <strong>Language:</strong> Python
+                            </div>
+                            <div class="tech-item">
+                                <strong>AI/ML:</strong> NLP libraries for intent recognition
+                            </div>
+                            <div class="tech-item">
+                                <strong>Integration:</strong> Jenkins REST API
+                            </div>
+                            <div class="tech-item">
+                                <strong>Frontend:</strong> Embedded chat interface
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- GitHub Link -->
+                    <section class="content-section cta-section">
+                        <h2>Explore the Code</h2>
+                        <p>The Jenkins Chatbot Plugin is open source. Check out the repository to see how conversational AI can be integrated with CI/CD systems.</p>
+                        <a href="https://github.com/avisangle/jenkins-chatbot-plugin" target="_blank" class="btn btn-primary btn-lg">
+                            View Repository on GitHub →
+                        </a>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value">Active Development</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Open Source</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Category:</span>
+                            <span class="info-value">DevOps / AI</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Projects</h3>
+                        <div class="related-projects">
+                            <a href="project-jenkins-mcp.html" class="related-project">
+                                <span class="tech-badge-small">Python</span>
+                                <strong>Jenkins MCP Server</strong>
+                                <p>AI integration through MCP</p>
+                            </a>
+                            <a href="project-calculator.html" class="related-project">
+                                <span class="tech-badge-small">Go</span>
+                                <strong>Calculator Server</strong>
+                                <p>MCP server for math operations</p>
+                            </a>
+                            <a href="project-wp-mcp.html" class="related-project">
+                                <span class="tech-badge-small">PHP</span>
+                                <strong>WP Coding with MCP</strong>
+                                <p>AI-assisted WordPress development</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Quick Links</h3>
+                        <div class="quick-links">
+                            <a href="projects.html" class="quick-link">← All Projects</a>
+                            <a href="index.html" class="quick-link">← Home</a>
+                            <a href="index.html#contact" class="quick-link">Contact Me</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Avinash Sangle. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

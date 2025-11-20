@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jenkins MCP Server - AI integration for Jenkins through Model Context Protocol">
+    <meta name="author" content="Avinash Sangle">
+    <title>Jenkins MCP Server | Avinash Sangle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AS</a>
+            <div class="nav-links">
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <a href="projects.html">Projects</a> / <span>Jenkins MCP Server</span>
+            </div>
+            <h1 class="project-hero-title">Jenkins MCP Server</h1>
+            <p class="project-hero-subtitle">AI integration for Jenkins through Model Context Protocol</p>
+            <div class="project-meta">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">MCP</span>
+                <span class="tech-badge">Jenkins</span>
+            </div>
+            <div class="project-hero-cta">
+                <a href="https://github.com/avisangle/jenkins-mcp-server" target="_blank" class="btn btn-primary">
+                    View on GitHub →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <article class="project-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <!-- Overview -->
+                    <section class="content-section">
+                        <h2>Project Overview</h2>
+                        <p>The Jenkins MCP Server is a groundbreaking integration that enables Jenkins to serve context and operations through the Model Context Protocol (MCP). This project bridges the gap between AI agents and Jenkins, allowing for unprecedented levels of automation and AI-assisted DevOps workflows.</p>
+
+                        <h3>What It Does</h3>
+                        <p>This MCP server implementation for Jenkins enables external clients—particularly LLM-based tools and AI agents—to interact programmatically with Jenkins jobs, builds, and operational context. The integration provides:</p>
+                        <ul>
+                            <li><strong>Built-in Tools:</strong> Includes essential tools such as <code>whoAmI</code>, job status queries, and build log retrieval</li>
+                            <li><strong>AI Agent Integration:</strong> Allows AI assistants to understand Jenkins state and execute operations through natural language</li>
+                            <li><strong>Context Sharing:</strong> Exposes Jenkins context to external systems through standardized MCP interfaces</li>
+                            <li><strong>Extensible Architecture:</strong> Supports custom tool development for specific CI/CD workflows</li>
+                        </ul>
+
+                        <h3>Why It Matters</h3>
+                        <p>Traditional CI/CD interactions require manual intervention or complex scripting. The Jenkins MCP Server transforms this paradigm by:</p>
+                        <ul>
+                            <li>Enabling conversational interactions with Jenkins through AI agents</li>
+                            <li>Reducing the learning curve for complex Jenkins operations</li>
+                            <li>Accelerating troubleshooting through AI-powered log analysis</li>
+                            <li>Creating opportunities for intelligent automation beyond traditional scripting</li>
+                            <li>Establishing a foundation for next-generation DevOps tooling</li>
+                        </ul>
+                    </section>
+
+                    <!-- Implementation Highlights -->
+                    <section class="content-section">
+                        <h2>Implementation Highlights</h2>
+
+                        <h3>Technical Architecture</h3>
+                        <p>The project is built with Python and Node.js, providing a robust MCP server implementation that integrates seamlessly with Jenkins. Key architectural decisions include:</p>
+
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">🔌</div>
+                                <h4>MCP Server Architecture</h4>
+                                <p>Python-based MCP server with Node.js wrapper for seamless integration with Jenkins</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔒</div>
+                                <h4>Security First</h4>
+                                <p>Respects Jenkins' authentication and authorization models, ensuring secure AI interactions</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⚡</div>
+                                <h4>High Performance</h4>
+                                <p>Optimized for low-latency responses to support real-time AI conversations</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🧩</div>
+                                <h4>Extensible Design</h4>
+                                <p>Modular tool system allows custom extensions for specific use cases</p>
+                            </div>
+                        </div>
+
+                        <h3>Core Capabilities</h3>
+                        <ul>
+                            <li><strong>Job Management:</strong> Query job configurations, trigger builds, and monitor execution status</li>
+                            <li><strong>Build Operations:</strong> Access build logs, retrieve artifacts, and analyze build results</li>
+                            <li><strong>Context Awareness:</strong> Provide AI agents with comprehensive Jenkins environment information</li>
+                            <li><strong>Tool Extensibility:</strong> Support for custom tool development to extend functionality</li>
+                        </ul>
+                    </section>
+
+                    <!-- Screenshots/Demo -->
+                    <section class="content-section">
+                        <h2>Demo & Usage</h2>
+                        <div class="demo-placeholder">
+                            <div class="demo-icon">🎬</div>
+                            <p>Demo video and screenshots coming soon</p>
+                            <p class="demo-text">This section will showcase the Jenkins MCP Server in action, including:</p>
+                            <ul>
+                                <li>AI agent querying Jenkins job status</li>
+                                <li>Triggering builds through natural language commands</li>
+                                <li>Analyzing build logs with AI assistance</li>
+                                <li>Integrating with popular LLM tools</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Tech Stack -->
+                    <section class="content-section">
+                        <h2>Technology Stack</h2>
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <strong>Backend:</strong> Python 3.12+
+                            </div>
+                            <div class="tech-item">
+                                <strong>Runtime:</strong> Node.js 14.0+
+                            </div>
+                            <div class="tech-item">
+                                <strong>Protocol:</strong> Model Context Protocol (MCP)
+                            </div>
+                            <div class="tech-item">
+                                <strong>Libraries:</strong> FastAPI, Pydantic, Requests, Cachetools
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- GitHub Link -->
+                    <section class="content-section cta-section">
+                        <h2>Explore the Code</h2>
+                        <p>The Jenkins MCP Server is open source and available on GitHub. Check out the repository to see the implementation details, contribute to the project, or use it in your own Jenkins setup.</p>
+                        <a href="https://github.com/avisangle/jenkins-mcp-server" target="_blank" class="btn btn-primary btn-lg">
+                            View Repository on GitHub →
+                        </a>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>Project Info</h3>
+                        <div class="info-item">
+                            <span class="info-label">Status:</span>
+                            <span class="info-value">Active Development</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Type:</span>
+                            <span class="info-value">Open Source</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Category:</span>
+                            <span class="info-value">DevOps / AI</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Projects</h3>
+                        <div class="related-projects">
+                            <a href="project-jenkins-chatbot.html" class="related-project">
+                                <span class="tech-badge-small">Python</span>
+                                <strong>Jenkins Chatbot Plugin</strong>
+                                <p>Conversational AI for Jenkins</p>
+                            </a>
+                            <a href="project-calculator.html" class="related-project">
+                                <span class="tech-badge-small">Go</span>
+                                <strong>Calculator Server</strong>
+                                <p>MCP server for math operations</p>
+                            </a>
+                            <a href="project-wp-mcp.html" class="related-project">
+                                <span class="tech-badge-small">WordPress</span>
+                                <strong>WP Coding with MCP</strong>
+                                <p>AI-assisted WordPress development</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Quick Links</h3>
+                        <div class="quick-links">
+                            <a href="projects.html" class="quick-link">← All Projects</a>
+                            <a href="index.html" class="quick-link">← Home</a>
+                            <a href="index.html#contact" class="quick-link">Contact Me</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Avinash Sangle. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

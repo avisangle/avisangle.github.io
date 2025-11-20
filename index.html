@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avinash Sangle - Software Engineer specializing in Databases, Automation, AI Agents, and Cloud Technologies">
+    <meta name="author" content="Avinash Sangle">
+    <title>Avinash Sangle | Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">AS</a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot" style="background: #ff5f56;"></span>
+                    <span class="terminal-dot" style="background: #ffbd2e;"></span>
+                    <span class="terminal-dot" style="background: #27c93f;"></span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line">
+                        <span class="prompt">avinash@portfolio</span>
+                        <span class="path">~</span>
+                        <span class="command">$ whoami</span>
+                    </p>
+                    <p class="terminal-output">
+                        <span id="typed-text"></span>
+                        <span class="cursor">_</span>
+                    </p>
+                </div>
+            </div>
+            <h1 class="hero-title">Hi, I'm <span class="gradient-text">Avinash Sangle</span></h1>
+            <p class="hero-subtitle">
+                Software Engineer | <span class="role-rotate"></span>
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Software Engineer specializing in modern technologies that drive digital transformation.</p>
+                    <p>I believe in building solutions that are <strong>efficient</strong>, <strong>scalable</strong>, <strong>maintainable</strong>, and <strong>user-focused</strong>.</p>
+                    <p>Currently exploring the intersection of AI and DevOps, building tools that make complex operations more accessible through conversational interfaces and intelligent automation.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">AI</div>
+                        <div class="stat-label">Focus Area</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">DevOps</div>
+                        <div class="stat-label">Expertise</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <p>Database design and optimization, query performance tuning, data modeling, SQL and NoSQL solutions</p>
+                </div>
+                <div class="skill-card" data-delay="100">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Automation</h3>
+                    <p>CI/CD pipelines, Infrastructure as Code, process automation, DevOps tooling and integration</p>
+                </div>
+                <div class="skill-card" data-delay="200">
+                    <div class="skill-icon">🧠</div>
+                    <h3>AI Agents</h3>
+                    <p>AI-powered automation, conversational interfaces, Model Context Protocol implementations</p>
+                </div>
+                <div class="skill-card" data-delay="300">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud Technologies</h3>
+                    <p>Scalable cloud architecture, containerization, microservices design, cloud-native development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="bento-grid">
+                <!-- Large Project Card -->
+                <div class="project-card large" data-tech="Python">
+                    <div class="project-header">
+                        <span class="project-tag">Featured</span>
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <h3 class="project-title">Jenkins MCP Server</h3>
+                    <p class="project-description">Enables Jenkins to serve context and operations through the Model Context Protocol for AI integration. Bridges the gap between AI agents and Jenkins for deeper automation.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">MCP</span>
+                        <span class="tech-pill">Jenkins</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="project-jenkins-mcp.html" class="project-link">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Medium Project Card 1 -->
+                <div class="project-card medium" data-tech="Python">
+                    <div class="project-header">
+                        <span class="tech-badge">Python</span>
+                    </div>
+                    <h3 class="project-title">Jenkins Chatbot Plugin</h3>
+                    <p class="project-description">Conversational AI interface for Jenkins to manage builds and deployments via natural language commands.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">AI</span>
+                        <span class="tech-pill">Jenkins</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="project-jenkins-chatbot.html" class="project-link">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Medium Project Card 2 -->
+                <div class="project-card medium" data-tech="Go">
+                    <div class="project-header">
+                        <span class="tech-badge">Go</span>
+                    </div>
+                    <h3 class="project-title">Calculator Server</h3>
+                    <p class="project-description">Go-based MCP server providing comprehensive mathematical computation capabilities for AI applications.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">Go</span>
+                        <span class="tech-pill">MCP</span>
+                        <span class="tech-pill">Math</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="project-calculator.html" class="project-link">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Small Project Card -->
+                <div class="project-card small" data-tech="PHP">
+                    <div class="project-header">
+                        <span class="tech-badge">PHP</span>
+                    </div>
+                    <h3 class="project-title">WP Coding with MCP</h3>
+                    <p class="project-description">WordPress development enhanced with AI-assisted debugging and code improvements.</p>
+                    <div class="project-tech">
+                        <span class="tech-pill">WordPress</span>
+                        <span class="tech-pill">PHP</span>
+                        <span class="tech-pill">MCP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="project-wp-mcp.html" class="project-link">
+                            View Project →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- View All Card -->
+                <div class="project-card view-all">
+                    <div class="view-all-content">
+                        <div class="view-all-icon">📁</div>
+                        <h3>Explore More</h3>
+                        <p>View all projects or visit my GitHub profile</p>
+                        <div class="view-all-buttons">
+                            <a href="projects.html" class="btn btn-primary">
+                                All Projects →
+                            </a>
+                            <a href="https://github.com/avisangle?tab=repositories" target="_blank" class="btn btn-secondary">
+                                GitHub Profile →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <p class="contact-text">Feel free to reach out for collaborations, opportunities, or just a friendly chat!</p>
+                <div class="contact-links">
+                    <a href="mailto:aavi.sangle@gmail.com" class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">aavi.sangle@gmail.com</div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" class="contact-card">
+                        <div class="contact-icon">💼</div>
+                        <div>
+                            <div class="contact-label">LinkedIn</div>
+                            <div class="contact-value">Avinash Sangle</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/avisangle" target="_blank" class="contact-card">
+                        <div class="contact-icon">💻</div>
+                        <div>
+                            <div class="contact-label">GitHub</div>
+                            <div class="contact-value">@avisangle</div>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@AIAgentOps" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461.001 461.001" style="width: 48px; height: 48px;">
+                                <path fill="currentColor" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="contact-label">YouTube</div>
+                            <div class="contact-value">@AIAgentOps</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Avinash Sangle. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
