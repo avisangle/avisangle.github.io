@@ -39,6 +39,7 @@ All project pages now have:
 #### Site Configuration
 - **sitemap.xml**: Updated all project dates to 2026-01-12
 - **robots.txt**: Configured to block `project-template.html`
+- **CNAME**: Custom domain configuration added
 
 ---
 
