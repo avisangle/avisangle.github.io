@@ -24,6 +24,39 @@
     <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Calculator Server","description":"Go-based MCP server for mathematical computations with comprehensive toolkit","applicationCategory":"DeveloperApplication","programmingLanguage":"Go","author":{"@type":"Person","name":"Avinash Sangle"},"url":"https://github.com/avisangle/calculator-server"}
   </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Calculator Server", "item": "https://avinashsangle.com/project-calculator-server.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Calculator Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Calculator Server is a high-performance Go-based MCP server providing 13+ mathematical computation tools for AI agents and applications through the Model Context Protocol."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why use Go for the Calculator Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Go's concurrency model and high performance make it ideal for low-latency computation services that AI agents require for real-time mathematical operations."}
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>

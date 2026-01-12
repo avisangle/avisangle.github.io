@@ -65,6 +65,39 @@
     "url": "https://socia-media-iota.vercel.app/"
   }
   </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Social Media Auto-Poster", "item": "https://avinashsangle.com/project-social-media-auto-poster.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Which social media platforms are supported?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The platform supports Twitter, LinkedIn, Facebook, Instagram, and Reddit. All platforms use OAuth 2.0 for secure connection."}
+            },
+            {
+                "@type": "Question",
+                "name": "How does AI content generation work?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The platform uses AI models like Gemini and OpenAI to generate platform-optimized content based on your preferences, RSS feeds, and content style settings."}
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>

@@ -24,6 +24,39 @@
     <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Jenkins Chatbot Plugin","description":"AI-powered conversational interface for Jenkins CI/CD operations","applicationCategory":"DeveloperApplication","author":{"@type":"Person","name":"Avinash Sangle"},"url":"https://github.com/avisangle/jenkins-chatbot-plugin"}
   </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Jenkins Chatbot Plugin", "item": "https://avinashsangle.com/project-jenkins-chatbot.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I interact with Jenkins using the chatbot?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Simply type natural language commands like 'trigger build for project X' or 'show me the latest test results'. The AI understands your intent and executes the appropriate Jenkins action."}
+            },
+            {
+                "@type": "Question",
+                "name": "Does the chatbot respect Jenkins permissions?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the chatbot is fully integrated with Jenkins RBAC. Users can only perform actions they're authorized for, maintaining complete security compliance."}
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
