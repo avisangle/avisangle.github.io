@@ -67,13 +67,38 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "How long does Twitter OAuth setup take with this wizard?",
-                "acceptedAnswer": {"@type": "Answer", "text": "The wizard reduces setup time from 30+ minutes to under 2 minutes by auto-generating Make.com scenarios with pre-filled credentials."}
+                "name": "What is the Twitter OAuth Setup Wizard?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The Twitter OAuth Setup Wizard is a tool that simplifies Twitter API OAuth 2.0 configuration for Make.com automation. It features a guided 4-step process that generates ready-to-import Make.com scenarios with pre-filled credentials and PKCE security."}
             },
             {
                 "@type": "Question",
-                "name": "What is PKCE and why is it important?",
-                "acceptedAnswer": {"@type": "Answer", "text": "PKCE (Proof Key for Code Exchange) is an OAuth 2.0 security extension that protects against authorization code interception attacks. This wizard implements PKCE with SHA-256 for enterprise-grade security."}
+                "name": "How long does Twitter OAuth setup take with this wizard?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The wizard reduces Twitter OAuth setup time from 30+ minutes to under 2 minutes by auto-generating Make.com scenarios with pre-filled credentials, correct callback URLs, and properly configured PKCE parameters."}
+            },
+            {
+                "@type": "Question",
+                "name": "What is PKCE and why is it important for Twitter OAuth?",
+                "acceptedAnswer": {"@type": "Answer", "text": "PKCE (Proof Key for Code Exchange) is an OAuth 2.0 security extension that protects against authorization code interception attacks. Twitter requires PKCE for public clients. This wizard implements PKCE with SHA-256 hashing for enterprise-grade security."}
+            },
+            {
+                "@type": "Question",
+                "name": "How to fix Twitter OAuth callback URL mismatch in Make.com?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Callback URL mismatches occur when the URL in Twitter Developer Portal doesn't exactly match Make.com's expected URL. This wizard auto-generates the correct callback URL and provides copy-paste values to prevent this common OAuth error."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why is my Twitter PKCE verifier failing?",
+                "acceptedAnswer": {"@type": "Answer", "text": "PKCE verifier failures occur when the code_verifier doesn't match the code_challenge hash sent in the authorization request. Common causes include encoding issues or regenerating the verifier. This wizard handles PKCE generation automatically with proper SHA-256 hashing."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I connect Twitter to Make.com for automation?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Use the Twitter OAuth Setup Wizard to generate a complete Make.com scenario with OAuth 2.0 configuration. Enter your Twitter API credentials, follow the 4-step guide, and import the generated JSON file directly into Make.com for instant Twitter integration."}
+            },
+            {
+                "@type": "Question",
+                "name": "What Twitter API scopes does the wizard configure?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The wizard configures common scopes including tweet.read, tweet.write, users.read, and offline.access for persistent tokens. You can customize scopes based on your automation needs during the setup process."}
             }
         ]
     }
@@ -109,9 +134,7 @@
                 <p style="font-size: 1.25rem; color: var(--text-secondary); margin: 1.5rem 0 2rem;">Streamlined OAuth
                     2.0 setup for Make.com with PKCE security and automatic scenario generation</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://github.com/avisangle/make-twitter-oauth" target="_blank" rel="noopener"
-                        class="btn btn-primary">View on GitHub ↗</a>
-                    <a href="index.html#projects" class="btn btn-outline">← Back</a>
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
                 </div>
             </div>
         </div>
@@ -145,6 +168,25 @@
                         <li>2-minute setup</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/make-twitter-oauth.git
+cd make-twitter-oauth
+
+# Open index.html in your browser
+open index.html
+
+# Or serve with a local server
+python -m http.server 8000</code></pre>
+                <p style="color: var(--text-secondary);">For detailed setup instructions, see the <a href="https://github.com/avisangle/make-twitter-oauth#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
             </div>
         </div>
     </section>
@@ -196,6 +238,33 @@
                 <div class="card" style="border-left: 4px solid var(--accent);">
                     <h3>🌐 No-Code Friendly</h3>
                     <p>Makes complex OAuth configuration accessible to non-technical Make.com users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 id="troubleshooting" style="margin-bottom: 2rem;">How to Fix Twitter OAuth in Make.com</h2>
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">Common Twitter OAuth Errors & Solutions</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Callback URL Mismatch</h4>
+                        <p>Ensure your Twitter Developer Portal callback URL <strong>exactly</strong> matches the Make.com redirect URI. Even trailing slashes matter!</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">PKCE Verifier Failed</h4>
+                        <p>This occurs when code_verifier doesn't match code_challenge. Our wizard generates these correctly using SHA-256.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Invalid Client Credentials</h4>
+                        <p>Double-check your Client ID and Client Secret. Ensure you're using OAuth 2.0 credentials, not OAuth 1.0a.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Scope Errors</h4>
+                        <p>Twitter API v2 requires specific scopes. The wizard pre-configures tweet.read, tweet.write, and users.read.</p>
+                    </div>
                 </div>
             </div>
         </div>

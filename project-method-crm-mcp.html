@@ -24,7 +24,18 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Method CRM MCP Server","description":"Production-ready MCP server for Method CRM API integration with 20 comprehensive tools","applicationCategory":"DeveloperApplication","programmingLanguage":"Python","author":{"@type":"Person","name":"Avinash Sangle"},"url":"https://github.com/avisangle/method-crm-mcp"}
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Method CRM MCP Server",
+  "description": "Production-ready MCP server for Method CRM API integration with 20 comprehensive tools",
+  "applicationCategory": "DeveloperApplication",
+  "programmingLanguage": "Python",
+  "featureList": "OData filtering, 20+ CRM tools, File Uploads, User Management, API Key Management, Event Automation, Rate Limiting, Retry Logic",
+  "operatingSystem": "Python",
+  "author": {"@type": "Person", "name": "Avinash Sangle"},
+  "url": "https://github.com/avisangle/method-crm-mcp"
+}
   </script>
 
     <!-- Breadcrumb Schema -->
@@ -49,12 +60,32 @@
             {
                 "@type": "Question",
                 "name": "What is the Method CRM MCP Server?",
-                "acceptedAnswer": {"@type": "Answer", "text": "It's a production-ready Model Context Protocol server that enables AI assistants to interact with Method CRM data through 20 comprehensive tools covering tables, files, users, events, and API key management."}
+                "acceptedAnswer": {"@type": "Answer", "text": "The Method CRM MCP Server is a production-ready Model Context Protocol server that enables AI assistants like Claude to interact with Method CRM data. It provides 20 comprehensive tools for managing contacts, companies, activities, opportunities, tables, files, users, events, and API keys."}
             },
             {
                 "@type": "Question",
                 "name": "How do I install the Method CRM MCP Server?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Clone the repository, install dependencies with pip, configure your Method CRM API key in environment variables, and run the server. Full installation instructions are in the GitHub README."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Clone the repository from GitHub, install Python dependencies with pip install -r requirements.txt, set your METHOD_API_KEY environment variable, and run the server. For Claude Desktop, add the configuration to your claude_desktop_config.json file."}
+            },
+            {
+                "@type": "Question",
+                "name": "What can AI agents do with Method CRM through MCP?",
+                "acceptedAnswer": {"@type": "Answer", "text": "AI agents can create and update contacts, manage companies and opportunities, log activities and events, query custom tables, upload and retrieve files, manage user permissions, and perform complex CRM operations through natural language commands."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Method CRM MCP Server secure?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the server uses Method CRM's API key authentication and respects all existing permissions. API keys are stored securely as environment variables, and all communications with Method CRM use HTTPS encryption."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Method CRM MCP Server with Claude Desktop?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the server integrates seamlessly with Claude Desktop. Configure it in your claude_desktop_config.json with your Method API key, and Claude can directly query and update your CRM data through conversational commands."}
+            },
+            {
+                "@type": "Question",
+                "name": "What is Method CRM and how does it work with AI?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Method CRM is a customizable CRM platform popular with QuickBooks users. Through the MCP Server, AI assistants can automate CRM workflows, generate reports, update records, and provide intelligent insights about your customer data without manual data entry."}
             }
         ]
     }
@@ -93,8 +124,6 @@
                 <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">Production-ready Model
                     Context Protocol server for Method CRM API integration with 20 comprehensive tools</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://github.com/avisangle/method-crm-mcp" target="_blank" rel="noopener"
-                        class="btn btn-primary">View on GitHub ↗</a>
                     <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
                 </div>
             </div>
@@ -133,6 +162,28 @@
                         <li>Rate limiting & retry logic</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/method-crm-mcp.git
+cd method-crm-mcp
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+export METHOD_API_KEY="your_api_key_here"
+
+# Run the server
+python -m method_crm_mcp</code></pre>
+                <p style="color: var(--text-secondary);">For detailed configuration options and advanced setup, see the <a href="https://github.com/avisangle/method-crm-mcp#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
             </div>
         </div>
     </section>
@@ -249,6 +300,25 @@
 
             <div class="card">
                 <h3 style="margin-bottom: 1.5rem;">✨ Available Tools (20 Total)</h3>
+                <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: var(--bg-secondary);">
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">Category</th>
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">Tool</th>
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Tables</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_tables_query</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Query with OData filtering</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Tables</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_tables_create</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Create new records</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Files</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_files_upload</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Upload with base64 encoding</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Files</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_files_download</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Download file content</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Events</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_events_create_routine</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Create automated routines</td></tr>
+                            <tr><td style="padding: 0.5rem;">API Keys</td><td style="padding: 0.5rem;"><code>method_apikeys_create</code></td><td style="padding: 0.5rem;">Create new API keys</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Table Operations (5 tools)</h4>
                 <ul class="skill-list" style="margin-bottom: 1.5rem;">

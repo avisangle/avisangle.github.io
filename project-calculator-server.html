@@ -49,12 +49,32 @@
             {
                 "@type": "Question",
                 "name": "What is the Calculator Server?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Calculator Server is a high-performance Go-based MCP server providing 13+ mathematical computation tools for AI agents and applications through the Model Context Protocol."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Calculator Server is a high-performance Go-based MCP server providing 13+ mathematical computation tools for AI agents. It enables LLMs like Claude and ChatGPT to perform accurate calculations including arithmetic, trigonometry, statistics, and unit conversions through the Model Context Protocol."}
             },
             {
                 "@type": "Question",
                 "name": "Why use Go for the Calculator Server?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Go's concurrency model and high performance make it ideal for low-latency computation services that AI agents require for real-time mathematical operations."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Go's concurrency model, compiled performance, and minimal memory footprint make it ideal for low-latency computation services. AI agents require sub-millisecond response times for real-time mathematical operations, which Go delivers efficiently."}
+            },
+            {
+                "@type": "Question",
+                "name": "What mathematical operations does the Calculator Server support?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The server supports basic arithmetic (add, subtract, multiply, divide), advanced operations (power, square root, logarithms), trigonometric functions (sin, cos, tan), statistical calculations (mean, median, standard deviation), and unit conversions for length, weight, temperature, and more."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I integrate Calculator Server with Claude Desktop?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Add the Calculator Server to your claude_desktop_config.json file with the path to the Go binary. Once configured, Claude can automatically use the calculator tools for any mathematical queries in your conversations."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I build my own MCP server in Go?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the Calculator Server serves as an excellent reference implementation for building MCP servers in Go. The codebase demonstrates tool registration, request handling, JSON-RPC communication, and Go best practices for MCP development."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why do AI agents need a calculator tool?",
+                "acceptedAnswer": {"@type": "Answer", "text": "LLMs can make arithmetic errors, especially with large numbers or complex calculations. A dedicated calculator tool ensures mathematical accuracy by offloading computations to a reliable system, improving AI response quality for numerical tasks."}
             }
         ]
     }
@@ -91,9 +111,7 @@
                 <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">High-performance
                     Go-based MCP server providing comprehensive mathematical computation capabilities for AI agents</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://github.com/avisangle/calculator-server" target="_blank" rel="noopener"
-                        class="btn btn-primary">View on GitHub ↗</a>
-                    <a href="index.html#projects" class="btn btn-outline">← Back</a>
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
                 </div>
             </div>
         </div>
@@ -127,6 +145,25 @@
                         <li>High-performance computing</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/calculator-server.git
+cd calculator-server
+
+# Build the server
+go build -o calculator-server
+
+# Run the MCP server
+./calculator-server</code></pre>
+                <p style="color: var(--text-secondary);">For integration with AI agents, see the <a href="https://github.com/avisangle/calculator-server#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
             </div>
         </div>
     </section>

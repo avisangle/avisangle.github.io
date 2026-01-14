@@ -48,13 +48,33 @@
         "mainEntity": [
             {
                 "@type": "Question",
+                "name": "What is the Jenkins Chatbot Plugin?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The Jenkins Chatbot Plugin is an AI-powered conversational interface embedded directly within Jenkins that allows users to manage builds, deployments, and system tasks using natural language commands instead of navigating the Jenkins UI."}
+            },
+            {
+                "@type": "Question",
                 "name": "How do I interact with Jenkins using the chatbot?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Simply type natural language commands like 'trigger build for project X' or 'show me the latest test results'. The AI understands your intent and executes the appropriate Jenkins action."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Simply type natural language commands like 'trigger build for project X', 'show me the latest test results', 'what builds failed today', or 'deploy to staging'. The AI understands your intent and executes the appropriate Jenkins action."}
             },
             {
                 "@type": "Question",
                 "name": "Does the chatbot respect Jenkins permissions?",
-                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the chatbot is fully integrated with Jenkins RBAC. Users can only perform actions they're authorized for, maintaining complete security compliance."}
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the chatbot is fully integrated with Jenkins RBAC (Role-Based Access Control). Users can only perform actions they're authorized for, and all chatbot interactions are logged for audit compliance."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I install the Jenkins Chatbot Plugin?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Install via Jenkins Plugin Manager or download the .hpi file from GitHub. Configure your AI provider API key (OpenAI, Anthropic, etc.) in Jenkins system settings, and the chat interface appears automatically in your Jenkins dashboard."}
+            },
+            {
+                "@type": "Question",
+                "name": "What can I ask the Jenkins Chatbot?",
+                "acceptedAnswer": {"@type": "Answer", "text": "You can ask about build status, trigger new builds, view logs, check test results, deploy applications, manage pipelines, troubleshoot failures, compare builds, and get summaries of Jenkins activity - all through conversational commands."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can the chatbot help debug failed builds?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the AI-powered chatbot can analyze build logs, identify common failure patterns, suggest fixes based on error messages, and help you understand why a build failed without manually parsing through lengthy console output."}
             }
         ]
     }
@@ -93,8 +113,6 @@
                     conversational interface for Jenkins to manage builds and deployments via natural language commands
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://github.com/avisangle/jenkins-chatbot-plugin" target="_blank" rel="noopener"
-                        class="btn btn-primary">View on GitHub ↗</a>
                     <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
                 </div>
             </div>
@@ -130,6 +148,30 @@
                         <li>Security integration</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/jenkins-chatbot-plugin.git
+cd jenkins-chatbot-plugin
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure Jenkins connection
+export JENKINS_URL="http://your-jenkins-server:8080"
+export JENKINS_USER="your_username"
+export JENKINS_TOKEN="your_api_token"
+
+# Start the chatbot
+python chatbot.py</code></pre>
+                <p style="color: var(--text-secondary);">For Jenkins plugin installation, see the <a href="https://github.com/avisangle/jenkins-chatbot-plugin#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
             </div>
         </div>
     </section>

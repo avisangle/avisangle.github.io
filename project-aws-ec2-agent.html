@@ -71,15 +71,55 @@
         "mainEntity": [
             {
                 "@type": "Question",
+                "name": "What is the AWS EC2 AI Agent?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The AWS EC2 AI Agent is an intelligent automation tool that deploys and manages cloud infrastructure using natural language commands. Instead of writing Terraform or clicking through AWS Console, you describe what you want and the agent handles the deployment."}
+            },
+            {
+                "@type": "Question",
                 "name": "How does the AI agent deploy cloud infrastructure?",
-                "acceptedAnswer": {"@type": "Answer", "text": "The AI agent parses natural language commands, plans the required infrastructure, discovers existing resources, and executes deployment via cloud APIs with automatic error recovery."}
+                "acceptedAnswer": {"@type": "Answer", "text": "The AI agent parses natural language commands like 'deploy a t2.micro instance in us-east-1', plans the required infrastructure, discovers existing resources to avoid conflicts, and executes deployment via cloud APIs with automatic error recovery and rollback."}
             },
             {
                 "@type": "Question",
                 "name": "Which cloud platforms are supported?",
-                "acceptedAnswer": {"@type": "Answer", "text": "The agent supports AWS, Google Cloud Platform (GCP), and Microsoft Azure, allowing multi-cloud deployments from a single interface."}
+                "acceptedAnswer": {"@type": "Answer", "text": "The agent supports Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure, allowing multi-cloud deployments from a single conversational interface."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I deploy EC2 instances with natural language?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, simply describe your requirements like 'create an Ubuntu EC2 instance with 4GB RAM and 50GB storage' and the AI agent selects the appropriate instance type, AMI, and configuration, then deploys it to your AWS account."}
+            },
+            {
+                "@type": "Question",
+                "name": "How does the agent handle infrastructure errors?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The agent includes self-healing capabilities with automatic error detection, retry logic, and rollback mechanisms. If a deployment fails, it analyzes the error, attempts remediation, and provides clear explanations of what went wrong."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is it safe to give an AI agent AWS access?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The agent uses AWS IAM roles with least-privilege permissions. You control exactly what resources the agent can create or modify. All actions are logged for audit trails, and the agent can be configured for dry-run mode to preview changes before execution."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can the AI agent manage existing AWS resources?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the agent can discover, describe, modify, and terminate existing EC2 instances. Ask questions like 'what instances are running in production?' or 'stop all development instances' for intelligent resource management."}
             }
         ]
+    }
+    </script>
+
+    <!-- VideoObject Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Deploy AWS EC2 with AI Agent Demo",
+        "description": "Watch a demonstration of deploying cloud infrastructure using natural language commands with an AI agent. Deploy EC2 instances in 60 seconds.",
+        "thumbnailUrl": "https://img.youtube.com/vi/E6QqJJAZzlE/maxresdefault.jpg",
+        "uploadDate": "2024-01-01",
+        "contentUrl": "https://youtu.be/E6QqJJAZzlE",
+        "embedUrl": "https://www.youtube.com/embed/E6QqJJAZzlE",
+        "duration": "PT5M"
     }
     </script>
 </head>
@@ -118,6 +158,18 @@
                         Demo ↗</a>
                     <a href="index.html#projects" class="btn btn-outline">← Back</a>
                 </div>
+                
+                <div style="margin-top: 2rem; max-width: 560px; margin-left: auto; margin-right: auto;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                            src="https://www.youtube.com/embed/E6QqJJAZzlE" 
+                            title="Deploy AWS EC2 with AI Agent Demo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -149,6 +201,23 @@
                         <li>Multi-cloud support</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Try It Now</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Configure AWS credentials
+export AWS_ACCESS_KEY_ID="your_access_key"
+export AWS_SECRET_ACCESS_KEY="your_secret_key"
+export AWS_REGION="us-east-1"
+
+# Example natural language command:
+"Deploy an Ubuntu EC2 instance with t2.micro in us-east-1"</code></pre>
+                <p style="color: var(--text-secondary);">Watch the <a href="https://youtu.be/E6QqJJAZzlE" target="_blank" rel="noopener">full demo video</a> to see the AI agent in action.</p>
             </div>
         </div>
     </section>

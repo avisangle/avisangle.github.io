@@ -46,27 +46,24 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Product Schema -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Social Media Auto-Poster",
-    "description": "AI-powered social media management platform with automated posting, multi-platform support, and intelligent content generation",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Avinash Sangle"
-    },
-    "url": "https://socia-media-iota.vercel.app/"
-  }
-  </script>
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Social Media Auto-Poster",
+        "description": "AI-powered social media scheduler for Twitter, LinkedIn, Reddit, Facebook, and Instagram with automated posting and intelligent content generation.",
+        "brand": {"@type": "Brand", "name": "Avinash Sangle"},
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "author": {"@type": "Person", "name": "Avinash Sangle"},
+        "url": "https://socia-media-iota.vercel.app/"
+    }
+    </script>
 
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
@@ -89,13 +86,43 @@
         "mainEntity": [
             {
                 "@type": "Question",
+                "name": "What is the Social Media Auto-Poster?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Social Media Auto-Poster is an AI-powered social media management platform that automates content creation, scheduling, and posting across multiple platforms including Twitter/X, LinkedIn, Facebook, Instagram, and Reddit from a single dashboard."}
+            },
+            {
+                "@type": "Question",
                 "name": "Which social media platforms are supported?",
-                "acceptedAnswer": {"@type": "Answer", "text": "The platform supports Twitter, LinkedIn, Facebook, Instagram, and Reddit. All platforms use OAuth 2.0 for secure connection."}
+                "acceptedAnswer": {"@type": "Answer", "text": "The platform supports Twitter/X, LinkedIn, Facebook, Instagram, and Reddit. All platforms use OAuth 2.0 for secure authentication, and each post is automatically optimized for the specific platform's requirements."}
             },
             {
                 "@type": "Question",
                 "name": "How does AI content generation work?",
-                "acceptedAnswer": {"@type": "Answer", "text": "The platform uses AI models like Gemini and OpenAI to generate platform-optimized content based on your preferences, RSS feeds, and content style settings."}
+                "acceptedAnswer": {"@type": "Answer", "text": "The platform uses AI models like Google Gemini and OpenAI GPT to generate platform-optimized content. It can create posts from RSS feeds, repurpose existing content, match your brand voice, add relevant hashtags, and suggest optimal posting times."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a free auto-poster for Reddit and LinkedIn?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes! Social Media Auto-Poster offers free automated posting to Reddit, LinkedIn, Twitter, Facebook, and Instagram. The free tier includes AI-powered content generation, basic scheduling, and multi-platform support."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I schedule posts in advance?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the smart scheduling feature lets you schedule posts weeks in advance across all platforms. It includes a visual calendar view, bulk scheduling, intelligent timing recommendations based on audience engagement, and timezone support."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I connect my social media accounts?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Click 'Connect Account' for any platform, authenticate via OAuth 2.0, and grant the necessary permissions. Your credentials are never stored - only secure OAuth tokens are used for posting on your behalf."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I post to multiple platforms at once?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, create one post and publish to all connected platforms simultaneously. The AI automatically adapts content for each platform - adjusting character limits, hashtag usage, and formatting for Twitter, LinkedIn, Facebook, Instagram, and Reddit."}
+            },
+            {
+                "@type": "Question",
+                "name": "Does the auto-poster support RSS feed automation?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, connect any RSS feed to automatically generate and post content from new articles. The AI summarizes articles, creates engaging social media posts, and schedules them according to your preferences."}
             }
         ]
     }
@@ -232,6 +259,40 @@
                     <h3 style="margin-bottom: 1rem;">Media Management</h3>
                     <p>Upload and manage images, videos, and other media assets. Optimize content for each platform
                         automatically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Supported Platforms</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Post to all major social networks from one dashboard:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐦</div>
+                    <h4>Twitter / X</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Tweets & threads</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
+                    <h4>LinkedIn</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Posts & articles</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+                    <h4>Reddit</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Subreddit posts</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📘</div>
+                    <h4>Facebook</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Page posts</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📸</div>
+                    <h4>Instagram</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Feed posts</p>
                 </div>
             </div>
         </div>
