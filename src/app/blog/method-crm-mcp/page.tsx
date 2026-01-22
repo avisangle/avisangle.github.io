@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import Link from "next/link"
@@ -249,39 +250,49 @@ export default function MethodCRMMCPBlogPage() {
             <h2 className="text-3xl font-bold mb-6">Installation & Setup</h2>
 
             <h3 className="text-xl font-bold mb-4">Step 1: Clone the Repository</h3>
-            <pre className="code-block mb-6">
-              <code>{`git clone https://github.com/avisangle/method-crm-mcp.git
-cd method-crm-mcp`}</code>
-            </pre>
+            <CodeBlock
+              code={`git clone https://github.com/avisangle/method-crm-mcp.git
+cd method-crm-mcp`}
+              language="bash"
+              className="mb-6"
+            />
 
             <h3 className="text-xl font-bold mb-4">Step 2: Create Virtual Environment</h3>
-            <pre className="code-block mb-6">
-              <code>{`# Create virtual environment
+            <CodeBlock
+              code={`# Create virtual environment
 python -m venv venv
 
 # Activate on macOS/Linux
 source venv/bin/activate
 
 # Activate on Windows
-.\\venv\\Scripts\\activate`}</code>
-            </pre>
+.\\venv\\Scripts\\activate`}
+              language="bash"
+              className="mb-6"
+            />
 
             <h3 className="text-xl font-bold mb-4">Step 3: Install Dependencies</h3>
-            <pre className="code-block mb-6">
-              <code>pip install -r requirements.txt</code>
-            </pre>
+            <CodeBlock
+              code="pip install -r requirements.txt"
+              language="bash"
+              className="mb-6"
+            />
 
             <h3 className="text-xl font-bold mb-4">Step 4: Configure Environment Variables</h3>
-            <pre className="code-block mb-6">
-              <code>{`# Set environment variable
-export METHOD_API_KEY="your_api_key_here"`}</code>
-            </pre>
+            <CodeBlock
+              code={`# Set environment variable
+export METHOD_API_KEY="your_api_key_here"`}
+              language="bash"
+              className="mb-6"
+            />
 
             <h3 className="text-xl font-bold mb-4">Step 5: Test the Installation</h3>
-            <pre className="code-block mb-6">
-              <code>{`# Run the server
-python -m method_crm_mcp`}</code>
-            </pre>
+            <CodeBlock
+              code={`# Run the server
+python -m method_crm_mcp`}
+              language="bash"
+              className="mb-6"
+            />
           </div>
         </div>
       </section>
@@ -300,8 +311,8 @@ python -m method_crm_mcp`}</code>
             <p className="mb-4">
               Add the following to your <code>claude_desktop_config.json</code>:
             </p>
-            <pre className="code-block mb-6">
-              <code>{`{
+            <CodeBlock
+              code={`{
   "mcpServers": {
     "method-crm": {
       "command": "python",
@@ -312,8 +323,11 @@ python -m method_crm_mcp`}</code>
       }
     }
   }
-}`}</code>
-            </pre>
+}`}
+              language="json"
+              filename="claude_desktop_config.json"
+              className="mb-6"
+            />
 
             <p className="text-lg leading-relaxed">
               After saving the configuration, completely quit and restart Claude Desktop. The Method

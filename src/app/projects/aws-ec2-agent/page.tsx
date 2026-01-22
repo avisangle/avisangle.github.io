@@ -55,7 +55,7 @@ export default function AWSEc2AgentPage() {
       />
 
       {/* Breadcrumb */}
-      <div className="container mx-auto px-4 pt-8">
+      <div className="container-project pt-8">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -67,7 +67,7 @@ export default function AWSEc2AgentPage() {
 
       {/* Hero Section */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <div className="hero-content">
             <p className="text-accent font-semibold mb-4">CLOUD INFRASTRUCTURE AUTOMATION</p>
             <h1 className="hero-title mb-6">AWS EC2 Deployment with AI Agent</h1>
@@ -108,7 +108,7 @@ export default function AWSEc2AgentPage() {
 
       {/* Project Overview */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
           <p className="text-lg leading-relaxed mb-8">
             Automated multi-cloud infrastructure provisioning through natural language commands.
@@ -148,7 +148,7 @@ export default function AWSEc2AgentPage() {
 
       {/* Quick Start */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Quick Start" centered={false} />
           <Card>
             <CardHeader>
@@ -183,7 +183,7 @@ export AWS_REGION="us-east-1"
 
       {/* What It Does */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
@@ -230,7 +230,7 @@ export AWS_REGION="us-east-1"
 
       {/* Why It Matters */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
             <Card className="card-accent-left">
@@ -286,7 +286,7 @@ export AWS_REGION="us-east-1"
 
       {/* Implementation Highlights */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
           <Card>
             <CardHeader>

@@ -53,7 +53,7 @@ export default function SocialMediaAutoPosterPage() {
       />
 
       {/* Breadcrumb */}
-      <div className="container mx-auto px-4 pt-8">
+      <div className="container-project pt-8">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -65,7 +65,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* Hero Section */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <div className="hero-content">
             <p className="text-accent font-semibold mb-4">PRODUCTION SAAS APPLICATION</p>
             <h1 className="hero-title mb-6">Social Media Auto-Poster</h1>
@@ -93,7 +93,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* Project Overview */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
           <div className="grid-2">
             <div>
@@ -137,7 +137,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* What It Does */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
@@ -224,7 +224,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* Supported Platforms */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader
             title="Supported Platforms"
             subtitle="Post to all major social networks from one dashboard"
@@ -262,7 +262,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* Why It Matters */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
             <Card className="card-accent-left">
@@ -319,7 +319,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* Implementation Highlights */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
 
           <Card className="mb-8">
@@ -384,7 +384,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* Related Projects */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
@@ -443,7 +443,7 @@ export default function SocialMediaAutoPosterPage() {
 
       {/* CTA */}
       <section className="section">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container-project text-center">
           <h2 className="section-title">Ready to Explore More?</h2>
           <p className="section-subtitle mx-auto mb-8">
             Check out the live application or view more projects

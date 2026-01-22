@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section">
+      <section id="about" className="section section-alt">
         <div className="container-project">
           <SectionHeader
             title="About Avinash - AI & Automation Engineer"
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="section section-alt">
+      <section id="projects" className="section">
         <div className="container-project">
           <SectionHeader
             title="Featured Projects"
@@ -373,7 +373,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="section">
+      <section id="skills" className="section section-alt">
         <div className="container-project">
           <SectionHeader
             title="Skills & Expertise"
@@ -445,7 +445,7 @@ export default function Home() {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="section section-alt">
+      <section id="blog" className="section">
         <div className="container-project">
           <SectionHeader
             title="Technical Blog & Case Studies"
@@ -523,7 +523,7 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="section">
+      <section id="faq" className="section section-alt">
         <div className="container-project">
           <SectionHeader
             title="Frequently Asked Questions"
@@ -574,7 +574,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section section-alt">
+      <section id="contact" className="section">
         <div className="container-project">
           <SectionHeader
             title="Let's Connect!"

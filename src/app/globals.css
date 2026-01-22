@@ -250,7 +250,7 @@
    SECTION STYLES
    ============================================ */
 .section {
-  @apply py-20 md:py-28 lg:py-32;
+  @apply py-12 md:py-16 lg:py-20;
 }
 
 .section-alt {
@@ -258,7 +258,7 @@
 }
 
 .section-header {
-  @apply mb-16;
+  @apply mb-10;
 }
 
 .section-header-centered {
@@ -343,11 +343,11 @@
    HERO STYLES
    ============================================ */
 .hero {
-  @apply py-24 md:py-36 lg:py-44;
+  @apply py-16 md:py-24 lg:py-28;
 }
 
 .hero-compact {
-  @apply py-16 md:py-24 lg:py-28;
+  @apply py-12 md:py-16 lg:py-20;
   min-height: 40vh;
 }
 

@@ -37,6 +37,7 @@ Located in `src/components/ui/`:
 | Button | `button.tsx` | CTAs, links, actions |
 | Badge | `badge.tsx` | Tech stack tags, categories |
 | Card | `card.tsx` | About cards, project cards, skill cards |
+| CodeBlock | `code-block.tsx` | Code snippets with copy button |
 | Accordion | `accordion.tsx` | FAQ sections |
 | NavigationMenu | `navigation-menu.tsx` | Desktop navigation |
 | Sheet | `sheet.tsx` | Mobile navigation drawer |
@@ -160,9 +161,97 @@ Located in `src/app/globals.css`:
 | `.card` | `<Card>`, `<CardHeader>`, `<CardContent>`, `<CardFooter>` |
 | `.badge` | `<Badge>` |
 | Tech stack badges | `<Badge variant="outline">` |
+| `<pre className="code-block">` | `<CodeBlock>` with copy button |
 | FAQ section | `<Accordion>`, `<AccordionItem>`, `<AccordionTrigger>`, `<AccordionContent>` |
 | Navigation | Already in `navbar.tsx` |
 | Footer | Already in `footer.tsx` |
+
+### CodeBlock Component Usage
+
+The `CodeBlock` component is available in `src/components/ui/code-block.tsx` for displaying code snippets with a copy button.
+
+**Import:**
+```tsx
+import { CodeBlock } from "@/components/ui/code-block"
+```
+
+**Basic Usage:**
+```tsx
+<CodeBlock
+  code="npm install next"
+  language="bash"
+/>
+```
+
+**With All Options:**
+```tsx
+<CodeBlock
+  code={`{
+  "name": "my-project",
+  "version": "1.0.0"
+}`}
+  language="json"
+  filename="package.json"
+  className="mb-6"
+/>
+```
+
+**Common Examples:**
+
+1. **Bash/Shell Commands:**
+```tsx
+<CodeBlock
+  code={`git clone https://github.com/user/repo.git
+cd repo
+npm install`}
+  language="bash"
+  className="mb-6"
+/>
+```
+
+2. **Configuration Files:**
+```tsx
+<CodeBlock
+  code={`{
+  "mcpServers": {
+    "server-name": {
+      "command": "python",
+      "args": ["-m", "module_name"]
+    }
+  }
+}`}
+  language="json"
+  filename="config.json"
+  className="mb-6"
+/>
+```
+
+3. **Code Snippets:**
+```tsx
+<CodeBlock
+  code={`export default function Component() {
+  return <div>Hello World</div>
+}`}
+  language="typescript"
+  className="mb-6"
+/>
+```
+
+**Props:**
+- `code` (required): String - The code content to display
+- `language` (optional): String - Language identifier (e.g., "bash", "typescript", "json", "python")
+- `filename` (optional): String - Filename to display in header
+- `className` (optional): String - Additional CSS classes
+- `showLineNumbers` (optional): Boolean - Show line numbers (future feature)
+
+**Features:**
+- ✅ One-click copy to clipboard
+- ✅ Visual feedback (checkmark) on successful copy
+- ✅ Language badge display
+- ✅ Optional filename header
+- ✅ Dark mode support
+- ✅ Responsive horizontal scrolling
+- ✅ Hover-to-show copy button
 
 ---
 

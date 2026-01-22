@@ -56,7 +56,7 @@ export default function JenkinsChatbotPage() {
       />
 
       {/* Breadcrumb */}
-      <div className="container mx-auto px-4 pt-8">
+      <div className="container-project pt-8">
         <Breadcrumb
           items={[
             { label: "Home", href: "/" },
@@ -68,7 +68,7 @@ export default function JenkinsChatbotPage() {
 
       {/* Hero Section */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <div className="hero-content">
             <p className="text-accent font-semibold mb-4">CHATOPS FOR JENKINS</p>
             <h1 className="hero-title mb-6">Jenkins Chatbot Plugin</h1>
@@ -87,7 +87,7 @@ export default function JenkinsChatbotPage() {
 
       {/* Project Overview */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
           <p className="text-lg leading-relaxed mb-8">
             The Jenkins Chatbot Plugin embeds an AI-powered chat interface within Jenkins, enabling
@@ -129,7 +129,7 @@ export default function JenkinsChatbotPage() {
 
       {/* Quick Start */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Quick Start" centered={false} />
           <Card>
             <CardHeader>
@@ -171,7 +171,7 @@ python chatbot.py`}</code>
 
       {/* What It Does */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-2">
             <Card className="card-hover">
@@ -231,7 +231,7 @@ python chatbot.py`}</code>
 
       {/* Why It Matters */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
             <Card className="card-accent-left">
@@ -286,7 +286,7 @@ python chatbot.py`}</code>
 
       {/* Implementation Highlights */}
       <section className="section">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
           <Card>
             <CardHeader>
@@ -310,7 +310,7 @@ python chatbot.py`}</code>
 
       {/* Related Projects */}
       <section className="section section-alt">
-        <div className="container mx-auto px-4">
+        <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
@@ -365,7 +365,7 @@ python chatbot.py`}</code>
 
       {/* CTA */}
       <section className="section">
-        <div className="container mx-auto px-4 text-center">
+        <div className="container-project text-center">
           <h2 className="section-title">Explore the Code</h2>
           <p className="section-subtitle mx-auto mb-8">
             Check out the GitHub repository for implementation details
