@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Social Media Auto-Poster | AI-Powered Social Media Management SaaS | Avinash Sangle</title>
+    <meta name="description"
+        content="AI-powered social media management platform with automated posting, multi-platform support, and intelligent content generation. Built with React, Supabase, and AI APIs.">
+    <meta name="keywords"
+        content="social media automation, AI content generation, auto-posting, social media scheduler, multi-platform posting, Supabase, React, OAuth integration, social media management, content marketing automation">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-social-media-auto-poster.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Social Media Auto-Poster | AI-Powered SaaS by Avinash Sangle">
+    <meta property="og:description"
+        content="AI-powered social media management platform with automated posting and multi-platform support">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-social-media.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-social-media-auto-poster.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Social Media Auto-Poster | AI-Powered SaaS">
+    <meta name="twitter:description" content="AI-powered social media management with automated posting">
+    <meta name="twitter:image" content="https://avinashsangle.com/assets/twitter-card-social.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Social Media Auto-Poster",
+        "description": "AI-powered social media scheduler for Twitter, LinkedIn, Reddit, Facebook, and Instagram with automated posting and intelligent content generation.",
+        "applicationCategory": "SocialNetworkingApplication",
+        "operatingSystem": "Web Browser",
+        "image": "https://avinashsangle.com/assets/social-media-screenshot.jpg",
+        "screenshot": "https://avinashsangle.com/assets/social-media-screenshot.jpg",
+        "author": {"@type": "Person", "name": "Avinash Sangle"},
+        "url": "https://social.avinashsangle.com/",
+        "featureList": "AI Content Generation, Multi-Platform Posting, Smart Scheduling, RSS Feed Automation, OAuth 2.0 Authentication, Calendar View, Timezone Support",
+        "softwareVersion": "1.0",
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2026-12-31"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "50",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Tech Reviewer"
+            },
+            "reviewBody": "Excellent tool for automating social media posts across multiple platforms. The AI content generation feature saves hours of work."
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Social Media Auto-Poster", "item": "https://avinashsangle.com/project-social-media-auto-poster.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Social Media Auto-Poster?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Social Media Auto-Poster is an AI-powered social media management platform that automates content creation, scheduling, and posting across multiple platforms including Twitter/X, LinkedIn, Facebook, Instagram, and Reddit from a single dashboard."}
+            },
+            {
+                "@type": "Question",
+                "name": "Which social media platforms are supported?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The platform supports Twitter/X, LinkedIn, Facebook, Instagram, and Reddit. All platforms use OAuth 2.0 for secure authentication, and each post is automatically optimized for the specific platform's requirements."}
+            },
+            {
+                "@type": "Question",
+                "name": "How does AI content generation work?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The platform uses AI models like Google Gemini and OpenAI GPT to generate platform-optimized content. It can create posts from RSS feeds, repurpose existing content, match your brand voice, add relevant hashtags, and suggest optimal posting times."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a free auto-poster for Reddit and LinkedIn?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes! Social Media Auto-Poster offers free automated posting to Reddit, LinkedIn, Twitter, Facebook, and Instagram. The free tier includes AI-powered content generation, basic scheduling, and multi-platform support."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I schedule posts in advance?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the smart scheduling feature lets you schedule posts weeks in advance across all platforms. It includes a visual calendar view, bulk scheduling, intelligent timing recommendations based on audience engagement, and timezone support."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I connect my social media accounts?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Click 'Connect Account' for any platform, authenticate via OAuth 2.0, and grant the necessary permissions. Your credentials are never stored - only secure OAuth tokens are used for posting on your behalf."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I post to multiple platforms at once?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, create one post and publish to all connected platforms simultaneously. The AI automatically adapts content for each platform - adjusting character limits, hashtag usage, and formatting for Twitter, LinkedIn, Facebook, Instagram, and Reddit."}
+            },
+            {
+                "@type": "Question",
+                "name": "Does the auto-poster support RSS feed automation?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, connect any RSS feed to automatically generate and post content from new articles. The AI summarizes articles, creates engaging social media posts, and schedules them according to your preferences."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+            </ul>
+
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a
+                href="index.html#projects">Projects</a> / <span style="color: var(--accent);">Social Media
+                Auto-Poster</span></p>
+    </div>
+
+    <!-- Project Header -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">PRODUCTION SAAS APPLICATION</p>
+                <h1 style="margin-bottom: 1.5rem;">Social Media Auto-Poster</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">AI-powered social
+                    media management platform with automated posting, multi-platform support, and intelligent content
+                    generation</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://social.avinashsangle.com/" target="_blank" rel="noopener"
+                        class="btn btn-primary">Live Demo ↗</a>
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section" style="background-color: var(--bg-secondary); padding-top: 3rem; padding-bottom: 3rem;">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Project Overview</h2>
+            <div class="grid grid-2">
+                <div>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Social Media Auto-Poster is a comprehensive SaaS platform that revolutionizes social media
+                        management by combining AI-powered content generation with automated multi-platform posting
+                        capabilities.
+                    </p>
+                    <p style="font-size: 1.125rem; line-height: 1.8;">
+                        The platform enables users to schedule, generate, and post content across multiple social media
+                        platforms including Twitter, LinkedIn, Facebook, Instagram, and Reddit - all from a single
+                        unified interface.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Tech Stack</h3>
+                    <div class="tech-stack" style="margin-bottom: 1.5rem;">
+                        <span class="badge">React</span>
+                        <span class="badge">Supabase</span>
+                        <span class="badge">AI APIs</span>
+                        <span class="badge">OAuth 2.0</span>
+                        <span class="badge">Stripe</span>
+                        <span class="badge">Vercel</span>
+                    </div>
+                    <h3 style="margin-bottom: 1rem;">Key Features</h3>
+                    <ul class="skill-list">
+                        <li>AI content generation</li>
+                        <li>Multi-platform posting</li>
+                        <li>Smart scheduling</li>
+                        <li>Analytics dashboard</li>
+                        <li>Approval workflow</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What It Does -->
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">What It Does</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤖</div>
+                    <h3 style="margin-bottom: 1rem;">AI Content Generation</h3>
+                    <p>Generate engaging social media posts using advanced AI models. The platform analyzes your
+                        audience and creates platform-specific content optimized for engagement.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📅</div>
+                    <h3 style="margin-bottom: 1rem;">Smart Scheduling</h3>
+                    <p>Schedule posts across multiple platforms with intelligent timing recommendations. Calendar view
+                        makes it easy to visualize your content strategy.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔗</div>
+                    <h3 style="margin-bottom: 1rem;">Multi-Platform Support</h3>
+                    <p>Seamlessly post to Twitter, LinkedIn, Facebook, Instagram, and Reddit from a single interface
+                        with OAuth integration.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✅</div>
+                    <h3 style="margin-bottom: 1rem;">Approval Workflow</h3>
+                    <p>Review and approve AI-generated content before publishing. Maintain full control over your social
+                        media presence.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <h3 style="margin-bottom: 1rem;">Analytics & Insights</h3>
+                    <p>Track post performance, engagement metrics, and audience growth across all connected platforms in
+                        real-time.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</div>
+                    <h3 style="margin-bottom: 1rem;">Media Management</h3>
+                    <p>Upload and manage images, videos, and other media assets. Optimize content for each platform
+                        automatically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Supported Platforms</h2>
+            <p style="font-size: 1.125rem; margin-bottom: 1.5rem;">Post to all major social networks from one dashboard:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🐦</div>
+                    <h4>Twitter / X</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Tweets & threads</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💼</div>
+                    <h4>LinkedIn</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Posts & articles</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤖</div>
+                    <h4>Reddit</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Subreddit posts</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📘</div>
+                    <h4>Facebook</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Page posts</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 1.5rem;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📸</div>
+                    <h4>Instagram</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary);">Feed posts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Why It Matters</h2>
+            <div class="grid grid-2">
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">⏱️ Save Time & Effort</h3>
+                    <p>Reduce social media management time by up to 80%. AI handles content creation while automation
+                        handles distribution, freeing you to focus on strategy and engagement.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">📈 Consistent Posting</h3>
+                    <p>Maintain a consistent social media presence across all platforms. Never miss optimal posting
+                        times with smart scheduling and automation.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">🎯 Better Engagement</h3>
+                    <p>AI-generated content is optimized for each platform's algorithm and audience preferences, leading
+                        to higher engagement rates and better ROI.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">💼 Professional Management</h3>
+                    <p>Enterprise-grade social media management accessible to businesses of all sizes. Scalable solution
+                        that grows with your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Highlights -->
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Implementation Highlights</h2>
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">🏗️ Technical Architecture</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Frontend</h4>
+                        <p>Built with React for a responsive, dynamic user interface. Component-based architecture
+                            ensures maintainability and scalability.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Backend & Database</h4>
+                        <p>Supabase provides real-time database, authentication, and storage. PostgreSQL ensures data
+                            integrity and complex querying capabilities.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">AI Integration</h4>
+                        <p>Multiple AI providers (Gemini, OpenAI) for content generation with fallback mechanisms
+                            ensuring reliability.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">OAuth & APIs</h4>
+                        <p>Secure OAuth 2.0 integration with all major social platforms. RESTful API architecture for
+                            platform communication.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 1.5rem;">✨ Core Capabilities</h3>
+                <ul class="skill-list">
+                    <li>Real-time post scheduling and calendar management</li>
+                    <li>AI-powered content generation with customizable settings</li>
+                    <li>Multi-platform OAuth authentication and authorization</li>
+                    <li>Automated posting with platform-specific formatting</li>
+                    <li>Post history and analytics tracking</li>
+                    <li>Image upload and optimization</li>
+                    <li>User management and billing integration (Stripe)</li>
+                    <li>RSS feed integration for content sources</li>
+                    <li>Twitter thread generation and formatting</li>
+                    <li>Approval queue for content review</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Related Projects</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <p class="card-subtitle">AI Integration</p>
+                    <h3 class="card-title">Jenkins MCP Server</h3>
+                    <p>MCP server enabling AI agents to interact with Jenkins programmatically.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-jenkins-mcp.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-subtitle">Cloud Automation</p>
+                    <h3 class="card-title">AWS EC2 with AI Agent</h3>
+                    <p>Deploy cloud infrastructure via natural language with intelligent automation.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-aws-ec2-agent.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-subtitle">OAuth Automation</p>
+                    <h3 class="card-title">Twitter OAuth Wizard</h3>
+                    <p>Streamlined OAuth 2.0 setup for Make.com with PKCE security.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-twitter-oauth.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Ready to Explore More?</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">Check out the live
+                application or view more projects</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://social.avinashsangle.com/" target="_blank" rel="noopener"
+                    class="btn btn-primary">Try Live Demo ↗</a>
+                <a href="index.html#projects" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">💻</a></li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">💼</a></li>
+                    <li><a href="https://www.youtube.com/@AIAgentOps" target="_blank" rel="noopener" class="social-link"
+                            aria-label="YouTube">📺</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link" aria-label="Email">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Jenkins MCP Server | AI Integration for Jenkins CI/CD | Model Context Protocol | Avinash Sangle</title>
+    <meta name="description"
+        content="Enable AI agents to interact with Jenkins through Model Context Protocol for automated DevOps workflows. Query jobs, trigger builds, and access logs programmatically.">
+    <meta name="keywords"
+        content="Jenkins automation, Model Context Protocol, MCP server, AI DevOps, Jenkins AI integration, CI/CD automation, conversational DevOps, LLM integration, Python Jenkins, DevOps tools">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-jenkins-mcp.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jenkins MCP Server | AI Integration for Jenkins">
+    <meta property="og:description" content="Enable AI agents to interact with Jenkins through Model Context Protocol">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-jenkins-mcp.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-jenkins-mcp.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jenkins MCP Server | AI Integration">
+    <meta name="twitter:description" content="Enable AI agents to interact with Jenkins through MCP">
+    <meta name="twitter:image" content="https://avinashsangle.com/assets/twitter-card-jenkins-mcp.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Jenkins MCP Server",
+    "description": "MCP server enabling AI agents to interact with Jenkins programmatically for automated DevOps workflows",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Linux, Windows, macOS",
+    "author": {
+      "@type": "Person",
+      "name": "Avinash Sangle"
+    },
+    "url": "https://github.com/avisangle/jenkins-mcp-server"
+  }
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Jenkins MCP Server", "item": "https://avinashsangle.com/project-jenkins-mcp.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Jenkins MCP Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Jenkins MCP Server is a Model Context Protocol server that enables AI agents like Claude, ChatGPT, and other LLMs to interact with Jenkins CI/CD infrastructure through natural language commands. It provides tools for querying jobs, triggering builds, accessing logs, and monitoring Jenkins environments."}
+            },
+            {
+                "@type": "Question",
+                "name": "What can AI agents do with the Jenkins MCP Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "AI agents can query job configurations, trigger builds with parameters, access build logs and console output, retrieve build artifacts, monitor Jenkins environment status, list available jobs and pipelines, and troubleshoot failed builds - all through natural language commands."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I install Jenkins MCP Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Clone the repository from GitHub, install Python dependencies with pip install -r requirements.txt, configure your Jenkins URL, username, and API token as environment variables, then run python -m jenkins_mcp_server. For Claude Desktop, add the server configuration to your claude_desktop_config.json file."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Jenkins MCP Server secure?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the Jenkins MCP Server respects Jenkins' native authentication and authorization models. It uses API tokens for secure communication, maintains existing RBAC policies, and ensures AI agents can only perform actions the authenticated user is authorized for."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Jenkins MCP Server with Claude Desktop?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, Jenkins MCP Server integrates seamlessly with Claude Desktop. Add the server configuration to your claude_desktop_config.json file with your Jenkins credentials, and Claude can directly interact with your Jenkins instance through natural language."}
+            },
+            {
+                "@type": "Question",
+                "name": "What is the Model Context Protocol (MCP)?",
+                "acceptedAnswer": {"@type": "Answer", "text": "MCP is an open protocol that standardizes how AI applications connect to external data sources and tools. It enables LLMs to securely interact with APIs, databases, and services like Jenkins through a unified interface, making AI integrations more reliable and maintainable."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a
+                href="index.html#projects">Projects</a> / <span style="color: var(--accent);">Jenkins MCP Server</span>
+        </p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">AI INTEGRATION FOR JENKINS</p>
+                <h1 style="margin-bottom: 1.5rem;">Jenkins MCP Server</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">Enable AI agents to
+                    interact with Jenkins through Model Context Protocol for automated DevOps workflows</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Project Overview</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                The Jenkins MCP Server is a groundbreaking integration that enables Jenkins to serve context and
+                operations through the Model Context Protocol (MCP). This project bridges the gap between AI agents and
+                Jenkins, allowing for unprecedented levels of automation and AI-assisted DevOps workflows.
+            </p>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                By implementing the MCP protocol, Jenkins becomes accessible to LLM-based tools and AI assistants,
+                enabling natural language interactions with your CI/CD infrastructure.
+            </p>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Tech Stack</h3>
+                    <div class="tech-stack" style="margin-bottom: 1.5rem;">
+                        <span class="badge">Python</span>
+                        <span class="badge">MCP</span>
+                        <span class="badge">Jenkins API</span>
+                        <span class="badge">Node.js</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Key Features</h3>
+                    <ul class="skill-list">
+                        <li>Query job configurations</li>
+                        <li>Trigger builds programmatically</li>
+                        <li>Access build logs and artifacts</li>
+                        <li>AI-assisted troubleshooting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/jenkins-mcp-server.git
+cd jenkins-mcp-server
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure Jenkins connection
+export JENKINS_URL="http://your-jenkins-server:8080"
+export JENKINS_USER="your_username"
+export JENKINS_TOKEN="your_api_token"
+
+# Run the MCP server
+python -m jenkins_mcp_server</code></pre>
+                <p style="color: var(--text-secondary);">For Claude Desktop integration and advanced configuration, see the <a href="https://github.com/avisangle/jenkins-mcp-server#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">What It Does</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔧</div>
+                    <h3 style="margin-bottom: 1rem;">Job Management</h3>
+                    <p>Query job configurations, retrieve status information, and manage Jenkins jobs through AI-powered
+                        natural language commands.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+                    <h3 style="margin-bottom: 1rem;">Build Operations</h3>
+                    <p>Trigger builds, monitor execution status, access build logs, and retrieve artifacts
+                        programmatically through the MCP interface.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+                    <h3 style="margin-bottom: 1rem;">Context Awareness</h3>
+                    <p>Provide AI agents with comprehensive Jenkins environment information for intelligent
+                        decision-making and automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Why It Matters</h2>
+            <div class="grid grid-2">
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">🤖 AI-Assisted DevOps</h3>
+                    <p>Transform Jenkins operations with AI assistance. Use natural language to interact with your CI/CD
+                        infrastructure, making complex operations accessible to everyone.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">⚡ Faster Workflows</h3>
+                    <p>Reduce time spent on repetitive Jenkins tasks. AI agents can handle routine operations,
+                        troubleshooting, and monitoring automatically.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">🔄 Seamless Integration</h3>
+                    <p>MCP provides a standardized protocol for AI-Jenkins interaction, enabling integration with any
+                        MCP-compatible LLM application or AI assistant.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">🛡️ Security First</h3>
+                    <p>Respects Jenkins' authentication and authorization models, ensuring secure AI interactions that
+                        maintain your existing security policies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Implementation Highlights</h2>
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">🏗️ Technical Architecture</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">MCP Server Architecture</h4>
+                        <p>Python-based MCP server with Node.js wrapper for seamless integration with Jenkins. Optimized
+                            for low-latency responses to support real-time AI conversations.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Security First</h4>
+                        <p>Respects Jenkins' authentication and authorization models, ensuring secure AI interactions
+                            that maintain existing security policies.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">High Performance</h4>
+                        <p>Optimized for low-latency responses with efficient caching and connection pooling for
+                            real-time AI conversations.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Extensible Design</h4>
+                        <p>Modular tool system allows custom extensions for specific use cases. Add new capabilities
+                            without modifying core functionality.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 1.5rem;">✨ Core Capabilities</h3>
+                <ul class="skill-list">
+                    <li>Job configuration queries and status retrieval</li>
+                    <li>Programmatic build triggering with parameters</li>
+                    <li>Build log access and real-time monitoring</li>
+                    <li>Artifact retrieval and management</li>
+                    <li>Jenkins environment context provisioning</li>
+                    <li>Custom tool development framework</li>
+                    <li>Secure authentication integration</li>
+                    <li>RESTful API compatibility</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Related Projects</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <p class="card-subtitle">ChatOps</p>
+                    <h3 class="card-title">Jenkins Chatbot Plugin</h3>
+                    <p>AI-powered conversational interface for Jenkins build management.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-jenkins-chatbot.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-subtitle">MCP Server</p>
+                    <h3 class="card-title">Calculator Server</h3>
+                    <p>Go-based MCP server for mathematical computations.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-calculator-server.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-subtitle">Cloud Automation</p>
+                    <h3 class="card-title">AWS EC2 with AI Agent</h3>
+                    <p>Natural language cloud infrastructure deployment.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-aws-ec2-agent.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Explore the Code</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">Check out the GitHub
+                repository for implementation details and documentation</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://github.com/avisangle/jenkins-mcp-server" target="_blank" rel="noopener"
+                    class="btn btn-primary">View on GitHub ↗</a>
+                <a href="index.html#projects" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">💻</a></li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">💼</a></li>
+                    <li><a href="https://www.youtube.com/@AIAgentOps" target="_blank" rel="noopener" class="social-link"
+                            aria-label="YouTube">📺</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link" aria-label="Email">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2 Deployment with AI Agent | Cloud Infrastructure Automation | Avinash Sangle</title>
+    <meta name="description"
+        content="Deploy cloud infrastructure via natural language with intelligent self-healing automation. Multi-cloud support for AWS, GCP, and Azure.">
+    <meta name="keywords"
+        content="AWS automation, EC2 deployment, AI agent, cloud infrastructure, infrastructure as code, multi-cloud, AWS DevOps, self-healing infrastructure, natural language cloud, GCP, Azure, cloud automation">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-aws-ec2-agent.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AWS EC2 Deployment with AI Agent | Avinash Sangle">
+    <meta property="og:description"
+        content="Deploy cloud infrastructure via natural language with intelligent self-healing automation.">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-aws-ec2.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-aws-ec2-agent.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AWS EC2 Deployment with AI Agent">
+    <meta name="twitter:description" content="Deploy cloud infrastructure via natural language with AI automation.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AWS EC2 Deployment with AI Agent",
+        "description": "Deploy cloud infrastructure via natural language with intelligent self-healing automation. Multi-cloud support for AWS, GCP, and Azure.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Linux, Windows, macOS",
+        "author": {
+            "@type": "Person",
+            "name": "Avinash Sangle"
+        },
+        "url": "https://youtu.be/E6QqJJAZzlE"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "AWS EC2 with AI Agent", "item": "https://avinashsangle.com/project-aws-ec2-agent.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the AWS EC2 AI Agent?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The AWS EC2 AI Agent is an intelligent automation tool that deploys and manages cloud infrastructure using natural language commands. Instead of writing Terraform or clicking through AWS Console, you describe what you want and the agent handles the deployment."}
+            },
+            {
+                "@type": "Question",
+                "name": "How does the AI agent deploy cloud infrastructure?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The AI agent parses natural language commands like 'deploy a t2.micro instance in us-east-1', plans the required infrastructure, discovers existing resources to avoid conflicts, and executes deployment via cloud APIs with automatic error recovery and rollback."}
+            },
+            {
+                "@type": "Question",
+                "name": "Which cloud platforms are supported?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The agent supports Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure, allowing multi-cloud deployments from a single conversational interface."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I deploy EC2 instances with natural language?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, simply describe your requirements like 'create an Ubuntu EC2 instance with 4GB RAM and 50GB storage' and the AI agent selects the appropriate instance type, AMI, and configuration, then deploys it to your AWS account."}
+            },
+            {
+                "@type": "Question",
+                "name": "How does the agent handle infrastructure errors?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The agent includes self-healing capabilities with automatic error detection, retry logic, and rollback mechanisms. If a deployment fails, it analyzes the error, attempts remediation, and provides clear explanations of what went wrong."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is it safe to give an AI agent AWS access?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The agent uses AWS IAM roles with least-privilege permissions. You control exactly what resources the agent can create or modify. All actions are logged for audit trails, and the agent can be configured for dry-run mode to preview changes before execution."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can the AI agent manage existing AWS resources?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the agent can discover, describe, modify, and terminate existing EC2 instances. Ask questions like 'what instances are running in production?' or 'stop all development instances' for intelligent resource management."}
+            }
+        ]
+    }
+    </script>
+
+    <!-- VideoObject Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Deploy AWS EC2 with AI Agent Demo",
+        "description": "Watch a demonstration of deploying cloud infrastructure using natural language commands with an AI agent. Deploy EC2 instances in 60 seconds.",
+        "thumbnailUrl": "https://img.youtube.com/vi/E6QqJJAZzlE/maxresdefault.jpg",
+        "uploadDate": "2024-01-01T00:00:00+00:00",
+        "contentUrl": "https://youtu.be/E6QqJJAZzlE",
+        "embedUrl": "https://www.youtube.com/embed/E6QqJJAZzlE",
+        "duration": "PT5M"
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a
+                href="index.html#projects">Projects</a> / <span style="color: var(--accent);">AWS EC2 with AI
+                Agent</span></p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">CLOUD INFRASTRUCTURE AUTOMATION
+                </p>
+                <h1>AWS EC2 Deployment with AI Agent</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin: 1.5rem 0 2rem;">Deploy cloud
+                    infrastructure through natural language with intelligent self-healing automation</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://youtu.be/E6QqJJAZzlE" target="_blank" rel="noopener" class="btn btn-primary">Watch
+                        Demo ↗</a>
+                    <a href="index.html#projects" class="btn btn-outline">← Back</a>
+                </div>
+                
+                <div style="margin-top: 2rem; max-width: 560px; margin-left: auto; margin-right: auto;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+                        <iframe 
+                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                            src="https://www.youtube.com/embed/E6QqJJAZzlE" 
+                            title="Deploy AWS EC2 with AI Agent Demo"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin: 2rem 0;">
+                Automated multi-cloud infrastructure provisioning through natural language commands. Deploy AWS EC2
+                instances using an AI agent that intelligently plans, discovers resources, and self-heals errors during
+                execution. From chat to cloud in 60 seconds.
+            </p>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Cloud Platforms</h3>
+                    <div class="tech-stack" style="margin-top: 1rem;">
+                        <span class="badge">AWS</span>
+                        <span class="badge">GCP</span>
+                        <span class="badge">Azure</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Key Features</h3>
+                    <ul class="skill-list">
+                        <li>Natural language deployment</li>
+                        <li>Intelligent planning</li>
+                        <li>Self-healing automation</li>
+                        <li>Multi-cloud support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Try It Now</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Configure AWS credentials
+export AWS_ACCESS_KEY_ID="your_access_key"
+export AWS_SECRET_ACCESS_KEY="your_secret_key"
+export AWS_REGION="us-east-1"
+
+# Example natural language command:
+"Deploy an Ubuntu EC2 instance with t2.micro in us-east-1"</code></pre>
+                <p style="color: var(--text-secondary);">Watch the <a href="https://youtu.be/E6QqJJAZzlE" target="_blank" rel="noopener">full demo video</a> to see the AI agent in action.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>What It Does</h2>
+            <div class="grid grid-3" style="margin-top: 2rem;">
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">💬</div>
+                    <h3>Natural Language</h3>
+                    <p>Simply describe what you want to deploy. "Create an EC2 instance with Ubuntu" - that's all you
+                        need.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
+                    <h3>Intelligent Planning</h3>
+                    <p>AI agent analyzes requirements, discovers existing resources, and creates optimal deployment
+                        plan.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
+                    <h3>Self-Healing</h3>
+                    <p>Automatically detects and corrects errors during deployment, retrying failed steps intelligently.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Why It Matters</h2>
+            <div class="grid grid-2" style="margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>⚡ 60-Second Deployments</h3>
+                    <p>What traditionally takes 30 minutes of clicking through AWS console now takes 60 seconds via
+                        chat.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🌐 Multi-Cloud Ready</h3>
+                    <p>Same natural language interface works across AWS, GCP, and Azure - no platform-specific learning
+                        required.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🛡️ Error Resilience</h3>
+                    <p>AI agent handles common deployment errors automatically, reducing manual intervention.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>📚 Democratizes DevOps</h3>
+                    <p>Makes cloud infrastructure accessible to developers unfamiliar with complex cloud consoles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Implementation Highlights</h2>
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Core Capabilities</h3>
+                <ul class="skill-list">
+                    <li>Natural language infrastructure description parsing</li>
+                    <li>Intelligent resource discovery and planning</li>
+                    <li>Multi-cloud API integration (AWS, GCP, Azure)</li>
+                    <li>Automated error detection and recovery</li>
+                    <li>MCP protocol for AI agent communication</li>
+                    <li>Security best practices enforcement</li>
+                    <li>Real-time deployment monitoring</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link">💻</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link">💼</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags - UPDATE ALL PLACEHOLDERS -->
+    <title>{{PROJECT_NAME}} | {{PROJECT_TAGLINE}} | Avinash Sangle</title>
+    <meta name="description" content="{{PROJECT_DESCRIPTION_150_CHARS}}">
+    <meta name="keywords"
+        content="{{KEYWORD_1}}, {{KEYWORD_2}}, {{KEYWORD_3}}, {{KEYWORD_4}}, {{KEYWORD_5}}, {{KEYWORD_6}}, {{KEYWORD_7}}, {{KEYWORD_8}}, {{KEYWORD_9}}, {{KEYWORD_10}}">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-{{PROJECT_SLUG}}.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{PROJECT_NAME}} | {{PROJECT_TAGLINE}}">
+    <meta property="og:description" content="{{PROJECT_SHORT_DESCRIPTION}}">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-{{PROJECT_SLUG}}.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-{{PROJECT_SLUG}}.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{PROJECT_NAME}} | {{PROJECT_TAGLINE}}">
+    <meta name="twitter:description" content="{{PROJECT_SHORT_DESCRIPTION}}">
+    <meta name="twitter:image" content="https://avinashsangle.com/assets/twitter-{{PROJECT_SLUG}}.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "{{PROJECT_NAME}}",
+    "description": "{{PROJECT_DESCRIPTION_150_CHARS}}",
+    "applicationCategory": "{{APPLICATION_CATEGORY}}",
+    "operatingSystem": "{{OPERATING_SYSTEM}}",
+    "programmingLanguage": "{{PRIMARY_LANGUAGE}}",
+    "author": {
+      "@type": "Person",
+      "name": "Avinash Sangle"
+    },
+    "url": "{{PROJECT_URL}}"
+  }
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+      {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+      {"@type": "ListItem", "position": 3, "name": "{{PROJECT_NAME}}", "item": "https://avinashsangle.com/project-{{PROJECT_SLUG}}.html"}
+    ]
+  }
+  </script>
+
+    <!-- FAQ Schema (Update with project-specific Q&A) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "{{FAQ_QUESTION_1}}",
+        "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_ANSWER_1}}"}
+      },
+      {
+        "@type": "Question",
+        "name": "{{FAQ_QUESTION_2}}",
+        "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_ANSWER_2}}"}
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);">
+            <a href="index.html">Home</a> /
+            <a href="index.html#projects">Projects</a> /
+            <span style="color: var(--accent);">{{PROJECT_NAME}}</span>
+        </p>
+    </div>
+
+    <!-- Project Header -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">{{PROJECT_CATEGORY_UPPERCASE}}
+                </p>
+                <h1 style="margin-bottom: 1.5rem;">{{PROJECT_NAME}}</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                    {{PROJECT_TAGLINE_LONG}}</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <!-- Primary CTA - Choose one: GitHub, Live Demo, or Documentation -->
+                    <a href="{{PRIMARY_CTA_URL}}" target="_blank" rel="noopener"
+                        class="btn btn-primary">{{PRIMARY_CTA_TEXT}} ↗</a>
+                    <!-- Optional: Secondary CTA -->
+                    <!-- <a href="{{SECONDARY_CTA_URL}}" target="_blank" rel="noopener" class="btn btn-outline">{{SECONDARY_CTA_TEXT}} ↗</a> -->
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Project Overview</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                {{PROJECT_OVERVIEW_PARAGRAPH_1}}
+            </p>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                {{PROJECT_OVERVIEW_PARAGRAPH_2}}
+            </p>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Tech Stack</h3>
+                    <div class="tech-stack" style="margin-bottom: 1.5rem;">
+                        <span class="badge">{{TECH_1}}</span>
+                        <span class="badge">{{TECH_2}}</span>
+                        <span class="badge">{{TECH_3}}</span>
+                        <span class="badge">{{TECH_4}}</span>
+                        <!-- Add more as needed -->
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Key Features</h3>
+                    <ul class="skill-list">
+                        <li>{{KEY_FEATURE_1}}</li>
+                        <li>{{KEY_FEATURE_2}}</li>
+                        <li>{{KEY_FEATURE_3}}</li>
+                        <li>{{KEY_FEATURE_4}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What It Does -->
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">What It Does</h2>
+            <div class="grid grid-3">
+                <!-- Feature Card 1 -->
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">{{FEATURE_1_EMOJI}}</div>
+                    <h3 style="margin-bottom: 1rem;">{{FEATURE_1_TITLE}}</h3>
+                    <p>{{FEATURE_1_DESCRIPTION}}</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">{{FEATURE_2_EMOJI}}</div>
+                    <h3 style="margin-bottom: 1rem;">{{FEATURE_2_TITLE}}</h3>
+                    <p>{{FEATURE_2_DESCRIPTION}}</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">{{FEATURE_3_EMOJI}}</div>
+                    <h3 style="margin-bottom: 1rem;">{{FEATURE_3_TITLE}}</h3>
+                    <p>{{FEATURE_3_DESCRIPTION}}</p>
+                </div>
+
+                <!-- Optional: Add more feature cards as needed (recommend 3-6) -->
+                <!--
+        <div class="card">
+          <div style="font-size: 2.5rem; margin-bottom: 1rem;">{{FEATURE_4_EMOJI}}</div>
+          <h3 style="margin-bottom: 1rem;">{{FEATURE_4_TITLE}}</h3>
+          <p>{{FEATURE_4_DESCRIPTION}}</p>
+        </div>
+        -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Why It Matters</h2>
+            <div class="grid grid-2">
+                <!-- Benefit Card 1 -->
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">{{BENEFIT_1_EMOJI}} {{BENEFIT_1_TITLE}}</h3>
+                    <p>{{BENEFIT_1_DESCRIPTION}}</p>
+                </div>
+
+                <!-- Benefit Card 2 -->
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">{{BENEFIT_2_EMOJI}} {{BENEFIT_2_TITLE}}</h3>
+                    <p>{{BENEFIT_2_DESCRIPTION}}</p>
+                </div>
+
+                <!-- Benefit Card 3 -->
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">{{BENEFIT_3_EMOJI}} {{BENEFIT_3_TITLE}}</h3>
+                    <p>{{BENEFIT_3_DESCRIPTION}}</p>
+                </div>
+
+                <!-- Benefit Card 4 -->
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">{{BENEFIT_4_EMOJI}} {{BENEFIT_4_TITLE}}</h3>
+                    <p>{{BENEFIT_4_DESCRIPTION}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Highlights -->
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Implementation Highlights</h2>
+
+            <!-- Technical Architecture Card -->
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">🏗️ Technical Architecture</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">{{ARCH_1_TITLE}}</h4>
+                        <p>{{ARCH_1_DESCRIPTION}}</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">{{ARCH_2_TITLE}}</h4>
+                        <p>{{ARCH_2_DESCRIPTION}}</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">{{ARCH_3_TITLE}}</h4>
+                        <p>{{ARCH_3_DESCRIPTION}}</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">{{ARCH_4_TITLE}}</h4>
+                        <p>{{ARCH_4_DESCRIPTION}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Capabilities Card -->
+            <div class="card">
+                <h3 style="margin-bottom: 1.5rem;">✨ Core Capabilities</h3>
+                <ul class="skill-list">
+                    <li>{{CAPABILITY_1}}</li>
+                    <li>{{CAPABILITY_2}}</li>
+                    <li>{{CAPABILITY_3}}</li>
+                    <li>{{CAPABILITY_4}}</li>
+                    <li>{{CAPABILITY_5}}</li>
+                    <li>{{CAPABILITY_6}}</li>
+                    <!-- Add more as needed -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Projects -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Related Projects</h2>
+            <div class="grid grid-3">
+                <!-- Related Project 1 -->
+                <div class="card">
+                    <p class="card-subtitle">{{RELATED_1_CATEGORY}}</p>
+                    <h3 class="card-title">{{RELATED_1_NAME}}</h3>
+                    <p>{{RELATED_1_DESCRIPTION}}</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="{{RELATED_1_URL}}" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Related Project 2 -->
+                <div class="card">
+                    <p class="card-subtitle">{{RELATED_2_CATEGORY}}</p>
+                    <h3 class="card-title">{{RELATED_2_NAME}}</h3>
+                    <p>{{RELATED_2_DESCRIPTION}}</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="{{RELATED_2_URL}}" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Related Project 3 -->
+                <div class="card">
+                    <p class="card-subtitle">{{RELATED_3_CATEGORY}}</p>
+                    <h3 class="card-title">{{RELATED_3_NAME}}</h3>
+                    <p>{{RELATED_3_DESCRIPTION}}</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="{{RELATED_3_URL}}" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about {{PROJECT_NAME}}</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: 1rem;">
+                    <h3 style="margin-bottom: 0.5rem;">{{FAQ_QUESTION_1}}</h3>
+                    <p>{{FAQ_ANSWER_1}}</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="margin-bottom: 0.5rem;">{{FAQ_QUESTION_2}}</h3>
+                    <p>{{FAQ_ANSWER_2}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">{{CTA_HEADING}}</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">{{CTA_SUBHEADING}}</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="{{PRIMARY_CTA_URL}}" target="_blank" rel="noopener"
+                    class="btn btn-primary">{{PRIMARY_CTA_TEXT}} ↗</a>
+                <a href="index.html#projects" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">💻</a></li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">💼</a></li>
+                    <li><a href="https://www.youtube.com/@AIAgentOps" target="_blank" rel="noopener" class="social-link"
+                            aria-label="YouTube">📺</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link" aria-label="Email">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
+
+<!--
+================================================================================
+PLACEHOLDER REFERENCE GUIDE
+================================================================================
+
+NAMING CONVENTION:
+- {{PLACEHOLDER_NAME}} - Replace entire placeholder including braces
+
+SEO PLACEHOLDERS:
+- {{PROJECT_NAME}}              - Full project name (e.g., "Jenkins MCP Server")
+- {{PROJECT_SLUG}}              - URL-friendly name (e.g., "jenkins-mcp")
+- {{PROJECT_TAGLINE}}           - Short tagline (e.g., "AI Integration for Jenkins")
+- {{PROJECT_TAGLINE_LONG}}      - Longer description for hero (1-2 sentences)
+- {{PROJECT_DESCRIPTION_150_CHARS}} - Meta description (max 150 chars)
+- {{PROJECT_SHORT_DESCRIPTION}} - For social sharing (max 100 chars)
+- {{KEYWORD_1-10}}              - SEO keywords (10 recommended)
+- {{APPLICATION_CATEGORY}}      - Schema.org category (e.g., "DeveloperApplication")
+- {{OPERATING_SYSTEM}}          - Target OS (e.g., "Linux, Windows, macOS")
+- {{PRIMARY_LANGUAGE}}          - Main programming language
+- {{PROJECT_URL}}               - GitHub repo or live demo URL
+
+CONTENT PLACEHOLDERS:
+- {{PROJECT_CATEGORY_UPPERCASE}} - Category in uppercase (e.g., "AI INTEGRATION")
+- {{PROJECT_OVERVIEW_PARAGRAPH_1}} - First overview paragraph
+- {{PROJECT_OVERVIEW_PARAGRAPH_2}} - Second overview paragraph
+- {{TECH_1-4}}                  - Technology stack badges
+- {{KEY_FEATURE_1-4}}           - Key features list items
+
+FEATURE CARDS (3-6 recommended):
+- {{FEATURE_X_EMOJI}}           - Emoji icon for feature
+- {{FEATURE_X_TITLE}}           - Feature title
+- {{FEATURE_X_DESCRIPTION}}     - Feature description
+
+BENEFIT CARDS (4 recommended):
+- {{BENEFIT_X_EMOJI}}           - Emoji icon for benefit
+- {{BENEFIT_X_TITLE}}           - Benefit title
+- {{BENEFIT_X_DESCRIPTION}}     - Benefit description
+
+ARCHITECTURE CARDS (4 recommended):
+- {{ARCH_X_TITLE}}              - Architecture section title
+- {{ARCH_X_DESCRIPTION}}        - Architecture section description
+
+CAPABILITIES LIST:
+- {{CAPABILITY_1-6}}            - Core capability items
+
+RELATED PROJECTS (3 recommended):
+- {{RELATED_X_CATEGORY}}        - Related project category
+- {{RELATED_X_NAME}}            - Related project name
+- {{RELATED_X_DESCRIPTION}}     - Related project description
+- {{RELATED_X_URL}}             - Related project page URL
+
+CTA SECTION:
+- {{CTA_HEADING}}               - CTA heading (e.g., "Explore the Code")
+- {{CTA_SUBHEADING}}            - CTA subheading
+- {{PRIMARY_CTA_URL}}           - Primary button URL
+- {{PRIMARY_CTA_TEXT}}          - Primary button text (e.g., "View on GitHub")
+
+================================================================================
+AFTER CREATING A NEW PROJECT PAGE:
+================================================================================
+
+1. Save as: project-{{PROJECT_SLUG}}.html
+2. Add project card to index.html in the projects grid
+3. Add URL to sitemap.xml
+4. Create OG image: assets/og-{{PROJECT_SLUG}}.jpg (1200x630px)
+5. Create Twitter image: assets/twitter-{{PROJECT_SLUG}}.jpg (1200x600px)
+
+================================================================================
+-->

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method CRM MCP Server | Production-Ready CRM Integration | Avinash Sangle</title>
+    <meta name="description"
+        content="Production-ready Model Context Protocol server for Method CRM API integration. 20 comprehensive tools enabling LLMs to interact with Method CRM data through tables, files, users, events, and API key management.">
+    <meta name="keywords"
+        content="Method CRM, MCP server, CRM integration, API integration, Model Context Protocol, Python MCP, CRM automation, LLM integration, QuickBooks integration, business automation">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-method-crm-mcp.html">
+    <meta property="og:title" content="Method CRM MCP Server | Production-Ready CRM Integration">
+    <meta property="og:description" content="Production-ready MCP server with 20 tools for Method CRM integration">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-method-crm.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-method-crm-mcp.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Method CRM MCP Server",
+  "description": "Production-ready MCP server for Method CRM API integration with 20 comprehensive tools",
+  "applicationCategory": "DeveloperApplication",
+  "programmingLanguage": "Python",
+  "featureList": "OData filtering, 20+ CRM tools, File Uploads, User Management, API Key Management, Event Automation, Rate Limiting, Retry Logic",
+  "operatingSystem": "Python",
+  "author": {"@type": "Person", "name": "Avinash Sangle"},
+  "url": "https://github.com/avisangle/method-crm-mcp"
+}
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Method CRM MCP Server", "item": "https://avinashsangle.com/project-method-crm-mcp.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Method CRM MCP Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The Method CRM MCP Server is a production-ready Model Context Protocol server that enables AI assistants like Claude to interact with Method CRM data. It provides 20 comprehensive tools for managing contacts, companies, activities, opportunities, tables, files, users, events, and API keys."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I install the Method CRM MCP Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Clone the repository from GitHub, install Python dependencies with pip install -r requirements.txt, set your METHOD_API_KEY environment variable, and run the server. For Claude Desktop, add the configuration to your claude_desktop_config.json file."}
+            },
+            {
+                "@type": "Question",
+                "name": "What can AI agents do with Method CRM through MCP?",
+                "acceptedAnswer": {"@type": "Answer", "text": "AI agents can create and update contacts, manage companies and opportunities, log activities and events, query custom tables, upload and retrieve files, manage user permissions, and perform complex CRM operations through natural language commands."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Method CRM MCP Server secure?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the server uses Method CRM's API key authentication and respects all existing permissions. API keys are stored securely as environment variables, and all communications with Method CRM use HTTPS encryption."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use Method CRM MCP Server with Claude Desktop?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the server integrates seamlessly with Claude Desktop. Configure it in your claude_desktop_config.json with your Method API key, and Claude can directly query and update your CRM data through conversational commands."}
+            },
+            {
+                "@type": "Question",
+                "name": "What is Method CRM and how does it work with AI?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Method CRM is a customizable CRM platform popular with QuickBooks users. Through the MCP Server, AI assistants can automate CRM workflows, generate reports, update records, and provide intelligent insights about your customer data without manual data entry."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a
+                href="index.html#projects">Projects</a> / <span style="color: var(--accent);">Method CRM MCP
+                Server</span></p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">PRODUCTION-READY CRM INTEGRATION
+                </p>
+                <h1 style="margin-bottom: 1.5rem;">Method CRM MCP Server</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">Production-ready Model
+                    Context Protocol server for Method CRM API integration with 20 comprehensive tools</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Project Overview</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                Method CRM MCP Server is a production-ready Model Context Protocol (MCP) server that enables LLMs to
+                interact with Method CRM data through well-designed tools. This server provides comprehensive access to
+                Method CRM's functionality including tables, files, users, events, and API key management.
+            </p>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                Built with enterprise-grade features like API key authentication, automatic rate limiting, retry logic,
+                and full type safety through Pydantic validation.
+            </p>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Tech Stack</h3>
+                    <div class="tech-stack" style="margin-bottom: 1.5rem;">
+                        <span class="badge">Python</span>
+                        <span class="badge">MCP</span>
+                        <span class="badge">Pydantic</span>
+                        <span class="badge">Method CRM API</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Key Features</h3>
+                    <ul class="skill-list">
+                        <li>20 comprehensive tools</li>
+                        <li>Production-ready authentication</li>
+                        <li>Dual transport support</li>
+                        <li>Rate limiting & retry logic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/method-crm-mcp.git
+cd method-crm-mcp
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set environment variables
+export METHOD_API_KEY="your_api_key_here"
+
+# Run the server
+python -m method_crm_mcp</code></pre>
+                <p style="color: var(--text-secondary);">For detailed configuration options and advanced setup, see the <a href="https://github.com/avisangle/method-crm-mcp#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">What It Does</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📊</div>
+                    <h3 style="margin-bottom: 1rem;">Table Operations</h3>
+                    <p>Comprehensive CRUD operations for Method CRM tables. Query, create, update, and delete records
+                        with OData filtering and pagination support.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📁</div>
+                    <h3 style="margin-bottom: 1rem;">File Management</h3>
+                    <p>Upload, download, and manage files linked to CRM records. Supports invoices, documents, and
+                        attachments with automatic base64 encoding.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3 style="margin-bottom: 1rem;">Event Automation</h3>
+                    <p>Create automated routines triggered by CRM events. Send emails, update records, or execute custom
+                        actions on record creation or updates.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔑</div>
+                    <h3 style="margin-bottom: 1rem;">API Key Management</h3>
+                    <p>Create and manage API keys with granular permissions. Support for read/write access control and
+                        key lifecycle management.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">👥</div>
+                    <h3 style="margin-bottom: 1rem;">User Information</h3>
+                    <p>Retrieve authenticated user information and account details for audit trails and permissions
+                        management.</p>
+                </div>
+
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔒</div>
+                    <h3 style="margin-bottom: 1rem;">Type Safety</h3>
+                    <p>Full Pydantic validation for all inputs and outputs. Actionable error messages with clear
+                        suggestions for resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Why It Matters</h2>
+            <div class="grid grid-2">
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">🚀 Production-Ready</h3>
+                    <p>Enterprise-grade features including authentication, rate limiting, retry logic, and comprehensive
+                        error handling make it deployment-ready.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">🤖 LLM Integration</h3>
+                    <p>Enables AI assistants to interact with Method CRM, allowing natural language CRM operations and
+                        intelligent automation.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">⚡ Dual Transport</h3>
+                    <p>Supports both stdio (local) and streamable HTTP (remote) transports, enabling flexible deployment
+                        options for any environment.</p>
+                </div>
+
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3 style="margin-bottom: 1rem;">📈 Comprehensive Coverage</h3>
+                    <p>20 tools covering all major Method CRM operations - from customer management to file uploads to
+                        event automation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Implementation Highlights</h2>
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">🏗️ Technical Architecture</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">API Integration</h4>
+                        <p>Full Method CRM API coverage with OData query support, pagination, and filtering. Handles
+                            complex operations like customer creation and inventory management.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Authentication</h4>
+                        <p>API key authentication fully implemented with OAuth2 placeholders. Secure credential
+                            management through environment variables.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Rate Limiting</h4>
+                        <p>Automatic handling of API rate limits with exponential backoff and retry logic. Prevents
+                            quota exhaustion and ensures reliable operations.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent);">Type Safety</h4>
+                        <p>Pydantic models for all tool inputs and outputs. Comprehensive validation with actionable
+                            error messages.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="margin-bottom: 1.5rem;">✨ Available Tools (20 Total)</h3>
+                <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="background: var(--bg-secondary);">
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">Category</th>
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">Tool</th>
+                                <th style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Tables</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_tables_query</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Query with OData filtering</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Tables</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_tables_create</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Create new records</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Files</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_files_upload</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Upload with base64 encoding</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Files</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_files_download</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Download file content</td></tr>
+                            <tr><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Events</td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);"><code>method_events_create_routine</code></td><td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Create automated routines</td></tr>
+                            <tr><td style="padding: 0.5rem;">API Keys</td><td style="padding: 0.5rem;"><code>method_apikeys_create</code></td><td style="padding: 0.5rem;">Create new API keys</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Table Operations (5 tools)</h4>
+                <ul class="skill-list" style="margin-bottom: 1.5rem;">
+                    <li><code>method_tables_query</code> - Query tables with OData filtering</li>
+                    <li><code>method_tables_get</code> - Get specific record by ID</li>
+                    <li><code>method_tables_create</code> - Create new records</li>
+                    <li><code>method_tables_update</code> - Update existing records</li>
+                    <li><code>method_tables_delete</code> - Delete records</li>
+                </ul>
+
+                <h4 style="color: var(--accent); margin-bottom: 0.5rem;">File Management (6 tools)</h4>
+                <ul class="skill-list" style="margin-bottom: 1.5rem;">
+                    <li><code>method_files_upload</code> - Upload files with base64 encoding</li>
+                    <li><code>method_files_list</code> - List files with optional filtering</li>
+                    <li><code>method_files_download</code> - Download file content</li>
+                    <li><code>method_files_get_url</code> - Get direct file URLs</li>
+                    <li><code>method_files_update_link</code> - Update file-record links</li>
+                    <li><code>method_files_delete</code> - Delete files</li>
+                </ul>
+
+                <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Event Automation (4 tools)</h4>
+                <ul class="skill-list" style="margin-bottom: 1.5rem;">
+                    <li><code>method_events_create_routine</code> - Create automated routines</li>
+                    <li><code>method_events_list_routines</code> - List all routines</li>
+                    <li><code>method_events_get_routine</code> - Get routine details</li>
+                    <li><code>method_events_delete_routine</code> - Delete routines</li>
+                </ul>
+
+                <h4 style="color: var(--accent); margin-bottom: 0.5rem;">API Key Management (4 tools)</h4>
+                <ul class="skill-list">
+                    <li><code>method_apikeys_create</code> - Create new API keys</li>
+                    <li><code>method_apikeys_list</code> - List all API keys</li>
+                    <li><code>method_apikeys_update</code> - Update key permissions</li>
+                    <li><code>method_apikeys_delete</code> - Revoke API keys</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Advanced Features</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">OData Query Filtering</h3>
+                    <p>Advanced filtering, sorting, and pagination using OData syntax. Complex queries with AND/OR
+                        logic, comparison operators, and aggregations.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Multiple Response Formats</h3>
+                    <p>Support for both JSON and Markdown output formats. Choose the best format for your use case or
+                        LLM consumption.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Error Handling</h3>
+                    <p>Actionable error messages with suggestions. Authentication errors, rate limits, validation
+                        failures - all clearly explained.</p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem;">Security Best Practices</h3>
+                    <p>Environment-based credential management, never hardcode secrets. OAuth2 support coming soon for
+                        enhanced security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Related Projects</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <p class="card-subtitle">AI Integration</p>
+                    <h3 class="card-title">Jenkins MCP Server</h3>
+                    <p>MCP server enabling AI agents to interact with Jenkins programmatically.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-jenkins-mcp.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-subtitle">MCP Server</p>
+                    <h3 class="card-title">Calculator Server</h3>
+                    <p>Go-based MCP server for mathematical computations.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-calculator-server.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="card-subtitle">Cloud Automation</p>
+                    <h3 class="card-title">AWS EC2 with AI Agent</h3>
+                    <p>Natural language cloud infrastructure deployment.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="project-aws-ec2-agent.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Explore the Code</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">Check out the GitHub
+                repository for implementation details, installation guide, and comprehensive documentation</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://github.com/avisangle/method-crm-mcp" target="_blank" rel="noopener"
+                    class="btn btn-primary">View on GitHub ↗</a>
+                <a href="index.html#projects" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">💻</a></li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">💼</a></li>
+                    <li><a href="https://www.youtube.com/@AIAgentOps" target="_blank" rel="noopener" class="social-link"
+                            aria-label="YouTube">📺</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link" aria-label="Email">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

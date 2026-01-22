@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Server | Go-based MCP Server for Mathematical Computations | Avinash Sangle</title>
+    <meta name="description"
+        content="High-performance Go-based MCP server providing comprehensive mathematical computation capabilities for AI agents and applications.">
+    <meta name="keywords"
+        content="MCP server, Go programming, mathematical computation, Model Context Protocol, Golang server, AI tools, computation API, microservices, Go development, mathematical API">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-calculator-server.html">
+    <meta property="og:title" content="Calculator Server | Go-based MCP Server">
+    <meta property="og:description"
+        content="High-performance mathematical computation server using Model Context Protocol">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-calculator.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-calculator-server.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Calculator Server","description":"Go-based MCP server for mathematical computations with comprehensive toolkit","applicationCategory":"DeveloperApplication","programmingLanguage":"Go","author":{"@type":"Person","name":"Avinash Sangle"},"url":"https://github.com/avisangle/calculator-server"}
+  </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Calculator Server", "item": "https://avinashsangle.com/project-calculator-server.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Calculator Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Calculator Server is a high-performance Go-based MCP server providing 13+ mathematical computation tools for AI agents. It enables LLMs like Claude and ChatGPT to perform accurate calculations including arithmetic, trigonometry, statistics, and unit conversions through the Model Context Protocol."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why use Go for the Calculator Server?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Go's concurrency model, compiled performance, and minimal memory footprint make it ideal for low-latency computation services. AI agents require sub-millisecond response times for real-time mathematical operations, which Go delivers efficiently."}
+            },
+            {
+                "@type": "Question",
+                "name": "What mathematical operations does the Calculator Server support?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The server supports basic arithmetic (add, subtract, multiply, divide), advanced operations (power, square root, logarithms), trigonometric functions (sin, cos, tan), statistical calculations (mean, median, standard deviation), and unit conversions for length, weight, temperature, and more."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I integrate Calculator Server with Claude Desktop?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Add the Calculator Server to your claude_desktop_config.json file with the path to the Go binary. Once configured, Claude can automatically use the calculator tools for any mathematical queries in your conversations."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I build my own MCP server in Go?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes, the Calculator Server serves as an excellent reference implementation for building MCP servers in Go. The codebase demonstrates tool registration, request handling, JSON-RPC communication, and Go best practices for MCP development."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why do AI agents need a calculator tool?",
+                "acceptedAnswer": {"@type": "Answer", "text": "LLMs can make arithmetic errors, especially with large numbers or complex calculations. A dedicated calculator tool ensures mathematical accuracy by offloading computations to a reliable system, improving AI response quality for numerical tasks."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a
+                href="index.html#projects">Projects</a> / <span style="color: var(--accent);">Calculator Server</span>
+        </p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">MCP SERVER IN GO</p>
+                <h1 style="margin-bottom: 1.5rem;">Calculator Server</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem;">High-performance
+                    Go-based MCP server providing comprehensive mathematical computation capabilities for AI agents</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Project Overview</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                Calculator Server is a robust Model Context Protocol (MCP) server implemented in Go that provides
+                mathematical computation tools for AI agents and applications. It demonstrates Go programming expertise
+                and showcases integration of computational services with AI systems through a standardized protocol
+                interface.
+            </p>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-stack" style="margin-top: 1rem;">
+                        <span class="badge">Go</span>
+                        <span class="badge">MCP</span>
+                        <span class="badge">Mathematical APIs</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Capabilities</h3>
+                    <ul class="skill-list">
+                        <li>Basic arithmetic operations</li>
+                        <li>Advanced calculations</li>
+                        <li>13+ mathematical tools</li>
+                        <li>High-performance computing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/calculator-server.git
+cd calculator-server
+
+# Build the server
+go build -o calculator-server
+
+# Run the MCP server
+./calculator-server</code></pre>
+                <p style="color: var(--text-secondary);">For integration with AI agents, see the <a href="https://github.com/avisangle/calculator-server#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">What It Does</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">➕</div>
+                    <h3>Basic Operations</h3>
+                    <p>Addition, subtraction, multiplication, division, and modulo operations with high precision.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">📐</div>
+                    <h3>Advanced Math</h3>
+                    <p>Trigonometric functions, logarithms, exponentials, and statistical calculations.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3>High Performance</h3>
+                    <p>Go's concurrency and speed ensure low-latency responses for AI agents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Why It Matters</h2>
+            <div class="grid grid-2" style="margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🤖 AI Integration</h3>
+                    <p>Provides AI agents with mathematical capabilities through standardized MCP protocol.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🚀 Performance</h3>
+                    <p>Go's efficiency and concurrency make it ideal for high-throughput computation services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Implementation Highlights</h2>
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">Core Features</h3>
+                <ul class="skill-list">
+                    <li>13+ comprehensive mathematical tools</li>
+                    <li>MCP protocol implementation in Go</li>
+                    <li>Concurrent request handling</li>
+                    <li>Type-safe computation APIs</li>
+                    <li>Extensible architecture for custom functions</li>
+                    <li>Error handling and validation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="grid grid-3" style="margin-top: 2rem;">
+                <div class="card">
+                    <p class="card-subtitle">AI Integration</p>
+                    <h3 class="card-title">Jenkins MCP Server</h3>
+                    <p>Python-based MCP server for Jenkins automation.</p>
+                    <a href="project-jenkins-mcp.html" class="project-link"
+                        style="margin-top: 1rem; display: inline-block;">Learn More →</a>
+                </div>
+                <div class="card">
+                    <p class="card-subtitle">WordPress Development</p>
+                    <h3 class="card-title">WP Coding with MCP</h3>
+                    <p>AI-assisted WordPress development.</p>
+                    <a href="project-wp-mcp.html" class="project-link"
+                        style="margin-top: 1rem; display: inline-block;">Learn More →</a>
+                </div>
+                <div class="card">
+                    <p class="card-subtitle">Cloud Automation</p>
+                    <h3 class="card-title">AWS EC2 with AI Agent</h3>
+                    <p>Natural language cloud deployment.</p>
+                    <a href="project-aws-ec2-agent.html" class="project-link"
+                        style="margin-top: 1rem; display: inline-block;">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link">💻</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link">💼</a></li>
+                    <li><a href="https://www.youtube.com/@AIAgentOps" target="_blank" rel="noopener"
+                            class="social-link">📺</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

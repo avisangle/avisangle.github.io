@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide to Method CRM MCP Server | AI-Powered CRM Integration | Avinash Sangle</title>
+    <meta name="description"
+        content="Learn how to set up, configure, and use the Method CRM MCP Server to enable AI assistants to interact with your CRM data. Comprehensive guide with examples, best practices, and troubleshooting tips.">
+    <meta name="keywords"
+        content="Method CRM MCP Server tutorial, CRM AI integration, Model Context Protocol guide, Claude Desktop CRM, Method CRM automation, MCP server setup, AI CRM assistant, Method API integration">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/blog-method-crm-mcp.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Complete Guide to Method CRM MCP Server | AI-Powered CRM Integration">
+    <meta property="og:description"
+        content="Learn how to enable AI assistants to interact with Method CRM using the Model Context Protocol.">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-blog-method-crm.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/blog-method-crm-mcp.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Complete Guide to Method CRM MCP Server">
+    <meta name="twitter:description" content="Enable AI assistants to interact with Method CRM using MCP.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Complete Guide to Method CRM MCP Server: AI-Powered CRM Integration",
+        "description": "Learn how to set up, configure, and use the Method CRM MCP Server to enable AI assistants to interact with your CRM data.",
+        "author": {
+            "@type": "Person",
+            "name": "Avinash Sangle",
+            "url": "https://avinashsangle.com"
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Avinash Sangle"
+        },
+        "datePublished": "2025-01-15",
+        "dateModified": "2025-01-15",
+        "mainEntityOfPage": "https://avinashsangle.com/blog-method-crm-mcp.html",
+        "keywords": ["Method CRM", "MCP Server", "AI Integration", "Claude Desktop", "CRM Automation"],
+        "articleSection": "AI & Automation",
+        "wordCount": "2500"
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://avinashsangle.com/blog.html"},
+            {"@type": "ListItem", "position": 3, "name": "Method CRM MCP Server Guide", "item": "https://avinashsangle.com/blog-method-crm-mcp.html"}
+        ]
+    }
+    </script>
+
+    <!-- HowTo Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Set Up Method CRM MCP Server",
+        "description": "Step-by-step guide to install and configure Method CRM MCP Server for AI integration",
+        "totalTime": "PT15M",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Get Method CRM API Key",
+                "text": "Log into Method CRM, navigate to Settings > API Keys, and create a new API key with appropriate permissions."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Clone and Install",
+                "text": "Clone the repository and install Python dependencies using pip install -r requirements.txt."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Configure Environment",
+                "text": "Set METHOD_API_KEY environment variable with your API key."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Configure Claude Desktop",
+                "text": "Add the MCP server configuration to your claude_desktop_config.json file."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Start Using",
+                "text": "Restart Claude Desktop and start interacting with your CRM data using natural language."
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="https://blog.avinashsangle.com" class="active">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a href="https://blog.avinashsangle.com">Blog</a> / <span
+                style="color: var(--accent);">Method CRM MCP Server Guide</span></p>
+    </div>
+
+    <!-- Article Header -->
+    <article>
+        <section class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">AI & AUTOMATION</p>
+                    <h1 style="margin-bottom: 1.5rem; font-size: 2.5rem; line-height: 1.2;">Complete Guide to Method CRM
+                        MCP Server: Enable AI to Manage Your CRM</h1>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">
+                        Learn how to set up, configure, and use the Method CRM MCP Server to enable AI assistants like
+                        Claude to interact with your CRM data through natural language commands.
+                    </p>
+                    <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">
+                        <span>📅 January 15, 2025</span>
+                        <span>•</span>
+                        <span>⏱️ 12 min read</span>
+                        <span>•</span>
+                        <span>🏷️ MCP, CRM, AI Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="section" style="background-color: var(--bg-secondary); padding: 2rem 0;">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="card">
+                        <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">📑 Table of Contents</h2>
+                        <ol style="margin-left: 1.5rem; line-height: 2;">
+                            <li><a href="#introduction" style="color: var(--accent);">What is Method CRM MCP Server?</a></li>
+                            <li><a href="#prerequisites" style="color: var(--accent);">Prerequisites</a></li>
+                            <li><a href="#installation" style="color: var(--accent);">Installation & Setup</a></li>
+                            <li><a href="#claude-desktop" style="color: var(--accent);">Claude Desktop Configuration</a></li>
+                            <li><a href="#features" style="color: var(--accent);">Features & Available Tools</a></li>
+                            <li><a href="#usage-examples" style="color: var(--accent);">Usage Examples</a></li>
+                            <li><a href="#advanced" style="color: var(--accent);">Advanced Configuration</a></li>
+                            <li><a href="#troubleshooting" style="color: var(--accent);">Troubleshooting</a></li>
+                            <li><a href="#best-practices" style="color: var(--accent);">Best Practices</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section id="introduction" class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">What is Method CRM MCP Server?</h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        The <strong>Method CRM MCP Server</strong> is a production-ready implementation of the Model
+                        Context Protocol (MCP) that enables AI assistants like Claude to interact with your Method CRM
+                        data. Instead of manually navigating the CRM interface, you can use natural language commands to
+                        query customers, create records, manage files, and automate workflows.
+                    </p>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        <strong>Method CRM</strong> is a popular CRM platform especially favored by QuickBooks users for
+                        its deep integration and customization capabilities. By connecting it to AI through MCP, you
+                        unlock powerful automation possibilities.
+                    </p>
+
+                    <div class="card" style="border-left: 4px solid var(--accent); margin: 2rem 0;">
+                        <h3 style="margin-bottom: 1rem;">💡 What You Can Do</h3>
+                        <ul class="skill-list">
+                            <li>Query customers, contacts, and opportunities using natural language</li>
+                            <li>Create and update CRM records through conversation</li>
+                            <li>Upload and manage files attached to records</li>
+                            <li>Set up automated event routines</li>
+                            <li>Manage API keys and user permissions</li>
+                            <li>Generate reports and insights from your CRM data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prerequisites -->
+        <section id="prerequisites" class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Prerequisites</h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        Before getting started, ensure you have the following:
+                    </p>
+
+                    <div class="grid grid-2" style="margin-bottom: 2rem;">
+                        <div class="card">
+                            <h3 style="margin-bottom: 1rem;">🔧 System Requirements</h3>
+                            <ul class="skill-list">
+                                <li>Python 3.10 or higher</li>
+                                <li>pip package manager</li>
+                                <li>Git (for cloning)</li>
+                                <li>Claude Desktop app (optional)</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3 style="margin-bottom: 1rem;">🔑 Method CRM Requirements</h3>
+                            <ul class="skill-list">
+                                <li>Active Method CRM account</li>
+                                <li>API access enabled</li>
+                                <li>API key with appropriate permissions</li>
+                                <li>Admin access (for API key creation)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem;">Getting Your Method CRM API Key</h3>
+                    <ol style="margin-left: 1.5rem; line-height: 2; font-size: 1.05rem;">
+                        <li>Log into your Method CRM account at <a href="https://www.method.me" target="_blank"
+                                rel="noopener">method.me</a></li>
+                        <li>Navigate to <strong>Customize → API Keys</strong></li>
+                        <li>Click <strong>Create New API Key</strong></li>
+                        <li>Set permissions based on your needs (Read, Write, or Full Access)</li>
+                        <li>Copy and securely store your API key</li>
+                    </ol>
+
+                    <div class="card" style="background: var(--bg-primary); margin-top: 1.5rem; border: 1px solid var(--border);">
+                        <p style="color: var(--text-secondary);"><strong>⚠️ Security Note:</strong> Never share your API
+                            key or commit it to version control. Always use environment variables for credential
+                            management.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation -->
+        <section id="installation" class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Installation & Setup</h2>
+
+                    <h3 style="margin-bottom: 1rem;">Step 1: Clone the Repository</h3>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code>git clone https://github.com/avisangle/method-crm-mcp.git
+cd method-crm-mcp</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Step 2: Create Virtual Environment (Recommended)</h3>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Create virtual environment
+python -m venv venv
+
+# Activate on macOS/Linux
+source venv/bin/activate
+
+# Activate on Windows
+.\venv\Scripts\activate</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Step 3: Install Dependencies</h3>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code>pip install -r requirements.txt</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Step 4: Configure Environment Variables</h3>
+                    <p style="margin-bottom: 1rem;">Create a <code>.env</code> file in the project root:</p>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># .env file
+METHOD_API_KEY=your_api_key_here
+METHOD_BASE_URL=https://api.method.me  # Optional, uses default if not set</code></pre>
+
+                    <p style="margin-bottom: 1rem;">Or set environment variables directly:</p>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># macOS/Linux
+export METHOD_API_KEY="your_api_key_here"
+
+# Windows PowerShell
+$env:METHOD_API_KEY="your_api_key_here"</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Step 5: Test the Installation</h3>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Run the server in stdio mode
+python -m method_crm_mcp
+
+# Or run with HTTP transport
+python -m method_crm_mcp --transport http --port 8080</code></pre>
+
+                    <div class="card" style="border-left: 4px solid #22c55e; margin-top: 1.5rem;">
+                        <p><strong>✅ Success!</strong> If you see "Method CRM MCP Server started" without errors, the
+                            installation is complete.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Claude Desktop Configuration -->
+        <section id="claude-desktop" class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Claude Desktop Configuration</h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem;">
+                        To use the Method CRM MCP Server with Claude Desktop, you need to add the server configuration
+                        to your Claude settings file.
+                    </p>
+
+                    <h3 style="margin-bottom: 1rem;">Locate Your Config File</h3>
+                    <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--border);"><code># macOS
+~/Library/Application Support/Claude/claude_desktop_config.json
+
+# Windows
+%APPDATA%\Claude\claude_desktop_config.json
+
+# Linux
+~/.config/Claude/claude_desktop_config.json</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Add MCP Server Configuration</h3>
+                    <p style="margin-bottom: 1rem;">Add the following to your <code>claude_desktop_config.json</code>:</p>
+                    <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--border);"><code>{
+  "mcpServers": {
+    "method-crm": {
+      "command": "python",
+      "args": ["-m", "method_crm_mcp"],
+      "cwd": "/path/to/method-crm-mcp",
+      "env": {
+        "METHOD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}</code></pre>
+
+                    <div class="card" style="margin: 1.5rem 0;">
+                        <h4 style="margin-bottom: 0.5rem;">📝 Configuration Options</h4>
+                        <ul class="skill-list">
+                            <li><code>command</code>: Python executable (use full path if needed)</li>
+                            <li><code>args</code>: Arguments to run the MCP server module</li>
+                            <li><code>cwd</code>: Working directory where the server is installed</li>
+                            <li><code>env</code>: Environment variables including your API key</li>
+                        </ul>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem;">Using UV Package Manager (Alternative)</h3>
+                    <p style="margin-bottom: 1rem;">If you prefer using UV for Python package management:</p>
+                    <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--border);"><code>{
+  "mcpServers": {
+    "method-crm": {
+      "command": "uvx",
+      "args": ["method-crm-mcp"],
+      "env": {
+        "METHOD_API_KEY": "your_api_key_here"
+      }
+    }
+  }
+}</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Restart Claude Desktop</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.8;">
+                        After saving the configuration, completely quit and restart Claude Desktop. The Method CRM tools
+                        should now appear in Claude's tool list when you start a new conversation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section id="features" class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Features & Available Tools</h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                        The Method CRM MCP Server provides <strong>20 comprehensive tools</strong> organized into 5
+                        categories. Each tool is designed for specific CRM operations with full type safety and
+                        validation.
+                    </p>
+
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--accent);">📊 Table Operations (5 tools)</h3>
+                        <p style="margin-bottom: 1rem;">Full CRUD operations on any Method CRM table with OData query
+                            support.</p>
+                        <ul class="skill-list">
+                            <li><code>method_tables_query</code> - Query tables with filtering, sorting, and pagination
+                            </li>
+                            <li><code>method_tables_get</code> - Retrieve a specific record by ID</li>
+                            <li><code>method_tables_create</code> - Create new records in any table</li>
+                            <li><code>method_tables_update</code> - Update existing records</li>
+                            <li><code>method_tables_delete</code> - Delete records from tables</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--accent);">📁 File Management (6 tools)</h3>
+                        <p style="margin-bottom: 1rem;">Upload, download, and manage files attached to CRM records.</p>
+                        <ul class="skill-list">
+                            <li><code>method_files_upload</code> - Upload files with base64 encoding</li>
+                            <li><code>method_files_list</code> - List files with optional filtering</li>
+                            <li><code>method_files_download</code> - Download file content</li>
+                            <li><code>method_files_get_url</code> - Get direct download URLs</li>
+                            <li><code>method_files_update_link</code> - Update file-record associations</li>
+                            <li><code>method_files_delete</code> - Delete files from the system</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--accent);">⚡ Event Automation (4 tools)</h3>
+                        <p style="margin-bottom: 1rem;">Create automated workflows triggered by CRM events.</p>
+                        <ul class="skill-list">
+                            <li><code>method_events_create_routine</code> - Create automated routines</li>
+                            <li><code>method_events_list_routines</code> - List all configured routines</li>
+                            <li><code>method_events_get_routine</code> - Get routine details</li>
+                            <li><code>method_events_delete_routine</code> - Delete routines</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 2rem;">
+                        <h3 style="margin-bottom: 1rem; color: var(--accent);">🔑 API Key Management (4 tools)</h3>
+                        <p style="margin-bottom: 1rem;">Manage API keys for external integrations.</p>
+                        <ul class="skill-list">
+                            <li><code>method_apikeys_create</code> - Create new API keys with permissions</li>
+                            <li><code>method_apikeys_list</code> - List all API keys</li>
+                            <li><code>method_apikeys_update</code> - Modify key permissions</li>
+                            <li><code>method_apikeys_delete</code> - Revoke API keys</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem; color: var(--accent);">👤 User Information (1 tool)</h3>
+                        <p style="margin-bottom: 1rem;">Access authenticated user and account information.</p>
+                        <ul class="skill-list">
+                            <li><code>method_users_me</code> - Get current user details and permissions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Examples -->
+        <section id="usage-examples" class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Usage Examples</h2>
+                    <p style="font-size: 1.125rem; line-height: 1.8; margin-bottom: 2rem;">
+                        Once configured, you can interact with Method CRM using natural language. Here are some example
+                        prompts and what they accomplish:
+                    </p>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">📋 Querying Customers</h3>
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">Example prompts:</p>
+                        <ul style="margin-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
+                            <li>"Show me all customers from California"</li>
+                            <li>"Find contacts who haven't been contacted in 30 days"</li>
+                            <li>"List the top 10 customers by revenue"</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Claude uses
+                            <code>method_tables_query</code> with OData filters to retrieve matching records.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">➕ Creating Records</h3>
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">Example prompts:</p>
+                        <ul style="margin-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
+                            <li>"Create a new contact: John Smith, john@example.com, Acme Corp"</li>
+                            <li>"Add a new opportunity worth $50,000 for the ABC Company deal"</li>
+                            <li>"Log an activity: Called John Smith about the proposal"</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Claude uses
+                            <code>method_tables_create</code> to add new records with validated data.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">📎 File Operations</h3>
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">Example prompts:</p>
+                        <ul style="margin-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
+                            <li>"Upload this proposal PDF to the Acme Corp customer record"</li>
+                            <li>"Show me all files attached to customer ID 12345"</li>
+                            <li>"Download the latest invoice for ABC Company"</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Claude handles file encoding and
+                            linking automatically using file management tools.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">⚙️ Automation Setup</h3>
+                        <p style="margin-bottom: 0.5rem; font-weight: 500;">Example prompts:</p>
+                        <ul style="margin-left: 1.5rem; line-height: 1.8; margin-bottom: 1rem;">
+                            <li>"Create a routine that sends an email when a new customer is added"</li>
+                            <li>"Set up an automation to update the status when an opportunity closes"</li>
+                            <li>"Show me all active automation routines"</li>
+                        </ul>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Claude uses event automation tools
+                            to create trigger-based workflows.</p>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem;">OData Query Examples</h3>
+                    <p style="margin-bottom: 1rem;">The server supports OData syntax for complex queries:</p>
+                    <pre style="background: var(--bg-primary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem; border: 1px solid var(--border);"><code># Filter by state
+$filter=State eq 'CA'
+
+# Filter with multiple conditions
+$filter=State eq 'CA' and Revenue gt 10000
+
+# Sort by field
+$orderby=CreatedDate desc
+
+# Limit results
+$top=10
+
+# Skip for pagination
+$skip=20</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Configuration -->
+        <section id="advanced" class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Advanced Configuration</h2>
+
+                    <h3 style="margin-bottom: 1rem;">HTTP Transport Mode</h3>
+                    <p style="margin-bottom: 1rem;">For remote deployments or multi-user scenarios, use HTTP transport:</p>
+                    <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code>python -m method_crm_mcp --transport http --port 8080 --host 0.0.0.0</code></pre>
+
+                    <h3 style="margin-bottom: 1rem;">Environment Variables</h3>
+                    <div style="overflow-x: auto; margin-bottom: 2rem;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                            <thead>
+                                <tr style="background: var(--bg-secondary);">
+                                    <th
+                                        style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">
+                                        Variable</th>
+                                    <th
+                                        style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">
+                                        Description</th>
+                                    <th
+                                        style="padding: 0.75rem; text-align: left; border-bottom: 2px solid var(--accent);">
+                                        Default</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">
+                                        <code>METHOD_API_KEY</code></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Your Method CRM
+                                        API key</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Required</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">
+                                        <code>METHOD_BASE_URL</code></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">API base URL
+                                    </td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">
+                                        https://api.method.me</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">
+                                        <code>LOG_LEVEL</code></td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">Logging
+                                        verbosity</td>
+                                    <td style="padding: 0.5rem; border-bottom: 1px solid var(--border);">INFO</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem;"><code>RATE_LIMIT_REQUESTS</code></td>
+                                    <td style="padding: 0.5rem;">Max requests per minute</td>
+                                    <td style="padding: 0.5rem;">60</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="margin-bottom: 1rem;">Rate Limiting</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1rem;">
+                        The server includes automatic rate limiting with exponential backoff. If you hit Method CRM's
+                        API limits, requests are automatically retried with increasing delays.
+                    </p>
+
+                    <h3 style="margin-bottom: 1rem;">Response Formats</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.8;">
+                        Tools support both JSON and Markdown output formats. JSON is ideal for programmatic processing,
+                        while Markdown provides human-readable output for AI conversations.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section id="troubleshooting" class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Troubleshooting</h2>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">❌ "API Key Invalid" Error</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Cause:</strong> The API key is missing, malformed, or
+                            revoked.</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul class="skill-list">
+                            <li>Verify the <code>METHOD_API_KEY</code> environment variable is set correctly</li>
+                            <li>Check for extra spaces or quotes around the key</li>
+                            <li>Confirm the key is still active in Method CRM settings</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">❌ "Permission Denied" Error</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Cause:</strong> API key lacks required permissions.</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul class="skill-list">
+                            <li>Review API key permissions in Method CRM settings</li>
+                            <li>Ensure the key has Read/Write access for required tables</li>
+                            <li>Create a new key with appropriate permissions if needed</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">❌ "Rate Limit Exceeded" Error</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Cause:</strong> Too many API requests in a short
+                            period.</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul class="skill-list">
+                            <li>Wait a few minutes and retry</li>
+                            <li>The server automatically handles retries with backoff</li>
+                            <li>Consider batching requests for bulk operations</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 1.5rem;">
+                        <h3 style="margin-bottom: 1rem;">❌ Claude Desktop Not Detecting Server</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Cause:</strong> Configuration file issues.</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul class="skill-list">
+                            <li>Verify JSON syntax in <code>claude_desktop_config.json</code></li>
+                            <li>Ensure the <code>cwd</code> path is absolute and correct</li>
+                            <li>Completely quit and restart Claude Desktop (not just close window)</li>
+                            <li>Check Claude's logs for error messages</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="margin-bottom: 1rem;">❌ "Module Not Found" Error</h3>
+                        <p style="margin-bottom: 0.5rem;"><strong>Cause:</strong> Dependencies not installed or wrong
+                            Python environment.</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul class="skill-list">
+                            <li>Activate the correct virtual environment</li>
+                            <li>Run <code>pip install -r requirements.txt</code> again</li>
+                            <li>Use full path to Python in Claude Desktop config</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section id="best-practices" class="section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h2 style="margin-bottom: 1.5rem;">Best Practices</h2>
+
+                    <div class="grid grid-2" style="margin-bottom: 2rem;">
+                        <div class="card" style="border-left: 4px solid var(--accent);">
+                            <h3 style="margin-bottom: 1rem;">🔒 Security</h3>
+                            <ul class="skill-list">
+                                <li>Never hardcode API keys in code</li>
+                                <li>Use environment variables for all secrets</li>
+                                <li>Create dedicated API keys with minimal permissions</li>
+                                <li>Rotate API keys regularly</li>
+                            </ul>
+                        </div>
+
+                        <div class="card" style="border-left: 4px solid var(--accent);">
+                            <h3 style="margin-bottom: 1rem;">⚡ Performance</h3>
+                            <ul class="skill-list">
+                                <li>Use OData filters to limit result sets</li>
+                                <li>Implement pagination for large queries</li>
+                                <li>Batch operations when possible</li>
+                                <li>Cache frequently accessed data</li>
+                            </ul>
+                        </div>
+
+                        <div class="card" style="border-left: 4px solid var(--accent);">
+                            <h3 style="margin-bottom: 1rem;">🧪 Testing</h3>
+                            <ul class="skill-list">
+                                <li>Use a sandbox/test Method CRM account first</li>
+                                <li>Test with read-only operations initially</li>
+                                <li>Verify data integrity after write operations</li>
+                                <li>Monitor API usage in Method CRM dashboard</li>
+                            </ul>
+                        </div>
+
+                        <div class="card" style="border-left: 4px solid var(--accent);">
+                            <h3 style="margin-bottom: 1rem;">📝 Prompting</h3>
+                            <ul class="skill-list">
+                                <li>Be specific about table names and fields</li>
+                                <li>Include record IDs when updating/deleting</li>
+                                <li>Ask Claude to confirm before destructive operations</li>
+                                <li>Review results before proceeding with bulk changes</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" style="border: 2px solid var(--accent);">
+                        <h3 style="margin-bottom: 1rem;">🚀 Ready to Get Started?</h3>
+                        <p style="margin-bottom: 1.5rem;">
+                            The Method CRM MCP Server opens up powerful possibilities for AI-assisted CRM management.
+                            Start with simple queries, then gradually explore more advanced features like automation and
+                            file management.
+                        </p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <a href="https://github.com/avisangle/method-crm-mcp" target="_blank" rel="noopener"
+                                class="btn btn-primary">View on GitHub ↗</a>
+                            <a href="project-method-crm-mcp.html" class="btn btn-outline">Project Details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Articles -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 2rem;">Related Articles</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <p class="card-subtitle">AI Integration</p>
+                        <h3 class="card-title">Jenkins MCP Server</h3>
+                        <p>Enable AI agents to interact with Jenkins CI/CD infrastructure.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="project-jenkins-mcp.html" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-subtitle">ChatOps</p>
+                        <h3 class="card-title">Jenkins Chatbot Plugin</h3>
+                        <p>AI-powered conversational interface for Jenkins.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="project-jenkins-chatbot.html" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <p class="card-subtitle">MCP Server</p>
+                        <h3 class="card-title">Calculator Server</h3>
+                        <p>Go-based MCP server for mathematical computations.</p>
+                        <div style="margin-top: 1.5rem;">
+                            <a href="project-calculator-server.html" class="project-link">Learn More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3 style="margin-bottom: 0.5rem;">Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link"
+                            aria-label="GitHub">💻</a></li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link" aria-label="LinkedIn">💼</a></li>
+                    <li><a href="https://www.youtube.com/@AIAgentOps" target="_blank" rel="noopener" class="social-link"
+                            aria-label="YouTube">📺</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link" aria-label="Email">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

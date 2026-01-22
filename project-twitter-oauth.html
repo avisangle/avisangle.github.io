@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter OAuth Setup Wizard for Make.com | OAuth 2.0 Automation | PKCE Security | Avinash Sangle</title>
+    <meta name="description"
+        content="Streamlined OAuth 2.0 setup wizard for Make.com with PKCE security. Auto-generate ready-to-import scenarios in under 2 minutes.">
+    <meta name="keywords"
+        content="Twitter OAuth, Make.com integration, OAuth 2.0, PKCE authentication, Twitter API, automation wizard, no-code integration, scenario generation, JavaScript OAuth, Make.com automation">
+    <meta name="author" content="Avinash Sangle">
+    <link rel="canonical" href="https://avinashsangle.com/project-twitter-oauth.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Twitter OAuth Setup Wizard | Avinash Sangle">
+    <meta property="og:description" content="Streamlined OAuth 2.0 setup for Make.com with PKCE security.">
+    <meta property="og:image" content="https://avinashsangle.com/assets/og-twitter-oauth.jpg">
+    <meta property="og:url" content="https://avinashsangle.com/project-twitter-oauth.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Twitter OAuth Setup Wizard for Make.com">
+    <meta name="twitter:description" content="OAuth 2.0 setup with PKCE security in under 2 minutes.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JSON-LD SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Twitter OAuth Setup Wizard",
+        "description": "Streamlined OAuth 2.0 setup wizard for Make.com with PKCE security and automatic scenario generation. Reduces Twitter API OAuth configuration from 30 minutes to under 2 minutes.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web Browser",
+        "image": "https://avinashsangle.com/assets/og-twitter-oauth.jpg",
+        "author": {"@type": "Person", "name": "Avinash Sangle"},
+        "url": "https://avisangle.github.io/make-twitter-oauth/",
+        "downloadUrl": "https://github.com/avisangle/make-twitter-oauth",
+        "softwareVersion": "1.0",
+        "featureList": "PKCE Security, SHA-256 Hashing, Auto-generated Make.com Scenarios, 4-Step Wizard, Callback URL Generation, OAuth 2.0 Configuration",
+        "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "priceValidUntil": "2026-12-31"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://avinashsangle.com"},
+            {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://avinashsangle.com/index.html#projects"},
+            {"@type": "ListItem", "position": 3, "name": "Twitter OAuth Wizard", "item": "https://avinashsangle.com/project-twitter-oauth.html"}
+        ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Twitter OAuth Setup Wizard?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The Twitter OAuth Setup Wizard is a tool that simplifies Twitter API OAuth 2.0 configuration for Make.com automation. It features a guided 4-step process that generates ready-to-import Make.com scenarios with pre-filled credentials and PKCE security."}
+            },
+            {
+                "@type": "Question",
+                "name": "How long does Twitter OAuth setup take with this wizard?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The wizard reduces Twitter OAuth setup time from 30+ minutes to under 2 minutes by auto-generating Make.com scenarios with pre-filled credentials, correct callback URLs, and properly configured PKCE parameters."}
+            },
+            {
+                "@type": "Question",
+                "name": "What is PKCE and why is it important for Twitter OAuth?",
+                "acceptedAnswer": {"@type": "Answer", "text": "PKCE (Proof Key for Code Exchange) is an OAuth 2.0 security extension that protects against authorization code interception attacks. Twitter requires PKCE for public clients. This wizard implements PKCE with SHA-256 hashing for enterprise-grade security."}
+            },
+            {
+                "@type": "Question",
+                "name": "How to fix Twitter OAuth callback URL mismatch in Make.com?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Callback URL mismatches occur when the URL in Twitter Developer Portal doesn't exactly match Make.com's expected URL. This wizard auto-generates the correct callback URL and provides copy-paste values to prevent this common OAuth error."}
+            },
+            {
+                "@type": "Question",
+                "name": "Why is my Twitter PKCE verifier failing?",
+                "acceptedAnswer": {"@type": "Answer", "text": "PKCE verifier failures occur when the code_verifier doesn't match the code_challenge hash sent in the authorization request. Common causes include encoding issues or regenerating the verifier. This wizard handles PKCE generation automatically with proper SHA-256 hashing."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I connect Twitter to Make.com for automation?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Use the Twitter OAuth Setup Wizard to generate a complete Make.com scenario with OAuth 2.0 configuration. Enter your Twitter API credentials, follow the 4-step guide, and import the generated JSON file directly into Make.com for instant Twitter integration."}
+            },
+            {
+                "@type": "Question",
+                "name": "What Twitter API scopes does the wizard configure?",
+                "acceptedAnswer": {"@type": "Answer", "text": "The wizard configures common scopes including tweet.read, tweet.write, users.read, and offline.access for persistent tokens. You can customize scopes based on your automation needs during the setup process."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">AS</a>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="https://blog.avinashsangle.com">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle">🌙</button></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <p style="color: var(--text-secondary);"><a href="index.html">Home</a> / <a
+                href="index.html#projects">Projects</a> / <span style="color: var(--accent);">Twitter OAuth
+                Wizard</span></p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="color: var(--accent); font-weight: 600; margin-bottom: 1rem;">OAUTH 2.0 AUTOMATION</p>
+                <h1>Twitter OAuth Setup Wizard</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary); margin: 1.5rem 0 2rem;">Streamlined OAuth
+                    2.0 setup for Make.com with PKCE security and automatic scenario generation</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://avisangle.github.io/make-twitter-oauth/" target="_blank" rel="noopener"
+                        class="btn btn-primary">Live Demo ↗</a>
+                    <a href="index.html#projects" class="btn btn-outline">← Back to Projects</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Project Overview</h2>
+            <p style="font-size: 1.125rem; line-height: 1.8; margin: 2rem 0;">
+                Twitter OAuth Setup Wizard streamlines Twitter API OAuth 2.0 configuration for Make.com automation with
+                a guided 4-step wizard. Implements PKCE security, auto-generates ready-to-import Make.com scenarios, and
+                reduces setup time from 30 minutes to under 2 minutes.
+            </p>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-stack" style="margin-top: 1rem;">
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">OAuth 2.0</span>
+                        <span class="badge">PKCE</span>
+                        <span class="badge">Make.com</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Key Features</h3>
+                    <ul class="skill-list">
+                        <li>4-step guided wizard</li>
+                        <li>PKCE security (SHA-256)</li>
+                        <li>Auto scenario generation</li>
+                        <li>2-minute setup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem;">Quick Start</h2>
+            <div class="card">
+                <h3 style="margin-bottom: 1rem;">Installation</h3>
+                <pre style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; overflow-x: auto; margin-bottom: 1.5rem;"><code># Clone the repository
+git clone https://github.com/avisangle/make-twitter-oauth.git
+cd make-twitter-oauth
+
+# Open index.html in your browser
+open index.html
+
+# Or serve with a local server
+python -m http.server 8000</code></pre>
+                <p style="color: var(--text-secondary);">For detailed setup instructions, see the <a href="https://github.com/avisangle/make-twitter-oauth#readme" target="_blank" rel="noopener">README on GitHub</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>What It Does</h2>
+            <div class="grid grid-3" style="margin-top: 2rem;">
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔐</div>
+                    <h3>PKCE Security</h3>
+                    <p>Implements OAuth 2.0 with PKCE (Proof Key for Code Exchange) using SHA-256 hashing for enhanced
+                        security.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+                    <h3>Auto Scenario Generation</h3>
+                    <p>Generates ready-to-import Make.com scenarios with pre-filled credentials - no manual
+                        configuration needed.</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+                    <h3>Zero-Friction UI</h3>
+                    <p>Modern, responsive wizard interface guides users through OAuth setup with clear instructions at
+                        each step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Why It Matters</h2>
+            <div class="grid grid-2" style="margin-top: 2rem;">
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>⏱️ Massive Time Savings</h3>
+                    <p>Reduces Twitter OAuth setup time from 30+ minutes to under 2 minutes with automated scenario
+                        generation.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🔒 Enterprise Security</h3>
+                    <p>PKCE implementation provides bank-level security for OAuth flows, protecting against
+                        authorization code interception.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🎯 Error Prevention</h3>
+                    <p>Eliminates common OAuth configuration errors with automated setup and validation.</p>
+                </div>
+                <div class="card" style="border-left: 4px solid var(--accent);">
+                    <h3>🌐 No-Code Friendly</h3>
+                    <p>Makes complex OAuth configuration accessible to non-technical Make.com users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 id="troubleshooting" style="margin-bottom: 2rem;">How to Fix Twitter OAuth in Make.com</h2>
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">Common Twitter OAuth Errors & Solutions</h3>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Callback URL Mismatch</h4>
+                        <p>Ensure your Twitter Developer Portal callback URL <strong>exactly</strong> matches the Make.com redirect URI. Even trailing slashes matter!</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">PKCE Verifier Failed</h4>
+                        <p>This occurs when code_verifier doesn't match code_challenge. Our wizard generates these correctly using SHA-256.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Invalid Client Credentials</h4>
+                        <p>Double-check your Client ID and Client Secret. Ensure you're using OAuth 2.0 credentials, not OAuth 1.0a.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Scope Errors</h4>
+                        <p>Twitter API v2 requires specific scopes. The wizard pre-configures tweet.read, tweet.write, and users.read.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Implementation Highlights</h2>
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem;">Core Features</h3>
+                <ul class="skill-list">
+                    <li>4-step guided wizard interface</li>
+                    <li>OAuth 2.0 with PKCE implementation</li>
+                    <li>SHA-256 code challenge generation</li>
+                    <li>Twitter API v2 integration</li>
+                    <li>Make.com scenario auto-generation</li>
+                    <li>Pre-filled credential injection</li>
+                    <li>Responsive modern UI</li>
+                    <li>Real-time validation and error handling</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Try It Now</h2>
+            <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2rem;">Use the wizard to set up
+                Twitter OAuth for Make.com in under 2 minutes</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://avisangle.github.io/make-twitter-oauth/" target="_blank" rel="noopener"
+                    class="btn btn-primary">Launch Wizard ↗</a>
+                <a href="https://github.com/avisangle/make-twitter-oauth" target="_blank" rel="noopener"
+                    class="btn btn-outline">View on GitHub ↗</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <div class="grid grid-3" style="margin-top: 2rem;">
+                <div class="card">
+                    <p class="card-subtitle">Production SaaS</p>
+                    <h3 class="card-title">Social Media Auto-Poster</h3>
+                    <p>AI-powered social media management with OAuth integrations.</p>
+                    <a href="project-social-media-auto-poster.html" class="project-link"
+                        style="margin-top: 1rem; display: inline-block;">Learn More →</a>
+                </div>
+                <div class="card">
+                    <p class="card-subtitle">Cloud Automation</p>
+                    <h3 class="card-title">AWS EC2 with AI Agent</h3>
+                    <p>Natural language cloud infrastructure deployment.</p>
+                    <a href="project-aws-ec2-agent.html" class="project-link"
+                        style="margin-top: 1rem; display: inline-block;">Learn More →</a>
+                </div>
+                <div class="card">
+                    <p class="card-subtitle">AI Integration</p>
+                    <h3 class="card-title">Jenkins MCP Server</h3>
+                    <p>MCP server for AI-powered Jenkins automation.</p>
+                    <a href="project-jenkins-mcp.html" class="project-link"
+                        style="margin-top: 1rem; display: inline-block;">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>Avinash Sangle</h3>
+                    <p style="color: var(--text-secondary);">Building intelligent automation solutions</p>
+                </div>
+                <ul class="social-links">
+                    <li><a href="https://github.com/avisangle" target="_blank" rel="noopener" class="social-link">💻</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/avinashsangle/" target="_blank" rel="noopener"
+                            class="social-link">💼</a></li>
+                    <li><a href="mailto:aavi.sangle@gmail.com" class="social-link">✉️</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2026</span> Avinash Sangle. Made with ❤️ and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
