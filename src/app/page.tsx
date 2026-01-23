@@ -3,8 +3,10 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { SectionHeader } from "@/components/section-header"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, Sparkles, Bot, Cloud, Wrench, Database, Code, Brain, Settings, Mail, Smartphone, MessageSquare, Lock, Building2 } from "lucide-react"
 import Link from "next/link"
+import { CategoryIcon } from "@/components/icons/category-icon"
+import { TechBadge } from "@/components/ui/tech-badge"
 
 export default function Home() {
   return (
@@ -82,7 +84,10 @@ export default function Home() {
       <section className="hero">
         <div className="container-project">
           <div className="hero-content">
-            <p className="hero-greeting fade-in-up stagger-1">Hi, I&apos;m Avinash Sangle 👋</p>
+            <div className="hero-greeting fade-in-up stagger-1 flex items-center justify-center gap-3">
+              <span>Hi, I&apos;m Avinash Sangle</span>
+              <Sparkles className="w-7 h-7 text-accent float-animation" />
+            </div>
             <h1 className="hero-title fade-in-up stagger-2">
               Software Engineer specializing in
               <br />
@@ -123,7 +128,10 @@ export default function Home() {
           <div className="grid-2">
             <Card className="card-hover">
               <CardHeader>
-                <CardTitle>🤖 AI Agents & Automation</CardTitle>
+                <CardTitle className="flex items-center gap-3">
+                  <CategoryIcon icon="Bot" size="md" animation="hover-rotate" variant="circle" />
+                  AI Agents & Automation
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -136,7 +144,10 @@ export default function Home() {
 
             <Card className="card-hover">
               <CardHeader>
-                <CardTitle>☁️ Cloud Technologies</CardTitle>
+                <CardTitle className="flex items-center gap-3">
+                  <CategoryIcon icon="Cloud" size="md" animation="hover-rotate" variant="circle" />
+                  Cloud Technologies
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -148,7 +159,10 @@ export default function Home() {
 
             <Card className="card-hover">
               <CardHeader>
-                <CardTitle>🔧 DevOps & CI/CD</CardTitle>
+                <CardTitle className="flex items-center gap-3">
+                  <CategoryIcon icon="Wrench" size="md" animation="hover-rotate" variant="circle" />
+                  DevOps & CI/CD
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -161,7 +175,10 @@ export default function Home() {
 
             <Card className="card-hover">
               <CardHeader>
-                <CardTitle>💾 Database & Backend</CardTitle>
+                <CardTitle className="flex items-center gap-3">
+                  <CategoryIcon icon="Database" size="md" animation="hover-rotate" variant="circle" />
+                  Database & Backend
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -185,7 +202,7 @@ export default function Home() {
             {/* Social Media Auto-Poster */}
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📱</div>
+                <CategoryIcon icon="Smartphone" size="xl" animation="pulse" variant="square" />
                 <Badge variant="secondary" className="w-fit mb-2">
                   Production SaaS
                 </Badge>
@@ -197,10 +214,10 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <Badge variant="outline">React</Badge>
-                  <Badge variant="outline">Supabase</Badge>
-                  <Badge variant="outline">AI APIs</Badge>
-                  <Badge variant="outline">OAuth</Badge>
+                  <TechBadge tech="React" />
+                  <TechBadge tech="Supabase" />
+                  <TechBadge tech="AI" />
+                  <TechBadge tech="OAuth" />
                 </div>
               </CardContent>
               <CardFooter className="gap-4">
@@ -221,7 +238,7 @@ export default function Home() {
             {/* Jenkins MCP Server */}
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🤖</div>
+                <CategoryIcon icon="Bot" size="xl" animation="pulse" variant="square" />
                 <Badge variant="secondary" className="w-fit mb-2">
                   AI Integration
                 </Badge>
@@ -233,9 +250,9 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">MCP</Badge>
-                  <Badge variant="outline">Jenkins API</Badge>
+                  <TechBadge tech="Python" />
+                  <TechBadge tech="MCP" />
+                  <TechBadge tech="Jenkins" />
                 </div>
               </CardContent>
               <CardFooter>
@@ -248,7 +265,7 @@ export default function Home() {
             {/* Jenkins Chatbot Plugin */}
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">💬</div>
+                <CategoryIcon icon="MessageSquare" size="xl" animation="pulse" variant="square" />
                 <Badge variant="secondary" className="w-fit mb-2">
                   ChatOps
                 </Badge>
@@ -260,9 +277,9 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">AI/ML</Badge>
-                  <Badge variant="outline">Jenkins</Badge>
+                  <TechBadge tech="Python" />
+                  <TechBadge tech="AI" />
+                  <TechBadge tech="Jenkins" />
                 </div>
               </CardContent>
               <CardFooter>
@@ -275,7 +292,7 @@ export default function Home() {
             {/* AWS EC2 Agent */}
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">☁️</div>
+                <CategoryIcon icon="Cloud" size="xl" animation="pulse" variant="square" />
                 <Badge variant="secondary" className="w-fit mb-2">
                   Cloud Automation
                 </Badge>
@@ -287,9 +304,9 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <Badge variant="outline">AWS</Badge>
-                  <Badge variant="outline">AI Agents</Badge>
-                  <Badge variant="outline">Multi-Cloud</Badge>
+                  <TechBadge tech="AWS" />
+                  <TechBadge tech="AI" />
+                  <TechBadge tech="Cloud" />
                 </div>
               </CardContent>
               <CardFooter className="gap-4">
@@ -310,7 +327,7 @@ export default function Home() {
             {/* Twitter OAuth Wizard */}
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔐</div>
+                <CategoryIcon icon="Lock" size="xl" animation="pulse" variant="square" />
                 <Badge variant="secondary" className="w-fit mb-2">
                   OAuth Automation
                 </Badge>
@@ -322,8 +339,8 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <Badge variant="outline">JavaScript</Badge>
-                  <Badge variant="outline">OAuth 2.0</Badge>
+                  <TechBadge tech="JavaScript" />
+                  <TechBadge tech="OAuth" />
                   <Badge variant="outline">Make.com</Badge>
                 </div>
               </CardContent>
@@ -345,7 +362,7 @@ export default function Home() {
             {/* Method CRM MCP Server */}
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🏢</div>
+                <CategoryIcon icon="Building2" size="xl" animation="pulse" variant="square" />
                 <Badge variant="secondary" className="w-fit mb-2">
                   CRM Integration
                 </Badge>
@@ -357,9 +374,9 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">MCP</Badge>
-                  <Badge variant="outline">Method CRM</Badge>
+                  <TechBadge tech="Python" />
+                  <TechBadge tech="MCP" />
+                  <TechBadge tech="Method CRM" />
                 </div>
               </CardContent>
               <CardFooter>
@@ -382,7 +399,10 @@ export default function Home() {
           <div className="grid-4">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">💻 Languages</CardTitle>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <CategoryIcon icon="Code" size="sm" animation="hover-rotate" />
+                  Languages
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -398,7 +418,10 @@ export default function Home() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">🤖 AI/ML</CardTitle>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <CategoryIcon icon="Brain" size="sm" animation="hover-rotate" />
+                  AI/ML
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -413,7 +436,10 @@ export default function Home() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">☁️ Cloud</CardTitle>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <CategoryIcon icon="Cloud" size="sm" animation="hover-rotate" />
+                  Cloud
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -428,7 +454,10 @@ export default function Home() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">🔧 DevOps</CardTitle>
+                <CardTitle className="text-lg flex items-center gap-2">
+                  <CategoryIcon icon="Settings" size="sm" animation="hover-rotate" />
+                  DevOps
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -454,7 +483,7 @@ export default function Home() {
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🏢</div>
+                <CategoryIcon icon="Building2" size="lg" animation="pulse" />
                 <CardTitle>Method CRM MCP Server Guide</CardTitle>
               </CardHeader>
               <CardContent>
@@ -477,7 +506,7 @@ export default function Home() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔧</div>
+                <CategoryIcon icon="Wrench" size="lg" animation="pulse" />
                 <CardTitle>Jenkins + AI Automation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -495,7 +524,7 @@ export default function Home() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">☁️</div>
+                <CategoryIcon icon="Cloud" size="lg" animation="pulse" />
                 <CardTitle>Cloud Infrastructure with AI</CardTitle>
               </CardHeader>
               <CardContent>
@@ -582,7 +611,10 @@ export default function Home() {
           />
           <div className="flex justify-center gap-4 flex-wrap mt-8">
             <Button size="lg" asChild>
-              <Link href="mailto:aavi.sangle@gmail.com">✉️ Email Me</Link>
+              <Link href="mailto:aavi.sangle@gmail.com" className="flex items-center gap-2">
+                <Mail className="h-5 w-5" />
+                Email Me
+              </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="https://github.com/avisangle" target="_blank" rel="noopener noreferrer">
