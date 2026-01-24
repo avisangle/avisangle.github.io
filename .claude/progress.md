@@ -12,3 +12,9 @@
 - Cleaned up robots.txt (removed old template reference)
 - Updated all sitemap dates to 2026-01-24
 - **Commits:** 09567bd, 0171660
+
+### Sitemap Deployment Fix
+- Moved sitemap.xml and robots.txt to public/ folder
+- Next.js serves static files from public/ folder
+- Files now accessible at root URL after build
+- **Commit:** 3e88a83
