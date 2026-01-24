@@ -3,10 +3,11 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { SectionHeader } from "@/components/section-header"
-import { ArrowRight, ExternalLink, Sparkles, Bot, Cloud, Wrench, Database, Code, Brain, Settings, Mail, Smartphone, MessageSquare, Lock, Building2 } from "lucide-react"
+import { ArrowRight, ExternalLink, Sparkles, Bot, Cloud, Wrench, Database, Code, Brain, Settings, Mail } from "lucide-react"
 import Link from "next/link"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import { TechBadge } from "@/components/ui/tech-badge"
+import { getFeaturedProjects } from "@/data/projects"
 
 export default function Home() {
   return (
@@ -199,205 +200,52 @@ export default function Home() {
             subtitle="Innovative solutions in AI automation, DevOps, cloud infrastructure, and CRM integration"
           />
           <div className="grid-3">
-            {/* Social Media Auto-Poster */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CategoryIcon icon="Smartphone" size="xl" animation="pulse" variant="square" />
-                <Badge variant="secondary" className="w-fit mb-2">
-                  Production SaaS
-                </Badge>
-                <CardTitle>Social Media Auto-Poster</CardTitle>
-                <CardDescription>
-                  AI-powered social media management platform with automated posting and
-                  multi-platform support.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <TechBadge tech="React" className="badge-primary-outline" />
-                  <TechBadge tech="Supabase" className="badge-primary-outline" />
-                  <TechBadge tech="AI" className="badge-primary-outline" />
-                  <TechBadge tech="OAuth" className="badge-primary-outline" />
-                </div>
-              </CardContent>
-              <CardFooter className="gap-4">
-                <Badge variant="outline" asChild>
-                  <a href="/projects/social-media-auto-poster">Learn More →</a>
-                </Badge>
-                <Badge variant="default" asChild>
-                  <Link
-                    href="https://social.avinashsangle.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo <ExternalLink className="h-3 w-3" />
-                  </Link>
-                </Badge>
-              </CardFooter>
-            </Card>
-
-            {/* Jenkins MCP Server */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CategoryIcon icon="Bot" size="xl" animation="pulse" variant="square" />
-                <Badge variant="secondary" className="w-fit mb-2">
-                  AI Integration
-                </Badge>
-                <CardTitle>Jenkins MCP Server</CardTitle>
-                <CardDescription>
-                  Enable AI agents to interact with Jenkins through Model Context Protocol for
-                  automated DevOps workflows.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <TechBadge tech="Python" className="badge-primary-outline" />
-                  <TechBadge tech="MCP" className="badge-primary-outline" />
-                  <TechBadge tech="Jenkins" className="badge-primary-outline" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Badge variant="outline" asChild>
-                  <Link href="/projects/jenkins-mcp">
-                    Learn More →
-                  </Link>
-                </Badge>
-              </CardFooter>
-            </Card>
-
-            {/* Jenkins Chatbot Plugin */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CategoryIcon icon="MessageSquare" size="xl" animation="pulse" variant="square" />
-                <Badge variant="secondary" className="w-fit mb-2">
-                  ChatOps
-                </Badge>
-                <CardTitle>Jenkins Chatbot Plugin</CardTitle>
-                <CardDescription>
-                  AI-powered conversational interface for Jenkins build management via natural
-                  language commands.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <TechBadge tech="Python" className="badge-primary-outline" />
-                  <TechBadge tech="AI" className="badge-primary-outline" />
-                  <TechBadge tech="Jenkins" className="badge-primary-outline" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Badge variant="outline" asChild>
-                  <Link href="/projects/jenkins-chatbot">
-                    Learn More →
-                  </Link>
-                </Badge>
-              </CardFooter>
-            </Card>
-
-            {/* AWS EC2 Agent */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CategoryIcon icon="Cloud" size="xl" animation="pulse" variant="square" />
-                <Badge variant="secondary" className="w-fit mb-2">
-                  Cloud Automation
-                </Badge>
-                <CardTitle>AWS EC2 with AI Agent</CardTitle>
-                <CardDescription>
-                  Deploy cloud infrastructure via natural language with intelligent self-healing
-                  automation.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <TechBadge tech="AWS" className="badge-primary-outline" />
-                  <TechBadge tech="AI" className="badge-primary-outline" />
-                  <TechBadge tech="Cloud" className="badge-primary-outline" />
-                </div>
-              </CardContent>
-              <CardFooter className="gap-4">
-                <Badge variant="outline" asChild>
-                  <Link href="/projects/aws-ec2-agent">
-                    Learn More →
-                  </Link>
-                </Badge>
-                <Badge variant="default" asChild>
-                  <Link
-                    href="https://youtu.be/E6QqJJAZzlE"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo <ExternalLink className="h-3 w-3" />
-                  </Link>
-                </Badge>
-              </CardFooter>
-            </Card>
-
-            {/* Twitter OAuth Wizard */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CategoryIcon icon="Lock" size="xl" animation="pulse" variant="square" />
-                <Badge variant="secondary" className="w-fit mb-2">
-                  OAuth Automation
-                </Badge>
-                <CardTitle>Twitter OAuth Wizard</CardTitle>
-                <CardDescription>
-                  Streamlined OAuth 2.0 setup wizard for Make.com with PKCE security and automatic
-                  scenario generation.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <TechBadge tech="JavaScript" className="badge-primary-outline" />
-                  <TechBadge tech="OAuth" className="badge-primary-outline" />
-                  <Badge variant="outline" className="badge-primary-outline">Make.com</Badge>
-                </div>
-              </CardContent>
-              <CardFooter className="gap-4">
-                <Badge variant="outline" asChild>
-                  <Link href="/projects/twitter-oauth">
-                    Learn More →
-                  </Link>
-                </Badge>
-                <Badge variant="default" asChild>
-                  <Link
-                    href="https://avisangle.github.io/make-twitter-oauth/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Live Demo <ExternalLink className="h-3 w-3" />
-                  </Link>
-                </Badge>
-              </CardFooter>
-            </Card>
-
-            {/* Method CRM MCP Server */}
-            <Card className="card-hover">
-              <CardHeader>
-                <CategoryIcon icon="Building2" size="xl" animation="pulse" variant="square" />
-                <Badge variant="secondary" className="w-fit mb-2">
-                  CRM Integration
-                </Badge>
-                <CardTitle>Method CRM MCP Server</CardTitle>
-                <CardDescription>
-                  Production-ready MCP server for Method CRM API integration with 20 comprehensive
-                  tools for LLM interactions.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <TechBadge tech="Python" className="badge-primary-outline" />
-                  <TechBadge tech="MCP" className="badge-primary-outline" />
-                  <TechBadge tech="Method CRM" className="badge-primary-outline" />
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Badge variant="outline" asChild>
-                  <Link href="/projects/method-crm-mcp">
-                    Learn More →
-                  </Link>
-                </Badge>
-              </CardFooter>
-            </Card>
+            {getFeaturedProjects().map((project) => (
+              <Card key={project.id} className="card-hover">
+                <CardHeader>
+                  <CategoryIcon icon={project.icon} size="xl" animation="pulse" variant="square" />
+                  <Badge variant="secondary" className="w-fit mb-2">
+                    {project.badge}
+                  </Badge>
+                  <CardTitle>{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="tech-stack">
+                    {project.technologies.map((tech) => (
+                      <TechBadge key={tech} tech={tech} className="badge-primary-outline" />
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter className="gap-4">
+                  <Badge variant="outline" asChild>
+                    <Link href={project.route}>Learn More →</Link>
+                  </Badge>
+                  {project.liveUrl && (
+                    <Badge variant="default" asChild>
+                      <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        Live Demo <ExternalLink className="h-3 w-3" />
+                      </Link>
+                    </Badge>
+                  )}
+                  {project.youtubeUrl && !project.liveUrl && (
+                    <Badge variant="default" asChild>
+                      <Link href={project.youtubeUrl} target="_blank" rel="noopener noreferrer">
+                        Live Demo <ExternalLink className="h-3 w-3" />
+                      </Link>
+                    </Badge>
+                  )}
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/projects">
+                View All Projects →
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
