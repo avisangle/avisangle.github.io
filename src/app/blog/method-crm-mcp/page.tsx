@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -80,11 +81,11 @@ export default function MethodCRMMCPBlogPage() {
               commands.
             </p>
             <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-8">
-              <span>📅 January 15, 2025</span>
+              <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 15, 2025</span>
               <span>•</span>
-              <span>⏱️ 12 min read</span>
+              <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
               <span>•</span>
-              <span>🏷️ MCP, CRM, AI Integration</span>
+              <span className="flex items-center gap-1"><CategoryIcon icon="Tag" size="sm" /> MCP, CRM, AI Integration</span>
             </div>
           </div>
         </div>
@@ -191,7 +192,7 @@ export default function MethodCRMMCPBlogPage() {
             <div className="grid-2 mb-8">
               <Card>
                 <CardHeader>
-                  <CardTitle>🔧 System Requirements</CardTitle>
+                  <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Wrench" size="sm" /> System Requirements</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="skill-list">
@@ -204,7 +205,7 @@ export default function MethodCRMMCPBlogPage() {
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>🔑 Method CRM Requirements</CardTitle>
+                  <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Key" size="sm" /> Method CRM Requirements</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="skill-list">
@@ -349,7 +350,7 @@ python -m method_crm_mcp`}
 
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="text-accent">📊 Table Operations (5 tools)</CardTitle>
+                <CardTitle className="text-accent flex items-center gap-2"><CategoryIcon icon="BarChart" size="sm" /> Table Operations (5 tools)</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -374,7 +375,7 @@ python -m method_crm_mcp`}
 
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="text-accent">📁 File Management (6 tools)</CardTitle>
+                <CardTitle className="text-accent flex items-center gap-2"><CategoryIcon icon="Folder" size="sm" /> File Management (6 tools)</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -402,7 +403,7 @@ python -m method_crm_mcp`}
 
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle className="text-accent">⚡ Event Automation (4 tools)</CardTitle>
+                <CardTitle className="text-accent flex items-center gap-2"><CategoryIcon icon="Zap" size="sm" /> Event Automation (4 tools)</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -424,7 +425,7 @@ python -m method_crm_mcp`}
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-accent">🔑 API Key Management (4 tools)</CardTitle>
+                <CardTitle className="text-accent flex items-center gap-2"><CategoryIcon icon="Key" size="sm" /> API Key Management (4 tools)</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="skill-list">
@@ -472,7 +473,7 @@ python -m method_crm_mcp`}
 
             <Card className="mb-6">
               <CardHeader>
-                <CardTitle>➕ Creating Records</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Plus" size="sm" /> Creating Records</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="font-semibold mb-2">Example prompts:</p>
@@ -516,7 +517,7 @@ python -m method_crm_mcp`}
             <div className="grid-2 mb-8">
               <Card className="card-accent-left">
                 <CardHeader>
-                  <CardTitle>🔒 Security</CardTitle>
+                  <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Lock" size="sm" /> Security</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="skill-list">
@@ -530,7 +531,7 @@ python -m method_crm_mcp`}
 
               <Card className="card-accent-left">
                 <CardHeader>
-                  <CardTitle>⚡ Performance</CardTitle>
+                  <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Zap" size="sm" /> Performance</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="skill-list">
@@ -545,7 +546,7 @@ python -m method_crm_mcp`}
 
             <Card className="border-2 border-primary">
               <CardHeader>
-                <CardTitle>🚀 Ready to Get Started?</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Rocket" size="sm" /> Ready to Get Started?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="mb-6">

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
@@ -137,8 +138,8 @@ export default function JenkinsMCPPage() {
               <CardTitle>Installation</CardTitle>
             </CardHeader>
             <CardContent>
-              <pre className="code-block mb-6">
-                <code>{`# Clone the repository
+              <CodeBlock
+                code={`# Clone the repository
 git clone https://github.com/avisangle/jenkins-mcp-server.git
 cd jenkins-mcp-server
 
@@ -151,8 +152,10 @@ export JENKINS_USER="your_username"
 export JENKINS_TOKEN="your_api_token"
 
 # Run the MCP server
-python -m jenkins_mcp_server`}</code>
-              </pre>
+python -m jenkins_mcp_server`}
+                language="bash"
+                className="mb-6"
+              />
               <p className="text-muted-foreground">
                 For Claude Desktop integration and advanced configuration, see the{" "}
                 <Link
@@ -224,7 +227,7 @@ python -m jenkins_mcp_server`}</code>
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🤖 AI-Assisted DevOps</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Bot" size="sm" /> AI-Assisted DevOps</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -236,7 +239,7 @@ python -m jenkins_mcp_server`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>⚡ Faster Workflows</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Zap" size="sm" /> Faster Workflows</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -248,7 +251,7 @@ python -m jenkins_mcp_server`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🔄 Seamless Integration</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="RefreshCw" size="sm" /> Seamless Integration</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -260,7 +263,7 @@ python -m jenkins_mcp_server`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🛡️ Security First</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Shield" size="sm" /> Security First</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -280,7 +283,7 @@ python -m jenkins_mcp_server`}</code>
 
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>🏗️ Technical Architecture</CardTitle>
+              <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Building" size="sm" /> Technical Architecture</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid-2">
@@ -321,7 +324,7 @@ python -m jenkins_mcp_server`}</code>
 
           <Card>
             <CardHeader>
-              <CardTitle>✨ Core Capabilities</CardTitle>
+              <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Sparkles" size="sm" /> Core Capabilities</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="skill-list">

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
@@ -137,8 +138,8 @@ export default function TwitterOAuthPage() {
               <CardTitle>Installation</CardTitle>
             </CardHeader>
             <CardContent>
-              <pre className="code-block mb-6">
-                <code>{`# Clone the repository
+              <CodeBlock
+                code={`# Clone the repository
 git clone https://github.com/avisangle/make-twitter-oauth.git
 cd make-twitter-oauth
 
@@ -146,8 +147,10 @@ cd make-twitter-oauth
 open index.html
 
 # Or serve with a local server
-python -m http.server 8000`}</code>
-              </pre>
+python -m http.server 8000`}
+                language="bash"
+                className="mb-6"
+              />
               <p className="text-muted-foreground">
                 For detailed setup instructions, see the{" "}
                 <Link
@@ -219,7 +222,7 @@ python -m http.server 8000`}</code>
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>⏱️ Massive Time Savings</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Clock" size="sm" /> Massive Time Savings</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -231,7 +234,7 @@ python -m http.server 8000`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🔒 Enterprise Security</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Lock" size="sm" /> Enterprise Security</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -243,7 +246,7 @@ python -m http.server 8000`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🎯 Error Prevention</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Target" size="sm" /> Error Prevention</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -254,7 +257,7 @@ python -m http.server 8000`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🌐 No-Code Friendly</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Globe" size="sm" /> No-Code Friendly</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">

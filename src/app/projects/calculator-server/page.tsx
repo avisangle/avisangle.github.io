@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
@@ -127,8 +128,8 @@ export default function CalculatorServerPage() {
               <CardTitle>Installation</CardTitle>
             </CardHeader>
             <CardContent>
-              <pre className="code-block mb-6">
-                <code>{`# Clone the repository
+              <CodeBlock
+                code={`# Clone the repository
 git clone https://github.com/avisangle/calculator-server.git
 cd calculator-server
 
@@ -136,8 +137,10 @@ cd calculator-server
 go build -o calculator-server
 
 # Run the MCP server
-./calculator-server`}</code>
-              </pre>
+./calculator-server`}
+                language="bash"
+                className="mb-6"
+              />
               <p className="text-muted-foreground">
                 For integration with AI agents, see the{" "}
                 <Link
@@ -207,7 +210,7 @@ go build -o calculator-server
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🤖 AI Integration</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Bot" size="sm" /> AI Integration</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -219,7 +222,7 @@ go build -o calculator-server
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🚀 Performance</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Rocket" size="sm" /> Performance</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">

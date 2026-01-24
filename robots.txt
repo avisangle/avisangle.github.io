@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /project-template.html
 
 Sitemap: https://avinashsangle.com/sitemap.xml

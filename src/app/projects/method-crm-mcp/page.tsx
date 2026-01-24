@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
@@ -132,8 +133,8 @@ export default function MethodCRMMCPPage() {
               <CardTitle>Installation</CardTitle>
             </CardHeader>
             <CardContent>
-              <pre className="code-block mb-6">
-                <code>{`# Clone the repository
+              <CodeBlock
+                code={`# Clone the repository
 git clone https://github.com/avisangle/method-crm-mcp.git
 cd method-crm-mcp
 
@@ -144,8 +145,10 @@ pip install -r requirements.txt
 export METHOD_API_KEY="your_api_key_here"
 
 # Run the server
-python -m method_crm_mcp`}</code>
-              </pre>
+python -m method_crm_mcp`}
+                language="bash"
+                className="mb-6"
+              />
               <p className="text-muted-foreground">
                 For detailed configuration options and advanced setup, see the{" "}
                 <Link
@@ -256,7 +259,7 @@ python -m method_crm_mcp`}</code>
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🚀 Production-Ready</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Rocket" size="sm" /> Production-Ready</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -268,7 +271,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🤖 LLM Integration</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Bot" size="sm" /> LLM Integration</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -280,7 +283,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>⚡ Dual Transport</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Zap" size="sm" /> Dual Transport</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -292,7 +295,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>📈 Comprehensive Coverage</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="TrendingUp" size="sm" /> Comprehensive Coverage</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -312,7 +315,7 @@ python -m method_crm_mcp`}</code>
 
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>🏗️ Technical Architecture</CardTitle>
+              <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Building" size="sm" /> Technical Architecture</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid-2">
@@ -351,7 +354,7 @@ python -m method_crm_mcp`}</code>
 
           <Card>
             <CardHeader>
-              <CardTitle>✨ Available Tools (20 Total)</CardTitle>
+              <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Sparkles" size="sm" /> Available Tools (20 Total)</CardTitle>
             </CardHeader>
             <CardContent>
               <h4 className="text-accent font-semibold mb-2">Table Operations (5 tools)</h4>

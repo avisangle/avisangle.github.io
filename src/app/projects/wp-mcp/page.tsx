@@ -183,7 +183,7 @@ export default function WPMCPPage() {
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🤖 AI-Enhanced Development</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Bot" size="sm" /> AI-Enhanced Development</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -195,7 +195,7 @@ export default function WPMCPPage() {
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🎯 Faster Delivery</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Target" size="sm" /> Faster Delivery</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">

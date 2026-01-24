@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://avinashsangle.com/</loc>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/blog.html</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://avinashsangle.com/blog</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/blog-method-crm-mcp.html</loc>
-    <lastmod>2026-01-15</lastmod>
+    <loc>https://avinashsangle.com/blog/method-crm-mcp</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-social-media-auto-poster.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/social-media-auto-poster</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-jenkins-mcp.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/jenkins-mcp</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-jenkins-chatbot.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/jenkins-chatbot</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-calculator-server.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/calculator-server</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-wp-mcp.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/wp-mcp</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-aws-ec2-agent.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/aws-ec2-agent</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-twitter-oauth.html</loc>
-    <lastmod>2026-01-16</lastmod>
+    <loc>https://avinashsangle.com/projects/twitter-oauth</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/project-method-crm-mcp.html</loc>
-    <lastmod>2026-01-12</lastmod>
+    <loc>https://avinashsangle.com/projects/method-crm-mcp</loc>
+    <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
@@ -151,15 +152,17 @@ export default function AWSEc2AgentPage() {
               <CardTitle>Try It Now</CardTitle>
             </CardHeader>
             <CardContent>
-              <pre className="code-block mb-6">
-                <code>{`# Configure AWS credentials
+              <CodeBlock
+                code={`# Configure AWS credentials
 export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
 export AWS_REGION="us-east-1"
 
 # Example natural language command:
-"Deploy an Ubuntu EC2 instance with t2.micro in us-east-1"`}</code>
-              </pre>
+"Deploy an Ubuntu EC2 instance with t2.micro in us-east-1"`}
+                language="bash"
+                className="mb-6"
+              />
               <p className="text-muted-foreground">
                 Watch the{" "}
                 <Link
@@ -231,7 +234,7 @@ export AWS_REGION="us-east-1"
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>⚡ 60-Second Deployments</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Zap" size="sm" /> 60-Second Deployments</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -243,7 +246,7 @@ export AWS_REGION="us-east-1"
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🌐 Multi-Cloud Ready</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Globe" size="sm" /> Multi-Cloud Ready</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -255,7 +258,7 @@ export AWS_REGION="us-east-1"
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🛡️ Error Resilience</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Shield" size="sm" /> Error Resilience</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -267,7 +270,7 @@ export AWS_REGION="us-east-1"
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>📚 Democratizes DevOps</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="BookOpen" size="sm" /> Democratizes DevOps</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -300,6 +303,30 @@ export AWS_REGION="us-east-1"
               </ul>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section">
+        <div className="container-project text-center">
+          <h2 className="section-title">Explore the Code</h2>
+          <p className="section-subtitle mx-auto mb-8">
+            Check out the GitHub repository for implementation details
+          </p>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Button size="lg" asChild>
+              <Link
+                href="https://github.com/avisangle/aws-ec2-agent"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/#projects">View All Projects</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

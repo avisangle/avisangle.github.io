@@ -76,7 +76,7 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Latest Articles</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <div className="text-6xl text-center">🏢</div>
+              <CategoryIcon icon="Building2" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI & AUTOMATION</p>
                 <h3 className="text-2xl font-bold mb-4">Complete Guide to Method CRM MCP Server</h3>
@@ -86,9 +86,9 @@ export default function BlogPage() {
                   commands.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span>📅 January 15, 2025</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 15, 2025</span>
                   <span>•</span>
-                  <span>⏱️ 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
                   <Link href="/blog/method-crm-mcp">Read Article →</Link>

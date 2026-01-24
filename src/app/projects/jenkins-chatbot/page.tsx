@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
@@ -132,8 +133,8 @@ export default function JenkinsChatbotPage() {
               <CardTitle>Installation</CardTitle>
             </CardHeader>
             <CardContent>
-              <pre className="code-block mb-6">
-                <code>{`# Clone the repository
+              <CodeBlock
+                code={`# Clone the repository
 git clone https://github.com/avisangle/jenkins-chatbot-plugin.git
 cd jenkins-chatbot-plugin
 
@@ -146,8 +147,10 @@ export JENKINS_USER="your_username"
 export JENKINS_TOKEN="your_api_token"
 
 # Start the chatbot
-python chatbot.py`}</code>
-              </pre>
+python chatbot.py`}
+                language="bash"
+                className="mb-6"
+              />
               <p className="text-muted-foreground">
                 For Jenkins plugin installation, see the{" "}
                 <Link
@@ -232,7 +235,7 @@ python chatbot.py`}</code>
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🚀 Developer Productivity</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Rocket" size="sm" /> Developer Productivity</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -244,7 +247,7 @@ python chatbot.py`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>📉 Lower Barrier to Entry</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Users" size="sm" /> Lower Barrier to Entry</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -256,7 +259,7 @@ python chatbot.py`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🤖 AI-Assisted Operations</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Bot" size="sm" /> AI-Assisted Operations</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -268,7 +271,7 @@ python chatbot.py`}</code>
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>⏱️ Time Savings</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Clock" size="sm" /> Time Savings</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -366,15 +369,20 @@ python chatbot.py`}</code>
           <p className="section-subtitle mx-auto mb-8">
             Check out the GitHub repository for implementation details
           </p>
-          <Button size="lg" asChild>
-            <Link
-              href="https://github.com/avisangle/jenkins-chatbot-plugin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub <ExternalLink className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <div className="flex justify-center gap-4 flex-wrap">
+            <Button size="lg" asChild>
+              <Link
+                href="https://github.com/avisangle/jenkins-chatbot-plugin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub <ExternalLink className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/#projects">View All Projects</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>
