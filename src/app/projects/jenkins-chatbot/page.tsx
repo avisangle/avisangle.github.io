@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -89,32 +90,27 @@ export default function JenkinsChatbotPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-8">
-            The Jenkins Chatbot Plugin embeds an AI-powered chat interface within Jenkins, enabling
-            users to manage builds, deployments, and system tasks using natural language. This
-            revolutionary approach transforms complex Jenkins interactions into simple
-            conversational commands while respecting Jenkins&apos; security and access control.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-4">
+                The Jenkins Chatbot Plugin embeds an AI-powered chat interface within Jenkins, enabling
+                users to manage builds, deployments, and system tasks using natural language. This
+                revolutionary approach transforms complex Jenkins interactions into simple
+                conversational commands while respecting Jenkins&apos; security and access control.
+              </p>
+            </div>
             <Card>
               <CardHeader>
                 <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">AI/ML</Badge>
-                  <Badge variant="outline">Jenkins</Badge>
-                  <Badge variant="outline">NLP</Badge>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">Python</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">AI/ML</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Jenkins</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">NLP</Badge>
                 </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Key Features</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <CardTitle className="mb-6">Key Features</CardTitle>
                 <ul className="skill-list">
                   <li>Natural language commands</li>
                   <li>Build triggering via chat</li>
@@ -170,13 +166,13 @@ python chatbot.py`}</code>
       </section>
 
       {/* What It Does */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-2">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">💬</div>
+                <CategoryIcon icon="MessageSquare" size="lg" animation="pulse" />
                 <CardTitle>Natural Language Interface</CardTitle>
               </CardHeader>
               <CardContent>
@@ -189,7 +185,7 @@ python chatbot.py`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔒</div>
+                <CategoryIcon icon="Lock" size="lg" animation="pulse" />
                 <CardTitle>Security Integration</CardTitle>
               </CardHeader>
               <CardContent>
@@ -202,7 +198,7 @@ python chatbot.py`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">⚡</div>
+                <CategoryIcon icon="Zap" size="lg" animation="pulse" />
                 <CardTitle>Faster Workflows</CardTitle>
               </CardHeader>
               <CardContent>
@@ -215,7 +211,7 @@ python chatbot.py`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📊</div>
+                <CategoryIcon icon="BarChart" size="lg" animation="pulse" />
                 <CardTitle>Intelligent Insights</CardTitle>
               </CardHeader>
               <CardContent>
@@ -230,7 +226,7 @@ python chatbot.py`}</code>
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">

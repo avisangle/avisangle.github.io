@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -85,32 +86,27 @@ export default function CalculatorServerPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-8">
-            Calculator Server is a robust Model Context Protocol (MCP) server implemented in Go
-            that provides mathematical computation tools for AI agents and applications. It
-            demonstrates Go programming expertise and showcases integration of computational
-            services with AI systems through a standardized protocol interface.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-6">
+                Calculator Server is a robust Model Context Protocol (MCP) server implemented in Go
+                that provides mathematical computation tools for AI agents and applications. It
+                demonstrates Go programming expertise and showcases integration of computational
+                services with AI systems through a standardized protocol interface.
+              </p>
+            </div>
             <Card>
               <CardHeader>
                 <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">Go</Badge>
-                  <Badge variant="outline">MCP</Badge>
-                  <Badge variant="outline">Mathematical APIs</Badge>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">Go</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">MCP</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Mathematical APIs</Badge>
                 </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Capabilities</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="skill-list">
+                <CardTitle className="mb-6">Capabilities</CardTitle>
+                <ul className="skill-list mb-4">
                   <li>Basic arithmetic operations</li>
                   <li>Advanced calculations</li>
                   <li>13+ mathematical tools</li>
@@ -160,13 +156,13 @@ go build -o calculator-server
       </section>
 
       {/* What It Does */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">➕</div>
+                <CategoryIcon icon="Plus" size="lg" animation="pulse" />
                 <CardTitle>Basic Operations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -179,7 +175,7 @@ go build -o calculator-server
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📐</div>
+                <CategoryIcon icon="Triangle" size="lg" animation="pulse" />
                 <CardTitle>Advanced Math</CardTitle>
               </CardHeader>
               <CardContent>
@@ -191,7 +187,7 @@ go build -o calculator-server
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">⚡</div>
+                <CategoryIcon icon="Zap" size="lg" animation="pulse" />
                 <CardTitle>High Performance</CardTitle>
               </CardHeader>
               <CardContent>
@@ -205,7 +201,7 @@ go build -o calculator-server
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
@@ -237,7 +233,7 @@ go build -o calculator-server
       </section>
 
       {/* Implementation Highlights */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
           <Card>
@@ -259,7 +255,7 @@ go build -o calculator-server
       </section>
 
       {/* Related Projects */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">

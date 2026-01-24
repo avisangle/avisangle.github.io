@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -113,15 +114,15 @@ export default function SocialMediaAutoPosterPage() {
                 <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack mb-6">
-                  <Badge variant="outline">React</Badge>
-                  <Badge variant="outline">Supabase</Badge>
-                  <Badge variant="outline">AI APIs</Badge>
-                  <Badge variant="outline">OAuth 2.0</Badge>
-                  <Badge variant="outline">Stripe</Badge>
-                  <Badge variant="outline">Vercel</Badge>
+                <div className="tech-stack mb-6 ">
+                  <Badge variant="outline" className="badge-primary-outline">React</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Supabase</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">AI APIs</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">OAuth 2.0</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Stripe</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Vercel</Badge>
                 </div>
-                <CardTitle className="mb-4">Key Features</CardTitle>
+                <CardTitle className="mb-6">Key Features</CardTitle>
                 <ul className="skill-list">
                   <li>AI content generation</li>
                   <li>Multi-platform posting</li>
@@ -142,7 +143,7 @@ export default function SocialMediaAutoPosterPage() {
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🤖</div>
+                <CategoryIcon icon="Bot" size="lg" animation="pulse" />
                 <CardTitle>AI Content Generation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -156,7 +157,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📅</div>
+                <CategoryIcon icon="Calendar" size="lg" animation="pulse" />
                 <CardTitle>Smart Scheduling</CardTitle>
               </CardHeader>
               <CardContent>
@@ -169,7 +170,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔗</div>
+                <CategoryIcon icon="Link" size="lg" animation="pulse" />
                 <CardTitle>Multi-Platform Support</CardTitle>
               </CardHeader>
               <CardContent>
@@ -182,7 +183,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">✅</div>
+                <CategoryIcon icon="CheckCircle" size="lg" animation="pulse" />
                 <CardTitle>Approval Workflow</CardTitle>
               </CardHeader>
               <CardContent>
@@ -195,7 +196,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📊</div>
+                <CategoryIcon icon="BarChart" size="lg" animation="pulse" />
                 <CardTitle>Analytics & Insights</CardTitle>
               </CardHeader>
               <CardContent>
@@ -208,7 +209,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🎨</div>
+                <CategoryIcon icon="Image" size="lg" animation="pulse" />
                 <CardTitle>Media Management</CardTitle>
               </CardHeader>
               <CardContent>
@@ -232,27 +233,27 @@ export default function SocialMediaAutoPosterPage() {
           />
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
             <Card className="text-center p-6">
-              <div className="text-3xl mb-2">🐦</div>
+              <CategoryIcon icon="Twitter" size="lg" className="mx-auto mb-2" />
               <h4 className="font-semibold">Twitter / X</h4>
               <p className="text-sm text-muted-foreground">Tweets & threads</p>
             </Card>
             <Card className="text-center p-6">
-              <div className="text-3xl mb-2">💼</div>
+              <CategoryIcon icon="Linkedin" size="lg" className="mx-auto mb-2" />
               <h4 className="font-semibold">LinkedIn</h4>
               <p className="text-sm text-muted-foreground">Posts & articles</p>
             </Card>
             <Card className="text-center p-6">
-              <div className="text-3xl mb-2">🤖</div>
+              <CategoryIcon icon="MessageCircle" size="lg" className="mx-auto mb-2" />
               <h4 className="font-semibold">Reddit</h4>
               <p className="text-sm text-muted-foreground">Subreddit posts</p>
             </Card>
             <Card className="text-center p-6">
-              <div className="text-3xl mb-2">📘</div>
+              <CategoryIcon icon="Facebook" size="lg" className="mx-auto mb-2" />
               <h4 className="font-semibold">Facebook</h4>
               <p className="text-sm text-muted-foreground">Page posts</p>
             </Card>
             <Card className="text-center p-6">
-              <div className="text-3xl mb-2">📸</div>
+              <CategoryIcon icon="Instagram" size="lg" className="mx-auto mb-2" />
               <h4 className="font-semibold">Instagram</h4>
               <p className="text-sm text-muted-foreground">Feed posts</p>
             </Card>
@@ -261,13 +262,13 @@ export default function SocialMediaAutoPosterPage() {
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>⏱️ Save Time & Effort</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Clock" size="sm" /> Save Time & Effort</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -280,7 +281,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>📈 Consistent Posting</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="TrendingUp" size="sm" /> Consistent Posting</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -292,7 +293,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>🎯 Better Engagement</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Target" size="sm" /> Better Engagement</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -304,7 +305,7 @@ export default function SocialMediaAutoPosterPage() {
 
             <Card className="card-accent-left">
               <CardHeader>
-                <CardTitle>💼 Professional Management</CardTitle>
+                <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Briefcase" size="sm" /> Professional Management</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -318,13 +319,13 @@ export default function SocialMediaAutoPosterPage() {
       </section>
 
       {/* Implementation Highlights */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
 
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>🏗️ Technical Architecture</CardTitle>
+              <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Building" size="sm" /> Technical Architecture</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid-2">
@@ -362,7 +363,7 @@ export default function SocialMediaAutoPosterPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle>✨ Core Capabilities</CardTitle>
+              <CardTitle className="flex items-center gap-2"><CategoryIcon icon="Sparkles" size="sm" /> Core Capabilities</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="skill-list">
@@ -383,7 +384,7 @@ export default function SocialMediaAutoPosterPage() {
       </section>
 
       {/* Related Projects */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">
@@ -442,7 +443,7 @@ export default function SocialMediaAutoPosterPage() {
       </section>
 
       {/* CTA */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project text-center">
           <h2 className="section-title">Ready to Explore More?</h2>
           <p className="section-subtitle mx-auto mb-8">

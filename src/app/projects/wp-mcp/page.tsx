@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -83,37 +84,32 @@ export default function WPMCPPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-8">
-            Comprehensive WordPress development services enhanced with AI-assisted code analysis
-            and debugging through Model Context Protocol integration. Combines traditional WordPress
-            expertise with modern AI capabilities for faster, more efficient development.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-8">
+                Comprehensive WordPress development services enhanced with AI-assisted code analysis
+                and debugging through Model Context Protocol integration. Combines traditional WordPress
+                expertise with modern AI capabilities for faster, more efficient development.
+              </p>
+            </div>
             <Card>
               <CardHeader>
-                <CardTitle>Services</CardTitle>
+                <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">WordPress</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">PHP</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">MCP</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">AI</Badge>
+                </div>
+                <CardTitle className="mb-6">Services</CardTitle>
                 <ul className="skill-list">
                   <li>Custom theme development</li>
                   <li>Plugin creation</li>
                   <li>Error debugging</li>
                   <li>Performance optimization</li>
                 </ul>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Tech Stack</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">WordPress</Badge>
-                  <Badge variant="outline">PHP</Badge>
-                  <Badge variant="outline">MCP</Badge>
-                  <Badge variant="outline">AI</Badge>
-                </div>
               </CardContent>
             </Card>
           </div>
@@ -127,7 +123,7 @@ export default function WPMCPPage() {
           <div className="grid-2">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🎨</div>
+                <CategoryIcon icon="Palette" size="lg" animation="pulse" />
                 <CardTitle>Custom Themes</CardTitle>
               </CardHeader>
               <CardContent>
@@ -140,7 +136,7 @@ export default function WPMCPPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔌</div>
+                <CategoryIcon icon="Plug" size="lg" animation="pulse" />
                 <CardTitle>Plugin Development</CardTitle>
               </CardHeader>
               <CardContent>
@@ -153,7 +149,7 @@ export default function WPMCPPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🐛</div>
+                <CategoryIcon icon="Bug" size="lg" animation="pulse" />
                 <CardTitle>AI-Assisted Debugging</CardTitle>
               </CardHeader>
               <CardContent>
@@ -166,7 +162,7 @@ export default function WPMCPPage() {
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">⚡</div>
+                <CategoryIcon icon="Zap" size="lg" animation="pulse" />
                 <CardTitle>Performance Optimization</CardTitle>
               </CardHeader>
               <CardContent>

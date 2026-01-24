@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -94,32 +95,27 @@ export default function TwitterOAuthPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-8">
-            Twitter OAuth Setup Wizard streamlines Twitter API OAuth 2.0 configuration for Make.com
-            automation with a guided 4-step wizard. Implements PKCE security, auto-generates
-            ready-to-import Make.com scenarios, and reduces setup time from 30 minutes to under 2
-            minutes.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-8">
+                Twitter OAuth Setup Wizard streamlines Twitter API OAuth 2.0 configuration for Make.com
+                automation with a guided 4-step wizard. Implements PKCE security, auto-generates
+                ready-to-import Make.com scenarios, and reduces setup time from 30 minutes to under 2
+                minutes.
+              </p>
+            </div>
             <Card>
               <CardHeader>
                 <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">JavaScript</Badge>
-                  <Badge variant="outline">OAuth 2.0</Badge>
-                  <Badge variant="outline">PKCE</Badge>
-                  <Badge variant="outline">Make.com</Badge>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">JavaScript</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">OAuth 2.0</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">PKCE</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Make.com</Badge>
                 </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Key Features</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <CardTitle className="mb-6">Key Features</CardTitle>
                 <ul className="skill-list">
                   <li>4-step guided wizard</li>
                   <li>PKCE security (SHA-256)</li>
@@ -170,13 +166,13 @@ python -m http.server 8000`}</code>
       </section>
 
       {/* What It Does */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔐</div>
+                <CategoryIcon icon="Lock" size="lg" animation="pulse" />
                 <CardTitle>PKCE Security</CardTitle>
               </CardHeader>
               <CardContent>
@@ -189,7 +185,7 @@ python -m http.server 8000`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🚀</div>
+                <CategoryIcon icon="Rocket" size="lg" animation="pulse" />
                 <CardTitle>Auto Scenario Generation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -202,7 +198,7 @@ python -m http.server 8000`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">⚡</div>
+                <CategoryIcon icon="Zap" size="lg" animation="pulse" />
                 <CardTitle>Zero-Friction UI</CardTitle>
               </CardHeader>
               <CardContent>
@@ -217,7 +213,7 @@ python -m http.server 8000`}</code>
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
@@ -271,7 +267,7 @@ python -m http.server 8000`}</code>
       </section>
 
       {/* Troubleshooting */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="How to Fix Twitter OAuth in Make.com" centered={false} />
           <Card>
@@ -340,7 +336,7 @@ python -m http.server 8000`}</code>
       </section>
 
       {/* CTA */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project text-center">
           <h2 className="section-title">Try It Now</h2>
           <p className="section-subtitle mx-auto mb-8">
@@ -370,7 +366,7 @@ python -m http.server 8000`}</code>
       </section>
 
       {/* Related Projects */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">

@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -90,36 +91,31 @@ export default function JenkinsMCPPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-6">
-            The Jenkins MCP Server is a groundbreaking integration that enables Jenkins to serve
-            context and operations through the Model Context Protocol (MCP). This project bridges
-            the gap between AI agents and Jenkins, allowing for unprecedented levels of automation
-            and AI-assisted DevOps workflows.
-          </p>
-          <p className="text-lg leading-relaxed mb-8">
-            By implementing the MCP protocol, Jenkins becomes accessible to LLM-based tools and AI
-            assistants, enabling natural language interactions with your CI/CD infrastructure.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-6">
+                The Jenkins MCP Server is a groundbreaking integration that enables Jenkins to serve
+                context and operations through the Model Context Protocol (MCP). This project bridges
+                the gap between AI agents and Jenkins, allowing for unprecedented levels of automation
+                and AI-assisted DevOps workflows.
+              </p>
+              <p className="text-lg leading-relaxed mb-8">
+                By implementing the MCP protocol, Jenkins becomes accessible to LLM-based tools and AI
+                assistants, enabling natural language interactions with your CI/CD infrastructure.
+              </p>
+            </div>
             <Card>
               <CardHeader>
                 <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">MCP</Badge>
-                  <Badge variant="outline">Jenkins API</Badge>
-                  <Badge variant="outline">Node.js</Badge>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">Python</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">MCP</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Jenkins API</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Node.js</Badge>
                 </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Key Features</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <CardTitle className="mb-6">Key Features</CardTitle>
                 <ul className="skill-list">
                   <li>Query job configurations</li>
                   <li>Trigger builds programmatically</li>
@@ -175,13 +171,13 @@ python -m jenkins_mcp_server`}</code>
       </section>
 
       {/* What It Does */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔧</div>
+                <CategoryIcon icon="Wrench" size="lg" animation="pulse" />
                 <CardTitle>Job Management</CardTitle>
               </CardHeader>
               <CardContent>
@@ -194,7 +190,7 @@ python -m jenkins_mcp_server`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🚀</div>
+                <CategoryIcon icon="Rocket" size="lg" animation="pulse" />
                 <CardTitle>Build Operations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -207,7 +203,7 @@ python -m jenkins_mcp_server`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🧠</div>
+                <CategoryIcon icon="Brain" size="lg" animation="pulse" />
                 <CardTitle>Context Awareness</CardTitle>
               </CardHeader>
               <CardContent>
@@ -222,7 +218,7 @@ python -m jenkins_mcp_server`}</code>
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
@@ -278,7 +274,7 @@ python -m jenkins_mcp_server`}</code>
       </section>
 
       {/* Implementation Highlights */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
 
@@ -344,7 +340,7 @@ python -m jenkins_mcp_server`}</code>
       </section>
 
       {/* Related Projects */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">
@@ -399,7 +395,7 @@ python -m jenkins_mcp_server`}</code>
       </section>
 
       {/* CTA */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project text-center">
           <h2 className="section-title">Explore the Code</h2>
           <p className="section-subtitle mx-auto mb-8">

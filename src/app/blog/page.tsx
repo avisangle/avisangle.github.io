@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -99,13 +100,13 @@ export default function BlogPage() {
       </section>
 
       {/* Topics Grid */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Topics I'll Cover" centered />
           <div className="grid-2">
             <Card>
               <CardHeader>
-                <div className="project-image">🤖</div>
+                <CategoryIcon icon="Bot" size="lg" animation="pulse" />
                 <CardTitle>AI & Automation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -120,7 +121,7 @@ export default function BlogPage() {
 
             <Card>
               <CardHeader>
-                <div className="project-image">🔧</div>
+                <CategoryIcon icon="Wrench" size="lg" animation="pulse" />
                 <CardTitle>DevOps & CI/CD</CardTitle>
               </CardHeader>
               <CardContent>
@@ -135,7 +136,7 @@ export default function BlogPage() {
 
             <Card>
               <CardHeader>
-                <div className="project-image">☁️</div>
+                <CategoryIcon icon="Cloud" size="lg" animation="pulse" />
                 <CardTitle>Cloud Architecture</CardTitle>
               </CardHeader>
               <CardContent>
@@ -150,7 +151,7 @@ export default function BlogPage() {
 
             <Card>
               <CardHeader>
-                <div className="project-image">💻</div>
+                <CategoryIcon icon="Code" size="lg" animation="pulse" />
                 <CardTitle>Development</CardTitle>
               </CardHeader>
               <CardContent>
@@ -167,7 +168,7 @@ export default function BlogPage() {
       </section>
 
       {/* Stay Connected */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project text-center">
           <SectionHeader
             title="Stay Connected"

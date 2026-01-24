@@ -214,24 +214,25 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <TechBadge tech="React" />
-                  <TechBadge tech="Supabase" />
-                  <TechBadge tech="AI" />
-                  <TechBadge tech="OAuth" />
+                  <TechBadge tech="React" className="badge-primary-outline" />
+                  <TechBadge tech="Supabase" className="badge-primary-outline" />
+                  <TechBadge tech="AI" className="badge-primary-outline" />
+                  <TechBadge tech="OAuth" className="badge-primary-outline" />
                 </div>
               </CardContent>
               <CardFooter className="gap-4">
-                <Link href="/projects/social-media-auto-poster" className="project-link">
-                  Learn More →
-                </Link>
-                <Link
-                  href="https://social.avinashsangle.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link flex items-center gap-1"
-                >
-                  Live Demo <ExternalLink className="h-3 w-3" />
-                </Link>
+                <Badge variant="outline" asChild>
+                  <a href="/projects/social-media-auto-poster">Learn More →</a>
+                </Badge>
+                <Badge variant="default" asChild>
+                  <Link
+                    href="https://social.avinashsangle.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo <ExternalLink className="h-3 w-3" />
+                  </Link>
+                </Badge>
               </CardFooter>
             </Card>
 
@@ -250,15 +251,17 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <TechBadge tech="Python" />
-                  <TechBadge tech="MCP" />
-                  <TechBadge tech="Jenkins" />
+                  <TechBadge tech="Python" className="badge-primary-outline" />
+                  <TechBadge tech="MCP" className="badge-primary-outline" />
+                  <TechBadge tech="Jenkins" className="badge-primary-outline" />
                 </div>
               </CardContent>
               <CardFooter>
-                <Link href="/projects/jenkins-mcp" className="project-link">
-                  Learn More →
-                </Link>
+                <Badge variant="outline" asChild>
+                  <Link href="/projects/jenkins-mcp">
+                    Learn More →
+                  </Link>
+                </Badge>
               </CardFooter>
             </Card>
 
@@ -277,15 +280,17 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <TechBadge tech="Python" />
-                  <TechBadge tech="AI" />
-                  <TechBadge tech="Jenkins" />
+                  <TechBadge tech="Python" className="badge-primary-outline" />
+                  <TechBadge tech="AI" className="badge-primary-outline" />
+                  <TechBadge tech="Jenkins" className="badge-primary-outline" />
                 </div>
               </CardContent>
               <CardFooter>
-                <Link href="/projects/jenkins-chatbot" className="project-link">
-                  Learn More →
-                </Link>
+                <Badge variant="outline" asChild>
+                  <Link href="/projects/jenkins-chatbot">
+                    Learn More →
+                  </Link>
+                </Badge>
               </CardFooter>
             </Card>
 
@@ -304,23 +309,26 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <TechBadge tech="AWS" />
-                  <TechBadge tech="AI" />
-                  <TechBadge tech="Cloud" />
+                  <TechBadge tech="AWS" className="badge-primary-outline" />
+                  <TechBadge tech="AI" className="badge-primary-outline" />
+                  <TechBadge tech="Cloud" className="badge-primary-outline" />
                 </div>
               </CardContent>
               <CardFooter className="gap-4">
-                <Link href="/projects/aws-ec2-agent" className="project-link">
-                  Learn More →
-                </Link>
-                <Link
-                  href="https://youtu.be/E6QqJJAZzlE"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link flex items-center gap-1"
-                >
-                  Demo <ExternalLink className="h-3 w-3" />
-                </Link>
+                <Badge variant="outline" asChild>
+                  <Link href="/projects/aws-ec2-agent">
+                    Learn More →
+                  </Link>
+                </Badge>
+                <Badge variant="default" asChild>
+                  <Link
+                    href="https://youtu.be/E6QqJJAZzlE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo <ExternalLink className="h-3 w-3" />
+                  </Link>
+                </Badge>
               </CardFooter>
             </Card>
 
@@ -339,23 +347,26 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <TechBadge tech="JavaScript" />
-                  <TechBadge tech="OAuth" />
-                  <Badge variant="outline">Make.com</Badge>
+                  <TechBadge tech="JavaScript" className="badge-primary-outline" />
+                  <TechBadge tech="OAuth" className="badge-primary-outline" />
+                  <Badge variant="outline" className="badge-primary-outline">Make.com</Badge>
                 </div>
               </CardContent>
               <CardFooter className="gap-4">
-                <Link href="/projects/twitter-oauth" className="project-link">
-                  Learn More →
-                </Link>
-                <Link
-                  href="https://avisangle.github.io/make-twitter-oauth/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link flex items-center gap-1"
-                >
-                  Live Demo <ExternalLink className="h-3 w-3" />
-                </Link>
+                <Badge variant="outline" asChild>
+                  <Link href="/projects/twitter-oauth">
+                    Learn More →
+                  </Link>
+                </Badge>
+                <Badge variant="default" asChild>
+                  <Link
+                    href="https://avisangle.github.io/make-twitter-oauth/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live Demo <ExternalLink className="h-3 w-3" />
+                  </Link>
+                </Badge>
               </CardFooter>
             </Card>
 
@@ -374,15 +385,17 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <div className="tech-stack">
-                  <TechBadge tech="Python" />
-                  <TechBadge tech="MCP" />
-                  <TechBadge tech="Method CRM" />
+                  <TechBadge tech="Python" className="badge-primary-outline" />
+                  <TechBadge tech="MCP" className="badge-primary-outline" />
+                  <TechBadge tech="Method CRM" className="badge-primary-outline" />
                 </div>
               </CardContent>
               <CardFooter>
-                <Link href="/projects/method-crm-mcp" className="project-link">
-                  Learn More →
-                </Link>
+                <Badge variant="outline" asChild>
+                  <Link href="/projects/method-crm-mcp">
+                    Learn More →
+                  </Link>
+                </Badge>
               </CardFooter>
             </Card>
           </div>

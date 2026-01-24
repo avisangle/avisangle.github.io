@@ -65,3 +65,27 @@ When working on this project:
 1. **New Project Pages**: Use `project-template.html` and follow instructions in `.claude/new-project-page.md`
 2. **SEO/AEO Standards**: All pages must have `SoftwareApplication`, `BreadcrumbList`, and `FAQPage` schemas
 3. **Consistency**: Match the styling and structure of existing project pages
+
+---
+
+## ⚠️ Styling Rules (IMPORTANT)
+
+**DO NOT modify UI component files** in `src/components/ui/`. These are shadcn/ui components and should remain unchanged.
+
+All styling changes MUST be made through:
+1. **Global CSS** - Add/modify classes in `src/app/globals.css`
+2. **CSS Classes** - Use existing global classes or create new ones in globals.css
+3. **Tailwind Classes** - Apply Tailwind utility classes directly on elements in page files
+4. **Inline className** - Use className props on page elements
+
+**Files that should NOT be edited for styling:**
+- `src/components/ui/button.tsx`
+- `src/components/ui/badge.tsx`
+- `src/components/ui/card.tsx`
+- `src/components/ui/accordion.tsx`
+- Any other files in `src/components/ui/`
+
+**Where to make styling changes:**
+- `src/app/globals.css` - Global styles, custom classes
+- Page files (`src/app/**/page.tsx`) - Apply classes to elements
+- `src/components/navbar.tsx`, `src/components/footer.tsx` - Layout components (use global classes)

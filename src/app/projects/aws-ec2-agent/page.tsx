@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -110,30 +111,25 @@ export default function AWSEc2AgentPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-8">
-            Automated multi-cloud infrastructure provisioning through natural language commands.
-            Deploy AWS EC2 instances using an AI agent that intelligently plans, discovers
-            resources, and self-heals errors during execution. From chat to cloud in 60 seconds.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-4">
+                Automated multi-cloud infrastructure provisioning through natural language commands.
+                Deploy AWS EC2 instances using an AI agent that intelligently plans, discovers
+                resources, and self-heals errors during execution. From chat to cloud in 60 seconds.
+              </p>
+            </div>
             <Card>
               <CardHeader>
                 <CardTitle>Cloud Platforms</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">AWS</Badge>
-                  <Badge variant="outline">GCP</Badge>
-                  <Badge variant="outline">Azure</Badge>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">AWS</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">GCP</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Azure</Badge>
                 </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Key Features</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <CardTitle className="mb-6">Key Features</CardTitle>
                 <ul className="skill-list">
                   <li>Natural language deployment</li>
                   <li>Intelligent planning</li>
@@ -182,13 +178,13 @@ export AWS_REGION="us-east-1"
       </section>
 
       {/* What It Does */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">💬</div>
+                <CategoryIcon icon="MessageSquare" size="lg" animation="pulse" />
                 <CardTitle>Natural Language</CardTitle>
               </CardHeader>
               <CardContent>
@@ -201,7 +197,7 @@ export AWS_REGION="us-east-1"
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🧠</div>
+                <CategoryIcon icon="Brain" size="lg" animation="pulse" />
                 <CardTitle>Intelligent Planning</CardTitle>
               </CardHeader>
               <CardContent>
@@ -214,7 +210,7 @@ export AWS_REGION="us-east-1"
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔄</div>
+                <CategoryIcon icon="RefreshCw" size="lg" animation="pulse" />
                 <CardTitle>Self-Healing</CardTitle>
               </CardHeader>
               <CardContent>
@@ -229,7 +225,7 @@ export AWS_REGION="us-east-1"
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
@@ -285,7 +281,7 @@ export AWS_REGION="us-east-1"
       </section>
 
       {/* Implementation Highlights */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
           <Card>

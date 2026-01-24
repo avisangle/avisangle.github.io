@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
+import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
@@ -85,36 +86,31 @@ export default function MethodCRMMCPPage() {
       <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Project Overview" centered={false} />
-          <p className="text-lg leading-relaxed mb-4">
-            Method CRM MCP Server is a production-ready Model Context Protocol (MCP) server that
-            enables LLMs to interact with Method CRM data through well-designed tools. This server
-            provides comprehensive access to Method CRM&apos;s functionality including tables,
-            files, users, events, and API key management.
-          </p>
-          <p className="text-lg leading-relaxed mb-8">
-            Built with enterprise-grade features like API key authentication, automatic rate
-            limiting, retry logic, and full type safety through Pydantic validation.
-          </p>
-
           <div className="grid-2">
+            <div>
+              <p className="text-lg leading-relaxed mb-4">
+                Method CRM MCP Server is a production-ready Model Context Protocol (MCP) server that
+                enables LLMs to interact with Method CRM data through well-designed tools. This server
+                provides comprehensive access to Method CRM&apos;s functionality including tables,
+                files, users, events, and API key management.
+              </p>
+              <p className="text-lg leading-relaxed mb-8">
+                Built with enterprise-grade features like API key authentication, automatic rate
+                limiting, retry logic, and full type safety through Pydantic validation.
+              </p>
+            </div>
             <Card>
               <CardHeader>
                 <CardTitle>Tech Stack</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="tech-stack">
-                  <Badge variant="outline">Python</Badge>
-                  <Badge variant="outline">MCP</Badge>
-                  <Badge variant="outline">Pydantic</Badge>
-                  <Badge variant="outline">Method CRM API</Badge>
+                <div className="tech-stack mb-6">
+                  <Badge variant="outline" className="badge-primary-outline">Python</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">MCP</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Pydantic</Badge>
+                  <Badge variant="outline" className="badge-primary-outline">Method CRM API</Badge>
                 </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle>Key Features</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <CardTitle className="mb-6">Key Features</CardTitle>
                 <ul className="skill-list">
                   <li>20 comprehensive tools</li>
                   <li>Production-ready authentication</li>
@@ -168,13 +164,13 @@ python -m method_crm_mcp`}</code>
       </section>
 
       {/* What It Does */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="What It Does" centered={false} />
           <div className="grid-3">
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📊</div>
+                <CategoryIcon icon="BarChart" size="lg" animation="pulse" />
                 <CardTitle>Table Operations</CardTitle>
               </CardHeader>
               <CardContent>
@@ -187,7 +183,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">📁</div>
+                <CategoryIcon icon="Folder" size="lg" animation="pulse" />
                 <CardTitle>File Management</CardTitle>
               </CardHeader>
               <CardContent>
@@ -200,7 +196,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">⚡</div>
+                <CategoryIcon icon="Zap" size="lg" animation="pulse" />
                 <CardTitle>Event Automation</CardTitle>
               </CardHeader>
               <CardContent>
@@ -213,7 +209,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔑</div>
+                <CategoryIcon icon="Key" size="lg" animation="pulse" />
                 <CardTitle>API Key Management</CardTitle>
               </CardHeader>
               <CardContent>
@@ -226,7 +222,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">👥</div>
+                <CategoryIcon icon="Users" size="lg" animation="pulse" />
                 <CardTitle>User Information</CardTitle>
               </CardHeader>
               <CardContent>
@@ -239,7 +235,7 @@ python -m method_crm_mcp`}</code>
 
             <Card className="card-hover">
               <CardHeader>
-                <div className="project-image">🔒</div>
+                <CategoryIcon icon="Lock" size="lg" animation="pulse" />
                 <CardTitle>Type Safety</CardTitle>
               </CardHeader>
               <CardContent>
@@ -254,7 +250,7 @@ python -m method_crm_mcp`}</code>
       </section>
 
       {/* Why It Matters */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Why It Matters" centered={false} />
           <div className="grid-2">
@@ -310,7 +306,7 @@ python -m method_crm_mcp`}</code>
       </section>
 
       {/* Implementation Highlights */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project">
           <SectionHeader title="Implementation Highlights" centered={false} />
 
@@ -436,7 +432,7 @@ python -m method_crm_mcp`}</code>
       </section>
 
       {/* Related Projects */}
-      <section className="section section-alt">
+      <section className="section">
         <div className="container-project">
           <SectionHeader title="Related Projects" centered={false} />
           <div className="grid-3">
@@ -491,7 +487,7 @@ python -m method_crm_mcp`}</code>
       </section>
 
       {/* CTA */}
-      <section className="section">
+      <section className="section section-alt">
         <div className="container-project text-center">
           <h2 className="section-title">Explore the Code</h2>
           <p className="section-subtitle mx-auto mb-8">

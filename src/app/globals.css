@@ -343,11 +343,11 @@
    HERO STYLES
    ============================================ */
 .hero {
-  @apply py-16 md:py-24 lg:py-28;
+  @apply pt-4 pb-12 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20;
 }
 
 .hero-compact {
-  @apply py-12 md:py-16 lg:py-20;
+  @apply pt-4 pb-10 md:pt-6 md:pb-12 lg:pt-8 lg:pb-16;
   min-height: 40vh;
 }
 
@@ -415,6 +415,12 @@
    ============================================ */
 .tech-stack {
   @apply flex flex-wrap gap-2;
+}
+
+.badge-primary-outline {
+  border-color: var(--primary);
+  background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
 }
 
 /* ============================================
