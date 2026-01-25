@@ -18,7 +18,7 @@ interface ProjectsClientProps {
   technologies: string[]
 }
 
-const ITEMS_PER_PAGE = 12
+const ITEMS_PER_PAGE = 6
 
 export function ProjectsClient({ projects, categories, technologies }: ProjectsClientProps) {
   const [searchQuery, setSearchQuery] = useState("")
