@@ -819,7 +819,9 @@ clawdbot health`}
             <div className="grid-3 mb-8">
               <Card>
                 <CardHeader>
-                  <CardTitle>📱 WhatsApp</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <CategoryIcon icon="Smartphone" size="sm" /> WhatsApp
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">Link via QR code, just like WhatsApp Web.</p>
@@ -832,7 +834,9 @@ clawdbot health`}
 
               <Card>
                 <CardHeader>
-                  <CardTitle>✈️ Telegram</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <CategoryIcon icon="Send" size="sm" /> Telegram
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">Use a bot token from @BotFather.</p>
@@ -851,7 +855,9 @@ clawdbot health`}
 
               <Card>
                 <CardHeader>
-                  <CardTitle>💬 Discord</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <CategoryIcon icon="Gamepad2" size="sm" /> Discord
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">Configure with your Discord bot token.</p>
@@ -870,7 +876,9 @@ clawdbot health`}
 
               <Card>
                 <CardHeader>
-                  <CardTitle>💼 Slack</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <CategoryIcon icon="Hash" size="sm" /> Slack
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">Use Bolt with bot and app tokens.</p>
@@ -884,7 +892,9 @@ SLACK_APP_TOKEN=xapp-...`}
 
               <Card>
                 <CardHeader>
-                  <CardTitle>🔒 Signal</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <CategoryIcon icon="Lock" size="sm" /> Signal
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">Requires signal-cli setup.</p>
@@ -893,7 +903,9 @@ SLACK_APP_TOKEN=xapp-...`}
 
               <Card>
                 <CardHeader>
-                  <CardTitle>💬 iMessage</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <CategoryIcon icon="MessageCircle" size="sm" /> iMessage
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">macOS only, requires Messages sign-in.</p>
@@ -1067,7 +1079,7 @@ pnpm gateway:watch`}
             <Card className="border-2 border-red-500/50 bg-red-500/5 mb-6">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-red-600 dark:text-red-400">
-                  🔒 Important: DM Security
+                  <CategoryIcon icon="ShieldAlert" size="sm" /> Important: DM Security
                 </CardTitle>
               </CardHeader>
               <CardContent>
