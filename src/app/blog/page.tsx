@@ -53,7 +53,22 @@ export default function BlogPage() {
               name: "Avinash Sangle",
               url: "https://avinashsangle.com",
             },
-            blogPost: [],
+            blogPost: [
+              {
+                "@type": "BlogPosting",
+                headline: "Complete Guide to Clawdbot: Your Personal AI Assistant",
+                url: "https://avinashsangle.com/blog/clawdbot-guide",
+                datePublished: "2025-01-26",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
+                headline: "Complete Guide to Method CRM MCP Server",
+                url: "https://avinashsangle.com/blog/method-crm-mcp",
+                datePublished: "2025-01-15",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+            ],
           }),
         }}
       />
@@ -73,29 +88,79 @@ export default function BlogPage() {
       {/* Featured Article */}
       <section className="section section-alt">
         <div className="container-project">
-          <h2 className="section-title mb-8">Latest Articles</h2>
+          <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Building2" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Bot" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI & AUTOMATION</p>
-                <h3 className="text-2xl font-bold mb-4">Complete Guide to Method CRM MCP Server</h3>
+                <p className="text-accent font-semibold mb-2">AI ASSISTANT</p>
+                <h3 className="text-2xl font-bold mb-4">Complete Guide to Clawdbot: Your Personal AI Assistant 🦞</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Learn how to set up, configure, and use the Method CRM MCP Server to enable AI
-                  assistants like Claude to interact with your CRM data through natural language
-                  commands.
+                  Step-by-step guide to install and configure Clawdbot—the open-source personal AI 
+                  assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack, 
+                  Signal & iMessage. Self-hosted with persistent memory.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 15, 2025</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 26, 2025</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/method-crm-mcp">Read Article →</Link>
+                  <Link href="/blog/clawdbot-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
           </Card>
+        </div>
+      </section>
+
+      {/* All Articles */}
+      <section className="section">
+        <div className="container-project">
+          <h2 className="section-title mb-8">All Articles</h2>
+          <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Bot" size="lg" animation="pulse" />
+                <CardTitle>Complete Guide to Clawdbot</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Set up your own personal AI assistant that works on WhatsApp, Telegram, Discord, 
+                  and more. Self-hosted with persistent memory and proactive notifications.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jan 26, 2025</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/clawdbot-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Building2" size="lg" animation="pulse" />
+                <CardTitle>Complete Guide to Method CRM MCP Server</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Learn how to set up and use the Method CRM MCP Server to enable AI assistants 
+                  like Claude to interact with your CRM data through natural language.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jan 15, 2025</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/method-crm-mcp" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
