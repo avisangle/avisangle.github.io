@@ -70,7 +70,7 @@ export default function MethodCRMMCPBlogPage() {
       {/* Article Header */}
       <section className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <p className="text-accent font-semibold mb-4">AI & AUTOMATION</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Complete Guide to Method CRM MCP Server: Enable AI to Manage Your CRM
@@ -94,7 +94,7 @@ export default function MethodCRMMCPBlogPage() {
       {/* Table of Contents */}
       <section className="section-alt py-8">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <Card>
               <CardHeader>
                 <CardTitle>📑 Table of Contents</CardTitle>
@@ -146,7 +146,7 @@ export default function MethodCRMMCPBlogPage() {
       {/* Introduction */}
       <section id="introduction" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">What is Method CRM MCP Server?</h2>
             <p className="text-lg leading-relaxed mb-6">
               The <strong>Method CRM MCP Server</strong> is a production-ready implementation of the
@@ -183,7 +183,7 @@ export default function MethodCRMMCPBlogPage() {
       {/* Prerequisites */}
       <section id="prerequisites" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Prerequisites</h2>
             <p className="text-lg leading-relaxed mb-6">
               Before getting started, ensure you have the following:
@@ -247,7 +247,7 @@ export default function MethodCRMMCPBlogPage() {
       {/* Installation */}
       <section id="installation" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Installation & Setup</h2>
 
             <h3 className="text-xl font-bold mb-4">Step 1: Clone the Repository</h3>
@@ -301,7 +301,7 @@ python -m method_crm_mcp`}
       {/* Claude Desktop Configuration */}
       <section id="claude-desktop" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Claude Desktop Configuration</h2>
             <p className="text-lg leading-relaxed mb-6">
               To use the Method CRM MCP Server with Claude Desktop, add the server configuration to
@@ -341,7 +341,7 @@ python -m method_crm_mcp`}
       {/* Features */}
       <section id="features" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Features & Available Tools</h2>
             <p className="text-lg leading-relaxed mb-8">
               The Method CRM MCP Server provides <strong>20 comprehensive tools</strong> organized
@@ -451,7 +451,7 @@ python -m method_crm_mcp`}
       {/* Usage Examples */}
       <section id="usage-examples" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Usage Examples</h2>
             <p className="text-lg leading-relaxed mb-8">
               Once configured, you can interact with Method CRM using natural language:
@@ -511,7 +511,7 @@ python -m method_crm_mcp`}
       {/* Best Practices */}
       <section id="best-practices" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Best Practices</h2>
 
             <div className="grid-2 mb-8">

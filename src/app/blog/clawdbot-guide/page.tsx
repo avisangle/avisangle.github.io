@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
@@ -324,7 +325,7 @@ export default function ClawdbotGuideBlogPage() {
       {/* Article Header */}
       <section className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <p className="text-accent font-semibold mb-4">AI ASSISTANT</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Complete Guide to Clawdbot: Your Personal AI Assistant for Any Platform 🦞
@@ -354,7 +355,7 @@ export default function ClawdbotGuideBlogPage() {
       {/* Table of Contents */}
       <section className="section-alt py-8">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <Card>
               <CardHeader>
                 <CardTitle>📑 Table of Contents</CardTitle>
@@ -421,7 +422,7 @@ export default function ClawdbotGuideBlogPage() {
       {/* Introduction */}
       <section id="introduction" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">What is Clawdbot?</h2>
             <p className="text-lg leading-relaxed mb-6">
               <strong>Clawdbot</strong> is a personal AI assistant that you run on your own devices. 
@@ -470,7 +471,7 @@ export default function ClawdbotGuideBlogPage() {
       {/* Why Clawdbot */}
       <section id="why-clawdbot" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Why Choose Clawdbot?</h2>
 
             <div className="grid-2 mb-8">
@@ -549,7 +550,7 @@ export default function ClawdbotGuideBlogPage() {
       {/* Prerequisites */}
       <section id="prerequisites" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Prerequisites & Requirements</h2>
 
             <div className="grid-2 mb-8">
@@ -623,7 +624,7 @@ export default function ClawdbotGuideBlogPage() {
       {/* Installation */}
       <section id="installation" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Installation Guide</h2>
             <p className="text-lg leading-relaxed mb-6">
               The recommended approach is to use the CLI onboarding wizard, which sets up everything 
@@ -703,7 +704,7 @@ clawdbot health`}
       {/* Features */}
       <section id="features" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Key Features & Capabilities</h2>
 
             <div className="grid-2 mb-6">
@@ -812,7 +813,7 @@ clawdbot health`}
       {/* Supported Channels */}
       <section id="channels" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Supported Channels</h2>
 
             <div className="grid-3 mb-8">
@@ -906,7 +907,7 @@ SLACK_APP_TOKEN=xapp-...`}
       {/* Getting Started */}
       <section id="getting-started" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Getting Started: Your First Chat</h2>
 
             <h3 className="text-xl font-bold mb-4">1. Pair a Channel (WhatsApp Example)</h3>
@@ -985,7 +986,7 @@ clawdbot agent --message "What can you help me with?" --thinking high`}
       {/* Advanced Usage */}
       <section id="advanced-usage" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Advanced Usage & Configuration</h2>
 
             <h3 className="text-xl font-bold mb-4">Configuration File</h3>
@@ -1060,7 +1061,7 @@ pnpm gateway:watch`}
       {/* Security */}
       <section id="security" className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Security & Best Practices</h2>
 
             <Card className="border-2 border-red-500/50 bg-red-500/5 mb-6">
@@ -1143,118 +1144,106 @@ pnpm gateway:watch`}
       {/* FAQ Section */}
       <section id="faq" className="section section-alt">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
 
-            <div className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">What is Clawdbot?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Clawdbot is an open-source personal AI assistant that you run on your own devices. 
-                    It connects to messaging apps like WhatsApp, Telegram, Discord, Slack, Signal, and 
-                    iMessage, providing a personal AI assistant with persistent memory, proactive 
-                    notifications, and browser automation capabilities. It has over 31,000 GitHub stars 
-                    and is actively maintained by Peter Steinberger and the community.
-                  </p>
-                </CardContent>
-              </Card>
+            <Card>
+              <CardContent className="pt-6">
+                <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="text-left font-semibold">What is Clawdbot?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Clawdbot is an open-source personal AI assistant that you run on your own devices. 
+                        It connects to messaging apps like WhatsApp, Telegram, Discord, Slack, Signal, and 
+                        iMessage, providing a personal AI assistant with persistent memory, proactive 
+                        notifications, and browser automation capabilities. It has over 31,000 GitHub stars 
+                        and is actively maintained by Peter Steinberger and the community.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">How do I install Clawdbot?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Install Clawdbot by running: <code className="bg-muted px-1 rounded">curl -fsSL https://clawd.bot/install.sh | bash</code> (or{" "}
-                    <code className="bg-muted px-1 rounded">npm install -g clawdbot@latest</code>). 
-                    Then run <code className="bg-muted px-1 rounded">clawdbot onboard --install-daemon</code> to 
-                    configure the gateway, authentication, and messaging channels. Requires Node.js 22 or higher.
-                  </p>
-                </CardContent>
-              </Card>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="text-left font-semibold">How do I install Clawdbot?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Install Clawdbot by running: <code className="bg-muted px-1 rounded">curl -fsSL https://clawd.bot/install.sh | bash</code> (or{" "}
+                        <code className="bg-muted px-1 rounded">npm install -g clawdbot@latest</code>). 
+                        Then run <code className="bg-muted px-1 rounded">clawdbot onboard --install-daemon</code> to 
+                        configure the gateway, authentication, and messaging channels. Requires Node.js 22 or higher.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">What messaging apps does Clawdbot support?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Clawdbot supports WhatsApp, Telegram, Discord, Slack, Signal, iMessage (macOS), 
-                    Microsoft Teams, Google Chat, Matrix, BlueBubbles, Zalo, and WebChat. It can work 
-                    in both DMs and group chats.
-                  </p>
-                </CardContent>
-              </Card>
+                  <AccordionItem value="item-3">
+                    <AccordionTrigger className="text-left font-semibold">What messaging apps does Clawdbot support?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Clawdbot supports WhatsApp, Telegram, Discord, Slack, Signal, iMessage (macOS), 
+                        Microsoft Teams, Google Chat, Matrix, BlueBubbles, Zalo, and WebChat. It can work 
+                        in both DMs and group chats.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Is Clawdbot free to use?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Clawdbot itself is free and open-source (MIT license). Costs come from: 1) Hosting—free 
-                    if running locally, or $5-50/month for a VPS, and 2) AI provider access—either a 
-                    Claude/OpenAI subscription or API usage costs.
-                  </p>
-                </CardContent>
-              </Card>
+                  <AccordionItem value="item-4">
+                    <AccordionTrigger className="text-left font-semibold">Is Clawdbot free to use?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Clawdbot itself is free and open-source (MIT license). Costs come from: 1) Hosting—free 
+                        if running locally, or $5-50/month for a VPS, and 2) AI provider access—either a 
+                        Claude/OpenAI subscription or API usage costs.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Do I need to be technical to set up Clawdbot?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    You don&apos;t need to be a developer, but you should be comfortable running commands 
-                    in a terminal. The onboarding wizard (<code className="bg-muted px-1 rounded">clawdbot onboard</code>) 
-                    guides you through the entire setup process step by step.
-                  </p>
-                </CardContent>
-              </Card>
+                  <AccordionItem value="item-5">
+                    <AccordionTrigger className="text-left font-semibold">Do I need to be technical to set up Clawdbot?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        You don&apos;t need to be a developer, but you should be comfortable running commands 
+                        in a terminal. The onboarding wizard (<code className="bg-muted px-1 rounded">clawdbot onboard</code>) 
+                        guides you through the entire setup process step by step.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Can Clawdbot run 24/7?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Yes, if you host Clawdbot on an always-on machine like a VPS, Mac mini, or 
-                    Raspberry Pi. This enables proactive features like scheduled reminders, briefings, 
-                    and automated tasks even when your personal computer is off.
-                  </p>
-                </CardContent>
-              </Card>
+                  <AccordionItem value="item-6">
+                    <AccordionTrigger className="text-left font-semibold">Can Clawdbot run 24/7?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Yes, if you host Clawdbot on an always-on machine like a VPS, Mac mini, or 
+                        Raspberry Pi. This enables proactive features like scheduled reminders, briefings, 
+                        and automated tasks even when your personal computer is off.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">What makes Clawdbot different from ChatGPT or Claude?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Unlike ChatGPT or Claude which are chat interfaces you visit, Clawdbot is a 
-                    self-hosted orchestrator that brings AI into your existing messaging apps. It 
-                    offers persistent memory across sessions, proactive notifications, browser 
-                    automation, and full control over your data since it runs on your own devices.
-                  </p>
-                </CardContent>
-              </Card>
+                  <AccordionItem value="item-7">
+                    <AccordionTrigger className="text-left font-semibold">What makes Clawdbot different from ChatGPT or Claude?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Unlike ChatGPT or Claude which are chat interfaces you visit, Clawdbot is a 
+                        self-hosted orchestrator that brings AI into your existing messaging apps. It 
+                        offers persistent memory across sessions, proactive notifications, browser 
+                        automation, and full control over your data since it runs on your own devices.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">What are Clawdbot&apos;s system requirements?</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Clawdbot requires Node.js 22 or higher. It runs on macOS, Linux, or Windows 
-                    (WSL2 strongly recommended for Windows). For AI access, you need either an 
-                    Anthropic API key/Claude subscription or OpenAI/Codex subscription.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+                  <AccordionItem value="item-8">
+                    <AccordionTrigger className="text-left font-semibold">What are Clawdbot&apos;s system requirements?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Clawdbot requires Node.js 22 or higher. It runs on macOS, Linux, or Windows 
+                        (WSL2 strongly recommended for Windows). For AI access, you need either an 
+                        Anthropic API key/Claude subscription or OpenAI/Codex subscription.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -1262,7 +1251,7 @@ pnpm gateway:watch`}
       {/* CTA Section */}
       <section className="section">
         <div className="container-project">
-          <div className="container-content">
+          <div>
             <Card className="border-2 border-primary">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
