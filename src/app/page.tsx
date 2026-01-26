@@ -355,10 +355,8 @@ export default function Home() {
               </CardContent>
               <CardFooter>
                 <Link
-                  href="https://blog.avinashsangle.com/method-crm-mcp"
+                  href="/blog/method-crm-mcp"
                   className="project-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Read Article →
                 </Link>
@@ -404,7 +402,7 @@ export default function Home() {
 
           <div className="text-center mt-8">
             <Button variant="outline" asChild>
-              <Link href="https://blog.avinashsangle.com" target="_blank" rel="noopener noreferrer">
+              <Link href="/blog">
                 View All Articles →
               </Link>
             </Button>

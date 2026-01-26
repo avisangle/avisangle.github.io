@@ -110,13 +110,12 @@ export function CarouselShowcase() {
             align: "start",
             loop: true,
           }}
-          className="w-full px-4"
+          className="w-full"
         >
-          <CarouselContent className="-ml-6">
+          <CarouselContent className="-ml-4">
             {mockProjects.map((project) => (
-              <CarouselItem key={project.id} className="pl-6 md:basis-1/2 lg:basis-1/3">
-                <div className="px-2">
-                  <Card className="card-hover h-full flex flex-col">
+              <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <Card className="card-hover h-full flex flex-col">
                   <CardHeader>
                     <CategoryIcon icon={project.icon} size="xl" animation="pulse" variant="square" />
                     <Badge variant="secondary" className="w-fit mb-2">
@@ -138,7 +137,6 @@ export function CarouselShowcase() {
                     </Badge>
                   </CardFooter>
                 </Card>
-                </div>
               </CarouselItem>
             ))}
           </CarouselContent>

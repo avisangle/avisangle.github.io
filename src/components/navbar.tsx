@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
 
-const navLinks = [
+const navLinks: { name: string; href: string; external?: boolean }[] = [
   { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   { name: "Projects", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
-  { name: "Blog", href: "https://blog.avinashsangle.com", external: true },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/#contact" },
 ]
 

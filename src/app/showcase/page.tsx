@@ -47,7 +47,7 @@ export default function ShowcasePage() {
       <section className="section section-alt">
         <div className="container-project">
           <Tabs defaultValue="carousel" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 h-auto mb-8">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 h-auto mb-10">
               <TabsTrigger value="carousel" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                 Carousel ⭐
               </TabsTrigger>
