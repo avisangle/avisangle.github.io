@@ -11,9 +11,9 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Complete Guide to Clawdbot: Setup Your Personal AI Assistant (2025)",
+  title: "Clawdbot Setup Guide: Your Personal AI Assistant 2026",
   description:
-    "Step-by-step guide to install and configure Clawdbot—the open-source personal AI assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack, Signal & iMessage. Self-hosted with persistent memory.",
+    "Install Clawdbot in minutes—open-source AI assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack & more.",
   keywords: [
     "Clawdbot",
     "Clawdbot setup",
@@ -40,14 +40,14 @@ export const metadata: Metadata = {
   creator: "Avinash Sangle",
   publisher: "Avinash Sangle",
   openGraph: {
-    title: "Complete Guide to Clawdbot: Setup Your Personal AI Assistant (2025)",
+    title: "Clawdbot Setup Guide: Your Personal AI Assistant 2026",
     description:
-      "Install Clawdbot in minutes—the self-hosted AI assistant that works on WhatsApp, Telegram, Discord & more. 31k+ GitHub stars. Persistent memory. Proactive notifications.",
+      "Install Clawdbot in minutes—open-source AI assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack & more.",
     url: "https://avinashsangle.com/blog/clawdbot-guide",
     siteName: "Avinash Sangle",
     type: "article",
-    publishedTime: "2025-01-26T00:00:00.000Z",
-    modifiedTime: "2025-01-26T00:00:00.000Z",
+    publishedTime: "2026-01-26T00:00:00.000Z",
+    modifiedTime: "2026-01-26T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Complete Guide to Clawdbot: Setup Your Personal AI Assistant",
+    title: "Clawdbot Setup Guide: Your Personal AI Assistant 2026",
     description:
-      "Step-by-step guide to install Clawdbot—the open-source AI assistant for WhatsApp, Telegram, Discord & more. Self-hosted with persistent memory.",
+      "Install Clawdbot in minutes—open-source AI assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack & more.",
     creator: "@AvinashSangle",
     images: ["https://avinashsangle.com/og-clawdbot-guide.png"],
   },
@@ -92,9 +92,9 @@ export default function ClawdbotGuideBlogPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "TechArticle",
-            headline: "Complete Guide to Clawdbot: Setup Your Personal AI Assistant (2025)",
+            headline: "Clawdbot Setup Guide: Your Personal AI Assistant 2026",
             description:
-              "Step-by-step guide to install and configure Clawdbot—the open-source personal AI assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack, Signal & iMessage.",
+              "Install Clawdbot in minutes—open-source AI assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack & more.",
             image: "https://avinashsangle.com/og-clawdbot-guide.png",
             author: {
               "@type": "Person",
@@ -106,8 +106,8 @@ export default function ClawdbotGuideBlogPage() {
               name: "Avinash Sangle",
               url: "https://avinashsangle.com",
             },
-            datePublished: "2025-01-26",
-            dateModified: "2025-01-26",
+            datePublished: "2026-01-26",
+            dateModified: "2026-01-26",
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": "https://avinashsangle.com/blog/clawdbot-guide",
@@ -328,7 +328,7 @@ export default function ClawdbotGuideBlogPage() {
           <div>
             <p className="text-accent font-semibold mb-4">AI ASSISTANT</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Complete Guide to Clawdbot: Your Personal AI Assistant for Any Platform 🦞
+              Clawdbot Setup Guide: Your Personal AI Assistant for Any Platform 🦞
             </h1>
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
               Clawdbot is a personal AI assistant you run on your own devices. It answers you on 
@@ -337,7 +337,7 @@ export default function ClawdbotGuideBlogPage() {
             </p>
             <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-8">
               <span className="flex items-center gap-1">
-                <CategoryIcon icon="Calendar" size="sm" /> January 26, 2025
+                <CategoryIcon icon="Calendar" size="sm" /> January 26, 2026
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
