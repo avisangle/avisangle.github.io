@@ -3,11 +3,12 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { SectionHeader } from "@/components/section-header"
-import { ArrowRight, ExternalLink, Sparkles, Bot, Cloud, Wrench, Database, Code, Brain, Settings, Mail } from "lucide-react"
+import { ArrowRight, ExternalLink, Sparkles, Bot, Cloud, Wrench, Database, Code, Brain, Settings } from "lucide-react"
 import Link from "next/link"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import { TechBadge } from "@/components/ui/tech-badge"
 import { getFeaturedProjects } from "@/data/projects"
+import { ContactForm } from "@/components/contact-form"
 
 export default function Home() {
   return (
@@ -468,13 +469,10 @@ export default function Home() {
             title="Let's Connect!"
             subtitle="Feel free to reach out for collaborations, opportunities, or just a friendly chat"
           />
+          <div className="mt-8">
+            <ContactForm />
+          </div>
           <div className="flex justify-center gap-4 flex-wrap mt-8">
-            <Button size="lg" asChild>
-              <Link href="mailto:aavi.sangle@gmail.com" className="flex items-center gap-2">
-                <Mail className="h-5 w-5" />
-                Email Me
-              </Link>
-            </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="https://github.com/avisangle" target="_blank" rel="noopener noreferrer">
                 GitHub Profile
