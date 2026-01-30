@@ -67,7 +67,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'LangGraph', 'FastAPI', 'Gemini', 'PostgreSQL', 'Next.js'],
     tags: ['AI', 'Reddit', 'LangGraph', 'Python', 'Automation', 'Compliance', 'HITL', 'FastAPI'],
     route: '/projects/reddit-agent',
-    githubUrl: '', // To be filled with actual GitHub URL if public
+    githubUrl: 'https://github.com/avisangle/reddit_agent',
     featured: true,
     status: 'active',
     date: '2026-01-30',
