@@ -57,6 +57,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'reddit-agent',
+    title: 'Reddit Comment Engagement Agent',
+    description: 'Compliance-first, anti-fingerprint Reddit engagement agent with AI-powered quality scoring, human-in-the-loop approval, and LangGraph workflow orchestration. Features shadowban detection, historical learning, and comprehensive safety controls.',
+    shortDescription: 'AI-powered Reddit engagement with HITL approval and safety controls',
+    category: 'AI Automation',
+    badge: 'Production Ready',
+    icon: 'MessageSquare',
+    technologies: ['Python', 'LangGraph', 'FastAPI', 'Gemini', 'PostgreSQL', 'Next.js'],
+    tags: ['AI', 'Reddit', 'LangGraph', 'Python', 'Automation', 'Compliance', 'HITL', 'FastAPI'],
+    route: '/projects/reddit-agent',
+    githubUrl: '', // To be filled with actual GitHub URL if public
+    featured: true,
+    status: 'active',
+    date: '2026-01-30',
+    order: 0,
+    year: 2026
+  },
+  {
     id: 'social-media-auto-poster',
     title: 'Social Media Auto-Poster',
     description: 'AI-powered social media management platform with automated posting and multi-platform support.',
