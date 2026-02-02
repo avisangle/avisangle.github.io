@@ -7,73 +7,79 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/blog</loc>
-    <lastmod>2026-01-24</lastmod>
+    <loc>https://avinashsangle.com/blog/</loc>
+    <lastmod>2026-02-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/blog/method-crm-mcp</loc>
+    <loc>https://avinashsangle.com/blog/method-crm-mcp/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/blog/clawdbot-guide</loc>
+    <loc>https://avinashsangle.com/blog/clawdbot-guide/</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/reddit-agent</loc>
+    <loc>https://avinashsangle.com/projects/</loc>
+    <lastmod>2026-02-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avinashsangle.com/projects/reddit-agent/</loc>
     <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/social-media-auto-poster</loc>
+    <loc>https://avinashsangle.com/projects/social-media-auto-poster/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/jenkins-mcp</loc>
+    <loc>https://avinashsangle.com/projects/jenkins-mcp/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/jenkins-chatbot</loc>
+    <loc>https://avinashsangle.com/projects/jenkins-chatbot/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/calculator-server</loc>
+    <loc>https://avinashsangle.com/projects/calculator-server/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/wp-mcp</loc>
+    <loc>https://avinashsangle.com/projects/wp-mcp/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/aws-ec2-agent</loc>
+    <loc>https://avinashsangle.com/projects/aws-ec2-agent/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/twitter-oauth</loc>
+    <loc>https://avinashsangle.com/projects/twitter-oauth/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://avinashsangle.com/projects/method-crm-mcp</loc>
+    <loc>https://avinashsangle.com/projects/method-crm-mcp/</loc>
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

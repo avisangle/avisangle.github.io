@@ -66,6 +66,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  metadataBase: new URL("https://avinashsangle.com"),
+  alternates: {
+    canonical: "/",
+  },
 }
 
 export default function RootLayout({
