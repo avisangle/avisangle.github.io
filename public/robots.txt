@@ -1,4 +1,17 @@
+# robots.txt for avinashsangle.com
+
 User-agent: *
 Allow: /
 
+# Sitemaps
 Sitemap: https://avinashsangle.com/sitemap.xml
+
+# Disallow crawling of API routes (if any in future)
+Disallow: /api/
+
+# Disallow crawling of Next.js internals
+Disallow: /_next/static/
+Disallow: /_next/image/
+
+# Block Cloudflare email protection URLs
+Disallow: /cdn-cgi/

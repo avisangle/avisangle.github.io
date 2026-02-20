@@ -1,0 +1,39 @@
+# Serena Project Configuration for github_bio
+project_name: "github_bio"
+
+# Next.js 16 project uses TypeScript/JavaScript
+languages:
+- typescript
+
+# Standard UTF-8 encoding
+encoding: "utf-8"
+
+# Use .gitignore to ignore files
+ignore_all_files_in_gitignore: true
+
+# Additional paths to ignore (none needed beyond .gitignore)
+ignored_paths: []
+
+# Project is editable
+read_only: false
+
+# Use default tools (no exclusions)
+excluded_tools: []
+
+# No optional tools needed
+included_optional_tools: []
+
+# Use default tool set
+fixed_tools: []
+
+# Use default base modes
+base_modes:
+
+# Use default modes
+default_modes:
+
+# No initial prompt needed (CLAUDE.md files handle this)
+initial_prompt: ""
+
+# Use default symbol info budget
+symbol_info_budget:

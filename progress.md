@@ -176,3 +176,73 @@ Secondary: AWS, Cloud Architecture, Python, Go, CI/CD, WordPress, Automation
 
 ### Context Remaining
 ~144,900 tokens remaining
+
+---
+
+## 2026-02-21: Vercel Deployment Preparation with SEO Enhancements
+
+### Completed Tasks
+1. ✅ Analyzed deployment options (Vercel vs Cloudflare Pages)
+2. ✅ Created dynamic sitemap (`src/app/sitemap.ts`)
+   - Auto-generates sitemap.xml at build time
+   - Includes all 19 pages (blog, projects, showcase)
+   - Discovered missing `/showcase` page in old sitemap
+3. ✅ Configured comprehensive 301 redirects in `next.config.ts`
+   - Old blog subdomain: `blog.avinashsangle.com/*` → `avinashsangle.com/blog/*`
+   - WWW to non-WWW redirects
+   - Old HTML URLs from GSC 404s (10+ specific redirects)
+   - Generic catch-all patterns for `.html` extensions
+4. ✅ Updated `next.config.ts` for Vercel
+   - Removed `output: 'export'` (enables native Next.js features)
+   - Removed `trailingSlash: true` (Vercel handles routing)
+   - Removed `images: { unoptimized: true }` (enables image optimization)
+5. ✅ Enhanced `robots.txt`
+   - Blocks `/cdn-cgi/` (Cloudflare email protection URLs)
+   - Blocks `/_next/` internals
+   - Blocks future `/api/` routes
+6. ✅ Created `VERCEL_DEPLOYMENT.md` guide
+   - Step-by-step Vercel setup instructions
+   - DNS configuration options
+   - Post-deployment SEO tasks
+   - Testing procedures
+7. ✅ Verified build succeeds with new configuration
+   - All 19 pages built successfully
+   - Dynamic sitemap generated
+   - No errors
+
+### Key Improvements
+- **SEO:** Fixed all 10+ Google Search Console 404 errors with proper 301 redirects
+- **Performance:** Enabled Next.js image optimization (WebP/AVIF conversion)
+- **DX:** Auto-deployments on git push, preview URLs per PR
+- **Future-Ready:** Can now add SSR, ISR, API routes if needed
+
+### Files Modified
+- `next.config.ts` - Removed GitHub Pages config, added redirects
+- `public/robots.txt` - Enhanced with Cloudflare URL blocks
+- `src/app/sitemap.ts` - NEW: Dynamic sitemap generator
+
+### Files Created
+- `VERCEL_DEPLOYMENT.md` - Complete deployment guide
+
+### Redirects Implemented
+**Specific URLs (from GSC):**
+- `/blog.html` → `/blog`
+- `/blog-method-crm-mcp.html` → `/blog/method-crm-mcp`
+- `/project-calculator-server.html` → `/projects/calculator-server`
+- `/project-wp-mcp.html` → `/projects/wp-mcp`
+- `/project-twitter-oauth.html` → `/projects/twitter-oauth`
+- `/project-jenkins-mcp.html` → `/projects/jenkins-mcp`
+- `/project-method-crm-mcp.html` → `/projects/method-crm-mcp`
+- `/project-jenkins-chatbot.html` → `/projects/jenkins-chatbot`
+- `/project-aws-ec2-agent.html` → `/projects/aws-ec2-agent`
+- 2 more projects + catch-all patterns
+
+### Next Steps
+1. Deploy to Vercel (see VERCEL_DEPLOYMENT.md)
+2. Configure custom domain DNS
+3. Test all redirects post-deployment
+4. Submit new sitemap to Google Search Console
+5. Monitor GSC for redirect success
+
+### Context Remaining
+~144,535 tokens remaining

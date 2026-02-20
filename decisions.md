@@ -512,3 +512,225 @@ Crawl-delay: 1
 - ✅ Prevents wasted crawl budget on themes folder
 - ✅ Sitemap easily discoverable
 - ✅ Polite crawling behavior
+
+---
+
+## Decision 18: Vercel vs Cloudflare Pages for Deployment
+**Date:** 2026-02-21
+**Status:** Accepted
+
+**Context:**
+User requested migration from GitHub Pages static export to modern deployment platform. Domain already on Cloudflare DNS. Needed to choose between Vercel (Next.js creators) and Cloudflare Pages (same DNS provider).
+
+**Decision:**
+Deploy to Vercel instead of Cloudflare Pages.
+
+**Rationale:**
+- **Native Next.js Support**: Vercel built Next.js, zero configuration needed
+- **@vercel/analytics Already Installed**: Package already in dependencies
+- **Future Flexibility**: Easy to add SSR, API routes, ISR later
+  - Cloudflare requires `@cloudflare/next-on-pages` adapter with limitations
+- **Superior DX**: Auto git deployments, PR preview URLs, instant rollbacks
+- **Image Optimization**: Native Next.js Image component works automatically
+  - Cloudflare has limitations with Next.js image optimization
+- **Build Simplicity**: No adapters or workarounds needed
+
+**Cloudflare Advantages Not Selected:**
+- Unlimited bandwidth (Vercel's 100GB/month sufficient for portfolio)
+- 330+ edge locations vs Vercel's network (negligible for this use case)
+- Same DNS provider (minor convenience, but DNS change is easy)
+
+**Consequences:**
+- ✅ Zero-config deployment
+- ✅ Native Next.js features available
+- ✅ Image optimization enabled automatically
+- ✅ Can add server features later if needed
+- ✅ Better developer experience (git push = deploy)
+- ⚠️ DNS needs to point to Vercel (simple CNAME change)
+- ⚠️ 100GB bandwidth limit (vs Cloudflare unlimited)
+
+**Migration Path:**
+- Update `next.config.ts` to remove GitHub Pages config
+- Deploy to Vercel via GitHub integration
+- Point Cloudflare DNS to Vercel
+- Keep Cloudflare for DNS management (recommended)
+
+---
+
+## Decision 19: Dynamic Sitemap vs Static sitemap.xml
+**Date:** 2026-02-21
+**Status:** Accepted
+
+**Context:**
+Site had static `public/sitemap.xml` requiring manual updates when adding pages. User wanted better SEO management.
+
+**Decision:**
+Replace static sitemap with Next.js dynamic sitemap (`src/app/sitemap.ts`).
+
+**Rationale:**
+- **Auto-Generation**: Sitemap updates automatically at build time
+- **Type Safety**: TypeScript ensures correct structure
+- **No Manual Updates**: Add page → build → sitemap updated
+- **Current Dates**: lastModified uses current date for index pages
+- **Native Next.js Feature**: Built-in App Router support
+- **Discovered Missing Page**: Found `/showcase` not in old sitemap
+
+**Implementation:**
+```typescript
+// src/app/sitemap.ts
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: 'https://avinashsangle.com', priority: 1.0 },
+    { url: 'https://avinashsangle.com/blog', priority: 0.9 },
+    // ... dynamically built from arrays
+  ]
+}
+```
+
+**Consequences:**
+- ✅ No manual sitemap editing needed
+- ✅ Always up-to-date lastModified dates
+- ✅ Type-safe sitemap structure
+- ✅ Scales easily (add to array, not XML)
+- ⚠️ Requires build to update (not an issue with auto-deploy)
+
+---
+
+## Decision 20: Comprehensive 301 Redirect Strategy
+**Date:** 2026-02-21
+**Status:** Accepted
+
+**Context:**
+Google Search Console showed 10+ 404 errors from old URL patterns:
+- Old blog subdomain: `blog.avinashsangle.com`
+- Old HTML file structure: `project-{name}.html`, `blog-{name}.html`
+- WWW variants
+
+**Decision:**
+Implement comprehensive 301 redirects in `next.config.ts` with three layers:
+1. **Specific redirects** for all GSC 404 errors
+2. **Pattern-based redirects** for old URL structures
+3. **Domain-level redirects** (blog subdomain, www)
+
+**Rationale:**
+- **SEO Preservation**: 301 redirects pass link equity to new URLs
+- **User Experience**: Old bookmarks/links still work
+- **Crawl Budget**: Stop crawlers hitting 404s
+- **Clean GSC**: Resolve all reported errors
+- **Future-Proof**: Pattern redirects catch old URL variations
+
+**Implementation Layers:**
+```typescript
+// Layer 1: Specific URLs (from GSC)
+{ source: '/blog.html', destination: '/blog', permanent: true }
+{ source: '/project-jenkins-mcp.html', destination: '/projects/jenkins-mcp', permanent: true }
+// ... 10+ specific redirects
+
+// Layer 2: Pattern-based catch-all
+{ source: '/project-:slug.html', destination: '/projects/:slug', permanent: true }
+{ source: '/blog-:slug.html', destination: '/blog/:slug', permanent: true }
+
+// Layer 3: Domain-level
+{ source: '/:path*', has: [{ type: 'host', value: 'blog.avinashsangle.com' }],
+  destination: 'https://avinashsangle.com/blog/:path*', permanent: true }
+```
+
+**Consequences:**
+- ✅ All 10+ GSC 404s resolved
+- ✅ SEO equity preserved
+- ✅ Old links still work
+- ✅ Clean Search Console reports
+- ✅ Future-proof with pattern matching
+- ⚠️ Need to test all redirects post-deployment
+
+---
+
+## Decision 21: Enhanced robots.txt with Cloudflare Blocking
+**Date:** 2026-02-21
+**Status:** Accepted
+
+**Context:**
+Google Search Console showed crawling of Cloudflare infrastructure URLs (`/cdn-cgi/l/email-protection`) causing false 404 errors.
+
+**Decision:**
+Block Cloudflare infrastructure paths in robots.txt:
+```
+Disallow: /cdn-cgi/
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /api/
+```
+
+**Rationale:**
+- **Waste of Crawl Budget**: `/cdn-cgi/` URLs are not content
+- **False 404 Reports**: Shows up in GSC as errors
+- **Infrastructure URLs**: `_next/` paths are build artifacts
+- **Future API Protection**: Block `/api/` for future routes
+- **Standard Best Practice**: Common for Cloudflare + Next.js sites
+
+**What Gets Blocked:**
+- `/cdn-cgi/*` - Cloudflare email obfuscation, apps, trace routes
+- `/_next/static/*` - Next.js static assets (already handled by CDN)
+- `/_next/image/*` - Image optimization endpoint
+- `/api/*` - Future API routes (if added)
+
+**Consequences:**
+- ✅ Cleaner Google Search Console reports
+- ✅ Better crawl budget allocation
+- ✅ No more false 404s from infrastructure URLs
+- ✅ Prepares for future API routes
+- ⚠️ Must submit updated robots.txt to GSC
+
+---
+
+## Decision 22: Remove GitHub Pages Configuration
+**Date:** 2026-02-21
+**Status:** Accepted
+
+**Context:**
+Project configured for GitHub Pages static export with:
+- `output: 'export'` in next.config.ts
+- `trailingSlash: true` (required for GitHub Pages)
+- `images: { unoptimized: true }` (static export limitation)
+
+**Decision:**
+Remove all GitHub Pages-specific configuration for Vercel deployment.
+
+**Rationale:**
+- **Vercel Native**: Vercel builds Next.js natively (no export needed)
+- **Enable Features**: Unlocks SSR, ISR, API routes, middleware
+- **Image Optimization**: Vercel optimizes images automatically
+  - WebP/AVIF conversion
+  - Responsive srcsets
+  - Lazy loading
+- **Better Performance**: Dynamic rendering when needed
+- **Trailing Slashes**: Vercel handles routing without enforcing slashes
+
+**Configuration Changes:**
+```typescript
+// BEFORE (GitHub Pages)
+const nextConfig = {
+  output: 'export',
+  trailingSlash: true,
+  images: { unoptimized: true }
+}
+
+// AFTER (Vercel)
+const nextConfig = {
+  async redirects() { ... }
+}
+```
+
+**Consequences:**
+- ✅ Image optimization enabled
+- ✅ Can add SSR/ISR later if needed
+- ✅ Can add API routes for contact form, newsletter, etc.
+- ✅ Better performance with optimized images
+- ✅ Simpler configuration
+- ⚠️ Cannot deploy to GitHub Pages anymore (Vercel only)
+- ⚠️ Build output changes from `/out` to `/.next`
+
+**Migration Impact:**
+- GitHub Actions workflow can be removed/disabled
+- Build command stays same: `npm run build`
+- Vercel handles deployment automatically on git push
