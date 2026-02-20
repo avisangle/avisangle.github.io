@@ -1,0 +1,59 @@
+{
+  "redirects": [
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog-method-crm-mcp.html",
+      "destination": "/blog/method-crm-mcp",
+      "permanent": true
+    },
+    {
+      "source": "/project-calculator-server.html",
+      "destination": "/projects/calculator-server",
+      "permanent": true
+    },
+    {
+      "source": "/project-wp-mcp.html",
+      "destination": "/projects/wp-mcp",
+      "permanent": true
+    },
+    {
+      "source": "/project-twitter-oauth.html",
+      "destination": "/projects/twitter-oauth",
+      "permanent": true
+    },
+    {
+      "source": "/project-jenkins-mcp.html",
+      "destination": "/projects/jenkins-mcp",
+      "permanent": true
+    },
+    {
+      "source": "/project-method-crm-mcp.html",
+      "destination": "/projects/method-crm-mcp",
+      "permanent": true
+    },
+    {
+      "source": "/project-jenkins-chatbot.html",
+      "destination": "/projects/jenkins-chatbot",
+      "permanent": true
+    },
+    {
+      "source": "/project-aws-ec2-agent.html",
+      "destination": "/projects/aws-ec2-agent",
+      "permanent": true
+    },
+    {
+      "source": "/project-social-media-auto-poster.html",
+      "destination": "/projects/social-media-auto-poster",
+      "permanent": true
+    },
+    {
+      "source": "/project-reddit-agent.html",
+      "destination": "/projects/reddit-agent",
+      "permanent": true
+    }
+  ]
+}
