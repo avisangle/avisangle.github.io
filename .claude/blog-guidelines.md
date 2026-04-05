@@ -23,6 +23,7 @@ This document defines the rules for creating blog posts on avinashsangle.com. Al
 
 ### Voice & Tone
 - First-person practitioner ("I use...", "In my workflow...")
+- **Never use em dash (—)**: it is a telltale AI writing signal not found on modern keyboards. Use a regular hyphen (-) or rewrite the sentence instead.
 - Opinionated but fair — share real experience, not marketing copy
 - Include specific numbers/stats when possible (build times, lines changed, time saved)
 - No emojis in content — use Lucide icons via CategoryIcon component

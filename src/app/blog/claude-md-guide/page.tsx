@@ -298,7 +298,7 @@ export default function ClaudeMdGuidePage() {
           <p className="text-lg leading-relaxed mb-8">
             A CLAUDE.md file is the single most impactful thing you can add to any project
             using Claude Code. It tells Claude how to build, test, and work with your
-            codebase — and when written well, it eliminates the repetitive corrections that
+            codebase - and when written well, it eliminates the repetitive corrections that
             slow down AI-assisted development. After months of iteration on my own production
             site, I have a system that works.
           </p>
@@ -318,15 +318,15 @@ export default function ClaudeMdGuidePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent font-bold mt-0.5">2.</span>
-                  <span>Lead with build commands and hard constraints — Claude reads these first and retains them best.</span>
+                  <span>Lead with build commands and hard constraints - Claude reads these first and retains them best.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent font-bold mt-0.5">3.</span>
-                  <span>Use positive instructions (&ldquo;use X&rdquo;) instead of negations (&ldquo;don&apos;t use Y&rdquo;) — Claude follows positive rules more reliably.</span>
+                  <span>Use positive instructions (&ldquo;use X&rdquo;) instead of negations (&ldquo;don&apos;t use Y&rdquo;) - Claude follows positive rules more reliably.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-accent font-bold mt-0.5">4.</span>
-                  <span>Add rules reactively — only when Claude makes the same mistake twice. Never front-load speculative rules.</span>
+                  <span>Add rules reactively - only when Claude makes the same mistake twice. Never front-load speculative rules.</span>
                 </li>
               </ul>
             </CardContent>
@@ -366,8 +366,8 @@ export default function ClaudeMdGuidePage() {
           <h2 className="text-3xl font-bold mb-6">What Is a CLAUDE.md File?</h2>
           <p className="text-lg leading-relaxed mb-6">
             CLAUDE.md is a Markdown file that provides project-specific instructions to Claude Code.
-            When you start a session, Claude reads every CLAUDE.md file it finds — from your global
-            config to your project root to nested subdirectories — and uses those instructions
+            When you start a session, Claude reads every CLAUDE.md file it finds - from your global
+            config to your project root to nested subdirectories - and uses those instructions
             as context for the entire conversation. Think of it as a README, but written specifically
             for your AI coding partner.
           </p>
@@ -376,7 +376,7 @@ export default function ClaudeMdGuidePage() {
             <Link href="https://blog.jetbrains.com/research/2026/04/" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
               JetBrains&apos; 2026 developer survey
             </Link>
-            , 40.8% of developers using AI agents use Claude Code — the most popular AI coding agent.
+            , 40.8% of developers using AI agents use Claude Code - the most popular AI coding agent.
             Yet many users never create a CLAUDE.md file, leaving significant productivity gains untapped.
           </p>
 
@@ -388,10 +388,10 @@ export default function ClaudeMdGuidePage() {
           <CodeBlock
             language="text"
             filename="Loading order (top = most general, bottom = most specific)"
-            code={`~/.claude/CLAUDE.md              # Global — your personal preferences across all projects
-/project-root/CLAUDE.md          # Project — shared team standards (commit to repo)
-/project-root/.claude/CLAUDE.md  # Project — alternative location
-/project-root/src/CLAUDE.md      # Subdirectory — scoped rules for a specific area`}
+            code={`~/.claude/CLAUDE.md              # Global - your personal preferences across all projects
+/project-root/CLAUDE.md          # Project - shared team standards (commit to repo)
+/project-root/.claude/CLAUDE.md  # Project - alternative location
+/project-root/src/CLAUDE.md      # Subdirectory - scoped rules for a specific area`}
           />
           <p className="text-muted-foreground mt-4">
             I use the global file for personal preferences (editor style, commit message format)
@@ -406,7 +406,7 @@ export default function ClaudeMdGuidePage() {
           <h2 className="text-3xl font-bold mb-6">The Anatomy of an Effective CLAUDE.md</h2>
           <p className="text-lg leading-relaxed mb-6">
             An effective CLAUDE.md has five essential sections, ordered by importance. Claude retains
-            content near the top and bottom of long files better than the middle — a well-documented
+            content near the top and bottom of long files better than the middle - a well-documented
             primacy/recency effect in LLMs. Place your most critical rules first.
           </p>
 
@@ -420,7 +420,7 @@ export default function ClaudeMdGuidePage() {
             <Card className="card-accent-left">
               <CardContent className="pt-6">
                 <h3 className="font-semibold text-lg mb-1">2. Build / Test / Lint Commands</h3>
-                <p className="text-muted-foreground">The exact commands to build and test the project. Claude runs these dozens of times per session — get them right first.</p>
+                <p className="text-muted-foreground">The exact commands to build and test the project. Claude runs these dozens of times per session - get them right first.</p>
               </CardContent>
             </Card>
             <Card className="card-accent-left">
@@ -456,13 +456,13 @@ export default function ClaudeMdGuidePage() {
             language="markdown"
             filename="CLAUDE.md"
             code={`# Project Overview
-Portfolio site — Next.js 16 static export + shadcn/ui.
+Portfolio site - Next.js 16 static export + shadcn/ui.
 
 ## Commands
 See @package.json for all scripts. Key ones:
-- \`npm run dev\`   — dev server on localhost:3000
-- \`npm run build\` — static export to ./out
-- \`npm run lint\`  — ESLint check
+- \`npm run dev\`   - dev server on localhost:3000
+- \`npm run build\` - static export to ./out
+- \`npm run lint\`  - ESLint check
 
 ## Architecture
 See @docs/architecture.md for full system design.
@@ -489,12 +489,12 @@ See @docs/git-instructions.md for branch strategy.`}
           <h3 className="text-xl font-semibold mb-4">The Project Overview and Commands</h3>
           <CodeBlock
             language="markdown"
-            filename="CLAUDE.md — Project header"
+            filename="CLAUDE.md - Project header"
             code={`# CLAUDE.md
 This file provides guidance to Claude Code when working with this repository.
 
 ## Project Overview
-Personal portfolio website — Next.js 16 static site with shadcn/ui,
+Personal portfolio website - Next.js 16 static site with shadcn/ui,
 deployed to GitHub Pages via GitHub Actions.
 
 ## Tech Stack
@@ -511,17 +511,17 @@ npm run lint   # ESLint
 \`\`\``}
           />
           <p className="text-muted-foreground mt-3 mb-8">
-            The tech stack section prevents Claude from suggesting incompatible patterns —
+            The tech stack section prevents Claude from suggesting incompatible patterns -
             like server-side rendering or API routes that would break the GitHub Pages deployment.
           </p>
 
           <h3 className="text-xl font-semibold mb-4">The Hard Constraints That Prevent Real Mistakes</h3>
           <CodeBlock
             language="markdown"
-            filename="CLAUDE.md — Critical architecture rules"
+            filename="CLAUDE.md - Critical architecture rules"
             code={`## Critical Architecture Rules
 
-### 1. Static Export — NO Server Features
+### 1. Static Export - NO Server Features
 **CRITICAL:** All pages must be statically exportable.
 No server-side rendering, API routes, or getServerSideProps.
 
@@ -530,7 +530,7 @@ next.config.ts must stay as:
   trailingSlash: true
   images: { unoptimized: true }
 
-### 2. shadcn/ui Components — DO NOT MODIFY
+### 2. shadcn/ui Components - DO NOT MODIFY
 **CRITICAL:** NEVER modify files in src/components/ui/
 These are installed via CLI and must stay pristine.
 
@@ -539,7 +539,7 @@ Style changes go in:
 - src/app/**/page.tsx       (Tailwind classes on elements)
 - src/components/navbar.tsx (layout components)
 
-### 3. Icons — Lucide Only, No Emojis
+### 3. Icons - Lucide Only, No Emojis
 Use CategoryIcon from @/components/icons/category-icon
 NEVER add emoji characters to any file`}
           />
@@ -555,7 +555,7 @@ NEVER add emoji characters to any file`}
             </CardContent>
           </Card>
 
-          <h3 className="text-xl font-semibold mb-4">Showing Patterns — More Effective Than Rules</h3>
+          <h3 className="text-xl font-semibold mb-4">Showing Patterns - More Effective Than Rules</h3>
           <p className="text-lg leading-relaxed mb-4">
             The most effective section in my CLAUDE.md is the page structure template. Rather than
             listing abstract rules, I show Claude exactly what a well-formed page looks like.
@@ -568,7 +568,7 @@ NEVER add emoji characters to any file`}
           </p>
           <CodeBlock
             language="markdown"
-            filename="CLAUDE.md — Page template pattern"
+            filename="CLAUDE.md - Page template pattern"
             code={`## Common Patterns
 
 ### New Blog Article Checklist
@@ -595,14 +595,14 @@ NEVER add emoji characters to any file`}
           <h2 className="text-3xl font-bold mb-6">CLAUDE.md for Next.js Projects: Stack-Specific Rules</h2>
           <p className="text-lg leading-relaxed mb-6">
             Next.js App Router introduces conventions that differ significantly from traditional React.
-            Generic Claude Code rules are not enough — you need stack-aware constraints. There is
+            Generic Claude Code rules are not enough - you need stack-aware constraints. There is
             currently only one public CLAUDE.md example for Next.js + shadcn/ui. Here is what I
             have learned works.
           </p>
 
           <CodeBlock
             language="markdown"
-            filename="CLAUDE.md — Next.js App Router section"
+            filename="CLAUDE.md - Next.js App Router section"
             code={`## Next.js App Router Conventions
 
 ### Routing Structure
@@ -642,7 +642,7 @@ Always use path aliases:
                 <Link href="https://nextjs.org/docs/app/guides/ai-agents" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">
                   official AI Agents guide
                 </Link>{" "}
-                that recommends CLAUDE.md for configuring AI coding tools — recognizing that
+                that recommends CLAUDE.md for configuring AI coding tools - recognizing that
                 framework-specific rules cannot be inferred generically.
               </p>
             </CardContent>
@@ -657,7 +657,7 @@ Always use path aliases:
           <p className="text-lg leading-relaxed mb-8">
             After iterating through dozens of CLAUDE.md versions and reading hundreds shared
             on r/ClaudeAI, these are the patterns that consistently cause problems. Files over
-            200 lines can consume 30-40K tokens at session start — real cost when paying per token
+            200 lines can consume 30-40K tokens at session start - real cost when paying per token
             on the API plan.
           </p>
 
@@ -669,7 +669,7 @@ Always use path aliases:
               </h3>
               <div className="grid-2">
                 <Card>
-                  <CardHeader><CardTitle className="text-base text-red-500">Bad — negations</CardTitle></CardHeader>
+                  <CardHeader><CardTitle className="text-base text-red-500">Bad - negations</CardTitle></CardHeader>
                   <CardContent>
                     <CodeBlock language="markdown" code={`Do NOT use semicolons.
 Do NOT add console.log statements.
@@ -677,7 +677,7 @@ Do NOT import from relative paths.`} />
                   </CardContent>
                 </Card>
                 <Card>
-                  <CardHeader><CardTitle className="text-base text-green-500">Good — positive instructions</CardTitle></CardHeader>
+                  <CardHeader><CardTitle className="text-base text-green-500">Good - positive instructions</CardTitle></CardHeader>
                   <CardContent>
                     <CodeBlock language="markdown" code={`Style: no-semicolon (Prettier enforces this).
 Logging: use logger from "@/lib/logger".
@@ -732,7 +732,7 @@ See @README.md for project setup and background.`} />
                 <Badge variant="destructive" className="mr-2">Mistake 4</Badge>
                 Conflicting Rules
               </h3>
-              <p className="text-muted-foreground">I once had &ldquo;use functional components only&rdquo; in one section and a class component in my code template. Claude alternated between both. Audit your CLAUDE.md for contradictions — they cause inconsistent, unpredictable behavior.</p>
+              <p className="text-muted-foreground">I once had &ldquo;use functional components only&rdquo; in one section and a class component in my code template. Claude alternated between both. Audit your CLAUDE.md for contradictions - they cause inconsistent, unpredictable behavior.</p>
             </div>
 
             <div>
@@ -751,7 +751,7 @@ See @README.md for project setup and background.`} />
                 <Badge variant="destructive" className="mr-2">Mistake 6</Badge>
                 Never Pruning Stale Rules
               </h3>
-              <p className="text-muted-foreground">Rules accumulate but rarely get removed. I deleted a rule about a deprecated API endpoint that had been gone for 3 months — consuming tokens for a constraint that no longer applied. Use <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">git blame CLAUDE.md</code> quarterly to identify rules past their useful life.</p>
+              <p className="text-muted-foreground">Rules accumulate but rarely get removed. I deleted a rule about a deprecated API endpoint that had been gone for 3 months - consuming tokens for a constraint that no longer applied. Use <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">git blame CLAUDE.md</code> quarterly to identify rules past their useful life.</p>
             </div>
 
             <div>
@@ -824,7 +824,7 @@ See @README.md for project setup and background.`} />
               <p className="font-semibold mb-2">My rule of thumb</p>
               <p className="text-muted-foreground">
                 If you find yourself writing &ldquo;CRITICAL&rdquo; or &ldquo;NEVER&rdquo; in CLAUDE.md, that rule
-                probably belongs in a hook instead. Hooks enforce requirements deterministically —
+                probably belongs in a hook instead. Hooks enforce requirements deterministically -
                 CLAUDE.md rules are guidelines Claude follows most of the time, not guarantees.
                 I use hooks for linting and security checks, CLAUDE.md for architecture guidance and patterns.
               </p>
@@ -840,7 +840,7 @@ See @README.md for project setup and background.`} />
           <p className="text-lg leading-relaxed mb-6">
             CLAUDE.md files rot. Rules that were essential 3 months ago may now be irrelevant, and
             gaps accumulate as the project evolves. Research shows that AI-cited content is 25.7%
-            fresher on average than traditional organic results — the same freshness principle applies
+            fresher on average than traditional organic results - the same freshness principle applies
             to the instructions your AI reads.
           </p>
 
@@ -868,7 +868,7 @@ See @README.md for project setup and background.`} />
                 <p className="text-muted-foreground">
                   Run <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono">git blame CLAUDE.md</code> to
                   see when each rule was added. If a rule is over 3 months old, verify the underlying
-                  constraint still exists. In my last audit I removed 8 stale rules — a significant
+                  constraint still exists. In my last audit I removed 8 stale rules - a significant
                   token saving per session.
                 </p>
               </CardContent>
@@ -956,8 +956,8 @@ See @README.md for project setup and background.`} />
               <AccordionTrigger className="text-left text-lg">How often should I update my CLAUDE.md?</AccordionTrigger>
               <AccordionContent className="text-muted-foreground text-base leading-relaxed">
                 Add rules reactively when Claude makes the same mistake twice. Audit quarterly to remove stale
-                rules using git blame. A self-improving approach — asking Claude to suggest updates at the end
-                of productive sessions — works well for ongoing maintenance.
+                rules using git blame. A self-improving approach - asking Claude to suggest updates at the end
+                of productive sessions - works well for ongoing maintenance.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
