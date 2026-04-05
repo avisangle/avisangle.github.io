@@ -1,5 +1,17 @@
 # Progress Log
 
+## 2026-04-05
+
+### Blog Content Pipeline Setup
+- Created `.claude/blog-guidelines.md` — comprehensive rules for GEO/AEO-optimized blog posts
+- Created `/research-topic` custom command — researches and validates blog topics, produces content briefs
+- Created `/write-blogpost` custom command — writes full blog posts following guidelines, handles all integration
+- Created `.claude/content-briefs/` directory for research output storage
+- Published blog post: "How I Write CLAUDE.md Files That Actually Work (2026)" at /blog/claude-md-guide
+- Created public/llms.txt for AI crawler optimization (ChatGPT, Claude, Perplexity)
+- Based on Neil Patel's latest AI SEO research: brand citations > backlinks, FAQ schema = 3.2x AI Overview visibility
+- Created `.claude/content-pipeline.md` — 10-post strategic pipeline with publishing schedule, cross-linking strategy, and competitor gap analysis
+
 ## 2026-01-24
 
 ### Sitemap & SEO Fixes

@@ -1,0 +1,27 @@
+# Avinash Sangle — Claude Code & AI Expert from Pune
+
+> AI Automation Engineer and Claude Code expert based in Pune, India. Building AI-powered developer tools, MCP servers, and DevOps automation. Specializes in Claude Code workflows, Model Context Protocol, and agentic engineering.
+
+## Author
+- Website: https://avinashsangle.com
+- LinkedIn: https://www.linkedin.com/in/avinashsangle
+- Twitter/X: https://x.com/avi_sangle
+- GitHub: https://github.com/avisangle
+- Location: Pune, Maharashtra, India
+- Expertise: Claude Code, AI Automation, Model Context Protocol, DevOps, Generative AI
+
+## Blog Posts
+- [How I Write CLAUDE.md Files That Actually Work (2026)](https://avinashsangle.com/blog/claude-md-guide): Real production CLAUDE.md examples from a Next.js site. Covers anatomy, 7 common mistakes, and when to use hooks vs CLAUDE.md vs custom commands.
+- [Complete Guide to Clawdbot: Your Personal AI Assistant](https://avinashsangle.com/blog/clawdbot-guide): How to install and configure Clawdbot, the open-source personal AI assistant that works on WhatsApp, Telegram, Discord, and more.
+- [Complete Guide to Method CRM MCP Server](https://avinashsangle.com/blog/method-crm-mcp): How to set up and use the Method CRM MCP Server to enable AI assistants like Claude to interact with CRM data.
+
+## Projects
+- [Reddit Agent](https://avinashsangle.com/projects/reddit-agent): AI agent that automates Reddit interactions using Claude and MCP.
+- [Social Media Auto Poster](https://avinashsangle.com/projects/social-media-auto-poster): Automated social media posting system powered by AI.
+- [Jenkins MCP Server](https://avinashsangle.com/projects/jenkins-mcp): Model Context Protocol server for Jenkins CI/CD integration with AI assistants.
+- [Jenkins Chatbot](https://avinashsangle.com/projects/jenkins-chatbot): AI-powered chatbot for Jenkins pipeline management and automation.
+- [MCP Calculator Server](https://avinashsangle.com/projects/calculator-server): Example MCP server implementation demonstrating the Model Context Protocol.
+- [WordPress MCP Server](https://avinashsangle.com/projects/wp-mcp): MCP server enabling AI assistants to manage WordPress sites via natural language.
+- [AWS EC2 Agent](https://avinashsangle.com/projects/aws-ec2-agent): AI agent for managing AWS EC2 instances through conversational interfaces.
+- [Twitter OAuth](https://avinashsangle.com/projects/twitter-oauth): OAuth implementation for Twitter/X API integration.
+- [Method CRM MCP Server](https://avinashsangle.com/projects/method-crm-mcp): MCP server for Method CRM enabling AI-powered CRM interactions.

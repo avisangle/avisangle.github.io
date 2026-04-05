@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "How I Write CLAUDE.md Files That Actually Work (2026)",
+                url: "https://avinashsangle.com/blog/claude-md-guide",
+                datePublished: "2026-04-05",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Complete Guide to Clawdbot: Your Personal AI Assistant",
                 url: "https://avinashsangle.com/blog/clawdbot-guide",
                 datePublished: "2025-01-26",
@@ -91,22 +98,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Bot" size="xl" className="mx-auto" />
+              <CategoryIcon icon="FileText" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI ASSISTANT</p>
-                <h3 className="text-2xl font-bold mb-4">Complete Guide to Clawdbot: Your Personal AI Assistant 🦞</h3>
+                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
+                <h3 className="text-2xl font-bold mb-4">How I Write CLAUDE.md Files That Actually Work (2026)</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Step-by-step guide to install and configure Clawdbot—the open-source personal AI 
-                  assistant with 31k+ GitHub stars. Works on WhatsApp, Telegram, Discord, Slack, 
-                  Signal & iMessage. Self-hosted with persistent memory.
+                  Real production CLAUDE.md examples from my Next.js portfolio site. Learn the anatomy
+                  of an effective file, 7 common mistakes that waste your tokens, and when to use
+                  hooks vs CLAUDE.md vs custom commands.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 26, 2025</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 5, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/clawdbot-guide">Read Article →</Link>
+                  <Link href="/blog/claude-md-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -119,6 +126,27 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="FileText" size="lg" animation="pulse" />
+                <CardTitle>How I Write CLAUDE.md Files That Actually Work</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Real production CLAUDE.md examples from my Next.js site. Learn the anatomy of
+                  an effective file, 7 common mistakes, and when to use hooks vs CLAUDE.md vs custom commands.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 5, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/claude-md-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Bot" size="lg" animation="pulse" />
