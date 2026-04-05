@@ -24,6 +24,11 @@ This document defines the rules for creating blog posts on avinashsangle.com. Al
 ### Voice & Tone
 - First-person practitioner ("I use...", "In my workflow...")
 - **Never use em dash (—)**: it is a telltale AI writing signal not found on modern keyboards. Use a regular hyphen (-) or rewrite the sentence instead.
+- **Banned words/phrases**: delve, dive into, comprehensive, robust, leverage (as a verb), utilize, it is worth noting, furthermore, additionally, in conclusion, seamlessly, cutting-edge, game-changer, unlock, harness, streamline
+- **Banned sentence starters**: "Additionally,", "Furthermore,", "Moreover,", "In conclusion,", "It is important to note that", "It is worth mentioning that"
+- **Do not over-list**: if three sentences flow naturally as a paragraph, write a paragraph. Reserve bullet lists for genuinely enumerable items (steps, options, commands). Not every thought needs to be a list.
+- **Vary sentence length**: mix short punchy sentences with longer ones. A paragraph of identical sentence lengths reads like machine output.
+- **Contractions are fine**: "I've", "it's", "you'll" - they sound human. Avoid them only in code comments or formal schema descriptions.
 - Opinionated but fair — share real experience, not marketing copy
 - Include specific numbers/stats when possible (build times, lines changed, time saved)
 - No emojis in content — use Lucide icons via CategoryIcon component

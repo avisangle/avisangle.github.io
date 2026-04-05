@@ -57,6 +57,11 @@ Create `src/app/blog/$ARGUMENTS/page.tsx` following the blog guidelines exactly.
 - Include real commands, real output, real file paths
 - No marketing fluff - every paragraph should teach something
 - **Never use em dash (—)**: use a regular hyphen (-) or rewrite the sentence. Em dashes are a common AI writing tell.
+- **Banned words**: delve, dive into, comprehensive, robust, leverage (as a verb), utilize, furthermore, additionally, in conclusion, seamlessly, cutting-edge, game-changer, unlock, harness, streamline, it is worth noting
+- **Banned sentence starters**: "Additionally,", "Furthermore,", "Moreover,", "In conclusion,", "It is important to note that"
+- **Do not over-list**: if three sentences flow as a paragraph, write a paragraph. Lists are for genuinely enumerable items only.
+- **Vary sentence length**: mix short sentences with longer ones. Uniform length reads like machine output.
+- **Use contractions**: "I've", "it's", "you'll" sound human. Use them freely in prose.
 - No emojis — use Lucide icons via CategoryIcon
 - Use semantic HTML: proper heading hierarchy, lists, code blocks
 - Break up walls of text with Cards, code blocks, and lists
