@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Script from "next/script"
 import { Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -89,6 +90,18 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        {/* OmniAgent Universal Shim */}
+        <Script id="omniagent-config" strategy="beforeInteractive">
+          {`window.OMNIAGENT_CONFIG = {
+            registryUrl: 'https://omniagent-registry.aavi-sangle.workers.dev',
+            timeout: 3000,
+            debug: true
+          };`}
+        </Script>
+        <Script
+          src="https://omniagent-shim.pages.dev/omniagent-shim.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
