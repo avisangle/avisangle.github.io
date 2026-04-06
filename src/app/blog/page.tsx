@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Gemma 4 Models: Which One Should You Actually Use?",
+                url: "https://avinashsangle.com/blog/gemma-4-models-guide",
+                datePublished: "2026-04-06",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "How I Write CLAUDE.md Files That Actually Work (2026)",
                 url: "https://avinashsangle.com/blog/claude-md-guide",
                 datePublished: "2026-04-05",
@@ -98,22 +105,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="FileText" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Cpu" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">How I Write CLAUDE.md Files That Actually Work (2026)</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">Gemma 4 Models: Which One Should You Actually Use?</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Real production CLAUDE.md examples from my Next.js portfolio site. Learn the anatomy
-                  of an effective file, 7 common mistakes that waste your tokens, and when to use
-                  hooks vs CLAUDE.md vs custom commands.
+                  Tested all 4 Gemma 4 model sizes locally - E2B, E4B, 26B MoE, and 31B Dense.
+                  The 26B MoE is the sweet spot for most developers. Includes RAM requirements,
+                  Ollama setup, and a comparison with Llama 4 and Mistral Small 4.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 5, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 6, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-md-guide">Read Article →</Link>
+                  <Link href="/blog/gemma-4-models-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -126,6 +133,27 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Cpu" size="lg" animation="pulse" />
+                <CardTitle>Gemma 4 Models: Which One Should You Actually Use?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Tested all 4 Gemma 4 model sizes locally. Includes RAM requirements, Ollama setup,
+                  comparison with Llama 4 and Mistral, and a practical guide to picking the right variant.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 6, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/gemma-4-models-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="FileText" size="lg" animation="pulse" />

@@ -11,6 +11,7 @@
 - Expertise: Claude Code, AI Automation, Model Context Protocol, DevOps, Generative AI
 
 ## Blog Posts
+- [Gemma 4 Models: Which One Should You Actually Use?](https://avinashsangle.com/blog/gemma-4-models-guide): Tested all 4 Gemma 4 model sizes locally. Practical guide to picking E2B, E4B, 26B MoE, or 31B Dense based on hardware and use case.
 - [How I Write CLAUDE.md Files That Actually Work (2026)](https://avinashsangle.com/blog/claude-md-guide): Real production CLAUDE.md examples from a Next.js site. Covers anatomy, 7 common mistakes, and when to use hooks vs CLAUDE.md vs custom commands.
 - [Complete Guide to Clawdbot: Your Personal AI Assistant](https://avinashsangle.com/blog/clawdbot-guide): How to install and configure Clawdbot, the open-source personal AI assistant that works on WhatsApp, Telegram, Discord, and more.
 - [Complete Guide to Method CRM MCP Server](https://avinashsangle.com/blog/method-crm-mcp): How to set up and use the Method CRM MCP Server to enable AI assistants like Claude to interact with CRM data.

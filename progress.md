@@ -1,5 +1,20 @@
 # Progress Log
 
+## 2026-04-06: Published Blog Post - Gemma 4 Models Guide
+- Published "Gemma 4 Models: Which One Should You Actually Use?" at /blog/gemma-4-models-guide
+- ~2800 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- Updated blog index, sitemap, llms.txt
+- Build verified passing
+
+## 2026-04-05: AI/SEO/AEO/GEO Research Completed
+- Researched Neil Patel's latest AI SEO trends for 2026
+- Compiled GEO (Generative Engine Optimization) best practices
+- Gathered AEO (Answer Engine Optimization) strategies
+- Documented how to optimize for AI crawlers (ChatGPT, Claude, Perplexity)
+- Identified schema markup and llms.txt recommendations
+- Delivered comprehensive actionable summary
+
 ## 2025-11-20: Custom Portfolio Landing Page Built
 
 ### Completed Tasks
