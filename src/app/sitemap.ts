@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'claude-mythos-preview',
+      lastModified: '2026-04-09',
+    },
+    {
       slug: 'gemma-4-models-guide',
       lastModified: '2026-04-06',
     },

@@ -1,5 +1,12 @@
 # Progress Log
 
+## 2026-04-09: Published Blog Post - Claude Mythos Preview
+- Published "Claude Mythos: What It Means for Developers Who Can't Use It" at /blog/claude-mythos-preview
+- ~2400 words, 11 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- Analysis/opinion angle (not tutorial) - restricted model, Project Glasswing
+- Updated blog index (featured + grid), sitemap, llms.txt
+
 ## 2026-04-06: Published Blog Post - Gemma 4 Models Guide
 - Published "Gemma 4 Models: Which One Should You Actually Use?" at /blog/gemma-4-models-guide
 - ~2800 words, 12 min read, 8 FAQ items

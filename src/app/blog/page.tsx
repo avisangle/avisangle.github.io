@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Claude Mythos: What It Means for Developers Who Can't Use It",
+                url: "https://avinashsangle.com/blog/claude-mythos-preview",
+                datePublished: "2026-04-09",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Gemma 4 Models: Which One Should You Actually Use?",
                 url: "https://avinashsangle.com/blog/gemma-4-models-guide",
                 datePublished: "2026-04-06",
@@ -105,22 +112,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Cpu" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Shield" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Gemma 4 Models: Which One Should You Actually Use?</h3>
+                <h3 className="text-2xl font-bold mb-4">Claude Mythos: What It Means for Developers Who Can&apos;t Use It</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Tested all 4 Gemma 4 model sizes locally - E2B, E4B, 26B MoE, and 31B Dense.
-                  The 26B MoE is the sweet spot for most developers. Includes RAM requirements,
-                  Ollama setup, and a comparison with Llama 4 and Mistral Small 4.
+                  Anthropic locked Claude Mythos Preview to 12 Project Glasswing partners. Here&apos;s
+                  what the benchmarks, pricing, and restricted access actually mean for developers
+                  working with Opus 4.6 today, plus what to do while you wait for public access.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 6, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 9, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/gemma-4-models-guide">Read Article →</Link>
+                  <Link href="/blog/claude-mythos-preview">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -133,6 +140,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Shield" size="lg" animation="pulse" />
+                <CardTitle>Claude Mythos: What It Means for Devs Who Can&apos;t Use It</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Anthropic locked Claude Mythos to 12 Project Glasswing partners. What the
+                  benchmarks, pricing, and restricted access mean for everyday developers, plus
+                  what to do while waiting for public release.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 9, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/claude-mythos-preview" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Cpu" size="lg" animation="pulse" />
