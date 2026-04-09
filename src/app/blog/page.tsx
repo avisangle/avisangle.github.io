@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
+                url: "https://avinashsangle.com/blog/claude-managed-agents",
+                datePublished: "2026-04-09",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Mythos: What It Means for Developers Who Can't Use It",
                 url: "https://avinashsangle.com/blog/claude-mythos-preview",
                 datePublished: "2026-04-09",
@@ -112,22 +119,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Shield" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Bot" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Mythos: What It Means for Developers Who Can&apos;t Use It</h3>
+                <h3 className="text-2xl font-bold mb-4">Claude Managed Agents vs Agent SDK: Which Should You Use?</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Anthropic locked Claude Mythos Preview to 12 Project Glasswing partners. Here&apos;s
-                  what the benchmarks, pricing, and restricted access actually mean for developers
-                  working with Opus 4.6 today, plus what to do while you wait for public access.
+                  Anthropic launched Claude Managed Agents in beta on April 8, 2026. A practical
+                  decision framework covering the Agent SDK comparison, pricing breakdown with a
+                  worked cost example, and when to pick each option for your workload.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
                   <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 9, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-mythos-preview">Read Article →</Link>
+                  <Link href="/blog/claude-managed-agents">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -140,6 +147,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Bot" size="lg" animation="pulse" />
+                <CardTitle>Claude Managed Agents vs Agent SDK: Which to Use?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Practical decision framework for Claude Managed Agents vs the Agent SDK.
+                  Pricing breakdown with worked examples, MCP integration notes, and when to
+                  pick each option for your workload.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 9, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/claude-managed-agents" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Shield" size="lg" animation="pulse" />

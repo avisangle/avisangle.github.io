@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'claude-managed-agents',
+      lastModified: '2026-04-09',
+    },
+    {
       slug: 'claude-mythos-preview',
       lastModified: '2026-04-09',
     },

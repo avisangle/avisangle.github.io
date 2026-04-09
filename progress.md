@@ -1,5 +1,12 @@
 # Progress Log
 
+## 2026-04-09: Published Blog Post - Claude Managed Agents
+- Published "Claude Managed Agents vs Agent SDK: Which Should You Use?" at /blog/claude-managed-agents
+- ~2700 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- Decision framework angle with pricing breakdown and worked cost example
+- Updated blog index (featured + grid), sitemap, llms.txt
+
 ## 2026-04-09: Published Blog Post - Claude Mythos Preview
 - Published "Claude Mythos: What It Means for Developers Who Can't Use It" at /blog/claude-mythos-preview
 - ~2400 words, 11 min read, 8 FAQ items
