@@ -203,6 +203,205 @@ Posts are ordered to build **topical authority** — each post links to previous
 
 ---
 
+## Social Media Post Generation
+
+Every blog post triggers a coordinated social media push across platforms. Generate all posts at publish time and schedule them using the calendar below.
+
+### Platforms & Post Formats
+
+| Platform | Format | Tone | Length | Best Time (IST) |
+|----------|--------|------|--------|-----------------|
+| **Twitter/X** | Long-form post (Basic tier) | Punchy, dev-native, use code snippets | Single tweet up to 25,000 chars | 6:30 PM (US morning overlap) |
+| **LinkedIn** | Long-form post | Professional, insight-driven, first-person | 1200-1500 chars, use line breaks heavily | 9:00 AM (weekdays) |
+| **Reddit** | Self-post in relevant sub | Helpful, non-promotional, community-first | 200-400 words, lead with the problem solved | 2:00 PM (US prime time) |
+| **Hacker News** | Link submission + comment | Technical, understated, no hype | Title: factual (no clickbait). First comment: context | 2:00 PM (US prime time) |
+| **Dev.to** | Cross-post (canonical URL) | Tutorial-style, friendly | Full article with canonical link back to blog | 3:00 PM (US morning) |
+| **Hashnode** | Cross-post (canonical URL) | Same as Dev.to | Full article with canonical link back to blog | 3:00 PM (US morning) |
+
+### Post Templates Per Platform
+
+**Twitter/X Long-form Post (Basic tier — single tweet):**
+```
+[Hook — the problem or surprising result]
+
+[Core insight + context — 1-2 paragraphs]
+
+SECTION HEADER (ALL CAPS)
+[Key point with bullets or code snippet]
+
+SECTION HEADER (ALL CAPS)
+[Second key point]
+
+[CTA — link to full post + "follow for more"]
+```
+
+**LinkedIn:**
+```
+[Opening line — bold claim or question]
+
+[2-3 short paragraphs with the core insight]
+
+[Bullet points — key takeaways]
+
+[CTA — link + ask a question to drive comments]
+
+#ClaudeCode #AIEngineering #DevTools #MCP
+```
+
+**Reddit:**
+```
+Title: [Problem-first framing, no self-promotion]
+Body: Explain what you built/learned, share key findings,
+      link at the bottom as "wrote a detailed guide if interested"
+Subreddits: 3-4 per post, picked from the matrix below based on blog topic
+```
+
+**Reddit subreddit selection:**
+
+Pre-vetted subreddits where u/avisangle can post (verified via `scripts/check_reddit_targets.py`). Target **3-4 subs per blog post** from the matrix below, matching the post's topic. Small-to-medium subs are preferred — engagement is higher and self-promo rules are less strict.
+
+| Subreddit | Size | Focus | Self-promo rule |
+|-----------|------|-------|-----------------|
+| r/ClaudeAI | 740k | Anything Claude | Allowed if useful |
+| r/LocalLLaMA | 685k | Open LLMs, architecture | Limit self-promo (bury the link) |
+| r/LLMDevs | 141k | LLM application development | No commercial promo — frame as shared knowledge |
+| r/AI_Agents | 339k | Agent patterns, frameworks | Links in comments only |
+| r/Anthropic | 127k | Claude + Anthropic news | Be substantive |
+| r/ChatGPTCoding | 370k | AI-assisted coding | Flair required; include prompts when relevant |
+| r/SideProject | 683k | Build showcases | Projects allowed freely |
+| r/indiehackers | 163k | Indie dev + MRR stories | Share the build story, not just the link |
+| r/artificial | 1.25M | General AI news | No spam; substantive posts only |
+| r/singularity | 3.88M | AI progress / futures | Avoid hype; focus on factual content |
+
+**Blog topic → recommended subs (pick 3-4 per post):**
+
+| Blog content type | Recommended subs |
+|-------------------|------------------|
+| Claude Code / CLAUDE.md / hooks | r/ClaudeAI, r/Anthropic, r/ChatGPTCoding, r/LLMDevs |
+| Tool/framework comparison (e.g., Managed Agents vs SDK) | r/ClaudeAI, r/LocalLLaMA, r/LLMDevs, r/AI_Agents |
+| Tutorial / build guide | r/ClaudeAI, r/LLMDevs, r/ChatGPTCoding, r/SideProject |
+| MCP server / integration | r/ClaudeAI, r/LLMDevs, r/AI_Agents |
+| Cost / data analysis | r/ClaudeAI, r/LocalLLaMA, r/LLMDevs |
+| Product announcement / news | r/ClaudeAI, r/Anthropic, r/artificial, r/singularity |
+| Agent / workflow showcase | r/ClaudeAI, r/AI_Agents, r/LLMDevs, r/SideProject |
+| Side-project / indie build | r/SideProject, r/indiehackers, r/ClaudeAI |
+
+**Validating a new sub:** if you want to target a sub not in this matrix, run `python scripts/check_reddit_targets.py <subreddit>` first to verify u/avisangle's eligibility. Larger subs (r/programming, r/webdev, r/MachineLearning) typically need 500+ link karma — skip these until karma grows.
+
+**Reddit post flair selection:**
+
+Most subs require a post flair. Pick the flair that best matches the blog's content type. Before picking, run the helper script to see live flair options:
+
+```bash
+python scripts/list_reddit_flairs.py ClaudeAI LocalLLaMA
+```
+
+Common flair mappings by content type:
+
+| Blog content type | r/ClaudeAI | r/LocalLLaMA |
+|-------------------|-----------|--------------|
+| Tool/framework comparison | `Comparison` | `Discussion` |
+| Tutorial / how-to guide | `Coding` | `Tutorial \| Guide` |
+| Product announcement / new feature | `News` | `News` |
+| Cost / performance analysis | `Other` | `Discussion` |
+| MCP-specific content | `MCP` | `Resources` |
+| Agent / workflow showcase | `Built with Claude` | `Resources` |
+| Philosophical / opinion | `Philosophy` | `Discussion` |
+
+Add `FLAIR: <text>` (case-insensitive) to each `---POST---` block in `reddit-post.md`. The posting script resolves the flair text to the subreddit's template ID automatically.
+
+**Hacker News:**
+```
+Title: [Factual, no marketing language — e.g., "Tracking Claude Code costs for 30 days"]
+First comment: Brief context on why you wrote it and what's novel
+```
+
+### Social Media Posting Calendar
+
+Each blog post gets a **5-day rollout** to maximize reach without spam:
+
+| Day | Platform | Action |
+|-----|----------|--------|
+| Day 0 (Publish) | Twitter/X | Post thread |
+| Day 0 (Publish) | LinkedIn | Post long-form |
+| Day 1 | Reddit | Post in 2 relevant subreddits |
+| Day 1 | Hacker News | Submit link + first comment |
+| Day 2 | Dev.to | Cross-post with canonical URL |
+| Day 2 | Hashnode | Cross-post with canonical URL |
+| Day 3 | Twitter/X | Repost key tweet with new angle/quote |
+| Day 5 | LinkedIn | Share engagement stats or follow-up insight |
+
+### Full 10-Post Social Calendar
+
+| Week | Blog Post | Day 0 (Mon) | Day 1 (Tue) | Day 2 (Wed) | Day 3 (Thu) | Day 5 (Sat) |
+|------|-----------|-------------|-------------|-------------|-------------|-------------|
+| W1-A | CLAUDE.md Guide | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W1-B | Hooks Cookbook | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W2-A | Cost Tracking | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W2-B | MCP Servers | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W3-A | Agentic Engineering | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W3-B | Custom Commands | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W4-A | Scheduled Tasks | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W4-B | Parallel Dev | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W5-A | CI/CD Actions | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+| W5-B | SEO + Next.js | X + LI | Reddit + HN | Dev.to + Hashnode | X repost | LI follow-up |
+
+### Platform-Specific Rules
+
+1. **Twitter/X** — Always tag @AnthropicAI and @ClaudeAI when relevant. Use 1-2 hashtags max.
+2. **LinkedIn** — Never use external link in the first comment (kills reach). Put link in the post body at the end. Use 3-5 hashtags.
+3. **Reddit** — Never post the same link to more than 2 subs. Wait 30 min between sub posts. Engage with every comment for the first 2 hours.
+4. **Hacker News** — No editorialized titles. Don't ask for upvotes. Reply to comments quickly.
+5. **Dev.to / Hashnode** — Always set `canonical_url` to avinashsangle.com to avoid duplicate content penalties.
+
+### Integration with /write-blogpost
+
+When `/write-blogpost` completes, it should also generate a `social/` folder inside the blog post directory (e.g., `src/app/blog/claude-md-guide/social/`) with:
+
+| File | Platform | Notes |
+|------|----------|-------|
+| `twitter-post.md` | Twitter/X | Single long-form tweet; body must come after a `---BODY---` marker so the posting script reads only the tweet content |
+| `linkedin-post.md` | LinkedIn | Long-form post |
+| `reddit-post.md` | Reddit | Sub-specific versions |
+| `hn-submission.md` | Hacker News | Title + first comment |
+| `devto-crosspost.md` | Dev.to + Hashnode | Cross-post instructions |
+
+### OG Image Generation
+
+Every blog post needs an Open Graph image at `public/og-<slug>.png` so link previews render on Twitter, LinkedIn, Dev.to, Hashnode, Slack, etc. The metadata in every `page.tsx` references this filename — if the file is missing, all previews break.
+
+Generate it automatically from the blog's title + category:
+
+```bash
+# One post
+python scripts/generate_og_image.py <blog-slug>
+
+# Regenerate all posts (useful after a title/category change)
+python scripts/generate_og_image.py --all --force
+```
+
+The script reads `title` and the category label from `src/app/blog/<slug>/page.tsx`, renders a 1200×630 PNG in site branding (dark `#1a1b1e` background, orange `#ff8f33` accent, Plus Jakarta Sans), and saves to `public/`. Run this as part of `/write-blogpost` **before** committing, so the image ships with the post.
+
+### Automated Posting Scripts
+
+Generic posting scripts live in `scripts/`. They read from a blog's social folder, so the same script works for every future blog post.
+
+**Twitter/X:**
+```bash
+# Posts src/app/blog/<slug>/social/twitter-post.md
+python scripts/post_to_twitter.py <blog-slug>
+
+# Preview without posting
+python scripts/post_to_twitter.py <blog-slug> --dry-run
+
+# Post a custom file
+python scripts/post_to_twitter.py --file path/to/tweet.md
+```
+
+Required env vars in `.env`: `TWITTER_CONSUMER_KEY`, `TWITTER_CONSUMER_SECRET`, `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`. App permissions must be set to **Read and Write**.
+
+---
+
 ## Cross-Linking Strategy
 
 Each post should link to:
