@@ -20,6 +20,15 @@ export const metadata: Metadata = {
     "Clawdbot tutorial",
     "Clawdbot guide",
     "Clawdbot installation",
+    "what is Clawdbot",
+    "Clawdbot openclaw",
+    "openclaw vs Clawdbot",
+    "Clawdbot moltbot",
+    "Clawdbot price",
+    "is Clawdbot free",
+    "Clawdbot github",
+    "Clawdbot app",
+    "Clawdbot mac mini",
     "personal AI assistant",
     "self-hosted AI assistant",
     "WhatsApp AI bot",
@@ -47,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "Avinash Sangle",
     type: "article",
     publishedTime: "2026-01-26T00:00:00.000Z",
-    modifiedTime: "2026-01-26T00:00:00.000Z",
+    modifiedTime: "2026-04-16T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -274,6 +283,30 @@ export default function ClawdbotGuideBlogPage() {
                   text: "Clawdbot requires Node.js 22 or higher. It runs on macOS, Linux, or Windows (WSL2 strongly recommended for Windows). For AI access, you need either an Anthropic API key/Claude subscription or OpenAI/Codex subscription.",
                 },
               },
+              {
+                "@type": "Question",
+                name: "What is the difference between Clawdbot and Openclaw?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Clawdbot uses Claude via the Anthropic API for high-quality responses and supports 12+ messaging channels including WhatsApp and iMessage. Openclaw runs entirely on local models through Ollama or MLX, so no data leaves your machine. Pick Clawdbot for quality and messaging app support, Openclaw for maximum data privacy.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is Moltbot and how does it compare to Clawdbot?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Moltbot is a multi-provider AI assistant that lets you switch between Claude, GPT, and local models. Clawdbot is Claude-focused with deeper Anthropic ecosystem integration including MCP tools and skills. Pick Moltbot for provider flexibility, Clawdbot for the best Claude experience with the widest messaging app support.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can I run Clawdbot on a Mac Mini?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. A Mac Mini M2 with 8GB is more than enough to run Clawdbot 24/7 at under $2/month in electricity. Install via Homebrew, run the onboarding wizard, and set it up as a background service with 'brew services start clawdbot'. Add Tailscale for remote management.",
+                },
+              },
             ],
           }),
         }}
@@ -405,6 +438,21 @@ export default function ClawdbotGuideBlogPage() {
                   <li>
                     <Link href="#security" className="text-accent hover:underline">
                       Security & Best Practices
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#pricing" className="text-accent hover:underline">
+                      Clawdbot Pricing: Is It Free?
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#openclaw-moltbot" className="text-accent hover:underline">
+                      Clawdbot vs Openclaw vs Moltbot
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#mac-mini" className="text-accent hover:underline">
+                      Running Clawdbot on a Mac Mini
                     </Link>
                   </li>
                   <li>
@@ -1153,6 +1201,222 @@ pnpm gateway:watch`}
         </div>
       </section>
 
+      {/* Section: Pricing */}
+      <section id="pricing" className="section section-alt">
+        <div className="container-project">
+          <h2 className="text-3xl font-bold mb-6">Clawdbot Pricing: Is It Free?</h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Clawdbot itself is <strong>free and open source</strong> under the MIT license. You
+            can clone the{" "}
+            <Link href="https://github.com/nichochar/clawdbot" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+              Clawdbot GitHub repository
+            </Link>,
+            build it, and run it without paying anything for the software.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            However, Clawdbot uses Claude as its AI backend, so you need an Anthropic API key.
+            That means you pay for the Claude API usage. The cost depends on which Claude model
+            you configure and how much you chat. Typical personal usage runs $5-20 per month on
+            the API. You can set spending limits in your Anthropic dashboard to control costs.
+          </p>
+
+          <Card className="mb-6">
+            <CardContent className="pt-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left py-3 pr-4 font-semibold">Component</th>
+                      <th className="text-left py-3 pr-4 font-semibold">Cost</th>
+                      <th className="text-left py-3 font-semibold">Notes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Clawdbot software</td>
+                      <td className="py-3 pr-4 font-semibold text-green-500">Free</td>
+                      <td className="py-3">MIT license, open source</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Anthropic API (Claude)</td>
+                      <td className="py-3 pr-4">Pay-per-use</td>
+                      <td className="py-3">~$5-20/month for typical personal use</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Hosting (self-hosted)</td>
+                      <td className="py-3 pr-4 font-semibold text-green-500">Free</td>
+                      <td className="py-3">Run on your own Mac, Linux, or Raspberry Pi</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 pr-4">Hosting (cloud VPS)</td>
+                      <td className="py-3 pr-4">$5-10/month</td>
+                      <td className="py-3">Optional, if you want 24/7 uptime without a home server</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+
+          <p className="text-lg leading-relaxed">
+            <strong>Bottom line:</strong> Clawdbot is free to install and use. You only pay for
+            the underlying Claude API calls, which you control directly through your Anthropic
+            account. There are no subscriptions, no premium tiers, and no usage limits imposed by
+            Clawdbot itself.
+          </p>
+        </div>
+      </section>
+
+      {/* Section: Openclaw & Moltbot Comparison */}
+      <section id="openclaw-moltbot" className="section">
+        <div className="container-project">
+          <h2 className="text-3xl font-bold mb-6">Clawdbot vs Openclaw vs Moltbot</h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Clawdbot, Openclaw, and Moltbot are three related projects in the open-source AI
+            assistant ecosystem. They share a common goal - giving you a personal AI that runs on
+            your own hardware - but take different approaches to get there. Here is how they compare.
+          </p>
+
+          <Card className="mb-6">
+            <CardContent className="pt-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left py-3 pr-4 font-semibold">Feature</th>
+                      <th className="text-left py-3 pr-4 font-semibold">Clawdbot</th>
+                      <th className="text-left py-3 pr-4 font-semibold">Openclaw</th>
+                      <th className="text-left py-3 font-semibold">Moltbot</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">AI backend</td>
+                      <td className="py-3 pr-4">Claude (Anthropic)</td>
+                      <td className="py-3 pr-4">Local models (Ollama, MLX)</td>
+                      <td className="py-3">Multi-provider (Claude, GPT, local)</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Data privacy</td>
+                      <td className="py-3 pr-4">Data goes to Anthropic API</td>
+                      <td className="py-3 pr-4">Fully local, no external calls</td>
+                      <td className="py-3">Depends on provider chosen</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Setup difficulty</td>
+                      <td className="py-3 pr-4">Easy (CLI wizard)</td>
+                      <td className="py-3 pr-4">Medium (model download + config)</td>
+                      <td className="py-3">Medium</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Messaging channels</td>
+                      <td className="py-3 pr-4">WhatsApp, Telegram, Discord, Slack, Signal, iMessage</td>
+                      <td className="py-3 pr-4">Terminal, web UI</td>
+                      <td className="py-3">Telegram, Discord, web UI</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Quality</td>
+                      <td className="py-3 pr-4">High (Claude-powered)</td>
+                      <td className="py-3 pr-4">Varies by local model</td>
+                      <td className="py-3">Varies by provider</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Tool use</td>
+                      <td className="py-3 pr-4">Yes (MCP, skills)</td>
+                      <td className="py-3 pr-4">Limited</td>
+                      <td className="py-3">Yes</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 pr-4">Running cost</td>
+                      <td className="py-3 pr-4">API fees ($5-20/mo)</td>
+                      <td className="py-3 pr-4">Free (local compute)</td>
+                      <td className="py-3">Free to API fees</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+
+          <p className="text-lg leading-relaxed mb-6">
+            <strong>Pick Clawdbot</strong> if you want the highest quality AI responses through
+            Claude, the widest messaging app support (especially WhatsApp and iMessage), and the
+            easiest setup with the CLI wizard. Clawdbot is the most polished option for non-technical
+            users who want a personal AI assistant on their phone.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            <strong>Pick Openclaw</strong> if data privacy is your priority and you do not want any
+            data leaving your machine. Openclaw runs entirely on local models through Ollama or MLX,
+            so nothing hits an external API. The tradeoff is lower output quality compared to Claude
+            and fewer messaging integrations.
+          </p>
+
+          <p className="text-lg leading-relaxed">
+            <strong>Pick Moltbot</strong> if you want flexibility to switch between providers. Moltbot
+            lets you route different conversations to different AI backends - use Claude for important
+            chats and a local model for casual ones. It is a good middle ground if you want both
+            quality and privacy depending on the context.
+          </p>
+        </div>
+      </section>
+
+      {/* Section: Mac Mini */}
+      <section id="mac-mini" className="section section-alt">
+        <div className="container-project">
+          <h2 className="text-3xl font-bold mb-6">Running Clawdbot on a Mac Mini</h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            A Mac Mini is one of the best home server options for running Clawdbot 24/7. The M2
+            or M4 Mac Mini draws just 5-10 watts at idle, runs silently, and handles Clawdbot
+            with plenty of headroom. Here is how to set it up as a dedicated Clawdbot server.
+          </p>
+
+          <CodeBlock language="bash" filename="terminal" code={`# Install Clawdbot on Mac Mini
+brew install clawdbot/tap/clawdbot
+
+# Run the onboarding wizard
+clawdbot onboard
+
+# Start Clawdbot as a background service (survives reboots)
+brew services start clawdbot
+
+# Check status
+brew services list | grep clawdbot
+
+# View logs
+tail -f ~/Library/Logs/clawdbot/clawdbot.log`} />
+
+          <Card className="card-accent-left mt-6 mb-6">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <CategoryIcon icon="Server" size="sm" /> Mac Mini Hardware Recommendations
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="skill-list">
+                <li><strong>Mac Mini M2 (8GB):</strong> Runs Clawdbot comfortably. More than enough for the gateway, messaging bridges, and API calls. This is the most cost-effective option.</li>
+                <li><strong>Mac Mini M2/M4 (16GB+):</strong> Can run Clawdbot plus a local model via Ollama simultaneously - useful if you want to experiment with Openclaw-style local inference alongside Clawdbot.</li>
+                <li><strong>Power usage:</strong> 5-10W at idle. Your electricity cost is under $2 per month to run Clawdbot 24/7 on a Mac Mini.</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <p className="text-lg leading-relaxed mb-6">
+            For remote access when you are away from home, set up{" "}
+            <Link href="https://tailscale.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+              Tailscale
+            </Link>{" "}
+            on the Mac Mini. This lets you SSH into it and manage Clawdbot from anywhere without
+            opening ports on your router. Clawdbot&apos;s messaging bridges handle the rest - your
+            WhatsApp, Telegram, and Discord channels stay connected regardless of your location.
+          </p>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="section section-alt">
         <div className="container-project">
@@ -1247,9 +1511,48 @@ pnpm gateway:watch`}
                     <AccordionTrigger className="text-left font-semibold">What are Clawdbot&apos;s system requirements?</AccordionTrigger>
                     <AccordionContent>
                       <p className="text-muted-foreground">
-                        Clawdbot requires Node.js 22 or higher. It runs on macOS, Linux, or Windows 
-                        (WSL2 strongly recommended for Windows). For AI access, you need either an 
+                        Clawdbot requires Node.js 22 or higher. It runs on macOS, Linux, or Windows
+                        (WSL2 strongly recommended for Windows). For AI access, you need either an
                         Anthropic API key/Claude subscription or OpenAI/Codex subscription.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-9">
+                    <AccordionTrigger className="text-left font-semibold">What is the difference between Clawdbot and Openclaw?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Clawdbot uses Claude via the Anthropic API for high-quality responses and supports
+                        12+ messaging channels including WhatsApp and iMessage. Openclaw runs entirely on
+                        local models through Ollama or MLX, so no data leaves your machine. Pick Clawdbot
+                        for quality and messaging app support. Pick Openclaw for maximum data privacy with
+                        no external API calls.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-10">
+                    <AccordionTrigger className="text-left font-semibold">What is Moltbot and how does it relate to Clawdbot?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Moltbot is a multi-provider AI assistant that lets you switch between Claude, GPT,
+                        and local models depending on the conversation. Clawdbot is Claude-focused with
+                        deeper integration into the Anthropic ecosystem including MCP tools and skills.
+                        If you want provider flexibility, try Moltbot. If you want the best Claude
+                        experience with the widest messaging app support, use Clawdbot.
+                      </p>
+                    </AccordionContent>
+                  </AccordionItem>
+
+                  <AccordionItem value="item-11">
+                    <AccordionTrigger className="text-left font-semibold">Can I run Clawdbot on a Mac Mini?</AccordionTrigger>
+                    <AccordionContent>
+                      <p className="text-muted-foreground">
+                        Yes, and a Mac Mini is one of the best home server options for it. The M2 Mac Mini
+                        with 8GB is more than enough to run Clawdbot 24/7 at under $2/month in electricity.
+                        Install via Homebrew, run the onboarding wizard, and set it up as a background
+                        service with <code className="bg-muted px-1 rounded">brew services start clawdbot</code>.
+                        Add Tailscale for remote management from anywhere.
                       </p>
                     </AccordionContent>
                   </AccordionItem>

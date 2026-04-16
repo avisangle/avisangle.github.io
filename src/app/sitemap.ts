@@ -28,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       slug: 'clawdbot-guide',
-      lastModified: '2026-01-26',
+      lastModified: '2026-04-16',
     },
   ]
 
