@@ -246,6 +246,14 @@ const faqSchema = JSON.stringify({
         text: "Gemma 4 wins on parameter efficiency with its MoE architecture (26B total but only 4B active per token) and edge deployment (E2B, E4B). Qwen 3.5 offers toggleable thinking mode for step-by-step reasoning, which Gemma 4 lacks. Both use Apache 2.0 licenses. Pick Gemma 4 for local/mobile with low RAM, Qwen 3.5 for reasoning-heavy tasks.",
       },
     },
+    {
+      "@type": "Question",
+      name: "What is the gemma 4 e4b ollama model name?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The gemma 4 e4b ollama model name is `gemma4:e4b` (explicit tag) or `gemma4` (the default tag, which also pulls E4B). Pull it with `ollama pull gemma4:e4b` or run `ollama run gemma4` for an interactive session. The E4B model needs 4-6GB RAM and runs on any laptop with 8GB or more.",
+      },
+    },
   ],
 })
 
@@ -1240,6 +1248,23 @@ print(json.dumps(result["message"]["tool_calls"], indent=2))`} />
                   thinking mode for step-by-step reasoning, which Gemma 4 does not have. Both use
                   Apache 2.0 licenses. Pick Gemma 4 for local or mobile with low RAM, Qwen 3.5 for
                   reasoning-heavy tasks where chain-of-thought matters.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-12">
+              <AccordionTrigger>What is the gemma 4 e4b ollama model name?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  The gemma 4 e4b ollama model name is{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4:e4b</code>{" "}
+                  (explicit tag) or{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4</code>{" "}
+                  (the default tag, which also pulls E4B). Pull it with{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">ollama pull gemma4:e4b</code>{" "}
+                  or run <code className="bg-muted px-1 py-0.5 rounded text-sm">ollama run gemma4</code>{" "}
+                  for an interactive session. The E4B model needs 4-6GB RAM and runs on any laptop with
+                  8GB or more.
                 </p>
               </AccordionContent>
             </AccordionItem>

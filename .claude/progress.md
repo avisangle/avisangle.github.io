@@ -15,6 +15,17 @@
 - Updated blog index (featured + grid card), sitemap, llms.txt
 - Build passes clean
 
+### GSC Ranking Review (Baseline Run)
+- Run date: 2026-04-16
+- Period: 2026-04-06 to 2026-04-13 (last 7 days)
+- Snapshot saved: .claude/gsc-snapshots/2026-04-16.json
+- Key findings:
+  - 16 clicks / 2,283 impressions / 0.7% CTR / avg position 10.0 across the site
+  - /blog/claude-managed-agents is the top earner (14 clicks, position 6.1, 802 impressions)
+  - /blog/gemma-4-models-guide has massive opportunity: 1,284 impressions at position 11.3 but 0 clicks (just off page 1)
+  - Claude Mythos Preview sits at position 10.8 - one nudge from page 1
+  - No prior snapshot available - this is the baseline for future trend analysis
+
 ### New Custom Command: /review-gsc-ranking
 - `/review-gsc-ranking [days]` - fetches GSC data via `scripts/search_console_report.py --json`, compares against a prior local snapshot, flags pages/queries with ranking drops, identifies page-2 opportunities
 - Snapshot-based trend analysis: saves to `.claude/gsc-snapshots/YYYY-MM-DD.json`, compares against most recent snapshot >=7 days old

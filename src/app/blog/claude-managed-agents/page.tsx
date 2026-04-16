@@ -768,6 +768,17 @@ print(response.content[0].text)`} />
             workflows where the agent needs to interact with your local development environment,
             the Agent SDK is the natural fit. Managed Agents can&apos;t see your local repo.
           </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Another option worth flagging when cost or data residency dominates: if your workload
+            doesn&apos;t strictly need Claude&apos;s frontier capabilities, running an open-weight
+            model locally removes API costs entirely. I broke down the tradeoffs in my{" "}
+            <Link href="/blog/gemma-4-models-guide" className="text-accent hover:underline">
+              Gemma 4 models guide
+            </Link>
+            {" "}- the 26B MoE variant handles most tool-use and agent workflows on a 16GB laptop,
+            and your data stays on your own machine.
+          </p>
         </div>
       </section>
 
