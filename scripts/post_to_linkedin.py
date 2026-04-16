@@ -78,11 +78,44 @@ def post_to_linkedin(body: str, access_token: str, user_urn: str) -> str:
     return resp.json().get("id", "(unknown)")
 
 
+def resolve_account_env(account: str | None) -> tuple[str, str, str]:
+    """Return (access_token, user_urn, account_label) for the selected account.
+
+    Default (no --account flag) reads LINKEDIN_ACCESS_TOKEN and LINKEDIN_USER_URN.
+    With --account <name>, reads LINKEDIN_ACCESS_TOKEN_<NAME> and LINKEDIN_USER_URN_<NAME>.
+    """
+    if account:
+        suffix = "_" + account.upper().replace("-", "_")
+        token_key = f"LINKEDIN_ACCESS_TOKEN{suffix}"
+        urn_key = f"LINKEDIN_USER_URN{suffix}"
+        label = account
+    else:
+        token_key = "LINKEDIN_ACCESS_TOKEN"
+        urn_key = "LINKEDIN_USER_URN"
+        label = "primary"
+
+    access_token = os.getenv(token_key)
+    user_urn = os.getenv(urn_key)
+    if not access_token or not user_urn:
+        sys.exit(
+            f"Missing {token_key} or {urn_key} in .env.\n"
+            f"Authorize this account first: "
+            f"python scripts/linkedin_authorize.py"
+            + (f" --account {account}" if account else "")
+        )
+    return access_token, user_urn, label
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Post a long-form LinkedIn update.")
     parser.add_argument("slug", nargs="?", help="Blog slug under src/app/blog/")
     parser.add_argument("--file", help="Path to a text file containing the post body")
     parser.add_argument("--dry-run", action="store_true", help="Preview without posting")
+    parser.add_argument(
+        "--account",
+        help="Named LinkedIn account (e.g. 'brand'). Defaults to the primary account "
+             "stored under LINKEDIN_ACCESS_TOKEN / LINKEDIN_USER_URN.",
+    )
     args = parser.parse_args()
 
     load_dotenv(REPO_ROOT / ".env")
@@ -94,19 +127,18 @@ def main() -> None:
     print(f"Length: {len(body)} chars")
 
     if args.dry_run:
+        access_token, user_urn, label = resolve_account_env(args.account)
+        print(f"Account: {label} (URN: {user_urn})")
         print("\n--- DRY RUN ---\n")
         print(body)
         print("\n--- (not posted) ---")
         return
 
-    access_token = os.getenv("LINKEDIN_ACCESS_TOKEN")
-    user_urn = os.getenv("LINKEDIN_USER_URN")
-    if not access_token or not user_urn:
-        sys.exit("Missing LINKEDIN_ACCESS_TOKEN or LINKEDIN_USER_URN. Run linkedin_authorize.py first.")
+    access_token, user_urn, label = resolve_account_env(args.account)
+    print(f"Posting as account: {label} (URN: {user_urn})")
 
     post_id = post_to_linkedin(body, access_token, user_urn)
     print(f"Posted: {post_id}")
-    print("View at: https://www.linkedin.com/in/avinashsangle/recent-activity/all/")
 
 
 if __name__ == "__main__":

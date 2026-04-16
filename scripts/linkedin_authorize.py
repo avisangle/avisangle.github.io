@@ -5,7 +5,16 @@ exchanges the auth code for an access token, fetches your user URN, and writes
 both to .env.
 
 Usage:
-    python scripts/linkedin_authorize.py
+    python scripts/linkedin_authorize.py                    # authorize the primary account
+    python scripts/linkedin_authorize.py --account brand    # authorize a named account
+
+The primary account is stored as LINKEDIN_ACCESS_TOKEN / LINKEDIN_USER_URN.
+Named accounts are stored with a suffix, e.g. --account brand writes:
+    LINKEDIN_ACCESS_TOKEN_BRAND and LINKEDIN_USER_URN_BRAND
+
+To switch LinkedIn accounts during authorization, log into the target account
+in your browser FIRST (or open an incognito window and log in there). The OAuth
+consent page uses whichever account is currently authenticated.
 
 Requirements in .env:
     LINKEDIN_CLIENT_ID
@@ -16,6 +25,7 @@ App must have these OAuth 2.0 scopes approved:
     openid, profile, email, w_member_social
 """
 
+import argparse
 import os
 import secrets
 import sys
@@ -122,6 +132,26 @@ def write_env_value(key: str, value: str) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="LinkedIn OAuth 2.0 authorization.")
+    parser.add_argument(
+        "--account",
+        help="Named LinkedIn account (e.g. 'brand'). Writes to LINKEDIN_ACCESS_TOKEN_<NAME>. "
+             "Omit to authorize the primary account.",
+    )
+    args = parser.parse_args()
+
+    if args.account:
+        suffix = "_" + args.account.upper().replace("-", "_")
+        token_key = f"LINKEDIN_ACCESS_TOKEN{suffix}"
+        urn_key = f"LINKEDIN_USER_URN{suffix}"
+        print(f"Authorizing named account '{args.account}' "
+              f"(will write {token_key} and {urn_key} to .env)\n")
+    else:
+        token_key = "LINKEDIN_ACCESS_TOKEN"
+        urn_key = "LINKEDIN_USER_URN"
+        print("Authorizing primary account "
+              "(will write LINKEDIN_ACCESS_TOKEN and LINKEDIN_USER_URN to .env)\n")
+
     params = {
         "response_type": "code",
         "client_id": CLIENT_ID,
@@ -132,7 +162,9 @@ def main() -> None:
     auth_link = f"{AUTH_URL}?{urllib.parse.urlencode(params)}"
 
     print("Opening browser for LinkedIn authorization...")
-    print(f"If it doesn't open, visit: {auth_link}\n")
+    print("Tip: to authorize a DIFFERENT LinkedIn account, log into that account")
+    print("     in the browser FIRST (or use an incognito window).")
+    print(f"If browser doesn't open, visit: {auth_link}\n")
     webbrowser.open(auth_link)
 
     run_local_server()
@@ -150,12 +182,15 @@ def main() -> None:
     print("Fetching user URN...")
     user_urn = fetch_user_urn(access_token)
 
-    write_env_value("LINKEDIN_ACCESS_TOKEN", access_token)
-    write_env_value("LINKEDIN_USER_URN", user_urn)
+    write_env_value(token_key, access_token)
+    write_env_value(urn_key, user_urn)
 
-    print("\nSaved LINKEDIN_ACCESS_TOKEN and LINKEDIN_USER_URN to .env")
+    print(f"\nSaved {token_key} and {urn_key} to .env")
     print(f"User URN: {user_urn}")
     print("Token valid for 60 days. Re-run this script when it expires.")
+    if args.account:
+        print(f"\nTo post from this account, use: "
+              f"python scripts/post_to_linkedin.py <slug> --account {args.account}")
 
 
 if __name__ == "__main__":
