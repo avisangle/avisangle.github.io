@@ -36,6 +36,9 @@ yarn-error.log*
 # credentials / secrets
 scripts/credentials/
 
+# local GSC time-series snapshots (built up by /review-gsc-ranking)
+.claude/gsc-snapshots/
+
 # vercel
 .vercel
 

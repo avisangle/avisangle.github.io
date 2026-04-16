@@ -15,6 +15,20 @@
 - Updated blog index (featured + grid card), sitemap, llms.txt
 - Build passes clean
 
+### New Custom Command: /review-gsc-ranking
+- `/review-gsc-ranking [days]` - fetches GSC data via `scripts/search_console_report.py --json`, compares against a prior local snapshot, flags pages/queries with ranking drops, identifies page-2 opportunities
+- Snapshot-based trend analysis: saves to `.claude/gsc-snapshots/YYYY-MM-DD.json`, compares against most recent snapshot >=7 days old
+- First run establishes baseline (no comparison possible). Subsequent runs show trends.
+- Auto-prunes snapshots older than 90 days
+- Gitignored `.claude/gsc-snapshots/` (local time-series, not repo content)
+- Suggested cadence: weekly via `/loop 7d /review-gsc-ranking` or manual Monday morning run
+
+### Remote Triggers Scheduled
+- `broken-link-checker` (trig_01VicjtAw1vn4ThQPgEdWzDd) - daily 10 PM IST, scans blog posts for broken external links, opens PR with fixes
+- `trending-topic-scout` (trig_012X4h3xgiVVg4ZFLvRu2X3N) - Fridays 6 PM IST, detects trending topics and appends to `.claude/topic-suggestions.md`, points to `/research-topic` as next step (not a full brief)
+- Both use claude-opus-4-6 in Default environment
+- Manage at https://claude.ai/code/scheduled
+
 ### New Custom Commands: /promote-blogpost + /post-blogpost
 - `/promote-blogpost <slug>` - drafts social media posts in `src/app/blog/<slug>/social/` for 6 platforms (Twitter, LinkedIn, Reddit, Dev.to, Hashnode, HN)
 - `/post-blogpost <slug> <platform>` - validates draft, shows preview, gets explicit confirmation, then posts via existing `post_to_*.py` scripts
