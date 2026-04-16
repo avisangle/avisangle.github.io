@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Claude Code Cost Tracking: Monitor and Cut Your Spending",
+                url: "https://avinashsangle.com/blog/claude-code-cost-tracking",
+                datePublished: "2026-04-16",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
                 url: "https://avinashsangle.com/blog/claude-managed-agents",
                 datePublished: "2026-04-09",
@@ -119,22 +126,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Bot" size="xl" className="mx-auto" />
+              <CategoryIcon icon="DollarSign" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Managed Agents vs Agent SDK: Which Should You Use?</h3>
+                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
+                <h3 className="text-2xl font-bold mb-4">Claude Code Cost Tracking: Monitor and Cut Your Spending</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Anthropic launched Claude Managed Agents in beta on April 8, 2026. A practical
-                  decision framework covering the Agent SDK comparison, pricing breakdown with a
-                  worked cost example, and when to pick each option for your workload.
+                  The full guide to tracking Claude Code costs - built-in commands, hidden JSONL
+                  logs, third-party tools like ccusage, budget controls, and 7 practical tips
+                  that cut my token spending by 50%.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 9, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 16, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-managed-agents">Read Article →</Link>
+                  <Link href="/blog/claude-code-cost-tracking">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -147,6 +154,27 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="DollarSign" size="lg" animation="pulse" />
+                <CardTitle>Claude Code Cost Tracking: Monitor and Cut Your Spending</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Track what you spend in Claude Code with built-in commands, hidden JSONL
+                  logs, and tools like ccusage. Plus 7 tips to cut token costs by 50%.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 16, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/claude-code-cost-tracking" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Bot" size="lg" animation="pulse" />
