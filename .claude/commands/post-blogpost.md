@@ -71,37 +71,41 @@ If the dry-run fails (auth error, format error, length over limit), stop and sho
 
 ## Phase 3 - Show Preview
 
-Display the exact content that will be posted:
+**CRITICAL:** You MUST display the full content that will be posted, inline in your response. Do NOT say "see dry-run output above" or reference earlier output - the user cannot re-read that. Copy the actual body text into your response every time.
+
+Wrap the body in a fenced code block so it's visually distinct from surrounding text:
+
+```
+<full post body here - no truncation>
+```
 
 ### For Twitter/LinkedIn
-- Character count vs limit
-- Full body text
-- Link included (verify it's the correct canonical URL)
+- Platform metadata (account handle, char count vs limit, canonical URL check)
+- **Full body text in a fenced code block** (no ellipsis, no truncation)
+- Confirm the blog URL and any @-mention are present
 
 ### For Reddit
-- Each subreddit + title + flair + body preview
-- Count of posts (e.g., "Posting to 2 subreddits: r/ClaudeAI, r/LocalLLaMA")
+- Total subreddit count (e.g., "Posting to 2 subreddits: r/ClaudeAI, r/ChatGPTCoding")
+- For EACH subreddit, show:
+  - Subreddit name, flair, title
+  - **Full body text in a fenced code block** (no truncation)
 
 ### For Dev.to/Hashnode
-- Title
-- Description
-- Tags
-- Canonical URL
-- Cover image URL
-- PUBLISHED flag (warn if `true` - this goes live immediately)
-- First 300 chars of body
+- Header fields: title, description, tags, canonical URL, cover image URL
+- PUBLISHED flag - if `true`, show a bold warning "This will publish LIVE on the platform immediately"
+- **First 800 chars of body in a fenced code block** (full body is typically 10k+ chars so truncation is acceptable here, but quote enough that the user can spot issues in opening paragraphs)
 
 ### For HN (manual)
 - Title (verify ≤80 chars)
 - URL
-- First comment text
+- **Full first comment text in a fenced code block**
 - Instructions: "Submit manually at https://news.ycombinator.com/submit"
 
 ---
 
 ## Phase 4 - Confirm
 
-After showing the preview, ask EXPLICITLY:
+Immediately after the preview (same response, no scrolling required), ask EXPLICITLY:
 
 ```
 This will post PUBLICLY to <platform>.
@@ -111,6 +115,8 @@ This will post PUBLICLY to <platform>.
 
 Post now? (yes/no)
 ```
+
+The preview and the confirmation prompt must be in the SAME response. The user should never have to scroll up or reference another message to see what they are confirming.
 
 Only proceed if the user says "yes", "y", "post", or "confirm". Any other response (including silence or ambiguity) → abort gracefully.
 
@@ -190,6 +196,8 @@ Capture the output, specifically the posted URL(s).
 - [ ] POSTED.md checked for duplicates (warned if already posted)
 - [ ] Dry-run executed and passed
 - [ ] Preview shown with character count, platform, visibility
+- [ ] **Full post body displayed inline in a fenced code block** (not referenced from earlier output)
+- [ ] Preview and confirmation prompt are in the SAME response
 - [ ] Explicit user confirmation received (actual "yes" / "post" / "confirm")
 - [ ] venv activated before running Python
 - [ ] Posted URL captured and reported
