@@ -19,7 +19,7 @@ You are a social media copywriter for avinashsangle.com. You write as Avinash Sa
 ## Phase 1 - Pre-Flight Checks
 
 1. **Verify the article exists:** `src/app/blog/$ARGUMENTS/page.tsx` must be present. If not, stop and tell the user to run `/write-blogpost` first.
-2. **Check OG image:** If `public/og-$ARGUMENTS.png` doesn't exist, report this and suggest running `python scripts/generate_og_image.py $ARGUMENTS` before posting (Dev.to/Hashnode/Twitter previews will be blank without it). Do NOT run the script yourself - just report the suggestion.
+2. **Generate OG image (auto):** If `public/og-$ARGUMENTS.png` doesn't exist, run `source venv/bin/activate && python scripts/generate_og_image.py $ARGUMENTS` to create it. Required for Twitter/LinkedIn/Dev.to/Hashnode previews. If the image already exists, skip - do NOT regenerate without `--force`.
 3. **Check for existing drafts:** If `src/app/blog/$ARGUMENTS/social/` already has files, ask the user whether to overwrite or skip. Don't silently clobber existing work.
 4. **Extract article data:** From the page.tsx, pull out:
    - Title (from metadata)
@@ -240,16 +240,79 @@ Apply these to every platform:
 
 ---
 
-## Phase 4 - Report
+## Phase 4 - Commit and Push
 
-After all 5 files are written, output a report with:
+After all 5 drafts are written (and the OG image exists in public/), commit and push the changes so the OG image is live before any platform fetches the preview.
+
+1. **Stage only the files this command produced:**
+   ```bash
+   git add public/og-$ARGUMENTS.png src/app/blog/$ARGUMENTS/social/
+   ```
+   Do NOT stage unrelated modified files. If other files are dirty in the working tree, leave them untouched.
+
+2. **Show the user the diff stat** before committing:
+   ```bash
+   git diff --cached --stat
+   ```
+
+3. **Commit with a descriptive message:**
+   ```bash
+   git commit -m "$(cat <<'EOF'
+   feat: add OG image + social drafts for $ARGUMENTS post
+
+   - Generated 1200x630 OG image for /blog/$ARGUMENTS
+   - Added social drafts: Twitter, LinkedIn, Reddit (r/ClaudeAI + 2nd sub),
+     Dev.to, Hashnode, Hacker News
+
+   Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
+   EOF
+   )"
+   ```
+
+4. **Push to origin:**
+   ```bash
+   git push origin main
+   ```
+
+5. **Resubmit sitemap to Google Search Console** (helps the post get indexed faster):
+   ```python
+   source venv/bin/activate && python -c "
+   from google.oauth2 import service_account
+   from googleapiclient.discovery import build
+   creds = service_account.Credentials.from_service_account_file(
+       'scripts/credentials/gsc-service-account.json',
+       scopes=['https://www.googleapis.com/auth/webmasters']
+   )
+   service = build('searchconsole', 'v1', credentials=creds)
+   service.sitemaps().submit(
+       siteUrl='sc-domain:avinashsangle.com',
+       feedpath='https://avinashsangle.com/sitemap.xml'
+   ).execute()
+   print('Sitemap resubmitted')
+   "
+   ```
+   If the GSC credentials file is missing or the call fails, log it but keep going - posting can still proceed.
+
+**If any step fails** (non-fast-forward push, pre-commit hook rejection, etc.), STOP and report the error to the user. Do NOT force-push or skip hooks. The user can retry after resolving the conflict.
+
+---
+
+## Phase 5 - Report
+
+After all 5 files are written, committed, and pushed, output a report with:
 
 ### Files created
 List each file path.
 
 ### OG image status
-- If `public/og-$ARGUMENTS.png` exists: "OG image ready at public/og-$ARGUMENTS.png"
-- If not: "Missing OG image. Run: `python scripts/generate_og_image.py $ARGUMENTS`"
+Report whether the OG image was "already present (skipped)" or "generated this run". Either way it should exist at `public/og-$ARGUMENTS.png` by this point.
+
+### Commit status
+Report:
+- Commit SHA (from `git rev-parse --short HEAD`)
+- Files committed (from `git show --stat --name-only HEAD`)
+- Push result (success / failure)
+- Sitemap resubmission result
 
 ### Suggested posting schedule (staggered to avoid spam signals)
 
@@ -306,5 +369,8 @@ menu of available platforms.
 - [ ] No banned words anywhere
 - [ ] No emojis (except LinkedIn hashtags)
 - [ ] Article URL appears in each draft (https://avinashsangle.com/blog/$ARGUMENTS)
-- [ ] OG image status reported
+- [ ] OG image exists at `public/og-$ARGUMENTS.png` (generated if missing)
+- [ ] Committed and pushed to main (OG image + social/ folder only, no unrelated files)
+- [ ] Sitemap resubmitted to Google Search Console
+- [ ] Commit SHA and push result reported
 - [ ] Staggered posting schedule in final report
