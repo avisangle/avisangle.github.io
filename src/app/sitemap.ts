@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       slug: 'gemma-4-models-guide',
-      lastModified: '2026-04-06',
+      lastModified: '2026-04-16',
     },
     {
       slug: 'claude-md-guide',

@@ -27,6 +27,12 @@ export const metadata: Metadata = {
     "Gemma 4 RAM requirements",
     "Gemma 4 tool use",
     "Gemma 4 agentic",
+    "Gemma 4 MLX",
+    "Gemma 4 Mac Mini",
+    "Gemma 4 vs Qwen 3.5",
+    "gemma4 26b ollama",
+    "gemma4 e4b ollama model name",
+    "Gemma 4 quantized",
   ],
   authors: [{ name: "Avinash Sangle", url: "https://avinashsangle.com" }],
   creator: "Avinash Sangle",
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Avinash Sangle",
     type: "article",
     publishedTime: "2026-04-06T00:00:00.000Z",
-    modifiedTime: "2026-04-06T00:00:00.000Z",
+    modifiedTime: "2026-04-16T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -112,13 +118,13 @@ const techArticleSchema = JSON.stringify({
     url: "https://avinashsangle.com",
   },
   datePublished: "2026-04-06",
-  dateModified: "2026-04-06",
+  dateModified: "2026-04-16",
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": "https://avinashsangle.com/blog/gemma-4-models-guide",
   },
   keywords:
-    "Gemma 4, Google Gemma 4, Gemma 4 models, Gemma 4 E2B, Gemma 4 E4B, Gemma 4 26B, Gemma 4 31B, Gemma 4 MoE, open source LLM, Ollama",
+    "Gemma 4, Google Gemma 4, Gemma 4 models, Gemma 4 E2B, Gemma 4 E4B, Gemma 4 26B, Gemma 4 31B, Gemma 4 MoE, open source LLM, Ollama, MLX, Mac Mini, Qwen 3.5, gemma4 ollama model name",
   articleSection: "AI Development",
   wordCount: 2800,
 })
@@ -214,6 +220,30 @@ const faqSchema = JSON.stringify({
       acceptedAnswer: {
         "@type": "Answer",
         text: "Yes, all Gemma 4 models support structured tool use out of the box. You define a function schema and the model returns valid JSON matching that schema. This makes Gemma 4 suitable for building local AI agents with tool-calling capabilities, no prompt engineering tricks required.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What are the exact Ollama model names for Gemma 4?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Ollama model tags are: gemma4 or gemma4:e4b for the E4B edge model (default), gemma4:e2b for the smallest edge model, gemma4:26b for the MoE sweet-spot model, and gemma4:31b for the full Dense model. Running 'ollama run gemma4' pulls E4B by default.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I run Gemma 4 with MLX on a Mac Mini?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. MLX runs Gemma 4 natively on Apple Silicon using the Metal GPU. A Mac Mini M2 with 16GB handles E4B and the 26B MoE comfortably. With 24GB unified memory, you can run the 31B Dense model with Q4 quantization. MLX often delivers faster inference than Ollama on the same Mac hardware because it uses Apple's unified memory architecture directly.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How does Gemma 4 compare to Qwen 3.5?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Gemma 4 wins on parameter efficiency with its MoE architecture (26B total but only 4B active per token) and edge deployment (E2B, E4B). Qwen 3.5 offers toggleable thinking mode for step-by-step reasoning, which Gemma 4 lacks. Both use Apache 2.0 licenses. Pick Gemma 4 for local/mobile with low RAM, Qwen 3.5 for reasoning-heavy tasks.",
       },
     },
   ],
@@ -324,7 +354,9 @@ export default function Gemma4ModelsGuidePage() {
                 <li><Link href="#whats-new" className="text-accent hover:underline">What Changed from Gemma 3 to Gemma 4</Link></li>
                 <li><Link href="#model-sizes" className="text-accent hover:underline">Gemma 4 Model Sizes Explained</Link></li>
                 <li><Link href="#run-locally" className="text-accent hover:underline">How to Run Gemma 4 Locally with Ollama</Link></li>
-                <li><Link href="#comparison" className="text-accent hover:underline">Gemma 4 vs Llama 4 vs Mistral Small 4</Link></li>
+                <li><Link href="#ollama-model-names" className="text-accent hover:underline">Gemma 4 Ollama Model Names Quick Reference</Link></li>
+                <li><Link href="#mlx" className="text-accent hover:underline">Running Gemma 4 with MLX on Mac</Link></li>
+                <li><Link href="#comparison" className="text-accent hover:underline">Gemma 4 vs Llama 4 vs Qwen 3.5 vs Mistral Small 4</Link></li>
                 <li><Link href="#which-model" className="text-accent hover:underline">Which Gemma 4 Model Should You Pick?</Link></li>
                 <li><Link href="#tool-use" className="text-accent hover:underline">Gemma 4 Tool Use and Agentic Workflows</Link></li>
                 <li><Link href="#faq" className="text-accent hover:underline">Frequently Asked Questions</Link></li>
@@ -650,14 +682,159 @@ print(result["response"])`} />
         </div>
       </section>
 
+      {/* Section: Ollama Model Names */}
+      <section id="ollama-model-names" className="section section-alt">
+        <div className="container-project">
+          <h2 className="text-3xl font-bold mb-6">Gemma 4 Ollama Model Names Quick Reference</h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            Ollama uses specific model tags for each Gemma 4 variant. This table lists every
+            available tag so you can copy the exact command you need. The default{" "}
+            <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4</code> tag pulls the
+            E4B model.
+          </p>
+
+          <Card className="mb-6">
+            <CardContent className="pt-6">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left py-3 pr-4 font-semibold">Ollama Model Name</th>
+                      <th className="text-left py-3 pr-4 font-semibold">Variant</th>
+                      <th className="text-left py-3 pr-4 font-semibold">Download Size</th>
+                      <th className="text-left py-3 pr-4 font-semibold">RAM Needed</th>
+                      <th className="text-left py-3 font-semibold">Best For</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4 font-mono text-sm">gemma4</td>
+                      <td className="py-3 pr-4">E4B (default)</td>
+                      <td className="py-3 pr-4">~3GB</td>
+                      <td className="py-3 pr-4">4-6GB</td>
+                      <td className="py-3">Quick start, laptops</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4 font-mono text-sm">gemma4:e2b</td>
+                      <td className="py-3 pr-4">E2B</td>
+                      <td className="py-3 pr-4">~1.5GB</td>
+                      <td className="py-3 pr-4">~2GB</td>
+                      <td className="py-3">Mobile, IoT, edge</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4 font-mono text-sm">gemma4:e4b</td>
+                      <td className="py-3 pr-4">E4B</td>
+                      <td className="py-3 pr-4">~3GB</td>
+                      <td className="py-3 pr-4">4-6GB</td>
+                      <td className="py-3">Same as default</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4 font-mono text-sm">gemma4:26b</td>
+                      <td className="py-3 pr-4">26B MoE</td>
+                      <td className="py-3 pr-4">~16GB</td>
+                      <td className="py-3 pr-4">8-12GB</td>
+                      <td className="py-3">Local coding, agents</td>
+                    </tr>
+                    <tr>
+                      <td className="py-3 pr-4 font-mono text-sm">gemma4:31b</td>
+                      <td className="py-3 pr-4">31B Dense</td>
+                      <td className="py-3 pr-4">~20GB</td>
+                      <td className="py-3 pr-4">20GB+</td>
+                      <td className="py-3">Max quality, servers</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
+
+          <CodeBlock language="bash" filename="terminal" code={`# Pull a specific Gemma 4 model by exact tag
+ollama pull gemma4:e4b     # E4B edge model
+ollama pull gemma4:26b     # 26B MoE (recommended)
+ollama pull gemma4:31b     # 31B Dense (best quality)
+
+# Run interactively
+ollama run gemma4:26b
+
+# List downloaded models to verify
+ollama list | grep gemma4`} />
+
+          <p className="text-lg leading-relaxed mt-6">
+            If you see <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4:latest</code> in
+            your model list, that is the E4B variant. Ollama defaults to E4B when you
+            run <code className="bg-muted px-1 py-0.5 rounded text-sm">ollama run gemma4</code> without
+            a size tag.
+          </p>
+        </div>
+      </section>
+
+      {/* Section: MLX on Mac */}
+      <section id="mlx" className="section">
+        <div className="container-project">
+          <h2 className="text-3xl font-bold mb-6">Running Gemma 4 with MLX on Mac</h2>
+
+          <p className="text-lg leading-relaxed mb-6">
+            If you have an Apple Silicon Mac (M1/M2/M3/M4), MLX is an alternative to Ollama that
+            runs models natively on the Metal GPU. MLX often delivers faster token generation than
+            Ollama on the same hardware because it skips the GGUF conversion layer and uses
+            Apple&apos;s unified memory architecture directly.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            This matters especially for the Gemma 4 26B MoE and 31B Dense models. On a Mac Mini
+            with 24GB or 32GB unified memory, MLX can run these larger models with better
+            throughput than Ollama since the Metal backend handles the MoE expert routing
+            efficiently.
+          </p>
+
+          <CodeBlock language="bash" filename="terminal" code={`# Install mlx-lm
+pip install mlx-lm
+
+# Run Gemma 4 E4B with MLX
+mlx_lm.generate --model mlx-community/gemma-4-e4b-it-4bit \\
+  --prompt "Explain Python decorators in one paragraph"
+
+# Run Gemma 4 26B MoE (needs 16GB+ unified memory)
+mlx_lm.generate --model mlx-community/gemma-4-26b-it-4bit \\
+  --prompt "Write a function to parse CSV files"
+
+# Start an OpenAI-compatible server
+mlx_lm.server --model mlx-community/gemma-4-26b-it-4bit --port 8080`} />
+
+          <Card className="card-accent-left mt-6 mb-6">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <CategoryIcon icon="Laptop" size="sm" /> Mac Hardware Recommendations
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="skill-list">
+                <li><strong>Mac Mini M2 (16GB):</strong> Runs E4B and 26B MoE comfortably with MLX. The MoE model is the sweet spot for this config.</li>
+                <li><strong>Mac Mini M2/M4 (24GB):</strong> Runs 26B MoE at full speed and can handle 31B Dense with Q4 quantization.</li>
+                <li><strong>MacBook Air M3 (16GB):</strong> E4B runs great, 26B MoE works but watch thermal throttling on sustained generation.</li>
+                <li><strong>Mac Studio / Mac Pro (32GB+):</strong> Runs 31B Dense at full quality. Overkill for smaller variants.</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <p className="text-lg leading-relaxed">
+            <strong>Ollama vs MLX:</strong> Ollama is easier to set up (one command) and has a
+            broader ecosystem (REST API, tool use support). MLX gives you better raw performance
+            on Apple Silicon and more control over quantization. For most users, start with Ollama.
+            Switch to MLX if you need faster inference or are building a Mac-native application.
+          </p>
+        </div>
+      </section>
+
       {/* Section: Comparison */}
       <section id="comparison" className="section section-alt">
         <div className="container-project">
-          <h2 className="text-3xl font-bold mb-6">Gemma 4 vs Llama 4 vs Mistral Small 4</h2>
+          <h2 className="text-3xl font-bold mb-6">Gemma 4 vs Llama 4 vs Qwen 3.5 vs Mistral Small 4</h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            Three major open model families dropped updates in early 2026. Each targets different
-            strengths. I&apos;ve been running all three locally and here&apos;s how they compare in practice.
+            Four major open model families are competing in early 2026. Each targets different
+            strengths. I&apos;ve been running all four locally and here&apos;s how they compare in practice.
           </p>
 
           <Card className="mb-8">
@@ -669,6 +846,7 @@ print(result["response"])`} />
                       <th className="text-left py-3 pr-4 font-semibold">Feature</th>
                       <th className="text-left py-3 pr-4 font-semibold">Gemma 4 (26B MoE)</th>
                       <th className="text-left py-3 pr-4 font-semibold">Llama 4 Scout</th>
+                      <th className="text-left py-3 pr-4 font-semibold">Qwen 3.5</th>
                       <th className="text-left py-3 font-semibold">Mistral Small 4</th>
                     </tr>
                   </thead>
@@ -677,40 +855,54 @@ print(result["response"])`} />
                       <td className="py-3 pr-4">Active params</td>
                       <td className="py-3 pr-4">~4B</td>
                       <td className="py-3 pr-4">17B</td>
+                      <td className="py-3 pr-4">7B / 32B / 72B</td>
                       <td className="py-3">24B</td>
                     </tr>
                     <tr className="border-b">
                       <td className="py-3 pr-4">Context window</td>
                       <td className="py-3 pr-4">256K</td>
                       <td className="py-3 pr-4">10M</td>
+                      <td className="py-3 pr-4">128K</td>
                       <td className="py-3">256K</td>
                     </tr>
                     <tr className="border-b">
                       <td className="py-3 pr-4">License</td>
                       <td className="py-3 pr-4">Apache 2.0</td>
                       <td className="py-3 pr-4">Llama Community</td>
+                      <td className="py-3 pr-4">Apache 2.0</td>
                       <td className="py-3">Apache 2.0</td>
                     </tr>
                     <tr className="border-b">
                       <td className="py-3 pr-4">Architecture</td>
                       <td className="py-3 pr-4">MoE</td>
                       <td className="py-3 pr-4">MoE</td>
+                      <td className="py-3 pr-4">Dense</td>
                       <td className="py-3">Dense</td>
                     </tr>
                     <tr className="border-b">
                       <td className="py-3 pr-4">Edge models</td>
                       <td className="py-3 pr-4">Yes (E2B, E4B)</td>
                       <td className="py-3 pr-4">No</td>
+                      <td className="py-3 pr-4">Yes (0.6B, 1.7B)</td>
                       <td className="py-3">No</td>
                     </tr>
                     <tr className="border-b">
                       <td className="py-3 pr-4">Vision</td>
                       <td className="py-3 pr-4">Yes</td>
                       <td className="py-3 pr-4">Yes</td>
+                      <td className="py-3 pr-4">No (Qwen-VL separate)</td>
                       <td className="py-3">Yes</td>
+                    </tr>
+                    <tr className="border-b">
+                      <td className="py-3 pr-4">Thinking mode</td>
+                      <td className="py-3 pr-4">No</td>
+                      <td className="py-3 pr-4">No</td>
+                      <td className="py-3 pr-4">Yes (toggle on/off)</td>
+                      <td className="py-3">No</td>
                     </tr>
                     <tr>
                       <td className="py-3 pr-4">Native tool use</td>
+                      <td className="py-3 pr-4">Yes</td>
                       <td className="py-3 pr-4">Yes</td>
                       <td className="py-3 pr-4">Yes</td>
                       <td className="py-3">Yes</td>
@@ -733,6 +925,16 @@ print(result["response"])`} />
             Llama 4 Scout is in a different league. If you&apos;re processing entire codebases, long
             documents, or need to maintain very long conversations, Llama is the clear choice. But
             you need server hardware to run it - there&apos;s no laptop-friendly Llama 4 variant.
+          </p>
+
+          <p className="text-lg leading-relaxed mb-6">
+            <strong>Qwen 3.5 wins on reasoning flexibility.</strong> Alibaba&apos;s Qwen 3.5 introduced
+            a toggleable thinking mode - you can switch between fast direct responses and slower
+            chain-of-thought reasoning within the same model. The 32B variant competes directly with
+            Gemma 4&apos;s 31B Dense on quality benchmarks, while the 7B version is a strong alternative
+            to Gemma 4&apos;s E4B for laptop use. If you need a model that can reason through complex
+            problems step by step, Qwen 3.5 has an edge. Gemma 4 wins on parameter efficiency and
+            edge deployment, especially with its MoE architecture.
           </p>
 
           <p className="text-lg leading-relaxed mb-6">
@@ -997,6 +1199,47 @@ print(json.dumps(result["message"]["tool_calls"], indent=2))`} />
                   function schema and the model returns valid JSON matching that schema. This works
                   through Ollama&apos;s API and makes Gemma 4 suitable for building local AI agents
                   with tool-calling capabilities.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-9">
+              <AccordionTrigger>What are the exact Ollama model names for Gemma 4?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  The Ollama tags are: <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4</code> or{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4:e4b</code> for the E4B edge model
+                  (default), <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4:e2b</code> for the smallest
+                  edge model, <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4:26b</code> for the 26B MoE,
+                  and <code className="bg-muted px-1 py-0.5 rounded text-sm">gemma4:31b</code> for the 31B Dense.
+                  Running <code className="bg-muted px-1 py-0.5 rounded text-sm">ollama run gemma4</code> pulls
+                  E4B by default.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-10">
+              <AccordionTrigger>Can I run Gemma 4 with MLX on a Mac Mini?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Yes. MLX runs Gemma 4 natively on Apple Silicon using the Metal GPU. A Mac Mini M2
+                  with 16GB handles E4B and the 26B MoE comfortably. With 24GB unified memory, you
+                  can run the 31B Dense with Q4 quantization. MLX often delivers faster inference
+                  than Ollama on the same Mac hardware because it uses Apple&apos;s unified memory
+                  architecture directly.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-11">
+              <AccordionTrigger>How does Gemma 4 compare to Qwen 3.5?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Gemma 4 wins on parameter efficiency with its MoE architecture (26B total but only
+                  4B active per token) and edge deployment (E2B, E4B). Qwen 3.5 offers toggleable
+                  thinking mode for step-by-step reasoning, which Gemma 4 does not have. Both use
+                  Apache 2.0 licenses. Pick Gemma 4 for local or mobile with low RAM, Qwen 3.5 for
+                  reasoning-heavy tasks where chain-of-thought matters.
                 </p>
               </AccordionContent>
             </AccordionItem>
