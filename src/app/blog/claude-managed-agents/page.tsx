@@ -10,7 +10,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
   description:
-    "Anthropic launched Claude Managed Agents in beta. Here's how it compares to the Agent SDK, what it costs, and which one to pick for your workload.",
+    "Should you use Managed Agents ($0.08/hr, hosted) or the Agent SDK (free, self-hosted)? Full comparison with pricing, code, and a decision flowchart.",
   keywords: [
     "Claude Managed Agents",
     "Claude Managed Agents vs Agent SDK",
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
     description:
-      "Anthropic launched Claude Managed Agents in beta. Here's how it compares to the Agent SDK, what it costs, and which one to pick for your workload.",
+      "Should you use Managed Agents ($0.08/hr, hosted) or the Agent SDK (free, self-hosted)? Full comparison with pricing, code, and a decision flowchart.",
     url: "https://avinashsangle.com/blog/claude-managed-agents",
     siteName: "Avinash Sangle",
     type: "article",
     publishedTime: "2026-04-09T00:00:00.000Z",
-    modifiedTime: "2026-04-09T00:00:00.000Z",
+    modifiedTime: "2026-04-16T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
     description:
-      "Anthropic launched Claude Managed Agents in beta. Here's how it compares to the Agent SDK and which one to pick for your workload.",
+      "Managed Agents ($0.08/hr, hosted) vs Agent SDK (free, self-hosted). Pricing math, code, and a decision flowchart to pick the right one.",
     creator: "@avi_sangle",
     images: ["https://avinashsangle.com/og-claude-managed-agents.png"],
   },
@@ -80,7 +80,7 @@ const techArticleSchema = JSON.stringify({
   "@type": "TechArticle",
   headline: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
   description:
-    "Anthropic launched Claude Managed Agents in beta. Here's how it compares to the Agent SDK, what it costs, and which one to pick for your workload.",
+    "Should you use Managed Agents ($0.08/hr, hosted) or the Agent SDK (free, self-hosted)? Full comparison with pricing, code, and a decision flowchart.",
   image: "https://avinashsangle.com/og-claude-managed-agents.png",
   author: {
     "@type": "Person",
@@ -112,7 +112,7 @@ const techArticleSchema = JSON.stringify({
     url: "https://avinashsangle.com",
   },
   datePublished: "2026-04-09",
-  dateModified: "2026-04-09",
+  dateModified: "2026-04-16",
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": "https://avinashsangle.com/blog/claude-managed-agents",

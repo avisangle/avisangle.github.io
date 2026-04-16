@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       slug: 'claude-managed-agents',
-      lastModified: '2026-04-09',
+      lastModified: '2026-04-16',
     },
     {
       slug: 'claude-mythos-preview',
