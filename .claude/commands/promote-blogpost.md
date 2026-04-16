@@ -255,26 +255,37 @@ List each file path.
 
 ```
 Day 0 (today):
-  - LinkedIn  (9:00 AM IST)    python scripts/post_to_linkedin.py $ARGUMENTS --dry-run
-  - Twitter/X (6:30 PM IST)    python scripts/post_to_twitter.py $ARGUMENTS --dry-run
+  - LinkedIn  (9:00 AM IST)    /post-blogpost $ARGUMENTS linkedin
+  - Twitter/X (6:30 PM IST)    /post-blogpost $ARGUMENTS twitter
 
 Day 1:
-  - Reddit    (2:00 PM IST)    python scripts/post_to_reddit.py $ARGUMENTS --dry-run
-  - HN        (2:00 PM IST)    [Manual - submit via news.ycombinator.com/submit]
+  - Reddit    (2:00 PM IST)    /post-blogpost $ARGUMENTS reddit
+  - HN        (2:00 PM IST)    /post-blogpost $ARGUMENTS hn   (manual, shows instructions)
 
 Day 2:
-  - Dev.to    (3:00 PM IST)    python scripts/post_to_devto.py $ARGUMENTS --dry-run
-  - Hashnode  (3:00 PM IST)    python scripts/post_to_hashnode.py $ARGUMENTS --dry-run
+  - Dev.to    (3:00 PM IST)    /post-blogpost $ARGUMENTS devto
+  - Hashnode  (3:00 PM IST)    /post-blogpost $ARGUMENTS hashnode
 
 After platforms are posted:
   - Google indexing:           python scripts/request_indexing.py https://avinashsangle.com/blog/$ARGUMENTS/
 ```
 
+### How to post
+Use `/post-blogpost <slug> <platform>` to publish each platform's draft. The post
+command will:
+1. Validate the draft (run the platform script with `--dry-run`)
+2. Show you a full preview with character count and visibility
+3. Ask for explicit confirmation before posting
+4. Record the posted URL in `src/app/blog/$ARGUMENTS/social/POSTED.md`
+
+If you omit the platform (e.g., `/post-blogpost $ARGUMENTS`), the command shows a
+menu of available platforms.
+
 ### Important reminders
-- Run every script with `--dry-run` first to preview
-- Review and edit drafts before posting - this is a starting point, not final copy
-- Dev.to/Hashnode drafts default to `PUBLISHED: false`. Flip to `true` when ready to go live
-- Reddit: check subreddit rules and flair options before posting (use `python scripts/list_reddit_flairs.py <sub>` if needed)
+- Review and edit drafts before invoking `/post-blogpost` - the AI-generated copy is a starting point, not final
+- Dev.to/Hashnode drafts default to `PUBLISHED: false`. The script creates a draft on the platform, then you manually hit Publish there
+- Reddit: check subreddit rules and flair IDs. If you get a flair error, run `python scripts/list_reddit_flairs.py <sub>` to see valid IDs
+- HN has no API - `/post-blogpost $ARGUMENTS hn` will only display title + first comment for manual submission at news.ycombinator.com/submit
 
 ---
 

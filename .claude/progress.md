@@ -15,11 +15,13 @@
 - Updated blog index (featured + grid card), sitemap, llms.txt
 - Build passes clean
 
-### New Custom Command: /promote-blogpost
-- Added `.claude/commands/promote-blogpost.md` - generates platform-specific social drafts (Twitter, LinkedIn, Reddit, Dev.to, Hashnode, HN) for a published post
-- Drafts written to `src/app/blog/<slug>/social/` matching existing `post_to_*.py` script format
-- Safe defaults: --dry-run in suggested commands, Dev.to PUBLISHED: false
+### New Custom Commands: /promote-blogpost + /post-blogpost
+- `/promote-blogpost <slug>` - drafts social media posts in `src/app/blog/<slug>/social/` for 6 platforms (Twitter, LinkedIn, Reddit, Dev.to, Hashnode, HN)
+- `/post-blogpost <slug> <platform>` - validates draft, shows preview, gets explicit confirmation, then posts via existing `post_to_*.py` scripts
+- Safety: dry-run validation, explicit y/N confirmation before public posting, POSTED.md audit log
+- Dev.to/Hashnode drafts default to PUBLISHED: false (creates draft on platform for manual publish)
 - Updated `/write-blogpost` with Phase 6 to suggest `/promote-blogpost <slug>` after publishing
+- Designed for staggered posting (Day 0/1/2) via separate invocations rather than same-day blast
 
 ## 2026-04-05
 
