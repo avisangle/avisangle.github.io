@@ -151,6 +151,24 @@ Update `.claude/progress.md` with:
 
 ---
 
+## Phase 6 — Suggest Next Step
+
+At the very end of your final report, include this block to prompt the next action:
+
+```
+### Next: Generate social media drafts
+Run: /promote-blogpost $ARGUMENTS
+
+This will generate platform-specific drafts (Twitter, LinkedIn, Reddit, Dev.to,
+Hashnode, HN) in src/app/blog/$ARGUMENTS/social/ and report a staggered posting
+schedule. Drafts default to safe settings (Dev.to PUBLISHED: false, all scripts
+with --dry-run) so nothing goes live until you review.
+```
+
+Do not run the promote command yourself. Let the user invoke it when they're ready.
+
+---
+
 ## Quality Checklist (verify before completing)
 
 - [ ] Title is 55-65 characters
