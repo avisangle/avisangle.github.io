@@ -11,6 +11,7 @@
 - Expertise: Claude Code, AI Automation, Model Context Protocol, DevOps, Generative AI
 
 ## Blog Posts
+- [Getting Started with the ant CLI: Deploy Claude Agents](https://avinashsangle.com/blog/ant-cli-getting-started): Install the ant CLI, create your first managed agent, and deploy it in under 10 minutes. YAML version control, scripting patterns, and CI/CD.
 - [Claude Code Cost Tracking: Monitor and Cut Your Spending](https://avinashsangle.com/blog/claude-code-cost-tracking): Track Claude Code costs with built-in commands, JSONL logs, ccusage, and 7 tips to cut spending by 50%.
 - [Claude Managed Agents vs Agent SDK: Which Should You Use?](https://avinashsangle.com/blog/claude-managed-agents): Decision framework for Anthropic's new Claude Managed Agents beta vs the Agent SDK. Covers pricing, MCP integration, and when to pick each.
 - [Claude Mythos: What It Means for Developers Who Can't Use It](https://avinashsangle.com/blog/claude-mythos-preview): Analysis of Anthropic's restricted Claude Mythos Preview release, Project Glasswing, benchmarks vs Opus 4.6, and practical guidance for developers.

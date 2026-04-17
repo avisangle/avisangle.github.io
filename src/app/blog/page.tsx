@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Getting Started with the ant CLI: Deploy Claude Agents",
+                url: "https://avinashsangle.com/blog/ant-cli-getting-started",
+                datePublished: "2026-04-18",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Code Cost Tracking: Monitor and Cut Your Spending",
                 url: "https://avinashsangle.com/blog/claude-code-cost-tracking",
                 datePublished: "2026-04-16",
@@ -126,22 +133,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="DollarSign" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Terminal" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Code Cost Tracking: Monitor and Cut Your Spending</h3>
+                <h3 className="text-2xl font-bold mb-4">Getting Started with the ant CLI: Deploy Claude Agents</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  The full guide to tracking Claude Code costs - built-in commands, hidden JSONL
-                  logs, third-party tools like ccusage, budget controls, and 7 practical tips
-                  that cut my token spending by 50%.
+                  Install the ant CLI, create your first managed agent, and deploy it in
+                  under 10 minutes. Covers YAML version control, scripting patterns, and
+                  CI/CD integration for Anthropic&apos;s new CLI.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 16, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 18, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-code-cost-tracking">Read Article →</Link>
+                  <Link href="/blog/ant-cli-getting-started">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -154,6 +161,27 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Terminal" size="lg" animation="pulse" />
+                <CardTitle>Getting Started with the ant CLI: Deploy Claude Agents</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Install the ant CLI, create your first managed agent, and deploy it in
+                  under 10 minutes. YAML version control, scripting patterns, and CI/CD.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 18, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/ant-cli-getting-started" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="DollarSign" size="lg" animation="pulse" />

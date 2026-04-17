@@ -1,5 +1,15 @@
 # Progress Log
 
+## 2026-04-18
+
+### Published Blog Post: Getting Started with the ant CLI
+- Published "Getting Started with the ant CLI: Deploy Claude Agents" at /blog/ant-cli-getting-started
+- ~2800 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo
+- Covers: install, core concepts, first agent walkthrough, YAML version control, CLI vs curl vs SDK, scripting patterns
+- Updated blog index (featured + grid card), sitemap, llms.txt
+- First dedicated ant CLI tutorial on the internet - zero competition
+
 ## 2026-04-16
 
 ### Content Brief: Claude Code Cost Tracking

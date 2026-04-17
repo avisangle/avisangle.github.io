@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'ant-cli-getting-started',
+      lastModified: '2026-04-18',
+    },
+    {
       slug: 'claude-code-cost-tracking',
       lastModified: '2026-04-16',
     },
