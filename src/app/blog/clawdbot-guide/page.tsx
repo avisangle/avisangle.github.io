@@ -1209,7 +1209,7 @@ pnpm gateway:watch`}
           <p className="text-lg leading-relaxed mb-6">
             Clawdbot itself is <strong>free and open source</strong> under the MIT license. You
             can clone the{" "}
-            <Link href="https://github.com/nichochar/clawdbot" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <Link href="https://github.com/clawdbot/clawdbot" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               Clawdbot GitHub repository
             </Link>,
             build it, and run it without paying anything for the software.
