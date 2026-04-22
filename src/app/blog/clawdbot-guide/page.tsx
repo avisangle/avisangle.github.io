@@ -337,7 +337,7 @@ export default function ClawdbotGuideBlogPage() {
               "@type": "Person",
               name: "Peter Steinberger",
             },
-            downloadUrl: "https://github.com/clawdbot/clawdbot",
+            downloadUrl: "https://github.com/openclaw/openclaw",
             softwareVersion: "2026.1.24",
             description: "Personal AI assistant that runs on your own devices. Works on WhatsApp, Telegram, Discord, Slack, Signal, iMessage and more.",
           }),
@@ -1102,7 +1102,7 @@ clawdbot agent --message "What can you help me with?" --thinking high`}
 
             <h3 className="text-xl font-bold mb-4">Building from Source</h3>
             <CodeBlock
-              code={`git clone https://github.com/clawdbot/clawdbot.git
+              code={`git clone https://github.com/openclaw/openclaw.git
 cd clawdbot
 pnpm install
 pnpm ui:build    # auto-installs UI deps
@@ -1209,7 +1209,7 @@ pnpm gateway:watch`}
           <p className="text-lg leading-relaxed mb-6">
             Clawdbot itself is <strong>free and open source</strong> under the MIT license. You
             can clone the{" "}
-            <Link href="https://github.com/clawdbot/clawdbot" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+            <Link href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               Clawdbot GitHub repository
             </Link>,
             build it, and run it without paying anything for the software.
@@ -1582,7 +1582,7 @@ tail -f ~/Library/Logs/clawdbot/clawdbot.log`} />
                 <div className="flex gap-4 flex-wrap">
                   <Button asChild>
                     <Link
-                      href="https://github.com/clawdbot/clawdbot"
+                      href="https://github.com/openclaw/openclaw"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
