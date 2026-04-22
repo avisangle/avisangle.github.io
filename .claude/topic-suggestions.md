@@ -28,3 +28,30 @@ Searching "ant cli anthropic tutorial" and "ant cli getting started guide" retur
 ### Suggested next step
 
 `/research-topic "ant-cli-getting-started"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-04-20: Claude Code Security Review GitHub Action - Automated Vulnerability Scanning for Every PR
+
+**Suggested slug:** `claude-code-security-review-github-actions`
+**Status:** pending research
+
+### Why this topic, why now
+
+On April 16, 2026, The Register reported that a design flaw in Anthropic's Model Context Protocol puts up to 200,000 MCP servers at risk of complete takeover. The same week, The Hacker News covered an MCP vulnerability enabling remote code execution across 7,000+ publicly accessible servers. Security in AI agent workflows is now the dominant conversation on Hacker News and r/ClaudeAI. Meanwhile, Anthropic ships an official GitHub Action (`anthropics/claude-code-security-review`) that uses Claude to analyze code changes for security vulnerabilities on every PR - and almost nobody has written a proper practitioner guide for it. The timing is perfect: developers worried about AI supply chain security are actively looking for ways to harden their own code review pipelines.
+
+### Search demand evidence
+
+- [MCP 'design flaw' puts 200k servers at risk](https://www.theregister.com/2026/04/16/anthropic_mcp_design_flaw/) - The Register, published April 16, 2026
+- [Anthropic MCP Design Vulnerability Enables RCE, Threatening AI Supply Chain](https://thehackernews.com/2026/04/anthropic-mcp-design-vulnerability.html) - The Hacker News, April 2026
+- [Show HN: Wombat, Unix-style rwxd permissions for MCP tool calls](https://news.ycombinator.com/item?id=47418076) - Hacker News front page, active discussion about securing MCP tool access
+- [anthropics/claude-code-security-review](https://github.com/anthropics/claude-code-security-review) - Official Anthropic GitHub Action repo, actively maintained
+- [Automated security code reviews with Claude Code and GitHub Actions](https://derivai.substack.com/p/automated-security-code-reviews-claude-code-github-actions) - DerivAI (one of only two practitioner guides that exist)
+
+### Competition check
+
+Searching "claude code security review github action setup" returns the official repo README, a Gecko Security blog guide, and the DerivAI Substack post. That's it - two practitioner guides total. No tutorial covers the full workflow: installation, customization for team security policies, handling false positives, comparison with traditional SAST tools (Snyk, Semgrep, SonarQube), or integration into an existing CI/CD pipeline alongside linters and tests. The top AI SAST comparison posts (DryRun Security, sanj.dev) don't even mention this action. Wide gap for a hands-on DevOps guide.
+
+### Suggested next step
+
+`/research-topic "claude-code-security-review-github-actions"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
