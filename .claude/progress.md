@@ -1,6 +1,23 @@
 # Progress Log
 
+## 2026-04-22
+
+### Published Blog Post: Claude Code Security Review GitHub Action
+- Published "Claude Code Security Review GitHub Action: 2026 Setup Guide" at /blog/claude-code-security-review-github-actions
+- ~2800 words, 11 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo
+- Covers: setup, all 9 action inputs, false-positive filtering file example, token cost math, Semgrep/Snyk/SonarQube comparison, prompt injection mitigations, troubleshooting
+- Unique angles competitors don't cover: per-PR dollar math, concrete false-positive markdown file, layered pipeline YAML
+- Updated blog index (featured + grid card), sitemap, llms.txt
+
 ## 2026-04-18
+
+### GSC Ranking Review
+- Run date: 2026-04-18
+- Period: 2026-03-18 to 2026-04-15 (last 28 days)
+- Snapshot saved: .claude/gsc-snapshots/2026-04-18.json
+- Prior snapshot 2026-04-16 skipped (only 2 days old, below 7-day threshold)
+- Key findings: Gemma 4 post has 1,590 impressions but 0.1% CTR at position 11.4 - biggest untapped lever. claude-managed-agents remains the top earner (16 clicks, position 6.1). clawdbot-guide appears twice (trailing-slash duplicate) - canonical issue to fix.
 
 ### Published Blog Post: Getting Started with the ant CLI
 - Published "Getting Started with the ant CLI: Deploy Claude Agents" at /blog/ant-cli-getting-started
