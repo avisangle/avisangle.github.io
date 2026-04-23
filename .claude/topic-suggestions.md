@@ -55,3 +55,31 @@ Searching "claude code security review github action setup" returns the official
 ### Suggested next step
 
 `/research-topic "claude-code-security-review-github-actions"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-04-22: Agent Skills Supply Chain Security - What Claude Code Developers Need to Know
+
+**Suggested slug:** `agent-skills-supply-chain-security`
+**Status:** pending research
+
+### Why this topic, why now
+
+Three academic papers dropped in April 2026 alone documenting specific attack vectors against the agent skills ecosystem: DDIPE payload execution via poisoned documentation ([2604.03081](https://arxiv.org/abs/2604.03081)), model-in-skill backdoors ([2604.09378](https://arxiv.org/abs/2604.09378)), and a benchmark of weaponized skills ([2604.15415](https://arxiv.org/abs/2604.15415)). Meanwhile, Snyk's ToxicSkills audit found 36% of skills across registries contain security flaws, and the OWASP launched a dedicated Agentic Skills Top 10 project in March. On April 16, GitHub shipped `gh skill publish` with built-in security features (immutable releases, secret scanning) - a direct response to the supply chain problem. Claude Code users are installing skills faster than ever (90,000+ on skills.sh), but practitioner guidance on vetting skills for Claude Code specifically is thin.
+
+### Search demand evidence
+
+- [Agent Skills - Open Security Database](https://news.ycombinator.com/item?id=47402118) - Hacker News front page, active security-focused discussion (posted April 2026)
+- [RCE in Your Test Suite: How AI Agent Skills Bypass Every Skill Security Scanner](https://news.ycombinator.com/item?id=47337062) - Hacker News thread showing even scanners can be bypassed (posted April 2026)
+- [Show HN: Scanning 277 AI agent skills for security issues](https://news.ycombinator.com/item?id=47234428) - active Show HN thread on skill scanning (posted March-April 2026)
+- [Snyk ToxicSkills: Prompt Injection in 36%, 1,467 Malicious Payloads](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/) - major security research report (published February 2026)
+- [Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems](https://arxiv.org/abs/2604.03081) - academic paper documenting the DDIPE attack vector (published April 2026)
+- [OWASP Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/) - new OWASP project launched from Oslo summit (March 2026)
+
+### Competition check
+
+The closest direct competitor is a Repello AI blog post ("Claude Code Skill Security: How to Audit Any Skill Before You Run It") that focuses on manual auditing and promotes their SkillCheck scanner. OpenClaw-focused articles from reco.ai, sangfor.com, and cyberdesserts cover the ClawHub registry crisis but don't address the Claude Code skill installation workflow. OWASP guides target the broader agentic applications space, not skills specifically. No existing article ties together the academic attack research, real-world incidents, the OWASP framework, `gh skill` security features, AND practical Claude Code permission configuration into a single practitioner guide.
+
+### Suggested next step
+
+`/research-topic "agent-skills-supply-chain-security"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
