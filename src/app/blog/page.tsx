@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Harden Claude Code GitHub Actions: Prompt Injection Defense",
+                url: "https://avinashsangle.com/blog/hardening-ai-agents-cicd-prompt-injection",
+                datePublished: "2026-04-25",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Code Security Review GitHub Action: 2026 Setup Guide",
                 url: "https://avinashsangle.com/blog/claude-code-security-review-github-actions",
                 datePublished: "2026-04-22",
@@ -140,22 +147,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ShieldCheck" size="xl" className="mx-auto" />
+              <CategoryIcon icon="ShieldAlert" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Code Security Review GitHub Action: 2026 Setup Guide</h3>
+                <p className="text-accent font-semibold mb-2">DEVSECOPS</p>
+                <h3 className="text-2xl font-bold mb-4">Harden Claude Code GitHub Actions: Prompt Injection Defense</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Set up Anthropic&apos;s Claude Code Security Review GitHub Action end to
-                  end: workflow YAML, false positive tuning, token cost math, and a layered
-                  pipeline with Semgrep and Snyk.
+                  Defend Claude Code, Gemini CLI, and Copilot Agent in GitHub Actions
+                  against the April 2026 Comment and Control CVE. Tool allowlists, OIDC
+                  via Bedrock, script caps, and a before/after hardened workflow.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 22, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 25, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-code-security-review-github-actions">Read Article →</Link>
+                  <Link href="/blog/hardening-ai-agents-cicd-prompt-injection">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -168,6 +175,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="ShieldAlert" size="lg" animation="pulse" />
+                <CardTitle>Harden Claude Code GitHub Actions: Prompt Injection Defense</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Defend Claude Code workflows against the April 2026 Comment and Control
+                  CVE. Tool allowlists, OIDC via Bedrock, script caps, egress blocks, and a
+                  before/after hardened workflow.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 25, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/hardening-ai-agents-cicd-prompt-injection" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ShieldCheck" size="lg" animation="pulse" />

@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'hardening-ai-agents-cicd-prompt-injection',
+      lastModified: '2026-04-25',
+    },
+    {
       slug: 'claude-code-security-review-github-actions',
       lastModified: '2026-04-22',
     },

@@ -1,5 +1,32 @@
 # Progress Log
 
+## 2026-04-25
+
+### Published Blog Post: Harden Claude Code GitHub Actions Against Prompt Injection
+- Published "Harden Claude Code GitHub Actions: Prompt Injection Defense" at /blog/hardening-ai-agents-cicd-prompt-injection
+- ~2900 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- Covers: Comment and Control CVE (CVSS 9.4) recap, threat model, allowlist-vs-blocklist, `GITHUB_TOKEN` scoping, OIDC via Bedrock/Vertex, `CLAUDE_CODE_SCRIPT_CAPS`, actor filters, harden-runner block mode, before/after hardened workflow, residual risk
+- Unique angles: assembled hardened workflow nobody else has published; allowlist philosophy; OIDC migration walkthrough
+- Updated blog index (featured + grid card), sitemap, llms.txt, progress
+- Followup: `/promote-blogpost hardening-ai-agents-cicd-prompt-injection`
+
+### Content Brief: Hardening AI Agents in CI/CD Against Prompt Injection
+- Merged PR #19 (topic suggestion) and produced content brief at `.claude/content-briefs/hardening-ai-agents-cicd-prompt-injection.md`
+- Angle: defensive companion to existing `/blog/claude-code-security-review-github-actions` (setup post)
+- News hook: April 15 2026 "Comment and Control" cross-vendor prompt injection (CVSS 9.4) affecting Claude Code, Gemini CLI, GitHub Copilot Agent
+- Competition is news recaps + one reference doc; gap is the assembled hardened workflow with allowlists, OIDC, `CLAUDE_CODE_SCRIPT_CAPS`, harden-runner block mode
+- Verified current flags against Anthropic `claude-code-action/docs/security.md`
+
+## 2026-04-24
+
+### GSC Ranking Review
+- Run date: 2026-04-24
+- Period: 2026-03-24 to 2026-04-21 (last 28 days)
+- Snapshot saved: .claude/gsc-snapshots/2026-04-24.json
+- Prior snapshot: 2026-04-16 (8 days old, 7-day window - not directly click-comparable)
+- Key findings: /blog/gemma-4-models-guide is the biggest page-2 opportunity (pos 10.5, 3,307 impressions, only 3 clicks). /blog/claude-managed-agents per-day click rate dropped sharply (~2/day to ~0.6/day at stable position 6.1 - launch buzz fading). Two new posts showing impressions: /blog/ant-cli-getting-started (239 imp, pos 7) and /blog/claude-code-cost-tracking (178 imp, pos 8.3, first click landed). clawdbot-guide trailing-slash duplicate still present (23.9 vs 14.3).
+
 ## 2026-04-22
 
 ### Published Blog Post: Claude Code Security Review GitHub Action

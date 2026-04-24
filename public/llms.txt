@@ -11,6 +11,7 @@
 - Expertise: Claude Code, AI Automation, Model Context Protocol, DevOps, Generative AI
 
 ## Blog Posts
+- [Harden Claude Code GitHub Actions: Prompt Injection Defense](https://avinashsangle.com/blog/hardening-ai-agents-cicd-prompt-injection): Defend Claude Code, Gemini CLI, and GitHub Copilot Agent in GitHub Actions against the April 2026 Comment and Control CVE. Tool allowlists, OIDC via Bedrock, script caps, harden-runner egress blocks, and a before/after hardened workflow.
 - [Claude Code Security Review GitHub Action: 2026 Setup Guide](https://avinashsangle.com/blog/claude-code-security-review-github-actions): Set up Anthropic's Claude Code Security Review GitHub Action: workflow YAML, false positive tuning, cost math, and comparison with Semgrep and Snyk.
 - [Getting Started with the ant CLI: Deploy Claude Agents](https://avinashsangle.com/blog/ant-cli-getting-started): Install the ant CLI, create your first managed agent, and deploy it in under 10 minutes. YAML version control, scripting patterns, and CI/CD.
 - [Claude Code Cost Tracking: Monitor and Cut Your Spending](https://avinashsangle.com/blog/claude-code-cost-tracking): Track Claude Code costs with built-in commands, JSONL logs, ccusage, and 7 tips to cut spending by 50%.
