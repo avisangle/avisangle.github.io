@@ -55,3 +55,31 @@ Searching "claude code security review github action setup" returns the official
 ### Suggested next step
 
 `/research-topic "claude-code-security-review-github-actions"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-04-24: Hardening AI Coding Agents in CI/CD Against Prompt Injection
+
+**Suggested slug:** `hardening-ai-agents-cicd-prompt-injection`
+**Status:** pending research
+
+### Why this topic, why now
+
+On April 15, 2026, security researcher Aonan Guan (with Johns Hopkins University collaborators) published "Comment and Control" - a cross-vendor prompt injection attack that steals CI/CD secrets from Claude Code Security Review, Google Gemini CLI Action, and GitHub Copilot Agent through nothing more than a crafted PR title or issue comment. Anthropic rated it CVSS 9.4 Critical. All three vendors patched quietly, but the underlying architectural problem (untrusted GitHub input flowing into agents that hold production secrets and unrestricted tool access) affects every team running AI agents in GitHub Actions. The existing coverage is entirely news reporting. No one has written the practitioner's hardening guide: specific YAML changes, `--allowed-tools` allowlisting, OIDC token migration, `CLAUDE_CODE_SCRIPT_CAPS` limits, and before/after workflow comparisons. This is a different article from the existing `claude-code-security-review-github-actions` setup guide - that post teaches you to install the tool, this one teaches you to defend it (and similar tools) from attack.
+
+### Search demand evidence
+
+- [Comment and Control: Prompt Injection to Credential Theft in Claude Code, Gemini CLI, and GitHub Copilot Agent](https://oddguan.com/blog/comment-and-control-prompt-injection-credential-theft-claude-code-gemini-cli-github-copilot/) - Original researcher disclosure, April 15, 2026
+- [Anthropic, Google, Microsoft paid AI bug bounties - quietly](https://www.theregister.com/2026/04/15/claude_gemini_copilot_agents_hijacked/) - The Register, April 15, 2026
+- [Three AI coding agents leaked secrets through a single prompt injection](https://venturebeat.com/security/ai-agent-runtime-security-system-card-audit-comment-and-control-2026) - VentureBeat, April 2026
+- [Claude Code, Gemini CLI, GitHub Copilot Agents Vulnerable to Prompt Injection via Comments](https://www.securityweek.com/claude-code-gemini-cli-github-copilot-agents-vulnerable-to-prompt-injection-via-comments/) - SecurityWeek, April 2026
+- [Claude Code, Gemini CLI, and GitHub Copilot Vulnerable to Prompt Injection via GitHub Comments](https://cybersecuritynews.com/prompt-injection-via-github-comments/) - CybersecurityNews, April 2026
+- [claude-code-action security.md](https://github.com/anthropics/claude-code-action/blob/main/docs/security.md) - Anthropic's own reference doc listing hardening flags (`--allowed-tools`, `CLAUDE_CODE_SCRIPT_CAPS`, OIDC)
+
+### Competition check
+
+Searching "hardening Claude Code GitHub Actions prompt injection" and "securing AI agents CI/CD prompt injection defense" returns only news articles (SecurityWeek, VentureBeat, The Register, CybersecurityNews, GBHackers) and Anthropic's reference `security.md` in the claude-code-action repo. Zero third-party practitioner guides exist. The news articles describe the attack but don't walk through the fix. Anthropic's security.md is a reference doc, not a tutorial. No one has written the "here's the exact YAML diff to lock down your workflow" post that a DevOps engineer would search for after reading the headlines.
+
+### Suggested next step
+
+`/research-topic "hardening-ai-agents-cicd-prompt-injection"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
