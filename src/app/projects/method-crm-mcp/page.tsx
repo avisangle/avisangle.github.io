@@ -30,6 +30,20 @@ export const metadata: Metadata = {
     description: "Production-ready MCP server with 20 tools for Method CRM integration",
     url: "https://avinashsangle.com/projects/method-crm-mcp",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-method-crm-mcp.png",
+        width: 1200,
+        height: 630,
+        alt: "Method CRM MCP Server",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Method CRM MCP Server",
+    description: "Production-ready MCP for Method CRM",
+    images: ["https://avinashsangle.com/og-project-method-crm-mcp.png"],
   },
 }
 

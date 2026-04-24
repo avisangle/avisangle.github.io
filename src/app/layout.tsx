@@ -49,7 +49,7 @@ export const metadata: Metadata = {
       "Building intelligent automation solutions with AI, DevOps, and cloud technologies",
     images: [
       {
-        url: "https://avinashsangle.com/assets/og-home.jpg",
+        url: "https://avinashsangle.com/og-home.png",
         width: 1200,
         height: 630,
         alt: "Avinash Sangle Portfolio",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     title: "Avinash Sangle | AI Automation & DevOps Engineer",
     description:
       "Building intelligent automation solutions with AI, DevOps, and cloud technologies",
-    images: ["https://avinashsangle.com/assets/twitter-card.jpg"],
+    images: ["https://avinashsangle.com/og-home.png"],
   },
   robots: {
     index: true,

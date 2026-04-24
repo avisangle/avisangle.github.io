@@ -30,6 +30,20 @@ export const metadata: Metadata = {
       "AI-powered social media management platform with automated posting and multi-platform support",
     url: "https://avinashsangle.com/projects/social-media-auto-poster",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-social-media-auto-poster.png",
+        width: 1200,
+        height: 630,
+        alt: "Social Media Auto-Poster",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Social Media Auto-Poster",
+    description: "AI-powered SaaS for social media",
+    images: ["https://avinashsangle.com/og-project-social-media-auto-poster.png"],
   },
 }
 

@@ -32,11 +32,20 @@ export const metadata: Metadata = {
     description: "AI-powered Reddit engagement with human oversight and safety controls",
     url: "https://avinashsangle.com/projects/reddit-agent",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-reddit-agent.png",
+        width: 1200,
+        height: 630,
+        alt: "Reddit Comment Engagement Agent",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Reddit Comment Engagement Agent",
     description: "Compliance-first AI engagement for Reddit",
+    images: ["https://avinashsangle.com/og-project-reddit-agent.png"],
   },
 }
 

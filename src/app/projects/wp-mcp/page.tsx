@@ -28,6 +28,20 @@ export const metadata: Metadata = {
     description: "AI-assisted WordPress development using Model Context Protocol.",
     url: "https://avinashsangle.com/projects/wp-mcp",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-wp-mcp.png",
+        width: 1200,
+        height: 630,
+        alt: "WordPress MCP Server",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WordPress MCP Server",
+    description: "AI-assisted WordPress development",
+    images: ["https://avinashsangle.com/og-project-wp-mcp.png"],
   },
 }
 

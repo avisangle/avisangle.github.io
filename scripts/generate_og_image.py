@@ -26,6 +26,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BLOG_ROOT = REPO_ROOT / "src" / "app" / "blog"
+PROJECTS_ROOT = REPO_ROOT / "src" / "app" / "projects"
 PUBLIC_ROOT = REPO_ROOT / "public"
 FONT_PATH = REPO_ROOT / "scripts" / "assets" / "fonts" / "PlusJakartaSans-Bold.ttf"
 
@@ -136,28 +137,58 @@ def render(title: str, category: str, output_path: Path) -> None:
     img.save(output_path, "PNG", optimize=True)
 
 
-def generate_for_slug(slug: str, force: bool = False) -> Path | None:
-    page_tsx = BLOG_ROOT / slug / "page.tsx"
+def generate_for_slug(slug: str, kind: str = "blog", force: bool = False) -> Path | None:
+    root = BLOG_ROOT if kind == "blog" else PROJECTS_ROOT
+    page_tsx = root / slug / "page.tsx"
     if not page_tsx.exists():
-        print(f"  [{slug}] page.tsx not found, skipping")
+        print(f"  [{slug}] page.tsx not found at {page_tsx}, skipping")
         return None
 
     meta = extract_from_tsx(page_tsx)
+    # Prefix project images so the filename namespace is clear
+    if kind == "project" and not meta["og_filename"].startswith("og-project-"):
+        meta["og_filename"] = f"og-project-{slug}.png"
+
     output_path = PUBLIC_ROOT / meta["og_filename"]
 
     if output_path.exists() and not force:
         print(f"  [{slug}] already exists at {output_path.name} (use --force to overwrite)")
         return output_path
 
-    render(meta["title"], meta["category"], output_path)
-    print(f"  [{slug}] -> public/{meta['og_filename']}  (category: {meta['category']})")
+    # Override category for project pages if extraction returned the default
+    category = meta["category"]
+    if kind == "project" and category == "ARTICLE":
+        category = "PROJECT"
+
+    render(meta["title"], category, output_path)
+    print(f"  [{slug}] -> public/{meta['og_filename']}  (category: {category})")
+    return output_path
+
+
+def generate_home(force: bool = False) -> Path | None:
+    output_path = PUBLIC_ROOT / "og-home.png"
+    if output_path.exists() and not force:
+        print(f"  [home] already exists at {output_path.name} (use --force to overwrite)")
+        return output_path
+    render(
+        "Avinash Sangle - AI Automation & DevOps Engineer",
+        "PORTFOLIO",
+        output_path,
+    )
+    print(f"  [home] -> public/og-home.png  (category: PORTFOLIO)")
     return output_path
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate Open Graph images for blog posts.")
+    parser = argparse.ArgumentParser(description="Generate Open Graph images for blog posts, projects, or home.")
     parser.add_argument("slug", nargs="?")
-    parser.add_argument("--all", action="store_true", help="Generate for every post in src/app/blog/")
+    parser.add_argument(
+        "--kind",
+        choices=["blog", "project", "home"],
+        default="blog",
+        help="Which section the slug belongs to (default: blog). Use --kind home to generate the homepage OG.",
+    )
+    parser.add_argument("--all", action="store_true", help="Generate for every page in the chosen section")
     parser.add_argument("--force", action="store_true", help="Overwrite existing images")
     args = parser.parse_args()
 
@@ -166,17 +197,23 @@ def main() -> None:
 
     PUBLIC_ROOT.mkdir(exist_ok=True)
 
+    if args.kind == "home":
+        generate_home(force=args.force)
+        return
+
+    root = BLOG_ROOT if args.kind == "blog" else PROJECTS_ROOT
+
     if args.all:
-        slugs = [p.name for p in sorted(BLOG_ROOT.iterdir()) if (p / "page.tsx").exists()]
-        print(f"Generating OG images for {len(slugs)} posts:")
+        slugs = [p.name for p in sorted(root.iterdir()) if (p / "page.tsx").exists()]
+        print(f"Generating OG images for {len(slugs)} {args.kind} pages:")
         for slug in slugs:
-            generate_for_slug(slug, force=args.force)
+            generate_for_slug(slug, kind=args.kind, force=args.force)
         return
 
     if not args.slug:
-        sys.exit("Provide a blog slug or --all")
+        sys.exit("Provide a slug, or --all, or --kind home")
 
-    generate_for_slug(args.slug, force=args.force)
+    generate_for_slug(args.slug, kind=args.kind, force=args.force)
 
 
 if __name__ == "__main__":

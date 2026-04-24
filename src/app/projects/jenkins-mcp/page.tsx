@@ -30,11 +30,20 @@ export const metadata: Metadata = {
     description: "Enable AI agents to interact with Jenkins through Model Context Protocol",
     url: "https://avinashsangle.com/projects/jenkins-mcp",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-jenkins-mcp.png",
+        width: 1200,
+        height: 630,
+        alt: "Jenkins MCP Server",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jenkins MCP Server | AI Integration",
     description: "Enable AI agents to interact with Jenkins through MCP",
+    images: ["https://avinashsangle.com/og-project-jenkins-mcp.png"],
   },
 }
 

@@ -30,6 +30,20 @@ export const metadata: Metadata = {
     description: "Streamlined OAuth 2.0 setup for Make.com with PKCE security.",
     url: "https://avinashsangle.com/projects/twitter-oauth",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-twitter-oauth.png",
+        width: 1200,
+        height: 630,
+        alt: "Twitter OAuth Setup Wizard",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Twitter OAuth Setup Wizard",
+    description: "OAuth 2.0 setup wizard with PKCE",
+    images: ["https://avinashsangle.com/og-project-twitter-oauth.png"],
   },
 }
 

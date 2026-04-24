@@ -30,11 +30,20 @@ export const metadata: Metadata = {
     description: "AI-powered conversational interface for Jenkins build management",
     url: "https://avinashsangle.com/projects/jenkins-chatbot",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-jenkins-chatbot.png",
+        width: 1200,
+        height: 630,
+        alt: "Jenkins Chatbot Plugin",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jenkins Chatbot Plugin",
     description: "AI-powered conversational interface for Jenkins",
+    images: ["https://avinashsangle.com/og-project-jenkins-chatbot.png"],
   },
 }
 

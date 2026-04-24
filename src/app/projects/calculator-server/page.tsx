@@ -30,6 +30,20 @@ export const metadata: Metadata = {
       "High-performance mathematical computation server using Model Context Protocol",
     url: "https://avinashsangle.com/projects/calculator-server",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-calculator-server.png",
+        width: 1200,
+        height: 630,
+        alt: "Calculator Server | Go-based MCP Server",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Calculator Server | Go-based MCP Server",
+    description: "High-performance MCP server in Go",
+    images: ["https://avinashsangle.com/og-project-calculator-server.png"],
   },
 }
 

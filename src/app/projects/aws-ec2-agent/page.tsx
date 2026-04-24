@@ -33,6 +33,20 @@ export const metadata: Metadata = {
       "Deploy cloud infrastructure via natural language with intelligent self-healing automation.",
     url: "https://avinashsangle.com/projects/aws-ec2-agent",
     type: "article",
+    images: [
+      {
+        url: "https://avinashsangle.com/og-project-aws-ec2-agent.png",
+        width: 1200,
+        height: 630,
+        alt: "AWS EC2 Deployment with AI Agent",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AWS EC2 Deployment with AI Agent",
+    description: "AI-powered EC2 deployment automation",
+    images: ["https://avinashsangle.com/og-project-aws-ec2-agent.png"],
   },
 }
 
