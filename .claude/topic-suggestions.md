@@ -83,3 +83,31 @@ Searching "hardening Claude Code GitHub Actions prompt injection" and "securing 
 ### Suggested next step
 
 `/research-topic "hardening-ai-agents-cicd-prompt-injection"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-04-27: Regression-Proofing Your Claude Code Workflows
+
+**Suggested slug:** `regression-proofing-claude-code-workflows`
+**Status:** pending research
+
+### Why this topic, why now
+
+On April 23, 2026, Anthropic published an engineering postmortem confirming that three separate harness-level changes - a reasoning effort downgrade, a thinking-cache clearing bug, and a system prompt verbosity cap - compounded over seven weeks (March 4 to April 20) to make Claude Code feel noticeably worse for thousands of users. The model itself never changed; the wrapper around it broke. Every article covering this event (12+ across DEV Community, SmartScope, VentureBeat, Simon Willison, DevToolPicks, and others) explains WHAT happened. Not a single one shows developers HOW to protect their own workflows from the next upstream change. The practitioner guide - covering version pinning, explicit effort configuration, regression-detecting hooks, and fixture-based workflow testing - does not exist yet. Developers searching "how to pin Claude Code version" or "Claude Code regression protection" land on Anthropic's docs or the news articles, with no actionable third-party tutorial.
+
+### Search demand evidence
+
+- [An update on recent Claude Code quality reports](https://www.anthropic.com/engineering/april-23-postmortem) - Anthropic engineering blog, published April 23, 2026. The official postmortem confirming three confounding changes.
+- [An update on recent Claude Code quality reports - Hacker News](https://news.ycombinator.com/item?id=47878905) - Active HN discussion thread (posted April 26, 2026), driving fresh traffic to the topic.
+- [Anthropic shipped three regressions in a month and their evals didn't catch one of them](https://machinelearningatscale.substack.com/p/anthropic-shipped-three-regressions) - Substack deep-dive, April 2026. Calls out that "the company with one of the most invested eval infrastructure shipped three intelligence regressions back to back."
+- [Claude Code v2.1.119/v2.1.120 Survival Checklist: eight regressions filed 2026-04-24](https://gist.github.com/yurukusa/a866b4cd2976486156a00c190c39cef6) - Community-maintained rollback guide on GitHub Gist. Shows real developer demand for version pinning and rollback instructions.
+- [Feature Request: Auto-rollback alert for critical bugs + Better version management](https://github.com/anthropics/claude-code/issues/22106) - Open issue on the official repo requesting better version management. Direct signal that developers want this tooling.
+- [The Claude Code Nerf: An Invisible, Unilateral Downgrade at the Runtime Layer](https://yage.ai/share/claude-code-runtime-regression-en-20260407.html) - Blog post from April 7 documenting the quality drop before Anthropic acknowledged it.
+
+### Competition check
+
+Searching "Claude Code version pinning regression protection tutorial" and "how to protect Claude Code workflow from quality drops" returns only Anthropic's own docs (model-config page, advanced setup page) and the 12+ news/analysis articles about the postmortem. The closest practitioner-adjacent piece is a Substack post from coworkoperator.com arguing developers should "stop asking if Claude got worse" and instead build resilient workflows - but it's an opinion essay, not a step-by-step guide. Individual effort-level configuration guides exist (MindStudio, BSWEN, SitePoint), but none frame the problem as regression defense or combine version pinning, effort locks, hooks, and fixture testing into one guide. Wide-open gap for a hands-on DevOps-flavored tutorial.
+
+### Suggested next step
+
+`/research-topic "regression-proofing-claude-code-workflows"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
