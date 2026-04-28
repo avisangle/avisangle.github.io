@@ -1,5 +1,27 @@
 # Progress Log
 
+## 2026-04-28
+
+### Published Blog Post: Regression-Proof Claude Code Workflows
+- Published "Regression-Proof Claude Code Workflows: Pin, Lock, Test" at /blog/regression-proofing-claude-code-workflows
+- ~3,000 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- News hook: Anthropic April 23 postmortem (3 wrapper regressions over 7 weeks) + April 24 v2.1.119/v2.1.120 incident (8 community-filed regressions in 24h)
+- Covers: postmortem recap, v2.1.119 incident, npm pinning + ~/.npmrc lock, effortLevel + CLAUDE_CODE_EFFORT_LEVEL precedence, availableModels + modelOverrides for Bedrock, Stop-hook canary with full Python script, 4-fixture suite, 5-step rollback runbook, residual risk
+- Unique angle: assembled defense layers (CLI pin + effort lock + model allowlist + Stop hook + fixture suite + rollback) - nobody else combines all five
+- Original code: 35-line check-regression.py Stop-hook canary
+- Updated blog index (featured + grid card + JSON-LD), sitemap, llms.txt
+- Followup: `/promote-blogpost regression-proofing-claude-code-workflows`
+
+### Content Brief: Regression-Proofing Your Claude Code Workflows
+- PR #20 (topic suggestion) merged on remote; pulled.
+- Produced content brief at `.claude/content-briefs/regression-proofing-claude-code-workflows.md`
+- News hook: Anthropic April 23 postmortem (3 wrapper regressions over 7 weeks: reasoning-effort downgrade, thinking-cache `clear_thinking_20251015` bug, system-prompt verbosity cap) + the v2.1.119/v2.1.120 incident (8 community-filed regressions in 24h)
+- Verified flags via Context7/web fetch of `code.claude.com/docs/en/model-config`: `effortLevel`, `availableModels`, `modelOverrides`, `ANTHROPIC_DEFAULT_OPUS_MODEL`, `CLAUDE_CODE_EFFORT_LEVEL`, `CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING`
+- Verified pin commands from yurukusa gist: `npm install -g @anthropic-ai/claude-code@2.1.117` + `~/.npmrc` lock
+- Competition gap: zero practitioner posts combine version pinning + effort lock + allowlist + stop-hook + fixture suite. Closest competitor is a Substack opinion essay.
+- Ready for `/write-blogpost regression-proofing-claude-code-workflows`
+
 ## 2026-04-25
 
 ### Published Blog Post: Harden Claude Code GitHub Actions Against Prompt Injection
