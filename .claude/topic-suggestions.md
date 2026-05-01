@@ -111,3 +111,31 @@ Searching "Claude Code version pinning regression protection tutorial" and "how 
 ### Suggested next step
 
 `/research-topic "regression-proofing-claude-code-workflows"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-04-29: The MCP Code Execution Pattern - How to Expose Large APIs in 1,000 Tokens
+
+**Suggested slug:** `mcp-code-execution-pattern`
+**Status:** pending research
+
+### Why this topic, why now
+
+MCP tool bloat has become the #1 pain point for Claude Code developers connecting to multiple MCP servers. Three MCP servers can consume 143,000 of a 200,000-token context window before an agent reads a single user message - 72% of working memory gone on tool descriptions that mostly never get called. In April 2026, Cloudflare shipped "Code Mode" during their Agents Week, proving that a code-execution-based MCP server can expose 2,500+ API endpoints using only two tools (`search()` and `execute()`) in roughly 1,000 tokens. That's a 99.9% reduction. Anthropic's own engineering blog described the same pattern. And on April 28, Claude Code v2.1.121 shipped the `alwaysLoad` MCP option - a new escape hatch for controlling which servers load eagerly versus on-demand. The problem is well-documented, the solutions are shipping, but no practitioner guide ties them together for Claude Code developers building or consuming MCP servers.
+
+### Search demand evidence
+
+- [Cloudflare Launches Code Mode MCP Server to Optimize Token Usage for AI Agents](https://www.infoq.com/news/2026/04/cloudflare-code-mode-mcp-server/) - InfoQ, April 2026. Industry-level coverage of the pattern.
+- [How MCP Tool Definitions Inflate Your AI Agent Token Costs](https://docs.bswen.com/blog/2026-04-24-mcp-token-overhead/) - BSWEN, April 24, 2026. Published THIS WEEK, showing active developer pain.
+- [Optimizing MCP with Code Mode: High-Efficiency Long-Tail Execution](https://earezki.com/ai-news/2026-04-27-code-mode-for-mcp-the-long-tail-escape-hatch-not-the-front-door/) - earezki.com, April 27, 2026. Analysis piece posted two days ago.
+- [Reducing MCP token usage by 100x - you don't need code mode](https://www.speakeasy.com/blog/how-we-reduced-token-usage-by-100x-dynamic-toolsets-v2) - Speakeasy, April 2026. Counter-argument proposing dynamic toolsets instead - shows ACTIVE DEBATE about the right approach.
+- [Claude Code Just Cut MCP Context Bloat by 46.9%](https://medium.com/@joe.njenga/claude-code-just-cut-mcp-context-bloat-by-46-9-51k-tokens-down-to-8-5k-with-new-tool-search-ddf9e905f734) - Medium (Joe Njenga), April 2026. Covers Tool Search specifically but not the code execution pattern.
+- [10 strategies to reduce MCP token bloat](https://thenewstack.io/how-to-reduce-mcp-token-bloat/) - The New Stack, April 2026. Listicle covering multiple strategies broadly.
+
+### Competition check
+
+Searching "MCP code execution pattern tutorial" and "build code mode MCP server" returns Cloudflare's own blog posts (code-mode-mcp/ and code-mode/), the InfoQ news article, and a handful of Medium opinion pieces. All existing coverage falls into two buckets: (a) Cloudflare-specific articles explaining Code Mode as a Cloudflare product, or (b) broad listicles covering 10+ token reduction strategies without going deep on any one. No guide walks a Claude Code developer through understanding the code execution pattern, deciding when it's the right approach versus deferred loading or tool filtering, and applying it to their own APIs. The Speakeasy counter-article shows the debate is live but nobody has written the balanced practitioner take.
+
+### Suggested next step
+
+`/research-topic "mcp-code-execution-pattern"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
