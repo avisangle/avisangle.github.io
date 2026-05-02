@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'mcp-code-execution-pattern',
+      lastModified: '2026-05-03',
+    },
+    {
       slug: 'regression-proofing-claude-code-workflows',
       lastModified: '2026-04-28',
     },

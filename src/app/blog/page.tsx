@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "MCP Code Execution Pattern: A Hands-On Claude Code Guide",
+                url: "https://avinashsangle.com/blog/mcp-code-execution-pattern",
+                datePublished: "2026-05-03",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Regression-Proof Claude Code Workflows: Pin, Lock, Test",
                 url: "https://avinashsangle.com/blog/regression-proofing-claude-code-workflows",
                 datePublished: "2026-04-28",
@@ -154,22 +161,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ShieldHalf" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Boxes" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Regression-Proof Claude Code Workflows: Pin, Lock, Test</h3>
+                <p className="text-accent font-semibold mb-2">MODEL CONTEXT PROTOCOL</p>
+                <h3 className="text-2xl font-bold mb-4">MCP Code Execution Pattern: A Hands-On Claude Code Guide</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  After Anthropic&apos;s April 2026 postmortem revealed three Claude Code
-                  regressions, here is how to pin the CLI, lock <code>effortLevel</code>,
-                  allowlist models, add a stop-hook canary, and keep a fixture suite.
+                  Three MCP servers can eat 72% of a 200K context window. The MCP code
+                  execution pattern collapses 2,500 endpoints into roughly 1,000 tokens.
+                  Code execution vs dynamic toolsets vs deferred loading, side by side, with
+                  a working Python build and Claude Code v2.1.121 <code>alwaysLoad</code> config.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> April 28, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 3, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/regression-proofing-claude-code-workflows">Read Article →</Link>
+                  <Link href="/blog/mcp-code-execution-pattern">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -182,6 +190,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Boxes" size="lg" animation="pulse" />
+                <CardTitle>MCP Code Execution Pattern: A Hands-On Claude Code Guide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Three MCP servers can eat 72% of a 200K context window. The code execution
+                  pattern compares against dynamic toolsets and Tool Search, with a working
+                  Python build and Claude Code v2.1.121 <code>alwaysLoad</code> config.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 3, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/mcp-code-execution-pattern" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ShieldHalf" size="lg" animation="pulse" />

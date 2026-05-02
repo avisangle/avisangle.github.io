@@ -11,6 +11,7 @@
 - Expertise: Claude Code, AI Automation, Model Context Protocol, DevOps, Generative AI
 
 ## Blog Posts
+- [MCP Code Execution Pattern: A Hands-On Claude Code Guide](https://avinashsangle.com/blog/mcp-code-execution-pattern): Practitioner guide to the MCP code execution pattern. Three MCP servers can eat 72% of a 200K context window; code mode collapses 2,500 endpoints into ~1,000 tokens. Code execution vs dynamic toolsets vs deferred loading, with a working Python search/execute server and Claude Code v2.1.121 alwaysLoad configuration.
 - [Regression-Proof Claude Code Workflows: Pin, Lock, Test](https://avinashsangle.com/blog/regression-proofing-claude-code-workflows): Practitioner playbook after Anthropic's April 23 2026 postmortem. Pin the CLI to v2.1.117, lock effortLevel, allowlist models with availableModels and modelOverrides, add a regression-detecting Stop hook, and keep a fixture suite.
 - [Harden Claude Code GitHub Actions: Prompt Injection Defense](https://avinashsangle.com/blog/hardening-ai-agents-cicd-prompt-injection): Defend Claude Code, Gemini CLI, and GitHub Copilot Agent in GitHub Actions against the April 2026 Comment and Control CVE. Tool allowlists, OIDC via Bedrock, script caps, harden-runner egress blocks, and a before/after hardened workflow.
 - [Claude Code Security Review GitHub Action: 2026 Setup Guide](https://avinashsangle.com/blog/claude-code-security-review-github-actions): Set up Anthropic's Claude Code Security Review GitHub Action: workflow YAML, false positive tuning, cost math, and comparison with Semgrep and Snyk.
