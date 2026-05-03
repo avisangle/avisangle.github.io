@@ -111,3 +111,30 @@ Searching "Claude Code version pinning regression protection tutorial" and "how 
 ### Suggested next step
 
 `/research-topic "regression-proofing-claude-code-workflows"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-03: Running claude ultrareview in CI/CD Pipelines
+
+**Suggested slug:** `ultrareview-ci-cd-pipelines`
+**Status:** pending research
+
+### Why this topic, why now
+
+On April 28, 2026, Claude Code v2.1.120 quietly shipped `claude ultrareview [target]` - a non-interactive CLI subcommand that runs the multi-agent ultrareview from CI scripts and pipelines. It prints findings to stdout (with `--json` for structured output) and exits 0 on success or 1 on failure. This is significant because every existing ultrareview article (8+ published since the April 16 launch) explicitly states that ultrareview is interactive-only and cannot run in automated pipelines. That limitation just disappeared, and nobody has written about it yet. The timing is sharpened by GitHub's April 27 announcement that Copilot code review will start consuming GitHub Actions minutes on June 1, 2026, pushing teams to evaluate CI code review alternatives before the billing change hits.
+
+### Search demand evidence
+
+- [GitHub Copilot code review will start consuming GitHub Actions minutes - Hacker News](https://news.ycombinator.com/item?id=47932028) - HN discussion thread from April 27, 2026. Developers debating the cost implications and looking at alternatives as Copilot review starts billing Actions minutes on June 1.
+- [GitHub Copilot code review will start consuming GitHub Actions minutes on June 1, 2026](https://github.blog/changelog/2026-04-27-github-copilot-code-review-will-start-consuming-github-actions-minutes-on-june-1-2026/) - Official GitHub Changelog, April 27, 2026.
+- [Claude Code CLI 2.1.120 changelog](https://x.com/ClaudeCodeLog/status/2047882231343878309) - @ClaudeCodeLog tweet confirming the `claude ultrareview [target]` subcommand addition.
+- [Claude Code Ultrareview vs CodeRabbit vs Greptile](https://medium.com/@richardhightower/claude-code-ultrareview-vs-coderabbit-vs-greptile-94737b30ec1f) - Rick Hightower, Medium, April 2026. Comparison post showing active developer interest in choosing between AI code review tools, but focused entirely on interactive use.
+- [Claude Code Ultra Review: I Watched It Hunt Bugs](https://www.mejba.me/blog/claude-code-ultra-review-tested) - Mejba Ahmed, April 2026. Practitioner write-up of the interactive /ultrareview - no mention of CI integration.
+
+### Competition check
+
+Searching "claude ultrareview CI pipeline" and "claude ultrareview github actions" returns zero practitioner guides. The 8+ existing ultrareview articles (claudedirectory.org, tech2geek.net, wmedia.es, buildthisnow.com, pasqualepillitteri.it, plus Medium posts by Joe Njenga and Rick Hightower) all cover the interactive `/ultrareview` slash command exclusively. Several explicitly state that CI integration is not supported - a claim that is now outdated since v2.1.120. The official Claude Code docs mention `claude ultrareview` in the CLI reference page but provide no GitHub Actions workflow example, no cost modeling for pipeline budgets, and no comparison with the separate managed Code Review product (Team/Enterprise only, $15-25/review). The gap is a step-by-step guide for wiring `claude ultrareview --json` into a GitHub Actions or GitLab CI workflow with proper exit code handling, cost controls, and output parsing.
+
+### Suggested next step
+
+`/research-topic "ultrareview-ci-cd-pipelines"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
