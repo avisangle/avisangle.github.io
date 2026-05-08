@@ -138,3 +138,31 @@ Searching "claude ultrareview CI pipeline" and "claude ultrareview github action
 ### Suggested next step
 
 `/research-topic "ultrareview-ci-cd-pipelines"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-08: Claude Managed Agents Outcomes - Auto-Grading Your AI Agent's Work
+
+**Suggested slug:** `claude-managed-agents-outcomes`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic launched the Outcomes feature for Claude Managed Agents in public beta at the Code with Claude SF developer conference on May 6, 2026. Outcomes let you write a scoring rubric, then a separate grader model evaluates your agent's output against it in its own context window - feeding gaps back to the agent for another iteration. This is the first built-in, rubric-driven quality gate for autonomous agents that doesn't rely on human review. It dropped the same week an 851-upvote Reddit thread about an AI agent deleting a production database reignited the "how do we trust agent output" conversation, and zero third-party practitioner guides exist yet.
+
+### Search demand evidence
+
+- [An AI Agent Deleted Our Production Database](https://gist.github.com/heiba-wk/990804e51dc01b1b8804d1bad25ca01a) - 851 upvotes, 1,027 comments (r/artificial, posted April 26, 2026). Surfaced via "10 Trending Reddit Posts About AI Agents (May 2026)" aggregation.
+- [How Are You Guys Monitoring Your Multi-Agent Workflows?](https://dev.to/lura_cardena_7de06f82aacd/ai-agents-on-reddit-late-april-to-early-may-2026-ten-threads-about-cost-reliability-and-real-4f20) - Active thread (r/AutoGenAI, posted April 22, 2026). Surfaced via DEV Community roundup of trending agent threads.
+- [Higher usage limits for Claude and a compute deal with SpaceX](https://news.ycombinator.com/item?id=48037986) - Hacker News front page (posted May 6, 2026). Peak community attention on Anthropic during Code with Claude week.
+- [New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration](https://claude.com/blog/new-in-claude-managed-agents) - Official Anthropic launch blog post, May 6, 2026.
+- [Codex /goal and Claude Managed Outcomes: The New Control Loops](https://www.developersdigest.tech/blog/codex-goal-vs-claude-managed-outcomes-practical-differences) - Developers Digest comparison showing active developer interest in evaluating outcome-based agent evaluation across platforms.
+- [Define outcomes - Claude API Docs](https://platform.claude.com/docs/en/managed-agents/define-outcomes) - Official reference docs confirming Outcomes is in public beta with rubric-based grading, per-criterion feedback, and configurable iteration limits.
+
+### Competition check
+
+Searching "Claude Managed Agents outcomes tutorial" and "how to auto-evaluate AI agent output quality" returns only Anthropic's official docs, the Claude launch blog post, one broad 30-minute Managed Agents quickstart (cozypet.github.io) that touches outcomes in passing, and the Developers Digest comparison with Codex /goal. No focused practitioner guide exists covering: how to write effective rubrics for different agent tasks, tuning iteration limits vs. cost, interpreting grader feedback loops, or comparing the cost of automated outcome evaluation against manual human review. The existing blog's Managed Agents post covers platform choice (Managed Agents vs Agent SDK) - this would target the next question: "I chose Managed Agents, now how do I ensure my agent's output is actually correct?"
+
+### Suggested next step
+
+`/research-topic "claude-managed-agents-outcomes"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
