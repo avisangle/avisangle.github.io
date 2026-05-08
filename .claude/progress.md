@@ -1,6 +1,35 @@
 # Progress Log
 
+## 2026-05-03
+
+### Published Blog Post: Running claude ultrareview in CI/CD
+- Published "Running claude ultrareview in CI/CD: GitHub Actions Guide" at /blog/ultrareview-ci-cd-pipelines
+- ~3,000 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- News hook: Claude Code 2.1.120 (April 28, 2026) added `claude ultrareview [target]` non-interactive subcommand. Plus April 27 GitHub Copilot Actions-minutes billing change taking effect June 1
+- Covers: subcommand spec + flags + exit codes, Claude.ai OAuth token gotcha (ANTHROPIC_API_KEY rejected), minimum viable GitHub Actions workflow, jq-based PR comment poster, cost model + 5 frequency guards, comparison vs managed Code Review product, GitLab CI equivalent, June 1 Copilot billing context, 12-item hardening checklist
+- Unique angle: first practitioner guide for the new CLI subcommand. Existing 8+ ultrareview articles all cover the interactive /ultrareview only and explicitly state CI integration is unsupported (now obsolete). Documents the OAuth-only auth surface that blocks most first attempts
+- Original code: full GitHub Actions workflow YAML, jq comment poster bash script, GitLab CI equivalent, frequency-guard YAML
+- Updated blog index (featured + grid card + JSON-LD), sitemap, llms.txt
+- Followup: `/promote-blogpost ultrareview-ci-cd-pipelines`
+
+## 2026-04-29
+
+### GSC Ranking Review
+- Run date: 2026-04-29
+- Period: 2026-03-29 to 2026-04-26 (last 28 days)
+- Snapshot saved: .claude/gsc-snapshots/2026-04-29.json
+- Prior snapshot: 2026-04-18 (11 days old; Apr-28 was only 1 day old, below 7-day threshold)
+- Key findings: 24-hour delta vs yesterday is essentially nil (clicks flat at 31, position flat at 9.6, +215 impressions). vs Apr-18 baseline: clicks +55%, impressions +137%, position improved 1.0pt. /projects/jenkins-chatbot now flagged AT RISK - position slipped Apr-18 13.2 → today 15.7 (+2.5 = trips skill threshold). /blog/claude-mythos-preview crossed onto page 1 (10.0 → 9.8). Page-2 opportunities unchanged from yesterday: gemma E4B query (pos 10.6) and jenkins-mcp queries (pos 17-20).
+
 ## 2026-04-28
+
+### GSC Ranking Review
+- Run date: 2026-04-28
+- Period: 2026-03-28 to 2026-04-25 (last 28 days)
+- Snapshot saved: .claude/gsc-snapshots/2026-04-28.json
+- Prior snapshot: 2026-04-18 (10 days old)
+- Key findings: Site clicks +55% (20 → 31), impressions +129% (2,860 → 6,550), avg position improved 1.0pt to 9.6. /blog/gemma-4-models-guide jumped from 1,590 → 3,909 impressions and pos 11.4 → 10.4 - still the biggest page-2 opportunity. 3 new posts now in top pages (security-review, ant-cli, cost-tracking). /blog/claude-managed-agents stable at 17c/pos 6.1. Trailing-slash duplicate on /blog/clawdbot-guide still present (pos 13.9 vs 22.2). No pages dropping.
 
 ### Published Blog Post: Regression-Proof Claude Code Workflows
 - Published "Regression-Proof Claude Code Workflows: Pin, Lock, Test" at /blog/regression-proofing-claude-code-workflows
