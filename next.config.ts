@@ -69,6 +69,32 @@ const nextConfig: NextConfig = {
         destination: '/projects/twitter-oauth',
         permanent: true,
       },
+
+      // Old Jekyll *project page* URLs - send to the current project page.
+      {
+        source: '/project-make-twitter-oauth.html',
+        destination: '/projects/twitter-oauth',
+        permanent: true,
+      },
+      {
+        source: '/project-make-twitter-oauth',
+        destination: '/projects/twitter-oauth',
+        permanent: true,
+      },
+      // Historical inbound traffic to /make-twitter-oauth came from the broken
+      // GitHub Pages redirect chain (avisangle.github.io/make-twitter-oauth/
+      // used to inherit the apex CNAME and bounce here). User intent on those
+      // clicks is the live demo, so route them to it directly.
+      {
+        source: '/make-twitter-oauth',
+        destination: 'https://avisangle.github.io/make-twitter-oauth/',
+        permanent: true,
+      },
+      {
+        source: '/make-twitter-oauth/:path*',
+        destination: 'https://avisangle.github.io/make-twitter-oauth/:path*',
+        permanent: true,
+      },
       {
         source: '/project-jenkins-mcp.html',
         destination: '/projects/jenkins-mcp',
