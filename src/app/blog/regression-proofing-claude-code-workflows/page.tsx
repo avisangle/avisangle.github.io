@@ -182,7 +182,7 @@ const faqSchema = JSON.stringify({
       name: "How do I roll back Claude Code from v2.1.119 to v2.1.117?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "npm uninstall -g @anthropic-ai/claude-code, then npm install -g @anthropic-ai/claude-code@2.1.117. Add @anthropic-ai/claude-code:version=2.1.117 to ~/.npmrc to block auto-upgrade. Confirm with claude --version and run /status inside Claude Code to check the active model. Then run your fixture suite to confirm behaviour.",
+        text: "npm uninstall -g @anthropic-ai/claude-code, then npm install -g @anthropic-ai/claude-code@2.1.117. Add @anthropic-ai/claude-code:version=2.1.117 to ~/.npmrc to block auto-upgrade. Confirm with claude --version and run the status command inside Claude Code to check the active model. Then run your fixture suite to confirm behaviour.",
       },
     },
     {
@@ -190,7 +190,7 @@ const faqSchema = JSON.stringify({
       name: "What does availableModels do in Claude Code settings?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "availableModels is an array in settings.json that restricts which models the /model picker, --model flag, and ANTHROPIC_MODEL env var accept. Combine with model and the ANTHROPIC_DEFAULT_*_MODEL env vars to lock the picker's Default option as well, so a user cannot bypass your pin by selecting Default.",
+        text: "availableModels is an array in settings.json that restricts which models the model picker, --model flag, and ANTHROPIC_MODEL env var accept. Combine with model and the ANTHROPIC_DEFAULT_*_MODEL env vars to lock the picker's Default option as well, so a user cannot bypass your pin by selecting Default.",
       },
     },
     {
@@ -220,6 +220,24 @@ const faqSchema = JSON.stringify({
   ],
 })
 
+const videoObjectSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Anthropic Patched 4 Claude Code Regressions — Pin, Lock, Test",
+  description:
+    "How to regression-proof Claude Code: pin the CLI to v2.1.117, lock effortLevel and a model allowlist in settings.json, and add a Python stop hook with golden prompts.",
+  thumbnailUrl: ["https://i.ytimg.com/vi/RmSUaclDbrM/maxresdefault.jpg"],
+  uploadDate: "2026-04-28",
+  duration: "PT1M1S",
+  contentUrl: "https://www.youtube.com/watch?v=RmSUaclDbrM",
+  embedUrl: "https://www.youtube.com/embed/RmSUaclDbrM",
+  publisher: {
+    "@type": "Person",
+    name: "Avinash Sangle",
+    url: "https://avinashsangle.com",
+  },
+})
+
 export default function RegressionProofingPage() {
   return (
     <>
@@ -234,6 +252,10 @@ export default function RegressionProofingPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqSchema }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoObjectSchema }}
       />
 
       <div className="container-project py-12">
@@ -280,6 +302,20 @@ export default function RegressionProofingPage() {
             )}
           </div>
         </header>
+
+        {/* YouTube Short — 60-second visual recap of the playbook */}
+        <div className="mx-auto my-8 w-full max-w-md">
+          <div className="aspect-[9/16] overflow-hidden rounded-2xl border border-border">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/RmSUaclDbrM"
+              title="Anthropic Patched 4 Claude Code Regressions — Pin, Lock, Test"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
 
         {/* Table of Contents */}
         <Card className="mb-12">

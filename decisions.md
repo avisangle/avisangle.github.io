@@ -1,5 +1,29 @@
 # Architectural Decisions Log
 
+## Decision: Wrap slash-commands in `<code>` and strip from JSON-LD plaintext
+**Date:** 2026-05-11
+**Status:** Accepted
+
+**Context:**
+GSC "Page indexing → Not found (404)" listed `/cost`, `/clear`, `/compact`, `/model`, `/resume`, `/rename`, `/stats`, `/usage` — none are real routes. Source: Claude Code slash-command mentions in `claude-code-cost-tracking` and `regression-proofing-claude-code-workflows` blog posts. Googlebot extracts strings matching `/[a-z]+` from page text and tries them as relative URLs.
+
+**Decision:**
+- In JSON-LD `text`/`name` and metadata `keywords` (plain-text fields Google parses), drop the leading slash and refer to the command by name ("the cost command").
+- In user-visible headings (h3, CardTitle, AccordionTrigger) that previously had bare `/cmd`, wrap the slash command in `<code>` so it's clearly code syntax, not a path.
+- Leave existing `<code>/cmd</code>` body mentions alone — Google's URL extractor respects code spans in practice.
+
+**Rationale:**
+- JSON-LD is the highest-risk surface because Google parses it as plain text. Removing the slash there eliminates the URL pattern without changing semantic meaning.
+- `<code>` wrapping in headings keeps visible content informative for readers while reducing extraction risk.
+- Avoided robots.txt disallow (would leave URLs in GSC as "Blocked by robots.txt" instead of clearing them).
+
+**Consequences:**
+- ✅ Googlebot no longer sees a URL pattern in plaintext.
+- ✅ JSON-LD still matches visible content semantically (rich-snippet policy compliant).
+- ⚠️ Slight wording shift in FAQ JSON-LD vs visible headings (e.g., "the stats command" vs `<code>/stats</code> command`) — acceptable variation per Google's "closely match" guidance.
+
+---
+
 ## Decision 1: Custom HTML/CSS/JS vs Hugo Framework
 **Date:** 2025-11-20
 **Status:** Accepted
@@ -734,3 +758,425 @@ const nextConfig = {
 - GitHub Actions workflow can be removed/disabled
 - Build command stays same: `npm run build`
 - Vercel handles deployment automatically on git push
+
+---
+
+## Decision 23: Remotion for Blog Video Augmentation Pipeline
+**Date:** 2026-04-26
+**Status:** Accepted
+
+**Context:**
+Plan to augment blog posts with short YouTube explainer videos (programmatic, VO-synced, with code blocks/bullets/charts/animated diagrams). Researched Remotion vs Motion Canvas vs Revideo. Cross-referencing video ↔ blog post is a goal.
+
+**Decision:**
+Use **Remotion** as the rendering framework. Accept that VO sync is manual (build a thin VO-anchored timing layer ~50 lines).
+
+**Rationale:**
+- **Stack fit**: React/TypeScript matches existing Next.js codebase; reusable component patterns
+- **AI codegen**: Official Remotion Skills for Claude Code shipped Jan 2026 — strong productivity multiplier for scene authoring
+- **Ecosystem**: Lottie, Three.js, GIFs, Shiki, Recharts, React Flow all integrate cleanly
+- **Lambda rendering**: 1-min video in ~30s if we ever scale up
+- **License**: BUSL but free under $1M ARR — fine for personal blog
+
+**Tradeoff accepted:**
+- Motion Canvas/Revideo has built-in VO sync via UI; Remotion does not. Mitigated by writing a per-scene VO timing module that reads ElevenLabs (or recorded VO) durations and feeds them to `<Sequence>` durations.
+
+**Architecture:**
+- VO-first pipeline: script.md → per-scene ElevenLabs MP3s → scenes.json (with durations) → Remotion composition reads it
+- Separate `video/` workspace at repo root (not nested under Next.js — avoids static export conflicts; project still on Vercel post-Decision 22)
+- Reusable scene templates: TitleCard, BulletReveal, CodeBlock (Shiki), Chart (Recharts), Diagram (React Flow / Excalidraw SVG), Outro
+- Cross-reference: blog page embeds YouTube video; video description + outro link to canonical blog URL; both list each other in JSON-LD (`VideoObject`)
+- Burned-in captions from ElevenLabs word timestamps
+- Pronunciation dictionary for tech terms (MCP, OAuth, CI/CD, etc.)
+
+**Rejected alternatives:**
+- **Motion Canvas / Revideo**: Closer fit for VO-synced explainers and MIT-licensed, but separate paradigm from React stack and weaker AI-assisted authoring. Would also be a separate workspace anyway.
+- **Manim**: Python; great for math but overkill for tech tutorials
+- **After Effects (Fireship/ByteByteGo style)**: not programmatic, doesn't fit "code-driven" goal
+
+**Consequences:**
+- ✅ Native to existing stack; reusable React components
+- ✅ AI-assisted scene authoring via Claude Code Skills
+- ✅ Version-controlled, reproducible video sources
+- ⚠️ Must build VO-anchored timing layer ourselves
+- ⚠️ Local render is slow (5–15 min for 1080p 2-min); plan for Lambda if cadence increases
+- ⚠️ BUSL license — must monitor if ARR ever crosses $1M (irrelevant for personal blog)
+
+**Pending sub-decisions:**
+- Voiceover source: ElevenLabs vs own voice
+- Pilot blog post selection
+- Aspect ratio: 16:9 long-form, 9:16 Shorts, or both from one source
+- Video length per format: 60s Short pilot vs 2-min long-form first
+
+---
+
+## Decision 24: Polyglot Pipeline — Python for audio, TS for everything else
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+After shipping Brian-voice ElevenLabs VO, perceived loudness was low (-19 LUFS, well below YouTube's -14 LUFS recommended). TS audio libs (Web Audio in headless) are weak for broadcast-grade processing. Python has best-in-class tools (`pyloudnorm`, `pedalboard`).
+
+**Decision:**
+Add **Python tools as sidecars** to the TS-first pipeline. Specifically:
+- `video/scripts/python/audio-polish/` runs LUFS normalize + light compression + true-peak limiter on the master VO MP3 before the Remotion composition uses it.
+- Managed with **uv** (`pyproject.toml`, no shared megaenv).
+- Invoked via `execFile` from `generate-vo.ts`.
+- Skippable via `AUDIO_POLISH=false` env var.
+
+**Rationale:**
+- Spotify's `pedalboard` + ITU R BS.1770 standard `pyloudnorm` are the de facto tools for this. TS has no equivalent.
+- Remotion forces the rendering layer to be React, so we can't switch to Python wholesale. Polyglot pipeline lets each language do what it's best at.
+- `uv` (vs pip/poetry/conda) gives single-tool venv management with fast, reproducible installs.
+
+**Where else Python may be added later (not now):**
+- Whisper alignment if user-recorded VO replaces ElevenLabs (free, runs locally)
+- Manim segments for math/algorithm content (renderable to MP4 → drop into Remotion as `<Video>`)
+
+**Where Python is NOT used:**
+- Remotion compositions (React-only, hard constraint)
+- YouTube upload (`googleapis` Node is fine)
+- All scene logic, captions, animations
+
+**Consequences:**
+- ✅ Brian VO loudness +1.3 dB (raw -19.36 → polished -18.08 LUFS), audible improvement
+- ✅ Limiter prevents clipping after gain
+- ✅ Pipeline pattern set up for future Python tools
+- ⚠️ Two package managers (npm + uv) to maintain
+- ⚠️ Dev needs Python 3.12+ available locally (`uv` auto-installs interpreter via `.python-version`)
+
+---
+
+## Decision 25: Video Pipeline as 8 Project-Level Skills
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+After completing the manual end-to-end (topic → script → scenes → VO → captions → render → YouTube upload), the workflow needed to be productized so future videos don't require the same manual orchestration.
+
+**Decision:**
+Implement the pipeline as 8 project-level skills under `.claude/skills/video-*/SKILL.md`:
+
+1. `/video-topic <slug-or-topic>` — extract from blog OR research custom topic
+2. `/video-script [--short|--long]` — spoken script with `[scene-N]` markers
+3. `/video-scenes` — composition + scene customization, render visual stills
+4. `/video-vo` — ElevenLabs single-pass with timestamps + audio polish
+5. `/video-thumbnail` — high-res still for manual upload
+6. `/video-render` — final MP4
+7. `/video-publish` — YouTube upload as Private (always; never auto-public)
+8. `/video-blog-embed <video-id>` — YouTube embed + VideoObject JSON-LD on blog page
+
+**Each skill ends with `Next: /video-X` to chain the pipeline.**
+
+**Rationale:**
+- Project-level (vs user-level) so pipeline is versioned with the repo
+- 8 commands (not 1 mega) so each step is reviewable and resumable mid-pipeline
+- Each command has a deterministic output contract — files at predictable paths
+- Pattern matches existing skills (`/research-topic`, `/write-blogpost`, etc.)
+
+**v1 scope deliberately limited:**
+- `--short` only (60s 9:16). `--long` is phase 2 (needs new scene library)
+- Scene customization is human-in-the-loop, not fully automated (avoids over-engineering scene schema)
+- Reuses existing `/research-topic` skill for custom topics
+- Thumbnail is rendered locally; YouTube upload limitation (mobile-only) is documented but not solved
+
+**Consequences:**
+- ✅ Next blog→video flow takes ~30 minutes vs the multi-hour manual process from this session
+- ✅ Each skill reviewable independently; resumable from any step
+- ✅ Skills auto-discovered by Claude Code harness (verified: all 8 appear in available skills list)
+- ⚠️ Pronunciation dictionary (`src/lib/pronunciation.ts`) accumulates over time — needs review every 5-10 videos
+- ⚠️ Per-topic scene customization (CodeBlock content, chart values) still requires human review — scene templates need topic-shape parameterization in phase 2
+
+---
+
+## Decision 26: Scenes Take Optional Content Props (Backward-Compatible Defaults)
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+Scaling the video pipeline to a second topic (claude-managed-agents) forced the question: how do we customize scenes per topic without forking the components? Decision 25 deferred this to phase 2.
+
+**Decision:**
+Refactor each scene component to accept **optional** content props with defaults that match the original cost-tracking content. Compositions pass topic-specific content explicitly; the original composition needs no changes.
+
+Concretely:
+- TitleCard: `lines` (array of {text, color, size, weight}), `underlineWidthPercent`
+- BulletReveal: `header`, `items` (union of `slash` | `numbered` | `filepath` chip variants), stagger timing
+- CodeBlock: now multi-line — `lines: Token[][]`, plus `topCaption`, `bottomCaption`, `fontSize`, `typewriterSeconds`
+- CostChart: `header`, `bars: [Bar, Bar]`, `callout`. Bar gained `decimals` and `overlay` fields
+- Outro: `bigNumber`, `bigNumberSize`, `subhead`, `caption`, `url`, `ctaLabel`
+- CaptionStrip: now requires `captions` and `audioDurationSeconds` props (was hardcoded import)
+
+**Rationale:**
+- Optional props with defaults = zero migration risk for existing composition
+- Single scene library across all topics; no per-topic component forks
+- Animation logic stays baked-in; only content varies — keeps motion identity consistent
+- Token-array model for code (rather than string + parser) lets each topic colorize tokens independently without a syntax-highlighting dep
+
+**Alternatives considered:**
+- **Per-topic component variants** (e.g., `TitleCard.ManagedAgents.tsx`) — rejected; scales linearly with topic count
+- **Single mega-prop schema (JSON-driven)** — rejected for v1; loses TypeScript benefits and over-abstracts
+
+**Consequences:**
+- ✅ Adding a new topic = new composition file + content props; scene library untouched
+- ✅ Compositions are self-documenting — read the file to see the topic's content
+- ⚠️ Each new topic-shape (e.g., a Counter scene, a Diagram scene) still needs a new scene component — only content variation is free
+- ⚠️ `Root.tsx` grows linearly with compositions; factored out `buildCalcMetadata` to keep registration short
+- ⚠️ Stub `scenes.json` (`stub: true` flag) is required to render visual stills before VO exists — composition gates Audio + CaptionStrip on the flag
+
+---
+
+## Decision 27: Scene Library Catalog + Reuse-First Decision Tree
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+With Decision 26 making scenes props-driven, the failure mode shifted: instead of forking files, we risk silently *adding* scene types or variants when an existing one would work. The `/video-scenes` skill had no documented rule for "reuse first." User asked how new graphics get tracked and how they're notified.
+
+**Decision:**
+Introduce `video/src/scenes/CATALOG.md` as the single source of truth for the scene library, and rewire `/video-scenes` to read it and enforce a 4-step decision tree.
+
+- **Catalog format**: one section per scene with purpose, props table, variants list, and "First used in" tag. Plus a Global changes log for theme/caption-wide edits.
+- **Decision tree** (every beat walks top-down): (1) reuse via props, (2) new variant of existing scene, (3) new scene file (bar: reusable in ≥2 future videos), (4) global change.
+- `/video-scenes` step 1 reads CATALOG.md before anything else; step 3 produces a beat→variant mapping table for user review; step 9 updates the catalog if step 5 extended the library, or explicitly states "no catalog updates" when nothing was added.
+
+**Rationale:**
+- Discoverability — user can scan one file to see what exists
+- Prevents library bloat — variants and new scenes require user confirmation, not silent code generation
+- Self-documenting reuse — every `/video-scenes` run states whether it reused or extended
+- Fits existing flow — no separate registry script or build step needed
+
+**Alternatives considered:**
+- **Per-scene `meta` exports + generator script** — deferred; worth the cost only after library has 8–10 entries
+- **No catalog, rely on file reads** — rejected; doesn't scale and gives no decision framework
+
+**Consequences:**
+- ✅ Reuse-first is now enforced in the skill, not just hoped-for
+- ✅ User sees the reuse vs. extend call before any scene file is touched
+- ⚠️ CATALOG.md becomes a maintained doc — must stay in sync with scene files (skill enforces via step 9)
+- ⚠️ Adding a brand-new scene now also requires a catalog entry in the same change
+
+---
+
+## Decision 28: Safe-Area Constant + Per-Video out/ Subfolders
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+Two layout issues surfaced together: (1) caption padding (600px) collided visually with the YT Shorts title bar, and (2) the flat `video/out/` folder mixed renders, frames, thumbnails, and iteration scratch from every video into one pile.
+
+**Decision:**
+
+1. **Safe-area constant** — `SAFE_AREA_BOTTOM = 400` exported from `video/src/lib/theme.ts`. Used in two places:
+   - `CaptionStrip.tsx` for caption padding (replaces hardcoded 600)
+   - Each composition wraps its `Series` in a positioned div with `bottom: SAFE_AREA_BOTTOM`, so scene `<AbsoluteFill>` resolves only against the top 1520px of the frame and cannot leak into the caption/Shorts-UI zone
+
+2. **Per-video render folders** — `video/out/<slug>/` is the canonical layout. Inside each: `<slug>.mp4` (final render, already SEO-named), `frame-<N>.png` (review stills), `thumbnail.png` (YT manual upload), and optional `_archive/` for iteration history. Source content (`brief.md`, `script.md`) stays in `posts/<slug>/`; voiceover stays in `public/voiceover/<CompId>/`.
+
+**Rationale:**
+- Single constant for the safe zone means caption position and scene exclusion can never drift apart
+- Wrapping at the composition level keeps individual scene files unaware of the constraint — they keep using AbsoluteFill normally
+- Per-video folders enable `rm -rf out/<slug>` cleanup, deterministic upload paths, and grouped iteration artifacts
+- File inside `out/<slug>/` is named `<slug>.mp4` — directory + filename give path uniqueness AND keep SEO filename. Removed the redundant copy-and-rename step from `youtube-upload.ts`
+
+**Alternatives considered:**
+- **Add bottom padding to each scene** instead of wrapping the Series — rejected; 5 places to forget, no enforcement for new scenes
+- **Flat `out/<slug>.mp4` + `out/<slug>-frame-N.png`** instead of subfolders — rejected; same flat-folder problem just delayed
+
+**Consequences:**
+- ✅ Scene authors can keep using `AbsoluteFill` without thinking about safe zones
+- ✅ Captions and scene exclusion both move together if `SAFE_AREA_BOTTOM` ever changes
+- ✅ All render outputs for a video group together; cleaning up old work is one `rm -rf` away
+- ⚠️ Existing files moved into `out/<slug>/` (and historical scratch into `_archive/`); skills updated to new paths
+- ⚠️ Vertical real estate for scenes drops from 1920 to 1520 — a ~21% loss. Stills re-rendered after the change confirmed all 5 scenes still fit comfortably
+
+---
+
+## Decision 29: Burn Thumbnail PNG Into First 0.5s of MP4
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+YouTube custom thumbnail upload requires phone-verified channels OR mobile-only upload from the YT app. Without verification, every video shipped meant the user had to copy thumbnail.png from laptop → mobile → YT app each time. Tedious and error-prone.
+
+**Decision:**
+The composition burns `public/thumbnails/<slug>.png` as the first `THUMBNAIL_HOLD_FRAMES = 15` frames (0.5s @ 30fps) of every rendered MP4. The YouTube mobile Studio frame picker can scrub to that opening frame and use it as the thumbnail — no separate file transfer.
+
+Implementation:
+- New constant `THUMBNAIL_HOLD_FRAMES` in `lib/theme.ts` alongside `SAFE_AREA_BOTTOM`
+- New `ThumbnailHold` scene component renders the PNG full-frame outside the safe-area wrapper
+- Compositions accept optional `thumbnailSrc` + `thumbnailHoldFrames` props (defaults to ON)
+- `Root.tsx` calculateMetadata adds `thumbnailHoldFrames` to `durationInFrames` and `audioOffsetFrames`
+- `/video-scenes` and `/video-thumbnail` pass `--props='{"thumbnailHoldFrames":0}'` to suppress the burn-in for stills (avoids self-reference when rendering the thumbnail itself)
+- Thumbnail path moved from `out/<slug>/thumbnail.png` to `public/thumbnails/<slug>.png` (Remotion `staticFile()` only reads from `public/`)
+
+**Rationale:**
+- 0.5s is long enough for mobile picker to scrub-snap and for MP4 keyframe stability; short enough viewers register it as a clean title-card open rather than a glitch
+- Burning into video means the thumbnail design always travels with the file — no separate manual upload step in the pipeline
+- Opt-in via prop means the same composition can render review stills without the burn-in (frame numbers stay stable for /video-scenes)
+- Phone verification still works as a parallel path — the PNG is at `public/thumbnails/<slug>.png` for direct desktop upload
+
+**Alternatives considered:**
+- **Verify phone, upload from desktop** — works but requires a one-time setup step the user hasn't done; doesn't help recover from accidental verification loss
+- **0.1s (3 frames)** as user originally requested — too short for reliable mobile scrub-snap and might not produce a clean MP4 keyframe
+- **Last-frame hold** — viewers see thumbnail after outro; reasonable but loses the "scrub to start" intuition
+
+**Consequences:**
+- ✅ Mobile thumbnail set is now: open YT Studio app → frame picker → 0:00 → save. No file transfer.
+- ✅ Composition is the single source of truth for thumbnail content (PNG is rendered FROM the composition, then burned INTO subsequent renders of the same composition)
+- ⚠️ MP4 length grows by 0.5s — for a 55s Short, still under the 60s YT cap
+- ⚠️ Review-still rendering must pass `thumbnailHoldFrames: 0` override; documented in /video-scenes and /video-thumbnail skill files
+- ⚠️ `/video-thumbnail` must run before `/video-render` — render will fail at staticFile lookup if PNG missing
+
+---
+
+## Decision 30: Phase 2 Pipeline Polish — Data-Driven Metadata, SRT Captions, /video-promote
+**Date:** 2026-04-27
+**Status:** Accepted
+
+**Context:**
+After shipping Decisions 23-29, the pipeline still had three rough edges: (1) per-video YT metadata required hand-editing `youtube-upload.ts`, (2) burned-in captions weren't surfacing as a YT subtitle track for accessibility/search indexing, (3) no equivalent of `/promote-blogpost` for video drafts.
+
+**Decision:**
+Three coordinated changes:
+
+1. **Data-driven YT metadata** — Each video gets `posts/<slug>/youtube.json` with `title`, `description`, `tags[]`, `categoryId`, `privacy`, `selfDeclaredMadeForKids`, `embeddable`, optional `compositionId`, optional `blogUrl`. `youtube-upload.ts` reads this file (slug via CLI arg). Generated by `/video-script` step 6. Zero per-video script edits.
+
+2. **SRT subtitle generation + upload** — `scripts/lib/srt.ts` exports `buildSrt()`. `generate-vo.ts` writes `captions.srt` alongside `captions.json`. `npm run captions:srt -- <CompositionId>` regenerates without re-running TTS. `youtube-upload.ts` after `videos.insert` calls `captions.insert` if `compositionId` is set and SRT exists. Failure of SRT step does not roll back the video upload (graceful degrade).
+
+3. **`/video-promote` skill** — Mirrors `/promote-blogpost`. Generates Twitter / LinkedIn / Reddit drafts into `video/posts/<slug>/social/`. Drafts cross-link YT URL + (optional) blog URL. Posting is currently manual (auto-posting deferred to a future `/post-video`).
+
+**Both modes (blog-driven AND standalone) are first-class:**
+- `blogUrl` is optional in `youtube.json` — present for blog mode, omitted for standalone
+- `/video-publish` suggests `/video-blog-embed` for blog mode and `/video-promote` for standalone
+- `/video-blog-embed` explicitly tells the user to skip when no `blogUrl` is set
+- `/video-promote` drops blog references when `blogUrl` is absent
+
+**Rationale:**
+- `youtube.json` decouples metadata from the upload script — the script becomes a reusable engine, the JSON is the per-video config
+- SRT auto-upload removes a manual YT Studio step + adds searchable transcript with no extra effort
+- Promote drafts catch the natural follow-up after publish without forcing the user to rewrite the same hook for each platform
+
+**Alternatives considered:**
+- **Inline metadata constants per video** (status quo before this decision) — rejected; one manual edit per video, easy to leave stale across sessions
+- **Auto-derive metadata from brief.md at publish time** — rejected; user wants override window; explicit JSON gives that
+- **Auto-post to social platforms from /video-promote** — deferred; posting is irreversible, drafting is not
+
+**Consequences:**
+- ✅ Pipeline is fully data-driven from `/video-topic` to `/video-promote` — no hand-edits to `.ts` per video
+- ✅ Every published video automatically gets a YT subtitle track for free
+- ✅ Standalone (no-blog) videos work end-to-end without leaving holes
+- ⚠️ `youtube.json` is a new required step in `/video-script`; existing 2 videos got hand-written JSON files as migration
+- ⚠️ Captions API call costs 400 quota units on top of the 1600 for `videos.insert` — daily quota of 10K still allows ~5 uploads/day
+- ⚠️ `/video-promote` is draft-only for now; `/post-blogpost` reads from blog social paths and would need extension to handle video drafts (deferred)
+
+---
+
+## Decision 31: Optional Playlist Linking via youtube.json
+
+**Date:** 2026-04-27
+**Status:** Implemented
+
+**Decision:** Extend `youtube.json` with two optional fields — `playlistIds: string[]` (precise) and `playlistTitle: string` (resolve-or-create by title) — and append the uploaded video to those playlists from `youtube-upload.ts`. `playlistIds` wins when both are set.
+
+**Rationale:**
+- New series workflow (Claude Code shorts) needs every episode in the same playlist; manual addition via Studio fights the data-driven pipeline.
+- `playlistIds` is the precise path for established series (look up once via new `npm run yt:playlists`).
+- `playlistTitle` is the bootstrap path: first episode auto-creates the playlist with the video's privacy, so series setup needs zero pre-work.
+- Failure pattern mirrors caption upload: warn + continue. The video itself is the irreversible action; playlist linking is a follow-up that can be re-attempted manually.
+
+**Alternatives considered:**
+- **Single `playlistId` string** — rejected; one video often belongs in multiple playlists ("Claude Code Shorts" + "All Tutorials").
+- **Inline playlist constants in upload script** — rejected for the same reason as Decision 30: per-video state belongs in `youtube.json`, not in code.
+- **Separate `series.json` file with playlist info** — deferred to a later PR (still planned for series template). For now keeping all per-video state in one JSON file.
+- **Re-auth with broader `youtube` scope** — unnecessary; Google's docs confirm `youtube.force-ssl` (already requested) covers `playlists.insert` and `playlistItems.insert`.
+
+**Consequences:**
+- ✅ Series videos drop into the right playlist on `npm run yt:upload` with no Studio steps
+- ✅ Pipeline still works for one-offs (omit both fields)
+- ✅ No re-auth required for existing users
+- ⚠️ Adds ~50 quota units per playlist link on top of the 1600 + 400 already paid per upload — negligible
+- ⚠️ `playlistTitle` lookup paginates; ~50 playlists per request. Channels with hundreds of playlists would slow this down — not a concern for personal channels
+
+---
+
+## Decision 32: `/video-news-peg` Skill + Auto-Wire from `/video-topic`
+
+**Date:** 2026-04-28
+**Status:** Implemented
+
+**Decision:** Build a new `/video-news-peg` skill that fetches recent (≤30 days) Anthropic + Claude Code releases and either appends a "## News peg" section to a topic's `brief.md` (targeted mode) or writes a dated slate-planning digest (standalone mode). Auto-invoke it from `/video-topic` step 7. `/video-script` step 1 reads the news-peg section to decide hook framing (lead with the change vs. lean contrarian/first-person).
+
+**Rationale:**
+- Post-E1 channel research showed news-pegged Claude Code shorts outperform evergreen ones — top performers (AICodeKing, Theo, Fireship, IndyDevDan) all peg episodes to releases.
+- E2 (`install-claude-code`) was the first episode to use a news peg (npm → native installer). The hook lifted from the news directly. Without the peg, E2 would have been a structurally weaker generic install demo.
+- The check shouldn't be optional or remembered — it should be automatic in the pipeline. Codifying it as a skill makes it repeatable across episodes and visible in the brief.
+
+**Sources baked in (validated 2026-04-28):**
+1. `https://code.claude.com/docs/en/whats-new` — weekly feature digests with code snippets + version tags
+2. `https://code.claude.com/docs/en/changelog` — granular CLI version history
+3. `https://www.anthropic.com/news` — company-wide announcements
+
+Rejected during validation: GitHub `anthropics/claude-code/releases` (no releases published), `platform.claude.com/docs/en/release-notes*` (404), `https://www.anthropic.com/claude-code` (static product page). No RSS available.
+
+**Wiring:**
+- `/video-topic` step 7 (new) invokes `/video-news-peg <slug>` via the Skill tool after the brief is written, before user confirmation.
+- `/video-script` step 1 (extended) reads the `## News peg` section and adapts hook framing accordingly.
+- "No peg found" is a deliberate documented state, not a failure — `/video-script` falls back to contrarian/first-person framing.
+
+**Alternatives considered:**
+- **Manual invocation between `/video-topic` and `/video-script`** — rejected; too easy to forget; defeats the point of automation.
+- **Bake news fetching directly into `/video-topic`'s research step** — rejected; conflates topic research (one-time) with news fetching (which has its own retry/cache logic and standalone use case).
+- **Cache news fetches for 24h** — deferred to v2; news changes daily and one fetch per episode is cheap.
+- **Add Twitter/HN/Reddit as sources** — deferred; harder to scrape, lower signal-to-noise than official sources.
+
+**Consequences:**
+- ✅ Every new episode gets a news-peg check by default — no separate user action
+- ✅ Standalone mode (`/video-news-peg` alone) gives a slate-planning digest for batch decisions
+- ✅ "No peg" path is well-defined — pipeline doesn't break on evergreen topics
+- ⚠️ Each `/video-topic` run now does 3-5 extra WebFetch calls (~5-15s wallclock). Acceptable since `/video-topic` is the slowest step anyway.
+- ⚠️ Sources are hardcoded — if Anthropic changes URLs, skill needs an update. Validated 2026-04-28; should re-check quarterly.
+- ⚠️ Relevance is judgment, not regex — the matcher reads agent-summarized release notes against the brief, can mis-classify edge cases. "Strong vs weak peg" decision is documented in the SKILL but still subjective.
+
+---
+
+## Decision 33: `/video-style-lint` + `/video-hook-options` Skills
+
+**Date:** 2026-04-28
+**Status:** Implemented
+
+**Decision:** Build two complementary skills that operationalize the post-E1 channel research:
+
+- **`/video-style-lint`** — auto-invoked from `/video-script` step 7 (also runnable standalone). Scans the spoken script for 5 verified anti-patterns (YouTuber-explainer hook, parallel anaphora ≥3, spoken brand URL, slogan-only outro, Q/A grid ≥3). Advisory output with line citations + suggested rewrites. Never blocks.
+- **`/video-hook-options`** — manual pre-script step. Reads `brief.md`, generates 7 hook variants in proven channel templates (AICodeKing-superlative, Fireship-cold-open, IndyDevDan-anti-hype, AICodeKing-first-person-number, Theo-BREAKING, Greg-numbered-list, Mid-action). User picks one; chosen hook saves to `posts/<slug>/hook.md`, which `/video-script` step 1 reads as the locked seed for scene-1.
+
+**Rationale:**
+- Two halves of the same loop: hook-options reduces the *frequency* of anti-patterns at hook-design time; style-lint catches the ones that slip through at script-finalization time.
+- E1 (`what-is-claude-code`) shipped with 3 of the 5 anti-patterns and got "looks generic and promotional" feedback. E2 (`install-claude-code`) was rewritten manually after diagnosis. These skills make the diagnosis run *before* shipping, not after.
+- Hook-options is intentionally manual/optional — auto-invoking it would either pick for the user (defeats the value) or stall the pipeline.
+- Style-lint is auto-invoked because it's read-only + fast + always advisory; no friction cost.
+
+**Wiring summary:**
+
+| Skill | Invoked from | When | Mode |
+|---|---|---|---|
+| `/video-news-peg` | `/video-topic` step 7 | After brief written | Auto |
+| `/video-hook-options` | User direct | Between brief and script | Manual / optional |
+| `/video-style-lint` | `/video-script` step 7 | Before user confirms script | Auto + advisory |
+
+`/video-script` step 1 was extended to read `hook.md` if present (use chosen hook verbatim) and to read `brief.md`'s `## News peg` section to adapt hook framing if hook.md is absent.
+
+**Alternatives considered:**
+- **Implement style-lint as a Node script with regex** instead of an instructional SKILL — rejected for v1; the SKILL approach has zero deps and the rules are explicit enough that Claude applies them deterministically. Promote to a script in v2 if the pattern set grows.
+- **Make hook-options auto-invoke from /video-topic** — rejected; the user choice IS the value, auto-running it stalls the pipeline waiting for input.
+- **Make style-lint blocking** — rejected; some "violations" are intentional (e.g. deliberate marketing-y outro for a launch video). Advisory keeps the user in control.
+- **Combine the two skills into one `/video-craft`** — rejected; they serve different stages and the separation makes each cleaner to reason about and to update independently.
+
+**Consequences:**
+- ✅ E3+ episodes get pre-flight style checks for free; no "ship and diagnose later" loops
+- ✅ Hook craft becomes a deliberate menu-driven step instead of "write one from instinct"
+- ✅ Both skills are advisory — the user can always override; pipeline never blocks
+- ⚠️ Adds 1-2 more steps to the cognitive flow (especially if user always runs hook-options) — pipeline is now 8+ skills deep. Worth it; a tighter hook + lint catches more problems than the extra step costs.
+- ⚠️ Style-lint patterns are heuristic — will catch obvious violations, miss subtle ones. Lint is necessary, not sufficient.
+- ⚠️ Hook templates plateau — produce reliable B+ hooks, not A+ moments. Custom override always available.
+- ⚠️ Pattern lists in both skills will need updating as we learn from real YT Studio analytics. Don't add patterns from intuition; only from validated data.

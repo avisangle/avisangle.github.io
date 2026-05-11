@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "claude code token usage",
     "claude code reduce costs",
     "claude code budget limit",
-    "claude code /cost command",
+    "claude code cost command",
     "ccusage",
     "claude code spending",
     "claude code optimization",
@@ -177,7 +177,7 @@ export default function ClaudeCodeCostTrackingPage() {
                 name: "How do I check my Claude Code costs?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Use /cost in any session for API spend totals including token counts and dollar estimates. Subscribers should use /stats for a usage dashboard with heatmaps and model breakdowns, or /usage to check rate limit status. You can also configure the status line to show costs continuously.",
+                  text: "Use the cost command in any session for API spend totals including token counts and dollar estimates. Subscribers should use the stats command for a usage dashboard with heatmaps and model breakdowns, or the usage command to check rate limit status. You can also configure the status line to show costs continuously.",
                 },
               },
               {
@@ -230,10 +230,10 @@ export default function ClaudeCodeCostTrackingPage() {
               },
               {
                 "@type": "Question",
-                name: "What is the /stats command in Claude Code?",
+                name: "What is the stats command in Claude Code?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "The /stats command opens a usage dashboard showing a heatmap of your activity, total session count, token totals by model, and usage streaks. It is designed for Pro and Max subscribers. API users should use /cost instead, which shows dollar-denominated spend for the current session.",
+                  text: "The stats command opens a usage dashboard showing a heatmap of your activity, total session count, token totals by model, and usage streaks. It is designed for Pro and Max subscribers. API users should use the cost command instead, which shows dollar-denominated spend for the current session.",
                 },
               },
             ],
@@ -413,7 +413,7 @@ export default function ClaudeCodeCostTrackingPage() {
             build intuition about what different task types actually cost.
           </p>
 
-          <h3 className="text-2xl font-bold mb-4">/cost - Session API Spend</h3>
+          <h3 className="text-2xl font-bold mb-4"><code>/cost</code> - Session API Spend</h3>
           <p className="text-lg leading-relaxed mb-4">
             The <code>/cost</code> command shows your current session&apos;s token usage and
             estimated dollar cost. It&apos;s designed for API users. If you&apos;re on
@@ -424,14 +424,14 @@ export default function ClaudeCodeCostTrackingPage() {
 
           <CodeBlock
             language="text"
-            filename="claude /cost output"
+            filename="claude cost output"
             code={`Total cost:            $0.55
 Total duration (API):  6m 19.7s
 Total duration (wall): 6h 33m 10.2s
 Total code changes:    127 lines added, 43 lines removed`}
           />
 
-          <h3 className="text-2xl font-bold mt-8 mb-4">/stats - Subscriber Usage Dashboard</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4"><code>/stats</code> - Subscriber Usage Dashboard</h3>
           <p className="text-lg leading-relaxed mb-4">
             If you&apos;re on Pro or Max, <code>/stats</code> is your go-to. It opens
             a dashboard with a usage heatmap, session counts, token totals broken down
@@ -440,7 +440,7 @@ Total code changes:    127 lines added, 43 lines removed`}
             allowance you&apos;re burning through.
           </p>
 
-          <h3 className="text-2xl font-bold mt-8 mb-4">/usage - Rate Limit Status</h3>
+          <h3 className="text-2xl font-bold mt-8 mb-4"><code>/usage</code> - Rate Limit Status</h3>
           <p className="text-lg leading-relaxed mb-4">
             The <code>/usage</code> command shows your plan limits and current rate limit
             status. This is the command to check when Claude Code starts feeling slow or
@@ -801,7 +801,7 @@ export MAX_THINKING_TOKENS=10000
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Badge>3</Badge> Use /clear Between Tasks
+                  <Badge>3</Badge> Use <code>/clear</code> Between Tasks
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -820,7 +820,7 @@ export MAX_THINKING_TOKENS=10000
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Badge>4</Badge> Use /compact When Context Grows
+                  <Badge>4</Badge> Use <code>/compact</code> When Context Grows
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -1056,7 +1056,7 @@ export MAX_THINKING_TOKENS=10000
             </AccordionItem>
 
             <AccordionItem value="stats-command">
-              <AccordionTrigger>What is the /stats command in Claude Code?</AccordionTrigger>
+              <AccordionTrigger>What is the <code>/stats</code> command in Claude Code?</AccordionTrigger>
               <AccordionContent>
                 <p>
                   The <code>/stats</code> command opens a usage dashboard showing a heatmap of
