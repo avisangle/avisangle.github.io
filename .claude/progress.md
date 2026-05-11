@@ -1,5 +1,18 @@
 # Progress Log
 
+## 2026-05-12
+
+### Published Blog Post: Claude Managed Agents Outcomes
+- Published "Claude Managed Agents Outcomes: Auto-Grading Agent Work" at /blog/claude-managed-agents-outcomes
+- ~3,000 words, 13 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage
+- News hook: Anthropic launched Outcomes (alongside dreaming + multiagent orchestration) on May 6, 2026 in public beta
+- Covers: feature definition, grader flow + benchmark numbers (+10pp overall, +10.1% pptx, +8.4% docx), rubric anti-patterns and bootstrap trick, full Python code walkthrough (environment + writer agent + user.define_outcome event), five-state result table (satisfied, needs_revision, max_iterations_reached, failed, interrupted), stream-handling code, max_iterations tuning rule (same-failures-each-pass = rubric problem; converging-failures = raise cap), cost math (no per-outcome fee, iteration count drives bill against $0.08/session-hour), Outcomes vs LLM-as-judge category vs Codex /goal
+- Unique angle: first practitioner guide that ties together the API surface, the result-state table, rubric anti-patterns, and the cost math. Existing coverage is split between Anthropic's reference docs, the cookbook recipe, and news posts that announce but don't explain
+- Updated blog index (featured + grid card + JSON-LD), sitemap, llms.txt
+- Brief: .claude/content-briefs/claude-managed-agents-outcomes.md
+- Followup: `/promote-blogpost claude-managed-agents-outcomes`
+
 ## 2026-05-03
 
 ### Published Blog Post: Running claude ultrareview in CI/CD

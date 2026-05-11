@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Claude Managed Agents Outcomes: Auto-Grading Agent Work",
+                url: "https://avinashsangle.com/blog/claude-managed-agents-outcomes",
+                datePublished: "2026-05-12",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Running claude ultrareview in CI/CD: GitHub Actions Guide",
                 url: "https://avinashsangle.com/blog/ultrareview-ci-cd-pipelines",
                 datePublished: "2026-05-03",
@@ -168,23 +175,24 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="GitPullRequestArrow" size="xl" className="mx-auto" />
+              <CategoryIcon icon="ClipboardCheck" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Running claude ultrareview in CI/CD: GitHub Actions Guide</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">Claude Managed Agents Outcomes: Auto-Grading Agent Work</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Claude Code 2.1.120 added <code>claude ultrareview</code> as a non-interactive
-                  CLI subcommand. The OAuth token gotcha, a working GitHub Actions workflow,{" "}
-                  <code>--json</code> parsing with <code>jq</code>, cost controls, plus a
-                  GitLab CI equivalent and the June 1 Copilot billing change.
+                  Anthropic launched Outcomes on May 6, 2026. Send one{" "}
+                  <code>user.define_outcome</code> event, hand the agent a
+                  rubric, and a separate grader re-runs the writer until it
+                  passes. Rubric anti-patterns, the five result states,{" "}
+                  <code>max_iterations</code> tuning, and the cost math.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 3, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 12, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 13 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/ultrareview-ci-cd-pipelines">Read Article →</Link>
+                  <Link href="/blog/claude-managed-agents-outcomes">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -197,6 +205,29 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="ClipboardCheck" size="lg" animation="pulse" />
+                <CardTitle>Claude Managed Agents Outcomes: Auto-Grading Agent Work</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Outcomes hands the agent a rubric, a separate grader checks
+                  every draft, and the loop iterates until the artifact passes.
+                  Rubric anti-patterns, the five result states,{" "}
+                  <code>max_iterations</code> tuning, and the cost math.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 12, 2026</span>
+                  <span>•</span>
+                  <span>13 min read</span>
+                </div>
+                <Link href="/blog/claude-managed-agents-outcomes" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="GitPullRequestArrow" size="lg" animation="pulse" />
