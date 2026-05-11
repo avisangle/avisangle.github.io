@@ -129,6 +129,23 @@ const nextConfig: NextConfig = {
       // ========================================
       // Generic pattern redirects (catch-all)
       // ========================================
+      // Vercel strips .html extensions at the edge before next.config
+      // redirects() runs, so legacy /project-X.html and /blog-X.html
+      // arrive here as bare /project-X / /blog-X. Map those to the
+      // canonical /projects/X and /blog/X paths. The .html-suffixed
+      // siblings below are kept as a safety net in case Vercel ever
+      // changes that default.
+
+      {
+        source: '/project-:slug',
+        destination: '/projects/:slug',
+        permanent: true,
+      },
+      {
+        source: '/blog-:slug',
+        destination: '/blog/:slug',
+        permanent: true,
+      },
 
       // Redirect any remaining project-*.html to /projects/*
       {

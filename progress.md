@@ -2,6 +2,14 @@
 
 # Progress Log
 
+## 2026-05-11: Fix legacy /project-*.html redirect chain
+
+- Verified live: `/project-twitter-oauth.html` and 8 other legacy project pages all redirected to 404. Root cause: Vercel auto-strips `.html` at the edge **before** `next.config.ts` `redirects()` evaluates, so specific rules like `source: '/project-twitter-oauth.html'` never fire — the request arrives at the redirect layer as `/project-twitter-oauth` (no `s`, no real route).
+- Fix in `next.config.ts`: added generic bare-path intermediates `'/project-:slug' → '/projects/:slug'` and `'/blog-:slug' → '/blog/:slug'`, so the post-strip path lands on the canonical route. Left existing `.html` rules in place as a safety net.
+- Confirmed all 9 legacy project pages affected with `curl -ILo /dev/null`.
+
+---
+
 ## 2026-05-11: Fix GSC "Not found (404)" — slash-command URL leaks
 
 - Root cause: Googlebot was extracting `/cost`, `/clear`, `/cost`, `/compact`, `/model`, `/resume`, `/usage`, `/rename`, `/stats` from plaintext (JSON-LD `text`/`name`, metadata `keywords`, h3/CardTitle/AccordionTrigger headings) and crawling them as relative URLs.
