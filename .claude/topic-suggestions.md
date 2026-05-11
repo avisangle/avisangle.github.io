@@ -138,3 +138,32 @@ Searching "claude ultrareview CI pipeline" and "claude ultrareview github action
 ### Suggested next step
 
 `/research-topic "ultrareview-ci-cd-pipelines"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-08: Using Claude Outcomes to Guarantee Agent Output Quality with Rubric-Based Grading
+
+**Suggested slug:** `claude-outcomes-rubric-grading`  
+**Status:** pending research
+
+### Why this topic, why now
+
+On May 6, 2026, Anthropic announced Outcomes as a public beta feature for Claude Managed Agents at the Code with Claude developer conference in San Francisco. Outcomes let you define a success rubric, then a separate grader - running in its own context window, isolated from the agent's reasoning - evaluates the agent's output against that rubric and loops until quality clears the bar. This is a genuinely new architectural pattern for agent quality control, not just "ask the agent to check its own work." Two days later, zero third-party practitioner guides exist. The only non-Anthropic piece is a Developers Digest comparison with OpenAI's Codex /goal command, confirming that developers are already comparing these competing patterns and searching for guidance.
+
+### Search demand evidence
+
+- [New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration](https://claude.com/blog/new-in-claude-managed-agents) - Official Anthropic announcement, May 6, 2026. Launched alongside Dreaming (research preview) and multiagent orchestration (public beta).
+- [New in Claude Managed Agents | Claude](https://www.linkedin.com/posts/claude_new-in-claude-managed-agents-activity-7457833168184762369-T9n2) - Claude's official LinkedIn post, 80+ comments within 48 hours.
+- [Codex /goal and Claude Managed Outcomes: The New Control Loops](https://www.developersdigest.tech/blog/codex-goal-vs-claude-managed-outcomes-practical-differences) - Developers Digest, May 2026. Comparison piece confirming developers are evaluating Outcomes against Codex /goal, but it's an analysis post, not a how-to guide.
+- [Anthropic introduces "dreaming," a system that lets AI agents learn from their own mistakes](https://venturebeat.com/technology/anthropic-introduces-dreaming-a-system-that-lets-ai-agents-learn-from-their-own-mistakes) - VentureBeat, May 2026. Covers all three features but leads with Dreaming; Outcomes gets secondary coverage.
+- [Anthropic updates Claude Managed Agents with three new features](https://9to5mac.com/2026/05/07/anthropic-updates-claude-managed-agents-with-three-new-features/) - 9to5Mac, May 7, 2026. Broad audience exposure driving search interest.
+- [Claude Managed Agents Can Engage In a 'Dreaming' Process To Preserve Memories](https://slashdot.org/story/26/05/06/1714217/claude-managed-agents-can-engage-in-a-dreaming-process-to-preserve-memories) - Slashdot discussion thread, May 6, 2026.
+- [Define outcomes - Claude API Docs](https://platform.claude.com/docs/en/managed-agents/define-outcomes) - Official API reference. Documents the rubric format, grader statuses (satisfied, needs_revision, max_iterations_reached, failed), and session event flow.
+
+### Competition check
+
+Searching "Claude Outcomes tutorial", "how to use Claude Outcomes managed agents", and "Claude agent rubric grading guide" returns only Anthropic's official docs page and news articles that mention Outcomes as one bullet among three features. The Developers Digest comparison with Codex /goal contrasts the two approaches at a conceptual level but doesn't walk through setup, rubric writing, or grader output parsing. Buildfastwithai.com wrote a Dreaming explainer but skipped Outcomes entirely. No one has published the practitioner guide: how to structure a rubric, send the define_outcome event, interpret per-criterion grader feedback, handle the revision loop, or tune max iterations for cost control. Anthropic's own benchmarks show Outcomes improved task success by up to 10 percentage points (+8.4% on .docx, +10.1% on .pptx generation) - real numbers that a tutorial could contextualize with hands-on examples. Wisedocs reported cutting document review time by 50% using Outcomes. The gap between "this feature exists" (news) and "here's how to use it well" (tutorial) is wide open.
+
+### Suggested next step
+
+`/research-topic "claude-outcomes-rubric-grading"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
