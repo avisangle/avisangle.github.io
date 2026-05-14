@@ -1,5 +1,18 @@
 # Progress Log
 
+## 2026-05-14
+
+### Published Blog Post: OpenAI Codex Security GitHub Setup Guide
+- Published "OpenAI Codex Security GitHub Setup Guide: 2026 Walkthrough" at /blog/codex-security-github-setup
+- ~2,900 words, 12 min read, 8 FAQ items
+- Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo
+- News hook: OpenAI Daybreak launch (May 11, 2026) + Google's first confirmed in-the-wild AI zero-day disclosed same day
+- Cross-vendor pairing with the existing Claude Code Security Review post creates a deliberate content cluster
+- Unique angles: naming-collision clarity (Codex Security vs Codex CLI vs codex-action), worked threat-model example, sandbox-validation benchmark (74% TPR vs Semgrep 20%, Snyk 28%), honest DAST gap coverage, $0.02-per-1K-LOC cost math
+- Updated blog index (featured + grid card + JSON-LD), sitemap, llms.txt
+- Brief: .claude/content-briefs/codex-security-github-setup.md
+- Followup: `/promote-blogpost codex-security-github-setup`
+
 ## 2026-05-12
 
 ### Published Blog Post: Claude Managed Agents Outcomes

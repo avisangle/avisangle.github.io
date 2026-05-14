@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "OpenAI Codex Security GitHub Setup Guide: 2026 Walkthrough",
+                url: "https://avinashsangle.com/blog/codex-security-github-setup",
+                datePublished: "2026-05-14",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Managed Agents Outcomes: Auto-Grading Agent Work",
                 url: "https://avinashsangle.com/blog/claude-managed-agents-outcomes",
                 datePublished: "2026-05-12",
@@ -175,24 +182,24 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ClipboardCheck" size="xl" className="mx-auto" />
+              <CategoryIcon icon="ShieldAlert" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Managed Agents Outcomes: Auto-Grading Agent Work</h3>
+                <p className="text-accent font-semibold mb-2">AI SECURITY</p>
+                <h3 className="text-2xl font-bold mb-4">OpenAI Codex Security GitHub Setup Guide: 2026 Walkthrough</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Anthropic launched Outcomes on May 6, 2026. Send one{" "}
-                  <code>user.define_outcome</code> event, hand the agent a
-                  rubric, and a separate grader re-runs the writer until it
-                  passes. Rubric anti-patterns, the five result states,{" "}
-                  <code>max_iterations</code> tuning, and the cost math.
+                  Daybreak landed May 11, 2026. Set up OpenAI Codex Security on
+                  GitHub: connect a repo at <code>chatgpt.com/codex/security</code>,
+                  edit the auto-generated threat model, triage sandbox-validated
+                  findings, and ship patches as PRs. 74% TPR vs Semgrep 20% in
+                  independent testing.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 12, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 14, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 13 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-managed-agents-outcomes">Read Article →</Link>
+                  <Link href="/blog/codex-security-github-setup">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -205,6 +212,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="ShieldAlert" size="lg" animation="pulse" />
+                <CardTitle>OpenAI Codex Security GitHub Setup Guide: 2026 Walkthrough</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Set up OpenAI Codex Security on GitHub end-to-end: connect a repo,
+                  edit the threat model, triage validated findings, ship patches as
+                  PRs. 74% TPR vs Semgrep 20% and Snyk 28% in independent testing.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 14, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/codex-security-github-setup" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ClipboardCheck" size="lg" animation="pulse" />

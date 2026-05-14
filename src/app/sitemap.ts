@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'codex-security-github-setup',
+      lastModified: '2026-05-14',
+    },
+    {
       slug: 'claude-managed-agents-outcomes',
       lastModified: '2026-05-12',
     },
