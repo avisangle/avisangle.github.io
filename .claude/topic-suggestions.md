@@ -166,3 +166,31 @@ Searching "Claude Managed Agents outcomes tutorial" and "how to auto-evaluate AI
 ### Suggested next step
 
 `/research-topic "claude-managed-agents-outcomes"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-05-13: OpenAI Codex Security - Setting Up AI Vulnerability Scanning for Your GitHub Repos
+
+**Suggested slug:** `codex-security-github-setup`
+**Status:** pending research
+
+### Why this topic, why now
+
+On May 11, 2026, OpenAI launched Daybreak, a cybersecurity initiative that repositions Codex Security (originally shipped March 2026) from a developer coding tool into an AI-powered vulnerability detection platform. The same day, Google's Threat Intelligence Group disclosed the first confirmed case of an AI-generated zero-day exploit used in the wild - attackers used an AI model to discover and weaponize a 2FA bypass for a planned mass exploitation campaign. These two events landed within hours of each other and are driving massive developer interest in AI-powered defensive scanning. Codex Security connects to GitHub repos, builds codebase-specific threat models, validates findings in sandboxed environments (reporting a 74% true positive rate vs Semgrep's 20% in DryRun Security testing), and proposes patches as pull requests. The blog already ranks for the Claude Code security review angle. A Codex Security practitioner guide creates cross-vendor coverage and a security scanning content cluster.
+
+### Search demand evidence
+
+- [OpenAI Launches Daybreak for AI-Powered Vulnerability Detection and Patch Validation](https://thehackernews.com/2026/05/openai-launches-daybreak-for-ai-powered.html) - The Hacker News, published May 11, 2026. Daybreak combines GPT-5.5 models and Codex Security with partners including Akamai, Cisco, Cloudflare, CrowdStrike, Fortinet, Oracle, Palo Alto Networks, and Zscaler.
+- [Google says it likely thwarted effort by hacker group to use AI for 'mass exploitation event'](https://www.cnbc.com/2026/05/11/google-thwarts-effort-hacker-group-use-ai-mass-exploitation-event.html) - CNBC, published May 11, 2026. First confirmed AI-built zero-day, directly driving developer demand for AI-powered defensive tools.
+- [OpenAI's Daybreak Challenges Anthropic in AI Cybersecurity Race](https://devops.com/openais-daybreak-challenges-anthropic-in-ai-cybersecurity-race/) - DevOps.com, May 12, 2026. Positions Codex Security directly against Claude Code Security Review and Claude Mythos.
+- [Top 10 AI SAST Tools for 2026](https://www.dryrun.security/blog/top-ai-sast-tools-2026) - DryRun Security, 2026. Industry comparison noting Codex Security found three critical vulnerabilities that neither Semgrep nor Snyk flagged, with sandbox-based validation reducing noise by roughly 70%.
+- [Setup - Codex Security | OpenAI Developers](https://developers.openai.com/codex/security/setup) - Official setup docs exist, but zero third-party walkthrough covers the full workflow.
+- [Codex Security Review 2026: OpenAI's AppSec Agent](https://agent-finder.co/reviews/codex-security) - Agent Finder overview review, not a setup tutorial.
+
+### Competition check
+
+Searching "Codex Security setup guide" and "OpenAI Codex Security tutorial GitHub" returns only OpenAI's official developer docs, an Agent Finder feature review, and a Shawn Kanungo summary post. News coverage is heavy (MacRumors, eWeek, MarkTechPost, Infosecurity Magazine, Help Net Security, CSO Online, TechBriefly) but every article describes Daybreak's capabilities without walking through the actual setup. No third-party post covers the practitioner workflow: connecting repos, editing the auto-generated threat model to match your architecture, triaging validated vs unvalidated findings, creating PRs from proposed patches, or comparing the developer experience against the Claude Code Security Review GitHub Action that the blog already covers. The closest competitor content is TrueFoundry's "Best AI Code Security Tools for Enterprise" comparison, which is a feature matrix and not a hands-on guide. Wide-open gap for the first step-by-step tutorial that a developer can follow after reading the Daybreak headlines.
+
+### Suggested next step
+
+`/research-topic "codex-security-github-setup"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
