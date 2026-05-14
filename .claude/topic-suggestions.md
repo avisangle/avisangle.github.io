@@ -166,3 +166,31 @@ Searching "Claude Managed Agents outcomes tutorial" and "how to auto-evaluate AI
 ### Suggested next step
 
 `/research-topic "claude-managed-agents-outcomes"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-05-13: AI Agent Frameworks Fail Open - Auditing the eval(), Sandbox, and Tool Registry Defaults Behind 2026's RCE Wave
+
+**Suggested slug:** `ai-agent-framework-rce-audit`
+**Status:** pending research
+
+### Why this topic, why now
+
+On May 7, 2026, Microsoft's security team published "When Prompts Become Shells" documenting two Critical-severity CVEs (CVSS 9.9) in Semantic Kernel where prompt injection chains through eval()-based vector store filters and exposed internal tool functions to achieve host-level remote code execution. The same week, Lyrie Research published a cross-framework analysis calling it "The Agentic AI Framework RCE Epidemic of 2026," showing that CrewAI, Semantic Kernel, MCP STDIO servers (LangFlow, LiteLLM), and Google Antigravity all share a root cause: agent frameworks shipping with unsafe defaults that turn prompt injection into direct shell access on the host machine. Adversa AI's monthly tracker lists six confirmed agentic framework RCE or sandbox escape disclosures for May alone. Every piece of existing content is either a raw CVE advisory or a news article. Nobody has written the developer's audit guide showing the four recurring patterns, how to check if your stack is exposed, and the fix for each framework.
+
+### Search demand evidence
+
+- [When prompts become shells: RCE vulnerabilities in AI agent frameworks](https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/) - Microsoft Security Blog, published May 7, 2026. Documents CVE-2026-26030 (eval injection in vector store filters) and CVE-2026-25592 (arbitrary file write via exposed tool function) in Semantic Kernel.
+- [When Prompts Become Shells: The Agentic AI Framework RCE Epidemic of 2026](https://lyrie.ai/research/research/crewai-agentic-framework-sandbox-escape-rce-chain-2026) - Lyrie Research, May 2026. Cross-framework analysis covering CrewAI, Semantic Kernel, MCP STDIO, Google Antigravity. Identifies "fail-open defaults" as the systemic root cause across all affected frameworks.
+- [When prompts become shells: the tool registry is the attack surface](https://dev.to/mspro3210/when-prompts-become-shells-the-tool-registry-is-the-attack-surface-52n6) - DEV Community developer-oriented breakdown, May 2026. Shows active community interest in understanding the pattern.
+- [VU#221883 - CrewAI contains multiple vulnerabilities](https://kb.cert.org/vuls/id/221883) - CERT/CC advisory covering four CrewAI CVEs: sandbox escape via ctypes (CVE-2026-2275), SSRF via unvalidated RAG URLs (CVE-2026-2286), Docker fallback to insecure sandbox (CVE-2026-2287), arbitrary local file read (CVE-2026-2285).
+- [CrewAI Vulnerabilities Expose Devices to Hacking](https://www.securityweek.com/crewai-vulnerabilities-expose-devices-to-hacking/) - SecurityWeek, April-May 2026. Driving developer awareness of framework-level risks.
+- [Top Agentic AI security resources - May 2026](https://adversa.ai/blog/top-agentic-ai-security-resources-may-2026/) - Adversa AI monthly tracker listing six confirmed framework-level RCE/sandbox escape disclosures in May.
+
+### Competition check
+
+Searching "AI agent framework security audit guide" and "CrewAI RCE fix tutorial" returns Microsoft's blog (covers only Semantic Kernel), CERT/CC's raw advisory, news articles from SecurityWeek and GBHackers describing attacks without fixes, and SecureLayer7's overview of individual framework security postures. No cross-framework practitioner guide exists showing a developer how to audit their agent stack for the four common patterns (eval injection in vector stores, sandbox fallback to unsandboxed execution, tool registries exposing internal functions to the model, STDIO command injection) and apply the fix for each. This is a different article from the existing `hardening-ai-agents-cicd-prompt-injection` suggestion, which targets prompt injection via GitHub PR comments in CI/CD workflows - this targets the agent frameworks themselves and their architectural defaults.
+
+### Suggested next step
+
+`/research-topic "ai-agent-framework-rce-audit"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
