@@ -194,3 +194,32 @@ Searching "Codex Security setup guide" and "OpenAI Codex Security tutorial GitHu
 ### Suggested next step
 
 `/research-topic "codex-security-github-setup"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-15: npm Supply Chain Defense for AI Coding Agents - Lessons from the TanStack Worm
+
+**Suggested slug:** `npm-supply-chain-defense-ai-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+On May 11, 2026, the Mini Shai-Hulud worm published 84 malicious versions across 42 @tanstack/* npm packages in under six minutes, then spread to 170+ packages including Mistral AI's SDK on both npm and PyPI. OpenAI confirmed on May 14 that two employee devices were compromised, forcing certificate rotation and a mandatory macOS app update by June 12. This is the third major npm supply chain incident in 10 weeks (axios on March 31, SAP packages in April, now TanStack) and the first to carry valid SLSA Build Level 3 provenance attestations, meaning package signing alone didn't protect anyone. AI coding agents like Claude Code, Codex, and Cursor run `npm install` autonomously and inherit every dependency their workflows touch. Multiple security vendors (CSO Online, Oligo Security, grith.ai) have published articles explaining WHY AI coding agents are at risk, but zero practitioner guides show HOW to configure your package manager, lockfile strategy, and Claude Code hooks to block compromised packages before they execute.
+
+### Search demand evidence
+
+- [Postmortem: TanStack NPM supply-chain compromise](https://news.ycombinator.com/item?id=48100706) - Hacker News front page discussion (posted May 14, 2026). Multiple HN threads covering the incident including [item 48100388](https://news.ycombinator.com/item?id=48100388) and [item 48105634](https://news.ycombinator.com/item?id=48105634).
+- [Our response to the TanStack npm supply chain attack](https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack/) - Official OpenAI disclosure confirming employee device compromise and listing specific hardening steps including `minimumReleaseAge` deployment.
+- [OpenAI caught in TanStack npm supply chain chaos after employee devices compromised](https://www.theregister.com/security/2026/05/15/openai-caught-in-tanstack-npm-supply-chain-chaos-after-employee-devices-compromised/5241019) - The Register, published May 15, 2026. Coverage is still actively expanding.
+- [Supply-chain attacks take aim at your AI coding agents](https://www.csoonline.com/article/4167465/supply-chain-attacks-take-aim-at-your-ai-coding-agents.html) - CSO Online, May 2026. Names Claude Code, GitHub Copilot, and Cursor as attack surfaces but provides no configuration steps.
+- [NPM Supply Chain Attacks: Hidden Risks for AI Agents](https://www.oligo.security/blog/the-hidden-risks-of-the-npm-supply-chain-attacks-ai-agents) - Oligo Security blog. Risk analysis, not a defense tutorial.
+- [Malicious npm Packages Backdoor Claude Code Sessions](https://safedep.io/malicious-npm-packages-claude-code-hooks/) - SafeDep threat alert showing attackers already targeting Claude Code's SessionStart hooks specifically.
+- [security: enforce minimum package release age to prevent zero-day supply chain attacks](https://github.com/mikiwiik/instructions-only-claude-coding/issues/530) - GitHub issue on a Claude Code instructions repo requesting minimumReleaseAge enforcement, showing direct developer demand for this guidance.
+
+### Competition check
+
+Searching "npm supply chain defense AI coding agents tutorial" and "protect Claude Code npm install supply chain attack" returns only the CSO Online and Oligo Security risk-analysis articles, the SafeDep threat alert, and generic npm hardening guides (Coinspect, ArmorCode, Mondoo, pnpm docs). The DEV Community's "Lessons from the Spring 2026 OSS Incidents" post covers npm/pnpm/GitHub Actions hardening generically but never mentions AI coding agents. The grith.ai post on the axios attack is from March and predates the TanStack incident. No one has written the practitioner playbook showing the specific `.npmrc` / `bunfig.toml` / `pnpm` settings for `minimumReleaseAge`, the Claude Code hooks to audit `npm install` commands before execution, the `--ignore-scripts` flags to block lifecycle script attacks, or the lockfile verification steps that would have caught the TanStack worm. The blog already covers prompt injection defense (`hardening-ai-agents-cicd-prompt-injection`) and AI-powered vulnerability scanning (`claude-code-security-review-github-actions`, `codex-security-github-setup`) - this fills the missing third pillar: dependency supply chain defense.
+
+### Suggested next step
+
+`/research-topic "npm-supply-chain-defense-ai-coding-agents"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
