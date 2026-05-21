@@ -194,3 +194,31 @@ Searching "Codex Security setup guide" and "OpenAI Codex Security tutorial GitHu
 ### Suggested next step
 
 `/research-topic "codex-security-github-setup"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-20: Gemini CLI to Antigravity CLI: What Developers Need to Know Before June 18
+
+**Suggested slug:** `gemini-cli-to-antigravity-cli-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On May 19, 2026, Google announced at I/O that Gemini CLI will stop serving requests for free-tier, Google AI Pro, and Google AI Ultra users on June 18, 2026. The replacement is Antigravity CLI, a closed-source Go binary that ships as part of the Antigravity 2.0 platform. This is not a gentle sunset - it's a forced migration with a 30-day deadline that affects every developer who used Gemini CLI without an enterprise license. The developer backlash is loud: Antigravity CLI is not open-source (Gemini CLI was Apache 2.0), rate limits are more restrictive, and there is no 1:1 feature parity at launch. The existing coverage is either Google's marketing blog post or news articles describing what changed. One mechanical migration guide exists (agentpedia.codes), mapping files and config. Nobody has written the practitioner decision guide: should you migrate to Antigravity CLI, switch to Claude Code or Codex, stay on paid Gemini API keys, or evaluate another tool entirely?
+
+### Search demand evidence
+
+- [Gemini CLI will stop working from June 18, 2026](https://news.ycombinator.com/item?id=48196867) - 50+ points, active developer discussion (Hacker News, posted May 19, 2026; picked up by @betterhn50 bot confirming 50+ point threshold)
+- [Google Antigravity 2.0](https://news.ycombinator.com/item?id=48196838) - Active HN front-page thread on the broader Antigravity 2.0 platform launch (posted May 19, 2026)
+- [An important update: Transitioning Gemini CLI to Antigravity CLI](https://github.com/google-gemini/gemini-cli/discussions/27274) - 24+ comments from developers frustrated about the closed-source switch, rate limits, and forced timeline (GitHub Discussion, posted May 19 by Gemini CLI Lead PM Dmitry Lyalin)
+- [Ask HN: Antigravity 2.0 installer breaks existing Antigravity IDEs](https://news.ycombinator.com/item?id=48199074) - Early adopters reporting compatibility issues with the 2.0 installer (Hacker News, posted May 19-20, 2026)
+- [Bye-bye, Gemini CLI; Google's gone and swapped you for a closed-source AI](https://www.theregister.com/ai-ml/2026/05/20/bye-bye-gemini-cli-google-nudges-devs-toward-antigravity/5243605) - The Register, published May 20, 2026. Reports developer pushback on the open-source to closed-source transition.
+- [An important update: Transitioning Gemini CLI to Antigravity CLI](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/) - Google Developers Blog, official announcement, May 19, 2026
+
+### Competition check
+
+Searching "Gemini CLI shutdown what to do" and "Gemini CLI Antigravity migration guide developer" returns Google's marketing blog post, one agentpedia.codes migration guide (a mechanical file-by-file config mapping with no decision framework), and news articles from The Register, TechRadar, and TechCrunch. The agentpedia guide tells you HOW to migrate GEMINI.md to AGENTS.md but not WHETHER you should migrate at all. No post covers: evaluating if Antigravity CLI's rate limits and closed-source model fit your workflow vs switching to Claude Code or Codex, understanding which Gemini CLI features lack Antigravity parity at launch, the enterprise exception path (which users keep Gemini CLI access), or mapping extensions to Antigravity plugins with working examples. The closest content is a DEV Community opinion piece ("Antigravity Is Dead. Long Live Antigravity.") that editorializes but doesn't offer a step-by-step decision guide. Wide-open gap for an actionable practitioner guide with a hard deadline.
+
+### Suggested next step
+
+`/research-topic "gemini-cli-to-antigravity-cli-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
