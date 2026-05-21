@@ -194,3 +194,33 @@ Searching "Codex Security setup guide" and "OpenAI Codex Security tutorial GitHu
 ### Suggested next step
 
 `/research-topic "codex-security-github-setup"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-18: Microsoft Conductor - YAML-Defined Zero-Token Orchestration for Multi-Agent Coding Workflows
+
+**Suggested slug:** `microsoft-conductor-multi-agent-orchestration`
+**Status:** pending research
+
+### Why this topic, why now
+
+On May 14, 2026, Microsoft open-sourced Conductor (github.com/microsoft/conductor, MIT license) - a CLI tool that defines multi-agent coding workflows in YAML with deterministic routing. Unlike LangGraph or CrewAI, the orchestration layer consumes zero LLM tokens because routing uses Jinja2 templates and expression evaluation instead of an LLM deciding what runs next. Conductor works with both the GitHub Copilot SDK and the Anthropic Agents SDK, letting you mix Claude and GPT models in one pipeline. Microsoft is showcasing Conductor at Open Source Summit North America this week (May 18). The multi-agent orchestration space has exploded - Claude Code shipped Agent View and /goal on May 11-12, OpenAI shipped Codex mobile on May 14, and Addy Osmani published a tiered taxonomy of orchestration tools - but every existing guide describes WHAT these tools are, not HOW to set up a real multi-agent workflow from scratch. Conductor is the only new entrant this week with zero practitioner content.
+
+### Search demand evidence
+
+- [Conductor: Deterministic orchestration for multi-agent AI workflows](https://opensource.microsoft.com/blog/2026/05/14/conductor-deterministic-orchestration-for-multi-agent-ai-workflows/) - Microsoft Open Source Blog, published May 14, 2026. Official announcement of the YAML-first, zero-token orchestration CLI.
+- [microsoft/conductor](https://github.com/microsoft/conductor) - GitHub repo (MIT license, v0.1.1). Supports GitHub Copilot SDK and Anthropic Agents SDK, parallel execution groups, Jinja2 conditional routing, web dashboard.
+- [From open source to agentic systems: Microsoft at Open Source Summit North America 2026](https://opensource.microsoft.com/blog/2026/05/18/from-open-source-to-agentic-systems-microsoft-at-open-source-summit-north-america-2026/) - Microsoft Open Source Blog, published May 18, 2026. Conductor featured as a key tool in Microsoft's agentic systems showcase this week.
+- [Ask HN: How are you orchestrating multi-agent AI workflows in production?](https://news.ycombinator.com/item?id=47660705) - Hacker News Ask HN thread, April 2026. Active discussion on orchestration pain points, data passing, and framework choices.
+- [Multi-Agentic Software Development Is a Distributed Systems Problem](https://news.ycombinator.com/item?id=47761625) - Hacker News, April 2026. Community discussion framing multi-agent coding as a distributed systems challenge requiring verification gates and deterministic coordination.
+- [The Code Agent Orchestra - what makes multi-agent coding work](https://addyosmani.com/blog/code-agent-orchestra/) - Addy Osmani (Google Chrome engineering lead), 2026. Three-tier taxonomy of multi-agent tools listing Conductor as a top-tier orchestrator.
+- [Best Multi-Agent Coding Orchestrators in 2026](https://amux.io/blog/best-multi-agent-orchestrators-2026/) - amux.io, 2026. Calls Conductor "the most credible long-term bet" for deterministic multi-agent orchestration.
+- [9 Open-Source Agent Orchestrators for AI Coding (2026)](https://www.augmentcode.com/tools/open-source-agent-orchestrators) - Augment Code, 2026. Directory listing Conductor among the top open-source orchestrators for coding workflows.
+
+### Competition check
+
+Searching "microsoft conductor multi-agent tutorial" and "conductor yaml agent orchestration setup guide" returns only the Microsoft Open Source Blog announcement, the GitHub README, and comparison/directory listings (amux.io, Augment Code). Zero third-party practitioner guides exist. The Addy Osmani post and amux.io comparison describe Conductor's architecture and positioning but don't walk through setup, YAML workflow authoring, Jinja2 routing patterns, or running a real multi-agent coding task end to end. The closest content is the O'Reilly Radar article "Conductors to Orchestrators" by Osmani, which is a conceptual essay, not a hands-on tutorial. The gap is a step-by-step guide that starts from install, writes a YAML workflow mixing Claude and GPT agents for a code review pipeline, runs it against a real repo, and compares cost and results against running the same tasks sequentially in a single agent.
+
+### Suggested next step
+
+`/research-topic "microsoft-conductor-multi-agent-orchestration"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
