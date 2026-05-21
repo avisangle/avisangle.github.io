@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'gemini-cli-to-antigravity-cli-guide',
+      lastModified: '2026-05-21',
+    },
+    {
       slug: 'codex-security-github-setup',
       lastModified: '2026-05-14',
     },
@@ -44,7 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       slug: 'claude-managed-agents',
-      lastModified: '2026-04-16',
+      lastModified: '2026-05-17',
     },
     {
       slug: 'claude-mythos-preview',
@@ -72,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projects = [
     { slug: 'reddit-agent', lastModified: '2026-01-30' },
     { slug: 'social-media-auto-poster', lastModified: '2026-01-24' },
-    { slug: 'jenkins-mcp', lastModified: '2026-01-24' },
+    { slug: 'jenkins-mcp', lastModified: '2026-05-17' },
     { slug: 'jenkins-chatbot', lastModified: '2026-01-24' },
     { slug: 'calculator-server', lastModified: '2026-01-24' },
     { slug: 'wp-mcp', lastModified: '2026-01-24' },

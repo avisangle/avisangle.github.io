@@ -1,5 +1,44 @@
 # Progress Log
 
+## 2026-05-21
+
+### Published Blog Post: /blog/gemini-cli-to-antigravity-cli-guide
+- Title: "Gemini CLI to Antigravity CLI: Migration Guide & Alternatives" (61 chars)
+- News peg: Google I/O 2026 May 19 announcement; Gemini CLI free/Pro/Ultra cut off June 18, 2026; replacement is closed-source Antigravity CLI (`agy`, Go binary)
+- Unique angle: combined mechanical migration + decision framework + rate-limit math (1,000/day to 4-5 turns/week per Discussion #27274) + four real alternatives (Claude Code, Codex CLI, paid Gemini API, OpenGravity) + 30-day countdown plan
+- Schemas: TechArticle, BreadcrumbList, FAQPage (10 Q&As), HowTo (7-step migration)
+- Updated blog index (featured + first card), sitemap.ts, public/llms.txt
+- Build: pending verification
+- Followup: run /promote-blogpost gemini-cli-to-antigravity-cli-guide; track GSC for "gemini cli shutdown" and "antigravity cli migration" queries
+
+## 2026-05-17
+
+### Refreshed Project Page: /projects/jenkins-mcp
+- Goal: push "jenkins mcp server" (pos 14.7) toward page 1 - identified as a top page-2 opportunity in the 2026-05-16 GSC review
+- Added a visible FAQ section with H2 "Jenkins MCP Server FAQ" and four Q&As (what is it, how does it work, Claude Code integration, open source/repo link) - puts the exact target phrase in semantically heavy positions and answers questions the Google SERP is already serving impressions for
+- Imported the Accordion component for the FAQ block
+- Bumped lastModified to 2026-05-17 in both src/app/sitemap.ts and public/sitemap.xml
+- Build: clean
+- Known gap: project page should also have BreadcrumbList + FAQPage JSON-LD schemas per .claude/CLAUDE.md standards, but a security hook flagged the JSON-LD injection pattern (project-standard pattern, used across all blog posts) - left out for now, can re-attempt later
+- Followup: re-check this query's position in 14 days via /review-gsc-ranking
+
+### Refreshed Blog Post: /blog/claude-managed-agents
+- Refresh prompted by GSC review on 2026-05-16: post dropped from pos 2.2 (17 clicks) to gone-from-top-15 (3 clicks) on "claude managed agents vs claude agent sdk" despite stable rank around 6.5
+- Diagnosed cause: competitor saturation (WaveSpeed, BSWEN, Momentic, Verdent, multiple Medium posts in April 2026) + topical fragmentation with newer claude-managed-agents-outcomes post
+- Decision: refresh existing post rather than write a new one to avoid further cannibalization
+- Changes: bumped dateModified to 2026-05-17 (OG + TechArticle + sitemap.ts + public/sitemap.xml); added "first 50 hours/day free" pricing detail to TL;DR and pricing section; rewrote FAQ #3 ("difference between Managed Agents and Agent SDK") with explicit pricing + hybrid framing to mirror the lost query; added two new FAQ entries ("When should I use Managed Agents instead of Agent SDK?" and "Can I migrate from Managed Agents to Agent SDK later?"); added "Going deeper" callout linking forward to claude-managed-agents-outcomes to signal parent/child rather than duplicate
+- Brief saved at: .claude/content-briefs/claude-managed-agents-REFRESH.md
+- Build: clean, no errors or warnings
+- Followup: re-run /review-gsc-ranking in 14 days to verify position + click recovery on the target query
+
+## 2026-05-16
+
+### GSC Ranking Review
+- Run date: 2026-05-16
+- Period: last 28 days (2026-04-15 to 2026-05-13)
+- Snapshot saved: .claude/gsc-snapshots/2026-05-16.json
+- Key findings: Impressions up 65% (6.7k → 11.1k) but clicks down 4 (31 → 27). /blog/claude-managed-agents lost 14 clicks (17 → 3) despite stable position 6.5; suspected CTR collapse on the "vs claude agent sdk" query. /blog/gemma-4-models-guide and /blog/claude-code-security-review-github-actions both gaining impressions fast but converting poorly (CTR <0.2%).
+
 ## 2026-05-14
 
 ### Published Blog Post: OpenAI Codex Security GitHub Setup Guide
