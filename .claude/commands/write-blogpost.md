@@ -151,7 +151,64 @@ Update `.claude/progress.md` with:
 
 ---
 
-## Phase 6 — Suggest Next Step
+## Phase 6 — Commit and Push (MANDATORY)
+
+The article must be live on `main` before `/promote-blogpost` runs, because the
+social drafts and OG image link to a URL that will 404 if the article isn't
+deployed. `/promote-blogpost` intentionally scopes its `git add` narrowly to the
+OG image + social/ folder, so it will NOT bail you out of an uncommitted article.
+
+1. **Stage only the files this command produced.** Other dirty files in the
+   working tree (unrelated refreshes, in-progress edits, untracked tooling
+   directories) must NOT be staged. Use an explicit file list, not `git add -A`:
+   ```bash
+   git add src/app/blog/$ARGUMENTS/page.tsx \
+           src/app/blog/page.tsx \
+           src/app/sitemap.ts \
+           public/llms.txt \
+           .claude/progress.md \
+           .claude/content-briefs/$ARGUMENTS.md
+   ```
+   (Skip the content-briefs file from the list if it was already committed by
+   `/research-topic` and is therefore unmodified.)
+
+2. **Show the user the diff stat** before committing:
+   ```bash
+   git diff --cached --stat
+   ```
+
+3. **Commit with a descriptive message:**
+   ```bash
+   git commit -m "$(cat <<'EOF'
+   feat: publish blog post $ARGUMENTS
+
+   - Added /blog/$ARGUMENTS with TechArticle, BreadcrumbList, FAQPage schemas
+   - Updated blog index featured card and grid
+   - Updated sitemap.ts and public/llms.txt
+
+   Co-Authored-By: Claude <noreply@anthropic.com>
+   EOF
+   )"
+   ```
+
+4. **Push to origin:**
+   ```bash
+   git push origin main
+   ```
+
+5. **Confirm the GitHub Pages deploy kicked off:**
+   ```bash
+   gh run list --limit 1 --branch main
+   ```
+
+**If any step fails** (non-fast-forward push, pre-commit hook rejection, etc.),
+STOP and report the error. Do NOT force-push or skip hooks. The user can
+retry after resolving the conflict. Do not invoke `/promote-blogpost` while
+the article is uncommitted.
+
+---
+
+## Phase 7 — Suggest Next Step
 
 At the very end of your final report, include this block to prompt the next action:
 
@@ -189,4 +246,6 @@ Do not run the promote command yourself. Let the user invoke it when they're rea
 - [ ] Sitemap updated with new entry
 - [ ] `public/llms.txt` updated with new post entry
 - [ ] `npm run build` passes
+- [ ] Committed and pushed to `main` (only the article + index files, no unrelated dirty files)
+- [ ] GitHub Pages deploy run started (verified via `gh run list`)
 - [ ] No shadcn/ui component files modified
