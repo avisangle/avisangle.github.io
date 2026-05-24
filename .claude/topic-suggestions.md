@@ -222,3 +222,32 @@ Searching "Gemini CLI shutdown what to do" and "Gemini CLI Antigravity migration
 ### Suggested next step
 
 `/research-topic "gemini-cli-to-antigravity-cli-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and article outline.
+
+---
+
+## 2026-05-22: Gemini 3.5 Flash Agentic Coding Guide - Google's Flash-Tier Model That Beats Pro on Agent Benchmarks
+
+**Suggested slug:** `gemini-3-5-flash-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Google shipped Gemini 3.5 Flash at I/O on May 19, 2026 - a Flash-tier model that outperforms Gemini 3.1 Pro on coding and agent benchmarks while costing a fraction of the price ($1.50/$9.00 per 1M tokens vs. Claude Opus 4.7's $5/$25). It scored 76.2% on Terminal-Bench 2.1, 83.6% on MCP Atlas, and 1656 Elo on GDPval-AA, making it the first cheap model to beat last year's flagship on real-world agentic tasks. This reshapes the cost math for every developer running AI coding agents at scale. The blog already covers Claude Code cost tracking, Gemma open-weight models, and the Gemini CLI-to-Antigravity migration - a Gemini 3.5 Flash agentic guide fills the gap between "Google's models" content and "practical AI coding cost optimization."
+
+### Search demand evidence
+
+- [With Gemini 3.5 Flash, Google bets its next AI wave on agents, not chatbots](https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/) - TechCrunch, published May 19, 2026
+- [Google announces Gemini 3.5 Flash, its "strongest" coding model yet](https://www.neowin.net/news/google-announces-gemini-35-flash-its-strongest-coding-model-yet/) - Neowin, published May 19, 2026
+- [Gemini 3.5 Flash Shipped - A Flash-Tier Model Now Leads the Pro Tier on Agent Benchmarks](https://wavespeed.ai/blog/posts/gemini-3-5-flash-shipped-leads-agent-benchmarks/) - WaveSpeed AI, May 2026
+- [Gemini 3.5: frontier intelligence with action](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/) - Official Google blog, May 19, 2026
+- [Gemini 3.5 Flash - Model Card](https://deepmind.google/models/model-cards/gemini-3-5-flash/) - Google DeepMind, May 2026
+- [Gemini CLI will stop working from June 18, 2026](https://news.ycombinator.com/item?id=48196867) - 50+ points on HN (posted May 19, 2026). Developers in this thread actively discussing Gemini ecosystem changes and model alternatives.
+- [All the news from the Google I/O 2026 Developer keynote](https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/) - Google Developers Blog, May 19, 2026
+
+### Competition check
+
+Searching "Gemini 3.5 Flash agentic coding guide" and "build MCP agent Gemini 3.5 Flash" returns three relevant practitioner articles: an NxCode guide covering API traps and an MCP agent walkthrough, a Lushbinary developer guide with benchmarks and pricing, and a DataCamp overview of agentic capabilities. General news coverage from TechCrunch, Neowin, and WaveSpeed rounds out the results. The gap: none of these guides compare the agentic developer experience against Claude Code or Codex for specific task types (multi-file refactoring, test generation, code review, CI debugging), none provide cost-per-task analysis showing when Gemini 3.5 Flash is the better choice vs. paying for a Pro/Opus-tier model, and none cover the practical integration with existing MCP server setups that Claude Code users already have. The blog can differentiate by writing from the practitioner perspective of someone who already uses Claude Code and wants to know when routing tasks to Gemini 3.5 Flash makes sense.
+
+### Suggested next step
+
+`/research-topic "gemini-3-5-flash-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
