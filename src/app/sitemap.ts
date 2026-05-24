@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'gemini-3-5-flash-agentic-coding-guide',
+      lastModified: '2026-05-25',
+    },
+    {
       slug: 'gemini-cli-to-antigravity-cli-guide',
       lastModified: '2026-05-21',
     },

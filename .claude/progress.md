@@ -1,5 +1,17 @@
 # Progress Log
 
+## 2026-05-25
+
+### Published Blog Post: /blog/gemini-3-5-flash-agentic-coding-guide
+- Title: "Gemini 3.5 Flash for Agentic Coding: A Claude Coder's Guide" (59 chars)
+- News peg: Google I/O 2026 May 19 announcement; Gemini 3.5 Flash GA on launch day; first Flash-tier model to beat the prior Pro tier on agent benchmarks (76.2% Terminal-Bench 2.1, 83.6% MCP Atlas)
+- Unique angle: written for Claude Code users deciding when to route subtasks to Flash (not a Gemini-native guide); cost-per-task truth (Simon Willison's $1,552 vs $892 number; NxCode's 9x eval cost; GitHub Copilot 14x multiplier) + the thinking_level: medium silent-default trap explained with a before/after Python diff + a six-row routing matrix + three concrete routing mechanisms (OpenRouter, custom MCP server, Antigravity CLI) + a working 40-line Python MCP agent
+- Schemas: TechArticle, BreadcrumbList, FAQPage (10 Q&As), HowTo (5-step MCP agent build)
+- Updated blog index (featured + first card), sitemap.ts, public/llms.txt
+- Internal links: gemini-cli-to-antigravity-cli-guide, claude-code-cost-tracking, mcp-code-execution-pattern, claude-managed-agents-outcomes, ant-cli-getting-started, gemma-4-models-guide, claude-md-guide
+- Build: pending verification
+- Followup: run /promote-blogpost gemini-3-5-flash-agentic-coding-guide; track GSC for "gemini 3.5 flash vs claude code", "gemini 3.5 flash thinking_level", and "gemini 3.5 flash mcp agent" queries
+
 ## 2026-05-21
 
 ### Published Blog Post: /blog/gemini-cli-to-antigravity-cli-guide

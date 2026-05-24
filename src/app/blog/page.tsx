@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Gemini 3.5 Flash for Agentic Coding: A Claude Coder's Guide",
+                url: "https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide",
+                datePublished: "2026-05-25",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Gemini CLI to Antigravity CLI: Migration Guide & Alternatives",
                 url: "https://avinashsangle.com/blog/gemini-cli-to-antigravity-cli-guide",
                 datePublished: "2026-05-21",
@@ -189,24 +196,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ArrowRightLeft" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Zap" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">DEVELOPER TOOLS</p>
-                <h3 className="text-2xl font-bold mb-4">Gemini CLI to Antigravity CLI: Migration Guide & Alternatives</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">Gemini 3.5 Flash for Agentic Coding: A Claude Coder&apos;s Guide</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Gemini CLI stops on June 18, 2026 for free, Pro, and Ultra
-                  users. Step-by-step migration to the new <code>agy</code>
-                  binary, honest rate-limit math (1,000/day to ~5 turns/week),
-                  and decision rules for when to switch to Claude Code or
-                  Codex CLI instead.
+                  Gemini 3.5 Flash beats Gemini 3.1 Pro on agent benchmarks
+                  at $1.50/$9 per 1M tokens. When to route tasks from Claude
+                  Code to it, the thinking_level trap that breaks copy-pasted
+                  code, and a working 40-line MCP agent in Python.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 21, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 25, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/gemini-cli-to-antigravity-cli-guide">Read Article →</Link>
+                  <Link href="/blog/gemini-3-5-flash-agentic-coding-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -219,6 +225,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Zap" size="lg" animation="pulse" />
+                <CardTitle>Gemini 3.5 Flash for Agentic Coding: A Claude Coder&apos;s Guide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Gemini 3.5 Flash beats Gemini 3.1 Pro on agent benchmarks at
+                  $1.50/$9 per 1M tokens. When to route tasks from Claude
+                  Code, the thinking_level trap, and a 40-line MCP agent.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 25, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/gemini-3-5-flash-agentic-coding-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ArrowRightLeft" size="lg" animation="pulse" />
