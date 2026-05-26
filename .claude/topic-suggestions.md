@@ -251,3 +251,31 @@ Searching "Gemini 3.5 Flash agentic coding guide" and "build MCP agent Gemini 3.
 ### Suggested next step
 
 `/research-topic "gemini-3-5-flash-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-05-25: Getting Started with Qwen Code - Alibaba's Open-Source Terminal Coding Agent
+
+**Suggested slug:** `qwen-code-getting-started`
+**Status:** pending research
+
+### Why this topic, why now
+
+Qwen Code is Alibaba's open-source (Apache 2.0) terminal-based AI coding agent - a direct rival to Claude Code and OpenAI Codex. The project hit 24.7K GitHub stars with 457 releases, and v0.16.1 shipped on May 23, 2026 with Agent Skills GA, Batch Runner, hooks for session context injection, and LSP support. The same week, Alibaba announced Qwen3.7-Max at their Cloud Summit (May 20), drawing fresh attention to the entire Qwen ecosystem. Unlike Claude Code or Codex, Qwen Code supports multi-protocol flexibility - connecting to OpenAI, Anthropic, Gemini-compatible APIs, OpenRouter, or Fireworks AI with a single config swap. It also ships SubAgents, Skills, and Plan Mode as built-in features. The blog covers Claude Code extensively but has zero content on its most direct open-source competitor, despite growing developer interest in alternatives driven by Claude Code's pricing and vendor lock-in.
+
+### Search demand evidence
+
+- [Qwen Code: A command-line AI workflow tool, optimized for Qwen3-Coder models](https://news.ycombinator.com/item?id=44653981) - Hacker News thread discussing the tool's capabilities and developer experience
+- [Qwen 3.6 Reviewed: The Open-Weight Coder That Just Crashed the Frontier Party](https://medium.com/@arvisionlab/qwen-3-6-reviewed-the-open-weight-coder-that-just-crashed-the-frontier-party-3b2e3e37ba34) - Towards AI, May 2026. Cites a r/LocalLLaMA post with 186 upvotes about a free 27B model matching frontier subscriptions
+- [I Ditched Claude Code and Now Using Open Source Qwen AI for Real Sysadmin Work](https://itsfoss.com/qwen-code-sysadmin-tasks/) - ItsF0SS practitioner article documenting a developer's switch from Claude Code
+- [Claude Code vs Qwen3-Coder (2026): Closer Than You Think](https://vibecoding.app/compare/claude-code-vs-qwen3-coder) - VibeCoding comparison showing active search intent for head-to-head evaluations
+- [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) - 24.7K stars, 2.4K forks, 457 releases as of May 25, 2026. Updated daily.
+- [Best Open-Source AI Coding Agents in 2026: OpenHands, Qwen Code, OpenCode, and Aider Compared](https://nerova.ai/comparisons/best-open-source-ai-coding-agents-2026) - Nerova AI roundup placing Qwen Code as the top choice for "terminal-native open agent workflows"
+
+### Competition check
+
+Searching "Qwen Code getting started guide" returns a DataCamp tutorial, an Alibaba Cloud blog post, a My Developer Planet guide from February 2026, and DEV Community walkthroughs. These are generic installation-and-first-prompt tutorials. None are written from a Claude Code practitioner's perspective, none compare the actual workflow experience (CLAUDE.md vs QWEN.md, MCP server compatibility, SubAgent patterns, cost per task), and none cover the latest May 2026 features (Agent Skills GA, hooks, Batch Runner, LSP diagnostics). The blog's differentiation: a Claude Code expert trying the main open-source alternative and giving an honest, practitioner-level verdict on when each tool earns its spot.
+
+### Suggested next step
+
+`/research-topic "qwen-code-getting-started"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
