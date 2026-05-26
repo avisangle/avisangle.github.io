@@ -13,6 +13,7 @@ const navLinks: { name: string; href: string; external?: boolean }[] = [
   { name: "Projects", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
   { name: "Blog", href: "/blog" },
+  { name: "Services", href: "/services" },
   { name: "Contact", href: "/#contact" },
 ]
 
