@@ -25,7 +25,7 @@ export function NewsletterSignup() {
   return (
     <section className="section">
       <div className="container-project flex justify-center">
-        <div ref={containerRef} className="w-full max-w-2xl" />
+        <div ref={containerRef} className="kit-newsletter w-full max-w-2xl" />
       </div>
     </section>
   )
