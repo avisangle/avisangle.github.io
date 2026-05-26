@@ -56,6 +56,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Qwen Code CLI: Getting Started Guide for AI Coding 2026",
+                url: "https://avinashsangle.com/blog/qwen-code-getting-started",
+                datePublished: "2026-05-26",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Gemini 3.5 Flash for Agentic Coding: A Claude Coder's Guide",
                 url: "https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide",
                 datePublished: "2026-05-25",
@@ -196,23 +203,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Zap" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Terminal" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Gemini 3.5 Flash for Agentic Coding: A Claude Coder&apos;s Guide</h3>
+                <h3 className="text-2xl font-bold mb-4">Qwen Code CLI: Getting Started Guide for AI Coding 2026</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Gemini 3.5 Flash beats Gemini 3.1 Pro on agent benchmarks
-                  at $1.50/$9 per 1M tokens. When to route tasks from Claude
-                  Code to it, the thinking_level trap that breaks copy-pasted
-                  code, and a working 40-line MCP agent in Python.
+                  Install Qwen Code, fix the post-OAuth authentication mess,
+                  and see where Alibaba&apos;s open-source terminal agent
+                  actually beats Claude Code. API key paths, ~/.qwen/settings.json
+                  config, a CI/CD recipe, and the 1M-context YaRN reality check.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 25, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 26, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/gemini-3-5-flash-agentic-coding-guide">Read Article →</Link>
+                  <Link href="/blog/qwen-code-getting-started">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -225,6 +232,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Terminal" size="lg" animation="pulse" />
+                <CardTitle>Qwen Code CLI: Getting Started Guide for AI Coding 2026</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Install Qwen Code, fix the post-OAuth authentication mess,
+                  and see where Alibaba&apos;s open-source terminal agent
+                  actually beats Claude Code. CI/CD recipe + 1M-context reality check.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 26, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/qwen-code-getting-started" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Zap" size="lg" animation="pulse" />

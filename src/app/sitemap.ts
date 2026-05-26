@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'qwen-code-getting-started',
+      lastModified: '2026-05-26',
+    },
+    {
       slug: 'gemini-3-5-flash-agentic-coding-guide',
       lastModified: '2026-05-25',
     },

@@ -1,5 +1,16 @@
 # Progress Log
 
+## 2026-05-26
+
+### Published Blog Post: /blog/qwen-code-getting-started
+- Title: "Qwen Code CLI: Getting Started Guide for AI Coding 2026" (56 chars)
+- Unique angle: post-2026-04-15 OAuth-shutdown reality (every competing guide still says "log in with browser"); three API-key paths (DashScope, OpenAI-compatible, self-host vLLM); side-by-side vs Claude Code + sunset Gemini CLI; non-interactive `qwen -p` GitHub Actions PR-summary recipe
+- Schemas: TechArticle, BreadcrumbList, FAQPage (8 Q&As), HowTo (4 steps)
+- Updated blog index (featured + first card), sitemap.ts, public/llms.txt
+- Internal links: ant-cli-getting-started, gemini-cli-to-antigravity-cli-guide, gemini-3-5-flash-agentic-coding-guide, hardening-ai-agents-cicd-prompt-injection
+- Build: pending verification
+- Followup: run /promote-blogpost qwen-code-getting-started
+
 ## 2026-05-25
 
 ### Published Blog Post: /blog/gemini-3-5-flash-agentic-coding-guide
