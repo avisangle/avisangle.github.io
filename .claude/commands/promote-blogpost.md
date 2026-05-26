@@ -97,14 +97,26 @@ Everything below the `---BODY---` marker is the actual post content.
 - Use bold emphasis (`**text**`) for key points.
 - Sign off with "Happy to answer questions" or similar community-friendly close.
 
-**Subreddit selection:**
-- Always include **r/ClaudeAI** for Claude Code / Anthropic topics
-- Add a second sub based on article topic:
-  - Claude Code articles → `r/ClaudeAI` only (or add `r/LocalLLaMA` if architecture-focused)
-  - Local LLM / model articles → add `r/LocalLLaMA`
-  - DevOps / MCP server articles → add `r/devops` or `r/selfhosted`
-  - Agent development → add `r/AI_Agents`
-- If the article doesn't cleanly fit a second sub, generate only one post block - don't pad.
+**Subreddit selection — dynamic, registry-driven:**
+
+Do NOT hardcode subreddit picks. The site's scope has broadened beyond Claude Code, so subs must be chosen per-article from `.claude/subreddit-registry.md`.
+
+Steps:
+
+1. **Read `.claude/subreddit-registry.md`** to get the candidate list and scoring rules.
+2. **Extract article signals** from `src/app/blog/$ARGUMENTS/page.tsx`:
+   - `title`, `description`, `keywords` array (both forms — the array and the meta string)
+   - All H2/H3 headings
+   - Code-block languages (look for `<CodeBlock language="...">`)
+   - Any model/product names mentioned 3+ times in the body
+3. **Score each candidate** per the registry's scoring rules (substring hits against `triggers` = 1 pt, `bonus_triggers` = 2 pts, apply `penalty` for `avoid` terms, drop on `requires_all` failures).
+4. **Compare top result to the "Topic → recommended pairs" sanity-check table** in the registry. If they disagree, mention the disagreement to the user when presenting choices.
+5. **Present top 4 candidates ranked by score** to the user via `AskUserQuestion`, with the top 2 marked as "(Recommended)". Include the score and one-line `notes` from the registry as the option description. Let the user pick the pair to use (or override with their own).
+6. **After the user confirms**, look up flairs:
+   - For subs with `flair_lookup_needed: true`, run `python scripts/list_reddit_flairs.py <sub>` and pick a flair ID that matches the article type (Discussion / Tutorial / Comparison / News / etc.). Use the matching ID, not the human-readable name.
+   - If `list_reddit_flairs.py` fails or returns no flairs, write a flair name from the registry's `flairs` list and warn the user that posting may fail on flair validation.
+7. **Honor the 1-post-per-week-per-sub guardrail**: grep recent `src/app/blog/*/social/POSTED.md` files for entries to the same sub within the last 7 days. If found, mention it to the user and ask before including that sub again.
+8. **If only one sub scores well** (e.g., a vendor-specific announcement), generate one post block — don't pad with a weak second sub.
 
 **Block structure (repeat per subreddit):**
 ```
