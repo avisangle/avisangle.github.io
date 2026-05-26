@@ -51,6 +51,10 @@ export function ContactForm() {
 
       if (result.success) {
         setStatus("success")
+        // GA4 conversion: mark this as a Key event in GA4 Admin → Key events.
+        if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          window.gtag("event", "generate_lead", { form_name: "contact" })
+        }
         ;(event.target as HTMLFormElement).reset()
       } else {
         setStatus("error")
