@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 const STORAGE_KEY = "ga-consent"
@@ -56,8 +57,11 @@ export function ConsentBanner() {
     >
       <div className="container mx-auto flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-muted-foreground">
-          This site uses analytics cookies to understand how visitors use it. You can
-          accept or decline.
+          This site uses analytics cookies to understand how visitors use it. See the{" "}
+          <Link href="/privacy" className="underline underline-offset-4 hover:text-foreground">
+            Privacy Policy
+          </Link>
+          .
         </p>
         <div className="flex shrink-0 gap-2">
           <Button variant="outline" size="sm" onClick={() => handleChoice("denied")}>

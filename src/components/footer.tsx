@@ -61,6 +61,12 @@ export function Footer() {
         <Separator className="my-6" />
         <div className="footer-bottom">
           <p>&copy; {currentYear} Avinash Sangle. Made with ❤️ and code.</p>
+          <Link
+            href="/privacy"
+            className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+          >
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>

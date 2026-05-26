@@ -19,8 +19,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://avinashsangle.com/blog/ant-cli-getting-started/</loc>
+    <lastmod>2026-05-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://avinashsangle.com/blog/claude-managed-agents/</loc>
-    <lastmod>2026-04-09</lastmod>
+    <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avinashsangle.com/blog/claude-managed-agents-outcomes/</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -55,6 +67,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://avinashsangle.com/blog/regression-proofing-claude-code-workflows/</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://avinashsangle.com/projects/</loc>
     <lastmod>2026-04-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -74,7 +92,7 @@
   </url>
   <url>
     <loc>https://avinashsangle.com/projects/jenkins-mcp/</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -113,5 +131,11 @@
     <lastmod>2026-01-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avinashsangle.com/privacy/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
