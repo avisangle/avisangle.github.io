@@ -4,16 +4,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio website for Avinash Sangle (avinashsangle.com) - a Next.js 16 static site with shadcn/ui components, deployed to GitHub Pages. The site features project showcases, technical blog posts, and comprehensive SEO optimization.
+Personal portfolio website for Avinash Sangle (avinashsangle.com) - a Next.js 16 app with shadcn/ui components, deployed to Vercel. The site features project showcases, technical blog posts, and comprehensive SEO optimization.
 
 ## Tech Stack
 
-- **Framework:** Next.js 16 (App Router) with static export
+- **Framework:** Next.js 16 (App Router), server-rendered on Vercel
 - **Styling:** Tailwind CSS 4 with shadcn/ui components
 - **Icons:** Lucide React (replaced emojis throughout)
 - **Fonts:** Plus Jakarta Sans (sans), IBM Plex Mono (mono)
-- **Deployment:** GitHub Pages via GitHub Actions workflow
-- **Domain:** Custom domain (avinashsangle.com) with Cloudflare DNS
+- **Deployment:** Vercel (auto-deploys on push to `main` from the connected Git repo)
+- **Domain:** Custom domain (avinashsangle.com); Cloudflare DNS-only (not proxied — traffic goes straight to Vercel)
 
 ## Development Commands
 
@@ -21,7 +21,7 @@ Personal portfolio website for Avinash Sangle (avinashsangle.com) - a Next.js 16
 # Development server (runs on localhost:3000)
 npm run dev
 
-# Production build (outputs to ./out folder)
+# Production build (Vercel runs this on deploy)
 npm run build
 
 # Lint
@@ -30,20 +30,11 @@ npm run lint
 
 ## Critical Architecture Rules
 
-### 1. Static Export Configuration
+### 1. Vercel Deployment Configuration
 
-The site uses Next.js static export for GitHub Pages deployment:
+The site runs as a standard Next.js app on Vercel (no static export). `next.config.ts` defines server-side `redirects()` (legacy `.html` URLs → clean routes, www→apex, old blog subdomain), which require Vercel's runtime — they would not work under static export.
 
-```typescript
-// next.config.ts
-{
-  output: 'export',           // Static HTML export
-  trailingSlash: true,        // Required for GitHub Pages routing
-  images: { unoptimized: true } // Required for static export
-}
-```
-
-**Important:** All pages must be statically exportable. No server-side rendering, API routes, or dynamic routes with `getServerSideProps`.
+**Important:** Server features (redirects, dynamic routes, Image Optimization) are available since the app is server-rendered on Vercel. Pages are still mostly static/SSG by default for SEO and speed.
 
 ### 2. shadcn/ui Components - DO NOT MODIFY
 
@@ -85,20 +76,15 @@ import { CategoryIcon } from "@/components/icons/category-icon"
 
 ## Deployment Architecture
 
-### GitHub Pages Workflow
+### Vercel (current)
 
-Located at `.github/workflows/deploy.yml`:
+Vercel is connected to the Git repo and auto-deploys on every push to `main` (runs `npm ci` + `npm run build`, serves the Next.js output). Preview deployments are created for other branches/PRs. No CI workflow is needed for deploys.
 
-1. Triggers on push to `main` branch
-2. Runs `npm ci` and `npm run build`
-3. Uploads `./out` folder to GitHub Pages
-4. Deploys via `actions/deploy-pages@v4`
+The old GitHub Pages workflow is retained but disabled at `.github/workflows/deploy.yml.disabled`. The legacy `public/.nojekyll` and `public/CNAME` files are GitHub Pages artifacts and no longer used by Vercel.
 
 **Important Files in `public/` folder:**
 - `sitemap.xml` - Must be kept updated with all pages
 - `robots.txt` - Search engine directives
-- `.nojekyll` - Prevents GitHub from processing `_next` folder
-- `CNAME` - Custom domain configuration (avinashsangle.com)
 
 ### Routing Structure
 
@@ -247,14 +233,20 @@ export default function PageName() {
 ## Important Notes
 
 - **No emojis:** Use Lucide icons via `CategoryIcon` component
-- **Static only:** Cannot use dynamic server features
+- **Server-rendered on Vercel:** Dynamic server features (redirects, dynamic routes, Image Optimization) are available
 - **Year context:** Current year is 2026 (update dates accordingly)
 - **Git workflow:** Commit with descriptive messages, always include Co-Authored-By line
-- **Build output:** GitHub Actions builds and deploys from `./out` folder
+- **Deploy:** Vercel auto-builds and deploys on push to `main` (no `./out` upload step)
 - **Previous issue:** Separate `avisangle/blog` repo had Pages enabled, causing routing conflicts (now disabled)
+
+## Analytics
+
+- **Google Analytics 4** (`G-89KDVPLEKW`) — gtag wired in `src/app/layout.tsx`, gated to production builds only.
+- **Vercel Web Analytics** — `<Analytics />` in `src/app/layout.tsx` (cookieless). Must be enabled in the Vercel project dashboard to collect data.
+- **Cloudflare Web Analytics** — not functional: the site is not proxied through Cloudflare (DNS-only), so its edge beacon is never injected.
 
 ## Cloudflare Configuration
 
 - Custom domain: avinashsangle.com
-- DNS managed via Cloudflare
+- DNS managed via Cloudflare (DNS-only / grey-cloud — points to Vercel, not proxied)
 - Previous CNAME record for `blog` subdomain removed during consolidation

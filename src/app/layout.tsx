@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/react"
 import { Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -17,6 +18,12 @@ const ibmPlexMono = IBM_Plex_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
 })
+
+// Google Analytics 4 Measurement ID. Replace with the ID from your GA4 web
+// data stream (Admin → Data Streams → Web). It's a public value, safe to commit.
+const GA_MEASUREMENT_ID = "G-89KDVPLEKW"
+const enableAnalytics =
+  process.env.NODE_ENV === "production" && GA_MEASUREMENT_ID !== "G-XXXXXXXXXX"
 
 export const metadata: Metadata = {
   title: {
@@ -102,6 +109,23 @@ export default function RootLayout({
           src="https://omniagent-shim.pages.dev/omniagent-shim.min.js"
           strategy="afterInteractive"
         />
+        {/* Google Analytics 4 */}
+        {enableAnalytics && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');`}
+            </Script>
+          </>
+        )}
+        {/* Vercel Web Analytics (cookieless) */}
+        <Analytics />
       </body>
     </html>
   )
