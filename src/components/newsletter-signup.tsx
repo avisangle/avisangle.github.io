@@ -5,10 +5,11 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Loader2 } from "lucide-react"
 
-// Kit (ConvertKit) form UID — from your form's embed snippet (data-uid).
-// We post directly to Kit's CORS-enabled subscription endpoint, so the form
-// is fully styled with the site's own components.
-const KIT_FORM_UID = "098959edff"
+// Kit (ConvertKit) NUMERIC form ID (not the embed's data-uid — this endpoint
+// rejects the uid with "Couldn't find a form"). We post directly to Kit's
+// CORS-enabled subscription endpoint, so the form is styled with the site's
+// own components.
+const KIT_FORM_ID = "9487940"
 
 type Status = "idle" | "loading" | "success" | "error"
 
@@ -25,12 +26,14 @@ export function NewsletterSignup() {
     const email_address = formData.get("email_address")
 
     try {
-      const res = await fetch(`https://app.kit.com/forms/${KIT_FORM_UID}/subscriptions`, {
+      const res = await fetch(`https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({ email_address }),
       })
-      if (res.ok) {
+      // Kit returns HTTP 200 even on failure; the real result is in the body.
+      const data = await res.json().catch(() => null)
+      if (data?.status === "success") {
         setStatus("success")
       } else {
         setStatus("error")
