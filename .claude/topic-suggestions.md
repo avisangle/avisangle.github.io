@@ -279,3 +279,32 @@ Searching "Qwen Code getting started guide" returns a DataCamp tutorial, an Alib
 ### Suggested next step
 
 `/research-topic "qwen-code-getting-started"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-05-28: Persistent Memory for AI Coding Agents: What Works Beyond CLAUDE.md
+
+**Suggested slug:** `persistent-memory-ai-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+Every developer using Claude Code, Codex, or Gemini CLI hits the same wall: the agent forgets everything when the session ends. CLAUDE.md files help for static project rules, but they don't capture what the agent learned during a session - debugging patterns, architectural decisions, API quirks it discovered. In May 2026, three forces collided: agentmemory hit #1 trending on GitHub (climbing from 2K to 9.4K stars in two weeks), claude-mem crossed 74K stars, and Anthropic shipped "Dreaming" for Managed Agents at Code with Claude. The persistent memory space just went from science project to production tool, and developers are actively searching for guidance on which approach to use.
+
+### Search demand evidence
+
+- [agentmemory: #1 Persistent memory for AI coding agents](https://github.com/rohitg00/agentmemory) - 9,400+ stars, #1 trending on all of GitHub week of May 13, 2026. Product Hunt launch drew additional attention.
+- [Show HN: Hmem - Persistent hierarchical memory for AI coding agents (MCP)](https://news.ycombinator.com/item?id=47103237) - One of 10+ Show HN memory projects in 2026, showing sustained builder interest in this space.
+- [claude-mem: Persistent Context Across Sessions for Every Agent](https://github.com/thedotmack/claude-mem) - 74,800+ stars, 269 releases, 109 contributors. The most-starred memory project in the ecosystem.
+- [Ask HN: Thinking about memory for AI coding agents](https://news.ycombinator.com/item?id=46742800) - Active HN discussion thread on agent memory architecture tradeoffs.
+- [Anthropic Dreaming announcement](https://claude.com/blog/new-in-claude-managed-agents) - Dreaming, Outcomes, and multiagent orchestration shipped May 6-7, 2026 at Code with Claude SF.
+- [State of AI Agent Memory 2026](https://mem0.ai/blog/state-of-ai-agent-memory-2026) - mem0's industry report covering vector, graph, and episodic memory benchmarks plus production gaps.
+- Reddit r/ClaudeAI and r/ClaudeCode discussions (early May 2026) - agentmemory reception split between enthusiasts citing published LongMemEval benchmarks and skeptics arguing CLAUDE.md plus discipline beats any framework.
+
+### Competition check
+
+Searching "persistent memory AI coding agents" returns individual tool reviews (DEV Community agentmemory review, MindStudio setup guide, Augment Code claude-mem writeups) and one mem0 industry report. Nobody has written the "patterns" guide that compares the three tiers side by side: static files (CLAUDE.md/AGENTS.md), MCP memory servers (agentmemory, claude-mem, Hmem), and platform-level memory (Anthropic Dreaming, Google Memory Bank). The site's existing claude-md-guide creates a natural entry point - readers who found that post are the exact audience searching for "what comes next when CLAUDE.md isn't enough."
+
+### Suggested next step
+
+`/research-topic "persistent-memory-ai-coding-agents"` to produce the full content brief with keyword strategy, benchmark comparisons, and outline.
