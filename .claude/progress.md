@@ -1,5 +1,16 @@
 # Progress Log
 
+## 2026-05-29
+
+### Published Blog Post: /blog/persistent-memory-ai-coding-agents
+- Title: "Persistent Memory for AI Coding Agents Beyond CLAUDE.md" (55 chars)
+- Unique angle: three-tier playbook (static files → MCP servers → platform-native) anchored in Anthropic's published mechanics (memory_20250818 tool, context-management-2025-06-27 beta header, 84% token-savings figure); head-to-head MCP server comparison (agentmemory 19.5K, claude-mem 79.5K, mcp-memory-service) with current stars and benchmarks; clarifies the most common reader confusion (Memory tool ≠ Claude Code CLI memory)
+- Schemas: TechArticle, BreadcrumbList, FAQPage (8 Q&As)
+- Updated blog index (featured + first card), sitemap.ts, public/llms.txt
+- Internal links: claude-md-guide (Tier 1), mcp-code-execution-pattern (Tier 2 MCP context), claude-managed-agents, claude-managed-agents-outcomes (Tier 3 Dreaming + Memory for Managed Agents), claude-code-cost-tracking (token cost section), regression-proofing-claude-code-workflows (staleness section), hardening-ai-agents-cicd-prompt-injection (cross-agent leakage section), projects/jenkins-mcp (MCP reference)
+- Build: pending verification
+- Followup: run /promote-blogpost persistent-memory-ai-coding-agents
+
 ## 2026-05-26
 
 ### Published Blog Post: /blog/qwen-code-getting-started
@@ -271,3 +282,21 @@
 - Next.js serves static files from public/ folder
 - Files now accessible at root URL after build
 - **Commit:** 3e88a83
+
+## 2026-05-27
+
+### GSC Ranking Review
+- Run date: 2026-05-27
+- Period: last 28 days (2026-04-26 to 2026-05-24)
+- Snapshot saved: .claude/gsc-snapshots/2026-05-27.json
+- Key findings:
+  - Site clicks up (41 vs 27), position improved (8.7 vs 8.9) - overall healthy.
+  - US "traffic drop" diagnosed via country dimension: NOT a ranking loss. US impressions GREW +65% (3518->5812), position improved (9.6->8.6), but clicks fell 8->3 and CTR collapsed 0.23%->0.05%. Classic AI Overview / zero-click pattern, concentrated on /blog/gemma-4-models-guide (3759 impr, 0.2% CTR) and /blog/claude-code-security-review-github-actions (2471 impr, 0.0% CTR).
+
+### dev.to syndication audit + publish
+- Audited dev.to: 4 live (managed-agents, cost-tracking, ant-cli, + managed-agents-outcomes just published), Gemini 3.5 Flash held as draft.
+- Published claude-managed-agents-outcomes via API PUT (id 3655823) - 15-day origin head start, safe to syndicate.
+- Held gemini-3-5-flash-agentic-coding-guide draft (id 3755308) - origin only 2 days old; publish ~2026-06-08 to avoid dev.to outranking origin.
+- Confirmed canonical_url correctly set on all live cross-posts. dev.to outranks origin on identical content despite canonical (cross-domain canonical is advisory).
+- Fixed stale POSTED.md records (ant-cli was LIVE not draft; outcomes now LIVE).
+- Ready-to-syndicate candidates (crosspost prepared, origin 4+ wks old): security-review, hardening, regression-proofing.
