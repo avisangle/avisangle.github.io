@@ -308,3 +308,31 @@ Searching "persistent memory AI coding agents" returns individual tool reviews (
 ### Suggested next step
 
 `/research-topic "persistent-memory-ai-coding-agents"` to produce the full content brief with keyword strategy, benchmark comparisons, and outline.
+
+---
+
+## 2026-05-29: Claude Code Dynamic Workflows: When to Use Them and What They Cost
+
+**Suggested slug:** `claude-code-dynamic-workflows-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic shipped dynamic workflows in Claude Code on May 28, 2026 alongside the Opus 4.8 release. This is the first time Claude Code can orchestrate hundreds of parallel subagents from a single prompt - writing a JavaScript orchestration script on the fly, fanning work across up to 1,000 agents (16 concurrent), and verifying results before reporting back. The feature is in research preview and available on all paid plans. Within 24 hours, Hacker News has active discussion threads, and early adopters are reporting that token costs can jump by an order of magnitude compared to standard sessions. Jarred Sumner used it to port Bun from Zig to Rust (750K lines, 11 days, 99.8% test pass rate), which makes the capability real but the cost question urgent. The 5-6 guides published so far are thin day-one overviews explaining what the feature is. Nobody has written the practitioner guide answering the harder questions: which tasks justify the cost, how to scope prompts to control subagent count, how to debug a workflow that goes sideways, and when a single Claude Code session is the better choice.
+
+### Search demand evidence
+
+- [Dynamic Workflows in Claude Code](https://news.ycombinator.com/item?id=48311705) - Active Hacker News discussion thread (posted May 28, 2026). Developers raising concerns about cost control, long-running session monitoring, and whether the feature needs better mechanisms for injecting corrections mid-run.
+- [Ask HN: About Claude Code's New Feature: Dynamic Workflows](https://news.ycombinator.com/item?id=48317595) - Separate Ask HN thread (posted May 28-29, 2026) with developers asking practical questions about when to use workflows vs standard sessions.
+- [Introducing dynamic workflows in Claude Code](https://claude.com/blog/introducing-dynamic-workflows-in-claude-code) - Official Anthropic blog post, May 28, 2026. Describes the feature but provides no cost modeling or task selection guidance beyond "start on a scoped task."
+- [Introducing Claude Opus 4.8](https://www.anthropic.com/news/claude-opus-4-8) - Anthropic announcement, May 28, 2026. Dynamic workflows launched as part of the Opus 4.8 release alongside effort controls and cheaper fast mode.
+- [Claude Code Dynamic Workflows: Scripts Replace Context Windows, Ultracode Automates Orchestration](https://www.techtimes.com/articles/317363/20260529/claude-code-dynamic-workflows-scripts-replace-context-windows-ultracode-automates-orchestration.htm) - TechTimes, May 29, 2026. Notes that "a 500-agent audit can shift the session bill by an order of magnitude" - the cost story that no guide has addressed yet.
+- [CLAUDE CODE ORCHESTRATION](https://kenhuangus.substack.com/p/claude-code-orchestration-dynamic) - Ken Huang's Substack, May 2026. Architectural overview of orchestration patterns but no practical cost breakdowns or task selection heuristics.
+
+### Competition check
+
+Searching "Claude Code dynamic workflows guide" and "Claude Code dynamic workflows cost" returns Anthropic's official docs and blog post, a claudefa.st overview, an agentpedia.codes step-by-step, Ken Huang's Substack architecture overview, a findskill.ai walkthrough, and news coverage from TechCrunch, The New Stack, MarkTechPost, and TechTimes. All published within 24 hours of launch. Every piece explains WHAT dynamic workflows are and HOW to turn them on. None answer: which tasks justify the token cost vs a single session, how to write prompts that bound subagent count, how to monitor and debug a multi-hour workflow run, how effort levels interact with workflow cost, or how dynamic workflows compare against /ultrareview for code audit tasks. The blog already has `claude-code-cost-tracking` and `ultrareview-ci-cd-pipelines` posts that create natural cross-links and a cost-optimization content cluster. A practitioner guide written from the "I ran this on a real codebase, here's what it cost and when it was worth it" angle would fill a gap that thin day-one overviews can't.
+
+### Suggested next step
+
+`/research-topic "claude-code-dynamic-workflows-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
