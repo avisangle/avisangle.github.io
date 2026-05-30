@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Claude Code Dynamic Workflows: When They're Worth the Cost",
+                url: "https://avinashsangle.com/blog/claude-code-dynamic-workflows-guide",
+                datePublished: "2026-05-30",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Persistent Memory for AI Coding Agents Beyond CLAUDE.md",
                 url: "https://avinashsangle.com/blog/persistent-memory-ai-coding-agents",
                 datePublished: "2026-05-29",
@@ -211,23 +218,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Brain" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Workflow" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Persistent Memory for AI Coding Agents Beyond CLAUDE.md</h3>
+                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
+                <h3 className="text-2xl font-bold mb-4">Claude Code Dynamic Workflows: When They&apos;re Worth the Cost</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Three tiers of persistent memory for Claude Code, Codex, and
-                  Gemini CLI: static files, MCP servers (agentmemory, claude-mem),
-                  and Anthropic&apos;s Memory tool plus Dreaming. Benchmarks, a
-                  five-minute install, and a decision matrix.
+                  Dynamic workflows orchestrate up to 1,000 subagents from one
+                  prompt. Which tasks justify the token cost, how to bound the
+                  agent count, what ultracode really costs, and when a single
+                  session still wins.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 29, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 30, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/persistent-memory-ai-coding-agents">Read Article →</Link>
+                  <Link href="/blog/claude-code-dynamic-workflows-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -240,6 +247,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Workflow" size="lg" animation="pulse" />
+                <CardTitle>Claude Code Dynamic Workflows: When They&apos;re Worth the Cost</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Dynamic workflows fan a task across up to 1,000 subagents.
+                  Which tasks justify the cost, how to bound the agent count,
+                  what ultracode costs, and when a single session still wins.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 30, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/claude-code-dynamic-workflows-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Brain" size="lg" animation="pulse" />

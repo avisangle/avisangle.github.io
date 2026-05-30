@@ -1,5 +1,29 @@
 # Progress Log
 
+## 2026-05-30
+
+### Published Blog Post: /blog/claude-code-dynamic-workflows-guide
+- Title: "Claude Code Dynamic Workflows: When They're Worth the Cost" (58 chars)
+- 2026-05-30 Published blog post: "Claude Code Dynamic Workflows: When They're Worth the Cost" at /blog/claude-code-dynamic-workflows-guide
+- Unique angle: cost-modeling framework (illustrative ~850K-token / 5-7x worked estimate, clearly labeled as a planning model not a measured invoice) + workflow-vs-single-session decision rule + prompt-scoping tactics to bound agent count + honest ultracode cost warning. Fills the gap all day-one overviews skip.
+- Schemas: TechArticle, BreadcrumbList, HowTo (5 steps), FAQPage (10 Q&As)
+- 8 H2 sections, TL;DR, TOC, 4 code blocks, comparison table, accordion FAQ
+- Primary facts verified vs official docs: 16 concurrent / 1,000 total agents, v2.1.154+, research preview, Pro opt-in via /config, Bun port 750K lines/11 days/99.8%, resume only same-session.
+- Updated blog index (featured card + first grid card + Blog JSON-LD), sitemap.ts, public/llms.txt
+- Internal links: claude-code-cost-tracking, ultrareview-ci-cd-pipelines, regression-proofing-claude-code-workflows, persistent-memory-ai-coding-agents, claude-managed-agents
+- Build: passed (route generated, no errors); no em dashes, no banned words
+- Followup: run /promote-blogpost claude-code-dynamic-workflows-guide
+
+### Research Brief: claude-code-dynamic-workflows-guide
+- Merged PR #33 (topic suggestion) then ran /research-topic.
+- Verdict: strong + fresh (feature shipped 2026-05-28 w/ Opus 4.8), wide competition gap. All ranking content is <48h day-one overviews; none cover cost modeling or workflow-vs-single-session decision.
+- Primary keyword: "Claude Code dynamic workflows". Title: "Claude Code Dynamic Workflows: When They're Worth the Cost" (58 chars). Category: Claude Code. Icon: Workflow.
+- Unique angle: real measured token/cost figure from an actual run + decision rule + prompt-scoping tactics + honest ultracode cost warning. Primary-source advantage (tool runs inside the assistant).
+- Primary facts verified vs official docs: 16 concurrent / 1,000 total agents, v2.1.154+, research preview, Pro opt-in via /config, Bun port 750K lines/11 days/99.8%.
+- Cross-link cluster: claude-code-cost-tracking, ultrareview-ci-cd-pipelines, regression-proofing-claude-code-workflows, claude-managed-agents.
+- Brief saved: .claude/content-briefs/claude-code-dynamic-workflows-guide.md
+- Followup: /write-blogpost claude-code-dynamic-workflows-guide
+
 ## 2026-05-29
 
 ### Published Blog Post: /blog/persistent-memory-ai-coding-agents
