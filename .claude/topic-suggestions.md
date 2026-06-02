@@ -336,3 +336,27 @@ Searching "Claude Code dynamic workflows guide" and "Claude Code dynamic workflo
 ### Suggested next step
 
 `/research-topic "claude-code-dynamic-workflows-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-01: GitHub Copilot Token Billing: Real Costs and When to Switch
+
+**Suggested slug:** `github-copilot-token-billing-guide`
+**Status:** pending research
+
+### Why this topic, why now
+On June 1, 2026, GitHub switched every Copilot plan from flat-rate pricing to token-based billing ("AI Credits"), killing the cheaper-model fallback that softened overages. The GitHub Community announcement drew 904 downvotes against 22 upvotes and 435 comments - one of the most lopsided negative developer reactions in GitHub history. Developers are reporting projected cost increases of 10x to 50x, and migration discussions to Claude Code, Codex, and local models are active across Reddit, HN, and dev forums. The news coverage is heavy but entirely "what changed" reporting. No practitioner guide covers real cost-per-task math, a decision framework for different developer profiles, or step-by-step migration paths to alternatives.
+
+### Search demand evidence
+- ['What a joke': GitHub Copilot's new token-based billing spurs consternation among devs](https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/) - TechCrunch front page (posted May 30, 2026)
+- [GitHub Copilot is moving to usage-based billing - community discussion](https://github.com/orgs/community/discussions/192948) - 904 downvotes, 22 upvotes, 435 comments (GitHub Community, posted May 2026)
+- [GitHub Copilot Token Billing Starts Today: Devs Report 10x-50x Cost Increases](https://techjournal.org/github-copilot-token-billing-backlash) - TechJournal (posted June 1, 2026)
+- [Microsoft Switches GitHub Copilot To Usage-based AI Token Billing](https://dataconomy.com/2026/06/01/github-copilot-token-pricing-backlash/) - Dataconomy (posted June 1, 2026)
+- [Uber torches 2026 AI budget on Claude Code in four months](https://news.ycombinator.com/item?id=47976415) - 347 points (Hacker News, posted May 26, 2026). Shows the broader AI cost governance concern amplifying search demand for billing comparisons.
+- r/ChatGPTCoding and r/AICoding threads (late May 2026) with active migration discussions to Claude Code ($20/month Pro), OpenAI Codex, DeepSeek V4 Pro, and local open-source models
+
+### Competition check
+Searching "GitHub Copilot token billing guide" returns 10+ articles (TechCrunch, how2shout, Dataconomy, rollbrains, codepick, judyailab, netcrook, findskill, byteiota, ecanarys) plus official GitHub docs. Every article explains WHAT changed and quotes angry developers. One cosmicjs.com comparison covers "Claude Code vs Copilot vs Cursor" but was published before the billing change and doesn't reflect new pricing. The gap: zero articles provide per-task cost calculations showing the real difference between old flat-rate and new token billing for specific workflows (autocomplete, chat, agent loops, code review), a decision flowchart for which developer profiles should stay vs switch, or a migration guide to Claude Code covering workflow equivalents (Copilot Chat to Claude Code sessions, Copilot Workspace to dynamic workflows, Copilot code review to ultrareview).
+
+### Suggested next step
+`/research-topic "github-copilot-token-billing-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
