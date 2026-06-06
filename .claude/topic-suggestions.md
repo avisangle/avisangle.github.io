@@ -336,3 +336,32 @@ Searching "Claude Code dynamic workflows guide" and "Claude Code dynamic workflo
 ### Suggested next step
 
 `/research-topic "claude-code-dynamic-workflows-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-05: How to Set Up AI Coding Cost Limits Across Copilot, Claude Code, and Codex
+
+**Suggested slug:** `ai-coding-cost-limits-copilot-claude-codex`
+**Status:** pending research
+
+### Why this topic, why now
+
+GitHub Copilot switched to usage-based billing on June 1, 2026, and developers immediately reported cost spikes of 10x to 25x. Some burned through their entire monthly credit allowance in under two days. The same week, TechCrunch published "The token bill comes due" (June 5) documenting how agentic coding tools drive 18.6x higher token consumption per developer, Uber burned through its entire 2026 AI coding budget in four months, and Microsoft revoked its developers' Claude Code licenses to control costs. One company reportedly received a $500 million Claude bill after forgetting to set usage limits. The Linux Foundation announced the Tokenomics Foundation on June 3 to create open standards for AI cost management - launching formally at FinOps X on June 8. Every major AI coding tool is now metered or usage-capped, and developers need a practical guide covering how to set spending limits, configure alerts, and route tasks to the cheapest capable model across the three dominant platforms.
+
+### Search demand evidence
+
+- [Angry devs vow to flee GitHub Copilot as metered billing takes hold](https://news.ycombinator.com/item?id=48364983) - Active HN thread (posted June 2, 2026). The Register reports developers vowing to abandon Copilot; HN commenters debating alternatives.
+- [The token bill comes due: Inside the industry scramble to manage AI's runaway costs](https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/) - TechCrunch, published June 5, 2026. Documents the 18.6x agentic token consumption multiplier and enterprise budget blowouts.
+- [Uber burned through its entire 2026 AI budget in four months](https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/) - Fortune, published May 26, 2026. Per-engineer API costs reached $500 to $2,000/month across 5,000 engineers.
+- [GitHub Copilot's New Pricing Shock: Some Developers Say Their AI Coding Bills Jumped 25x Overnight](https://memeburn.com/github-copilots-new-pricing-shock-some-developers-say-their-ai-coding-bills-jumped-25x-overnight/) - Memeburn, June 2, 2026.
+- [Copilot-arewecooked: Estimate your GitHub Copilot AI-credit cost](https://news.ycombinator.com/item?id=47949482) - HN thread (posted May 2026). Community-built CLI tool that reads local usage data and estimates new billing costs, showing strong developer demand for cost visibility.
+- [Linux Foundation announces Tokenomics Foundation for AI cost management](https://www.linuxfoundation.org/press/linux-foundation-announces-the-intent-to-launch-the-tokenomics-foundation-to-establish-open-standards-for-ai-cost-management) - Linux Foundation, June 3, 2026. Backed by Google Cloud, Microsoft, IBM, and others.
+- ['What a joke': GitHub Copilot's new token-based billing spurs consternation among devs](https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/) - TechCrunch, May 30, 2026.
+
+### Competition check
+
+Searching "AI coding cost limits setup guide" and "how to control AI coding agent costs" returns 10+ articles about Copilot's billing math specifically (DEV Community, ChatForest, FindSkill.ai, TokenMix), pricing comparison tables (Developers Digest, Lushbinary, Futurelab Studio), and news coverage of the cost crisis (TechCrunch, Fortune, The New Stack). The blog's own `claude-code-cost-tracking` covers monitoring for one tool. The gap: no practitioner guide walks through setting up spending limits, budget alerts, and cost-per-task monitoring ACROSS Copilot (AI Credits system), Claude Code (plan caps and /cost tracking), and Codex (compute credits) from a single developer's workflow. The comparison posts show price tables; the news articles describe the problem. Nobody shows the step-by-step fix. The Newtum blog "AI Cost Management for Developers" comes closest but covers Microsoft and Claude Code only, without Copilot's new credit math or Codex's compute model.
+
+### Suggested next step
+
+`/research-topic "ai-coding-cost-limits-copilot-claude-codex"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
