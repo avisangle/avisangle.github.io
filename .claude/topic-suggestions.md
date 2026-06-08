@@ -336,3 +336,86 @@ Searching "Claude Code dynamic workflows guide" and "Claude Code dynamic workflo
 ### Suggested next step
 
 `/research-topic "claude-code-dynamic-workflows-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-03: MAI-Code-1-Flash in GitHub Copilot - Microsoft's First In-House Coding Model
+
+**Suggested slug:** `mai-code-1-flash-copilot-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Microsoft announced MAI-Code-1-Flash at Build 2026 on June 2 - just one day ago. It is their first coding model built entirely in-house, trained end-to-end on commercially licensed data without distillation from OpenAI. The 5-billion-parameter model is rolling out to every GitHub Copilot tier (Free, Pro, Pro+, Max) and outperforms Claude Haiku 4.5 by 16 percentage points on SWE-Bench Pro (51.2% vs 35.2%) while using up to 60% fewer tokens. For the past year, the fast-coding model tier has been a two-player race between Claude Haiku and GPT-4o-mini - MAI-Code-1-Flash breaks that duopoly. The site already covers Gemini Flash, Qwen Code, Gemma 4, and OpenAI Codex but has zero Microsoft model coverage. This fills that gap right when developers are deciding whether to try the new model in their Copilot workflow.
+
+### Search demand evidence
+
+- [MAI-Code-1-Flash](https://news.ycombinator.com/item?id=48374466) - Hacker News front-page discussion (posted June 2, 2026). Developers discussing benchmark claims, token efficiency, and comparisons to Claude Haiku.
+- [Introducing MAI-Code-1-Flash](https://microsoft.ai/news/introducingmai-code-1-flash/) - Official Microsoft AI announcement (June 2, 2026). States the model was trained directly inside the Copilot production harness rather than against synthetic benchmarks, and highlights "adaptive solution length" that cuts token usage by 60% on complex tasks.
+- [MAI-Code-1-Flash is now available for GitHub Copilot](https://github.blog/changelog/2026-06-02-mai-code-1-flash-is-now-available-for-github-copilot/) - GitHub Changelog entry (June 2, 2026). Confirms rollout to VS Code model picker and Auto router across all Copilot tiers.
+- [AINews: Microsoft Build - MAI-Thinking-1 and MAI Family models](https://www.latent.space/p/ainews-microsoft-build-mai-thinking) - Latent Space coverage of the full MAI model family launch, framing it as Microsoft's clearest move toward reducing OpenAI dependence.
+- [Microsoft unveils new AI models to lessen reliance on OpenAI](https://www.cnbc.com/2026/06/02/microsoft-unveils-new-ai-models-lessen-reliance-on-openai-lower-costs.html) - CNBC (June 2, 2026). Reports that MAI-Thinking-1 outperformed GPT-5.5 for McKinsey with 10x better cost efficiency after tuning, signaling broader enterprise interest.
+
+### Competition check
+
+Searching "MAI-Code-1-Flash guide" and "MAI-Code-1-Flash GitHub Copilot" returns the official Microsoft announcement, a GitHub Changelog entry, one DEV Community overview covering all seven MAI models, a ChatForest benchmarks analysis, and news-style coverage from CNBC, TechTimes, Neowin, and Engadget. All published within 24 hours. Every piece is either a news recap or a broad multi-model overview. No one has written a focused practitioner guide for Copilot users answering: when does Auto route to MAI-Code-1-Flash vs Sonnet or Opus, which coding tasks it handles well vs where it falls short, how the adaptive token savings play out on real repos, or how it compares head-to-head with Claude Haiku in the workflows developers actually use (completions, refactoring, multi-file edits). The site already has model-specific guides for Gemini Flash, Qwen Code, and Gemma 4 - a MAI-Code-1-Flash guide written from real Copilot usage would complete the multi-provider picture and rank early while search volume is ramping up.
+
+### Suggested next step
+
+`/research-topic "mai-code-1-flash-copilot-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-08: Kiro IDE Spec-Driven Development - AWS's Structured Alternative to Prompt-Driven Coding
+
+**Suggested slug:** `kiro-ide-spec-driven-development-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+AWS launched Kiro, a VS Code fork that replaces Amazon Q Developer and bets on spec-driven development - requiring structured requirements, architecture designs, and task lists before any code is generated. The tool reached general availability in late May 2026, and multiple Hacker News front-page threads (including one that spawned the "vibe too hard, brought down AWS" meme after generated code triggered a service disruption) drove sustained developer attention. Kiro introduces three concepts that don't exist in Claude Code or Codex: Specs (requirements.md + design.md + tasks.md generated from a prompt), Hooks (automated agent actions triggered by file saves, commits, or other IDE events), and Steering Docs (persistent project context that outlives individual sessions). The blog covers Claude Code, Codex, Qwen Code, Gemini, and Gemma but has zero AWS tool coverage. This fills that gap at the exact moment developers are evaluating whether spec-driven planning belongs in their workflow.
+
+### Search demand evidence
+
+- [Kiro: A new agentic IDE](https://news.ycombinator.com/item?id=44560662) - Hacker News front-page thread. Developers debating spec-driven vs prompt-driven workflows and whether enforced structure helps or hinders speed.
+- [Developing with Kiro: Amazon's New Agentic IDE](https://news.ycombinator.com/item?id=44634469) - Second HN front-page thread with practitioner reports on real project experience.
+- [Kiro.dev - The AI IDE for prototype to production](https://news.ycombinator.com/item?id=44561303) - Third HN thread. Nathan Peck (AWS senior developer advocate) offered technical context in the comments.
+- [Amazon launches Kiro, its own Claude-powered challenger to Windsurf and Codex](https://venturebeat.com/programming-development/amazon-launches-kiro-its-own-claude-powered-challenger-to-windsurf-and-codex) - VentureBeat, May 2026. Notes Kiro runs Claude Sonnet at its core.
+- [kirodotdev/Kiro](https://github.com/kirodotdev/Kiro) - Official GitHub repo, actively maintained with growing community.
+- [AWS Backs Spec-Driven Dev with Kiro](https://tessl.io/blog/from-vibe-coding-to-viable-code-aws-dives-into-spec-driven-ai-software-development-with-kiro/) - Tessl coverage framing it as "from vibe coding to viable code."
+
+### Competition check
+
+Searching "Kiro IDE getting started guide" and "Kiro spec-driven development tutorial" returns official Kiro docs, a DEV Community walkthrough covering steering docs/specs/hooks at surface level, a Kiro Directory quick-start, a kiro-ide.net overview, a DataCamp tutorial, and a geshan.com.np post about adding a last-updated date with Kiro. Comparison pieces exist from Morph, lowcode.agency, vibecoding.app, and several Medium authors. The gap: every getting-started guide covers the WHAT (install, create first spec, run tasks) but none cover the WHEN and WHY with real decision frameworks - which projects benefit from specs vs. which are slowed down by them, how to write steering docs that actually improve output quality vs. ones that get ignored, practical hook recipes beyond the trivial "auto-test on save" example, and whether the hybrid workflow (Kiro for planning, Claude Code for execution) is worth the tool-switching cost. The blog can differentiate by writing from the Claude Code practitioner's perspective: "I use Claude Code daily - here's when Kiro's spec-driven approach earns its place."
+
+### Suggested next step
+
+`/research-topic "kiro-ide-spec-driven-development-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-08: GitHub Copilot Metered Billing Survival Guide - What Changed June 1 and What to Do About It
+
+**Suggested slug:** `github-copilot-metered-billing-survival-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On June 1, 2026, GitHub switched every Copilot plan from flat-rate subscription to token-based AI Credits (1 credit = $0.01). Within 48 hours, developer backlash exploded across Reddit, Hacker News, and X. A Pro+ subscriber ($39/month) reported burning 8% of their monthly allocation in two hours. Others projected costs jumping from $29 to $750 or from $50 to $3,000. The Register ran "Angry devs vow to flee GitHub Copilot as metered billing takes hold." TechCrunch headlined with a developer quote: "What a joke." This is the biggest pricing disruption in AI coding tools since GitHub Copilot launched in 2022, and it's driving a wave of developers to evaluate alternatives. The blog already has `claude-code-cost-tracking` covering Claude Code's cost model - a Copilot billing survival guide creates a natural comparison funnel from the most-searched AI coding topic of the month to the blog's existing Claude Code content.
+
+### Search demand evidence
+
+- [Angry devs vow to flee GitHub Copilot as metered billing takes hold](https://www.theregister.com/ai-and-ml/2026/06/02/github-copilot-users-threaten-exit-as-metered-billing-kicks-in/5249826) - The Register, June 2, 2026. Reports developers threatening to cancel subscriptions.
+- ['What a joke': GitHub Copilot's new token-based billing spurs consternation among devs](https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/) - TechCrunch, May 30, 2026.
+- [Copilot Billing Shock Hits Developers](https://visualstudiomagazine.com/articles/2026/06/04/copilot-billing-shock-hits-developers.aspx) - Visual Studio Magazine, June 4, 2026.
+- [GitHub Copilot Token Billing Starts Today: Devs Report 10x-50x Cost Increases](https://techjournal.org/github-copilot-token-billing-backlash) - TechJournal, June 2026.
+- [GitHub Copilot Usage-Based Billing Takes Effect, Drawing Developer Backlash Over Rapid Credit Depletion](https://www.ghacks.net/2026/06/02/github-copilot-usage-based-billing-takes-effect-drawing-developer-backlash-over-rapid-credit-depletion/) - gHacks, June 2, 2026.
+- [Angry devs vow to flee GitHub Copilot as metered billing takes hold | Hacker News](https://news.ycombinator.com/item?id=48364983) - Active HN discussion thread with developers sharing cost projections and discussing alternatives.
+
+### Competition check
+
+Searching "GitHub Copilot AI credits cost guide" and "GitHub Copilot billing optimization" returns SmartScope's 7-tip optimization guide, ChatForest's token billing builder guide, a DEV Community full cost guide with alternatives, TokenMix's pricing breakdown, byteiota's real-costs guide, CodePick's billing explainer, and FindSkill's post-price-shock alternatives list. All published within days of the June 1 switch. Six to eight practitioner guides already exist. The gap: every guide focuses on optimizing WITHIN Copilot (model selection, context scoping, budget limits). None provide real cost-per-task comparisons against Claude Code's flat-rate model ($20 Pro / $100 Max) or against Qwen Code's free open-source approach. The DEV Community migration guide covers switching to Claude Code but doesn't include cost math. The blog's unique angle: comparing actual token costs for five common developer tasks (completions, chat Q&A, agent-mode refactoring, code review, multi-file edits) across Copilot's metered credits vs. Claude Code's flat rate vs. Codex's usage model vs. Qwen Code's self-hosted cost - using the blog's existing `claude-code-cost-tracking` methodology. This turns a survival guide into a decision framework.
+
+### Suggested next step
+
+`/research-topic "github-copilot-metered-billing-survival-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
