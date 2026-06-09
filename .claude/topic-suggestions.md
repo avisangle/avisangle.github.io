@@ -336,3 +336,31 @@ Searching "Claude Code dynamic workflows guide" and "Claude Code dynamic workflo
 ### Suggested next step
 
 `/research-topic "claude-code-dynamic-workflows-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-08: GitHub Copilot's New Credit System - What Developers Need to Know After the June 1 Billing Shift
+
+**Suggested slug:** `github-copilot-credit-system-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On June 1, 2026, GitHub switched every Copilot plan from flat-rate billing to a credit-based system called "GitHub AI Credits." The backlash has been immediate and intense - more than 400 comments and 900 downvotes on GitHub's official community discussion thread, front-page coverage on TechCrunch ("What a joke") and The Register ("Angry devs vow to flee"), and active migration threads across Reddit and Hacker News. One developer on the $39 Copilot Pro+ plan reported burning 8% of their monthly credit allotment in two hours of normal use, estimating their quota could run out in under two days. Agentic coding sessions reportedly consume $30-$40 per session. Code completions stay unlimited, but everything else - chat, agent mode, premium models - now eats credits. This is the single biggest pricing disruption in the AI coding tool market since Copilot launched, and developers are actively searching for answers about how the credit system works, what their real costs will be, and whether to stay or switch.
+
+### Search demand evidence
+
+- [GitHub Copilot is moving to usage-based billing - community discussion](https://github.com/orgs/community/discussions/192948) - 400+ comments, 900+ downvotes (posted April 2026, billing took effect June 1)
+- ['What a joke': GitHub Copilot's new token-based billing spurs consternation among devs](https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/) - TechCrunch, May 30, 2026
+- [Angry devs vow to flee GitHub Copilot as metered billing takes hold](https://www.theregister.com/ai-and-ml/2026/06/02/github-copilot-users-threaten-exit-as-metered-billing-kicks-in/5249826) - The Register, June 2, 2026
+- [GitHub Copilot Usage-Based Billing Takes Effect, Drawing Developer Backlash Over Rapid Credit Depletion](https://www.ghacks.net/2026/06/02/github-copilot-usage-based-billing-takes-effect-drawing-developer-backlash-over-rapid-credit-depletion/) - gHacks, June 2, 2026
+- [Devs Sound Off on Usage-Based Copilot Pricing Change: 'You Will Get Less, but Pay the Same Price'](https://visualstudiomagazine.com/articles/2026/04/27/devs-sound-off-on-usage-based-copilot-pricing-change-you-will-get-less-but-pay-the-same-price.aspx) - Visual Studio Magazine, April 27, 2026
+- [GitHub Copilot is moving to usage-based billing - official announcement](https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/) - GitHub Blog, April 2026
+
+### Competition check
+
+Searching "GitHub Copilot credits guide" and "Copilot usage-based billing explained" returns the official GitHub docs (dry reference docs, no opinion or cost modeling), news articles from TechCrunch/Register/gHacks (reporting on the backlash, not actionable advice), one thin optimization article on techychalkboard.com, and GitHub's own community FAQ. Nobody has written the practitioner's guide: which features eat credits fastest, how to audit your real spending after the first week, what credit-per-accepted-change actually looks like for different workflows (completions vs chat vs agent mode), and a side-by-side cost comparison against Claude Code Max and direct API access. The blog already has a high-performing `claude-code-cost-tracking` post that creates a natural cross-link and positions the site as the place for AI coding tool cost analysis.
+
+### Suggested next step
+
+`/research-topic "github-copilot-credit-system-guide"` to produce the full content brief with keyword strategy, real cost data, and outline.
