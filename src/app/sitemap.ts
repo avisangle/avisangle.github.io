@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'claude-code-fable-5-model-routing',
+      lastModified: '2026-06-11',
+    },
+    {
       slug: 'claude-code-dynamic-workflows-guide',
       lastModified: '2026-05-30',
     },

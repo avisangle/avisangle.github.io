@@ -324,3 +324,8 @@
 - Confirmed canonical_url correctly set on all live cross-posts. dev.to outranks origin on identical content despite canonical (cross-domain canonical is advisory).
 - Fixed stale POSTED.md records (ant-cli was LIVE not draft; outcomes now LIVE).
 - Ready-to-syndicate candidates (crosspost prepared, origin 4+ wks old): security-review, hardening, regression-proofing.
+
+## 2026-06-11: Research - claude-code-fable-5-model-routing
+- Merged PR #37 (topic suggestion). Ran /research-topic; verdict GO (strong news peg, free window closes 2026-06-22).
+- Brief saved to .claude/content-briefs/claude-code-fable-5-model-routing.md. Next: /write-blogpost claude-code-fable-5-model-routing
+- 2026-06-11 Published blog post: "Claude Code Fable 5: Model Routing, Fallbacks, Cost Control" at /blog/claude-code-fable-5-model-routing
