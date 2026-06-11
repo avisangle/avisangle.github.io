@@ -336,3 +336,31 @@ Searching "Claude Code dynamic workflows guide" and "Claude Code dynamic workflo
 ### Suggested next step
 
 `/research-topic "claude-code-dynamic-workflows-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-10: Claude Code Model Routing with Fable 5: Fallback Chains, Task Routing, and Cost Control
+
+**Suggested slug:** `claude-code-fable-5-model-routing`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic released Claude Fable 5 on June 9, 2026 - the first generally available Mythos-class model, priced at 2x Opus 4.8 ($10/$50 vs $5/$25 per 1M tokens). The same week, Claude Code shipped the `fallbackModel` setting - a native feature that chains up to three backup models when the primary is overloaded or unavailable. These two events collide to create a new developer problem: Claude Code users now have three viable models (Fable 5, Opus 4.8, Sonnet 4.6) with meaningfully different price-performance profiles, a built-in routing mechanism, AND Fable 5 safety classifiers that silently downgrade certain requests to Opus 4.8. The free evaluation window closes June 22. Existing Fable 5 guides (10+ published within 24 hours of launch) are benchmark recaps and pricing tables. Nobody has written the Claude Code practitioner's playbook for configuring fallback chains, deciding which tasks justify the 2x premium, and handling the classifier fallback behavior in real coding sessions.
+
+### Search demand evidence
+
+- [Claude Fable 5 | Hacker News](https://news.ycombinator.com/item?id=48463808) - Main HN discussion thread (posted June 9, 2026). Active developer debate on whether the 2x cost is justified, with comments noting Fable 5 uses fewer tool calls on complex tasks, partially offsetting the per-token premium.
+- [AWS Bedrock to require sharing data with Anthropic for Mythos and future models | Hacker News](https://news.ycombinator.com/item?id=48473166) - HN front page thread about the new 30-day data retention requirement for Fable 5 on Bedrock. Enterprise developers concerned about the ZDR policy change.
+- [Claude Fable 5 and Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) - Official Anthropic announcement, June 9, 2026. Confirms Fable 5 is included free on Pro/Max/Team plans through June 22, after which it draws on usage credits.
+- [Claude Fable 5 with Claude Code: Setup, Cost Tips, and First Impressions](https://www.aimadetools.com/blog/claude-fable-5-claude-code-setup/) - AIMadeTools, June 2026. Covers basic model switching and cost tips but not fallbackModel configuration or task routing patterns.
+- [Claude Code model configuration](https://code.claude.com/docs/en/model-config) - Official docs confirming the new `fallbackModel` setting that chains up to three backup models. The feature shipped in the June 2026 Claude Code release alongside safe mode and /cd command.
+- [Inside Claude Fable 5's Safety Architecture: Classifiers, Opus 4.8 Fallback, and 30-Day Retention](https://claude5.ai/en/news/claude-fable-5-safety-architecture-classifiers-opus-fallback) - Claude5.ai, June 2026. Architectural overview of the classifier system, but no Claude Code-specific workflow guidance.
+
+### Competition check
+
+Searching "Claude Code model routing Fable 5" and "Claude Code fallbackModel Fable 5 configuration" returns Anthropic's model-config docs page, the AIMadeTools setup article, a DEV Community "Pick the Right Claude Code Model" general guide, a BrightCoding fallback tool article from November 2025 (before the native fallbackModel feature existed), and a SerentiesAI article about local model quota fallback. None of these cover the combination of: configuring the new native fallbackModel chain (Fable 5 -> Opus 4.8 -> Sonnet 4.6), task-level routing patterns (which coding tasks justify 2x pricing), the safety classifier's effect on Claude Code sessions (CLAUDE.md security content can trigger Opus fallback on the first request), or cost-per-feature math comparing Fable 5's fewer-turns advantage against its higher per-token rate. The blog's existing `claude-mythos-preview` (about the restricted model devs couldn't access) sets up the natural sequel, and `claude-code-cost-tracking` provides the cost optimization context. This post fills the gap between "what is Fable 5" and "how do I actually deploy it efficiently in my Claude Code workflow."
+
+### Suggested next step
+
+`/research-topic "claude-code-fable-5-model-routing"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
