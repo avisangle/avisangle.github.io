@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Avinash Sangle",
   },
   description:
-    "Software Engineer specializing in AI automation, DevOps, and cloud technologies. Building intelligent solutions with Model Context Protocol, Jenkins, AWS, and conversational AI.",
+    "Software Engineer specializing in AI automation, DevOps, and cloud. I build intelligent solutions with Model Context Protocol, Jenkins, and AWS.",
   keywords: [
     "AI automation engineer",
     "DevOps specialist",
@@ -102,8 +102,7 @@ export default function RootLayout({
         <Script id="omniagent-config" strategy="beforeInteractive">
           {`window.OMNIAGENT_CONFIG = {
             registryUrl: 'https://omniagent-registry.aavi-sangle.workers.dev',
-            timeout: 3000,
-            debug: true
+            timeout: 3000
           };`}
         </Script>
         <Script
