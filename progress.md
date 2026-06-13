@@ -2,6 +2,29 @@
 
 # Progress Log
 
+## 2026-06-13: Bing Webmaster reporting via API
+
+- Added `scripts/bing_report.py` (stdlib-only, mirrors GSC reporter): types summary/queries/pages/crawl, `--days`, `--json`. API key stored at `scripts/credentials/bing-api-key.txt` (gitignored).
+- Bing 120d: 123 clicks / 5,939 impr / 2.07% CTR (≈3× Google's 0.72%). Bing's top page is `/blog/claude-md-guide` (34 clicks) — differs from Google's `/blog/ant-cli-getting-started`. 72 pages indexed, 30 inbound links (matches BWT "lacks inbound links" flag).
+- Flag: 129 4xx + 43 5xx crawl hits over 120d — investigate (likely pre-2026-05-11 legacy `.html` crawls, but confirm).
+- Bing query data is heavily natural-language ("how to write claude.md", "is it possible to extract the cost of a session from claude?") — high-value AEO signal since Bing feeds ChatGPT/Copilot.
+- `bing_report.py` not committed yet (no explicit request).
+
+## 2026-06-13: Fix Bing meta-description flag + disable omniagent debug
+
+- `src/app/layout.tsx`: root meta description trimmed 177→144 chars (Bing limit 160; flagged in Webmaster Tools); removed `debug: true` from OMNIAGENT_CONFIG. Pushed 309fdcb, verified live.
+- Bing "lacks inbound links" recommendation is advisory — no code action; addressed over time by syndication/backlinks.
+
+## 2026-06-12: Bing verification file live + GA4 access working
+
+- Added `public/BingSiteAuth.xml`, pushed (9536da8), verified 200 at https://avinashsangle.com/BingSiteAuth.xml — ready to complete verification in Bing Webmaster Tools.
+- GA4 Viewer grant confirmed for service account; property `properties/538973950`. 28d: 63 users / 96 sessions / 159 pageviews. Channels: Direct 58, Organic 22, Social 10. GA organic (22 sessions) ≪ GSC clicks (209) — heavy ad-blocker undercount likely (dev audience).
+
+## 2026-06-12: GA4 access check + 28-day GSC traffic review
+
+- No GA4 access yet: enabled Analytics Data + Admin APIs on GCP project `bio-search-console` via gcloud, but the service account (`bio-search-console@bio-search-console.iam.gserviceaccount.com`) is not yet a Viewer on the GA4 property — pending one-time grant in GA Admin UI.
+- GSC 28-day (05-12→06-09): 209 clicks / 28.9k impressions / 0.72% CTR / avg pos 8.7. Top page: `/blog/ant-cli-getting-started` (70 clicks). `claude-code-cost-tracking` and `gemma-4-models-guide` have high impressions but CTR ≤0.6% — title/description rework candidates.
+
 ## 2026-05-11: Fix legacy /project-*.html redirect chain
 
 - Verified live: `/project-twitter-oauth.html` and 8 other legacy project pages all redirected to 404. Root cause: Vercel auto-strips `.html` at the edge **before** `next.config.ts` `redirects()` evaluates, so specific rules like `source: '/project-twitter-oauth.html'` never fire — the request arrives at the redirect layer as `/project-twitter-oauth` (no `s`, no real route).
