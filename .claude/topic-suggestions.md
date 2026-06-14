@@ -364,3 +364,30 @@ Searching "Claude Code model routing Fable 5" and "Claude Code fallbackModel Fab
 ### Suggested next step
 
 `/research-topic "claude-code-fable-5-model-routing"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-14: Setting Up MCP in Xcode 27: Connect AI Coding Agents to Apple's Agentic IDE
+
+**Suggested slug:** `xcode-27-mcpbridge-setup`
+**Status:** pending research
+
+### Why this topic, why now
+
+Apple shipped Xcode 27 beta on June 8 at WWDC 2026 with native MCP support via a new `mcpbridge` binary that translates MCP's JSON-RPC over Apple's XPC inter-process communication layer. This makes Xcode the first major proprietary IDE to ship MCP as a built-in protocol, joining Claude Code, Cursor, Windsurf, and OpenCode. The Agent Client Protocol (ACP), also new in Xcode 27, lets any MCP-compliant agent - not just the three launch providers (Claude, Gemini, GPT) - participate in agentic coding sessions. Developers who already run MCP servers for Claude Code or Cursor can reuse them in Xcode with minimal config changes, but nobody has written the practical setup guide from that angle.
+
+### Search demand evidence
+
+- [Using Xcode 27's Agent Skills in Claude, Codex, and Cursor](https://www.avanderlee.com/ai-development/using-xcode-27s-agent-skills-in-claude-codex-and-cursor/) - SwiftLee, June 2026. Covers using Xcode's agent skills FROM other tools, but not connecting external MCP servers INTO Xcode.
+- [Xcode 27 Agentic Coding: Claude, Gemini, and GPT Inside Your IDE](https://www.aimadetools.com/blog/xcode-27-agentic-coding-claude-gemini-gpt/) - AIMadeTools, June 2026. Feature overview, confirms MCP servers from Claude Code and Cursor work in Xcode with config change only.
+- [xcode-mcpbridge on GitHub](https://github.com/4rays/xcode-mcpbridge) - Community-built MCP bridge wrapper, showing developer interest in the setup workflow.
+- [XcodeBuildMCP by Sentry](https://github.com/getsentry/XcodeBuildMCP) - Production MCP server for Xcode build/test workflows, actively maintained with 2K+ stars.
+- [Xcode 27 expands agentic coding toolset with Gemini integration](https://9to5mac.com/2026/06/10/xcode-27-expands-agentic-coding-toolset-with-gemini-integration/) - 9to5Mac, June 10, 2026. Confirms multi-provider setup in beta, high reader engagement in comments.
+
+### Competition check
+
+Searching "Xcode 27 MCP setup guide" and "mcpbridge tutorial" returns the SwiftLee article (covers the reverse direction - Xcode skills in external tools), a Lushbinary overview guide, a byteiota multi-model guide, and several DEV Community feature summaries. None of these provide a practitioner guide that starts from "I already have MCP servers running in Claude Code" and walks through connecting them to Xcode 27 via mcpbridge, explains how ACP differs from MCP, or covers the XPC architecture that makes the bridge unique. The gap is the MCP-ecosystem-first perspective rather than the iOS-developer-first perspective.
+
+### Suggested next step
+
+`/research-topic "xcode-27-mcpbridge-setup"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
