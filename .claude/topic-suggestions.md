@@ -364,3 +364,31 @@ Searching "Claude Code model routing Fable 5" and "Claude Code fallbackModel Fab
 ### Suggested next step
 
 `/research-topic "claude-code-fable-5-model-routing"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-15: LiteLLM MCP Exploit Chain: What AI Engineers Need to Patch and Harden
+
+**Suggested slug:** `litellm-mcp-exploit-response-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On June 8, 2026, CISA added CVE-2026-42271 to its Known Exploited Vulnerabilities catalog, confirming active exploitation of LiteLLM's MCP server test endpoints. The next day, Horizon3.ai published the full exploit chain showing how attackers combine this command injection flaw (CVSS 8.7) with a Starlette host header bypass (CVE-2026-48710, CVSS 6.5) to achieve unauthenticated remote code execution - CVSS 10.0 combined, no login required. The vulnerable endpoints (`/mcp-rest/test/connection` and `/mcp-rest/test/tools/list`) accepted full MCP server configurations and spawned them as subprocesses with no sandboxing. This follows the March 2026 LiteLLM supply chain attack where compromised PyPI packages exfiltrated credentials from thousands of installations, making it two critical incidents in three months for the most popular AI model gateway. Every news article describes the attack but not one walks a developer through the full response: checking exposure, upgrading, rotating compromised credentials, and hardening MCP endpoints against this class of attack.
+
+### Search demand evidence
+
+- [LiteLLM Flaw CVE-2026-42271 Exploited in the Wild, Chains to Unauthenticated RCE](https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html) - The Hacker News, published June 9, 2026. Primary coverage of the CISA KEV addition and Horizon3.ai exploit chain disclosure.
+- [CVE-2026-42271: LiteLLM Unauthenticated RCE](https://horizon3.ai/attack-research/vulnerabilities/cve-2026-42271-chained-with-cve-2026-48710/) - Horizon3.ai, June 2026. Technical writeup of the full chain: MCP endpoint command injection + Starlette BadHost bypass = CVSS 10.0 unauthenticated RCE.
+- [LiteLLM vulnerability under active attack, CISA warns](https://www.helpnetsecurity.com/2026/06/09/litellm-vulnerability-under-active-attack-cve-2026-42271/) - Help Net Security, June 9, 2026. Confirms CISA KEV listing and active exploitation.
+- [LiteLLM Vulnerability Chain Lets Low-Privilege Users Take Over AI Gateway Servers](https://thehackernews.com/2026/06/litellm-vulnerability-chain-lets-low.html) - The Hacker News, June 2026. Second coverage angle on the chain's impact for authenticated low-privilege users.
+- [How a Poisoned Security Scanner Became the Key to Backdooring LiteLLM](https://snyk.io/blog/poisoned-security-scanner-backdooring-litellm/) - Snyk, 2026. Documents the March 2026 supply chain attack, establishing the pattern of repeated LiteLLM security incidents.
+- [LiteLLM Security Incident: Essential Guide to CVEs 2026](https://techjacksolutions.com/ai-tools/llm-gateways/litellm-security-incident/) - TechJack Solutions, 2026. Tracks eight GitHub Security Advisories filed against BerriAI/litellm in 2026 including SQL injection, auth bypass, and OIDC cache collision.
+
+### Competition check
+
+Searching "LiteLLM CVE-2026-42271 developer fix" and "litellm MCP endpoint security hardening guide" returns 15+ news articles (The Hacker News, Help Net Security, GBHackers, CyberPress, SecurityWeek, CybersecurityNews), the Horizon3.ai technical writeup, vendor database entries (SentinelOne, SOCRadar, Rescana), and LiteLLM's own April security hardening blog post. The closest practitioner content is a systemshardening.com article about general LiteLLM proxy security (default master key risks, network segmentation) and a futureagi.com migration guide from the March incident. Neither covers the June exploit chain specifically: how to detect if the /mcp-rest/test/ endpoints were hit, the exact upgrade path for both LiteLLM and Starlette, credential rotation for every provider connected through the gateway, verifying the fix actually works, and the architectural takeaway about sandboxing MCP server preview endpoints. The blog's existing `mcp-code-execution-pattern` and `hardening-ai-agents-cicd-prompt-injection` posts create a natural content cluster, and the audience (AI engineers running multi-provider model routing) overlaps directly with LiteLLM's user base.
+
+### Suggested next step
+
+`/research-topic "litellm-mcp-exploit-response-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
