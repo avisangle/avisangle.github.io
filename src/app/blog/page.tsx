@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE",
+                url: "https://avinashsangle.com/blog/litellm-mcp-exploit-response-guide",
+                datePublished: "2026-06-16",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Code Fable 5: Model Routing, Fallbacks, Cost Control",
                 url: "https://avinashsangle.com/blog/claude-code-fable-5-model-routing",
                 datePublished: "2026-06-11",
@@ -225,22 +232,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="GitBranch" size="xl" className="mx-auto" />
+              <CategoryIcon icon="ShieldAlert" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Code Fable 5: Model Routing, Fallbacks, Cost Control</h3>
+                <p className="text-accent font-semibold mb-2">AI SECURITY</p>
+                <h3 className="text-2xl font-bold mb-4">LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Fable 5 costs 2x Opus 4.8 and is free until June 22. How to
-                  configure fallbackModel chains, why sessions silently reroute
-                  to Opus 4.8, and which coding tasks justify the premium.
+                  A command injection in LiteLLM&apos;s MCP test endpoints chains
+                  with a Starlette bypass for unauthenticated RCE. A response
+                  runbook: detect exposure, upgrade, rotate keys, and harden MCP.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 11, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 16, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-code-fable-5-model-routing">Read Article →</Link>
+                  <Link href="/blog/litellm-mcp-exploit-response-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -253,6 +260,29 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="ShieldAlert" size="lg" animation="pulse" />
+                <CardTitle>LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  CVE-2026-42271 chains with the Starlette BadHost bypass
+                  (CVE-2026-48710) for unauthenticated RCE on the AI gateway.
+                  Detect exposure, upgrade to 1.83.7, rotate every key, and
+                  harden the MCP test endpoints.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 16, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/litellm-mcp-exploit-response-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="GitBranch" size="lg" animation="pulse" />

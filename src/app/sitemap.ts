@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'litellm-mcp-exploit-response-guide',
+      lastModified: '2026-06-16',
+    },
+    {
       slug: 'claude-code-fable-5-model-routing',
       lastModified: '2026-06-11',
     },

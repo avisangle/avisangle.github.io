@@ -329,3 +329,7 @@
 - Merged PR #37 (topic suggestion). Ran /research-topic; verdict GO (strong news peg, free window closes 2026-06-22).
 - Brief saved to .claude/content-briefs/claude-code-fable-5-model-routing.md. Next: /write-blogpost claude-code-fable-5-model-routing
 - 2026-06-11 Published blog post: "Claude Code Fable 5: Model Routing, Fallbacks, Cost Control" at /blog/claude-code-fable-5-model-routing
+
+## 2026-06-16: Published - litellm-mcp-exploit-response-guide
+- Merged PR #39 (topic suggestion). Ran /research-topic; verdict GO (CISA KEV news peg, clear gap: no end-to-end response runbook).
+- 2026-06-16 Published blog post: "LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE" at /blog/litellm-mcp-exploit-response-guide
