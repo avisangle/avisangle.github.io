@@ -865,7 +865,7 @@ agy skills list`}
             code={`{
   "mcpServers": {
     "github": {
-      "url": "https://mcp.github.com",
+      "url": "https://api.githubcopilot.com/mcp/",
       "auth": "oauth"
     }
   }
@@ -878,7 +878,7 @@ agy skills list`}
             code={`{
   "servers": {
     "github": {
-      "serverUrl": "https://mcp.github.com",
+      "serverUrl": "https://api.githubcopilot.com/mcp/",
       "auth": "oauth"
     }
   }
