@@ -392,3 +392,31 @@ Searching "LiteLLM CVE-2026-42271 developer fix" and "litellm MCP endpoint secur
 ### Suggested next step
 
 `/research-topic "litellm-mcp-exploit-response-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-17: Mastra npm Supply Chain Attack: Auditing and Hardening Your AI Agent Framework Dependencies
+
+**Suggested slug:** `mastra-npm-supply-chain-response`
+**Status:** pending research
+
+### Why this topic, why now
+
+On June 17, 2026, attackers pulled off the first documented scope-level npm takeover targeting an AI agent framework. A dormant contributor account (inactive 16 months, access never revoked) was hijacked, and 144 malicious @mastra package versions were published in an 88-minute automated campaign. The payload was hidden inside easy-day-js, a typosquatted copy of the popular dayjs library, which ran a postinstall dropper that exfiltrated LLM API keys, crypto wallet data, CI/CD secrets, and browser credentials before self-deleting. Mastra's @mastra/core package alone has 918,000+ weekly downloads, with 29M+ accumulated monthly downloads across the scope. The incident is now resolved (malicious versions unpublished), but zero practitioner guides exist explaining how to check if your AI project was hit, what to rotate, or how to block this class of attack going forward.
+
+### Search demand evidence
+
+- [Mastra compromised in supply chain attack](https://news.ycombinator.com/item?id=48565319) - Hacker News discussion thread (posted June 17, 2026)
+- [144 Mastra npm Packages Compromised via Hijacked Contributor Account](https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html) - The Hacker News (cybersecurity), June 2026
+- [A Forgotten Contributor Account Compromised the Entire Mastra npm Package Scope](https://snyk.io/blog/a-forgotten-contributor-account-compromised-the-entire-mastra-npm-package-scope/) - Snyk, June 2026. Technical analysis of the SLSA attestation gap that let unsigned packages through.
+- [INCIDENT REPORT: 2026-06-16: Mastra hit by supply-chain attack](https://github.com/mastra-ai/mastra/issues/18061) - Official Mastra incident report on GitHub
+- [140+ Mastra npm Packages Compromised in Coordinated Supply Chain Attack](https://socket.dev/blog/mastra-npm-packages-compromised) - Socket.dev, June 2026
+- [Mastra npm Supply Chain Attack: 140+ Packages Backdoored via easy-day-js Typosquat](https://www.stepsecurity.io/blog/mastra-npm-packages-compromised-using-easy-day-js) - StepSecurity, June 2026. Notes that enforcing SLSA provenance verification would have blocked every malicious package in this campaign.
+
+### Competition check
+
+Searching "Mastra npm attack response guide" and "how to audit AI framework dependencies after supply chain attack" returns only news reporting (The Hacker News, CybersecurityNews, CyberPress, SC Media, SecurityOnline) and vendor analyses (Snyk, Socket, StepSecurity, OX Security, Aikido). Every piece describes what happened. None walk a developer through the full response: checking lockfiles for affected versions, determining whether the postinstall dropper ran on your machine or CI runners, rotating LLM API keys across every provider connected through Mastra, and setting up npm audit signatures plus SLSA attestation verification to catch unsigned packages before they install. The blog's existing `litellm-mcp-exploit-response-guide` establishes the incident-response content pattern, and the audience overlaps directly - AI engineers building with JavaScript/TypeScript agent frameworks are the same developers reading about LiteLLM and MCP security.
+
+### Suggested next step
+
+`/research-topic "mastra-npm-supply-chain-response"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
