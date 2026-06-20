@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'apple-core-ai-on-device-inference-guide',
+      lastModified: '2026-06-20',
+    },
+    {
       slug: 'litellm-mcp-exploit-response-guide',
       lastModified: '2026-06-16',
     },

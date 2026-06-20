@@ -333,3 +333,9 @@
 ## 2026-06-16: Published - litellm-mcp-exploit-response-guide
 - Merged PR #39 (topic suggestion). Ran /research-topic; verdict GO (CISA KEV news peg, clear gap: no end-to-end response runbook).
 - 2026-06-16 Published blog post: "LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE" at /blog/litellm-mcp-exploit-response-guide
+
+## 2026-06-20: /write-blogpost apple-core-ai-on-device-inference-guide
+- 2026-06-20 Published blog post: "Apple Core AI: Run Open-Weight Models On-Device for Free" at /blog/apple-core-ai-on-device-inference-guide
+- ~2,410 words, 12 min read, 8 FAQ items, schemas: TechArticle + BreadcrumbList + FAQPage.
+- Verified Swift API (CoreAILanguageModel/LanguageModelSession/@Generable) + coreai-torch pipeline against Apple docs/WWDC 326.
+- Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
