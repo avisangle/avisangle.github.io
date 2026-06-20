@@ -392,3 +392,30 @@ Searching "LiteLLM CVE-2026-42271 developer fix" and "litellm MCP endpoint secur
 ### Suggested next step
 
 `/research-topic "litellm-mcp-exploit-response-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-19: Apple Core AI Framework Guide - Zero-Cost On-Device Inference with Open-Weight Models
+
+**Suggested slug:** `apple-core-ai-on-device-inference-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Apple announced Core AI at WWDC 2026 (June 8-9) as a brand-new framework for running AI models entirely on-device with zero server dependencies and zero token cost. Developer betas shipped immediately, and engineers are actively exploring it this week. The framework supports popular open-weight models (Qwen, Mistral, SAM3) converted and optimized for Apple Silicon, plus a PyTorch-to-Core-AI conversion pipeline for custom models. For AI engineers already concerned about inference costs - especially after Microsoft canceled Claude Code licenses over $2K/month per-engineer bills - this is a practical alternative for certain workloads.
+
+### Search demand evidence
+
+- [Apple Core AI Framework](https://news.ycombinator.com/item?id=48449665) - Hacker News front page thread (posted June 9, 2026)
+- [Apple aids app development with new intelligence frameworks and advanced tools](https://www.apple.com/newsroom/2026/06/apple-aids-app-development-with-new-intelligence-frameworks-and-advanced-tools/) - Official Apple newsroom announcement (June 9, 2026)
+- [Core AI - Apple Developer](https://developer.apple.com/core-ai/) - Official developer documentation with WWDC sessions 324, 325, 326 dedicated to the framework
+- [WWDC26: Apple's Core AI Framework Explained](https://appcircle.io/blog/wwdc26-apple-core-ai-framework-explained) - One of very few third-party explainers (Appcircle blog, June 2026)
+- [Apple Outlines Major AI and Developer Tool Updates at 2026 Platforms State of the Union](https://www.macrumors.com/2026/06/09/apple-outlines-major-ai-and-developer-tool-updates/) - MacRumors coverage with active forum discussion (June 9, 2026)
+
+### Competition check
+
+Searching "Apple Core AI framework tutorial" and "Core AI getting started guide 2026" returns Apple's own WWDC session pages, one Appcircle blog explainer (high-level overview, not a practitioner walkthrough), and a runaihome.com preview post. No definitive practitioner guide exists that walks an AI engineer through the PyTorch conversion pipeline, model optimization choices, Swift API integration patterns, or performance tradeoffs vs. cloud inference. The blog's existing coverage of open-weight models (gemma-4-models-guide, qwen-code-getting-started) and cost optimization (claude-code-cost-tracking) creates a natural bridge to this topic for readers already tracking inference economics across providers.
+
+### Suggested next step
+
+`/research-topic "apple-core-ai-on-device-inference-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
