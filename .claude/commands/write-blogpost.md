@@ -84,7 +84,9 @@ Create `src/app/blog/$ARGUMENTS/page.tsx` following the blog guidelines exactly.
 5. If the article is a tutorial, add HowTo JSON-LD schema
 
 ### Character Limits (STRICT)
-- Title: 55-65 characters
+- **`metadata.title`: 38-43 characters MAX (must include primary keyword).** The root layout (`src/app/layout.tsx`) wraps every page title with the template `"%s | Avinash Sangle"`, which appends ` | Avinash Sangle` (17 chars). The rendered `<title>` tag = your title + 17, and it MUST stay <= 60 chars or SEO tools flag "Title too long". So 43 + 17 = 60 is the hard ceiling. Count it: `len(metadata.title) + 17 <= 60`.
+  - The fuller, descriptive 55-65 char version goes in `openGraph.title`, `twitter.title`, the `TechArticle` headline, and the visible `<h1>` only - those do NOT get the template suffix, so they can be longer.
+  - Example: page `title: "Apple Core AI: On-Device LLM Inference"` (38) renders as `<title>Apple Core AI: On-Device LLM Inference | Avinash Sangle</title>` (55); OG/Twitter/H1 use `"Apple Core AI: Run Open-Weight Models On-Device for Free"`.
 - Description: 130-160 characters
 - FAQ answers: 40-60 words each
 
@@ -206,6 +208,17 @@ STOP and report the error. Do NOT force-push or skip hooks. The user can
 retry after resolving the conflict. Do not invoke `/promote-blogpost` while
 the article is uncommitted.
 
+6. **Submit the new URL to IndexNow (after it is live).** This pings Bing, DuckDuckGo, and Yandex to crawl immediately instead of waiting days. Bing feeds ChatGPT + Copilot, so this is the fastest path into the AI-citation index. The page must resolve first, so wait for the Vercel deploy, then submit:
+   ```bash
+   # Wait until the new post returns 200 (Vercel deploy takes ~1 min after push)
+   for i in $(seq 1 9); do
+     code=$(curl -s -o /dev/null -w "%{http_code}" "https://avinashsangle.com/blog/$ARGUMENTS/")
+     [ "$code" = "200" ] && break || sleep 20
+   done
+   source venv/bin/activate && python scripts/submit_indexnow.py "https://avinashsangle.com/blog/$ARGUMENTS/"
+   ```
+   A `200` or `202` from IndexNow is success (`202` = accepted, key validation pending). This is **non-blocking**: if the key file is missing or the submission errors, note it and continue to Phase 7 — do not fail the publish over it.
+
 ---
 
 ## Phase 7 — Suggest Next Step
@@ -228,7 +241,8 @@ Do not run the promote command yourself. Let the user invoke it when they're rea
 
 ## Quality Checklist (verify before completing)
 
-- [ ] Title is 55-65 characters
+- [ ] `metadata.title` is 38-43 chars so rendered `<title>` (title + " | Avinash Sangle") is <= 60 chars (verify: `len(metadata.title) + 17 <= 60`)
+- [ ] `openGraph.title` / `twitter.title` / `TechArticle` headline / `<h1>` use the fuller 55-65 char descriptive title
 - [ ] Description is 130-160 characters
 - [ ] Article has 2000-3500 words
 - [ ] First paragraph directly answers the article's question (40-60 words)
@@ -248,4 +262,5 @@ Do not run the promote command yourself. Let the user invoke it when they're rea
 - [ ] `npm run build` passes
 - [ ] Committed and pushed to `main` (only the article + index files, no unrelated dirty files)
 - [ ] GitHub Pages deploy run started (verified via `gh run list`)
+- [ ] New post URL submitted to IndexNow once live (or noted non-blocking failure)
 - [ ] No shadcn/ui component files modified

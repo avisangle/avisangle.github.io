@@ -38,6 +38,15 @@ Research the topic "$ARGUMENTS" using web search:
    - Has Claude Code changed recently in ways not yet covered?
    - Use Context7 MCP to fetch latest Claude Code documentation for accuracy
 
+5. **First-party demand (Bing/ChatGPT queries)**: Pull the real questions people already use to find this site. Bing powers ChatGPT + Copilot search, so these are the exact natural-language phrasings AI answer engines see:
+   ```bash
+   source venv/bin/activate && python scripts/bing_report.py --type queries --days 120 --json
+   ```
+   - The output is a JSON array of `{name, clicks, impressions, ctr, position}` where `name` is the search query.
+   - Scan for queries relevant to "$ARGUMENTS", especially **question-form** ones ("how to...", "is it possible to...", "can claude..."). These are stronger FAQ/H2 seeds than scraped autocomplete because they are observed demand, not guesses.
+   - Note any relevant query already ranking on page 2 (position 11-20) — the new post can target it directly.
+   - **If the API key is missing** (`scripts/credentials/bing-api-key.txt`) or the script errors, skip this step and note "Bing demand data unavailable" — do not block the research.
+
 ---
 
 ## Phase 2 — Keyword Strategy
@@ -47,7 +56,7 @@ Produce a keyword map:
 1. **Primary keyword**: The main search query to target (2-4 words)
 2. **Secondary keywords**: 3-5 related terms
 3. **Long-tail queries**: 5-8 specific questions people search for
-4. **FAQ candidates**: 8-10 questions suitable for the FAQ section (these should mirror real search queries)
+4. **FAQ candidates**: 8-10 questions suitable for the FAQ section. Prefer the real question-form queries surfaced from Bing in Phase 1 step 5 (verbatim where they fit the topic); fill the rest from autocomplete / People Also Ask. Mark which candidates came from observed Bing demand.
 
 ---
 
@@ -56,7 +65,7 @@ Produce a keyword map:
 Produce a structured content brief with:
 
 ### Article Metadata
-- **Suggested title** (55-65 characters, includes primary keyword)
+- **Suggested title** (the `metadata.title`): 38-43 characters MAX, includes primary keyword. The site layout appends " | Avinash Sangle" (17 chars), so the rendered `<title>` = title + 17 must stay <= 60. Optionally also suggest a fuller 55-65 char descriptive title for OG/Twitter/H1 (which get no suffix).
 - **Suggested slug** (URL-friendly, 2-4 words)
 - **Meta description** (130-160 characters)
 - **Target word count** (2000-3500)

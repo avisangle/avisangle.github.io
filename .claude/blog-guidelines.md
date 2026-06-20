@@ -84,7 +84,8 @@ src/app/blog/[article-slug]/
 ### Required Metadata Export
 ```tsx
 export const metadata: Metadata = {
-  title: "Title Here (55-65 chars, include primary keyword)",
+  // metadata.title: 38-43 chars MAX. Layout appends " | Avinash Sangle" (17), so rendered <title> must be <= 60. Include primary keyword.
+  title: "Short Title (<=43 chars, primary keyword)",
   description: "Description here (130-160 chars, include primary + secondary keyword)",
   keywords: ["primary keyword", "secondary keyword", ...8-15 total],
   authors: [{ name: "Avinash Sangle", url: "https://avinashsangle.com" }],

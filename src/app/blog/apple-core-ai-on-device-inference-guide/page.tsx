@@ -11,7 +11,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Apple Core AI: Run Open-Weight Models On-Device for Free",
+  title: "Apple Core AI: On-Device LLM Inference",
   description:
     "A practitioner's guide to Apple Core AI: convert PyTorch models, run Qwen and Mistral on Apple Silicon, and cut inference costs to zero on-device.",
   keywords: [
