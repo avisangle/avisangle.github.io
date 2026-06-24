@@ -429,6 +429,34 @@ Searching "Apple Core AI framework tutorial" and "Core AI getting started guide 
 
 ### Why this topic, why now
 
+Anthropic launched Claude Tag on June 23, 2026 - a persistent AI teammate that lives in Slack channels, works across team members in shared context, and can connect to private MCP servers. It replaces the older Claude Slack app with something closer to an autonomous team member: it breaks tasks into stages, works through them independently, and delivers results back to the channel. With "ambient mode" enabled, it proactively monitors channel conversations and flags information it thinks the team needs. 65% of Anthropic's own product team's code is created by their internal version of Claude Tag. The launch hit HN's front page within hours, and every existing article is a day-one feature overview. No practitioner guide exists for engineering teams - specifically, how to connect Claude Tag to developer-facing MCP servers (GitHub, Sentry, PagerDuty, CI/CD), scope its access for security-conscious teams, manage the cost model under org-level billing, or compare its async workflow against Microsoft Copilot in Teams.
+
+### Search demand evidence
+
+- [Claude Tag | Hacker News](https://news.ycombinator.com/item?id=48648039) - Active front-page discussion (posted June 23, 2026). Developers debating platform lock-in, token cost control, and whether Anthropic is building toward a full enterprise agent platform.
+- [Introducing Claude Tag | Anthropic](https://www.anthropic.com/news/introducing-claude-tag) - Official launch announcement, June 23, 2026.
+- [Anthropic's Claude Tag is learning your company, one Slack message at a time](https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/) - TechCrunch, June 23, 2026. Notes the privacy implications of ambient mode reading all channel messages.
+- [Anthropic launches Claude Tag, replacing its Slack app with a persistent AI teammate](https://venturebeat.com/technology/anthropic-launches-claude-tag-replacing-its-slack-app-with-a-persistent-ai-teammate-that-learns-monitors-and-works-autonomously/) - VentureBeat, June 23, 2026. Frames it as a shift from chat tool to autonomous teammate.
+- [Anthropic launches Claude Tag, a tool that works like a virtual employee within Slack](https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/) - Fortune, June 23, 2026. Bloomberg also covered the launch on the same day.
+- [Claude Code in Slack - Claude Code Docs](https://code.claude.com/docs/en/slack) - Official docs confirming Claude Code integration within Slack channels.
+
+### Competition check
+
+Searching "Claude Tag setup guide engineering team" and "Claude Tag MCP integration developer" returns three day-one overview articles (Lushbinary, ExplainX, BuildFastWithAI) that describe features and availability, plus the official Anthropic announcement and support docs. None cover the practitioner workflow for engineering teams: connecting developer MCP servers (GitHub repos, CI dashboards, incident tools), scoping Claude Tag's access per channel for security-conscious orgs, the ambient mode decision (what it reads vs. what it ignores), cost management under org-level billing, or comparing Claude Tag's async task model against running Claude Code directly or using Microsoft Copilot in Teams. The blog's existing coverage of MCP integrations, Claude Code workflows, and Claude Managed Agents makes it a natural home for the first engineering-focused Claude Tag guide.
+
+### Suggested next step
+
+`/research-topic "claude-tag-engineering-teams-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-24: Claude Tag for Engineering Teams - Setting Up Anthropic's AI Slack Teammate for Developer Workflows
+
+**Suggested slug:** `claude-tag-engineering-teams-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
 Anthropic launched Claude Tag on June 23, 2026 - a persistent AI teammate that lives in Slack channels, takes delegated tasks, works through them independently, and reports back. It replaces the old Claude Slack app with something closer to an autonomous agent: shared context across team members, ambient mode that proactively surfaces relevant information, and connections to private MCP servers and external tools. Within 24 hours the launch drew coverage from Bloomberg, Fortune, TechCrunch, and VentureBeat, plus an active Hacker News discussion. Every article published so far is a product overview. No one has written the engineering team practitioner guide covering how to wire Claude Tag into developer workflows - CI/CD notifications, incident response channels, code review orchestration, connecting MCP servers for GitHub/Jira/Sentry access, or managing the cost and security implications of ambient mode reading all channel messages.
 
 ### Search demand evidence
