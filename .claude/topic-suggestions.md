@@ -419,3 +419,31 @@ Searching "Apple Core AI framework tutorial" and "Core AI getting started guide 
 ### Suggested next step
 
 `/research-topic "apple-core-ai-on-device-inference-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-06-24: Context Compression for AI Coding Agents: Cut Token Costs 60-90% with Headroom
+
+**Suggested slug:** `context-compression-ai-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+The AI coding agent cost crisis hit a tipping point in June 2026. Uber burned through its entire annual AI budget by April and now caps engineers at $1,500/month. Microsoft canceled most internal Claude Code licenses after bills hit $2,000/engineer/month. OpenAI shipped enterprise spend controls on June 21, and GitHub Copilot moved to usage-based AI Credits on June 1. Into this environment, Headroom -- a Netflix engineer's open-source context compression layer -- hit #2 on GitHub's monthly trending list (29.5K+ stars, +3,139 stars/day peak), claiming $700K in cumulative user savings and 200 billion tokens recovered. The tool compresses tool outputs, RAG chunks, logs, and code before they reach the LLM, cutting token consumption 60-95% without changing answers. With three deployment modes (library, proxy, MCP server), it plugs directly into Claude Code, Codex, and any MCP-compatible agent. The blog's existing `claude-code-cost-tracking` post tells readers how to monitor their spending -- this post answers the next question: how to actually reduce it.
+
+### Search demand evidence
+
+- [Show HN: Headroom - Reversible context compression for LLMs (~60% cost reduction)](https://news.ycombinator.com/item?id=46628278) - Hacker News front page Show HN thread, original launch in January 2026 with renewed June momentum
+- [headroomlabs-ai/headroom](https://github.com/chopratejas/headroom) - 29.5K+ GitHub stars, 2K forks, 155 releases (latest v0.25.0). #2 monthly trending repository on Trendshift in June 2026, peaked at #1 with +3,139 stars/day
+- [The token bill comes due: Inside the industry scramble to manage AI's runaway costs](https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/) - TechCrunch feature article, June 5, 2026. Reports the Linux Foundation launched a Tokenomics Foundation for AI cost standards
+- [New usage analytics and updated spend controls for enterprises](https://openai.com/index/chatgpt-enterprise-spend-controls/) - OpenAI announcement, June 21, 2026. Enterprise admins can now set per-user and per-group spend limits for ChatGPT and Codex
+- [Headroom: The Netflix Tool That Makes AI Agents 10x Cheaper](https://medium.com/design-bootcamp/headroom-the-netflix-tool-that-makes-ai-agents-10x-cheaper-fdd94b5252cf) - Medium/Bootcamp, June 2026. Details the tool's AST-based code compression, JSON squashers, and CacheAligner techniques
+- r/AI_Agents discussion (June 2026) about an open-source proxy to compress agentic LLM input tokens, identifying full tool list resends and growing histories as the real billing driver
+
+### Competition check
+
+Searching "Headroom setup guide Claude Code" and "context compression AI coding agents" returns an andrew.ooo review, a knightli.com guide covering Claude Code + Codex + MCP basics, an AlphaMatch overview, a DEV Community explainer, and the Headroom README. The knightli.com guide is the closest to a practitioner walkthrough but does not compare Headroom against alternatives (Context Gateway, Edgee, built-in prompt caching), provide before-and-after cost-per-task data with specific models (Opus 4.8 vs. Sonnet 4.6), show how compression interacts with Claude Code's prompt cache (compressing cached content invalidates the cache -- a non-obvious tradeoff), or address the quality threshold (when compression removes too much signal and answers degrade). The blog can differentiate by writing from the Claude Code practitioner's perspective with real cost data and a decision framework for when compression helps vs. hurts.
+
+### Suggested next step
+
+`/research-topic "context-compression-ai-coding-agents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
