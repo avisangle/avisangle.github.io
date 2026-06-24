@@ -419,3 +419,30 @@ Searching "Apple Core AI framework tutorial" and "Core AI getting started guide 
 ### Suggested next step
 
 `/research-topic "apple-core-ai-on-device-inference-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-06-24: Claude Tag for Engineering Teams - Setting Up Anthropic's AI Slack Teammate for Developer Workflows
+
+**Suggested slug:** `claude-tag-engineering-teams-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic launched Claude Tag on June 23, 2026 - a persistent AI teammate that lives in Slack channels, takes delegated tasks, works through them independently, and reports back. It replaces the old Claude Slack app with something closer to an autonomous agent: shared context across team members, ambient mode that proactively surfaces relevant information, and connections to private MCP servers and external tools. Within 24 hours the launch drew coverage from Bloomberg, Fortune, TechCrunch, and VentureBeat, plus an active Hacker News discussion. Every article published so far is a product overview. No one has written the engineering team practitioner guide covering how to wire Claude Tag into developer workflows - CI/CD notifications, incident response channels, code review orchestration, connecting MCP servers for GitHub/Jira/Sentry access, or managing the cost and security implications of ambient mode reading all channel messages.
+
+### Search demand evidence
+
+- [Claude Tag | Hacker News](https://news.ycombinator.com/item?id=48648039) - Active discussion thread (posted June 23, 2026). Developers debating platform lock-in, token cost control, and whether persistent Slack agents are a step toward real agentic workflows or just chatbot rebranding.
+- [Introducing Claude Tag | Anthropic](https://www.anthropic.com/news/introducing-claude-tag) - Official announcement, June 23, 2026. Claude Tag available in beta for Enterprise and Team customers. 65% of Anthropic's own product team's code is created by their internal version.
+- [Anthropic's Claude Tag is learning your company, one Slack message at a time | TechCrunch](https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/) - TechCrunch, June 23, 2026. Highlights the ambient mode and persistent context across team members.
+- [Anthropic launches Claude Tag, replacing its Slack app with a persistent AI teammate | VentureBeat](https://venturebeat.com/technology/anthropic-launches-claude-tag-replacing-its-slack-app-with-a-persistent-ai-teammate-that-learns-monitors-and-works-autonomously/) - VentureBeat, June 23, 2026. Frames it as the shift from private chatbot to shared autonomous teammate.
+- [Anthropic Wants Claude to Be Your New Slack Coworker | Bloomberg](https://www.bloomberg.com/news/articles/2026-06-23/anthropic-wants-claude-to-be-your-new-slack-coworker) - Bloomberg, June 23, 2026.
+
+### Competition check
+
+Searching "Claude Tag setup guide" and "Claude Tag engineering team Slack" returns day-one overview articles from Lushbinary, ExplainX, and BuildFastWithAI, plus the official Anthropic announcement and help center article. All cover what Claude Tag is and its basic features. None walk through the engineering team setup: scoping channel access for dev workflows, connecting MCP servers (GitHub, Jira, Sentry, PagerDuty), configuring ambient mode safely so it doesn't leak sensitive channel content, comparing the developer experience against Microsoft Copilot in Teams, or modeling the per-org billing impact for teams that already pay for Claude Code. The blog's existing MCP content (method-crm-mcp, mcp-code-execution-pattern) and Claude ecosystem coverage (claude-managed-agents, claude-code-dynamic-workflows-guide) create a natural content cluster for readers who already use Claude and want to extend it into their team Slack.
+
+### Suggested next step
+
+`/research-topic "claude-tag-engineering-teams-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
