@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Claude Tag for Engineering Teams: A Practical Setup Guide",
+                url: "https://avinashsangle.com/blog/claude-tag-engineering-teams-guide",
+                datePublished: "2026-06-25",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Apple Core AI: Run Open-Weight Models On-Device for Free",
                 url: "https://avinashsangle.com/blog/apple-core-ai-on-device-inference-guide",
                 datePublished: "2026-06-20",
@@ -239,22 +246,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Cpu" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Users" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Apple Core AI: Run Open-Weight Models On-Device for Free</h3>
+                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
+                <h3 className="text-2xl font-bold mb-4">Claude Tag for Engineering Teams: A Practical Setup Guide</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Apple&apos;s WWDC 2026 framework runs Qwen, Mistral, and your own
-                  PyTorch models on Apple Silicon with zero token cost. A
-                  practitioner&apos;s guide: convert, load in Swift, and quantize.
+                  Anthropic&apos;s AI Slack teammate, set up the safe way: connect
+                  MCP tools, scope channel access, decide on ambient mode, and cap
+                  token costs before you roll it out to engineering.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 20, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 25, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/apple-core-ai-on-device-inference-guide">Read Article →</Link>
+                  <Link href="/blog/claude-tag-engineering-teams-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -267,6 +274,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Users" size="lg" animation="pulse" />
+                <CardTitle>Claude Tag for Engineering Teams: A Practical Setup Guide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Claude Tag is Anthropic&apos;s persistent AI teammate in Slack.
+                  Wire it into engineering: connect MCP servers, scope channel
+                  access, use ambient mode safely, and control token costs.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 25, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/claude-tag-engineering-teams-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Cpu" size="lg" animation="pulse" />

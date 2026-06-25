@@ -339,3 +339,4 @@
 - ~2,410 words, 12 min read, 8 FAQ items, schemas: TechArticle + BreadcrumbList + FAQPage.
 - Verified Swift API (CoreAILanguageModel/LanguageModelSession/@Generable) + coreai-torch pipeline against Apple docs/WWDC 326.
 - Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
+- 2026-06-25 Published blog post: "Claude Tag for Engineering Teams: A Practical Setup Guide" at /blog/claude-tag-engineering-teams-guide
