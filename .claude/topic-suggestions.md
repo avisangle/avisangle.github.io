@@ -474,3 +474,31 @@ Searching "Claude Tag setup guide" and "Claude Tag engineering team Slack" retur
 ### Suggested next step
 
 `/research-topic "claude-tag-engineering-teams-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-06-27: GLM-5.2 Local Setup Guide - Running the Top Open-Weight Model for AI Coding
+
+**Suggested slug:** `glm-5-2-local-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+GLM-5.2 (744B parameters, MIT-licensed) from Z.ai shipped on June 13 and immediately topped the Artificial Analysis Intelligence Index as the most capable open-weight model - a 41-point jump from GLM 5.1, the largest intra-family improvement in open-weight history. The release triggered a wave of community discussion about whether local models have finally crossed the viability threshold for daily coding work. Two separate Hacker News threads about replacing proprietary AI coding tools with local models hit the front page the same week, accumulating nearly 3,000 combined points and over 1,100 comments. Developers are actively searching for practical setup guidance, but no definitive local-coding guide exists for GLM-5.2 yet.
+
+### Search demand evidence
+
+- [Running local models is good now](https://news.ycombinator.com/item?id=48555993) - 1,581 points, 604 comments (Hacker News, June 20, 2026). Vicki Boykis article timed with GLM-5.2's rise as the new leading open-weight model.
+- [Ask HN: Has anyone replaced Claude/GPT with a local model for daily coding?](https://news.ycombinator.com/item?id=48542100) - 1,306 points, 561 comments (Hacker News, June 19, 2026). Top response detailed running Qwen3.6 35B on a Mac Studio with 128GB RAM. Consensus: local models viable for many tasks, frontier models still win on complex multi-file reasoning.
+- [GLM-5.2 is the new leading open weights model on Artificial Analysis](https://news.ycombinator.com/item?id=48567759) - Hacker News front page (June 21, 2026). Community discussion about token efficiency and hallucination rates vs proprietary models.
+- [GLM-5.2 is a step change for open agents](https://news.ycombinator.com/item?id=48639840) - 188+ comments, Hacker News front page (June 25, 2026). Discussion on whether open models finally make agentic workflows viable without proprietary API costs.
+- [Unsloth GLM-5.2 - How to Run Locally](https://news.ycombinator.com/item?id=48636377) - 125 points, 50 comments (Hacker News, June 23, 2026). Practical guide using Unsloth's dynamic GGUF quantizations.
+- Active discussion on r/LocalLLaMA around GLM-5.2 performance, quantization quality, and hardware requirements for the 744B model.
+
+### Competition check
+
+Searching "GLM-5.2 setup guide" and "run GLM-5.2 locally" returns the Unsloth blog post (quantization-focused), the Artificial Analysis benchmark page, and the Z.ai model card. No result walks a developer through the full local-coding workflow: hardware requirements for useful quantization levels, integrating GLM-5.2 with coding tools (Ollama, llama.cpp, OpenCode), practical benchmarks against Claude Code or Codex on real tasks, or when to fall back to a proprietary API. The blog's existing open-weight content (qwen-code-getting-started, gemma-4-models-guide) covers different model families and creates a natural content cluster for readers comparing local options.
+
+### Suggested next step
+
+`/research-topic "glm-5-2-local-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
