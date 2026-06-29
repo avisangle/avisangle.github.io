@@ -1,5 +1,19 @@
 # Progress Log
 
+## 2026-06-29
+
+### Published Blog Post: /blog/glm-5-2-local-coding-guide
+- 2026-06-29 Published blog post: "How to Run GLM-5.2 Locally for AI Coding (2026 Guide)" at /blog/glm-5-2-local-coding-guide
+- metadata.title: "Run GLM-5.2 Locally: AI Coding Guide" (36 chars; rendered <title> 53 with suffix). H1/OG/Twitter use fuller 53-char descriptive title.
+- Unique angle: honest, hardware-tiered, end-to-end (model -> quant -> run -> agent -> when-not-to). Corrects the viral "41-point jump" (actually +11). Surfaces practitioner pushback that 2-bit "lossless" claims don't hold for agentic coding (need Q4+/Q8).
+- Facts verified via 2 web-research agents: 744B/40B MoE, MIT, 1M ctx; AA Index 51 (#1 open-weight, +11 over GLM-5.1), behind Opus 4.8 (56)/GPT-5.5 (55); SWE-bench Pro 62.1; Terminal-Bench 81.0; ~42K tok/task verbosity; Unsloth GGUF sizes; Ollama cloud-only.
+- Schemas: TechArticle, BreadcrumbList, HowTo (4 steps), FAQPage (10 Q&As)
+- 7 H2 sections, TL;DR, TOC, 4 code blocks, 3 tables, accordion FAQ
+- Updated blog index (featured card + first grid card + Blog JSON-LD), sitemap.ts, public/llms.txt
+- Internal links: qwen-code-getting-started, gemma-4-models-guide, apple-core-ai-on-device-inference-guide, claude-code-cost-tracking
+- Build: pending verification; no em dashes, no banned words
+- Followup: run /promote-blogpost glm-5-2-local-coding-guide
+
 ## 2026-05-30
 
 ### Published Blog Post: /blog/claude-code-dynamic-workflows-guide

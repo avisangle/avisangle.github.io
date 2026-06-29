@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "How to Run GLM-5.2 Locally for AI Coding (2026 Guide)",
+                url: "https://avinashsangle.com/blog/glm-5-2-local-coding-guide",
+                datePublished: "2026-06-29",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Claude Tag for Engineering Teams: A Practical Setup Guide",
                 url: "https://avinashsangle.com/blog/claude-tag-engineering-teams-guide",
                 datePublished: "2026-06-25",
@@ -246,22 +253,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Users" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Cpu" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Claude Tag for Engineering Teams: A Practical Setup Guide</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">How to Run GLM-5.2 Locally for AI Coding (2026 Guide)</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Anthropic&apos;s AI Slack teammate, set up the safe way: connect
-                  MCP tools, scope channel access, decide on ambient mode, and cap
-                  token costs before you roll it out to engineering.
+                  GLM-5.2 is the top open-weight model of 2026. Pick the right
+                  Unsloth quant, size your hardware (256GB Mac or multi-GPU),
+                  wire it into Aider or Cline, and know when cloud still wins.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 25, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 29, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/claude-tag-engineering-teams-guide">Read Article →</Link>
+                  <Link href="/blog/glm-5-2-local-coding-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -274,6 +281,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Cpu" size="lg" animation="pulse" />
+                <CardTitle>How to Run GLM-5.2 Locally for AI Coding (2026 Guide)</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  GLM-5.2 is 2026&apos;s top open-weight coding model. Run it with
+                  llama.cpp and Unsloth quants - the hardware you need, the right
+                  quant for coding, and when a cloud API still makes more sense.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jun 29, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/glm-5-2-local-coding-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Users" size="lg" animation="pulse" />
