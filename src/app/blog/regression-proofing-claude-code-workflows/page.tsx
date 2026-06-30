@@ -501,16 +501,8 @@ export default function RegressionProofingPage() {
           <p className="text-lg leading-relaxed mb-6">
             One day after the postmortem dropped, on April 24, Anthropic shipped v2.1.119
             and v2.1.120 within 24 hours. Together those releases triggered{" "}
-            <strong>eight community-filed regressions</strong>. The community-maintained{" "}
-            <a
-              href="https://gist.github.com/yurukusa/a866b4cd2976486156a00c190c39cef6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              v2.1.117 survival checklist on GitHub Gist
-            </a>{" "}
-            documents them and recommends rolling back as the shortest path to a working
+            <strong>eight community-filed regressions</strong>. The community
+            consensus was to roll back to v2.1.117 as the shortest path to a working
             session.
           </p>
 
