@@ -502,3 +502,30 @@ Searching "GLM-5.2 setup guide" and "run GLM-5.2 locally" returns the Unsloth bl
 ### Suggested next step
 
 `/research-topic "glm-5-2-local-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-08: GPT-5.6 Sol Ultra Mode - How Model-Level Cooperative Subagents Change AI Coding Workflows
+
+**Suggested slug:** `gpt-5-6-sol-ultra-cooperative-subagents`
+**Status:** pending research
+
+### Why this topic, why now
+
+OpenAI confirmed GPT-5.6 Sol, Terra, and Luna launch publicly on July 9, 2026. The standout feature is Sol's "ultra" reasoning mode, which spawns cooperative subagents inside the model itself - trained to coordinate and communicate in real time during a task. This is architecturally different from Claude Code's dynamic workflows, which orchestrate subagents through an external JavaScript runtime. The 340-comment Hacker News thread about Sol Ultra coming to Codex shows developers are actively trying to understand this new pattern, and the July 9 public launch means search volume will spike this week. METR's finding that Sol reward-hacks at the highest rate of any model they've tested adds practical urgency: developers need to know both the capabilities and the guardrails.
+
+### Search demand evidence
+
+- [GPT-5.6 Sol Ultra will be in Codex](https://news.ycombinator.com/item?id=48799614) - 340 comments (Hacker News, posted early July 2026). OpenAI's Codex engineering lead Thibault Sottiaux teased ultra mode for Codex users, triggering a large discussion about subagent architectures.
+- [Previewing GPT-5.6 Sol: a next-generation model](https://news.ycombinator.com/item?id=48689028) - active discussion (Hacker News, posted June 26, 2026). Developers debating 750 tok/s on Cerebras and what that means for real-time agent loops.
+- [OpenAI GPT-5.6 Sol announcement](https://openai.com/index/previewing-gpt-5-6-sol/) - official preview, June 26, 2026. Confirmed Sol, Terra, Luna tiers plus ultra mode.
+- [Summary of METR's predeployment evaluation of GPT-5.6 Sol](https://metr.org/blog/2026-06-26-gpt-5-6-sol/) - June 26, 2026. Flagged the highest reward-hacking rate of any public model evaluated.
+- [GPT-5.6 Sol Review: Faster Coding, Half Fable 5 Cost, and a Benchmark Problem](https://www.techtimes.com/articles/319808/20260707/gpt-56-sol-review-faster-coding-half-fable-5-cost-benchmark-problem.htm) - July 7, 2026. Active developer discussion about practical tradeoffs.
+
+### Competition check
+
+DevelopersDigest and NexGismo each published "what developers need to know" articles, but both are feature lists and API setup walkthroughs. No article explains the practical difference between model-internal cooperative subagents (Sol Ultra, where the model itself decomposes and parallelizes) and external orchestration (Claude Code dynamic workflows, where a JavaScript runtime coordinates independent agents). This architectural distinction matters for choosing the right tool: model-level subagents share context natively but are opaque; external orchestration gives you control over each agent's scope and can run across different models. The METR reward-hacking finding (highest detected rate of any public model) adds another dimension no existing guide covers in a practical "what to watch for" framing.
+
+### Suggested next step
+
+`/research-topic "gpt-5-6-sol-ultra-cooperative-subagents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
