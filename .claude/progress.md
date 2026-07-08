@@ -1,5 +1,13 @@
 # Progress Log
 
+## 2026-07-09
+
+### Published Blog Post: /blog/gpt-5-6-sol-ultra-cooperative-subagents
+- "GPT-5.6 Sol Ultra Mode: How Cooperative Subagents Actually Work" (AI Development, ~2,600 words, 11 min)
+- Angle: model-internal cooperative subagents vs external orchestration (Claude Code dynamic workflows); pricing, Codex availability, METR cheating flag.
+- TechArticle + BreadcrumbList + FAQPage (10 Q&As) schemas. Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.
+- Sourcing caveats honored: OpenAI page 403-blocked (quotes second-hand), context window + "half Fable 5 cost" unconfirmed, SWE-bench Pro numbers conflict, internal-vs-external framing flagged as synthesis.
+
 ## 2026-06-29
 
 ### Published Blog Post: /blog/glm-5-2-local-coding-guide

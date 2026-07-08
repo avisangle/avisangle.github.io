@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'gpt-5-6-sol-ultra-cooperative-subagents',
+      lastModified: '2026-07-09',
+    },
+    {
       slug: 'glm-5-2-local-coding-guide',
       lastModified: '2026-06-29',
     },
