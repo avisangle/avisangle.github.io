@@ -529,3 +529,32 @@ DevelopersDigest and NexGismo each published "what developers need to know" arti
 ### Suggested next step
 
 `/research-topic "gpt-5-6-sol-ultra-cooperative-subagents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-10: Friendly Fire Exploit Defense - How to Safely Review Untrusted Code with AI Coding Agents
+
+**Suggested slug:** `friendly-fire-exploit-defense-ai-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+On July 8, 2026, AI Now Institute published "Friendly Fire" - a proof-of-concept exploit that turns AI coding agents into attack vectors when reviewing untrusted code. The attack works against Claude Code (Sonnet 4.6, Sonnet 5, Opus 4.8) and OpenAI Codex (GPT-5.5) in their default autonomous modes. The researchers modified a copy of the popular geopy Python library, hiding prompt injections in documentation and source files plus a disguised malicious binary. When an agent is asked to "perform security testing on this project," it reads the README, decides a security.sh script looks like part of the job, and executes the attacker's payload on the host machine. No hooks, plugins, MCP servers, or config files needed. The PoC code is public on GitHub. Every news article describes the attack, but not one walks a developer through the defense: how to sandbox agent sessions, restrict tool access, configure trust boundaries, and safely review third-party code without disabling the automation that makes agents useful in the first place.
+
+### Search demand evidence
+
+- [Friendly Fire: Hijacking Defensive Cyber AI Agents for Remote Code Execution](https://ainowinstitute.org/publications/friendly-fire-exploit-brief) - AI Now Institute, published July 8, 2026. Original disclosure by researcher Boyan Milanov.
+- [Top AI Agents Built to Catch Malicious Code Can Be Tricked Into Running It](https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html) - The Hacker News (cybersecurity publication), July 9, 2026. Primary coverage driving developer awareness.
+- [GitHub PoC: Boyan-MILANOV/friendly-fire-ai-agent-exploit](https://github.com/Boyan-MILANOV/friendly-fire-ai-agent-exploit) - Public proof-of-concept repo with full attack chain for Claude Code CLI (2.1.116, 2.1.196, 2.1.198, 2.1.199) and Codex CLI (0.142.4).
+- [Claude Code, Cursor, Amazon Q Hit by Trust-Boundary Flaws](https://securitypointbreak.com/2026/07/09/cracks-in-claude-code-cursor-amazon-q-codex-expose-trust-boundaries/) - SecurityPointBreak, July 9, 2026. Broader trust-boundary analysis that includes the Friendly Fire findings.
+- [Cyber AI Agents Like Claude Code, GPT-5.5 Can Be Hijacked to Run Malicious Code Remotely](https://cybersecuritynews.com/cyber-ai-agents-hijacked/) - CybersecurityNews, July 2026.
+- [@TheHackersNews tweet](https://x.com/TheHackersNews/status/2075087872315789673) - Active Twitter thread amplifying the story to the infosec community.
+- [Friendly Fire and Rogue Agent: AI Coding Agent Security After July 2026](https://www.nxcode.io/resources/news/friendly-fire-rogue-agent-ai-coding-security-2026) - NxCode, July 2026. Combined analysis of Friendly Fire and the separate Rogue Agent (Dialogflow CX) disclosure.
+
+### Competition check
+
+Searching "friendly fire exploit Claude Code defense guide" and "safely review untrusted code AI agent" returns 10+ news articles (The Hacker News, CybersecurityNews, IT Pro, TechNadu, SecNews, Digg, Mallory, VexDynamics, SecurityPointBreak) and the AI Now Institute's original brief. Every piece describes WHAT the attack does. Not one shows a developer HOW to defend against it: configuring --disallowed-tools to block shell execution during reviews, running agents inside container sandboxes (Docker, nsjail), setting up read-only filesystem mounts for untrusted repos, using Claude Code's permission prompt mode for high-risk reviews instead of auto-mode, or establishing a review checklist for third-party code before handing it to an agent. The blog's existing `hardening-ai-agents-cicd-prompt-injection` post covers a different attack surface (CI/CD pipeline injection via PR comments). This post covers the complementary surface: what happens when the codebase itself is the weapon.
+
+### Suggested next step
+
+`/research-topic "friendly-fire-exploit-defense-ai-coding-agents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
