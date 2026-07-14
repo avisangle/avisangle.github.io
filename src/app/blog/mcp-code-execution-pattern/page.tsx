@@ -955,7 +955,7 @@ def _reject_obvious_unsafe_imports(tree: ast.AST, allowed: list[str]) -> None:
 
           <p className="text-lg leading-relaxed mb-6">
             First,{" "}
-            <a href="https://www.atlassian.com/blog/developer/mcp-compression-preventing-tool-bloat-in-ai-agents" target="_blank" rel="noopener noreferrer" className="project-link">Atlassian&apos;s mcp-compressor</a>{" "}
+            <a href="https://www.atlassian.com/blog/development/mcp-compression-preventing-tool-bloat-in-ai-agents" target="_blank" rel="noopener noreferrer" className="project-link">Atlassian&apos;s mcp-compressor</a>{" "}
             (70-97% schema reduction) sits upstream of any approach. If
             you&apos;re running legacy MCP servers you can&apos;t rewrite, drop
             mcp-compressor in front and it shrinks the descriptions before the
