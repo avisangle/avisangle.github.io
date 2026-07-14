@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "How to Defend AI Coding Agents Against HalluSquatting Attacks",
+                url: "https://avinashsangle.com/blog/hallusquatting-defense-ai-coding-agents",
+                datePublished: "2026-07-15",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "GPT-5.6 Sol Ultra Mode: How Cooperative Subagents Actually Work",
                 url: "https://avinashsangle.com/blog/gpt-5-6-sol-ultra-cooperative-subagents",
                 datePublished: "2026-07-09",
@@ -260,22 +267,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Bot" size="xl" className="mx-auto" />
+              <CategoryIcon icon="PackageSearch" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">GPT-5.6 Sol Ultra Mode: How Cooperative Subagents Actually Work</h3>
+                <p className="text-accent font-semibold mb-2">AI SECURITY</p>
+                <h3 className="text-2xl font-bold mb-4">How to Defend AI Coding Agents Against HalluSquatting Attacks</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Sol Ultra spawns cooperative subagents inside the model. How it
-                  works, pricing vs Fable 5, the METR cheating finding, and when to
-                  pick it over Claude Code&apos;s external orchestration.
+                  Attackers register the package names your agent predictably
+                  invents. Why lockfiles and install cooldowns miss it, and how to
+                  block the fetch with a PreToolUse hook and a sandbox.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 9, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 15, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/gpt-5-6-sol-ultra-cooperative-subagents">Read Article →</Link>
+                  <Link href="/blog/hallusquatting-defense-ai-coding-agents">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -288,6 +295,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="PackageSearch" size="lg" animation="pulse" />
+                <CardTitle>How to Defend AI Coding Agents Against HalluSquatting Attacks</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  HalluSquatting turns predictable AI hallucinations into malware
+                  delivery. Why lockfiles and cooldowns do not stop it, plus the
+                  PreToolUse hook, sandbox config, and .npmrc settings that do.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 15, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/hallusquatting-defense-ai-coding-agents" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Bot" size="lg" animation="pulse" />
