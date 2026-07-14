@@ -529,3 +529,32 @@ DevelopersDigest and NexGismo each published "what developers need to know" arti
 ### Suggested next step
 
 `/research-topic "gpt-5-6-sol-ultra-cooperative-subagents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-13: HalluSquatting Defense Guide - Protecting Your AI Coding Workflow from Hallucinated Package Attacks
+
+**Suggested slug:** `hallusquatting-defense-ai-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+On July 8, 2026, researchers from Tel Aviv University, Technion, and Intuit published "Beware of Agentic Botnets" (arXiv:2607.07433) - a paper demonstrating that attackers can pre-register package names, repositories, and agent skills that LLMs predictably hallucinate, then wait for AI coding assistants to fetch the attacker's payload on a developer's behalf. They call this technique HalluSquatting. It turns a known AI weakness (hallucinated resource names) into a scalable attack vector that bypasses traditional supply chain defenses like typosquatting detection. In testing, hallucination rates hit 85% for repository cloning and 100% for skill installation across nine AI coding assistants including Cursor, GitHub Copilot, Gemini CLI, and Cline. Within five days of publication, 15+ security outlets covered the attack. Every article describes WHAT the attack is. Not one walks a developer through HOW to defend against it in practice - which tool settings to change, which lockfile policies to enforce, how to audit what your AI agent actually fetched.
+
+### Search demand evidence
+
+- [New HalluSquatting Attack Could Trick AI Coding Assistants Into Installing Botnet Malware](https://thehackernews.com/2026/07/new-hallusquatting-attack-could-trick.html) - The Hacker News, published July 8, 2026. Primary coverage with active reader engagement.
+- [HalluSquatting Turns AI Hallucinations Into Botnet Delivery Mechanism](https://www.securityweek.com/hallusquatting-turns-ai-hallucinations-into-botnet-delivery-mechanism/) - SecurityWeek, July 2026.
+- [New hack exploits AI hallucinations to trick agents into running malicious code](https://www.tomshardware.com/tech-industry/cyber-security/hallusquatting-is-the-latest-agentic-ai-exploit-where-models-dream-up-potentially-malicious-urls-in-tool-calls-attack-exploits-a-fundamental-weakness-in-every-available-model) - Tom's Hardware, July 2026. Notes "a fundamental weakness in every available model."
+- [HalluSquatting Compromises AI Coding Agents to Install Malware, Create Botnets](https://devops.com/hallusquatting-compromises-ai-coding-agents-to-install-malware-create-botnets/) - DevOps.com, July 2026.
+- [Closing The AI Hallucination Attack Surface Gap](https://www.forbes.com/councils/forbestechcouncil/2026/07/09/closing-the-ai-hallucination-attack-surface-gap/) - Forbes Tech Council, July 9, 2026. Enterprise perspective on the same attack class.
+- [Beware of Agentic Botnets](https://arxiv.org/abs/2607.07433) - Original research paper, arXiv, July 8, 2026. Tests nine AI coding assistants across repo cloning, package installation, and skill fetching scenarios.
+- Real-world precedent: In January 2026, Aikido Security's Charlie Eriksen found a hallucinated npm package (`react-codeshift`) already present in 237 code projects, with AI agents still trying to install it daily after registration.
+
+### Competition check
+
+Searching "HalluSquatting defense guide" and "protect against HalluSquatting developer" returns only news articles from SecurityWeek, Tom's Hardware, The Hacker News, CyberPress, GBHackers, Decrypt, SC Media, and DevOps.com. Every piece describes the attack mechanism and quotes the paper. None walk through the practitioner defense: configuring permission modes and `--allowed-tools` in Claude Code and Cursor, enforcing lockfile-only installs in CI, auditing agent tool-call logs for unexpected fetches, sandboxing agent execution with restricted network access, or comparing each major AI coding tool's built-in safeguards against this specific attack class. The blog's existing security cluster (`hardening-ai-agents-cicd-prompt-injection`, `litellm-mcp-exploit-response-guide`, `claude-code-security-review-github-actions`) makes it a natural home for this post, and the audience (developers running AI coding agents daily) is exactly the group this attack targets.
+
+### Suggested next step
+
+`/research-topic "hallusquatting-defense-ai-coding-agents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
