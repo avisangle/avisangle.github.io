@@ -47,3 +47,6 @@ scripts/credentials/
 next-env.d.ts
 .env*.local
 __pycache__/
+
+# Python virtualenv for scripts/ (see requirements.txt)
+venv/
