@@ -67,7 +67,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'Claude', 'GitHub Actions', 'Slack', 'Cloudflare Workers'],
     tags: ['AI', 'GitHub', 'Automation', 'Python', 'Serverless', 'Claude', 'Market Research'],
     route: '/projects/trending-repo-scout',
-    liveUrl: 'https://trending-repo-scout.aavi-sangle.workers.dev',
+    liveUrl: '/projects/trending-scout',
     featured: true,
     status: 'active',
     date: '2026-07-15',

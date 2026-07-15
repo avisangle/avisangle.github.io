@@ -3,6 +3,13 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Vercel deployment configuration
 
+  async rewrites() {
+    return [
+      { source: '/projects/trending-scout', destination: 'https://trending-repo-scout.aavi-sangle.workers.dev/' },
+      { source: '/projects/trending-scout/:path*', destination: 'https://trending-repo-scout.aavi-sangle.workers.dev/:path*' },
+    ]
+  },
+
   async redirects() {
     return [
       // ========================================

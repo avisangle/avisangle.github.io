@@ -119,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Project slugs with metadata
   const projects = [
     { slug: 'trending-repo-scout', lastModified: '2026-07-15' },
+    { slug: 'trending-scout', lastModified: '2026-07-15' },
     { slug: 'reddit-agent', lastModified: '2026-01-30' },
     { slug: 'social-media-auto-poster', lastModified: '2026-01-24' },
     { slug: 'jenkins-mcp', lastModified: '2026-05-17' },
