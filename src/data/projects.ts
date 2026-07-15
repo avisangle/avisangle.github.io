@@ -57,6 +57,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'trending-repo-scout',
+    title: 'Trending Repo Scout',
+    description: 'Serverless scout that scans GitHub trending daily, enriches each repo with its README and open issues, and scores it with Claude on virality, buildability, and pay-readiness. Ranked shortlist lands in Slack; every observation feeds a public trend dashboard.',
+    shortDescription: 'AI-scored GitHub trending digest with a live trend dashboard',
+    category: 'AI Automation',
+    badge: 'Live Dashboard',
+    icon: 'Bot',
+    technologies: ['Python', 'Claude', 'GitHub Actions', 'Slack', 'Cloudflare Workers'],
+    tags: ['AI', 'GitHub', 'Automation', 'Python', 'Serverless', 'Claude', 'Market Research'],
+    route: '/projects/trending-repo-scout',
+    liveUrl: 'https://trending-repo-scout.aavi-sangle.workers.dev',
+    featured: true,
+    status: 'active',
+    date: '2026-07-15',
+    order: 0,
+    year: 2026
+  },
+  {
     id: 'reddit-agent',
     title: 'Reddit Comment Engagement Agent',
     description: 'Compliance-first, anti-fingerprint Reddit engagement agent with AI-powered quality scoring, human-in-the-loop approval, and LangGraph workflow orchestration. Features shadowban detection, historical learning, and comprehensive safety controls.',
@@ -71,7 +89,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2026-01-30',
-    order: 0,
+    order: 1,
     year: 2026
   },
   {
@@ -89,7 +107,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-12-15',
-    order: 1,
+    order: 2,
     year: 2024
   },
   {
@@ -106,7 +124,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-11-20',
-    order: 2,
+    order: 3,
     year: 2024
   },
   {
@@ -123,7 +141,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'active',
     date: '2024-11-10',
-    order: 3,
+    order: 4,
     year: 2024
   },
   {
@@ -141,7 +159,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-10-25',
-    order: 4,
+    order: 5,
     year: 2024
   },
   {
@@ -159,7 +177,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-09-15',
-    order: 5,
+    order: 6,
     year: 2024
   },
   {
@@ -176,7 +194,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-08-20',
-    order: 6,
+    order: 7,
     year: 2024
   },
   {
@@ -194,7 +212,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-07-15',
-    order: 7,
+    order: 8,
     year: 2024
   },
   {
@@ -211,7 +229,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'active',
     date: '2024-06-10',
-    order: 8,
+    order: 9,
     year: 2024
   }
 ]
