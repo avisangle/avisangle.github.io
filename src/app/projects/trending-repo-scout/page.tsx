@@ -10,7 +10,9 @@ import Link from "next/link"
 import { ExternalLink, CheckCircle, TrendingUp, Brain, DollarSign, History, Send, LayoutDashboard } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Trending Repo Scout - AI GitHub Trend Scanner and Scorer",
+  // Rendered title = this + " | Avinash Sangle" (root layout template, +17 chars).
+  // Keep this <=53 so the rendered title stays under Bing's 70-char limit.
+  title: "Trending Repo Scout - AI GitHub Opportunity Scanner",
   description:
     "Serverless scout that scans GitHub trending daily, scores each repo with Claude on virality, buildability, and pay-readiness, then posts a ranked Slack digest.",
   keywords: [
