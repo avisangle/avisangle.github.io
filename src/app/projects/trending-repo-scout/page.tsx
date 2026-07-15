@@ -10,9 +10,8 @@ import Link from "next/link"
 import { ExternalLink, CheckCircle, TrendingUp, Brain, DollarSign, History, Send, LayoutDashboard } from "lucide-react"
 
 export const metadata: Metadata = {
-  // Rendered title = this + " | Avinash Sangle" (root layout template, +17 chars).
-  // Keep this <=53 so the rendered title stays under Bing's 70-char limit.
-  title: "Trending Repo Scout - AI GitHub Opportunity Scanner",
+  // 38-43 chars: the layout template appends " | Avinash Sangle" (+17) -> 56 rendered.
+  title: "Trending Repo Scout - AI GitHub Scanner",
   description:
     "Serverless scout that scans GitHub trending daily, scores each repo with Claude on virality, buildability, and pay-readiness, then posts a ranked Slack digest.",
   keywords: [
@@ -30,7 +29,8 @@ export const metadata: Metadata = {
     "claude haiku",
   ],
   openGraph: {
-    title: "Trending Repo Scout",
+    // No template suffix here, so this carries the fuller 55-65 char descriptive title.
+    title: "Trending Repo Scout - AI GitHub Trend Scanner and Scorer",
     description: "AI-scored GitHub trending digest: virality, buildability, and pay-readiness",
     url: "https://avinashsangle.com/projects/trending-repo-scout",
     type: "article",

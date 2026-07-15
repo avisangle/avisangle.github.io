@@ -108,20 +108,38 @@ All pages must include comprehensive metadata for search engines (Google, Bing):
 
 ### Title & Description Limits (Bing Requirements)
 
-- **Title:** 55-65 characters (Bing prefers under 70)
-- **Description:** 130-160 characters (Bing prefers 150-160)
+**The root layout (`src/app/layout.tsx`) applies `template: "%s | Avinash Sangle"`, which
+appends 17 characters to every page's `metadata.title`.** Budget for the *rendered* title,
+not the string you type — this is the single easiest way to ship a "Title too long" defect:
+
+- **`metadata.title`:** 38-43 characters. Rendered = your string + 17, and must stay **≤ 60**.
+  Hard ceiling is 53 (= 70 rendered), the point at which Bing reports "Title too long".
+- **`openGraph.title` / `twitter.title` / `TechArticle` headline / visible `<h1>`:** 55-65
+  characters. These get **no** template suffix, so they can carry the fuller, descriptive title.
+- **Description:** 130-160 characters (Bing prefers 150-160). No template applies.
+
+Verify the rendered length rather than trusting the count in your editor:
+
+```bash
+curl -s https://avinashsangle.com/<route> | grep -o "<title>[^<]*</title>"
+```
+
+As of 2026-07-15, 27 of 42 pages exceed 70 rendered (worst: `projects/reddit-agent` at 91)
+because this rule previously read "Title: 55-65 characters" without noting the suffix.
+Do not follow that older guidance — it guarantees the defect.
 
 ### Required Metadata Structure
 
 ```tsx
 export const metadata: Metadata = {
-  title: "Page Title (55-65 chars)",
+  // 38-43 chars: the layout template appends " | Avinash Sangle" (+17) -> keep rendered <= 60
+  title: "Page Title (38-43 chars)",
   description: "Meta description (130-160 chars)",
   keywords: ["keyword1", "keyword2"],
   authors: [{ name: "Avinash Sangle" }],
 
   openGraph: {
-    title: "OG Title",
+    title: "Fuller descriptive title (55-65 chars — no template suffix applied)",
     description: "OG Description",
     url: "https://avinashsangle.com/page-url",
     type: "article", // or "website"
