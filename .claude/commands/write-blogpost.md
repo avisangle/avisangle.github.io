@@ -210,14 +210,25 @@ the article is uncommitted.
 
 6. **Submit the new URL to IndexNow (after it is live).** This pings Bing, DuckDuckGo, and Yandex to crawl immediately instead of waiting days. Bing feeds ChatGPT + Copilot, so this is the fastest path into the AI-citation index. The page must resolve first, so wait for the Vercel deploy, then submit:
    ```bash
-   # Wait until the new post returns 200 (Vercel deploy takes ~1 min after push)
+   # NO trailing slash. The site runs Next.js with the default trailingSlash: false,
+   # so ".../$ARGUMENTS/" returns a 308 redirect to ".../$ARGUMENTS". Submitting the
+   # redirect makes Bing report "The inspected URL is a redirect and cannot be indexed."
+   # This must match sitemap.ts and alternates.canonical, which both omit the slash.
+   URL="https://avinashsangle.com/blog/$ARGUMENTS"
+
+   # Wait until the new post returns 200 (Vercel deploy takes ~1 min after push).
+   # Do NOT use curl -L here: it follows redirects and would report 200 for a
+   # bad URL, hiding exactly the mistake this check exists to catch.
    for i in $(seq 1 9); do
-     code=$(curl -s -o /dev/null -w "%{http_code}" "https://avinashsangle.com/blog/$ARGUMENTS/")
+     code=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
      [ "$code" = "200" ] && break || sleep 20
    done
-   source venv/bin/activate && python scripts/submit_indexnow.py "https://avinashsangle.com/blog/$ARGUMENTS/"
+
+   python3 scripts/submit_indexnow.py "$URL"
    ```
    A `200` or `202` from IndexNow is success (`202` = accepted, key validation pending). This is **non-blocking**: if the key file is missing or the submission errors, note it and continue to Phase 7 — do not fail the publish over it.
+
+   **Verify before submitting:** confirm the URL returns a bare `200`, not a `3xx`. If it redirects, you are about to submit the wrong URL. Note this repo has no venv, so use `python3` directly; `scripts/submit_indexnow.py` is stdlib-only.
 
 ---
 
