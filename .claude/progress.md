@@ -1,5 +1,9 @@
 # Progress Log
 
+## 2026-07-19
+
+- Published blog post: "GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide" at /blog/gpt-5-6-programmatic-tool-calling-guide (AI Development, ~2,600 words, 11 min). Covers code mode in the Responses API, programmatic vs direct tool calling, V8 runtime limits, token savings, and the mapping to the MCP code execution pattern. Schemas: TechArticle, BreadcrumbList, HowTo, FAQPage. Updated blog index (featured + grid + JSON-LD), sitemap.ts, and public/llms.txt.
+
 ## 2026-07-09
 
 ### GSC Ranking Review

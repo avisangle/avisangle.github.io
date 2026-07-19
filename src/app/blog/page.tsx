@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide",
+                url: "https://avinashsangle.com/blog/gpt-5-6-programmatic-tool-calling-guide",
+                datePublished: "2026-07-19",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Kimi K3 for Agentic Coding: Claude Code + CLI Setup Guide",
                 url: "https://avinashsangle.com/blog/kimi-k3-agentic-coding-guide",
                 datePublished: "2026-07-19",
@@ -274,14 +281,14 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Terminal" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Braces" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">Kimi K3 for Agentic Coding: Claude Code + CLI Setup Guide</h3>
+                <h3 className="text-2xl font-bold mb-4">GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Moonshot&apos;s 2.8T open-weight model, #1 on Frontend Code Arena.
-                  Drop it into Claude Code with one env block, set up the Kimi Code
-                  CLI, plus pricing, benchmarks, and an honest verdict.
+                  GPT-5.6 can write JavaScript that orchestrates your tools in a V8
+                  sandbox instead of one call per round trip. How code mode works in
+                  the Responses API, when to use it, and the honest token math.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
                   <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 19, 2026</span>
@@ -289,7 +296,7 @@ export default function BlogPage() {
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/kimi-k3-agentic-coding-guide">Read Article →</Link>
+                  <Link href="/blog/gpt-5-6-programmatic-tool-calling-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -302,6 +309,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Braces" size="lg" animation="pulse" />
+                <CardTitle>GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Code mode lets GPT-5.6 write JavaScript that composes your tools
+                  in an isolated V8 runtime. How it works in the Responses API,
+                  programmatic vs direct calling, real token savings, and how it
+                  maps to the MCP code execution pattern.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 19, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/gpt-5-6-programmatic-tool-calling-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Terminal" size="lg" animation="pulse" />
