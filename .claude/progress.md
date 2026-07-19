@@ -2,6 +2,12 @@
 
 ## 2026-07-09
 
+### GSC Ranking Review
+- Run date: 2026-07-09
+- Period: last 28 days (2026-06-08 to 2026-07-06)
+- Snapshot saved: .claude/gsc-snapshots/2026-07-09.json
+- Key findings: Clicks 41 -> 474 (10x+) vs 2026-05-27 baseline; glm-5-2 and cost-tracking are top risers. Page-1-edge opportunities: gemma-4-models-guide (pos 10.6, 9.5k impressions) and gemini-3-5-flash (pos 10.9, 7.3k impressions). Bing-strong/Google-weak divergence: claude-md-guide (Bing pos 7.2 vs Google pos 15.9).
+
 ### Published Blog Post: /blog/gpt-5-6-sol-ultra-cooperative-subagents
 - "GPT-5.6 Sol Ultra Mode: How Cooperative Subagents Actually Work" (AI Development, ~2,600 words, 11 min)
 - Angle: model-internal cooperative subagents vs external orchestration (Claude Code dynamic workflows); pricing, Codex availability, METR cheating flag.
@@ -362,3 +368,22 @@
 - Verified Swift API (CoreAILanguageModel/LanguageModelSession/@Generable) + coreai-torch pipeline against Apple docs/WWDC 326.
 - Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
 - 2026-06-25 Published blog post: "Claude Tag for Engineering Teams: A Practical Setup Guide" at /blog/claude-tag-engineering-teams-guide
+
+## 2026-07-19: /write-blogpost kimi-k3-agentic-coding-guide
+- 2026-07-19 Published blog post: "Kimi K3 for Agentic Coding: Claude Code + CLI Setup Guide" at /blog/kimi-k3-agentic-coding-guide
+- ~2,600 words, 11 min read, 8 FAQ items, 5 code blocks, schemas: TechArticle + BreadcrumbList + FAQPage + HowTo.
+- Category AI Development. Icon Terminal. metadata.title 40 chars (rendered 57 <=60).
+- Angle: practitioner Claude-Code-native guide (drop-in ANTHROPIC_BASE_URL env block) - fills gap vs news/benchmark-table coverage. Kimi K3 launched Jul 16 2026, weights Jul 27.
+- Verified vs official Kimi docs (platform.kimi.ai claude-code-kimi, MoonshotAI/kimi-code) + VentureBeat/Tom's Hardware/eesel/Morph/Glows/WCCFTech. Corrected fetcher-contaminated env vars (used kimi-k3, flagged Haiku override gotcha).
+- No first-party Bing demand (model 3 days old); FAQ seeds autocomplete/news-derived.
+- Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build: pending.
+
+## 2026-07-15: /write-blogpost hallusquatting-defense-ai-coding-agents
+- 2026-07-15 Published blog post: "How to Defend AI Coding Agents Against HalluSquatting Attacks" at /blog/hallusquatting-defense-ai-coding-agents
+- ~2,700 words body (3,733 total incl. FAQ/TL;DR/checklist), 15 min read, 8 FAQ items, 7 code blocks, schemas: TechArticle + BreadcrumbList + FAQPage.
+- Category AI Security (deliberately not DevSecOps = hardening post's lane). Icon PackageSearch.
+- Verified against arXiv:2607.07433 + Anthropic sandboxing post + Context7 /websites/code_claude (hooks, permissions, sandbox settings schema).
+- Accuracy call: Claude Code was NOT among the nine tested apps; stated plainly rather than echoing the news cycle. Opus 4.5 searched 73% -> 0% hallucination vs Sonnet 4.5 31% -> 100% when skipping.
+- Original angle: lockfiles + min-release-age cooldowns fail (attack wins at resolution time) + buildable PreToolUse verify hook.
+- Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
+- Repo notes (pre-existing, not fixed): `npm run lint` is broken (eslint not in devDependencies); node_modules was absent (ran npm ci); no venv (bing_report.py runs on system python3).

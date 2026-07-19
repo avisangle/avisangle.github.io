@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'kimi-k3-agentic-coding-guide',
+      lastModified: '2026-07-19',
+    },
+    {
       slug: 'hallusquatting-defense-ai-coding-agents',
       lastModified: '2026-07-15',
     },

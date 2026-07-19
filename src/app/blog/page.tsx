@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Kimi K3 for Agentic Coding: Claude Code + CLI Setup Guide",
+                url: "https://avinashsangle.com/blog/kimi-k3-agentic-coding-guide",
+                datePublished: "2026-07-19",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "How to Defend AI Coding Agents Against HalluSquatting Attacks",
                 url: "https://avinashsangle.com/blog/hallusquatting-defense-ai-coding-agents",
                 datePublished: "2026-07-15",
@@ -267,22 +274,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="PackageSearch" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Terminal" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI SECURITY</p>
-                <h3 className="text-2xl font-bold mb-4">How to Defend AI Coding Agents Against HalluSquatting Attacks</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">Kimi K3 for Agentic Coding: Claude Code + CLI Setup Guide</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Attackers register the package names your agent predictably
-                  invents. Why lockfiles and install cooldowns miss it, and how to
-                  block the fetch with a PreToolUse hook and a sandbox.
+                  Moonshot&apos;s 2.8T open-weight model, #1 on Frontend Code Arena.
+                  Drop it into Claude Code with one env block, set up the Kimi Code
+                  CLI, plus pricing, benchmarks, and an honest verdict.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 15, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 19, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/hallusquatting-defense-ai-coding-agents">Read Article →</Link>
+                  <Link href="/blog/kimi-k3-agentic-coding-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -295,6 +302,29 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Terminal" size="lg" animation="pulse" />
+                <CardTitle>Kimi K3 for Agentic Coding: Claude Code + CLI Setup Guide</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Moonshot&apos;s 2.8T open-weight model runs for agentic coding
+                  two ways: routed into Claude Code via one env block, or the
+                  native Kimi Code CLI. Pricing, benchmarks, local-run reality,
+                  and an honest hybrid verdict.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 19, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/kimi-k3-agentic-coding-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="PackageSearch" size="lg" animation="pulse" />
