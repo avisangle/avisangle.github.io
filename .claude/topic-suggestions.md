@@ -558,3 +558,31 @@ Searching "HalluSquatting defense guide" and "protect against HalluSquatting dev
 ### Suggested next step
 
 `/research-topic "hallusquatting-defense-ai-coding-agents"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-15: GPT-5.6 Programmatic Tool Calling - Replace Your Agent Loop with Model-Written JavaScript
+
+**Suggested slug:** `gpt-5-6-programmatic-tool-calling-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On July 9, 2026, OpenAI moved GPT-5.6 (Sol, Terra, Luna) to general availability and shipped a new API feature called Programmatic Tool Calling (PTC). Instead of the traditional one-tool-call-per-round-trip pattern that every agent framework uses today, PTC lets the model write JavaScript that orchestrates multiple tool calls with loops, conditionals, and aggregation - running in an isolated V8 sandbox with no network access. Early reports cite 38-63% token reductions for tool-heavy workflows. This is a genuine paradigm shift in how developers build agents against the OpenAI API, and it landed less than a week ago. The blog already covers GPT-5.6's cooperative subagent mode (`gpt-5-6-sol-ultra-cooperative-subagents`), but PTC is an architecturally distinct feature - it changes the tool-calling loop itself, not the model's internal orchestration. No practitioner migration guide exists yet.
+
+### Search demand evidence
+
+- [GPT-5.6](https://news.ycombinator.com/item?id=48849066) - Hacker News front page thread on the GPT-5.6 GA launch (posted July 9, 2026)
+- [GPT-5.6 Stopped Calling Tools One at a Time - It Writes Code Now, and Cut Tokens 63.5%](https://pub.towardsai.net/gpt-5-6-stopped-calling-tools-one-at-a-time-it-writes-code-now-and-cut-tokens-63-5-387d2b7160f9) - Towards AI, July 2026. Detailed analysis of token savings.
+- [OpenAI Codex team Reddit AMA on GPT-5.6](https://cryptobriefing.com/openai-codex-gpt-5-6-features-ama/) - July 10, 2026. Codex team confirmed 5 million weekly users and fielded developer questions about PTC and the new model tiers.
+- [GPT-5.6: Frontier intelligence that scales with your ambition](https://openai.com/index/gpt-5-6/) - Official OpenAI announcement, July 9, 2026
+- [Programmatic Tool Calling docs](https://developers.openai.com/api/docs/guides/tools-programmatic-tool-calling) - OpenAI developer documentation for the feature
+- [OpenAI Releases GPT-5.6: A Three-Tier Model Family With Programmatic Tool Calling](https://www.marktechpost.com/2026/07/09/openai-releases-gpt-5-6-a-three-tier-model-family-with-programmatic-tool-calling/) - MarkTechPost, July 9, 2026
+
+### Competition check
+
+Searching "GPT-5.6 programmatic tool calling guide" returns the official OpenAI docs, an apidog.com explainer, and a Towards AI token-savings analysis. None of these walk through a practical migration: how to refactor an existing Responses API tool loop to use PTC, which tool patterns benefit most (read-heavy aggregation vs write-heavy side effects), how to handle error recovery in model-written JS, cost comparisons between PTC and traditional loops on real workloads, or when to stick with the standard pattern. The existing blog post on GPT-5.6 subagents covers multi-agent orchestration but not this API-level tool-calling change.
+
+### Suggested next step
+
+`/research-topic "gpt-5-6-programmatic-tool-calling-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
