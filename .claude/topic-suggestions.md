@@ -586,3 +586,31 @@ Searching "GPT-5.6 programmatic tool calling guide" returns the official OpenAI 
 ### Suggested next step
 
 `/research-topic "gpt-5-6-programmatic-tool-calling-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-20: Friendly Fire Defense Guide - Stopping AI Security Agents from Becoming the Attack Vector
+
+**Suggested slug:** `friendly-fire-defense-ai-code-review`
+**Status:** pending research
+
+### Why this topic, why now
+
+On July 8, 2026, the AI Now Institute published "Friendly Fire: Hijacking Defensive Cyber AI Agents for Remote Code Execution" - a proof-of-concept showing that prompt injections hidden in ordinary repository content (README files, documentation, config files) can trick Claude Code and OpenAI Codex into executing attacker-controlled code during what the developer thinks is a routine security review. The attack flips the script: the agent hired to find threats becomes the threat. It works because auto-mode in Claude Code and auto-review in Codex approve their own commands, and the agent interprets malicious instructions disguised as legitimate test scripts as part of the security audit workflow. This is architecturally different from the CI/CD prompt injection attacks the blog already covers - those target automated pipelines, while Friendly Fire targets the local developer workflow of reviewing untrusted third-party code. The same week, NxCode published a synthesis article ("Friendly Fire and Rogue Agent: AI Coding Agent Security After July 2026") combining this research with Mozilla 0Din's DNS-based Claude Code hijack, and The Hacker News ran a practitioner-focused headline ("Top AI Agents Built to Catch Malicious Code Can Be Tricked Into Running It"). Every article describes the attack. None walk a developer through the specific defense: configuring Claude Code and Codex to safely review untrusted repositories without giving the agent the power to execute what it finds.
+
+### Search demand evidence
+
+- [Friendly Fire: Hijacking Defensive Cyber AI Agents for Remote Code Execution](https://ainowinstitute.org/publications/friendly-fire-exploit-brief) - AI Now Institute, published July 8, 2026. Original research demonstrating the attack against Claude Code (Sonnet 4.6, Sonnet 5, Opus 4.8) and OpenAI Codex CLI (GPT-5.5).
+- [Top AI Agents Built to Catch Malicious Code Can Be Tricked Into Running It](https://thehackernews.com/2026/07/friendly-fire-ai-agents-built-to-catch.html) - The Hacker News, July 2026. Practitioner-angled coverage driving developer search traffic.
+- [Friendly Fire and Rogue Agent: AI Coding Agent Security After July 2026](https://www.nxcode.io/resources/news/friendly-fire-rogue-agent-ai-coding-security-2026) - NxCode, July 2026. Synthesis article combining Friendly Fire with Mozilla 0Din's DNS hijack research, showing the pattern across multiple attack vectors.
+- [Friendly Fire in Claude Code and Codex](https://www.samuelfaj.com/en/blog/friendly-fire-turns-the-security-agent-into-the-exploit/) - Samuel Fajreldines, July 2026. Technical breakdown confirming the attack works when agents run with auto-approved commands.
+- [AI agent security: four July attacks, one shared flaw](https://thenextweb.com/news/ai-agent-security-four-attacks-one-flaw) - The Next Web, July 2026. Frames Friendly Fire as one of four converging July 2026 attacks exposing the same systemic issue: agents with unrestricted tool access operating on untrusted input.
+- [Policy Brief: Friendly Fire](https://ainowinstitute.org/publications/friendly-fire-policy-brief) - AI Now Institute policy brief with concrete defense recommendations for development teams.
+
+### Competition check
+
+Searching "Friendly Fire Claude Code defense" and "safely review untrusted code AI agent" returns only news articles (The Hacker News, SecurityWeek, TechNadu, Vibe Graveyard, 0dayNews) and the original AI Now Institute research. No practitioner defense guide exists that walks a developer through the specific steps: disabling auto-mode for untrusted repo reviews, setting up disposable workspaces with no $HOME or network access, running a read-only first pass before any execution, treating README/docs as hostile input, using deterministic scanners before the AI agent, and configuring trust tiers for different repository sources. The blog's existing security cluster (hardening-ai-agents-cicd-prompt-injection covers CI/CD pipelines, hallusquatting covers package hallucination, litellm-mcp-exploit-response-guide covers CVE response) leaves this exact gap: defending the local AI-assisted code review workflow against weaponized repository content.
+
+### Suggested next step
+
+`/research-topic "friendly-fire-defense-ai-code-review"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
