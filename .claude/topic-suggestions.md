@@ -586,3 +586,30 @@ Searching "GPT-5.6 programmatic tool calling guide" returns the official OpenAI 
 ### Suggested next step
 
 `/research-topic "gpt-5-6-programmatic-tool-calling-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-22: MCP Goes Stateless - What the July 2026 Spec Overhaul Means for Your Servers
+
+**Suggested slug:** `mcp-stateless-spec-migration-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+The MCP 2026-07-28 release candidate locked this week, and it is the largest revision in the protocol's history. The final specification ships July 28. The core change: MCP drops session management entirely (no more `initialize`/`initialized` handshake, no session ID headers, no sticky routing) and introduces a first-class Extensions framework with MCP Apps (server-rendered UIs) and Tasks (long-running operations). Six security SEPs align the protocol with OAuth 2.0 and OpenID Connect. Roots, Sampling, and Logging enter a 12-month deprecation window. With 97M monthly SDK downloads and 10,000+ public servers in production, every MCP developer needs a migration plan before July 28.
+
+### Search demand evidence
+
+- [MCP Blog: 2026-07-28 Release Candidate](https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/) - Official announcement of RC lock
+- [Agora Intelligence: MCP Goes Stateless](https://agora-intelligence.com/en/blog/leon-mcp-stateless-spec-2026/) - Third-party analysis of the stateless transition
+- [ByteIota: MCP Goes Stateless Explained](https://byteiota.com/mcp-goes-stateless-2026-release-candidate/) - Developer-focused explainer
+- Active discussion across r/AI_Agents, r/LangChain, r/ClaudeAI, r/ChatGPTCoding during the week of July 15-22
+- NSA and CISA issued formal security guidance for MCP deployments, adding enterprise urgency
+
+### Competition check
+
+Searching "MCP stateless migration" and "MCP 2026-07 breaking changes" turns up the official blog post, two news-style explainers (Agora, ByteIota), and scattered Twitter threads. None provide a practical developer migration guide: how to update an existing MCP server for the stateless core, which deprecated features (Roots, Sampling, Logging) need immediate replacement, how the new Extensions framework changes what your server can offer, and what the OAuth/OIDC alignment means for auth flows you already built. The existing blog post on this site (`mcp-code-execution-pattern`) covers a specific MCP usage pattern but not the protocol-level changes.
+
+### Suggested next step
+
+`/research-topic "mcp-stateless-spec-migration-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
