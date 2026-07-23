@@ -151,7 +151,7 @@ export default function BlogPage() {
                 "@type": "BlogPosting",
                 headline: "Gemini 3.5 Flash for Agentic Coding: A Claude Coder's Guide",
                 url: "https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide",
-                datePublished: "2026-05-25",
+                datePublished: "2026-05-27",
                 author: { "@type": "Person", name: "Avinash Sangle" },
               },
               {
@@ -228,7 +228,7 @@ export default function BlogPage() {
                 "@type": "BlogPosting",
                 headline: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
                 url: "https://avinashsangle.com/blog/claude-managed-agents",
-                datePublished: "2026-04-09",
+                datePublished: "2026-05-17",
                 author: { "@type": "Person", name: "Avinash Sangle" },
               },
               {
@@ -242,7 +242,7 @@ export default function BlogPage() {
                 "@type": "BlogPosting",
                 headline: "Gemma 4 Models: Which One Should You Actually Use?",
                 url: "https://avinashsangle.com/blog/gemma-4-models-guide",
-                datePublished: "2026-04-06",
+                datePublished: "2026-04-16",
                 author: { "@type": "Person", name: "Avinash Sangle" },
               },
               {
@@ -256,14 +256,14 @@ export default function BlogPage() {
                 "@type": "BlogPosting",
                 headline: "Complete Guide to Clawdbot: Your Personal AI Assistant",
                 url: "https://avinashsangle.com/blog/clawdbot-guide",
-                datePublished: "2025-01-26",
+                datePublished: "2026-04-16",
                 author: { "@type": "Person", name: "Avinash Sangle" },
               },
               {
                 "@type": "BlogPosting",
                 headline: "Complete Guide to Method CRM MCP Server",
                 url: "https://avinashsangle.com/blog/method-crm-mcp",
-                datePublished: "2025-01-15",
+                datePublished: "2026-01-24",
                 author: { "@type": "Person", name: "Avinash Sangle" },
               },
             ],
@@ -621,7 +621,7 @@ export default function BlogPage() {
                   Code, the thinking_level trap, and a 40-line MCP agent.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 25, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 27, 2026</span>
                   <span>•</span>
                   <span>12 min read</span>
                 </div>
@@ -862,7 +862,7 @@ export default function BlogPage() {
                   pick each option for your workload.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 9, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> May 17, 2026</span>
                   <span>•</span>
                   <span>12 min read</span>
                 </div>
@@ -905,7 +905,7 @@ export default function BlogPage() {
                   comparison with Llama 4 and Mistral, and a practical guide to picking the right variant.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 6, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 16, 2026</span>
                   <span>•</span>
                   <span>12 min read</span>
                 </div>
@@ -947,7 +947,7 @@ export default function BlogPage() {
                   and more. Self-hosted with persistent memory and proactive notifications.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jan 26, 2025</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Apr 16, 2026</span>
                   <span>•</span>
                   <span>12 min read</span>
                 </div>
@@ -968,7 +968,7 @@ export default function BlogPage() {
                   like Claude to interact with your CRM data through natural language.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jan 15, 2025</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jan 24, 2026</span>
                   <span>•</span>
                   <span>12 min read</span>
                 </div>

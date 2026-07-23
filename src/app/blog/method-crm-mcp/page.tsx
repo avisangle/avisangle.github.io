@@ -51,8 +51,8 @@ export default function MethodCRMMCPBlogPage() {
               name: "Avinash Sangle",
               url: "https://avinashsangle.com",
             },
-            datePublished: "2025-01-15",
-            dateModified: "2025-01-15",
+            datePublished: "2026-01-24",
+            dateModified: "2026-01-24",
             mainEntityOfPage: "https://avinashsangle.com/blog/method-crm-mcp",
           }),
         }}
@@ -83,7 +83,7 @@ export default function MethodCRMMCPBlogPage() {
               commands.
             </p>
             <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-8">
-              <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 15, 2025</span>
+              <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> January 24, 2026</span>
               <span>•</span>
               <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
               <span>•</span>

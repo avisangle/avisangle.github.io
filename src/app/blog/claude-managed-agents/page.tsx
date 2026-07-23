@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: "https://avinashsangle.com/blog/claude-managed-agents",
     siteName: "Avinash Sangle",
     type: "article",
-    publishedTime: "2026-04-09T00:00:00.000Z",
+    publishedTime: "2026-05-17T00:00:00.000Z",
     modifiedTime: "2026-05-17T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
@@ -113,7 +113,7 @@ const techArticleSchema = JSON.stringify({
     name: "Avinash Sangle",
     url: "https://avinashsangle.com",
   },
-  datePublished: "2026-04-09",
+  datePublished: "2026-05-17",
   dateModified: "2026-05-17",
   mainEntityOfPage: {
     "@type": "WebPage",
@@ -286,7 +286,7 @@ export default function ClaudeManagedAgentsPage() {
             </p>
             <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-8">
               <span className="flex items-center gap-1">
-                <CategoryIcon icon="Calendar" size="sm" /> April 9, 2026
+                <CategoryIcon icon="Calendar" size="sm" /> May 17, 2026
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">

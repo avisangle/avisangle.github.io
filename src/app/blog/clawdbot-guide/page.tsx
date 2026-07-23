@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     url: "https://avinashsangle.com/blog/clawdbot-guide",
     siteName: "Avinash Sangle",
     type: "article",
-    publishedTime: "2026-01-26T00:00:00.000Z",
+    publishedTime: "2026-04-16T00:00:00.000Z",
     modifiedTime: "2026-04-16T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
@@ -116,8 +116,8 @@ export default function ClawdbotGuideBlogPage() {
               name: "Avinash Sangle",
               url: "https://avinashsangle.com",
             },
-            datePublished: "2026-01-26",
-            dateModified: "2026-01-26",
+            datePublished: "2026-04-16",
+            dateModified: "2026-04-16",
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": "https://avinashsangle.com/blog/clawdbot-guide",
@@ -371,7 +371,7 @@ export default function ClawdbotGuideBlogPage() {
             </p>
             <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-8">
               <span className="flex items-center gap-1">
-                <CategoryIcon icon="Calendar" size="sm" /> January 26, 2026
+                <CategoryIcon icon="Calendar" size="sm" /> April 16, 2026
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">

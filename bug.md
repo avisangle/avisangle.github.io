@@ -52,7 +52,7 @@ All changes completed successfully:
      | `gemini-3-5-flash-agentic-coding-guide` | 2026-05-27 | May 25 |
    - **Impact**: Medium — contradictory `datePublished` signals across sitemap, visible cards, and blog-index JSON-LD suppress freshness ranking.
    - **Current state**: `src/data/posts.ts` took sitemap as authoritative, so registry/feeds/hubs are self-consistent. The cards and index JSON-LD still disagree.
-   - **Resolution**: Needs a decision on which source is correct per post, then reconcile the losing side. NOT fixed — do not guess dates.
+   - **Resolution**: FIXED 2026-07-23. Author chose "latest date wins" — in all 5 cases the latest was the `sitemap.ts`/registry value. Reconciled every publish-date signal to it: post `datePublished`/`dateModified` (JSON-LD), OG `publishedTime`/`modifiedTime`, the index-card JSON-LD, the index-card visible date, and the visible in-post Calendar header. In-content date references (e.g. claude-managed-agents "May 6, 2026", gemini "May 19, 2026" GA date) were deliberately left untouched. Verified in built HTML.
 
 5. **15 pages ship with no `<link rel="canonical">`**
    - **Issue**: Confirmed by grepping built HTML. Affected: `/` (homepage), `/blog`, `/projects`, all 10 `/projects/*` pages, `/showcase`, `/blog/method-crm-mcp`.

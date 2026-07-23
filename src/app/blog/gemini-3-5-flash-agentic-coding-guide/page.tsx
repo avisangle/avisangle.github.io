@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     url: "https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide",
     siteName: "Avinash Sangle",
     type: "article",
-    publishedTime: "2026-05-25T00:00:00.000Z",
-    modifiedTime: "2026-05-25T00:00:00.000Z",
+    publishedTime: "2026-05-27T00:00:00.000Z",
+    modifiedTime: "2026-05-27T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -114,8 +114,8 @@ const techArticleSchema = JSON.stringify({
     name: "Avinash Sangle",
     url: "https://avinashsangle.com",
   },
-  datePublished: "2026-05-25",
-  dateModified: "2026-05-25",
+  datePublished: "2026-05-27",
+  dateModified: "2026-05-27",
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": "https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide",
@@ -364,7 +364,7 @@ export default function Gemini35FlashAgenticCodingGuidePage() {
           </p>
           <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm">
             <span className="flex items-center gap-1">
-              <CategoryIcon icon="Calendar" size="sm" /> May 25, 2026
+              <CategoryIcon icon="Calendar" size="sm" /> May 27, 2026
             </span>
             <span>-</span>
             <span className="flex items-center gap-1">
