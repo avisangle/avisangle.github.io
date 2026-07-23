@@ -7,6 +7,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'mcp-stateless-spec-migration-guide',
+      lastModified: '2026-07-23',
+    },
+    {
       slug: 'gpt-5-6-programmatic-tool-calling-guide',
       lastModified: '2026-07-19',
     },

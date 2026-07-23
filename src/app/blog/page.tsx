@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "MCP Goes Stateless: Migrating Your Servers to the 2026 Spec",
+                url: "https://avinashsangle.com/blog/mcp-stateless-spec-migration-guide",
+                datePublished: "2026-07-23",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide",
                 url: "https://avinashsangle.com/blog/gpt-5-6-programmatic-tool-calling-guide",
                 datePublished: "2026-07-19",
@@ -281,22 +288,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Braces" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Network" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide</h3>
+                <h3 className="text-2xl font-bold mb-4">MCP Goes Stateless: Migrating Your Servers to the 2026 Spec</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  GPT-5.6 can write JavaScript that orchestrates your tools in a V8
-                  sandbox instead of one call per round trip. How code mode works in
-                  the Responses API, when to use it, and the honest token math.
+                  The 2026-07-28 MCP spec drops the initialize handshake and session
+                  IDs, so any server instance can handle any request. A maintainer&apos;s
+                  migration guide: request diffs, routing headers, deprecations, and
+                  OAuth 2.1.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 19, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 23, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/gpt-5-6-programmatic-tool-calling-guide">Read Article →</Link>
+                  <Link href="/blog/mcp-stateless-spec-migration-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -309,6 +317,29 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Network" size="lg" animation="pulse" />
+                <CardTitle>MCP Goes Stateless: Migrating Your Servers to the 2026 Spec</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  The 2026-07-28 spec removes the initialize handshake and{" "}
+                  <code>Mcp-Session-Id</code> header. A maintainer&apos;s migration
+                  guide with before/after request diffs, the new routing headers,
+                  the Extensions framework, deprecations, and OAuth 2.1 hardening.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 23, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/mcp-stateless-spec-migration-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Braces" size="lg" animation="pulse" />

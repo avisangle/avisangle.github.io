@@ -1,5 +1,9 @@
 # Progress Log
 
+## 2026-07-23
+
+- Published blog post: "MCP Goes Stateless: Migrating Your Servers to the 2026 Spec" at /blog/mcp-stateless-spec-migration-guide (AI Development, ~2,800 words, 12 min). Maintainer's migration guide for the MCP 2026-07-28 stateless spec: before/after request diff, capability discovery via _meta + server/discover, Mcp-Method/Mcp-Name routing headers, SSE -> Multi Round-Trip, Extensions framework (Apps + Tasks), Roots/Sampling/Logging deprecations, six OAuth 2.1 SEPs, migration checklist. First-party angle: author's jenkins-mcp, method-crm-mcp, wp-mcp servers. Facts verified against primary sources (official RC post, NSA CSI, SDK betas post). Schemas: TechArticle, BreadcrumbList, HowTo, FAQPage. Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Merged topic-suggestion PR #52 first.
+
 ## 2026-07-19
 
 - Published blog post: "GPT-5.6 Programmatic Tool Calling: A Hands-On Developer Guide" at /blog/gpt-5-6-programmatic-tool-calling-guide (AI Development, ~2,600 words, 11 min). Covers code mode in the Responses API, programmatic vs direct tool calling, V8 runtime limits, token savings, and the mapping to the MCP code execution pattern. Schemas: TechArticle, BreadcrumbList, HowTo, FAQPage. Updated blog index (featured + grid + JSON-LD), sitemap.ts, and public/llms.txt.
