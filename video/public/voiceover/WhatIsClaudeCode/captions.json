@@ -1,0 +1,884 @@
+[
+  {
+    "text": " You",
+    "startMs": 0,
+    "endMs": 81,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " think",
+    "startMs": 121,
+    "endMs": 321,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude",
+    "startMs": 367,
+    "endMs": 643,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Code",
+    "startMs": 739,
+    "endMs": 1123,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " lives",
+    "startMs": 1163,
+    "endMs": 1363,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 1390,
+    "endMs": 1444,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 1492,
+    "endMs": 1684,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " terminal.",
+    "startMs": 1728,
+    "endMs": 2160,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " It",
+    "startMs": 2267,
+    "endMs": 2481,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " actually",
+    "startMs": 2534,
+    "endMs": 2958,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " runs",
+    "startMs": 3038,
+    "endMs": 3358,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 3465,
+    "endMs": 3679,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " six",
+    "startMs": 3739,
+    "endMs": 3919,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " places.",
+    "startMs": 3999,
+    "endMs": 4759,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 4829,
+    "endMs": 5039,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Six",
+    "startMs": 5119,
+    "endMs": 5359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " surfaces.",
+    "startMs": 5448,
+    "endMs": 6560,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Same",
+    "startMs": 6640,
+    "endMs": 6960,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " engine.",
+    "startMs": 7017,
+    "endMs": 7679,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Your",
+    "startMs": 7743,
+    "endMs": 7999,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " terminal.",
+    "startMs": 8052,
+    "endMs": 8556,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Your",
+    "startMs": 8652,
+    "endMs": 9036,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " desktop",
+    "startMs": 9116,
+    "endMs": 9676,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " app.",
+    "startMs": 9736,
+    "endMs": 9996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " V",
+    "startMs": 10276,
+    "endMs": 10556,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " S",
+    "startMs": 10636,
+    "endMs": 10716,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Code.",
+    "startMs": 10812,
+    "endMs": 11276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " JetBrains.",
+    "startMs": 11388,
+    "endMs": 12556,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " The",
+    "startMs": 12656,
+    "endMs": 12956,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " web",
+    "startMs": 13036,
+    "endMs": 13276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " at",
+    "startMs": 13329,
+    "endMs": 13435,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " claude",
+    "startMs": 13475,
+    "endMs": 13754,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " dot",
+    "startMs": 13794,
+    "endMs": 13914,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 13994,
+    "endMs": 14074,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 14234,
+    "endMs": 14394,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " slash",
+    "startMs": 14434,
+    "endMs": 14634,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " code.",
+    "startMs": 14730,
+    "endMs": 15434,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " And",
+    "startMs": 15514,
+    "endMs": 15754,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 15786,
+    "endMs": 15914,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " phone",
+    "startMs": 15994,
+    "endMs": 16394,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 16594,
+    "endMs": 16794,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " through",
+    "startMs": 16814,
+    "endMs": 16954,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Remote",
+    "startMs": 17011,
+    "endMs": 17353,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Control",
+    "startMs": 17413,
+    "endMs": 17833,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 17860,
+    "endMs": 17914,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 17934,
+    "endMs": 17994,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude",
+    "startMs": 18051,
+    "endMs": 18393,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " mobile",
+    "startMs": 18427,
+    "endMs": 18631,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " app.",
+    "startMs": 18711,
+    "endMs": 19271,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 19351,
+    "endMs": 19591,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Every",
+    "startMs": 19644,
+    "endMs": 19909,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " surface",
+    "startMs": 19989,
+    "endMs": 20549,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " hits",
+    "startMs": 20613,
+    "endMs": 20869,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 20909,
+    "endMs": 21029,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " same",
+    "startMs": 21093,
+    "endMs": 21349,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude.",
+    "startMs": 21406,
+    "endMs": 21908,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Same",
+    "startMs": 22036,
+    "endMs": 22548,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " conversation.",
+    "startMs": 22616,
+    "endMs": 23752,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Same",
+    "startMs": 23816,
+    "endMs": 24072,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " tools.",
+    "startMs": 24165,
+    "endMs": 24710,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Same",
+    "startMs": 24822,
+    "endMs": 25270,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " memory.",
+    "startMs": 25339,
+    "endMs": 25833,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Start",
+    "startMs": 25966,
+    "endMs": 26631,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 26731,
+    "endMs": 26831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " long",
+    "startMs": 26871,
+    "endMs": 27031,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " agent",
+    "startMs": 27111,
+    "endMs": 27511,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " run",
+    "startMs": 27571,
+    "endMs": 27751,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 27778,
+    "endMs": 27832,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 27864,
+    "endMs": 27992,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " laptop,",
+    "startMs": 28072,
+    "endMs": 29032,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " walk",
+    "startMs": 29080,
+    "endMs": 29272,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " away,",
+    "startMs": 29352,
+    "endMs": 30152,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " watch",
+    "startMs": 30192,
+    "endMs": 30392,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 30419,
+    "endMs": 30473,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " from",
+    "startMs": 30521,
+    "endMs": 30713,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 30729,
+    "endMs": 30793,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " phone",
+    "startMs": 30846,
+    "endMs": 31111,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 31138,
+    "endMs": 31192,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 31212,
+    "endMs": 31272,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " train.",
+    "startMs": 31352,
+    "endMs": 31832,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Resume",
+    "startMs": 31969,
+    "endMs": 32791,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 32818,
+    "endMs": 32872,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 32904,
+    "endMs": 33032,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 33152,
+    "endMs": 33272,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " D",
+    "startMs": 33392,
+    "endMs": 33512,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " E.",
+    "startMs": 33632,
+    "endMs": 33912,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 34052,
+    "endMs": 34472,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Deep",
+    "startMs": 34520,
+    "endMs": 34712,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " work?",
+    "startMs": 34776,
+    "endMs": 35112,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Terminal.",
+    "startMs": 35210,
+    "endMs": 36074,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Code",
+    "startMs": 36218,
+    "endMs": 36794,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " review?",
+    "startMs": 36840,
+    "endMs": 37196,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Your",
+    "startMs": 37308,
+    "endMs": 37756,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 37876,
+    "endMs": 37996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " D",
+    "startMs": 38076,
+    "endMs": 38156,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " E.",
+    "startMs": 38316,
+    "endMs": 38556,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Long-running",
+    "startMs": 38716,
+    "endMs": 39596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " agent?",
+    "startMs": 39663,
+    "endMs": 40078,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Your",
+    "startMs": 40174,
+    "endMs": 40558,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " phone.",
+    "startMs": 40651,
+    "endMs": 41436,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 41543,
+    "endMs": 41757,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " laptop",
+    "startMs": 41837,
+    "endMs": 42317,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " nearby?",
+    "startMs": 42374,
+    "endMs": 43116,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Open",
+    "startMs": 43228,
+    "endMs": 43676,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 43696,
+    "endMs": 43756,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " web",
+    "startMs": 43836,
+    "endMs": 44076,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " app",
+    "startMs": 44136,
+    "endMs": 44316,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 44376,
+    "endMs": 44556,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " keep",
+    "startMs": 44604,
+    "endMs": 44796,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " going.",
+    "startMs": 44863,
+    "endMs": 45278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 45418,
+    "endMs": 45838,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Pick",
+    "startMs": 45870,
+    "endMs": 45998,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 46018,
+    "endMs": 46078,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " surface.",
+    "startMs": 46148,
+    "endMs": 46718,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Same",
+    "startMs": 46830,
+    "endMs": 47278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude.",
+    "startMs": 47347,
+    "endMs": 47841,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Same",
+    "startMs": 47953,
+    "endMs": 48401,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " context.",
+    "startMs": 48481,
+    "endMs": 49121,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Full",
+    "startMs": 49249,
+    "endMs": 49761,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " series",
+    "startMs": 49830,
+    "endMs": 50244,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " at",
+    "startMs": 50297,
+    "endMs": 50403,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " avinashsangle.com",
+    "startMs": 50483,
+    "endMs": 51923,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 52123,
+    "endMs": 52323,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " link",
+    "startMs": 52387,
+    "endMs": 52643,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 52723,
+    "endMs": 52883,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " description.",
+    "startMs": 52936,
+    "endMs": 53759,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

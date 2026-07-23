@@ -2,6 +2,7 @@ import { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
@@ -10,6 +11,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/jenkins-mcp" },
   title: "Jenkins MCP Server | AI Integration for Jenkins CI/CD",
   description:
     "Enable AI agents to interact with Jenkins through Model Context Protocol for automated DevOps workflows. Query jobs, trigger builds, and access logs programmatically.",
@@ -403,6 +405,82 @@ python -m jenkins_mcp_server`}
               </CardFooter>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section">
+        <div className="container-project">
+          <h2 className="section-title">Jenkins MCP Server FAQ</h2>
+          <p className="section-subtitle mb-8">
+            Common questions about the Jenkins MCP server, how it integrates with Claude Code,
+            and how to self-host it next to your Jenkins controller.
+          </p>
+          <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+            <AccordionItem value="faq-1">
+              <AccordionTrigger>What is the Jenkins MCP server?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  The Jenkins MCP server is an open-source Model Context Protocol server that
+                  exposes Jenkins jobs, build history, and console logs to AI agents. It lets
+                  tools like Claude Code, Claude Desktop, and other MCP-compatible clients
+                  query Jenkins state and trigger builds through natural language instead of
+                  REST API calls or scripted curl commands.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-2">
+              <AccordionTrigger>How does the Jenkins MCP server work?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  The Jenkins MCP server runs as a Python process that authenticates against
+                  your Jenkins controller using an API token and exposes a set of MCP tools -
+                  list_jobs, get_build_status, trigger_build, get_console_log, and similar - to
+                  any MCP client. The client invokes a tool, the server calls the Jenkins REST
+                  API, and the result returns to the AI agent as structured context it can
+                  reason over.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3">
+              <AccordionTrigger>Can I use the Jenkins MCP server with Claude Code?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Yes. Add the Jenkins MCP server to your Claude Code MCP configuration (in{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">.mcp.json</code>{" "}
+                  or the global config), set the{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">JENKINS_URL</code>,{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">JENKINS_USER</code>,
+                  and{" "}
+                  <code className="bg-muted px-1 py-0.5 rounded text-sm">JENKINS_TOKEN</code>{" "}
+                  environment variables, and Claude Code can then query and control Jenkins
+                  directly from your terminal session. The same setup works with Claude
+                  Desktop and Claude Managed Agents.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-4">
+              <AccordionTrigger>Is the Jenkins MCP server open source?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Yes. The Jenkins MCP server is open source and available on GitHub at{" "}
+                  <Link
+                    href="https://github.com/avisangle/jenkins-mcp-server"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    github.com/avisangle/jenkins-mcp-server
+                  </Link>
+                  . You can self-host it next to your Jenkins controller, fork it, or extend
+                  it with custom tools for your pipeline conventions.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

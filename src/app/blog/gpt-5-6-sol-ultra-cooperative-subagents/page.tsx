@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "GPT-5.6 Sol Ultra: Cooperative Subagents",
@@ -890,6 +891,8 @@ export default function GPT56SolUltraCooperativeSubagentsPage() {
           </Card>
         </section>
       </article>
+
+      <PostNavigation slug="gpt-5-6-sol-ultra-cooperative-subagents" />
     </>
   )
 }

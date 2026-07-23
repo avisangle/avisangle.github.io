@@ -10,6 +10,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/aws-ec2-agent" },
   title: "AWS EC2 Deployment with AI Agent | Cloud Infrastructure Automation",
   description:
     "Deploy cloud infrastructure via natural language with intelligent self-healing automation. Multi-cloud support for AWS, GCP, and Azure.",

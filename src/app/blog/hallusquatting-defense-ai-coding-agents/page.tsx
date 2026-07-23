@@ -9,6 +9,7 @@ import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Stop HalluSquatting in AI Coding Agents",
@@ -1299,6 +1300,8 @@ npm view react-codeshift version   # npm ERR! 404 Not Found  <- this is the tell
           </div>
         </div>
       </section>
+
+      <PostNavigation slug="hallusquatting-defense-ai-coding-agents" />
     </>
   )
 }

@@ -1,0 +1,66 @@
+{
+  "compositionId": "AntCliGettingStarted",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparators": {
+    "default": " ... ",
+    "bridge": " "
+  },
+  "audioDurationSeconds": 61.756,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "Anthropic's ant CLI dropped a month ago — and most devs still haven't tried it.",
+      "spokenText": "Anthropic's ant C L I dropped a month ago — and most devs still haven't tried it.",
+      "startSeconds": 0,
+      "durationSeconds": 5.946,
+      "bridge": false,
+      "precedingSeparator": ""
+    },
+    {
+      "id": "scene-2-bullets",
+      "text": "Their command-line tool for managed agents — three hundred GitHub stars in ten days, and the whole thing reads like kubectl, but for Claude. Install with one brew command. Define an agent as a YAML file, check it into git like any other config —",
+      "spokenText": "Their command-line tool for managed agents — three hundred GitHub stars in ten days, and the whole thing reads like kube control, but for Claude. Install with one brew command. Define an agent as a yamel file, check it into git like any other config —",
+      "startSeconds": 5.946,
+      "durationSeconds": 16.795,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-3-code",
+      "text": "the full create command fits on one line: ant beta agents create, with a name, a model, a system prompt, and a tool block. That's a working code reviewer agent. No app code, no runtime to host, no scaling tickets —",
+      "spokenText": "the full create command fits on one line: ant beta agents create, with a name, a model, a system prompt, and a tool block. That's a working code reviewer agent. No app code, no runtime to host, no scaling tickets —",
+      "startSeconds": 22.741,
+      "durationSeconds": 16.853,
+      "bridge": true,
+      "precedingSeparator": " "
+    },
+    {
+      "id": "scene-4-chart",
+      "text": "pricing is the part most coverage skips — eight cents per session-hour, billed to the millisecond, so a typical one-hour Opus session lands around seventy cents end-to-end. MCP servers plug in if you need custom tools.",
+      "spokenText": "pricing is the part most coverage skips — eight cents per session-hour, billed to the millisecond, so a typical one-hour Opus session lands around seventy cents end-to-end. M C P servers plug in if you need custom tools.",
+      "startSeconds": 39.594,
+      "durationSeconds": 15.429000000000002,
+      "bridge": true,
+      "precedingSeparator": " "
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "Ten minutes from brew install to a deployed agent. Most devs still haven't tried it. Link in the description.",
+      "spokenText": "Ten minutes from brew install to a deployed agent. Most devs still haven't tried it. Link in the description.",
+      "startSeconds": 55.023,
+      "durationSeconds": 6.732999999999997,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    }
+  ]
+}

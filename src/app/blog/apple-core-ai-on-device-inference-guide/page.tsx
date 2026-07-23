@@ -9,6 +9,7 @@ import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Apple Core AI: On-Device LLM Inference",
@@ -1021,6 +1022,8 @@ let card: VocabCard = response.content`}
           </div>
         </div>
       </section>
+
+      <PostNavigation slug="apple-core-ai-on-device-inference-guide" />
     </>
   )
 }

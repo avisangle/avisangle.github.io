@@ -1,0 +1,53 @@
+{
+  "compositionId": "ClaudeManagedAgents",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparator": " ... ",
+  "audioDurationSeconds": 53.898,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "Anthropic just launched Managed Agents. Eight cents an hour — worth it?",
+      "spokenText": "Anthropic just launched Managed Agents. Eight cents an hour — worth it?",
+      "startSeconds": 0,
+      "durationSeconds": 5.801
+    },
+    {
+      "id": "scene-2-bullets",
+      "text": "Managed Agents runs your AI agent for you — sandboxing, retries, scaling, all handled. Pay standard API rates plus eight cents per session-hour of active runtime. Built for multi-hour production workflows.",
+      "spokenText": "Managed Agents runs your AI agent for you — sandboxing, retries, scaling, all handled. Pay standard A P I rates plus eight cents per session-hour of active runtime. Built for multi-hour production workflows.",
+      "startSeconds": 5.801,
+      "durationSeconds": 15.83
+    },
+    {
+      "id": "scene-3-code",
+      "text": "One API call. Add the managed-agents beta header, give it a task in plain English, and Anthropic spins up a sandboxed agent that runs until done.",
+      "spokenText": "One A P I call. Add the managed-agents beta header, give it a task in plain English, and Anthropic spins up a sandboxed agent that runs until done.",
+      "startSeconds": 21.631,
+      "durationSeconds": 11.037999999999997
+    },
+    {
+      "id": "scene-4-chart",
+      "text": "A three-hour ticket processing run costs twenty cents in runtime. The Agent SDK is free — but you host everything: scaling, retries, security, monitoring. Pick managed if shipping speed beats infrastructure control.",
+      "spokenText": "A three-hour ticket processing run costs twenty cents in runtime. The Agent S D K is free — but you host everything: scaling, retries, security, monitoring. Pick managed if shipping speed beats infrastructure control.",
+      "startSeconds": 32.669,
+      "durationSeconds": 16.385000000000005
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "Full pricing breakdown and decision flowchart on my blog. Hit the link below.",
+      "spokenText": "Full pricing breakdown and decision flowchart on my blog. Hit the link below.",
+      "startSeconds": 49.054,
+      "durationSeconds": 4.844000000000001
+    }
+  ]
+}

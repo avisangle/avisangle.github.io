@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Gemma 4 Models: Which One Should You Actually Use?",
@@ -1299,6 +1301,9 @@ print(json.dumps(result["message"]["tool_calls"], indent=2))`} />
           </div>
         </div>
       </section>
+
+      <RelatedPosts slug="gemma-4-models-guide" />
+      <PostNavigation slug="gemma-4-models-guide" />
     </>
   )
 }

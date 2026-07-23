@@ -10,6 +10,7 @@ import Link from "next/link"
 import { ExternalLink, CheckCircle, Shield, Zap, Brain, AlertTriangle, Database, BarChart } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/reddit-agent" },
   title: "Reddit Comment Engagement Agent - AI-Powered Engagement with HITL Approval",
   description:
     "Compliance-first Reddit engagement agent with LangGraph workflow, AI quality scoring, human approval, and auto-publish. Features shadowban detection, historical learning, and comprehensive safety controls.",

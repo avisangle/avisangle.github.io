@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Running claude ultrareview in CI/CD: GitHub Actions Guide",
@@ -1385,6 +1386,8 @@ fi`}
           </div>
         </section>
       </div>
+
+      <PostNavigation slug="ultrareview-ci-cd-pipelines" />
     </>
   )
 }

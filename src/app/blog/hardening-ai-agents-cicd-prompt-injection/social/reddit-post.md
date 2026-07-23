@@ -10,7 +10,7 @@ Each post is separated by a `---POST---` line. Each block must include
 ---POST---
 SUBREDDIT: ClaudeAI
 TITLE: Hardening claude-code-action after the April 2026 Comment and Control CVE - actual YAML changes
-FLAIR: Tutorial
+FLAIR: Claude Code
 ---BODY---
 Anthropic's own security.md has this line that most tutorials skip over: **"The action is not designed to be hardened against prompt injection."**
 

@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "MCP Code Execution Pattern: A Hands-On Claude Code Guide",
@@ -1159,6 +1160,8 @@ def _reject_obvious_unsafe_imports(tree: ast.AST, allowed: list[str]) -> None:
           </div>
         </section>
       </div>
+
+      <PostNavigation slug="mcp-code-execution-pattern" />
     </>
   )
 }

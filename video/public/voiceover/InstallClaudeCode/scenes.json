@@ -1,0 +1,53 @@
+{
+  "compositionId": "InstallClaudeCode",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparator": " ... ",
+  "audioDurationSeconds": 49.831,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "Most install guides for Claude Code are out of date. Use this.",
+      "spokenText": "Most install guides for Claude Code are out of date. Use this.",
+      "startSeconds": 0,
+      "durationSeconds": 4.777
+    },
+    {
+      "id": "scene-2-install",
+      "text": "One line. Mac, Linux, WSL — all the same. Pipe curl into bash. Claude Code installs in about thirty seconds. No npm. No Node required.",
+      "spokenText": "One line. Mac, Linux, W S L — all the same. Pipe curl into bash. Claude Code installs in about thirty seconds. No N P M. No Node required.",
+      "startSeconds": 4.777,
+      "durationSeconds": 12.858999999999998
+    },
+    {
+      "id": "scene-3-auth",
+      "text": "Now type claude. Browser opens. Sign in with your Anthropic account — Pro, Team, or Console — and that's it. No API keys to wrangle. You're in.",
+      "spokenText": "Now type claude. Browser opens. Sign in with your Anthropic account — Pro, Team, or Console — and that's it. No A P I keys to wrangle. You're in.",
+      "startSeconds": 17.636,
+      "durationSeconds": 12.781000000000002
+    },
+    {
+      "id": "scene-4-payoff",
+      "text": "The native installer auto-updates in the background. That's the real upgrade over npm. One command, zero deps. Heads up — Windows users still need Git for Windows first.",
+      "spokenText": "The native installer auto-updates in the background. That's the real upgrade over N P M. One command, zero deps. Heads up — Windows users still need Git for Windows first.",
+      "startSeconds": 30.417,
+      "durationSeconds": 12.796
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "That's the new install. Most tutorials are still teaching the old one. Full series — link in description.",
+      "spokenText": "That's the new install. Most tutorials are still teaching the old one. Full series — link in description.",
+      "startSeconds": 43.213,
+      "durationSeconds": 6.618000000000002
+    }
+  ]
+}

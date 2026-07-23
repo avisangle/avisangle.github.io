@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Gemini CLI to Antigravity CLI: Migration Guide & Alternatives",
@@ -1386,6 +1388,9 @@ agy skills list`}
           </CardContent>
         </Card>
       </div>
+
+      <RelatedPosts slug="gemini-cli-to-antigravity-cli-guide" />
+      <PostNavigation slug="gemini-cli-to-antigravity-cli-guide" />
     </>
   )
 }

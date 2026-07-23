@@ -133,6 +133,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
 
+      // Common feed-reader guess for the RSS feed
+      {
+        source: '/feed.xml',
+        destination: '/rss.xml',
+        permanent: true,
+      },
+
       // ========================================
       // Generic pattern redirects (catch-all)
       // ========================================

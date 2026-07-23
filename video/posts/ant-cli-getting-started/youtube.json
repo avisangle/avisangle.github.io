@@ -1,0 +1,27 @@
+{
+  "format": "short",
+  "title": "Anthropic's ant CLI: 10 Minutes to a Live Claude Agent",
+  "description": "Anthropic's ant CLI dropped a month ago — and most devs still haven't tried it. It's the command-line tool for deploying Claude managed agents in YAML, kubectl-style.\n\nInstall with one brew command. Define your agent as a YAML file — name, model, system prompt, tool block — check it into git like any other config. The full ant beta:agents create command fits on one line. That's a working code reviewer with no app code, no runtime to host, and no scaling tickets.\n\nThe pricing nobody talks about: $0.08 per session-hour, billed to the millisecond. A typical one-hour Opus session lands around 70 cents end-to-end. MCP servers plug in if you need custom tools.\n\nTen minutes from brew install to a deployed agent.\n\n🔗 Full hands-on walkthrough: https://avinashsangle.com/blog/ant-cli-getting-started\n\n#AntCLI #Anthropic #ClaudeManagedAgents #ClaudeAgentSDK #AICodingAgents #MCP #DeveloperTools #Claude #AgentDeployment #AnthropicCLI",
+  "tags": [
+    "ant cli",
+    "anthropic ant",
+    "claude managed agents",
+    "claude agent sdk",
+    "claude cli",
+    "ant beta agents",
+    "anthropic cli",
+    "ai agents",
+    "claude code",
+    "anthropic",
+    "agent deployment",
+    "mcp",
+    "yaml agents",
+    "claude opus"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "AntCliGettingStarted",
+  "blogUrl": "https://avinashsangle.com/blog/ant-cli-getting-started"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Install Claude Code in 1 Line — npm Is Now the Slow Way",
+  "description": "If you install Claude Code with npm, you're using the old way. The canonical install path changed in early 2026 — it's now a one-line native installer that auto-updates in the background, has zero Node dependency, and works the same on Mac, Linux, and WSL.\n\ncurl -fsSL https://claude.ai/install.sh | bash → then type 'claude' to sign in with your Anthropic account (Pro, Team, or Console). About 30 seconds end-to-end if Node isn't even installed.\n\nHeads up: Windows users still need Git for Windows installed first.\n\nEpisode 2 of the Claude Code Shorts series — practical Claude Code in 60 seconds.\n\n#ClaudeCode #Anthropic #Claude #ClaudeCodeInstall #ClaudeCodeSetup #AICoding #DeveloperTools #CLI #ClaudeCodeShorts #ClaudeCodeTutorial",
+  "tags": [
+    "claude code",
+    "install claude code",
+    "claude code setup",
+    "claude code installer",
+    "claude code curl",
+    "claude code native installer",
+    "claude code npm",
+    "claude code 2026",
+    "claude code mac",
+    "claude code windows",
+    "claude code linux",
+    "anthropic claude",
+    "ai coding agent",
+    "claude code shorts"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "InstallClaudeCode",
+  "playlistIds": ["PLlhPzoo-csPCtJxCl4CxrSdcbCR6E8mra"]
+}

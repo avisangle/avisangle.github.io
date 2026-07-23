@@ -26,6 +26,16 @@ const socialLinks = [
   },
 ]
 
+const footerLinks = [
+  { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
+  { name: "Topics", href: "/topics" },
+  { name: "Projects", href: "/projects" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" },
+  { name: "RSS", href: "/rss.xml" },
+]
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -59,6 +69,17 @@ export function Footer() {
           </div>
         </div>
         <Separator className="my-6" />
+        <nav aria-label="Footer" className="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
+          {footerLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </nav>
         <div className="footer-bottom">
           <p>&copy; {currentYear} Avinash Sangle. Made with ❤️ and code.</p>
           <Link

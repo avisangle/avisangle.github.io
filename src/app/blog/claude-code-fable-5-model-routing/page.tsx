@@ -7,6 +7,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Code Fable 5: Model Routing, Fallbacks, Cost Control",
@@ -913,6 +914,8 @@ export ANTHROPIC_DEFAULT_OPUS_MODEL='us.anthropic.claude-opus-4-8'`}
           </CardContent>
         </Card>
       </article>
+
+      <PostNavigation slug="claude-code-fable-5-model-routing" />
     </>
   )
 }

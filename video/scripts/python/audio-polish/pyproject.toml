@@ -1,0 +1,13 @@
+[project]
+name = "audio-polish"
+version = "0.1.0"
+description = "Audio polish for VO MP3s — LUFS normalize, compress, high-pass."
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "pyloudnorm>=0.1.1",
+    "pedalboard>=0.9.16",
+]
+
+[tool.uv]
+managed = true

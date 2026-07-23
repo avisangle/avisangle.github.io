@@ -10,7 +10,7 @@ Each post is separated by a `---POST---` line. Each block must include
 ---POST---
 SUBREDDIT: ClaudeAI
 TITLE: I wrote the first dedicated ant CLI tutorial - here's what I learned
-FLAIR: Tutorial
+FLAIR: Coding
 ---BODY---
 The ant CLI shipped alongside Managed Agents on April 8 but there's no tutorial for it anywhere. Every existing article covers Managed Agents as a concept and mentions the CLI in passing with 1-2 commands. So I wrote a hands-on walkthrough.
 

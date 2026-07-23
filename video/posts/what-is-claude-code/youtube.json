@@ -1,0 +1,25 @@
+{
+  "title": "Claude Code Isn't Just a Terminal — It's 6 Surfaces",
+  "description": "You think Claude Code is just a terminal CLI. It's actually six surfaces — terminal, desktop app, VS Code, JetBrains, web at claude.ai/code, and your phone via Remote Control in the Claude mobile app — all hitting the same Claude with the same conversation, tools, and memory.\n\nStart a long agent run on your laptop, walk away, watch it from your phone on the train, resume in your IDE. Pick the surface for the moment, not the lock-in.\n\nEpisode 1 of the Claude Code Shorts series — practical Claude Code in 60 seconds.\n\n#ClaudeCode #Anthropic #Claude #AICoding #ClaudeCodeMobile #ClaudeCodeIDE #VSCode #JetBrains #AIPairProgramming #DeveloperTools",
+  "tags": [
+    "claude code",
+    "what is claude code",
+    "claude code mobile",
+    "claude code ide",
+    "claude code vs code",
+    "claude code jetbrains",
+    "claude code remote control",
+    "claude code web",
+    "anthropic claude",
+    "ai coding agent",
+    "ai pair programming",
+    "developer tools",
+    "claude code shorts"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "WhatIsClaudeCode",
+  "playlistTitle": "Claude Code Shorts"
+}

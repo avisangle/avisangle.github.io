@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Run GLM-5.2 Locally: AI Coding Guide",
@@ -1013,6 +1015,9 @@ aider --model openai/GLM-5.2 --no-show-model-warnings`} />
           </div>
         </div>
       </section>
+
+      <RelatedPosts slug="glm-5-2-local-coding-guide" />
+      <PostNavigation slug="glm-5-2-local-coding-guide" />
     </>
   )
 }

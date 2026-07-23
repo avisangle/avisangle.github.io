@@ -8,8 +8,10 @@ import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/blog/method-crm-mcp" },
   title: "Complete Guide to Method CRM MCP Server | AI-Powered CRM Integration",
   description:
     "Learn how to set up, configure, and use the Method CRM MCP Server to enable AI assistants to interact with your CRM data. Comprehensive guide with examples.",
@@ -628,6 +630,8 @@ python -m method_crm_mcp`}
           </div>
         </div>
       </section>
+
+      <PostNavigation slug="method-crm-mcp" />
     </>
   )
 }

@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:02,397
+Stop hitting Enter on every Claude Code
+
+2
+00:00:02,454 --> 00:00:02,956
+prompt.
+
+3
+00:00:03,089 --> 00:00:05,676
+Shift+Tab twice gives you Plan mode.
+
+4
+00:00:06,126 --> 00:00:09,278
+Default mode: Claude edits files immediately.
+
+5
+00:00:09,398 --> 00:00:12,156
+Wrong dependency order, tests fail.
+
+6
+00:00:12,369 --> 00:00:14,955
+In Plan mode, Claude proposes a plan
+
+7
+00:00:15,035 --> 00:00:15,595
+first.
+
+8
+00:00:15,715 --> 00:00:17,828
+You catch the order issue before any
+
+9
+00:00:17,892 --> 00:00:18,787
+file is touched.
+
+10
+00:00:19,480 --> 00:00:21,751
+Shift+Tab twice cycles to Plan mode.
+
+11
+00:00:21,911 --> 00:00:24,233
+Or use the slash-plan command.
+
+12
+00:00:24,347 --> 00:00:26,629
+Claude writes a plan file — now
+
+13
+00:00:26,682 --> 00:00:27,906
+named after your prompt.
+
+14
+00:00:28,046 --> 00:00:30,785
+You read it, edit it, approve it.
+
+15
+00:00:31,393 --> 00:00:34,056
+Best for refactors that touch multiple files,
+
+16
+00:00:34,136 --> 00:00:37,336
+ambiguous prompts, or unfamiliar codebases.
+
+17
+00:00:37,423 --> 00:00:40,295
+Production work where one wrong edit costs
+
+18
+00:00:40,375 --> 00:00:42,055
+hours is the obvious case.
+
+19
+00:00:42,715 --> 00:00:43,655
+Two keystrokes.
+
+20
+00:00:43,719 --> 00:00:44,935
+That's the whole barrier.
+
+21
+00:00:45,063 --> 00:00:47,493
+Most tutorials still skip Plan mode.
+
+22
+00:00:47,621 --> 00:00:50,138
+Full series — link in description.

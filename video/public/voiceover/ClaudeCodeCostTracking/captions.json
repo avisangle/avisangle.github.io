@@ -1,0 +1,751 @@
+[
+  {
+    "text": " Most",
+    "startMs": 0,
+    "endMs": 240,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " developers",
+    "startMs": 291,
+    "endMs": 801,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " have",
+    "startMs": 865,
+    "endMs": 1121,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " no",
+    "startMs": 1228,
+    "endMs": 1442,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " idea",
+    "startMs": 1522,
+    "endMs": 1842,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " what",
+    "startMs": 1874,
+    "endMs": 2002,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " they're",
+    "startMs": 2018,
+    "endMs": 2163,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " spending",
+    "startMs": 2207,
+    "endMs": 2559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 2586,
+    "endMs": 2640,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude",
+    "startMs": 2697,
+    "endMs": 3039,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Code.",
+    "startMs": 3103,
+    "endMs": 3439,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 3559,
+    "endMs": 3919,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Your",
+    "startMs": 3951,
+    "endMs": 4079,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " usage",
+    "startMs": 4159,
+    "endMs": 4559,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 4666,
+    "endMs": 4880,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " already",
+    "startMs": 4920,
+    "endMs": 5200,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " tracked.",
+    "startMs": 5260,
+    "endMs": 6120,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Three",
+    "startMs": 6193,
+    "endMs": 6558,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " slash",
+    "startMs": 6625,
+    "endMs": 6960,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " commands",
+    "startMs": 7040,
+    "endMs": 7680,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 7840,
+    "endMs": 8000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " cost,",
+    "startMs": 8096,
+    "endMs": 8880,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " stats,",
+    "startMs": 8973,
+    "endMs": 9678,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 9718,
+    "endMs": 9838,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " usage",
+    "startMs": 9958,
+    "endMs": 10558,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 10678,
+    "endMs": 10798,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " built",
+    "startMs": 10838,
+    "endMs": 11038,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " right",
+    "startMs": 11078,
+    "endMs": 11278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in.",
+    "startMs": 11358,
+    "endMs": 11598,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " And",
+    "startMs": 11738,
+    "endMs": 12158,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " every",
+    "startMs": 12225,
+    "endMs": 12560,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " session",
+    "startMs": 12620,
+    "endMs": 13040,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " lives",
+    "startMs": 13093,
+    "endMs": 13358,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 13385,
+    "endMs": 13439,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 13519,
+    "endMs": 13599,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " hidden",
+    "startMs": 13645,
+    "endMs": 13921,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " jay",
+    "startMs": 14001,
+    "endMs": 14161,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " sun",
+    "startMs": 14221,
+    "endMs": 14401,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ell",
+    "startMs": 14441,
+    "endMs": 14561,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " file",
+    "startMs": 14673,
+    "endMs": 15121,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " under",
+    "startMs": 15214,
+    "endMs": 15679,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " dot-claude-projects.",
+    "startMs": 15799,
+    "endMs": 17360,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 17540,
+    "endMs": 18080,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " The",
+    "startMs": 18100,
+    "endMs": 18160,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " biggest",
+    "startMs": 18210,
+    "endMs": 18560,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " cost",
+    "startMs": 18640,
+    "endMs": 18960,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " lever",
+    "startMs": 19027,
+    "endMs": 19362,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 19415,
+    "endMs": 19521,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " one",
+    "startMs": 19581,
+    "endMs": 19761,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " environment",
+    "startMs": 19808,
+    "endMs": 20325,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " variable.",
+    "startMs": 20378,
+    "endMs": 20962,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Cap",
+    "startMs": 21162,
+    "endMs": 21762,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 21794,
+    "endMs": 21922,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " thinking",
+    "startMs": 21966,
+    "endMs": 22318,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " tokens.",
+    "startMs": 22398,
+    "endMs": 23318,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " This",
+    "startMs": 23406,
+    "endMs": 23758,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " single",
+    "startMs": 23815,
+    "endMs": 24157,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " line",
+    "startMs": 24221,
+    "endMs": 24477,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " can",
+    "startMs": 24537,
+    "endMs": 24717,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " cut",
+    "startMs": 24797,
+    "endMs": 25037,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 25053,
+    "endMs": 25117,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " bill",
+    "startMs": 25165,
+    "endMs": 25357,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 25384,
+    "endMs": 25438,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " half.",
+    "startMs": 25534,
+    "endMs": 26238,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 26318,
+    "endMs": 26558,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 26598,
+    "endMs": 26638,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " heavy",
+    "startMs": 26705,
+    "endMs": 27040,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " session",
+    "startMs": 27090,
+    "endMs": 27440,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " can",
+    "startMs": 27500,
+    "endMs": 27680,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " burn",
+    "startMs": 27728,
+    "endMs": 27920,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " twenty",
+    "startMs": 27977,
+    "endMs": 28319,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " dollars",
+    "startMs": 28359,
+    "endMs": 28639,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " or",
+    "startMs": 28692,
+    "endMs": 28798,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " more.",
+    "startMs": 28862,
+    "endMs": 29278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " With",
+    "startMs": 29390,
+    "endMs": 29838,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " three",
+    "startMs": 29891,
+    "endMs": 30156,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " tweaks",
+    "startMs": 30236,
+    "endMs": 30716,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 30916,
+    "endMs": 31116,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Sonnet",
+    "startMs": 31176,
+    "endMs": 31437,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " by",
+    "startMs": 31490,
+    "endMs": 31596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " default,",
+    "startMs": 31666,
+    "endMs": 32236,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " thinking",
+    "startMs": 32316,
+    "endMs": 32956,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " caps,",
+    "startMs": 33036,
+    "endMs": 33516,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 33536,
+    "endMs": 33596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " context",
+    "startMs": 33676,
+    "endMs": 34236,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " resets",
+    "startMs": 34327,
+    "endMs": 34873,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 35153,
+    "endMs": 35433,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 35473,
+    "endMs": 35593,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " drop",
+    "startMs": 35657,
+    "endMs": 35913,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " that",
+    "startMs": 35961,
+    "endMs": 36153,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " by",
+    "startMs": 36206,
+    "endMs": 36312,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " fifty",
+    "startMs": 36365,
+    "endMs": 36630,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " percent.",
+    "startMs": 36700,
+    "endMs": 37670,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 37790,
+    "endMs": 38150,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Seven",
+    "startMs": 38203,
+    "endMs": 38468,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " full",
+    "startMs": 38564,
+    "endMs": 38948,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " tactics.",
+    "startMs": 39038,
+    "endMs": 39828,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Full",
+    "startMs": 39956,
+    "endMs": 40468,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " breakdown",
+    "startMs": 40532,
+    "endMs": 41108,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 41188,
+    "endMs": 41348,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 41401,
+    "endMs": 41507,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 41527,
+    "endMs": 41587,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " blog.",
+    "startMs": 41667,
+    "endMs": 42067,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Link",
+    "startMs": 42211,
+    "endMs": 42787,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 42840,
+    "endMs": 42946,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 42966,
+    "endMs": 43026,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " description.",
+    "startMs": 43073,
+    "endMs": 43750,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

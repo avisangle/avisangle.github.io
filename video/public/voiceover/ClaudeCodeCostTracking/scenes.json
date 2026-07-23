@@ -1,0 +1,53 @@
+{
+  "compositionId": "ClaudeCodeCostTracking",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparator": " ... ",
+  "audioDurationSeconds": 43.75,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "Most developers have no idea what they're spending on Claude Code.",
+      "spokenText": "Most developers have no idea what they're spending on Claude Code.",
+      "startSeconds": 0,
+      "durationSeconds": 3.951
+    },
+    {
+      "id": "scene-2-bullets",
+      "text": "Your usage is already tracked. Three slash commands — cost, stats, and usage — built right in. And every session lives in a hidden JSONL file under dot-claude-projects.",
+      "spokenText": "Your usage is already tracked. Three slash commands — cost, stats, and usage — built right in. And every session lives in a hidden jay sun ell file under dot-claude-projects.",
+      "startSeconds": 3.951,
+      "durationSeconds": 14.149000000000001
+    },
+    {
+      "id": "scene-3-code",
+      "text": "The biggest cost lever is one environment variable. Cap your thinking tokens. This single line can cut your bill in half.",
+      "spokenText": "The biggest cost lever is one environment variable. Cap your thinking tokens. This single line can cut your bill in half.",
+      "startSeconds": 18.1,
+      "durationSeconds": 8.497999999999998
+    },
+    {
+      "id": "scene-4-chart",
+      "text": "A heavy session can burn twenty dollars or more. With three tweaks — Sonnet by default, thinking caps, and context resets — you drop that by fifty percent.",
+      "spokenText": "A heavy session can burn twenty dollars or more. With three tweaks — Sonnet by default, thinking caps, and context resets — you drop that by fifty percent.",
+      "startSeconds": 26.598,
+      "durationSeconds": 11.605000000000004
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "Seven full tactics. Full breakdown is on the blog. Link in the description.",
+      "spokenText": "Seven full tactics. Full breakdown is on the blog. Link in the description.",
+      "startSeconds": 38.203,
+      "durationSeconds": 5.546999999999997
+    }
+  ]
+}

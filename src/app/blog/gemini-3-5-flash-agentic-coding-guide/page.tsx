@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Gemini 3.5 Flash for Agentic Coding: A Claude Coder's Guide",
@@ -291,6 +293,24 @@ const howToSchema = JSON.stringify({
   ],
 })
 
+const videoSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "3 Reasons to Route Agent Tasks to Gemini 3.5 Flash, Not Claude",
+  description:
+    "When to route an agent task from Claude Code to Gemini 3.5 Flash: about a third the cost, 83.6% on MCP tool calling beating Opus 4.7, and the thinking_level trap.",
+  thumbnailUrl: ["https://i.ytimg.com/vi/qVz1f8LXbYE/maxresdefault.jpg"],
+  uploadDate: "2026-05-27",
+  duration: "PT1M5S",
+  contentUrl: "https://www.youtube.com/watch?v=qVz1f8LXbYE",
+  embedUrl: "https://www.youtube.com/embed/qVz1f8LXbYE",
+  publisher: {
+    "@type": "Person",
+    name: "Avinash Sangle",
+    url: "https://avinashsangle.com",
+  },
+})
+
 export default function Gemini35FlashAgenticCodingGuidePage() {
   return (
     <>
@@ -309,6 +329,10 @@ export default function Gemini35FlashAgenticCodingGuidePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: howToSchema }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoSchema }}
       />
 
       <div className="container-project py-12">
@@ -364,6 +388,20 @@ export default function Gemini35FlashAgenticCodingGuidePage() {
             ))}
           </div>
         </header>
+
+        {/* Video walkthrough */}
+        <div className="mx-auto my-8 w-full max-w-md">
+          <div className="aspect-[9/16] overflow-hidden rounded-2xl border border-border">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/qVz1f8LXbYE"
+              title="3 Reasons to Route Agent Tasks to Gemini 3.5 Flash, Not Claude"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
 
         {/* Table of Contents */}
         <Card className="mb-12">
@@ -1506,6 +1544,9 @@ if __name__ == "__main__":
           </CardContent>
         </Card>
       </div>
+
+      <RelatedPosts slug="gemini-3-5-flash-agentic-coding-guide" />
+      <PostNavigation slug="gemini-3-5-flash-agentic-coding-guide" />
     </>
   )
 }

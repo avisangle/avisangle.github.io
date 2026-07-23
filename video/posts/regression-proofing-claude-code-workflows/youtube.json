@@ -1,0 +1,27 @@
+{
+  "title": "Anthropic Patched 4 Claude Code Regressions — Pin, Lock, Test",
+  "description": "This morning Anthropic shipped v2.1.121 — four regression fixes for Claude Code in one release. A 2GB memory leak in /usage, Bash crashes when the start directory is deleted, --resume corruption on unclean shutdowns, and runaway image-processing memory. Their evals never caught any of it. Mine do.\n\nThe playbook is three moves:\n1. Pin the CLI to the last verified release (v2.1.117) and lock the version line in ~/.npmrc — npm install -g @anthropic-ai/claude-code@2.1.117\n2. Lock effortLevel and an availableModels allowlist in settings.json — block silent default changes\n3. Add a Python stop hook that replays 3-5 golden prompts every session, with expected outputs committed to the repo\n\nWhy pin? Three regressions compounded over seven weeks (March 4 → April 20, 2026). Eight bugs filed against v2.1.119 and v2.1.120 within 24 hours. v2.1.89 burned through quotas 50x faster than baseline. The rollback takes under five minutes once you've got the playbook.\n\nClaude Code Shorts series — practical Claude Code in 60 seconds.\n\n🔗 Full breakdown: https://avinashsangle.com/blog/regression-proofing-claude-code-workflows\n\n#ClaudeCode #Anthropic #ClaudeCodeRegression #ClaudeCodeSettings #ClaudeCodePinning #AICoding #ClaudeCodeShorts #DeveloperTools #ClaudeCodeHooks #AIAgents",
+  "tags": [
+    "claude code",
+    "claude code regression",
+    "claude code pinning",
+    "claude code settings",
+    "claude code hooks",
+    "claude code v2.1.117",
+    "claude code v2.1.121",
+    "anthropic claude code",
+    "claude code shorts",
+    "ai coding agent",
+    "developer tools",
+    "ai workflow",
+    "regression testing",
+    "claude code 2026"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "RegressionProofClaudeCode",
+  "blogUrl": "https://avinashsangle.com/blog/regression-proofing-claude-code-workflows",
+  "playlistIds": ["PLlhPzoo-csPCtJxCl4CxrSdcbCR6E8mra"]
+}

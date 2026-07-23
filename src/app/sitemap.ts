@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { topics } from '@/data/posts'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://avinashsangle.com'
@@ -179,6 +180,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
+    // Topics index
+    {
+      url: `${baseUrl}/topics`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    // Topic hubs
+    ...topics.map((topic) => ({
+      url: `${baseUrl}/topics/${topic.id}`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+    // About page
+    {
+      url: `${baseUrl}/about`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    // Contact page
+    {
+      url: `${baseUrl}/contact`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    // Services page
+    {
+      url: `${baseUrl}/services`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     // Showcase page
     {
       url: `${baseUrl}/showcase`,

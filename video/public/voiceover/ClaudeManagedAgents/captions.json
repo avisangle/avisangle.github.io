@@ -1,0 +1,870 @@
+[
+  {
+    "text": " Anthropic",
+    "startMs": 0,
+    "endMs": 560,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " just",
+    "startMs": 624,
+    "endMs": 880,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " launched",
+    "startMs": 924,
+    "endMs": 1276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Managed",
+    "startMs": 1366,
+    "endMs": 1996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Agents.",
+    "startMs": 2087,
+    "endMs": 2953,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Eight",
+    "startMs": 3020,
+    "endMs": 3355,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " cents",
+    "startMs": 3408,
+    "endMs": 3673,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " an",
+    "startMs": 3726,
+    "endMs": 3832,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " hour",
+    "startMs": 3896,
+    "endMs": 4152,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 4352,
+    "endMs": 4552,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " worth",
+    "startMs": 4592,
+    "endMs": 4792,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " it?",
+    "startMs": 4845,
+    "endMs": 5031,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 5211,
+    "endMs": 5751,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Managed",
+    "startMs": 5801,
+    "endMs": 6151,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Agents",
+    "startMs": 6220,
+    "endMs": 6634,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " runs",
+    "startMs": 6698,
+    "endMs": 6954,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 6986,
+    "endMs": 7114,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " AI",
+    "startMs": 7247,
+    "endMs": 7513,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " agent",
+    "startMs": 7566,
+    "endMs": 7831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " for",
+    "startMs": 7891,
+    "endMs": 8071,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 8111,
+    "endMs": 8231,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 8471,
+    "endMs": 8711,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " sandboxing,",
+    "startMs": 8801,
+    "endMs": 10070,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " retries,",
+    "startMs": 10130,
+    "endMs": 10710,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " scaling,",
+    "startMs": 10780,
+    "endMs": 11590,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " all",
+    "startMs": 11650,
+    "endMs": 11830,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " handled.",
+    "startMs": 11890,
+    "endMs": 12630,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Pay",
+    "startMs": 12750,
+    "endMs": 13110,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " standard",
+    "startMs": 13154,
+    "endMs": 13506,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 13626,
+    "endMs": 13746,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " P",
+    "startMs": 13826,
+    "endMs": 13906,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 14026,
+    "endMs": 14146,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " rates",
+    "startMs": 14213,
+    "endMs": 14548,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " plus",
+    "startMs": 14628,
+    "endMs": 14948,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " eight",
+    "startMs": 14988,
+    "endMs": 15188,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " cents",
+    "startMs": 15255,
+    "endMs": 15590,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " per",
+    "startMs": 15650,
+    "endMs": 15830,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " session-hour",
+    "startMs": 15880,
+    "endMs": 16550,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " of",
+    "startMs": 16683,
+    "endMs": 16949,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " active",
+    "startMs": 17006,
+    "endMs": 17348,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " runtime.",
+    "startMs": 17418,
+    "endMs": 18268,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Built",
+    "startMs": 18328,
+    "endMs": 18628,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " for",
+    "startMs": 18688,
+    "endMs": 18868,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " multi-hour",
+    "startMs": 18935,
+    "endMs": 19590,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " production",
+    "startMs": 19641,
+    "endMs": 20151,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " workflows.",
+    "startMs": 20215,
+    "endMs": 20871,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 21051,
+    "endMs": 21591,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " One",
+    "startMs": 21631,
+    "endMs": 21751,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 21911,
+    "endMs": 22071,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " P",
+    "startMs": 22191,
+    "endMs": 22311,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 22431,
+    "endMs": 22551,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " call.",
+    "startMs": 22631,
+    "endMs": 23351,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Add",
+    "startMs": 23431,
+    "endMs": 23671,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 23711,
+    "endMs": 23831,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " managed-agents",
+    "startMs": 23901,
+    "endMs": 24872,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " beta",
+    "startMs": 24952,
+    "endMs": 25272,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " header,",
+    "startMs": 25318,
+    "endMs": 25994,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " give",
+    "startMs": 26042,
+    "endMs": 26234,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " it",
+    "startMs": 26261,
+    "endMs": 26315,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 26435,
+    "endMs": 26555,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " task",
+    "startMs": 26603,
+    "endMs": 26795,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 26848,
+    "endMs": 26954,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " plain",
+    "startMs": 27007,
+    "endMs": 27272,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " English,",
+    "startMs": 27322,
+    "endMs": 28072,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 28092,
+    "endMs": 28152,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Anthropic",
+    "startMs": 28216,
+    "endMs": 28872,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " spins",
+    "startMs": 28925,
+    "endMs": 29190,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " up",
+    "startMs": 29217,
+    "endMs": 29271,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " a",
+    "startMs": 29351,
+    "endMs": 29431,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " sandboxed",
+    "startMs": 29511,
+    "endMs": 30271,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " agent",
+    "startMs": 30304,
+    "endMs": 30469,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " that",
+    "startMs": 30549,
+    "endMs": 30869,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " runs",
+    "startMs": 30933,
+    "endMs": 31189,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " until",
+    "startMs": 31229,
+    "endMs": 31429,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " done.",
+    "startMs": 31509,
+    "endMs": 31909,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 32089,
+    "endMs": 32629,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 32669,
+    "endMs": 32709,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " three-hour",
+    "startMs": 32749,
+    "endMs": 33189,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ticket",
+    "startMs": 33246,
+    "endMs": 33588,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " processing",
+    "startMs": 33646,
+    "endMs": 34226,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " run",
+    "startMs": 34306,
+    "endMs": 34546,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " costs",
+    "startMs": 34666,
+    "endMs": 35266,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " twenty",
+    "startMs": 35312,
+    "endMs": 35588,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " cents",
+    "startMs": 35641,
+    "endMs": 35906,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 35959,
+    "endMs": 36065,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " runtime.",
+    "startMs": 36135,
+    "endMs": 36705,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " The",
+    "startMs": 36845,
+    "endMs": 37265,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Agent",
+    "startMs": 37345,
+    "endMs": 37745,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " S",
+    "startMs": 37865,
+    "endMs": 37985,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " D",
+    "startMs": 38025,
+    "endMs": 38065,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " K",
+    "startMs": 38225,
+    "endMs": 38385,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " is",
+    "startMs": 38438,
+    "endMs": 38544,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " free",
+    "startMs": 38656,
+    "endMs": 39104,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 39144,
+    "endMs": 39184,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " but",
+    "startMs": 39224,
+    "endMs": 39344,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " you",
+    "startMs": 39384,
+    "endMs": 39504,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " host",
+    "startMs": 39568,
+    "endMs": 39824,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " everything:",
+    "startMs": 39882,
+    "endMs": 40942,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " scaling,",
+    "startMs": 41012,
+    "endMs": 41902,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " retries,",
+    "startMs": 42002,
+    "endMs": 42862,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " security,",
+    "startMs": 42933,
+    "endMs": 43901,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " monitoring.",
+    "startMs": 43959,
+    "endMs": 45179,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Pick",
+    "startMs": 45211,
+    "endMs": 45339,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " managed",
+    "startMs": 45409,
+    "endMs": 45899,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " if",
+    "startMs": 45952,
+    "endMs": 46058,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " shipping",
+    "startMs": 46094,
+    "endMs": 46382,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " speed",
+    "startMs": 46449,
+    "endMs": 46784,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " beats",
+    "startMs": 46837,
+    "endMs": 47102,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " infrastructure",
+    "startMs": 47150,
+    "endMs": 47822,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " control.",
+    "startMs": 47882,
+    "endMs": 48382,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 48542,
+    "endMs": 49022,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Full",
+    "startMs": 49054,
+    "endMs": 49182,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " pricing",
+    "startMs": 49242,
+    "endMs": 49662,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " breakdown",
+    "startMs": 49718,
+    "endMs": 50222,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 50282,
+    "endMs": 50462,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " decision",
+    "startMs": 50524,
+    "endMs": 51020,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " flowchart",
+    "startMs": 51084,
+    "endMs": 51580,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " on",
+    "startMs": 51633,
+    "endMs": 51739,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " my",
+    "startMs": 51792,
+    "endMs": 51898,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " blog.",
+    "startMs": 51978,
+    "endMs": 52378,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Hit",
+    "startMs": 52518,
+    "endMs": 52938,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 52958,
+    "endMs": 53018,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " link",
+    "startMs": 53066,
+    "endMs": 53258,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " below.",
+    "startMs": 53338,
+    "endMs": 53898,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Regression-Proof Claude Code Workflows: Pin, Lock, Test",
@@ -1389,6 +1390,8 @@ echo "@anthropic-ai/claude-code:version=2.1.117" >> ~/.npmrc`}
           </div>
         </section>
       </div>
+
+      <PostNavigation slug="regression-proofing-claude-code-workflows" />
     </>
   )
 }

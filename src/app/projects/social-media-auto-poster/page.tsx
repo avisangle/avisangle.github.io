@@ -9,6 +9,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/social-media-auto-poster" },
   title: "Social Media Auto-Poster | AI-Powered Social Media Management SaaS",
   description:
     "AI-powered social media management platform with automated posting, multi-platform support, and intelligent content generation. Built with React, Supabase, and AI APIs.",

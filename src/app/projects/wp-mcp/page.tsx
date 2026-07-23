@@ -8,6 +8,7 @@ import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/wp-mcp" },
   title: "WordPress Development with AI | MCP-Enhanced WordPress Coding",
   description:
     "WordPress development services enhanced with AI-assisted debugging and code analysis using Model Context Protocol. Custom themes, plugins, and optimization.",

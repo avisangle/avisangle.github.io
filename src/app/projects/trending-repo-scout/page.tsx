@@ -10,6 +10,7 @@ import Link from "next/link"
 import { ExternalLink, CheckCircle, TrendingUp, Brain, DollarSign, History, Send, LayoutDashboard } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/trending-repo-scout" },
   // 38-43 chars: the layout template appends " | Avinash Sangle" (+17) -> 56 rendered.
   title: "Trending Repo Scout - AI GitHub Scanner",
   description:

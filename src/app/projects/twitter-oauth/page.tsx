@@ -10,6 +10,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/twitter-oauth" },
   title: "Twitter OAuth Setup Wizard for Make.com | OAuth 2.0 Automation",
   description:
     "Streamlined OAuth 2.0 setup wizard for Make.com with PKCE security. Auto-generate ready-to-import scenarios in under 2 minutes.",

@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,837
+Three reasons to route your next agent
+
+2
+00:00:01,917 --> 00:00:05,034
+task to Gemini 3.5 Flash, not
+
+3
+00:00:05,114 --> 00:00:06,034
+Claude.
+
+4
+00:00:06,574 --> 00:00:07,916
+One price.
+
+5
+00:00:08,076 --> 00:00:10,720
+A dollar fifty per million tokens in,
+
+6
+00:00:10,784 --> 00:00:12,801
+nine out roughly a third of what
+
+7
+00:00:12,854 --> 00:00:14,882
+an Opus agent loop costs you today.
+
+8
+00:00:15,582 --> 00:00:17,764
+Two it's genuinely good at the agent
+
+9
+00:00:17,812 --> 00:00:18,164
+part.
+
+10
+00:00:18,351 --> 00:00:20,883
+On the benchmark that measures calling tools
+
+11
+00:00:20,923 --> 00:00:23,445
+and chaining them together, Flash scored about
+
+12
+00:00:23,479 --> 00:00:27,283
+eighty-four percent, past Claude's own Opus 4.7
+
+13
+00:00:27,883 --> 00:00:29,683
+and Google only shipped it eight days
+
+14
+00:00:29,743 --> 00:00:30,083
+ago.
+
+15
+00:00:30,843 --> 00:00:33,130
+Three you don't have to switch everything.
+
+16
+00:00:33,290 --> 00:00:35,128
+If your agent spends most of its
+
+17
+00:00:35,192 --> 00:00:37,763
+time calling tools and planning, not editing
+
+18
+00:00:37,856 --> 00:00:40,640
+files, that's the work to move: send
+
+19
+00:00:40,667 --> 00:00:42,643
+it to Flash, and keep the actual
+
+20
+00:00:42,739 --> 00:00:44,645
+repo edits on Claude Code.
+
+21
+00:00:45,225 --> 00:00:46,087
+But there's a trap.
+
+22
+00:00:46,220 --> 00:00:48,638
+Flash defaults to thinking hard on every
+
+23
+00:00:48,718 --> 00:00:50,875
+call, so a script you copied from
+
+24
+00:00:50,895 --> 00:00:53,197
+the docs quietly burns thirty to fifty
+
+25
+00:00:53,247 --> 00:00:55,196
+percent more on a long loop.
+
+26
+00:00:55,372 --> 00:00:57,597
+Turn that down to low, and you
+
+27
+00:00:57,617 --> 00:00:59,272
+get the price you were promised.
+
+28
+00:00:59,712 --> 00:01:01,913
+Three reasons to move the work one
+
+29
+00:01:01,963 --> 00:01:04,470
+setting that decides if it's actually cheaper.

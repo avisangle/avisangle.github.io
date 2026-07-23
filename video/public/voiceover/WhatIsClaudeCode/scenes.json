@@ -1,0 +1,53 @@
+{
+  "compositionId": "WhatIsClaudeCode",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparator": " ... ",
+  "audioDurationSeconds": 53.759,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "You think Claude Code lives in your terminal. It actually runs in six places.",
+      "spokenText": "You think Claude Code lives in your terminal. It actually runs in six places.",
+      "startSeconds": 0,
+      "durationSeconds": 5.119
+    },
+    {
+      "id": "scene-2-bullets",
+      "text": "Six surfaces. Same engine. Your terminal. Your desktop app. VS Code. JetBrains. The web at claude.ai/code. And your phone — through Remote Control in the Claude mobile app.",
+      "spokenText": "Six surfaces. Same engine. Your terminal. Your desktop app. V S Code. JetBrains. The web at claude dot A I slash code. And your phone — through Remote Control in the Claude mobile app.",
+      "startSeconds": 5.119,
+      "durationSeconds": 14.524999999999999
+    },
+    {
+      "id": "scene-3-claim",
+      "text": "Every surface hits the same Claude. Same conversation. Same tools. Same memory. Start a long agent run on your laptop, walk away, watch it from your phone on the train. Resume in your IDE.",
+      "spokenText": "Every surface hits the same Claude. Same conversation. Same tools. Same memory. Start a long agent run on your laptop, walk away, watch it from your phone on the train. Resume in your I D E.",
+      "startSeconds": 19.644,
+      "durationSeconds": 14.876000000000005
+    },
+    {
+      "id": "scene-4-use-cases",
+      "text": "Deep work? Terminal. Code review? Your IDE. Long-running agent? Your phone. No laptop nearby? Open the web app and keep going.",
+      "spokenText": "Deep work? Terminal. Code review? Your I D E. Long-running agent? Your phone. No laptop nearby? Open the web app and keep going.",
+      "startSeconds": 34.52,
+      "durationSeconds": 11.349999999999994
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "Pick the surface. Same Claude. Same context. Full series at avinashsangle.com — link in description.",
+      "spokenText": "Pick the surface. Same Claude. Same context. Full series at avinashsangle.com — link in description.",
+      "startSeconds": 45.87,
+      "durationSeconds": 7.889000000000003
+    }
+  ]
+}

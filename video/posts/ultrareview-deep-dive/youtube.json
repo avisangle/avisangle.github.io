@@ -1,0 +1,24 @@
+{
+  "format": "long",
+  "title": "I shipped a green PR. /ultrareview caught what CI missed",
+  "description": "I shipped a green PR last Tuesday. CI passed, my team approved it, and prod broke Friday. /ultrareview would have caught it.\n\nThis deep-dive walks through Anthropic's /ultrareview — the cloud-based multi-agent code review fleet that shipped to public preview on April 20, 2026. We run it on a real local branch, walk one finding end-to-end, and unpack the cost tradeoff most reactions skip past.\n\nWhat's in the video:\n- The single command that spins up a multi-agent review fleet in the cloud\n- Local form (no GitHub remote required) vs. /ultrareview <PR#> for remote PRs\n- A live demo: five agents, one race condition CI never flagged\n- Why /ultrareview is billed per run — and why that should change how you use it\n- Where it replaces (and doesn't replace) a human reviewer\n\n#ClaudeCode #ultrareview #AICodeReview #Anthropic #DevTools #PullRequest #CodeReview",
+  "tags": [
+    "claude code",
+    "ultrareview",
+    "ai code review",
+    "multi-agent",
+    "anthropic",
+    "code review automation",
+    "github pr review",
+    "cloud agents",
+    "claude opus 4.7",
+    "pull request review",
+    "ai pull request",
+    "developer tools"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "playlistTitle": "Claude Code Deep Dives"
+}

@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:02,558
+Most install guides for Claude Code are
+
+2
+00:00:02,598 --> 00:00:03,197
+out of date.
+
+3
+00:00:03,397 --> 00:00:04,397
+Use this.
+
+4
+00:00:04,777 --> 00:00:05,357
+One line.
+
+5
+00:00:05,557 --> 00:00:08,719
+Mac, Linux, WSL — all
+
+6
+00:00:08,739 --> 00:00:09,359
+the same.
+
+7
+00:00:09,503 --> 00:00:11,279
+Pipe curl into bash.
+
+8
+00:00:11,382 --> 00:00:14,236
+Claude Code installs in about thirty seconds.
+
+9
+00:00:14,423 --> 00:00:15,597
+No npm.
+
+10
+00:00:15,784 --> 00:00:17,116
+No Node required.
+
+11
+00:00:17,636 --> 00:00:19,036
+Now type claude.
+
+12
+00:00:19,146 --> 00:00:20,476
+Browser opens.
+
+13
+00:00:20,636 --> 00:00:23,355
+Sign in with your Anthropic account —
+
+14
+00:00:23,455 --> 00:00:26,316
+Pro, Team, or Console — and that's
+
+15
+00:00:26,369 --> 00:00:26,635
+it.
+
+16
+00:00:26,875 --> 00:00:29,035
+No API keys to wrangle.
+
+17
+00:00:29,115 --> 00:00:29,837
+You're in.
+
+18
+00:00:30,417 --> 00:00:33,195
+The native installer auto-updates in the background.
+
+19
+00:00:33,323 --> 00:00:35,915
+That's the real upgrade over npm.
+
+20
+00:00:36,075 --> 00:00:38,475
+One command, zero deps.
+
+21
+00:00:38,595 --> 00:00:41,277
+Heads up — Windows users still need
+
+22
+00:00:41,337 --> 00:00:42,877
+Git for Windows first.
+
+23
+00:00:43,213 --> 00:00:44,397
+That's the new install.
+
+24
+00:00:44,525 --> 00:00:46,635
+Most tutorials are still teaching the old
+
+25
+00:00:46,695 --> 00:00:47,035
+one.
+
+26
+00:00:47,163 --> 00:00:49,831
+Full series — link in description.

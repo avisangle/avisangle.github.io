@@ -14,6 +14,7 @@ import { TableShowcase } from "@/components/showcases/table-showcase"
 import { TabsShowcase } from "@/components/showcases/tabs-showcase"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/showcase" },
   title: "UI Component Showcase | Avinash Sangle",
   description: "Complete showcase of all UI components used in the portfolio including the new carousel component",
 }

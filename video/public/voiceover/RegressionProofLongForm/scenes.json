@@ -1,0 +1,17 @@
+{
+  "stub": true,
+  "compositionId": "RegressionProofLongForm",
+  "audioOffsetFrames": 0,
+  "audioDurationSeconds": 368,
+  "scenes": [
+    { "id": "scene-1-news-peg", "durationSeconds": 30 },
+    { "id": "scene-2-chapter-1", "durationSeconds": 6 },
+    { "id": "scene-3-demo", "durationSeconds": 90 },
+    { "id": "scene-4-chapter-2", "durationSeconds": 6 },
+    { "id": "scene-5-compare", "durationSeconds": 70 },
+    { "id": "scene-6-chapter-3", "durationSeconds": 6 },
+    { "id": "scene-7-quote", "durationSeconds": 60 },
+    { "id": "scene-8-recap", "durationSeconds": 60 },
+    { "id": "scene-9-outro", "durationSeconds": 40 }
+  ]
+}

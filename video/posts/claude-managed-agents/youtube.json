@@ -1,0 +1,27 @@
+{
+  "title": "Claude Managed Agents: $0.08/hr — worth it vs Agent SDK?",
+  "description": "Anthropic just launched Managed Agents — a hosted runtime for AI agents. You pay standard API rates plus $0.08 per session-hour. Sandboxing, retries, and scaling are handled for you.\n\nA 3-hour ticket-processing run? About 20 cents in runtime fees. The Agent SDK is free — but you host everything: scaling, retries, security, monitoring. Pick managed if shipping speed beats infrastructure control.\n\nFull pricing breakdown + decision flowchart:\n🔗 https://avinashsangle.com/blog/claude-managed-agents\n\n#ClaudeManagedAgents #AnthropicAPI #AgentSDK #Claude #AIAgents #LLM #MCP #AnthropicClaude #AIInfrastructure #Anthropic",
+  "tags": [
+    "claude managed agents",
+    "managed agents",
+    "anthropic managed agents",
+    "agent sdk",
+    "claude agent sdk",
+    "anthropic",
+    "claude api",
+    "claude opus",
+    "ai agents",
+    "ai infrastructure",
+    "ai pricing",
+    "mcp",
+    "managed agents pricing",
+    "claude vs agent sdk",
+    "ai sandbox"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "ClaudeManagedAgents",
+  "blogUrl": "https://avinashsangle.com/blog/claude-managed-agents"
+}

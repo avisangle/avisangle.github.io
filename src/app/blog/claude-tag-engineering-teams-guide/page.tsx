@@ -9,6 +9,7 @@ import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Tag Setup for Engineering Teams",
@@ -1019,6 +1020,8 @@ Reproduce it, find the root cause, and open a draft PR with a fix and a test.
           </div>
         </div>
       </section>
+
+      <PostNavigation slug="claude-tag-engineering-teams-guide" />
     </>
   )
 }

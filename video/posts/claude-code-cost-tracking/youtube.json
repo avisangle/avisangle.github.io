@@ -1,0 +1,23 @@
+{
+  "title": "Cut your Claude Code bill in half (7 tactics)",
+  "description": "Most developers have no idea what they're actually spending on Claude Code.\n\nTrack usage with /cost, /stats, and /usage — built right in. Every session is logged in JSONL files under ~/.claude/projects/. Cap thinking tokens with one environment variable and cut your bill in half.\n\nFull breakdown — 7 tactics to monitor and reduce your spend:\n🔗 https://avinashsangle.com/blog/claude-code-cost-tracking\n\n#ClaudeCode #AI #DeveloperTools #Claude #CostOptimization #Coding #Productivity #Anthropic #ccusage",
+  "tags": [
+    "claude code",
+    "claude",
+    "anthropic",
+    "cost tracking",
+    "ccusage",
+    "ai cost",
+    "max thinking tokens",
+    "developer productivity",
+    "ai coding",
+    "claude api",
+    "ai cost optimization"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "ClaudeCodeCostTracking",
+  "blogUrl": "https://avinashsangle.com/blog/claude-code-cost-tracking"
+}

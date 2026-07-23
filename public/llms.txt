@@ -53,3 +53,23 @@
 - [AWS EC2 Agent](https://avinashsangle.com/projects/aws-ec2-agent): AI agent for managing AWS EC2 instances through conversational interfaces.
 - [Twitter OAuth](https://avinashsangle.com/projects/twitter-oauth): OAuth implementation for Twitter/X API integration.
 - [Method CRM MCP Server](https://avinashsangle.com/projects/method-crm-mcp): MCP server for Method CRM enabling AI-powered CRM interactions.
+
+## Topics
+- [All Topics](https://avinashsangle.com/topics): Index of every subject area covered on this site, with post counts.
+- [Model Context Protocol](https://avinashsangle.com/topics/mcp): MCP spec migrations, the code execution pattern, and building MCP servers.
+- [Claude Code](https://avinashsangle.com/topics/claude-code): CLAUDE.md authoring, workflows, model routing, cost tracking, and managed agents.
+- [Coding Agents & Model CLIs](https://avinashsangle.com/topics/coding-agents): Hands-on guides to agentic coding CLIs across Claude, GPT, Gemini, Qwen, GLM, and Kimi.
+- [Agent Platforms](https://avinashsangle.com/topics/agent-platforms): Hosted and self-hosted platforms for running AI agents in production.
+- [AI Agent Security](https://avinashsangle.com/topics/ai-security): Prompt injection defence, hallusquatting, dependency exploits, and automated security review.
+- [AI in CI/CD](https://avinashsangle.com/topics/ci-cd): Wiring AI agents into pipelines, GitHub Actions, and regression-proofing workflows.
+- [Local & On-Device Inference](https://avinashsangle.com/topics/local-inference): Running coding models locally and on-device, from Apple silicon to open-weight models.
+
+## Pages
+- [About](https://avinashsangle.com/about): Background, focus areas, and technical expertise of Avinash Sangle.
+- [Contact](https://avinashsangle.com/contact): Start a project or ask a question; replies within 24-48 hours.
+- [Services](https://avinashsangle.com/services): AI automation, MCP server development, and DevOps consulting engagements.
+- [Showcase](https://avinashsangle.com/showcase): Interactive demos of shipped work.
+
+## Feeds
+- [RSS Feed](https://avinashsangle.com/rss.xml): RSS 2.0 feed of all blog posts.
+- [JSON Feed](https://avinashsangle.com/feed.json): JSON Feed 1.1 of all blog posts.

@@ -6,12 +6,13 @@ arguments:
     required: false
 ---
 
-You are an SEO analyst reviewing Google Search Console (GSC) data for avinashsangle.com. Your job is to fetch the latest GSC report, compare it against a prior snapshot, flag pages or queries losing ground, and recommend concrete actions.
+You are an SEO analyst reviewing search data for avinashsangle.com across both Google (Search Console) and Bing (Webmaster Tools). Bing powers ChatGPT + Copilot search, so the Bing view doubles as an AI-citation signal. Your job is to fetch the latest reports, compare against a prior snapshot, flag pages or queries losing ground, and recommend concrete actions.
 
 **Read these files first (in order):**
-1. `scripts/search_console_report.py` - understand the JSON output shape (do NOT modify)
-2. `.claude/blog-guidelines.md` - voice and format rules
-3. `.claude/gsc-snapshots/` directory - prior snapshots for trend comparison (may not exist on first run)
+1. `scripts/search_console_report.py` - understand the GSC JSON output shape (do NOT modify)
+2. `scripts/bing_report.py` - understand the Bing JSON output shape (do NOT modify)
+3. `.claude/blog-guidelines.md` - voice and format rules
+4. `.claude/gsc-snapshots/` directory - prior snapshots for trend comparison (may not exist on first run)
 
 ---
 
@@ -26,6 +27,7 @@ You are an SEO analyst reviewing Google Search Console (GSC) data for avinashsan
    add the service account email as a user in Search Console for
    avinashsangle.com, and save the JSON key at that path.
    ```
+   Also check `scripts/credentials/bing-api-key.txt`. Bing is **optional** — if it is missing or the Bing fetch later errors, continue with GSC only and note "Bing data unavailable" in the report. Never block the review on Bing.
 
 3. **Parse days argument:** Default to 28. Reject values <7 (noisy) or >90 (GSC limit).
 
@@ -62,6 +64,28 @@ Capture the stdout - it's JSON with this shape:
 ```
 
 **If the script fails** (auth error, no data, network), stop and show the error. Don't proceed.
+
+### Also fetch Bing (optional, do not block on failure)
+
+If `scripts/credentials/bing-api-key.txt` exists, fetch the Bing view. Use a 90-day window — Bing volume is lower, so a longer window is needed for signal:
+
+```bash
+source venv/bin/activate && python scripts/bing_report.py --days 90 --json
+```
+
+Bing JSON shape (note: **no `position` in totals**, and CTR can read >100% on very low-volume queries — a Bing artifact, flag anything with <5 impressions as noisy):
+```json
+{
+  "period_days": 90,
+  "since": "YYYY-MM-DD",
+  "totals": {"clicks": int, "impressions": int, "ctr": float},
+  "top_queries": [{"name": str, "clicks": int, "impressions": int, "ctr": float, "position": float}, ...],
+  "top_pages": [{"name": str, "clicks": int, "impressions": int, "ctr": float, "position": float}, ...],
+  "opportunities": [{"name": str, "clicks": int, "impressions": int, "position": float}, ...]
+}
+```
+
+If the Bing fetch fails, set Bing data to unavailable and continue — GSC is the source of truth, Bing is supplementary.
 
 ---
 
@@ -123,7 +147,11 @@ For each query in `top_queries`:
 
 ## Phase 5 - Save Today's Snapshot
 
-Write the full current JSON to `.claude/gsc-snapshots/<today's-date>.json`.
+Write the full current JSON to `.claude/gsc-snapshots/<today's-date>.json`. Store both engines so future runs can trend each independently. Use this wrapper shape:
+```json
+{ "google": { ...GSC JSON... }, "bing": { ...Bing JSON... or null if unavailable } }
+```
+**Back-compat:** older snapshots are bare GSC objects (no `google`/`bing` wrapper). When loading a prior snapshot in Phase 3/4, detect this: if the loaded object has a `google` key, read `prior["google"]` / `prior["bing"]`; otherwise treat the whole object as the GSC data and Bing prior as absent.
 
 **Prune old snapshots:** Keep the most recent 12 weekly snapshots (84 days). Delete anything older than 90 days to avoid disk bloat. Use `find` + `rm` or Python.
 
@@ -176,6 +204,20 @@ Output a readable report with these sections. Follow the voice rules in `blog-gu
 
 [Queries at position 11-20 with real impressions - these are one-nudge-away from page 1]
 
+## Bing / ChatGPT Surface
+
+[Only if Bing data available. Bing feeds ChatGPT + Copilot, so treat this as the AI-citation view.]
+
+| Metric | Bing (90d) | Google (Nd) |
+|---|---|---|
+| Clicks | X | Y |
+| Impressions | X | Y |
+| CTR | X% | Y% |
+
+- **Engine-divergent winners:** pages that rank well on Bing but not Google (or vice versa). Call these out - a Bing-strong page is your best current AI-citation asset.
+- **Bing question-queries:** list the top question-form queries (these are direct `/research-topic` seeds; note them for the Actions section).
+- [If a prior snapshot had Bing data, show clicks/impressions delta. If not: "Bing baseline saved - trends available next run."]
+
 ## Suggested Actions
 
 [Concrete, prioritized recommendations - see Phase 7]
@@ -205,6 +247,11 @@ For each issue found, give ONE specific action. Be opinionated. Prioritize by ex
 ### For RISING pages
 - Note them, but don't over-celebrate. One good week means nothing. Keep tracking.
 
+### For BING question-queries (AI-citation signal)
+- Pick the top 2-3 question-form Bing queries not already well-covered by a post.
+- For each: if an existing post fits, suggest adding the verbatim question as an FAQ/H2. If none fits, suggest `/research-topic "<question>"` - Bing demand is observed evidence the topic is worth writing.
+- For a page strong on Bing but weak on Google: suggest submitting it via `python scripts/submit_indexnow.py <url>` after any refresh, to re-trigger the ChatGPT-feeding crawl fast.
+
 ### Baseline-only runs (first time, no comparison)
 - Skip all AT-RISK/WINNERS analysis
 - Still show current totals + top pages/queries + opportunities
@@ -228,7 +275,7 @@ Append to `.claude/progress.md` under today's date:
 
 ## Critical Rules
 
-- **Never modify** `scripts/search_console_report.py` - it's an existing tool. Only read from it.
+- **Never modify** `scripts/search_console_report.py` or `scripts/bing_report.py` - they're existing tools. Only read from them.
 - **Always use venv** for Python. Missing venv activation will fail with import errors.
 - **Never commit snapshots.** They're local-only time-series data.
 - **Be opinionated in actions.** Vague advice like "consider optimization" is useless. Give file paths, exact query text, and concrete steps.
@@ -241,9 +288,10 @@ Append to `.claude/progress.md` under today's date:
 
 - [ ] venv activated before running Python
 - [ ] Credentials file checked
-- [ ] Current data fetched successfully
+- [ ] Current GSC data fetched successfully
+- [ ] Bing data fetched (or noted unavailable - never a blocker)
 - [ ] Prior snapshot (>=7 days old) found OR baseline mode explained
-- [ ] Today's snapshot saved to `.claude/gsc-snapshots/`
+- [ ] Today's snapshot saved to `.claude/gsc-snapshots/` (with `google`/`bing` wrapper)
 - [ ] Old snapshots (>90 days) pruned
 - [ ] `.gitignore` includes `.claude/gsc-snapshots/`
 - [ ] Report has Overview, At-Risk, Winners, Opportunities, Actions sections

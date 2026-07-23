@@ -1,0 +1,76 @@
+{
+  "compositionId": "ClaudeManagedAgentsOutcomes",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparators": {
+    "default": " ... ",
+    "bridge": " "
+  },
+  "audioDurationSeconds": 51.211,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "My agent shipped a busted .docx three times last week. Then Anthropic fixed that.",
+      "spokenText": "My agent shipped a busted dot doc ex three times last week. Then Anthropic fixed that.",
+      "startSeconds": 0,
+      "durationSeconds": 6.04,
+      "bridge": false,
+      "precedingSeparator": ""
+    },
+    {
+      "id": "scene-2-bullets",
+      "text": "Now you can hand Claude a simple checklist — what \"done\" actually looks like — and it'll grade its own work before sending it to you.",
+      "spokenText": "Now you can hand Claude a simple checklist — what \"done\" actually looks like — and it'll grade its own work before sending it to you.",
+      "startSeconds": 6.04,
+      "durationSeconds": 7.8500000000000005,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-3-rubric",
+      "text": "If the slide deck is missing a section, or the report misses the point, a second Claude spots it and tells the first one to try again. You don't write code, you write the checklist in plain English.",
+      "spokenText": "If the slide deck is missing a section, or the report misses the point, a second Claude spots it and tells the first one to try again. You don't write code, you write the checklist in plain English.",
+      "startSeconds": 13.89,
+      "durationSeconds": 12.451,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-4-chart",
+      "text": "And the result — across the board, ten percent more tasks land on the first try, jumping eleven percent on PowerPoints and eight percent on Word docs.",
+      "spokenText": "And the result — across the board, ten percent more tasks land on the first try, jumping eleven percent on PowerPoints and eight percent on Word docs.",
+      "startSeconds": 26.341,
+      "durationSeconds": 10.496000000000002,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-5-usecase",
+      "text": "So if your AI builds reports, slides, or anything where \"good enough\" isn't, this is the thing that gets it there. The grader catches the busted .docx before it ever lands in your inbox.",
+      "spokenText": "So if your AI builds reports, slides, or anything where \"good enough\" isn't, this is the thing that gets it there. The grader catches the busted dot doc ex before it ever lands in your inbox.",
+      "startSeconds": 36.837,
+      "durationSeconds": 13.073999999999998,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-6-outro",
+      "text": "Link in the description.",
+      "spokenText": "Link in the description.",
+      "startSeconds": 49.911,
+      "durationSeconds": 5.0,
+      "bridge": false,
+      "precedingSeparator": " ... ",
+      "_durationOverride": "Bumped from 1.30s to 5.0s so the Outro reveal animation (big number → subhead → URL pill → CTA) has time to play. Audio still ends at 1.3s; visual holds silent for ~3.7s. Re-apply this if npm run vo regenerates."
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/calculator-server" },
   title: "Calculator Server | Go-based MCP Server for Mathematical Computations",
   description:
     "High-performance Go-based MCP server providing comprehensive mathematical computation capabilities for AI agents and applications.",

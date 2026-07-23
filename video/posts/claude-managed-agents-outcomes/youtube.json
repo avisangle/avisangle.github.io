@@ -1,0 +1,26 @@
+{
+  "format": "short",
+  "title": "Anthropic's New Auto-Grader Fixed My Agent's Broken .docx",
+  "description": "My agent shipped a busted .docx three times last week. Then Anthropic fixed it — you can now hand Claude a plain-English checklist of what 'done' looks like, and a second Claude grades the work before it lands on your desk.\n\nNo code. You write the checklist in plain English. If the slide deck is missing a section, or the report misses the point, the grader spots it and tells the first agent to try again — until it passes.\n\nThe lift Anthropic reported: ten percent more tasks land on the first try, jumping eleven percent on PowerPoints and eight percent on Word docs. No extra fee.\n\nIf your AI builds reports, slides, or emails — anything where 'good enough' isn't — this is the upgrade that catches the bad version before you ever see it.\n\n🔗 Full breakdown: https://avinashsangle.com/blog/claude-managed-agents-outcomes\n\n#ClaudeCode #Anthropic #AIAgents #LLMAsJudge #ManagedAgents #AgentEvaluation #AgenticAI #DevTools",
+  "tags": [
+    "claude managed agents",
+    "anthropic outcomes",
+    "ai agents",
+    "ai checklist",
+    "llm as judge",
+    "anthropic api",
+    "agent evaluation",
+    "agentic ai",
+    "ai automation",
+    "claude code shorts",
+    "ai quality assurance",
+    "ai productivity"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "blogUrl": "https://avinashsangle.com/blog/claude-managed-agents-outcomes",
+  "playlistIds": ["PLlhPzoo-csPCtJxCl4CxrSdcbCR6E8mra"],
+  "compositionId": "ClaudeManagedAgentsOutcomes"
+}

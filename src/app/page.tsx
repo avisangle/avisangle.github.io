@@ -9,6 +9,15 @@ import { CategoryIcon } from "@/components/icons/category-icon"
 import { TechBadge } from "@/components/ui/tech-badge"
 import { getFeaturedProjects } from "@/data/projects"
 import { ContactForm } from "@/components/contact-form"
+import type { Metadata } from "next"
+
+// Title, description and OG tags are inherited from the root layout; only the
+// self-canonical is declared here. Do NOT move this to the layout — Next.js
+// shallow-merges metadata, so a layout-level canonical would be inherited by
+// every page that does not set its own, pointing them all at the homepage.
+export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com" },
+}
 
 export default function Home() {
   return (
@@ -30,6 +39,7 @@ export default function Home() {
               "https://github.com/avisangle",
               "https://www.linkedin.com/in/avinashsangle/",
               "https://www.youtube.com/@AIAgentOps",
+              "https://x.com/avi_sangle",
             ],
             knowsAbout: [
               "AI Automation",

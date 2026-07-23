@@ -1,0 +1,53 @@
+{
+  "compositionId": "PlanMode",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparator": " ... ",
+  "audioDurationSeconds": 50.138,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "Stop hitting Enter on every Claude Code prompt. Shift+Tab twice gives you Plan mode.",
+      "spokenText": "Stop hitting Enter on every Claude Code prompt. Shift+Tab twice gives you Plan mode.",
+      "startSeconds": 0,
+      "durationSeconds": 6.126
+    },
+    {
+      "id": "scene-2-contrast",
+      "text": "Default mode: Claude edits files immediately. Wrong dependency order, tests fail. In Plan mode, Claude proposes a plan first. You catch the order issue before any file is touched.",
+      "spokenText": "Default mode: Claude edits files immediately. Wrong dependency order, tests fail. In Plan mode, Claude proposes a plan first. You catch the order issue before any file is touched.",
+      "startSeconds": 6.126,
+      "durationSeconds": 13.354
+    },
+    {
+      "id": "scene-3-howto",
+      "text": "Shift+Tab twice cycles to Plan mode. Or use the slash-plan command. Claude writes a plan file — now named after your prompt. You read it, edit it, approve it.",
+      "spokenText": "Shift+Tab twice cycles to Plan mode. Or use the slash-plan command. Claude writes a plan file — now named after your prompt. You read it, edit it, approve it.",
+      "startSeconds": 19.48,
+      "durationSeconds": 11.913
+    },
+    {
+      "id": "scene-4-when",
+      "text": "Best for refactors that touch multiple files, ambiguous prompts, or unfamiliar codebases. Production work where one wrong edit costs hours is the obvious case.",
+      "spokenText": "Best for refactors that touch multiple files, ambiguous prompts, or unfamiliar codebases. Production work where one wrong edit costs hours is the obvious case.",
+      "startSeconds": 31.393,
+      "durationSeconds": 11.322000000000003
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "Two keystrokes. That's the whole barrier. Most tutorials still skip Plan mode. Full series — link in description.",
+      "spokenText": "Two keystrokes. That's the whole barrier. Most tutorials still skip Plan mode. Full series — link in description.",
+      "startSeconds": 42.715,
+      "durationSeconds": 7.422999999999995
+    }
+  ]
+}

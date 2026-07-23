@@ -7,6 +7,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "How I Write CLAUDE.md Files That Actually Work (2026)",
@@ -991,6 +993,9 @@ See @README.md for project setup and background.`} />
           </div>
         </div>
       </section>
+
+      <RelatedPosts slug="claude-md-guide" />
+      <PostNavigation slug="claude-md-guide" />
     </>
   )
 }

@@ -1,0 +1,25 @@
+{
+  "title": "Plan Mode: The Claude Code Feature Most Devs Miss",
+  "description": "Most devs hit Enter on every Claude Code prompt. Shift+Tab twice gives you Plan mode — the feature senior engineers swear by and most tutorials skip.\n\nIn Plan mode, Claude is restricted to read-only ops. It writes a markdown plan file (named after your prompt as of v2.1.111), you read / edit / approve before any file gets touched. Best for multi-file refactors, ambiguous tasks, unfamiliar codebases, and any production work where one wrong edit costs hours.\n\nEpisode 3 of the Claude Code Shorts series — practical Claude Code in 60 seconds.\n\n#ClaudeCode #ClaudeCodePlanMode #PlanMode #ClaudeCodeShortcuts #ClaudeCodePermissions #Anthropic #Claude #AICoding #DeveloperTools #ClaudeCodeShorts",
+  "tags": [
+    "claude code",
+    "claude code plan mode",
+    "plan mode",
+    "claude code shift tab",
+    "claude code permission modes",
+    "claude code refactor",
+    "claude code workflow",
+    "claude code shortcuts",
+    "anthropic claude",
+    "ai coding agent",
+    "claude code 2026",
+    "claude code shorts",
+    "claude code tutorial"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "compositionId": "PlanMode",
+  "playlistIds": ["PLlhPzoo-csPCtJxCl4CxrSdcbCR6E8mra"]
+}

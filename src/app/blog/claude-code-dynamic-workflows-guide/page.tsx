@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Code Dynamic Workflows: When They're Worth the Cost",
@@ -983,6 +984,8 @@ Tight  ->  "Run a workflow to audit the 40 files under src/routes/
           </Card>
         </section>
       </article>
+
+      <PostNavigation slug="claude-code-dynamic-workflows-guide" />
     </>
   )
 }

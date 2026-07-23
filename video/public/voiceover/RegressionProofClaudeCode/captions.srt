@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:02,719
+This morning Anthropic patched four Claude Code
+
+2
+00:00:02,769 --> 00:00:03,519
+regressions.
+
+3
+00:00:03,612 --> 00:00:06,080
+Their evals never caught a single one.
+
+4
+00:00:06,192 --> 00:00:07,678
+Here's how I catch mine.
+
+5
+00:00:08,371 --> 00:00:11,438
+Seven weeks of silent regressions, eight bugs
+
+6
+00:00:11,505 --> 00:00:14,083
+filed in a day, fifty times quota
+
+7
+00:00:14,147 --> 00:00:15,922
+burn from the wrapper bug in March
+
+8
+00:00:16,122 --> 00:00:18,041
+— and the only reason mine didn't
+
+9
+00:00:18,074 --> 00:00:20,159
+break was three lines of config.
+
+10
+00:00:20,939 --> 00:00:24,882
+Pin the CLI — uninstall global, reinstall
+
+11
+00:00:24,902 --> 00:00:27,760
+the last verified release, lock the version
+
+12
+00:00:27,824 --> 00:00:30,159
+line in npm R C so future
+
+13
+00:00:30,229 --> 00:00:31,957
+updates can't touch you.
+
+14
+00:00:32,349 --> 00:00:35,512
+Then settings.json — set the effort level
+
+15
+00:00:35,592 --> 00:00:38,394
+and a model allowlist, because that's where
+
+16
+00:00:38,458 --> 00:00:41,033
+Anthropic's silent defaults sneak in.
+
+17
+00:00:41,193 --> 00:00:43,833
+And a Python stop hook that replays
+
+18
+00:00:43,913 --> 00:00:47,277
+five golden prompts every session, with expected
+
+19
+00:00:47,357 --> 00:00:49,678
+outputs committed to the repo.
+
+20
+00:00:49,731 --> 00:00:51,997
+It's your CI, for a CLI that
+
+21
+00:00:52,024 --> 00:00:53,439
+doesn't ship one.
+
+22
+00:00:53,567 --> 00:00:55,597
+Anthropic will ship the next regression.
+
+23
+00:00:55,725 --> 00:00:57,515
+Your config doesn't have to.
+
+24
+00:00:57,691 --> 00:00:59,750
+Link in the description for the full
+
+25
+00:00:59,806 --> 00:01:00,390
+breakdown.

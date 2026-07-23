@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Getting Started with the ant CLI: Deploy Claude Agents",
@@ -266,6 +267,24 @@ const howToSchema = JSON.stringify({
   ],
 })
 
+const videoObjectSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Anthropic's ant CLI: 10 Minutes to a Live Claude Agent",
+  description:
+    "Deploy a Claude managed agent with the ant CLI in 10 minutes — brew install, YAML config, $0.08-per-session-hour pricing, and the one-line ant beta:agents create command.",
+  thumbnailUrl: ["https://i.ytimg.com/vi/7Dc0yt980h8/maxresdefault.jpg"],
+  uploadDate: "2026-05-02",
+  duration: "PT1M2S",
+  contentUrl: "https://www.youtube.com/watch?v=7Dc0yt980h8",
+  embedUrl: "https://www.youtube.com/embed/7Dc0yt980h8",
+  publisher: {
+    "@type": "Person",
+    name: "Avinash Sangle",
+    url: "https://avinashsangle.com",
+  },
+})
+
 export default function AntCliGettingStartedPage() {
   return (
     <>
@@ -285,6 +304,11 @@ export default function AntCliGettingStartedPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: howToSchema }}
+      />
+      {/* Static, compile-time JSON-LD — same trusted-content pattern as the 4 schemas above */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoObjectSchema }}
       />
 
       <div className="container-project py-12">
@@ -329,6 +353,20 @@ export default function AntCliGettingStartedPage() {
             )}
           </div>
         </header>
+
+        {/* YouTube Short — 60-second visual walkthrough of the ant CLI deploy */}
+        <div className="mx-auto my-8 w-full max-w-md">
+          <div className="aspect-[9/16] overflow-hidden rounded-2xl border border-border">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/7Dc0yt980h8"
+              title="Anthropic's ant CLI: 10 Minutes to a Live Claude Agent"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
 
         {/* Table of Contents */}
         <Card className="mb-12">
@@ -1210,6 +1248,8 @@ tools:
           </div>
         </section>
       </div>
+
+      <PostNavigation slug="ant-cli-getting-started" />
     </>
   )
 }

@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:02,165
+My agent shipped a busted dot doc
+
+2
+00:00:02,272 --> 00:00:03,762
+ex three times last week.
+
+3
+00:00:03,874 --> 00:00:05,600
+Then Anthropic fixed that.
+
+4
+00:00:06,040 --> 00:00:07,521
+Now you can hand Claude a simple
+
+5
+00:00:07,593 --> 00:00:10,797
+checklist what "done" actually looks like and
+
+6
+00:00:10,850 --> 00:00:12,637
+it'll grade its own work before sending
+
+7
+00:00:12,690 --> 00:00:13,477
+it to you.
+
+8
+00:00:13,890 --> 00:00:15,277
+If the slide deck is missing a
+
+9
+00:00:15,337 --> 00:00:18,241
+section, or the report misses the point,
+
+10
+00:00:18,281 --> 00:00:20,482
+a second Claude spots it and tells
+
+11
+00:00:20,502 --> 00:00:21,923
+the first one to try again.
+
+12
+00:00:22,063 --> 00:00:24,243
+You don't write code, you write the
+
+13
+00:00:24,299 --> 00:00:25,841
+checklist in plain English.
+
+14
+00:00:26,341 --> 00:00:28,969
+And the result across the board, ten
+
+15
+00:00:29,029 --> 00:00:30,970
+percent more tasks land on the first
+
+16
+00:00:31,050 --> 00:00:34,409
+try, jumping eleven percent on PowerPoints and
+
+17
+00:00:34,449 --> 00:00:36,450
+eight percent on Word docs.
+
+18
+00:00:36,837 --> 00:00:39,768
+So if your AI builds reports, slides,
+
+19
+00:00:39,848 --> 00:00:42,567
+or anything where "good enough" isn't, this
+
+20
+00:00:42,594 --> 00:00:43,929
+is the thing that gets it there.
+
+21
+00:00:44,069 --> 00:00:46,729
+The grader catches the busted dot doc
+
+22
+00:00:46,862 --> 00:00:48,489
+ex before it ever lands in your
+
+23
+00:00:48,582 --> 00:00:49,127
+inbox.
+
+24
+00:00:49,911 --> 00:00:51,211
+Link in the description.

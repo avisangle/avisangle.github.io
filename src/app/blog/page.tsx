@@ -7,6 +7,7 @@ import { NewsletterSignup } from "@/components/newsletter-signup"
 import Link from "next/link"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/blog" },
   title: "Technical Blog | AI, DevOps & Cloud Technologies Insights",
   description:
     "Technical blog and case studies on AI automation, DevOps practices, and cloud technologies. Learn about Model Context Protocol, Jenkins automation, and more from Avinash Sangle.",

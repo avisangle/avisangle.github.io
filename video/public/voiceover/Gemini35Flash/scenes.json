@@ -1,0 +1,75 @@
+{
+  "compositionId": "Gemini35Flash",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparators": {
+    "default": " ... ",
+    "bridge": " "
+  },
+  "audioDurationSeconds": 64.47,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "Three reasons to route your next agent task to Gemini 3.5 Flash, not Claude.",
+      "spokenText": "Three reasons to route your next agent task to Gemini 3.5 Flash, not Claude.",
+      "startSeconds": 0,
+      "durationSeconds": 6.574,
+      "bridge": false,
+      "precedingSeparator": ""
+    },
+    {
+      "id": "scene-2-price",
+      "text": "One — price. A dollar fifty per million tokens in, nine out — roughly a third of what an Opus agent loop costs you today.",
+      "spokenText": "One — price. A dollar fifty per million tokens in, nine out — roughly a third of what an Opus agent loop costs you today.",
+      "startSeconds": 6.574,
+      "durationSeconds": 9.008000000000001,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-3-benchmark",
+      "text": "Two — it's genuinely good at the agent part. On the benchmark that measures calling tools and chaining them together, Flash scored about eighty-four percent, past Claude's own Opus 4.7 — and Google only shipped it eight days ago.",
+      "spokenText": "Two — it's genuinely good at the agent part. On the benchmark that measures calling tools and chaining them together, Flash scored about eighty-four percent, past Claude's own Opus 4.7 — and Google only shipped it eight days ago.",
+      "startSeconds": 15.582,
+      "durationSeconds": 15.261,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-4-routing",
+      "text": "Three — you don't have to switch everything. If your agent spends most of its time calling tools and planning, not editing files, that's the work to move: send it to Flash, and keep the actual repo edits on Claude Code.",
+      "spokenText": "Three — you don't have to switch everything. If your agent spends most of its time calling tools and planning, not editing files, that's the work to move: send it to Flash, and keep the actual repo edits on Claude Code.",
+      "startSeconds": 30.843,
+      "durationSeconds": 14.382000000000001,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-5-trap",
+      "text": "But there's a trap. Flash defaults to thinking hard on every call, so a script you copied from the docs quietly burns thirty to fifty percent more on a long loop. Turn that down to low, and you get the price you were promised.",
+      "spokenText": "But there's a trap. Flash defaults to thinking hard on every call, so a script you copied from the docs quietly burns thirty to fifty percent more on a long loop. Turn that down to low, and you get the price you were promised.",
+      "startSeconds": 45.225,
+      "durationSeconds": 14.487000000000002,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-6-outro",
+      "text": "Three reasons to move the work — one setting that decides if it's actually cheaper.",
+      "spokenText": "Three reasons to move the work — one setting that decides if it's actually cheaper.",
+      "startSeconds": 59.712,
+      "durationSeconds": 4.757999999999996,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    }
+  ]
+}

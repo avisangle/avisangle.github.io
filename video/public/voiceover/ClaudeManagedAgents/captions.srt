@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:02,953
+Anthropic just launched Managed Agents.
+
+2
+00:00:03,020 --> 00:00:05,031
+Eight cents an hour — worth it?
+
+3
+00:00:05,801 --> 00:00:08,071
+Managed Agents runs your AI agent for
+
+4
+00:00:08,111 --> 00:00:11,590
+you — sandboxing, retries, scaling,
+
+5
+00:00:11,650 --> 00:00:12,630
+all handled.
+
+6
+00:00:12,750 --> 00:00:15,590
+Pay standard API rates plus eight cents
+
+7
+00:00:15,650 --> 00:00:18,268
+per session-hour of active runtime.
+
+8
+00:00:18,328 --> 00:00:20,871
+Built for multi-hour production workflows.
+
+9
+00:00:21,631 --> 00:00:23,351
+One API call.
+
+10
+00:00:23,431 --> 00:00:26,315
+Add the managed-agents beta header, give it
+
+11
+00:00:26,435 --> 00:00:28,872
+a task in plain English, and Anthropic
+
+12
+00:00:28,925 --> 00:00:31,189
+spins up a sandboxed agent that runs
+
+13
+00:00:31,229 --> 00:00:31,909
+until done.
+
+14
+00:00:32,669 --> 00:00:35,588
+A three-hour ticket processing run costs twenty
+
+15
+00:00:35,641 --> 00:00:36,705
+cents in runtime.
+
+16
+00:00:36,845 --> 00:00:39,344
+The Agent SDK is free — but
+
+17
+00:00:39,384 --> 00:00:42,862
+you host everything: scaling, retries,
+
+18
+00:00:42,933 --> 00:00:45,179
+security, monitoring.
+
+19
+00:00:45,211 --> 00:00:47,822
+Pick managed if shipping speed beats infrastructure
+
+20
+00:00:47,882 --> 00:00:48,382
+control.
+
+21
+00:00:49,054 --> 00:00:51,739
+Full pricing breakdown and decision flowchart on
+
+22
+00:00:51,792 --> 00:00:52,378
+my blog.
+
+23
+00:00:52,518 --> 00:00:53,898
+Hit the link below.

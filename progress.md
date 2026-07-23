@@ -2,6 +2,19 @@
 
 # Progress Log
 
+## 2026-06-13: Wire Bing into research + ranking + publish flows
+
+- `/research-topic`: Phase 1 step 5 now pulls `bing_report.py --type queries --json` for first-party question-queries; Phase 2 FAQ candidates prefer verbatim Bing questions. Graceful skip if key missing.
+- `/review-gsc-ranking`: now dual-engine — fetches Bing (`--days 90 --json`) alongside GSC, snapshots wrap as `{google, bing}` (back-compat for bare-GSC priors), new "Bing / ChatGPT Surface" report section + question-query actions. Bing optional, never blocks.
+- `/write-blogpost`: Phase 6 step 6 submits new post to IndexNow after the URL is live (polls 200, then `submit_indexnow.py`). Non-blocking. This is the answer to "where to submit on new post."
+- Command edits live immediately (read from disk); not committed yet.
+
+## 2026-06-13: IndexNow setup + research-topic gap found
+
+- IndexNow live: `public/589c30d54f9f3681d19765a4f3dd71b6.txt` deployed (verified 200), `scripts/submit_indexnow.py` (stdlib, regex sitemap parse — no XML parser, avoids XXE). First run submitted all 24 sitemap URLs → 202 Accepted. Committed 218a176.
+- Run on publish: `python scripts/submit_indexnow.py <url>` (or `--all`). Candidate to wire into /write-blogpost.
+- Gap: `/research-topic` (`.claude/commands/research-topic.md`) does NOT use Bing/GSC query data — Phase 1 is web-search only (autocomplete, PAA, Reddit/HN). Bing's natural-language question queries are not yet fed in. `/review-gsc-ranking` uses GSC but is a separate ranking-review flow, not topic research.
+
 ## 2026-06-13: Bing Webmaster reporting via API
 
 - Added `scripts/bing_report.py` (stdlib-only, mirrors GSC reporter): types summary/queries/pages/crawl, `--days`, `--json`. API key stored at `scripts/credentials/bing-api-key.txt` (gitignored).
@@ -791,3 +804,48 @@ User flagged that copying thumbnail PNG from laptop to mobile to YT app for ever
 - `video/public/thumbnails/claude-managed-agents.png` (relocated)
 - `.claude/skills/video-thumbnail/SKILL.md`, `video-scenes/SKILL.md`, `video-render/SKILL.md`, `video-publish/SKILL.md`
 - `decisions.md` (Decision 29)
+
+## 2026-06-20: /research-topic apple-core-ai-on-device-inference-guide
+- Researched Apple Core AI (WWDC 2026 on-device inference framework). Verified facts via official docs + apple/coreai-torch, coreai-models, coreai-optimization repos.
+- Competition LOW, freshness window HIGH (framework ~2wks old). No direct Bing demand from site audience (Claude Code focused); used inference-cost as the bridge angle.
+- Saved brief: `.claude/content-briefs/apple-core-ai-on-device-inference-guide.md` (verified PyTorch 3-step conversion pipeline, accuracy guardrails for writer).
+- Next: /write-blogpost apple-core-ai-on-device-inference-guide
+
+## 2026-06-25 — Research: claude-tag-engineering-teams-guide
+Merged PR 44 (topic suggestion). Researched Claude Tag (Anthropic AI Slack teammate, launched 2026-06-23, Opus 4.8, Enterprise/Team beta). Web-verified facts vs day-one-overview competition; clear gap for engineering practitioner guide (MCP wiring, channel scoping, ambient-mode safety, token cost control, Copilot-in-Teams comparison). Bing shows no Claude Tag demand yet (too new) but proven cost/MCP intents. Brief saved to .claude/content-briefs/claude-tag-engineering-teams-guide.md. Next: /write-blogpost.
+
+## 2026-07-15 — Research: hallusquatting-defense-ai-coding-agents
+Merged PR 49 (topic suggestion, squash `ecf2a58`). Researched HalluSquatting (arXiv:2607.07433, Tel Aviv/Technion/Intuit, pub 2026-07-08). Competition is 15+ news recaps + one thin Snyk listicle (verified: no config, no code, nothing on agent permissions/sandboxing/hooks). Clear gap for the first practitioner defense guide.
+Site overlap audit: `hallucinat`/`slopsquat`/`typosquat` = 0 hits across 27 posts. Open lanes = sandboxing, permission modes, lockfiles, tool-call auditing. `--allowedTools` is owned by `hardening-ai-agents-cicd-prompt-injection` → link, don't re-teach.
+Accuracy correction for writer: Claude Code was NOT among the nine tested apps (news cycle implies otherwise); Opus 4.5 searched-before-fetch 73% → 0% hallucination vs Sonnet 4.5 31% → 100% when skipping.
+Unique angle: lockfiles + `min-release-age` cooldowns largely FAIL here (attack wins at resolution time, upstream of both) + a buildable PreToolUse verify hook.
+Bing: no usable demand (25 queries/120d, zero security-related) — FAQ candidates flagged as PAA-derived, not observed. Note: no venv in project; `bing_report.py` runs on system python3, `search_console_report.py` needs `google` module (unavailable).
+Brief saved: `.claude/content-briefs/hallusquatting-defense-ai-coding-agents.md`. Next: /write-blogpost hallusquatting-defense-ai-coding-agents
+
+## 2026-07-15 — Project page: trending-repo-scout
+Analyzed /Users/avinashsangle/AI/Personal/trending-repo-scout (README, SCORING.md, decisions.md, scout/, workflows) and shipped `/projects/trending-repo-scout`.
+Framed as an architecture case study, not a clone-and-run page: repo is PRIVATE (github.com/avisangle/trending-repo-scout → 404), so `githubUrl` is deliberately OMITTED (user decision) and Notes says so plainly. `liveUrl` = the Cloudflare dashboard (user decision; accepted that portfolio traffic makes the wrapper-angle data more discoverable).
+Lead angle = the hybrid split at the LLM boundary (Actions has internet but no model; cloud routine has the model but egress scoped to the repo; handoff is a file in git → no API key in the scheduled path). Plus 3-axis rubric w/ weights, trend memory, cooldown-as-state-without-a-DB.
+Files: new page.tsx (SoftwareApplication + BreadcrumbList + FAQPage×8 schemas); projects.ts (new entry order 0, existing 9 bumped +1 so it leads the homepage featured grid); sitemap.ts; llms.txt; og-project-trending-repo-scout.png generated.
+Verified: build ✓ (route prerendered), title 56 / desc 159 chars (in Bing range), browser-driven ✓ (page 200, renders correctly, present on homepage + projects index + sitemap). Console errors on localhost are pre-existing omniagent-registry CORS, unrelated.
+
+## 2026-07-23 — New routes: /about and /contact (linkable entity pages)
+Built `src/app/about/page.tsx` and `src/app/contact/page.tsx` (both were 404). Purpose: give the homepage's "About Avinash" and "Let's Connect" sections real URLs so other sites can cite the author and search/LLMs can resolve a `Person` entity.
+/about: answer-first h1 + 51-word opening para, then "What Avinash works on", "Skills and stack", "Selected work" (links /projects + /services), "How to reach Avinash" (links /contact). Facts sourced only from `src/app/page.tsx` and `src/app/services/page.tsx` — nothing invented. Schemas: Person (sameAs identical to homepage) + BreadcrumbList.
+/contact: reuses `ContactForm` and `NewsletterSignup` verbatim; adds email/GitHub/LinkedIn/YouTube fallback cards. Schemas: ContactPage + BreadcrumbList. 24–48h reply time sourced from contact-form success state + services CTA.
+Verified: build ✓ (both prerendered static), rendered titles 59 / 57, descriptions 157 / 155, canonicals set, zero emojis. Nav links + sitemap entries intentionally NOT wired here (owned by another change).
+
+## 2026-07-23 — Internal linking, topic hubs, RSS (branch `seo/internal-linking-hubs-rss`)
+Foundation: `src/data/posts.ts` — single source of truth for 30 posts (slug/title/description/datePublished/topics/readTime) + 7-topic taxonomy + `getPostBySlug` / `getPostsByTopic` / `getRelatedPosts` / `getTopicById`. See `docs/decisions/D-SEO-01`.
+Internal linking: new `related-posts.tsx` (registry-driven, 3 links) + `post-navigation.tsx` (prev/next + topic-hub chips). PostNavigation on all 30 posts; RelatedPosts on only the 9 lacking a hand-authored further-reading section — the other 21 keep their curated blocks (user decision; several link to `/projects/*` the registry can't surface).
+Topic hubs: `/topics` + `/topics/[topic]` (7 SSG hubs via generateStaticParams), answer-first copy, CollectionPage+ItemList+BreadcrumbList JSON-LD. Per-topic SEO strings are a `Record<TopicId,…>` so adding a topic without copy is a compile error.
+Feeds: `/rss.xml` (RSS 2.0, RFC-822 dates, XML-escaped, atom:self) + `/feed.json` (JSON Feed 1.1), both 30 items; `/feed.xml` → `/rss.xml` redirect. Autodiscovery as hoisted `<link>` tags, NOT `metadata.alternates` — see `docs/decisions/D-SEO-02`.
+Wiring: navbar About/Contact now point at real routes (were `/#about`, `/#contact`) + Topics added; footer nav row (About/Blog/Topics/Projects/Services/Contact/RSS); sitemap +26 URLs (56 total) incl. `/services` which was missing; llms.txt +Topics/Pages/Feeds sections; `x.com/avi_sangle` added to Person.sameAs on home/about/contact (sourced from llms.txt).
+Verified against built HTML: build ✓, 30/30 posts have prev/next + 2–3 topic-hub links, post-to-post links now 1–12/post (was 0–4), zero duplicate "Related reading" blocks, RSS parses via xml.dom.minidom (30 items), JSON feed parses, autodiscovery present on pages that override `alternates`, zero trailing-slash sitemap URLs.
+NOT done (needs user decision): 5 conflicting publish dates, 15 pages missing canonical — both logged in bug.md.
+
+## 2026-07-23 — Canonical tags for the 15 pages that had none (same branch)
+Follow-up to the SEO branch. Added `alternates.canonical` to `/`, `/blog`, `/projects`, all 10 `/projects/*`, `/showcase`, and `/blog/method-crm-mcp`.
+Homepage had no `metadata` export at all (inherited the root layout wholesale), so it got a minimal one carrying only the canonical — with a comment explaining why this must NOT be hoisted to the layout (shallow merge would point every uncanonical page at the homepage; see `docs/decisions/D-SEO-02`).
+Verified against built HTML: 56/56 pages have a self-canonical exactly matching their own route, 0 mismatches, 0 trailing slashes, and feed autodiscovery still present on 56/56.
+Visual check via Playwright on localhost: `/topics`, `/about`, and the post footer (related cards + topic chips + prev/next) all render native to the existing design.

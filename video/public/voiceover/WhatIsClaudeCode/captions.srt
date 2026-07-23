@@ -1,0 +1,131 @@
+1
+00:00:00,000 --> 00:00:01,684
+You think Claude Code lives in your
+
+2
+00:00:01,728 --> 00:00:02,160
+terminal.
+
+3
+00:00:02,267 --> 00:00:04,759
+It actually runs in six places.
+
+4
+00:00:05,119 --> 00:00:06,560
+Six surfaces.
+
+5
+00:00:06,640 --> 00:00:07,679
+Same engine.
+
+6
+00:00:07,743 --> 00:00:08,556
+Your terminal.
+
+7
+00:00:08,652 --> 00:00:09,996
+Your desktop app.
+
+8
+00:00:10,276 --> 00:00:11,276
+VS Code.
+
+9
+00:00:11,388 --> 00:00:12,556
+JetBrains.
+
+10
+00:00:12,656 --> 00:00:15,434
+The web at claude.ai/code.
+
+11
+00:00:15,514 --> 00:00:17,833
+And your phone — through Remote Control
+
+12
+00:00:17,860 --> 00:00:19,271
+in the Claude mobile app.
+
+13
+00:00:19,644 --> 00:00:21,908
+Every surface hits the same Claude.
+
+14
+00:00:22,036 --> 00:00:23,752
+Same conversation.
+
+15
+00:00:23,816 --> 00:00:24,710
+Same tools.
+
+16
+00:00:24,822 --> 00:00:25,833
+Same memory.
+
+17
+00:00:25,966 --> 00:00:27,992
+Start a long agent run on your
+
+18
+00:00:28,072 --> 00:00:30,793
+laptop, walk away, watch it from your
+
+19
+00:00:30,846 --> 00:00:31,832
+phone on the train.
+
+20
+00:00:31,969 --> 00:00:33,912
+Resume in your IDE.
+
+21
+00:00:34,520 --> 00:00:35,112
+Deep work?
+
+22
+00:00:35,210 --> 00:00:36,074
+Terminal.
+
+23
+00:00:36,218 --> 00:00:37,196
+Code review?
+
+24
+00:00:37,308 --> 00:00:38,556
+Your IDE.
+
+25
+00:00:38,716 --> 00:00:40,078
+Long-running agent?
+
+26
+00:00:40,174 --> 00:00:41,436
+Your phone.
+
+27
+00:00:41,543 --> 00:00:43,116
+No laptop nearby?
+
+28
+00:00:43,228 --> 00:00:45,278
+Open the web app and keep going.
+
+29
+00:00:45,870 --> 00:00:46,718
+Pick the surface.
+
+30
+00:00:46,830 --> 00:00:47,841
+Same Claude.
+
+31
+00:00:47,953 --> 00:00:49,121
+Same context.
+
+32
+00:00:49,249 --> 00:00:52,323
+Full series at avinashsangle.com —
+
+33
+00:00:52,387 --> 00:00:53,759
+link in description.

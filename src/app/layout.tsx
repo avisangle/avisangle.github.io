@@ -86,6 +86,24 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${plusJakarta.variable} ${ibmPlexMono.variable} antialiased`}>
+        {/*
+          Feed autodiscovery. Declared as hoisted <link> tags rather than via
+          metadata.alternates.types: Next.js shallow-merges metadata, so the 35
+          pages that set their own alternates.canonical would replace the root
+          alternates object wholesale and silently drop these.
+        */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Avinash Sangle - Blog RSS Feed"
+          href="https://avinashsangle.com/rss.xml"
+        />
+        <link
+          rel="alternate"
+          type="application/feed+json"
+          title="Avinash Sangle - Blog JSON Feed"
+          href="https://avinashsangle.com/feed.json"
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

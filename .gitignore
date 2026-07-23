@@ -50,3 +50,30 @@ __pycache__/
 
 # Python virtualenv for scripts/ (see requirements.txt)
 venv/
+
+# AI coding-tool local config/scratch dirs (not project artifacts)
+.agents/
+.codebuddy/
+.commandcode/
+.continue/
+.crush/
+.factory/
+.goose/
+.junie/
+.kilocode/
+.kiro/
+.kode/
+.mcpjam/
+.mux/
+.neovate/
+.openhands/
+.pi/
+.pochi/
+.qoder/
+.qwen/
+.roo/
+.trae/
+.windsurf/
+.zencoder/
+.playwright-mcp/
+/.claude/scheduled_tasks.lock

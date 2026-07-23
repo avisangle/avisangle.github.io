@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:02,163
+Most developers have no idea what they're
+
+2
+00:00:02,207 --> 00:00:03,439
+spending on Claude Code.
+
+3
+00:00:03,951 --> 00:00:06,120
+Your usage is already tracked.
+
+4
+00:00:06,193 --> 00:00:09,678
+Three slash commands — cost, stats,
+
+5
+00:00:09,718 --> 00:00:11,598
+and usage — built right in.
+
+6
+00:00:11,738 --> 00:00:13,921
+And every session lives in a hidden
+
+7
+00:00:14,001 --> 00:00:17,360
+JSONL file under dot-claude-projects.
+
+8
+00:00:18,100 --> 00:00:20,325
+The biggest cost lever is one environment
+
+9
+00:00:20,378 --> 00:00:20,962
+variable.
+
+10
+00:00:21,162 --> 00:00:23,318
+Cap your thinking tokens.
+
+11
+00:00:23,406 --> 00:00:25,357
+This single line can cut your bill
+
+12
+00:00:25,384 --> 00:00:26,238
+in half.
+
+13
+00:00:26,598 --> 00:00:28,639
+A heavy session can burn twenty dollars
+
+14
+00:00:28,692 --> 00:00:29,278
+or more.
+
+15
+00:00:29,390 --> 00:00:32,236
+With three tweaks — Sonnet by default,
+
+16
+00:00:32,316 --> 00:00:35,433
+thinking caps, and context resets —
+
+17
+00:00:35,473 --> 00:00:37,670
+you drop that by fifty percent.
+
+18
+00:00:38,203 --> 00:00:39,828
+Seven full tactics.
+
+19
+00:00:39,956 --> 00:00:42,067
+Full breakdown is on the blog.
+
+20
+00:00:42,211 --> 00:00:43,750
+Link in the description.

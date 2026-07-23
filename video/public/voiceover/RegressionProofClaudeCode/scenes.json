@@ -1,0 +1,66 @@
+{
+  "compositionId": "RegressionProofClaudeCode",
+  "voiceId": "nPczCjzI2devNBz1zQrb",
+  "modelId": "eleven_v3",
+  "voiceSettings": {
+    "stability": 0.75,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "use_speaker_boost": true
+  },
+  "masterFile": "master.mp3",
+  "fps": 30,
+  "audioOffsetFrames": 15,
+  "sceneSeparators": {
+    "default": " ... ",
+    "bridge": " "
+  },
+  "audioDurationSeconds": 60.39,
+  "scenes": [
+    {
+      "id": "scene-1-title",
+      "text": "This morning Anthropic patched four Claude Code regressions. Their evals never caught a single one. Here's how I catch mine.",
+      "spokenText": "This morning Anthropic patched four Claude Code regressions. Their evals never caught a single one. Here's how I catch mine.",
+      "startSeconds": 0,
+      "durationSeconds": 8.371,
+      "bridge": false,
+      "precedingSeparator": ""
+    },
+    {
+      "id": "scene-2-stats",
+      "text": "Seven weeks of silent regressions, eight bugs filed in a day, fifty times quota burn from the wrapper bug in March — and the only reason mine didn't break was three lines of config.",
+      "spokenText": "Seven weeks of silent regressions, eight bugs filed in a day, fifty times quota burn from the wrapper bug in March — and the only reason mine didn't break was three lines of config.",
+      "startSeconds": 8.371,
+      "durationSeconds": 12.568,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-3-code",
+      "text": "Pin the CLI — uninstall global, reinstall the last verified release, lock the version line in npmrc so future updates can't touch you.",
+      "spokenText": "Pin the C L I — uninstall global, reinstall the last verified release, lock the version line in N P M R C so future updates can't touch you.",
+      "startSeconds": 20.939,
+      "durationSeconds": 11.409999999999997,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-4-settings-hook",
+      "text": "Then settings.json — set the effort level and a model allowlist, because that's where Anthropic's silent defaults sneak in. And a Python stop hook that replays five golden prompts every session, with expected outputs committed to the repo. It's your CI, for a CLI that doesn't ship one.",
+      "spokenText": "Then settings.json — set the effort level and a model allowlist, because that's where Anthropic's silent defaults sneak in. And a Python stop hook that replays five golden prompts every session, with expected outputs committed to the repo. It's your CI, for a C L I that doesn't ship one.",
+      "startSeconds": 32.349,
+      "durationSeconds": 21.218000000000004,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    },
+    {
+      "id": "scene-5-outro",
+      "text": "Anthropic will ship the next regression. Your config doesn't have to. Link in the description for the full breakdown.",
+      "spokenText": "Anthropic will ship the next regression. Your config doesn't have to. Link in the description for the full breakdown.",
+      "startSeconds": 53.567,
+      "durationSeconds": 6.823,
+      "bridge": false,
+      "precedingSeparator": " ... "
+    }
+  ]
+}

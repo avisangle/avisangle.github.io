@@ -1,0 +1,27 @@
+{
+  "format": "short",
+  "title": "3 Reasons to Route Agent Tasks to Gemini 3.5 Flash, Not Claude",
+  "description": "Gemini 3.5 Flash went GA on May 19 and it beats Google's own Pro on agent benchmarks. For a Claude Code user, the question is when to route a task off Claude — and these are the three reasons it's worth it.\n\n1. Price — $1.50 in / $9 out per 1M tokens, roughly a third of an Opus agent loop.\n2. Tool use — ~84% on the MCP tool-calling benchmark, past Claude Opus 4.7.\n3. Routing — send tool-heavy planning to Flash, keep repo edits on Claude Code.\n\nThe catch: Flash defaults to high reasoning on every call, quietly inflating cost 30-50% on long agent loops. Turn the thinking level down to low and you get the price you were promised.\n\n🔗 Full breakdown: https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide\n\n#gemini #geminiflash #aicoding #claudecode #mcp #agenticai #aitools #coding",
+  "tags": [
+    "gemini 3.5 flash",
+    "gemini flash",
+    "agentic coding",
+    "claude code",
+    "mcp",
+    "ai coding tools",
+    "model routing",
+    "gemini api",
+    "terminal bench",
+    "thinking level",
+    "ai agents",
+    "claude vs gemini",
+    "opus 4.7",
+    "ai coding 2026"
+  ],
+  "categoryId": "28",
+  "privacy": "private",
+  "selfDeclaredMadeForKids": false,
+  "embeddable": true,
+  "blogUrl": "https://avinashsangle.com/blog/gemini-3-5-flash-agentic-coding-guide",
+  "compositionId": "Gemini35Flash"
+}

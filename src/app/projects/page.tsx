@@ -14,6 +14,7 @@ import { getAllProjects, getCategories, getTechnologies } from "@/data/projects"
 import { ProjectsClient } from "./projects-client"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects" },
   title: "All Projects | Avinash Sangle Portfolio",
   description:
     "Browse all projects by Avinash Sangle including AI automation, DevOps tools, cloud infrastructure, and MCP servers. Filter by category, technology, or search.",

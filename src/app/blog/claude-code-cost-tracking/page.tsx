@@ -8,6 +8,7 @@ import { Breadcrumb } from "@/components/breadcrumb"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Code Cost Tracking: Monitor and Cut Your Spending",
@@ -1120,6 +1121,8 @@ export MAX_THINKING_TOKENS=10000
           </div>
         </div>
       </section>
+
+      <PostNavigation slug="claude-code-cost-tracking" />
     </>
   )
 }

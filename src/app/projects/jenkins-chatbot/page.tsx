@@ -10,6 +10,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/jenkins-chatbot" },
   title: "Jenkins Chatbot Plugin | Conversational AI for CI/CD",
   description:
     "AI-powered conversational interface for Jenkins to manage builds and deployments via natural language commands. Secure integration with Jenkins RBAC.",

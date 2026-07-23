@@ -9,6 +9,7 @@ import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Clawdbot Setup Guide: Your Personal AI Assistant 2026",
@@ -1661,6 +1662,8 @@ tail -f ~/Library/Logs/clawdbot/clawdbot.log`} />
           </div>
         </div>
       </section>
+
+      <PostNavigation slug="clawdbot-guide" />
     </>
   )
 }

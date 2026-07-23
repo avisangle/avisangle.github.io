@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Managed Agents Outcomes: Auto-Grading Agent Work",
@@ -150,6 +152,26 @@ const breadcrumbSchema = JSON.stringify({
   ],
 })
 
+const videoObjectSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Anthropic's New Auto-Grader Fixed My Agent's Broken .docx",
+  description:
+    "Anthropic shipped auto-grading for Managed Agents on May 6, 2026. A separate Claude grades each draft against a plain-English checklist, and the writer keeps revising until it passes.",
+  thumbnailUrl: [
+    "https://i.ytimg.com/vi/MTBcpXQxwfE/maxresdefault.jpg",
+  ],
+  uploadDate: "2026-05-13",
+  duration: "PT57S",
+  contentUrl: "https://www.youtube.com/watch?v=MTBcpXQxwfE",
+  embedUrl: "https://www.youtube.com/embed/MTBcpXQxwfE",
+  publisher: {
+    "@type": "Person",
+    name: "Avinash Sangle",
+    url: "https://avinashsangle.com",
+  },
+})
+
 const faqSchema = JSON.stringify({
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -236,6 +258,10 @@ export default function ClaudeManagedAgentsOutcomesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: faqSchema }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: videoObjectSchema }}
+      />
 
       <div className="container-project py-12">
         <Breadcrumb
@@ -285,6 +311,20 @@ export default function ClaudeManagedAgentsOutcomesPage() {
             ))}
           </div>
         </header>
+
+        {/* YouTube Short — 9:16 embed */}
+        <div className="mx-auto my-8 w-full max-w-md">
+          <div className="aspect-[9/16] overflow-hidden rounded-2xl border border-border">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/MTBcpXQxwfE"
+              title="Anthropic's New Auto-Grader Fixed My Agent's Broken .docx"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
 
         {/* Table of Contents */}
         <Card className="mb-12">
@@ -1204,6 +1244,9 @@ for f in files.data:
           </CardContent>
         </Card>
       </div>
+
+      <RelatedPosts slug="claude-managed-agents-outcomes" />
+      <PostNavigation slug="claude-managed-agents-outcomes" />
     </>
   )
 }

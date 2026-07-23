@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Mythos: What It Means for Devs Who Can't Use It",
@@ -844,6 +846,9 @@ print(message.content[0].text)`} />
           </div>
         </div>
       </section>
+
+      <RelatedPosts slug="claude-mythos-preview" />
+      <PostNavigation slug="claude-mythos-preview" />
     </>
   )
 }

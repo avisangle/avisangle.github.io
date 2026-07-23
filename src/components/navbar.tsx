@@ -9,12 +9,13 @@ import { Separator } from "@/components/ui/separator"
 
 const navLinks: { name: string; href: string; external?: boolean }[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/#about" },
+  { name: "About", href: "/about" },
   { name: "Projects", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
   { name: "Blog", href: "/blog" },
+  { name: "Topics", href: "/topics" },
   { name: "Services", href: "/services" },
-  { name: "Contact", href: "/#contact" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Navbar() {

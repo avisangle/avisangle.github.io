@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "GPT-5.6 Programmatic Tool Calling Guide",
@@ -974,6 +975,8 @@ followup = client.responses.create(
           </div>
         </section>
       </div>
+
+      <PostNavigation slug="gpt-5-6-programmatic-tool-calling-guide" />
     </>
   )
 }

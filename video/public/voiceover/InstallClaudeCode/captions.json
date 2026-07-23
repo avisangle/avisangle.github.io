@@ -1,0 +1,856 @@
+[
+  {
+    "text": " Most",
+    "startMs": 0,
+    "endMs": 320,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " install",
+    "startMs": 380,
+    "endMs": 800,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " guides",
+    "startMs": 857,
+    "endMs": 1199,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " for",
+    "startMs": 1239,
+    "endMs": 1359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude",
+    "startMs": 1416,
+    "endMs": 1758,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Code",
+    "startMs": 1838,
+    "endMs": 2158,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " are",
+    "startMs": 2258,
+    "endMs": 2558,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " out",
+    "startMs": 2598,
+    "endMs": 2718,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " of",
+    "startMs": 2771,
+    "endMs": 2877,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " date.",
+    "startMs": 2925,
+    "endMs": 3197,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Use",
+    "startMs": 3397,
+    "endMs": 3997,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " this.",
+    "startMs": 4061,
+    "endMs": 4397,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 4477,
+    "endMs": 4717,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " One",
+    "startMs": 4777,
+    "endMs": 4957,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " line.",
+    "startMs": 5021,
+    "endMs": 5357,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Mac,",
+    "startMs": 5557,
+    "endMs": 6237,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Linux,",
+    "startMs": 6344,
+    "endMs": 6959,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " W",
+    "startMs": 7239,
+    "endMs": 7519,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " S",
+    "startMs": 7639,
+    "endMs": 7759,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " L",
+    "startMs": 7879,
+    "endMs": 7999,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 8239,
+    "endMs": 8479,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " all",
+    "startMs": 8539,
+    "endMs": 8719,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 8739,
+    "endMs": 8799,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " same.",
+    "startMs": 8879,
+    "endMs": 9359,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Pipe",
+    "startMs": 9503,
+    "endMs": 10079,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " curl",
+    "startMs": 10159,
+    "endMs": 10479,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " into",
+    "startMs": 10527,
+    "endMs": 10719,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " bash.",
+    "startMs": 10815,
+    "endMs": 11279,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Claude",
+    "startMs": 11382,
+    "endMs": 12000,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Code",
+    "startMs": 12048,
+    "endMs": 12240,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " installs",
+    "startMs": 12311,
+    "endMs": 12879,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 12932,
+    "endMs": 13038,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " about",
+    "startMs": 13078,
+    "endMs": 13278,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " thirty",
+    "startMs": 13312,
+    "endMs": 13516,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " seconds.",
+    "startMs": 13586,
+    "endMs": 14236,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 14423,
+    "endMs": 14797,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " N",
+    "startMs": 14917,
+    "endMs": 15037,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " P",
+    "startMs": 15157,
+    "endMs": 15277,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " M.",
+    "startMs": 15397,
+    "endMs": 15597,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 15784,
+    "endMs": 16158,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Node",
+    "startMs": 16222,
+    "endMs": 16478,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " required.",
+    "startMs": 16540,
+    "endMs": 17116,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 17236,
+    "endMs": 17596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Now",
+    "startMs": 17636,
+    "endMs": 17756,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " type",
+    "startMs": 17836,
+    "endMs": 18156,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " claude.",
+    "startMs": 18276,
+    "endMs": 19036,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Browser",
+    "startMs": 19146,
+    "endMs": 19916,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " opens.",
+    "startMs": 19996,
+    "endMs": 20476,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Sign",
+    "startMs": 20636,
+    "endMs": 21276,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 21329,
+    "endMs": 21435,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " with",
+    "startMs": 21467,
+    "endMs": 21595,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " your",
+    "startMs": 21627,
+    "endMs": 21755,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Anthropic",
+    "startMs": 21819,
+    "endMs": 22395,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " account",
+    "startMs": 22465,
+    "endMs": 22955,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 23155,
+    "endMs": 23355,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Pro,",
+    "startMs": 23455,
+    "endMs": 23835,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Team,",
+    "startMs": 23963,
+    "endMs": 24555,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " or",
+    "startMs": 24662,
+    "endMs": 24876,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Console",
+    "startMs": 24966,
+    "endMs": 25596,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 25756,
+    "endMs": 25916,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " and",
+    "startMs": 25936,
+    "endMs": 25996,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " that's",
+    "startMs": 26044,
+    "endMs": 26316,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " it.",
+    "startMs": 26369,
+    "endMs": 26635,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " No",
+    "startMs": 26875,
+    "endMs": 27355,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 27475,
+    "endMs": 27595,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " P",
+    "startMs": 27675,
+    "endMs": 27755,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " I",
+    "startMs": 27835,
+    "endMs": 27915,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " keys",
+    "startMs": 28011,
+    "endMs": 28395,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " to",
+    "startMs": 28422,
+    "endMs": 28476,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " wrangle.",
+    "startMs": 28529,
+    "endMs": 29035,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " You're",
+    "startMs": 29115,
+    "endMs": 29436,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in.",
+    "startMs": 29543,
+    "endMs": 29837,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 29977,
+    "endMs": 30397,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " The",
+    "startMs": 30417,
+    "endMs": 30477,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " native",
+    "startMs": 30534,
+    "endMs": 30876,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " installer",
+    "startMs": 30940,
+    "endMs": 31516,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " auto-updates",
+    "startMs": 31580,
+    "endMs": 32316,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 32343,
+    "endMs": 32397,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 32417,
+    "endMs": 32477,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " background.",
+    "startMs": 32535,
+    "endMs": 33195,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " That's",
+    "startMs": 33323,
+    "endMs": 33915,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 33955,
+    "endMs": 34075,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " real",
+    "startMs": 34155,
+    "endMs": 34475,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " upgrade",
+    "startMs": 34535,
+    "endMs": 34955,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " over",
+    "startMs": 35003,
+    "endMs": 35195,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " N",
+    "startMs": 35275,
+    "endMs": 35355,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " P",
+    "startMs": 35475,
+    "endMs": 35595,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " M.",
+    "startMs": 35715,
+    "endMs": 35915,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " One",
+    "startMs": 36075,
+    "endMs": 36555,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " command,",
+    "startMs": 36635,
+    "endMs": 37515,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " zero",
+    "startMs": 37595,
+    "endMs": 37915,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " deps.",
+    "startMs": 38011,
+    "endMs": 38475,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Heads",
+    "startMs": 38595,
+    "endMs": 39195,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " up",
+    "startMs": 39275,
+    "endMs": 39435,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 39675,
+    "endMs": 39915,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Windows",
+    "startMs": 39975,
+    "endMs": 40395,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " users",
+    "startMs": 40462,
+    "endMs": 40797,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " still",
+    "startMs": 40837,
+    "endMs": 41037,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " need",
+    "startMs": 41085,
+    "endMs": 41277,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Git",
+    "startMs": 41337,
+    "endMs": 41517,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " for",
+    "startMs": 41557,
+    "endMs": 41677,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Windows",
+    "startMs": 41727,
+    "endMs": 42077,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " first.",
+    "startMs": 42157,
+    "endMs": 42877,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " ...",
+    "startMs": 42957,
+    "endMs": 43197,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " That's",
+    "startMs": 43213,
+    "endMs": 43437,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 43477,
+    "endMs": 43597,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " new",
+    "startMs": 43637,
+    "endMs": 43757,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " install.",
+    "startMs": 43817,
+    "endMs": 44397,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Most",
+    "startMs": 44525,
+    "endMs": 45037,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " tutorials",
+    "startMs": 45093,
+    "endMs": 45597,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " are",
+    "startMs": 45637,
+    "endMs": 45757,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " still",
+    "startMs": 45784,
+    "endMs": 45919,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " teaching",
+    "startMs": 45963,
+    "endMs": 46315,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " the",
+    "startMs": 46355,
+    "endMs": 46475,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " old",
+    "startMs": 46515,
+    "endMs": 46635,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " one.",
+    "startMs": 46695,
+    "endMs": 47035,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " Full",
+    "startMs": 47163,
+    "endMs": 47675,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " series",
+    "startMs": 47755,
+    "endMs": 48235,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " —",
+    "startMs": 48435,
+    "endMs": 48635,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " link",
+    "startMs": 48683,
+    "endMs": 48875,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " in",
+    "startMs": 48955,
+    "endMs": 49115,
+    "timestampMs": null,
+    "confidence": null
+  },
+  {
+    "text": " description.",
+    "startMs": 49168,
+    "endMs": 49831,
+    "timestampMs": null,
+    "confidence": null
+  }
+]

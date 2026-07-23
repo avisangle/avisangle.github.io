@@ -10,6 +10,7 @@ import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
 export const metadata: Metadata = {
+  alternates: { canonical: "https://avinashsangle.com/projects/method-crm-mcp" },
   title: "Method CRM MCP Server | Production-Ready CRM Integration",
   description:
     "Production-ready Model Context Protocol server for Method CRM API integration. 20 comprehensive tools enabling LLMs to interact with Method CRM data.",

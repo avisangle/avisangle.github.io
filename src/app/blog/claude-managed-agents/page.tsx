@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { RelatedPosts } from "@/components/related-posts"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Claude Managed Agents vs Agent SDK: Which Should You Use?",
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "Avinash Sangle",
     type: "article",
     publishedTime: "2026-04-09T00:00:00.000Z",
-    modifiedTime: "2026-04-16T00:00:00.000Z",
+    modifiedTime: "2026-05-17T00:00:00.000Z",
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -112,7 +114,7 @@ const techArticleSchema = JSON.stringify({
     url: "https://avinashsangle.com",
   },
   datePublished: "2026-04-09",
-  dateModified: "2026-04-16",
+  dateModified: "2026-05-17",
   mainEntityOfPage: {
     "@type": "WebPage",
     "@id": "https://avinashsangle.com/blog/claude-managed-agents",
@@ -170,10 +172,26 @@ const faqSchema = JSON.stringify({
     },
     {
       "@type": "Question",
-      name: "What is the difference between Claude Managed Agents and the Agent SDK?",
+      name: "What is the difference between Claude Managed Agents and the Claude Agent SDK?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Managed Agents is a hosted service where Anthropic runs the agent harness, sandbox, and runtime for you. The Claude Agent SDK is a library that exposes the same engine, letting you run agents in your own infrastructure. Managed Agents is for production; the SDK is for custom runtimes.",
+        text: "Claude Managed Agents is a hosted service where Anthropic runs the agent harness, sandbox, session persistence, and runtime for you, billed at $0.08 per active session-hour with the first 50 hours per day free across all sessions. The Claude Agent SDK is the same engine packaged as a Python or TypeScript library that you self-host on your own infrastructure with no session fee. Managed Agents trades control for convenience; the SDK trades operational overhead for full control.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "When should I use Claude Managed Agents instead of the Agent SDK?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Use Managed Agents for long-running async workloads, background jobs, multi-hour tasks, and any agent where session persistence across crashes matters more than custom runtime control. Use the Agent SDK when you need local file access, private network access, latency-sensitive user-facing flows, or full control over how the agent loop executes. A common hybrid pattern is prototyping on Managed Agents, then migrating to the SDK once the agent's tool surface and runtime needs stabilize.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I migrate from Claude Managed Agents to the Agent SDK later?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Both options use the same underlying agent engine, the same Claude models, and the same MCP server pattern for tool integration. Migration is mostly a deployment and configuration change: lift the system prompt, the MCP server connections, and the model choice from the Managed Agents session config into an Agent SDK process you host yourself. Prompts and tools port over without rewrites.",
       },
     },
     {
@@ -303,7 +321,7 @@ export default function ClaudeManagedAgentsPage() {
               <ul className="skill-list">
                 <li><strong>Managed Agents</strong> = Anthropic runs the agent harness, sandbox, and runtime for you (hosted, beta)</li>
                 <li><strong>Agent SDK</strong> = you run the same engine yourself, with full control over infrastructure</li>
-                <li>Pricing: standard token rates + <strong>$0.08 per session-hour</strong> of active runtime + $10 per 1,000 web searches</li>
+                <li>Pricing: standard token rates + <strong>$0.08 per active session-hour</strong> (first 50 hours/day free across all sessions) + $10 per 1,000 web searches</li>
                 <li>Early adopters: Notion, Rakuten, Asana - focused on long-running enterprise workflows</li>
                 <li>Beta header required: <code>managed-agents-2026-04-01</code></li>
               </ul>
@@ -535,7 +553,8 @@ export default function ClaudeManagedAgentsPage() {
           <p className="text-lg leading-relaxed mb-6">
             The pricing model has three components. Standard Claude API token rates cover the
             model inference. On top of that, you pay $0.08 per session-hour of active runtime
-            (measured in milliseconds, so idle time doesn&apos;t count). Web searches cost an
+            (measured in milliseconds, so idle time doesn&apos;t count) - and the first 50
+            session-hours per day across all your sessions are free. Web searches cost an
             extra $10 per 1,000 queries. Per{" "}
             <Link href="https://thenewstack.io/with-claude-managed-agents-anthropic-wants-to-run-your-ai-agents-for-you/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
               The New Stack&apos;s analysis
@@ -828,6 +847,34 @@ print(response.content[0].text)`} />
         </div>
       </section>
 
+      {/* Going Deeper Callout */}
+      <section className="section">
+        <div className="container-project">
+          <Card className="card-accent-left">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <CategoryIcon icon="ArrowRight" size="sm" /> Going deeper: grading what your agent produces
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                Once you&apos;ve picked Managed Agents and shipped an agent, the next problem is
+                knowing whether the work it produced is actually good. Anthropic launched{" "}
+                <strong>Outcomes</strong> on May 6, 2026 as a grading layer that runs on top of
+                Managed Agents - the agent does the work, then a separate grader pass checks the
+                output against a rubric you define and either accepts it or sends it back for
+                revision. See my walkthrough:{" "}
+                <Link href="/blog/claude-managed-agents-outcomes" className="text-accent hover:underline font-semibold">
+                  Claude Managed Agents Outcomes: Auto-Grading Agent Work
+                </Link>
+                . That post covers the API surface, rubric anti-patterns, the five-state result
+                table, and the cost math for iteration caps.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="section section-alt">
         <div className="container-project">
@@ -859,13 +906,45 @@ print(response.content[0].text)`} />
             </AccordionItem>
 
             <AccordionItem value="faq-3">
-              <AccordionTrigger>What is the difference between Claude Managed Agents and the Agent SDK?</AccordionTrigger>
+              <AccordionTrigger>What is the difference between Claude Managed Agents and the Claude Agent SDK?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  Managed Agents is a hosted service where Anthropic runs the agent harness,
-                  sandbox, and runtime for you. The Claude Agent SDK is a library that exposes
-                  the same engine, letting you run agents in your own infrastructure. Managed
-                  Agents is for production; the SDK is for custom runtimes.
+                  Claude Managed Agents is a hosted service where Anthropic runs the agent
+                  harness, sandbox, session persistence, and runtime for you, billed at $0.08
+                  per active session-hour with the first 50 hours per day free across all
+                  sessions. The Claude Agent SDK is the same engine packaged as a Python or
+                  TypeScript library that you self-host on your own infrastructure with no
+                  session fee. Managed Agents trades control for convenience; the SDK trades
+                  operational overhead for full control.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3b">
+              <AccordionTrigger>When should I use Claude Managed Agents instead of the Agent SDK?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Use Managed Agents for long-running async workloads, background jobs,
+                  multi-hour tasks, and any agent where session persistence across crashes
+                  matters more than custom runtime control. Use the Agent SDK when you need
+                  local file access, private network access, latency-sensitive user-facing
+                  flows, or full control over how the agent loop executes. A common hybrid
+                  pattern is prototyping on Managed Agents, then migrating to the SDK once
+                  the agent&apos;s tool surface and runtime needs stabilize.
+                </p>
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="faq-3c">
+              <AccordionTrigger>Can I migrate from Claude Managed Agents to the Agent SDK later?</AccordionTrigger>
+              <AccordionContent>
+                <p>
+                  Yes. Both options use the same underlying agent engine, the same Claude
+                  models, and the same MCP server pattern for tool integration. Migration is
+                  mostly a deployment and configuration change: lift the system prompt, the
+                  MCP server connections, and the model choice from the Managed Agents session
+                  config into an Agent SDK process you host yourself. Prompts and tools port
+                  over without rewrites.
                 </p>
               </AccordionContent>
             </AccordionItem>
@@ -960,6 +1039,9 @@ print(response.content[0].text)`} />
           </div>
         </div>
       </section>
+
+      <RelatedPosts slug="claude-managed-agents" />
+      <PostNavigation slug="claude-managed-agents" />
     </>
   )
 }

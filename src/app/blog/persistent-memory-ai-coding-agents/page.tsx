@@ -6,6 +6,7 @@ import { CodeBlock } from "@/components/ui/code-block"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { CategoryIcon } from "@/components/icons/category-icon"
 import Link from "next/link"
+import { PostNavigation } from "@/components/post-navigation"
 
 export const metadata: Metadata = {
   title: "Persistent Memory for AI Coding Agents Beyond CLAUDE.md",
@@ -1030,6 +1031,8 @@ open http://localhost:3113
           </Card>
         </section>
       </article>
+
+      <PostNavigation slug="persistent-memory-ai-coding-agents" />
     </>
   )
 }

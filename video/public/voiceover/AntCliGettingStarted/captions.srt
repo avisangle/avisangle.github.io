@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:03,120
+Anthropic's ant CLI dropped a month ago
+
+2
+00:00:03,460 --> 00:00:05,599
+and most devs still haven't tried it.
+
+3
+00:00:05,946 --> 00:00:08,721
+Their command-line tool for managed agents three
+
+4
+00:00:08,751 --> 00:00:11,202
+hundred GitHub stars in ten days, and
+
+5
+00:00:11,242 --> 00:00:13,920
+the whole thing reads like kubectl, but
+
+6
+00:00:13,960 --> 00:00:14,723
+for Claude.
+
+7
+00:00:14,843 --> 00:00:17,203
+Install with one brew command.
+
+8
+00:00:17,317 --> 00:00:20,077
+Define an agent as a YAML file,
+
+9
+00:00:20,117 --> 00:00:21,600
+check it into git like any other
+
+10
+00:00:21,703 --> 00:00:24,403
+config the full create command fits on
+
+11
+00:00:24,463 --> 00:00:27,529
+one line: ant beta agents create,
+
+12
+00:00:27,625 --> 00:00:30,408
+with a name, a model, a system
+
+13
+00:00:30,465 --> 00:00:32,089
+prompt, and a tool block.
+
+14
+00:00:32,233 --> 00:00:34,728
+That's a working code reviewer agent.
+
+15
+00:00:34,941 --> 00:00:37,925
+No app code, no runtime to host,
+
+16
+00:00:37,978 --> 00:00:40,724
+no scaling tickets pricing is the part
+
+17
+00:00:40,772 --> 00:00:44,241
+most coverage skips eight cents per session-hour,
+
+18
+00:00:44,332 --> 00:00:47,041
+billed to the millisecond, so a typical
+
+19
+00:00:47,121 --> 00:00:49,927
+one-hour Opus session lands around seventy cents
+
+20
+00:00:50,007 --> 00:00:50,806
+end-to-end.
+
+21
+00:00:51,206 --> 00:00:53,364
+MCP servers plug in if you need
+
+22
+00:00:53,421 --> 00:00:54,603
+custom tools.
+
+23
+00:00:55,023 --> 00:00:57,124
+Ten minutes from brew install to a
+
+24
+00:00:57,168 --> 00:00:58,002
+deployed agent.
+
+25
+00:00:58,162 --> 00:01:00,441
+Most devs still haven't tried it.
+
+26
+00:01:00,513 --> 00:01:01,756
+Link in the description.
