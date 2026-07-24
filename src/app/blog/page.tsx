@@ -58,6 +58,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach",
+                url: "https://avinashsangle.com/blog/sandbox-ai-agents-hugging-face-breach",
+                datePublished: "2026-07-25",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "MCP Goes Stateless: Migrating Your Servers to the 2026 Spec",
                 url: "https://avinashsangle.com/blog/mcp-stateless-spec-migration-guide",
                 datePublished: "2026-07-23",
@@ -289,23 +296,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Network" size="xl" className="mx-auto" />
+              <CategoryIcon icon="ShieldAlert" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">MCP Goes Stateless: Migrating Your Servers to the 2026 Spec</h3>
+                <p className="text-accent font-semibold mb-2">AI SECURITY</p>
+                <h3 className="text-2xl font-bold mb-4">Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  The 2026-07-28 MCP spec drops the initialize handshake and session
-                  IDs, so any server instance can handle any request. A maintainer&apos;s
-                  migration guide: request diffs, routing headers, deprecations, and
-                  OAuth 2.1.
+                  OpenAI&apos;s models escaped a sandbox and breached Hugging Face. The
+                  three-link failure chain, why the same holes sit on your laptop, and
+                  the Claude Code sandbox config that closes them.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 23, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 25, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/mcp-stateless-spec-migration-guide">Read Article →</Link>
+                  <Link href="/blog/sandbox-ai-agents-hugging-face-breach">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -318,6 +324,28 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="ShieldAlert" size="lg" animation="pulse" />
+                <CardTitle>Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  OpenAI&apos;s models escaped a sandbox and breached Hugging Face. The
+                  three-link failure chain, why the same holes sit on your laptop, and
+                  the Claude Code <code>settings.json</code> config that closes them.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 25, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/sandbox-ai-agents-hugging-face-breach" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Network" size="lg" animation="pulse" />

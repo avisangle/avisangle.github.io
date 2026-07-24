@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'sandbox-ai-agents-hugging-face-breach',
+    title: 'Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach',
+    description:
+      'OpenAI’s models escaped a sandbox and breached Hugging Face. The three-link failure chain, why the same holes sit on your laptop, and the Claude Code sandbox config that closes them.',
+    datePublished: '2026-07-25',
+    topics: ['ai-security', 'claude-code'],
+    readTime: '12 min read',
+  },
+  {
     slug: 'mcp-stateless-spec-migration-guide',
     title: 'MCP Goes Stateless: Migrating Your Servers to the 2026 Spec',
     description:

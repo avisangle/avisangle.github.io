@@ -1,5 +1,16 @@
 # Progress Log
 
+## 2026-07-25
+
+- Merged topic-suggestion PR #54 (squash 3ad1324), then ran /research-topic + /write-blogpost.
+- Published blog post: "Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach" at /blog/sandbox-ai-agents-hugging-face-breach (AI Security, ~2,800 words, 12 min, 8 FAQ items, 4 code blocks). Schemas: TechArticle, BreadcrumbList, FAQPage.
+- metadata.title 42 chars (rendered 59 <= 60); description 152; OG/H1 62.
+- Angle: the incident reduced to a three-link failure chain (one egress path with code in it / objective pressure with guardrails off / no default-deny downstream), mapped onto a default laptop agent, then closed with real Claude Code sandbox settings.json. Differentiator vs vendor posts: states plainly that the allowlist is not a boundary, citing CVE-2026-25725 (SOCKS5 null-byte parser differential, v2.0.24-2.1.89, fixed v2.1.90) and the no-TLS-inspection default.
+- Verified against primary sources: OpenAI disclosure, Hugging Face incident report (17,000+ recorded events), TechCrunch (Guido/Williams quotes), code.claude.com/docs/en/sandboxing (version floors 2.1.187/2.1.199/2.1.216).
+- No first-party Bing demand: bing_report.py returns 25 queries/120 days, none security-related. New topic cluster for the site; traffic estimate flagged speculative in the brief. FAQ seeds autocomplete/PAA-derived.
+- Slug shortened from PR #54's suggested `sandbox-ai-agents-openai-hugging-face-breach` to `sandbox-ai-agents-hugging-face-breach` to match site convention.
+- Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
+
 ## 2026-07-23
 
 - Published blog post: "MCP Goes Stateless: Migrating Your Servers to the 2026 Spec" at /blog/mcp-stateless-spec-migration-guide (AI Development, ~2,800 words, 12 min). Maintainer's migration guide for the MCP 2026-07-28 stateless spec: before/after request diff, capability discovery via _meta + server/discover, Mcp-Method/Mcp-Name routing headers, SSE -> Multi Round-Trip, Extensions framework (Apps + Tasks), Roots/Sampling/Logging deprecations, six OAuth 2.1 SEPs, migration checklist. First-party angle: author's jenkins-mcp, method-crm-mcp, wp-mcp servers. Facts verified against primary sources (official RC post, NSA CSI, SDK betas post). Schemas: TechArticle, BreadcrumbList, HowTo, FAQPage. Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Merged topic-suggestion PR #52 first.

@@ -8,6 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'sandbox-ai-agents-hugging-face-breach',
+      lastModified: '2026-07-25',
+    },
+    {
       slug: 'mcp-stateless-spec-migration-guide',
       lastModified: '2026-07-23',
     },
