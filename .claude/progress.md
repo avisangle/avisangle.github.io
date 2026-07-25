@@ -10,6 +10,10 @@
 - No first-party Bing demand: bing_report.py returns 25 queries/120 days, none security-related. New topic cluster for the site; traffic estimate flagged speculative in the brief. FAQ seeds autocomplete/PAA-derived.
 - Slug shortened from PR #54's suggested `sandbox-ai-agents-openai-hugging-face-breach` to `sandbox-ai-agents-hugging-face-breach` to match site convention.
 - Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
+- /promote-blogpost: OG image generated + 5 social drafts (commit d5eab21). All 4 scripted platforms pass --dry-run. Sitemap resubmitted to GSC.
+- Reddit: user chose r/ClaudeAI only (single post block). Raw registry scoring tied r/cybersecurity and r/netsec at the top but both are low friendliness, and r/netsec's `avoid` list rejects how-to runbooks.
+- `list_reddit_flairs.py ClaudeAI` returned 401, so flair "Coding" was taken from ant-cli POSTED.md history (where "Tutorial" was rejected) rather than verified live. Re-check if posting fails.
+- Twitter draft is 3641 chars, above the skill's 1800-2500 aim (hard limit 25k). Kept the CVE-2026-25725 detail rather than trim the differentiator.
 
 ## 2026-07-23
 
