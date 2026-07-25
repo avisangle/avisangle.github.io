@@ -139,7 +139,7 @@ Before (`.gemini/settings.json`):
 {
   "mcpServers": {
     "github": {
-      "url": "https://mcp.github.com",
+      "url": "https://api.githubcopilot.com/mcp/",
       "auth": "oauth"
     }
   }
@@ -152,7 +152,7 @@ After (`.agents/mcp_config.json`):
 {
   "servers": {
     "github": {
-      "serverUrl": "https://mcp.github.com",
+      "serverUrl": "https://api.githubcopilot.com/mcp/",
       "auth": "oauth"
     }
   }
