@@ -3,12 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Vercel deployment configuration
 
-  async rewrites() {
-    return [
-      { source: '/projects/trending-scout', destination: 'https://trending-repo-scout.aavi-sangle.workers.dev/' },
-      { source: '/projects/trending-scout/:path*', destination: 'https://trending-repo-scout.aavi-sangle.workers.dev/:path*' },
-    ]
-  },
+  // /projects/trending-scout is now served by a Route Handler
+  // (src/app/projects/trending-scout/route.ts) that pulls the dashboard from
+  // the scout repo — no external rewrite / Cloudflare Worker anymore.
 
   async redirects() {
     return [
