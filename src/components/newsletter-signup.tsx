@@ -35,6 +35,11 @@ export function NewsletterSignup() {
       const data = await res.json().catch(() => null)
       if (data?.status === "success") {
         setStatus("success")
+      } else if (data?.status === "quarantined" && data?.url) {
+        // Kit's spam guard. The subscriber is not created until the visitor
+        // clears the challenge at data.url, so send them there rather than
+        // showing an error they cannot act on.
+        window.location.href = data.url
       } else {
         setStatus("error")
         setError("Something went wrong. Please try again.")

@@ -849,3 +849,24 @@ Follow-up to the SEO branch. Added `alternates.canonical` to `/`, `/blog`, `/pro
 Homepage had no `metadata` export at all (inherited the root layout wholesale), so it got a minimal one carrying only the canonical — with a comment explaining why this must NOT be hoisted to the layout (shallow merge would point every uncanonical page at the homepage; see `docs/decisions/D-SEO-02`).
 Verified against built HTML: 56/56 pages have a self-canonical exactly matching their own route, 0 mismatches, 0 trailing slashes, and feed autodiscovery still present on 56/56.
 Visual check via Playwright on localhost: `/topics`, `/about`, and the post footer (related cards + topic chips + prev/next) all render native to the existing design.
+
+## 2026-07-26 — Newsletter subscription diagnosis (no code changes)
+Traced why new-post emails never arrive. Only mechanism is `src/components/newsletter-signup.tsx` posting client-side to Kit form `9487940`; no API route, no email code, no Kit key in the repo, no email step in the publish pipeline. **Delivery half was never built** — a Kit RSS broadcast automation pointed at `/rss.xml` (feed verified live and current) or a `scripts/send_kit_broadcast.py` is still needed.
+Signup form renders only on `/blog` and `/contact`; none of the 30 post pages include it and there is no `blog/layout.tsx`, so search traffic never sees it.
+Live endpoint test returned `status:"quarantined"` + a guard URL (expired Kit plan); returned `status:"success"` after the account moved to the free plan. Guard response is mishandled in code — logged as bug 8.
+Deliverability: confirmation emails go to spam. No DMARC record exists, SPF covers only Cloudflare Email Routing (inbound), and Kit signs DKIM with its own domain — zero alignment on all three checks. Remediation logged as bug 10 (Kit Verified Sending Domain via grey-cloud CNAMEs, `_dmarc` TXT at `p=none`, From address on the apex domain).
+
+## 2026-07-26 (cont.) — Kit email authentication completed (DNS/config only, no code)
+Kit Verified Sending Domain validated; From address moved to `admin@avinashsangle.com`. Added 3 CNAMEs (`ckespa`, `cka._domainkey`, `cka2._domainkey`) + `_dmarc` TXT in Cloudflare, all DNS-only. Verified live: DKIM chains through convertkit → sendgrid to real `k=rsa` keys, `ckespa` gives Return-Path SPF alignment, single `_dmarc` record with Cloudflare-hosted RUA. Apex SPF and the Google Search Console TXT untouched.
+Kit's subscribe endpoint also returns `status:"success"` again (was `quarantined` under the expired plan) — see bug 8, the code still mishandles `quarantined` if it recurs.
+Holding at DMARC `p=none` deliberately for 2–4 weeks of reports before enforcement; BIMI declined (needs paid VMC). Rationale in bug.md item 10.
+Still open from the original question: nothing sends a new-post email at all — a Kit RSS broadcast automation or `scripts/send_kit_broadcast.py` is still required, and the signup form is still absent from all 30 post pages.
+
+## 2026-07-26 (cont.) — `scripts/send_kit_broadcast.py`
+New-post email delivery, the gap the whole thread started from. Kit's RSS-to-email is Creator-plan only, so on the free plan this is the route.
+Verified against the live account: supplied credentials are **v3** (`api.convertkit.com`) — v4 returns 401 on them; `plan_type: "free"` and the broadcasts endpoint both work, so API access is not gated on the free plan.
+Script reads `src/data/posts.ts` (D-SEO-01 single source), composes link-forward HTML, and creates a **draft** — no `send_at`, so Kit mails nothing until a human sends it from the UI. Duplicate-subject guard makes re-runs safe (`--force` to override). `--dry-run` verified on `sandbox-ai-agents-hugging-face-breach`; post URL and OG image both 200.
+Intended trigger: manual, as the final step of `/promote-blogpost` — not yet wired into that skill.
+Credentials stored in gitignored `.env` as `KIT_API_KEY` / `KIT_API_SECRET`. **They were pasted into a chat transcript and should be rotated.**
+Follow-up: first live draft (id 25159854) exposed that Kit was defaulting the sender to `aavi.sangle@gmail.com`, which would have bypassed all the DNS work. Script now sets `KIT_FROM_EMAIL` explicitly and warns/aborts on a non-`@avinashsangle.com` sender. Blocked on confirming `admin@avinashsangle.com` in Kit (needs a Cloudflare Email Routing rule to receive the verification mail) — logged as bug 11. Wired into `/promote-blogpost` as a Day 0 step plus a reminder note.
+Closed out: `admin@avinashsangle.com` confirmed + Default in Kit, confirmation emails now reach the inbox. Stale draft 25159854 deleted; draft 25159901 recreated and API-verified as an unsent draft with an aligned sender. Bug 9 closed as not-a-bug (form is double opt-in, so the hardcoded copy is accurate). Remaining: bug 8 (`quarantined` handling), signup form absent from all 30 post pages, and rotating the Kit credentials.

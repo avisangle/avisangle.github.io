@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SectionHeader } from "@/components/section-header"
 import { CategoryIcon } from "@/components/icons/category-icon"
-import { NewsletterSignup } from "@/components/newsletter-signup"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -1076,9 +1075,6 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter */}
-      <NewsletterSignup />
 
       {/* Stay Connected */}
       <section className="section section-alt">

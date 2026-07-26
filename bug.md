@@ -67,3 +67,34 @@ All changes completed successfully:
 7. **`CLAUDE.md` page template shows a non-existent `SectionHeader` `icon` prop**
    - **Issue**: The "Page Structure Template" passes `icon={...}` to `SectionHeader`, which accepts only `title` / `subtitle` / `centered`.
    - **Impact**: Low — misleads anyone following the template.
+
+---
+
+## 2026-07-26 — Newsletter subscription diagnosis (Kit)
+
+8. **`NewsletterSignup` mishandles Kit's `quarantined` response**
+   - **Issue**: `src/components/newsletter-signup.tsx:36` treats only `status === "success"` as success. Kit also returns `{"status":"quarantined","url":"https://app.kit.com/forms/guards/…"}` — a spam-guard challenge the visitor must complete before the subscription is created. The code drops `url` and shows "Something went wrong."
+   - **Cause**: the guard handling existed in Kit's JS embed, removed in `2100482` when the embed was replaced with a native `fetch`.
+   - **Impact**: Medium — a guarded visitor can never subscribe and gets a generic error. Observed live on 2026-07-26 while the Kit plan was expired; endpoint returned `success` again after the account moved to the free plan, so the guard is not currently firing.
+   - **Fix**: on `quarantined`, redirect to `data.url` instead of erroring.
+
+9. **Success copy claims a confirmation email that may never be sent**
+   - **Issue**: "Please check your inbox to confirm" is hardcoded at `src/components/newsletter-signup.tsx:60`, independent of Kit's response. Per Kit docs the confirmation ("Incentive") email is sent only for **double opt-in** forms, and is not resent to an address already on the form.
+   - **Impact**: Low-Medium — misleading if form `9487940` is single opt-in.
+   - **Status**: NOT A BUG, closed 2026-07-26. Confirmation emails are arriving, so form `9487940` is double opt-in and the copy is accurate. The coupling remains (copy is independent of Kit's response) but has no observable effect; leave as is.
+
+10. **Domain has no email authentication for Kit — confirmation emails landing in spam**
+   - **Issue**: `_dmarc.avinashsangle.com` does not exist. SPF is `v=spf1 include:_spf.mx.cloudflare.net ~all` (Cloudflare Email Routing = inbound forwarding only; MX are `route1/2/3.mx.cloudflare.net`), which does not authorize Kit. Without a Kit Verified Sending Domain, Kit DKIM-signs with its own domain, so DKIM does not align either.
+   - **Impact**: High — no SPF alignment, no DKIM alignment, no DMARC record. Confirmed by user: confirmation emails go to spam.
+   - **Fix**: (a) Kit Settings → Emails → Verified Sending Domains (CNAME-based; root SPF unchanged) — set the records **DNS-only/grey-cloud** in Cloudflare, since proxying rewrites CNAMEs and breaks DKIM; (b) add TXT `_dmarc` = `v=DMARC1; p=none; rua=mailto:aavi.sangle@gmail.com; fo=1`, staying at `p=none` until reports show alignment; (c) verify Kit's From address is on `avinashsangle.com`, not `@gmail.com`.
+   - **Status**: RESOLVED 2026-07-26 (config, not code). Kit Verified Sending Domain validated. Live DNS verified via `dig`: `ckespa` → `spf.dm-50c2be8f.sg9.convertkit.com` → `"v=spf1 include:sendgrid.net ~all"` (Return-Path alignment); `cka`/`cka2._domainkey` → convertkit → sendgrid, both resolving to real `k=rsa` keys; exactly one `_dmarc` TXT = `v=DMARC1; p=none; rua=mailto:…@dmarc-reports.cloudflare.net`. Apex SPF untouched (1 of 10 DNS lookups). NOTE: the Kit From *address* is still `aavi.sangle@gmail.com` — only the From *name* was changed to `admin`, so this alignment is not yet in effect. See item 11.
+   - **Correction to the fix above**: `rua=mailto:aavi.sangle@gmail.com` would NOT have worked. Per RFC 7489 §7.1 an external-domain RUA requires the destination to publish `<domain>._report._dmarc.<destination>`; verified `…_report._dmarc.gmail.com` returns nothing while `…_report._dmarc.dmarc-reports.cloudflare.net` returns `"v=DMARC1;"`. Used Cloudflare DMARC Management instead. Also `fo=1` was inert without a `ruf=` tag.
+   - **Deliberately NOT done**: Cloudflare flags DMARC `p=none` as a Warning and BIMI as Fail. Stay at `p=none` for 2–4 weeks of reports before stepping to `p=quarantine; pct=25` — Kit has no send history yet and Web3Forms (contact form) alignment is unverified, so enforcing now risks blocking own mail. BIMI declined: needs enforcement policy + a ~$1–1.5k/yr VMC. Do NOT add Kit/SendGrid to the apex SPF — alignment comes via the `ckespa` subdomain; an `include:` would waste a DNS lookup.
+   - **Open**: whether authenticated mail actually reaches the inbox — needs a test send and a `Show original` header check (SPF/DKIM/DMARC all PASS on `avinashsangle.com`). Residual spam placement after that is reputation, not config.
+
+11. **Kit From address is `@gmail.com`, defeating the DKIM/SPF alignment just configured**
+   - **Issue**: Kit Settings → Email addresses shows From Name `admin` but address `aavi.sangle@gmail.com` (Default), and Kit itself warns it is "a free address" that hurts deliverability. First draft created via API came back with `email_address: 'aavi.sangle@gmail.com'`. DKIM signs and Return-Path aligns to `avinashsangle.com`, so a `gmail.com` From header means receivers evaluate the wrong domain and DMARC alignment fails — the DNS work in item 10 is inert until this changes.
+   - **Not a free-plan limit**: adding a custom From address IS permitted. API errors moved from `422 "Email address not found"` → `422 "Email address not confirmed"` once the address was added, i.e. it only needs verifying.
+   - **Blocked on**: receiving Kit's verification email at `admin@avinashsangle.com`, which needs a Cloudflare Email Routing custom-address rule forwarding it to the gmail account. MX records already present.
+   - **Guard added**: `scripts/send_kit_broadcast.py` sends `KIT_FROM_EMAIL` explicitly and prints a loud WARNING (or aborts on Kit's 422) if the resulting sender is not `@avinashsangle.com`, rather than silently drafting a misaligned email.
+   - **Status**: RESOLVED 2026-07-26. `admin@avinashsangle.com` is confirmed and Default in Kit; subscription confirmation emails now land in the inbox rather than spam. Draft 25159854 deleted; draft 25159901 recreated and verified via API: `email_address: admin@avinashsangle.com`, `send_at: None`, `published_at: None` (unsent draft, aligned sender). Account has 2 confirmed subscribers.

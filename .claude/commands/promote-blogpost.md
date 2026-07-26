@@ -330,6 +330,7 @@ Report:
 
 ```
 Day 0 (today):
+  - Newsletter (draft)         python scripts/send_kit_broadcast.py $ARGUMENTS
   - LinkedIn  (9:00 AM IST)    /post-blogpost $ARGUMENTS linkedin
   - Twitter/X (6:30 PM IST)    /post-blogpost $ARGUMENTS twitter
 
@@ -361,6 +362,7 @@ menu of available platforms.
 - Dev.to/Hashnode drafts default to `PUBLISHED: false`. The script creates a draft on the platform, then you manually hit Publish there
 - Reddit: check subreddit rules and flair IDs. If you get a flair error, run `python scripts/list_reddit_flairs.py <sub>` to see valid IDs
 - HN has no API - `/post-blogpost $ARGUMENTS hn` will only display title + first comment for manual submission at news.ycombinator.com/submit
+- Newsletter: `scripts/send_kit_broadcast.py <slug>` only creates a **draft** in Kit - you send it from Kit -> Broadcasts. It refuses to create a second broadcast with the same subject (pass `--force` to override), so re-running is safe. It aborts if the sender is not an `@avinashsangle.com` address, because a `gmail.com` From header breaks the DKIM/SPF alignment that keeps these emails out of spam
 
 ---
 
