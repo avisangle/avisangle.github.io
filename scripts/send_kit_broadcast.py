@@ -68,15 +68,40 @@ def parse_post(slug: str) -> dict:
     }
 
 
+def load_intro(slug: str) -> str | None:
+    """Optional hand-written email body, mirroring the other social drafts.
+
+    Without it the email is a title plus a one-line description, which reads as
+    thin, link-heavy content to spam filters. A few real paragraphs fix that,
+    but they have to be written rather than generated as filler.
+    """
+    path = REPO_ROOT / "src" / "app" / "blog" / slug / "social" / "newsletter.md"
+    if not path.exists():
+        return None
+
+    paragraphs = [p.strip() for p in path.read_text(encoding="utf-8").split("\n\n") if p.strip()]
+    if not paragraphs:
+        return None
+
+    def escape(text: str) -> str:
+        return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    return "".join(f"<p>{escape(' '.join(p.split()))}</p>" for p in paragraphs)
+
+
 def build_content(post: dict) -> str:
-    """Plain, link-forward HTML. Kit appends the unsubscribe footer itself."""
+    """Kit appends the unsubscribe footer itself.
+
+    One link only: three links to the same URL in a ~50-word email is a
+    high link-to-text ratio, which spam filters weight against.
+    """
     url = f"{SITE_URL}/blog/{post['slug']}"
     meta = f" &middot; {post['read_time']}" if post["read_time"] else ""
+    body = load_intro(post["slug"]) or f"<p>{post['description']}</p>"
 
     return (
-        f"<p>New post on the blog:</p>"
-        f'<h2><a href="{url}">{post["title"]}</a></h2>'
-        f"<p>{post['description']}</p>"
+        f"<h2>{post['title']}</h2>"
+        f"{body}"
         f'<p><a href="{url}">Read the full post</a>{meta}</p>'
     )
 

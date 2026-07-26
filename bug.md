@@ -98,3 +98,14 @@ All changes completed successfully:
    - **Blocked on**: receiving Kit's verification email at `admin@avinashsangle.com`, which needs a Cloudflare Email Routing custom-address rule forwarding it to the gmail account. MX records already present.
    - **Guard added**: `scripts/send_kit_broadcast.py` sends `KIT_FROM_EMAIL` explicitly and prints a loud WARNING (or aborts on Kit's 422) if the resulting sender is not `@avinashsangle.com`, rather than silently drafting a misaligned email.
    - **Status**: RESOLVED 2026-07-26. `admin@avinashsangle.com` is confirmed and Default in Kit; subscription confirmation emails now land in the inbox rather than spam. Draft 25159854 deleted; draft 25159901 recreated and verified via API: `email_address: admin@avinashsangle.com`, `send_at: None`, `published_at: None` (unsent draft, aligned sender). Account has 2 confirmed subscribers.
+
+12. **Broadcast scheduled via API with `send_at = now` completes with 0 recipients**
+   - **Issue**: `PUT /v3/broadcasts/25159901` with `send_at` set to the current UTC timestamp returned 200 and Kit set `published_at`, but `/stats` reports `recipients: 0, status: "completed", progress: 0.0` while the account has 2 `active` subscribers. Nothing appears to have been dispatched.
+   - **NOT A BUG, closed 2026-07-26.** The `/stats` endpoint simply lags several minutes behind the actual send. Re-checked after delivery: `recipients: 2, progress: 100.0, emails_opened: 1`, and the mail was confirmed received. `send_at = now` via `PUT /v3/broadcasts/{id}` is a valid way to send immediately.
+   - **Lesson**: do not treat a fresh `/stats` read as evidence of a failed send; wait or confirm in an inbox before concluding anything.
+
+13. **Authenticated broadcast still lands in Gmail spam**
+   - **Issue**: First real broadcast (25159901) delivered with textbook authentication — `mailed-by: ckespa.avinashsangle.com`, `signed-by: avinashsangle.com`, From `admin@avinashsangle.com` — and still landed in spam for `ashwinighuge1@gmail.com`.
+   - **Assessment**: not a configuration fault; SPF and DKIM both align. Contributing factors: (a) `avinashsangle.com` has zero bulk-sending reputation, this being its first send; (b) earlier confirmation emails to the same recipient landed in spam, which Gmail learns per-recipient; (c) the email body is ~50 words carrying three links to the same URL — a high link-to-text ratio is a standard spam heuristic.
+   - **Fix**: (a) recipients click "Report not spam" and add the sender to Contacts; (b) enrich `build_content()` in `scripts/send_kit_broadcast.py` — a real intro paragraph and a single primary CTA instead of three duplicate links; (c) send consistently and let reputation accrue over 4–8 weeks.
+   - **Status**: OPEN — (a) and (c) are not code. Read Gmail's "Why is this message in spam?" banner for the specific reason before acting further.
