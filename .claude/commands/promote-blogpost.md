@@ -1,5 +1,5 @@
 ---
-description: Generate social media drafts (Twitter, LinkedIn, Reddit, Dev.to, Hashnode, Hacker News) for a published blog post. Use after /write-blogpost.
+description: Generate social media drafts (Twitter, LinkedIn, Reddit, Dev.to, Hashnode, Hacker News, Newsletter) for a published blog post. Use after /write-blogpost.
 arguments:
   - name: slug
     description: The URL slug of the published blog post (e.g., "claude-code-cost-tracking"). Must already exist at src/app/blog/[slug]/page.tsx.
@@ -12,7 +12,7 @@ You are a social media copywriter for avinashsangle.com. You write as Avinash Sa
 1. `.claude/blog-guidelines.md` - voice/tone/banned-word rules (MUST follow)
 2. `src/app/blog/$ARGUMENTS/page.tsx` - the published article to promote (title, description, TL;DR, key takeaways, FAQ)
 3. `src/app/blog/claude-managed-agents/social/*` - reference examples for every platform's format, tone, and structure
-4. `scripts/post_to_twitter.py`, `post_to_linkedin.py`, `post_to_reddit.py`, `post_to_devto.py`, `post_to_hashnode.py` - read the docstrings only to confirm the expected file format
+4. `scripts/post_to_twitter.py`, `post_to_linkedin.py`, `post_to_reddit.py`, `post_to_devto.py`, `post_to_hashnode.py`, `send_kit_broadcast.py` - read the docstrings only to confirm the expected file format
 
 ---
 
@@ -33,7 +33,7 @@ You are a social media copywriter for avinashsangle.com. You write as Avinash Sa
 
 ## Phase 2 - Generate Drafts
 
-Create `src/app/blog/$ARGUMENTS/social/` folder and write these 5 files. Each file starts with a metadata header (post date, best time, post command) followed by the required machine-readable fields and the `---BODY---` marker.
+Create `src/app/blog/$ARGUMENTS/social/` folder and write these 6 files. Each file starts with a metadata header (post date, best time, post command) followed by the required machine-readable fields and the `---BODY---` marker - except `newsletter.md`, which is plain prose with no header and no marker (see 2.6).
 
 ### 2.1 - `twitter-post.md`
 
@@ -225,6 +225,41 @@ PUBLISHED: false
 [Author note: what prompted the article, core finding, invite for feedback. 3-4 sentences max.]
 ```
 
+### 2.6 - `newsletter.md`
+
+**Purpose:** Body copy for the Kit email broadcast to subscribers. Read by
+`scripts/send_kit_broadcast.py`, which wraps each blank-line-separated paragraph
+in `<p>` and appends the single "Read the full post" CTA itself.
+
+**Why it matters:** without this file the script falls back to the post
+description alone, producing a ~50-word email that is mostly link. That
+link-to-text ratio is a spam heuristic - the first broadcast passed SPF, DKIM
+and DMARC and still landed in Gmail's spam folder. Real paragraphs are the fix.
+
+**Format rules (differ from the other drafts - read carefully):**
+- **Plain prose only.** No markdown headings, no bold, no bullet lists, no
+  links. The script escapes HTML and does not render markdown, so any syntax
+  appears literally in the email.
+- **No `---BODY---` marker** and no header block. The entire file is the body.
+- **2-3 paragraphs, 80-150 words total.** Long enough to outweigh the CTA link,
+  short enough to read in an inbox.
+- **Do NOT restate the meta description.** The subject line already carries the
+  title; repeating the description wastes the only copy the reader sees.
+- Write to someone who subscribed and trusts you: what prompted the post, the
+  one finding worth their time, who it is for. First person, specific, no
+  marketing voice.
+
+**Template:**
+```
+[Paragraph 1: the concrete thing that prompted this - an incident, a release, a
+problem you hit. Specific, not abstract.]
+
+[Paragraph 2: the finding that makes it worth reading, and who it applies to.]
+```
+
+**Send via:** `python scripts/send_kit_broadcast.py $ARGUMENTS` (creates a Kit
+draft; you send it from Kit -> Broadcasts)
+
 ---
 
 ## Phase 3 - Voice/Style Rules (MANDATORY for all drafts)
@@ -274,7 +309,7 @@ After all 5 drafts are written (and the OG image exists in public/), commit and 
 
    - Generated 1200x630 OG image for /blog/$ARGUMENTS
    - Added social drafts: Twitter, LinkedIn, Reddit (r/ClaudeAI + 2nd sub),
-     Dev.to, Hashnode, Hacker News
+     Dev.to, Hashnode, Hacker News, Newsletter
 
    Co-Authored-By: Claude Opus 4.6 (1M context) <noreply@anthropic.com>
    EOF
@@ -369,7 +404,7 @@ menu of available platforms.
 
 ## Quality Checklist (verify before completing)
 
-- [ ] All 5 files created in `src/app/blog/$ARGUMENTS/social/`
+- [ ] All 6 files created in `src/app/blog/$ARGUMENTS/social/`
 - [ ] Each file has the correct header format with post date, best time, and post command
 - [ ] Each file has the `---BODY---` marker at the right place
 - [ ] Twitter post is dense and data-forward, under 25,000 chars
@@ -380,6 +415,8 @@ menu of available platforms.
 - [ ] Dev.to `PUBLISHED: false` (safer default for review)
 - [ ] Dev.to body is ≥1000 chars (Hashnode minimum)
 - [ ] HN title is ≤80 chars, no clickbait
+- [ ] `newsletter.md` is plain prose only - no markdown, no links, no `---BODY---` marker
+- [ ] `newsletter.md` is 80-150 words and does not restate the meta description
 - [ ] No em dashes anywhere
 - [ ] No banned words anywhere
 - [ ] No emojis (except LinkedIn hashtags)
