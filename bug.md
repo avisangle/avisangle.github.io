@@ -77,6 +77,7 @@ All changes completed successfully:
    - **Cause**: the guard handling existed in Kit's JS embed, removed in `2100482` when the embed was replaced with a native `fetch`.
    - **Impact**: Medium — a guarded visitor can never subscribe and gets a generic error. Observed live on 2026-07-26 while the Kit plan was expired; endpoint returned `success` again after the account moved to the free plan, so the guard is not currently firing.
    - **Fix**: on `quarantined`, redirect to `data.url` instead of erroring.
+   - **Status**: FIXED 2026-07-26 in `8476cee`, deployed and verified live.
 
 9. **Success copy claims a confirmation email that may never be sent**
    - **Issue**: "Please check your inbox to confirm" is hardcoded at `src/components/newsletter-signup.tsx:60`, independent of Kit's response. Per Kit docs the confirmation ("Incentive") email is sent only for **double opt-in** forms, and is not resent to an address already on the form.
