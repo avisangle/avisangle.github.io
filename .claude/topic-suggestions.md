@@ -641,3 +641,31 @@ Searching "sandbox AI agents" and "AI agent containment" returns vendor-authored
 ### Suggested next step
 
 `/research-topic "sandbox-ai-agents-openai-hugging-face-breach"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-27: Claude Opus 5 in Claude Code - What Changes in Your Workflow and Your CLAUDE.md
+
+**Suggested slug:** `claude-opus-5-claude-code-workflow-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic released Claude Opus 5 on July 24, 2026 - a model that matches Fable 5 on most benchmarks at half the price ($5/$25 vs $10/$50 per 1M tokens). It immediately became the default on Claude Max and the strongest model on Claude Pro. Within 48 hours the Hacker News thread hit 1,378 points with 746 comments, mostly developers comparing it against Fable 5 and GPT-5.6 Sol. The 5-6 guides published so far are day-one setup walkthroughs covering effort levels and API pricing. None cover the harder practitioner question: how does Opus 5 change what belongs in your CLAUDE.md, when does the half-price model actually beat Fable 5 on real coding tasks, and what happens to your fallback chain and dynamic workflow configurations? The blog's existing `claude-md-guide` and `claude-code-fable-5-model-routing` posts create a natural audience for this follow-up.
+
+### Search demand evidence
+
+- [Claude Opus 5 | Hacker News](https://news.ycombinator.com/item?id=49038433) - 1,378 points, 746 comments (posted July 24, 2026). Developers debating whether Fable 5 is worth 2x the price, flagging the no-data-retention advantage, and noting Opus 5's self-verification behavior.
+- [Introducing Claude Opus 5 | Anthropic](https://www.anthropic.com/news/claude-opus-5) - Official announcement, July 24, 2026. Near-Fable 5 intelligence at half the price, effort toggles (low/medium/high/max), 1M context, 128K output.
+- [Anthropic debuts Opus 5 model as company preps for IPO | Yahoo Finance](https://finance.yahoo.com/technology/article/anthropic-debuts-opus-5-model-as-company-preps-for-ipo-later-this-year-170000070.html) - Axios/Yahoo Finance, July 24, 2026. Notes the effort toggle as the key differentiator.
+- [Anthropic releases Claude Opus 5 | Fortune](https://fortune.com/2026/07/24/anthropic-debuts-claude-opus-5-with-feature-that-lets-users-toggle-between-cost-and-capability/) - Fortune, July 24, 2026. Highlights the cost-capability toggle.
+- [Elevated errors on Claude Opus 5 | Hacker News](https://news.ycombinator.com/item?id=49066591) - Early reliability issues flagged by developers, adding practical urgency to a "how to use it well" guide.
+- [Opus 5 in Claude Code: 8 tips from Anthropic | wmedia.es](https://wmedia.es/en/tips/claude-code-opus-5-prompting-tips) - Notes that existing CLAUDE.md verification instructions should be REMOVED because Opus 5 self-verifies.
+
+### Competition check
+
+Searching "Claude Opus 5 Claude Code guide" returns five articles within 72 hours of launch: codersera.com (setup and effort levels), apidog.com (how to use), aimadetools.com (setup and cost tips), wmedia.es (8 tips from Anthropic), and thevibefather.com (update overview). All are surface-level walkthroughs. None cover: how Opus 5's self-verification means you should REMOVE existing CLAUDE.md check-your-work instructions (wmedia hints at this but doesn't walk through it), cost-per-task comparisons between Opus 5, Fable 5, and GPT-5.6 Sol on real coding work, the data-retention advantage (Opus 5 has no 30-day retention unlike Fable 5 on API/Bedrock), how to reconfigure fallback chains now that Opus 5 replaces Opus 4.8 as the cost-effective tier, or when Fable 5 still wins and justifies the 2x premium. The blog's existing claude-md-guide and fable-5-model-routing posts give it authority and a content cluster for this topic.
+
+### Suggested next step
+
+`/research-topic "claude-opus-5-claude-code-workflow-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
