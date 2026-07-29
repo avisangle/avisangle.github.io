@@ -641,3 +641,31 @@ Searching "sandbox AI agents" and "AI agent containment" returns vendor-authored
 ### Suggested next step
 
 `/research-topic "sandbox-ai-agents-openai-hugging-face-breach"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-29: NVIDIA NOOA Framework - Test and Govern AI Agents Like Regular Python Code
+
+**Suggested slug:** `nvidia-nooa-agent-testing-framework-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On July 27, 2026, NVIDIA open-sourced NOOA (NVIDIA Labs Object-Oriented Agents), a Python framework that represents AI agents as native Python objects - where methods are actions, fields are state, docstrings are prompts, and type annotations are contracts. Methods with "..." as the body are completed at runtime by an LLM, while methods with normal code remain deterministic Python. This means developers can unit test, trace, audit, and version-control agent behavior using the same tools they already use for regular software. NOOA launched alongside the Open Secure AI Alliance (37 founding organizations including Microsoft, IBM, Cisco, Hugging Face, and CrowdStrike), triggered directly by the OpenAI/Hugging Face sandbox breach one week earlier. On SWE-Bench Verified, NOOA hit 82.2% accuracy (beating the previous 79.2% SOTA) while claiming up to 50% reduction in token usage. The framework is Apache 2.0 and lives on GitHub at NVIDIA-NeMo/labs-OO-Agents with a progressive tutorial covering structured output, tools via self, MCP integration, sandboxing, and tracing.
+
+### Search demand evidence
+
+- [NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework](https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html) - The Hacker News, published July 27, 2026. Primary coverage of both the alliance formation and NOOA release.
+- [NVIDIA-NeMo/labs-OO-Agents](https://github.com/NVIDIA-NeMo/labs-OO-Agents) - Official GitHub repository, Apache 2.0. Includes progressive tutorial and examples.
+- [NVIDIA-labs OO Agents: Native Python Object-Oriented Agents](https://arxiv.org/abs/2607.20709) - arXiv paper (2607.20709) with technical details on the architecture and benchmark results.
+- [Industry Leaders Join Open Secure AI Alliance for AI Safety and Security](https://blogs.nvidia.com/blog/open-secure-ai-alliance/) - Official NVIDIA blog, July 27, 2026. Announces 37 founding members and the NOOA contribution.
+- [NVIDIA Labs Object-Oriented Agents is open - try it out!](https://forums.developer.nvidia.com/t/nvidia-labs-object-oriented-agents-is-open-try-it-out/378256) - NVIDIA Developer Forums announcement with early developer feedback.
+- [NVIDIA's NOOA Framework Boosts AI Agent Performance by Over 10%](https://blockchain.news/news/nvidia-nooa-ai-agent-performance) - Coverage of benchmark results showing 82.2% on SWE-Bench Verified with reduced token costs.
+
+### Competition check
+
+Searching "NVIDIA NOOA getting started guide" and "NOOA framework tutorial" returns the GitHub README, the arXiv paper, one ogwilliam.com architectural overview, a q2bstudio.com summary post, and a learnijoy.com news brief. Every piece describes WHAT NOOA is. None walk through the practitioner workflow: installing and setting up a first agent, writing testable agent methods with type annotations, running the trace viewer for debugging, integrating MCP servers into NOOA agents, comparing the development experience against bare LangChain or CrewAI agent patterns, or explaining when the object-oriented pattern saves tokens vs. traditional prompt-and-tool-call loops. The blog's existing security content cluster (hardening-ai-agents-cicd-prompt-injection, hallusquatting-defense-ai-coding-agents, sandbox-ai-agents-hugging-face-breach) creates natural cross-links, and the audience - AI engineers who already test their code but struggle to test their agents - is the exact group NOOA targets.
+
+### Suggested next step
+
+`/research-topic "nvidia-nooa-agent-testing-framework-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
