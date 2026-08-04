@@ -641,3 +641,32 @@ Searching "sandbox AI agents" and "AI agent containment" returns vendor-authored
 ### Suggested next step
 
 `/research-topic "sandbox-ai-agents-openai-hugging-face-breach"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-03: DeepSeek V4 Flash 0731 - The Post-Training Update That Beat Its Own Flagship on Agentic Coding
+
+**Suggested slug:** `deepseek-v4-flash-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+DeepSeek shipped the official V4-Flash-0731 build on July 31, 2026, graduating Flash from preview to public beta. The release is notable not for a new architecture but for what post-training alone achieved: the same 284B MoE model (13B active) jumped from 7.3 to 54.4 on DeepSWE and from 61.8 to 82.7 on TerminalBench 2.1 - beating DeepSeek's own V4-Pro-Preview on all nine published agent benchmarks. At $0.14/$0.28 per million tokens (input/output), it costs roughly 1/54th of Opus 4.8 on blended token price. A research firm confirmed on August 3 that it is the cheapest well-known AI model to run. The blog has no DeepSeek coverage, and the "flash beats pro on agent tasks" angle has a clear competition gap.
+
+### Search demand evidence
+
+- [DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis](https://news.ycombinator.com/item?id=49120299) - HN front page discussion (posted August 1, 2026)
+- [DeepSeek-V4-Flash Update](https://news.ycombinator.com/item?id=49119559) - HN discussion noting Flash can run locally with <$10k hardware (posted August 2, 2026)
+- [DeepSeek V4 Flash is the most cost effective model we've tested](https://news.ycombinator.com/item?id=47987685) - Earlier HN thread (May 2, 2026) with developer commentary on cost efficiency
+- [DeepSeek V4 Flash being the winner in cost efficiency causes me exactly zero surprise](https://news.ycombinator.com/item?id=48577713) - HN thread (June 18, 2026) with user reporting "It's a monster at coding. And a fast monster at that"
+- [DeepSeek Retrained V4-Flash Beats Its Flagship Pro on Nine Agent Benchmarks](https://www.techtimes.com/articles/322513/20260731/deepseek-retrained-v4-flash-beats-its-flagship-pro-nine-agent-benchmarks.htm) - TechTimes coverage (July 31, 2026)
+- [DeepSeek's V4-Flash Is the Cheapest Well-Known AI Model to Run, Research Firm Finds](https://www.technology.org/2026/08/03/deepseek-v4-flash-cheapest-ai-model-to-run/) - Technology.org (August 3, 2026)
+- [DeepSeek-V4-Flash-0731 model card](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731) - MIT-licensed weights on Hugging Face
+
+### Competition check
+
+Searching "DeepSeek V4 Flash guide" returns a dedicated fan site (deepseekv4guide.org) with overview pages and an NxCode news piece on agent economics. MarkTechPost and Flowtivity published benchmark recap articles. No practitioner-written guide covers how to actually set up V4 Flash 0731 as a coding agent in a terminal workflow (OpenCode, Aider, or API-direct), how its agentic performance compares to Claude and GPT-5.6 in real tasks, or when to pick Flash over Pro. The gap is the hands-on setup-and-tradeoffs guide.
+
+### Suggested next step
+
+`/research-topic "deepseek-v4-flash-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
