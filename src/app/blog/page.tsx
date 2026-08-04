@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs",
+                url: "https://avinashsangle.com/blog/deepseek-v4-flash-agentic-coding-guide",
+                datePublished: "2026-08-04",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach",
                 url: "https://avinashsangle.com/blog/sandbox-ai-agents-hugging-face-breach",
                 datePublished: "2026-07-25",
@@ -295,22 +302,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ShieldAlert" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Route" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">AI SECURITY</p>
-                <h3 className="text-2xl font-bold mb-4">Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  OpenAI&apos;s models escaped a sandbox and breached Hugging Face. The
-                  three-link failure chain, why the same holes sit on your laptop, and
-                  the Claude Code sandbox config that closes them.
+                  DeepSeek V4 Flash 0731 costs $0.14/$0.28 per 1M tokens and speaks the
+                  Anthropic API. The env block that points Claude Code at it, the
+                  benchmark rows you can actually trust, and when not to route.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Jul 25, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Aug 4, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/sandbox-ai-agents-hugging-face-breach">Read Article →</Link>
+                  <Link href="/blog/deepseek-v4-flash-agentic-coding-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -323,6 +330,29 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Route" size="lg" animation="pulse" />
+                <CardTitle>DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  DeepSeek V4 Flash 0731 beat its own flagship on nine agent benchmarks
+                  at $0.14/$0.28 per 1M tokens. The{" "}
+                  <code>ANTHROPIC_BASE_URL</code> block that routes Claude Code to it,
+                  the claimed-vs-verified numbers, and where not to send it.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Aug 4, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/deepseek-v4-flash-agentic-coding-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ShieldAlert" size="lg" animation="pulse" />

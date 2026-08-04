@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'deepseek-v4-flash-agentic-coding-guide',
+    title: 'DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs',
+    description:
+      'DeepSeek V4 Flash 0731 costs $0.14/$0.28 per 1M tokens and speaks the Anthropic API. How to route Claude Code work to it, and when not to.',
+    datePublished: '2026-08-04',
+    topics: ['coding-agents', 'claude-code', 'local-inference'],
+    readTime: '12 min read',
+  },
+  {
     slug: 'sandbox-ai-agents-hugging-face-breach',
     title: 'Sandbox AI Agents: Lessons From the OpenAI Hugging Face Breach',
     description:

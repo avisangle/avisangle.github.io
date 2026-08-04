@@ -410,3 +410,25 @@
 - Original angle: lockfiles + min-release-age cooldowns fail (attack wins at resolution time) + buildable PreToolUse verify hook.
 - Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.
 - Repo notes (pre-existing, not fixed): `npm run lint` is broken (eslint not in devDependencies); node_modules was absent (ran npm ci); no venv (bing_report.py runs on system python3).
+
+## 2026-08-04: /research-topic deepseek-v4-flash-agentic-coding-guide
+- Merged PR #59 (squash, 4af089b) - topic suggestion for DeepSeek V4 Flash. Branch deleted; local main fast-forwarded.
+- Wrote content brief: .claude/content-briefs/deepseek-v4-flash-agentic-coding-guide.md
+- Peg: V4-Flash-0731 shipped Jul 31 2026, MIT weights, same 284B/13B-active arch (304B on HF = incl. DSpark draft module). Post-training only: DeepSWE 7.3->54.4, TerminalBench 61.8->82.7.
+- Angle: Claude Code-first. DeepSeek ships an Anthropic-compatible endpoint (api.deepseek.com/anthropic) + official ANTHROPIC_BASE_URL config. Its own mapping puts Pro in Opus AND Sonnet slots, Flash only in Haiku/subagents - the vendor agrees with the benchmarks.
+- Thesis: "Flash executes, it doesn't plan." Wins TerminalBench 82.7 / Toolathlon 70.3 vs GPT-5.6 Terra; loses DeepSWE 54.4 vs 69.6 and Agents' Last Exam 25.2 vs 50.4.
+- Differentiator sections no competitor wrote: claimed-vs-verified (DeepSeek ran its own harness; absent from tbench.ai leaderboard; AA measured lower), verbosity tax (210M vs 100M median eval output tokens), announced 2x Beijing peak-hour pricing, no training opt-out.
+- Costs verified: $0.14/$0.28, cache-hit $0.0028 (98% off, AA rank #1). AA: index 50 (#3/101), 122.7 tok/s, 1.31s TTFT, $72.02 full suite. ~57x cheaper than Opus 4.8 at a 3:1 blend (assumption stated).
+- Claude/Anthropic pricing pulled via claude-api skill, not memory. HN comments via Algolia API (2 threads, 741 + 589 pts).
+- Bing demand thin (25 queries/120d). Usable seeds: session-cost extraction, token-usage monitoring, and `glm5.2 local` at position 8 (local open-weight intent cluster).
+- Titles budgeted: metadata.title 39 chars (rendered 56); OG/H1 65 chars.
+- Flagged for the write step: re-check tbench.ai for a 0731 entry (PR open) and DeepSeek's peak-pricing effective date; actually run the Claude Code config before publishing the env block.
+- 2026-08-04 Published blog post: "DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs" at /blog/deepseek-v4-flash-agentic-coding-guide
+- ~2,975 words, 12 min read, 8 FAQ items, 3 code blocks, 4 tables, schemas: TechArticle + BreadcrumbList + FAQPage + HowTo.
+- Category AI Development. Icon Route. metadata.title 39 chars (rendered 56 <=60). Description 138 chars.
+- Angle: Claude Code-first. DeepSeek's own documented config puts Pro in the Opus AND Sonnet slots, Flash only in Haiku/subagents - the vendor's defaults agree with the benchmark shape. Thesis: "Flash executes, it doesn't plan."
+- Re-verified at write time: tbench.ai still has NO DeepSeek entry (Aug 4); Claude Code env vars checked against Context7 /websites/code_claude (model-config, llm-gateway pages); Anthropic pricing via claude-api skill.
+- Original sections vs competitors: claimed-vs-verified, verbosity tax (210M vs 100M median eval output tokens), undated 2x Beijing peak pricing, /cost reports wrong numbers by ~2 orders of magnitude on a swapped endpoint.
+- NOT first-hand tested: no DeepSeek API key available, so the post reports the documented config and attributes the "underperformed in Claude Code" finding to the HN commenter rather than claiming a personal session. No fabricated measurements.
+- Also updated src/data/posts.ts (registry the /write-blogpost command does not mention; RelatedPosts + PostNavigation render nothing without it).
+- Updated blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes.

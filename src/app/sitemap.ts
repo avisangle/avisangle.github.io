@@ -8,6 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'deepseek-v4-flash-agentic-coding-guide',
+      lastModified: '2026-08-04',
+    },
+    {
       slug: 'sandbox-ai-agents-hugging-face-breach',
       lastModified: '2026-07-25',
     },
