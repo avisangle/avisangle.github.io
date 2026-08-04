@@ -641,3 +641,31 @@ Searching "sandbox AI agents" and "AI agent containment" returns vendor-authored
 ### Suggested next step
 
 `/research-topic "sandbox-ai-agents-openai-hugging-face-breach"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-07-31: Nvidia NOOA Framework - Building AI Agents as Plain Python Objects
+
+**Suggested slug:** `nvidia-nooa-object-oriented-agents-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Nvidia open-sourced the NOOA (Object-Oriented Agents) framework on July 27, 2026, as the anchor contribution to the newly formed Open Secure AI Alliance (37 founding members including Microsoft, IBM, CrowdStrike, and Hugging Face). NOOA takes a different approach to agent development than LangChain or CrewAI - it represents agents as native Python classes where methods are actions, fields are state, docstrings are prompts, and type annotations define model contracts. A method with an ellipsis body gets completed by an LLM at runtime; a method with real Python stays deterministic. The framework is model-agnostic and already posts an 86.8 on cybergym L1 for vulnerability discovery. The timing matters because OSAIA formed directly in response to the OpenAI/Hugging Face sandbox breach, and developers building agents right now need frameworks that make behavior testable, traceable, and auditable - which is exactly what NOOA's OOP design enables.
+
+### Search demand evidence
+
+- [NVIDIA Forms 37-Member Open Secure AI Alliance and Open-Sources NOOA Framework](https://thehackernews.com/2026/07/nvidia-forms-37-member-open-secure-ai.html) - The Hacker News cybersecurity coverage (posted July 27)
+- [NVIDIA Labs Object-Oriented Agents is open - try it out!](https://forums.developer.nvidia.com/t/nvidia-labs-object-oriented-agents-is-open-try-it-out/378256) - Active developer forum thread on NVIDIA Developer Forums (posted July 27)
+- [NVIDIA-labs OO Agents: Native Python Object-Oriented Agents](https://arxiv.org/abs/2607.20709) - arxiv paper with technical details on the six harness capabilities
+- [Six Agent Harness Capabilities for Higher Model Performance](https://developer.nvidia.com/blog/six-agent-harness-capabilities-for-higher-model-performance/) - NVIDIA technical blog post detailing the framework architecture
+- [NVIDIA Labs Proposes NOOA: Agents as Plain Python Objects](https://aiweekly.co/alerts/nvidia-labs-proposes-nooa-agents-as-plain-python-objects) - AI Weekly coverage (posted July 28)
+- GitHub repo at nvidia-nemo/labs-OO-Agents - Apache 2.0 licensed, open for contributions
+
+### Competition check
+
+Searching "NOOA getting started" and "nvidia object oriented agents guide" returns only news articles announcing the OSAIA launch and a few high-level analysis posts. No practitioner-written tutorial exists that walks through installing NOOA, building a first agent, and comparing the OOP approach to existing frameworks like LangChain or CrewAI. The NVIDIA developer blog covers the six capabilities at an architectural level but does not provide a step-by-step developer guide. First-mover advantage is strong here - the framework is 4 days old.
+
+### Suggested next step
+
+`/research-topic "nvidia-nooa-object-oriented-agents-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
