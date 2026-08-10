@@ -670,3 +670,33 @@ Searching "DeepSeek V4 Flash guide" returns a dedicated fan site (deepseekv4guid
 ### Suggested next step
 
 `/research-topic "deepseek-v4-flash-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-07: Claude Code Self-Hosted Runners - Deploy AI Coding Agents on Your Own Infrastructure
+
+**Suggested slug:** `claude-code-self-hosted-runners-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic launched self-hosted environments for Claude Code in public beta on August 6, 2026 - letting teams run Claude Code cloud sessions on their own servers instead of Anthropic's infrastructure. The feature works like GitHub Actions self-hosted runners: you deploy long-lived runner processes on machines inside your network, and sessions started from web, mobile, desktop, or scheduled routines execute there with full access to internal services, toolchains, and secrets. This lands weeks after Microsoft cancelled Claude Code licenses for 5,000 engineers because token costs hit $2,000/engineer/month, and months of community demand shown by three separate Show HN projects (AgentOS, Kodama, Lite-Harness) that attempted to solve self-hosting before Anthropic shipped an official solution. The practitioner guide - covering runner modes (fixed vs on-demand), Docker/Kubernetes deployment, capacity planning, networking, and the cost/control tradeoffs vs Anthropic-hosted environments - does not exist yet.
+
+### Search demand evidence
+
+- [Self-hosted environments for Claude Code](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute) - Official Anthropic blog announcement (August 6, 2026). Public beta for Team and Enterprise plans, featuring fixed and on-demand runner modes.
+- [Claude Code Sessions Can Now Run on Infrastructure Your Team Controls](https://www.unite.ai/claude-code-sessions-can-now-run-on-infrastructure-your-team-controls/) - Unite.AI coverage (August 6, 2026). Frames it as a shift toward enterprise data sovereignty for AI coding agents.
+- [Show HN: AgentOS - Self-hosted web UI for managing multiple Claude Code sessions](https://news.ycombinator.com/item?id=46533405) - Hacker News (January 2026). Community-built solution predating Anthropic's official feature, showing organic demand.
+- [Show HN: Kodama - A self-hosted autonomous daemon for Claude Code and Codex](https://news.ycombinator.com/item?id=47248651) - Hacker News (March 2026). Another community project for self-hosting Claude Code sessions, confirming sustained developer interest.
+- [Show HN: Lite-Harness - Self-Hosted Cursor Agents (Use Claude Code/OpenCode)](https://news.ycombinator.com/item?id=48341726) - Hacker News (May 2026). Third independent self-hosting attempt in five months.
+- [Feature Request: Support for Self-Hosted LLMs in Claude Code Harness](https://github.com/anthropics/claude-code/issues/7178) - Open issue on the official repo requesting self-hosting capabilities.
+- [Microsoft Cancels Claude Code After Token Costs Blow Budget](https://enterprisedna.co/resources/news/microsoft-claude-code-enterprise-budget-overrun-2026/) - Enterprise DNA (2026). Microsoft cancelled licenses for 5,000 engineers after per-engineer costs hit $500-$2,000/month, driving enterprise demand for infrastructure control and cost visibility.
+- [A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI](https://news.ycombinator.com/item?id=48899321) - Hacker News discussion on enterprise Claude Code deployment economics.
+
+### Competition check
+
+Searching "Claude Code self-hosted runner setup guide" and "deploy Claude Code own infrastructure tutorial" returns Anthropic's official docs (self-hosted-environments-quickstart), the Unite.AI news article, a Developers Digest "5 Ways to Run Claude Code on Your Own Infra" overview, an Agent37 options comparison, and an OpenMetal platform-specific guide. The Developers Digest article surveys five approaches (headless mode, Docker, Bedrock routing, Agent SDK, and the new self-hosted runners) but doesn't deep-dive any of them. Agent37 compares options without covering the new official feature. No post walks through the full practitioner workflow: creating environments in the admin UI, choosing between fixed and on-demand runner modes, containerizing runners for Kubernetes, configuring capacity and networking for internal service access, setting up monitoring and alerting, modeling the cost difference vs Anthropic-hosted sessions, or migrating from community solutions (AgentOS, Kodama) to the official feature. The blog's existing claude-code-cost-tracking and claude-managed-agents posts create a natural content cluster for enterprise Claude Code deployment.
+
+### Suggested next step
+
+`/research-topic "claude-code-self-hosted-runners-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
