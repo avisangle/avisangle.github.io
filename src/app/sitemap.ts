@@ -8,6 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'claude-code-self-hosted-runners-guide',
+      lastModified: '2026-08-10',
+    },
+    {
       slug: 'deepseek-v4-flash-agentic-coding-guide',
       lastModified: '2026-08-04',
     },

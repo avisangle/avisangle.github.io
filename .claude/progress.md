@@ -1,5 +1,14 @@
 # Progress Log
 
+## 2026-08-10
+
+- 2026-08-10 Published blog post: "Claude Code Self-Hosted Runners: Deploy AI Agents on Your Infra" at /blog/claude-code-self-hosted-runners-guide
+- ~3,100 words, 13 min read, 8 FAQ items, 7 code blocks, 2 tables, schemas: TechArticle + BreadcrumbList + FAQPage + HowTo.
+- Category Claude Code. Icon Server. metadata.title 38 chars (rendered 55 <=60). Description 155 chars.
+- Angle: practitioner decision guide (WHEN to self-host, not just HOW). Fills gap between Anthropic's reference docs (excellent but no decision framework) and news coverage (announcement-level, no setup guidance).
+- Covers: fixed vs on-demand modes, Kubernetes Deployment manifest, Docker Compose, security hardening checklist (6 items), cost reality (self-hosting does NOT reduce API costs), network requirements, troubleshooting.
+- Updated blog index (featured + grid + JSON-LD), sitemap.ts, posts.ts, public/llms.txt. Build: pending.
+
 ## 2026-07-25
 
 - Merged topic-suggestion PR #54 (squash 3ad1324), then ran /research-topic + /write-blogpost.

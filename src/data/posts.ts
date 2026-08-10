@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'claude-code-self-hosted-runners-guide',
+    title: 'Claude Code Self-Hosted Runners: Deploy AI Agents on Your Infra',
+    description:
+      'Set up Claude Code self-hosted runners on your own infrastructure. Covers fixed vs on-demand modes, Docker and Kubernetes deployment, security hardening, and cost planning.',
+    datePublished: '2026-08-10',
+    topics: ['claude-code', 'agent-platforms'],
+    readTime: '13 min read',
+  },
+  {
     slug: 'deepseek-v4-flash-agentic-coding-guide',
     title: 'DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs',
     description:
