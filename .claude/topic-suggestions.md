@@ -670,3 +670,32 @@ Searching "DeepSeek V4 Flash guide" returns a dedicated fan site (deepseekv4guid
 ### Suggested next step
 
 `/research-topic "deepseek-v4-flash-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-05: OpenAI Assistants API to Responses API - Agent Migration Patterns Before the August 26 Shutdown
+
+**Suggested slug:** `openai-assistants-responses-api-agent-migration-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+OpenAI's Assistants API shuts down permanently on August 26, 2026 - 21 days from today. Every call to /v1/assistants, /v1/threads, and /v1/runs will return an error with no grace period and no extension. The migration is not a simple endpoint swap: it is a full architectural change from stateful (Threads manage conversation history server-side) to stateless-by-default (Responses API requires explicit opt-in via Conversations API or previous_response_id chaining). Developer forums show active confusion about thread state management, file handling gaps (Responses API cannot ingest .docx directly, only PDF), and the absence of any automated Thread migration tool. The Zoho community thread alone has 119+ pages of discussion from enterprise developers scrambling to update their integrations. The blog has no coverage of this migration and the practical, agent-focused angle is under-served.
+
+### Search demand evidence
+
+- [Assistants API beta deprecation - August 26, 2026 sunset](https://community.openai.com/t/assistants-api-beta-deprecation-august-26-2026-sunset/1354666) - 33+ replies across 2+ pages, active developer complaints about migration complexity (OpenAI Developer Community)
+- [Deprecation Notice: OpenAI Assistants API will be shut down on August 26, 2026](https://help.zoho.com/portal/hi/community/topic/deprecation-notice-openai-assistants-api-will-be-shut-down-on-august-26-2026) - 119+ pages of enterprise developer discussion (Zoho Community, ongoing)
+- [OpenAI Assistants API will be deprecated in August 2026, what happens to Azure OpenAI?](https://learn.microsoft.com/en-us/answers/questions/5571874/openai-assistants-api-will-be-deprecated-in-august) - Azure customers asking about impact (Microsoft Q&A)
+- [There's still way too much confusion about OpenAI's Responses API](https://news.ycombinator.com/item?id=45145372) - HN thread about developer confusion with the new API
+- [I wish OpenAI would provide more clarity about the Assistants API deprecation](https://news.ycombinator.com/item?id=44052939) - HN thread expressing frustration with migration guidance
+- [Migrating Assistant to Responses - long thread management](https://community.openai.com/t/migrating-assistant-to-responses-long-thread-management/1258618) - Developers struggling with state management changes (OpenAI Developer Community)
+- [Assistants migration guide](https://developers.openai.com/api/docs/assistants/migration) - OpenAI official migration docs
+
+### Competition check
+
+Searching "openai assistants api migration guide" returns OpenAI's official docs at #1, followed by guides from byteiota, ragwalla, clonepartner, socialcrawl, and syntackle. These guides mostly cover the conceptual API mapping (Assistants become Prompts, Threads become Conversations, Runs become Responses) and basic endpoint changes. None focus specifically on migrating agent workflows - tool loop patterns, multi-step state management for coding agents, file handling workarounds, or testing strategies for verifying migration correctness before the hard cutoff. The gap is a practical, code-level guide aimed at developers who built AI agents (not just chatbots) on the Assistants API and need to port tool-calling loops, file search, and code interpreter patterns to the Responses API architecture.
+
+### Suggested next step
+
+`/research-topic "openai-assistants-responses-api-agent-migration-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
