@@ -700,3 +700,30 @@ Searching "Claude Code self-hosted runner setup guide" and "deploy Claude Code o
 ### Suggested next step
 
 `/research-topic "claude-code-self-hosted-runners-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-11: RL Post-Training Open-Weight Models to Beat Frontier APIs at 1/100th the Cost
+
+**Suggested slug:** `rl-post-training-beat-frontier-models-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Two independent case studies hit Hacker News this week showing small open-weight models (4B-9B parameters) outperforming GPT-5.6 Sol and Claude Opus 4.8 on task-specific workloads after cheap RL post-training. Fermisense spent $500 in GPU time to GRPO-train Qwen 3.5 9B on catalog review and scored 87.3% vs the best frontier config's 76.9% - at 40-340x lower inference cost. Separately, Castform/Neon RL-post-trained a 4B model that matched GPT-5.6 Sol on retrieval at 100x lower cost per request. These aren't isolated stunts - Google shipped OpenRL (a self-hosted RL post-training API) in June 2026, Fireworks offers Reinforcement Fine-Tuning as a managed service, and Modal published a base-model selection guide for RL fine-tuning. The tooling has matured past research-only into something a single developer can run on a weekend. A practitioner guide covering when RL post-training beats SFT/DPO, which base models to start from, the GRPO workflow, and how to calculate the break-even point vs frontier API costs does not exist yet.
+
+### Search demand evidence
+
+- [A $500 RL fine-tune of a 9B open model beat frontier models on catalog review](https://news.ycombinator.com/item?id=49078454) - Hacker News front page (August 2026). Active discussion on the economics of task-specific fine-tuning vs frontier API pricing.
+- [Beating GPT-5.6 Sol on retrieval with 100x cheaper open models](https://news.ycombinator.com/item?id=49186762) - Hacker News (posted ~August 7, 2026). Castform/Neon 4B model post-trained with RL matches frontier retrieval quality.
+- [Introducing OpenRL: A self-hosted post-training API for fine-tuning LLMs](https://opensource.googleblog.com/2026/06/introducing-openrl-a-self-hosted-post-training-api-for-fine-tuning-llms.html) - Google Open Source Blog (June 2026). Official Google tool for self-hosted RL post-training on Kubernetes.
+- [Reinforcement Fine Tuning: Train expert open models to surpass closed frontier models](https://fireworks.ai/blog/reinforcement-fine-tuning) - Fireworks AI. Managed RFT service supporting Llama, Qwen, DeepSeek base models.
+- [Best Open Source Base Models for RL Fine-Tuning (Qwen3 / DeepSeek) in 2026](https://modal.com/resources/best-open-source-base-models-rl-fine-tuning) - Modal Blog. Base model selection guide for RL fine-tuning workloads.
+
+### Competition check
+
+Searching "RL post-training guide developer" and "reinforcement fine-tuning open model beat frontier" returns the Fireworks product page (vendor-specific, covers their managed service only), a Red Hat overview of post-training methods (conceptual, not hands-on), a Daily Dose of Data Science fine-tuning guide (covers SFT and DPO but doesn't focus on RL/GRPO), and the Fermisense case study itself (results-focused, not a reproducible how-to). No post ties together the full picture: when RL post-training is the right choice vs SFT/DPO, which base models and sizes work best, the GRPO training loop with verifiable rewards, infrastructure options (OpenRL, Fireworks RFT, self-hosted with trl/DeepSpeed), and the cost math for break-even vs frontier API calls. The blog's existing model guides (DeepSeek V4 Flash, Qwen Code, GLM-5.2) and cost-tracking posts create a natural cluster for this topic.
+
+### Suggested next step
+
+`/research-topic "rl-post-training-beat-frontier-models-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
