@@ -700,3 +700,31 @@ Searching "Claude Code self-hosted runner setup guide" and "deploy Claude Code o
 ### Suggested next step
 
 `/research-topic "claude-code-self-hosted-runners-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-12: Securing AI Agent Framework Runtimes After Black Hat's 12-CVE Disclosure
+
+**Suggested slug:** `securing-agent-framework-runtimes`
+**Status:** pending research
+
+### Why this topic, why now
+
+At Black Hat USA 2026 on August 5, Check Point researchers Yarden Porat and Shahar Tal presented "No Tools Required: Post-Injection Exploitation Across AI Agent Frameworks" - disclosing 12 CVEs across LangChain, CrewAI, AutoGen/Microsoft Agent Framework, and Google ADK. The core finding: the exploitable logic lives in the framework runtime itself - memory stores, planning loops, serialization layers, and orchestration logic - not in the tools an agent can call. Even without tool access, attacker-controlled content crosses trust boundaries through framework internals. This reframes agent security from "control the tools" to "the framework code is the attack surface." Every existing article about these findings is news coverage. No practitioner guide exists walking developers through which CVEs affect which framework versions, how to check dependency exposure, how to patch, or how to architect around the problem.
+
+### Search demand evidence
+
+- [Prompt injection isn't the bug, AI agent frameworks are](https://www.theregister.com/security/2026/08/05/prompt-injection-isnt-the-bug-ai-agent-frameworks-are/5283585) - The Register, published August 5, 2026. Covers the Check Point "No Tools Required" briefing, noting 12 CVEs across four major frameworks.
+- [Black Hat Day 1 Briefings Reveal the Agent Stack Is the Attack Surface](https://forkast.news/black-hat-day-1-briefings-reveal-the-agent-stack-is-the-attack-surface/) - Forkast, August 5, 2026. Details the techniques: delayed-execution injection, cross-agent propagation, persistent memory poisoning.
+- [Black Hat USA 2026 Signals Agent Exploitation Has Become Its Own Infrastructure Discipline](https://forkast.news/black-hat-usa-2026-signals-agent-exploitation-has-become-its-own-infrastructure-discipline/) - Forkast, August 2026. Notes 35 of 121 Black Hat briefings (29%) were AI security focused - agent exploitation is now a mainstream infrastructure discipline.
+- [15 AI Security Lessons From Black Hat and Ai4 2026](https://www.techrepublic.com/article/news-black-hat-ai4-2026-ai-security-takeaways/) - TechRepublic, August 2026. Roundup confirming the "No Tools Required" research as a top conference takeaway.
+- [AI Agents Take Center Stage at Black Hat USA 2026](https://www.straiker.ai/blog/black-hat-usa-2026-ai-security-talks) - Straiker, August 2026. Lists all 35 AI security briefings including four that attacked distinct layers of the agent stack.
+- [Black Hat 2026: Check Point Research Takes the Stage](https://blog.checkpoint.com/research/black-hat-2026-check-point-research-takes-the-stage) - Check Point blog, August 2026. Confirms the framework audit covered LangChain, Google ADK, Microsoft Agent Framework, and CrewAI.
+
+### Competition check
+
+Searching "AI agent framework runtime vulnerability defense" and "LangChain CrewAI CVE hardening guide" returns only news articles from The Register, Forkast, TechRepublic, and Straiker describing the attack research, plus vendor-authored generic guides (Maxim AI, Sysdig, Witness AI) about prompt injection defense that predate the Black Hat disclosures and don't cover framework-layer attacks. No post walks a developer through: which of the 12 CVEs apply to their framework version, how to audit serialization and memory-store code paths for hostile input, what architectural patterns isolate framework internals from untrusted content, or how this changes the threat model for teams already using tool permissioning and output filtering as their primary defense. The blog's existing security cluster (hardening-ai-agents-cicd-prompt-injection, litellm-mcp-exploit-response-guide, hallusquatting-defense-ai-coding-agents, sandbox-ai-agents-hugging-face-breach) covers CI/CD injection, MCP server exploits, hallucinated package attacks, and sandbox containment - but not the framework runtime itself as an attack surface.
+
+### Suggested next step
+
+`/research-topic "securing-agent-framework-runtimes"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
