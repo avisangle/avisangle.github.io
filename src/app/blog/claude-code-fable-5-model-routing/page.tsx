@@ -366,7 +366,7 @@ export default function ClaudeCodeFable5ModelRoutingPage() {
             from April, Fable 5 is the payoff: the same underlying model as Mythos 5, with safety
             classifiers added so the rest of us can use it.{" "}
             <a
-              href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/"
+              href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/"
               target="_blank"
               rel="noopener noreferrer"
               className="project-link"
