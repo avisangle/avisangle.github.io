@@ -928,7 +928,7 @@ PY`}
           <p className="text-lg leading-relaxed mb-6">
             For the Claude Code half, the CLI ships its own validator. Claude Code
             plugins are distributed through a marketplace catalogue rather than
-            installed from a bare directory, so the test harness is a small local
+            installed from a bare directory, so the test setup is a small local
             marketplace pointing at the plugin folder.
           </p>
 
