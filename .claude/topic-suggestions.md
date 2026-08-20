@@ -700,3 +700,32 @@ Searching "Claude Code self-hosted runner setup guide" and "deploy Claude Code o
 ### Suggested next step
 
 `/research-topic "claude-code-self-hosted-runners-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-19: Agent Plugins 1.0 - Build and Publish Your First Cross-Platform AI Plugin
+
+**Suggested slug:** `agent-plugins-getting-started-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Agent Plugins 1.0 hit general availability on August 12, 2026 - backed by AWS, Anysphere (Cursor), GitHub, Microsoft, OpenAI, Vercel, and Google as core maintainers. It is the first open standard that packages agent skills and MCP server configurations into a single installable plugin that works across all compatible agent clients. This matters because MCP adoption just crossed 195.9M monthly npm SDK downloads, but there is no portable way to distribute an MCP server plus its associated skills as one unit. Agent Plugins solves that packaging problem. The blog has three MCP posts (mcp-code-execution-pattern, mcp-stateless-spec-migration-guide, method-crm-mcp) but zero coverage of the distribution layer that now sits on top of MCP. The cross-vendor backing makes this durable infrastructure, not a single-vendor feature.
+
+### Search demand evidence
+
+- [Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app](https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/) - GitHub Changelog, August 12, 2026. GA announcement across all Copilot surfaces and plans.
+- [Agent Plugins | Hacker News](https://news.ycombinator.com/item?id=49199296) - Active HN discussion thread (posted early August 2026). Developer discussion on the multi-vendor backing and MCP integration.
+- [Agent Plugins 1.0: One Package Format for Every AI Agent](https://blakecrosley.com/blog/agent-plugins-standard) - Blake Crosley, August 2026. Overview article confirming developer interest but not a hands-on build tutorial.
+- [Agent Plugins 1.0.0: One Package Format for Agent Skills and MCP Servers](https://www.developersdigest.tech/blog/agent-plugins-1-0-0) - Developers Digest, August 2026. Feature overview, not a practitioner walkthrough.
+- [GitHub Copilot's Latest Update Bets on Model Choice, Not Model Loyalty](https://devops.com/github-copilots-latest-update-bets-on-model-choice-not-model-loyalty/) - DevOps.com, August 2026. Frames Agent Plugins as part of a broader shift toward vendor-neutral agent tooling.
+- [Agent Plugins: The Portable Agent Plugin Standard](https://agentplugins.codes/) - Official spec site with documentation, confirming the standard is live and accepting contributions.
+- [agentplugins/agent-plugins-example](https://github.com/agentplugins/agent-plugins-example) - Canonical example repo and migration guide on GitHub.
+
+### Competition check
+
+Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP tutorial" returns the official spec site (agentplugins.codes), the GitHub example repo, Blake Crosley's overview article, a Developers Digest feature summary, an agentpedia.codes guide, an explainx.ai comparison post, and a digitalapplied.com analysis of what doesn't port yet. All are high-level feature overviews or spec documentation. None are written from a practitioner's perspective: how to convert an existing MCP server into an Agent Plugin, how the plugin.json manifest maps to MCP server config, what the skills/ directory buys you on top of raw tool definitions, how to test your plugin across Claude Code and Copilot, or what the security model looks like when a plugin bundles executable skills alongside MCP endpoints. The blog's existing MCP content creates a natural bridge - readers who built an MCP server from the mcp-code-execution-pattern post are exactly the audience who would search "how to package my MCP server as an Agent Plugin."
+
+### Suggested next step
+
+`/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
