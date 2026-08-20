@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Agent Plugins 1.0: Build One Plugin for Claude Code and Copilot",
+                url: "https://avinashsangle.com/blog/agent-plugins-getting-started-guide",
+                datePublished: "2026-08-20",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs",
                 url: "https://avinashsangle.com/blog/deepseek-v4-flash-agentic-coding-guide",
                 datePublished: "2026-08-04",
@@ -302,22 +309,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="Route" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Package" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs</h3>
+                <h3 className="text-2xl font-bold mb-4">Agent Plugins 1.0: Build One Plugin for Claude Code and Copilot</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  DeepSeek V4 Flash 0731 costs $0.14/$0.28 per 1M tokens and speaks the
-                  Anthropic API. The env block that points Claude Code at it, the
-                  benchmark rows you can actually trust, and when not to route.
+                  Six clients read the new plugin format and Claude Code is not one of
+                  them. The build walkthrough, the schema rules that reject a
+                  copy-pasted MCP block, and the dual-manifest layout that satisfies
+                  both formats from one repo.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Aug 4, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Aug 20, 2026</span>
                   <span>•</span>
                   <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/deepseek-v4-flash-agentic-coding-guide">Read Article →</Link>
+                  <Link href="/blog/agent-plugins-getting-started-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -330,6 +338,30 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Package" size="lg" animation="pulse" />
+                <CardTitle>Agent Plugins 1.0: Build One Plugin for Claude Code and Copilot</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  The new standard packages skills and MCP servers into one folder that
+                  six clients read. Building one from scratch, the{" "}
+                  <code>mcp.json</code> rules that fail validation quietly, and the
+                  dual-manifest tree that also passes{" "}
+                  <code>claude plugin validate</code>.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Aug 20, 2026</span>
+                  <span>•</span>
+                  <span>12 min read</span>
+                </div>
+                <Link href="/blog/agent-plugins-getting-started-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
+
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="Route" size="lg" animation="pulse" />

@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'agent-plugins-getting-started-guide',
+    title: 'Agent Plugins 1.0: Build One Plugin for Claude Code and Copilot',
+    description:
+      'Agent Plugins 1.0 packages skills and MCP servers into one portable folder. How to build one, and how to make the same repo work in Claude Code too.',
+    datePublished: '2026-08-20',
+    topics: ['mcp', 'claude-code'],
+    readTime: '12 min read',
+  },
+  {
     slug: 'deepseek-v4-flash-agentic-coding-guide',
     title: 'DeepSeek V4 Flash for Claude Code: Setup, Routing, and Real Costs',
     description:
