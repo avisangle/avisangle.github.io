@@ -729,3 +729,31 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-21: Cloudflare Kitesurf - Building AI Agent Workflows with the Agent-First Browser
+
+**Suggested slug:** `cloudflare-kitesurf-agent-browser-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Cloudflare launched Kitesurf on August 6, 2026 - a browser built from scratch for AI agents, not humans. It runs entirely on Cloudflare Workers V8 isolates with zero Chromium underneath, using 3-7x less CPU and memory than Chromium for common agentic tasks (screenshots: 380ms CPU vs 1,173ms; HTML extraction: 39.4 MiB memory vs 273.7 MiB). It speaks Chrome DevTools Protocol, so existing Playwright and Puppeteer code works with a single parameter change. Two weeks after launch, Kitesurf is still the top agent infrastructure story in AI news roundups (August 18-19), multiple HN threads are active, and every published article is a feature overview or architecture explainer. Nobody has written the practitioner guide: how to wire Kitesurf into an actual AI agent workflow - connecting it to an MCP server, building a web research agent, comparing real-world costs against Chromium-based Browser Run, or handling the beta limitations (no video, no long authenticated sessions). The blog's existing MCP coverage and agent tooling posts create a natural audience for this.
+
+### Search demand evidence
+
+- [Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](https://news.ycombinator.com/item?id=49196184) - HN front-page thread (posted August 7, 2026). Active developer discussion on agent browser architecture and Chromium alternatives.
+- [Kitesurf: The agent-first browser that runs in isolates on Cloudflare](https://news.ycombinator.com/item?id=49203287) - Second HN thread (posted August 7-8, 2026). Developers debating whether 3-7x less CPU than Chromium is interesting for humans too.
+- [Cloudflare launches Kitesurf, a browser built for AI agents](https://techcrunch.com/2026/08/07/cloudflare-launches-kitesurf-a-browser-built-for-ai-agents/) - TechCrunch, August 7, 2026.
+- [Introducing Kitesurf: The agent-first browser that runs in V8 isolates on Cloudflare Workers](https://blog.cloudflare.com/kitesurf/) - Official Cloudflare blog post, August 6, 2026. Confirms free beta, CDP compatibility, and open-source plans.
+- [Kitesurf - Cloudflare Browser Run docs](https://developers.cloudflare.com/browser-run/kitesurf/) - Official developer docs. Opt-in is one parameter: `browser=kitesurf` on the Browser Run endpoint.
+- [AI Agents News Brief: August 18, 2026](https://aiagentsdirectory.com/news/ai-agents-news-brief-august-18-2026) - Still listed as a top agent infrastructure story 12 days after launch, confirming sustained developer interest.
+
+### Competition check
+
+Searching "Cloudflare Kitesurf tutorial" and "Kitesurf agent browser guide" returns the official Cloudflare blog and docs, a TechCrunch news article, a Developers Digest architecture overview, a Pinggy Blog "Inside Kitesurf" explainer, a Flavio Copes short summary, a Cyber Ivy overview, and a The Merkle feature review. Every result explains what Kitesurf is and how it compares to Chromium architecturally. None walk through building an actual AI agent workflow on top of it: connecting Kitesurf to an MCP browser-use server, building a web research or scraping agent, benchmarking real-world agentic task costs (token savings from smaller HTML extraction, screenshot-based agents vs HTML-based agents), handling the current beta gaps (no video playback, no persistent cookies), or comparing the developer experience against Stagehand, Browser Use, and Playwright-on-Chromium for agentic tasks. The gap is the hands-on "I built an agent with Kitesurf, here's what worked and what didn't" guide.
+
+### Suggested next step
+
+`/research-topic "cloudflare-kitesurf-agent-browser-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
