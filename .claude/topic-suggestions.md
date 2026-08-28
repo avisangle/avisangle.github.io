@@ -729,3 +729,30 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-26: ThinkingBox - Microsoft's Open-Source Benchmark That Exposes How Often AI Agents Silently Fail
+
+**Suggested slug:** `thinkingbox-ai-agent-reliability-testing`
+**Status:** pending research
+
+### Why this topic, why now
+
+On August 19, 2026, Microsoft open-sourced ThinkingBox - a sandbox and benchmark for testing AI agent reliability on stateful business workflows. The headline finding is brutal: the best model scored 65.36% pass@1 (single-attempt success) but only 25.25% pass^20 (succeeding across all 20 repeated runs of the same task). Microsoft calls this the "discovery-reliability gap" - agents that look correct on a single demo fail silently when you run them repeatedly. This matters right now because enterprises are deploying AI agents into production workflows, and every existing eval (SWE-Bench, Terminal-Bench) measures one-shot success, not the repeated reliability that production requires. ThinkingBox is the first open benchmark that measures this gap directly, and its 507-task test set across five business domains ships as open source for teams to run against their own agent setups.
+
+### Search demand evidence
+
+- [One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows](https://arxiv.org/abs/2608.19741) - arXiv paper (2608.19741), August 2026. Full research methodology testing 12 models across 507 tasks with 20 runs each.
+- [Microsoft introduces ThinkingBox to assess AI agent reliability](https://cryptobriefing.com/microsoft-thinkingbox-ai-agent-reliability/) - CryptoBriefing, August 19, 2026. Coverage of the Microsoft Command Line blog announcement by Principal ML Engineer Liang-Chun Tsai.
+- [The Agent Benchmark Where Only One Task in Four Passed All 20 Runs](https://blog.pebblous.ai/blog/thinkingbox-stateful-agent-reliability/en/) - Pebblous, August 2026. Detailed analysis of the pass@1 vs pass^20 gap with domain-level breakdowns.
+- [microsoft/thinkingbox](https://github.com/microsoft/thinkingbox) - Official GitHub repo, open source, with separate thinkingbox-data repo for scenarios and tool servers.
+- AI agent evaluation discussion active this week across developer communities, with an August 23 MCP roadmap analysis and CellCog's August 2026 agent harness rankings both driving fresh attention to the "are agents production-ready?" question.
+
+### Competition check
+
+Searching "ThinkingBox guide" and "ThinkingBox AI agent reliability tutorial" returns only news articles (CryptoBriefing, CoinDesk, agentic.ai roundup) and the arXiv paper itself. No practitioner guide exists that walks a developer through: setting up ThinkingBox locally against their own agent stack, interpreting the pass@1 vs pass^20 gap for their specific use case, choosing which of the five business domains to test first, comparing their agent's ThinkingBox scores against the published model baselines, or using the results to decide where human-in-the-loop checkpoints belong in their production workflows. The blog's existing coverage of AI agent security (hardening-ai-agents-cicd-prompt-injection, sandbox-ai-agents-hugging-face-breach) and production workflows (claude-managed-agents-outcomes, claude-code-dynamic-workflows-guide) creates a natural content cluster for readers who already build agents and need to know how reliable they actually are.
+
+### Suggested next step
+
+`/research-topic "thinkingbox-ai-agent-reliability-testing"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
