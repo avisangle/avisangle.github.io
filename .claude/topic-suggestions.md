@@ -729,3 +729,32 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-24: Slack Code for Engineering Teams - Running Claude Code, Copilot, and Devin in Shared Coding Channels
+
+**Suggested slug:** `slack-code-engineering-teams-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On August 21, 2026, Slack launched Slack Code - dedicated coding channels that embed AI agents (Claude Code, Devin, GitHub Copilot, and Vercel Agent) directly into Slack. This shifts AI-assisted coding from a solo terminal activity to a multiplayer team workflow: anyone in a code channel can watch the agent work, review diffs, view live HTML previews, and pause or redirect the agent mid-task. High-stakes actions like merging to production require human sign-off from a channel member. The feature is free on every Slack plan (users bring their own agent access), and within 72 hours of launch it drew active Hacker News discussion threads and coverage from VentureBeat, The Register, Computerworld, TechCrunch via TNW, and Enterprise DNA. Every published article so far is a day-one feature overview. No practitioner guide exists for engineering teams covering setup, workflow patterns, or how to choose between Slack Code, Claude Tag, and running agents directly in the terminal.
+
+### Search demand evidence
+
+- [Slack Code | Hacker News](https://news.ycombinator.com/item?id=49374965) - Active discussion thread (posted August 21, 2026). Developers debating whether multiplayer AI coding adds real value or just adds overhead.
+- [Slack Code Is Live | Hacker News](https://news.ycombinator.com/item?id=49370301) - Second HN thread tracking the launch rollout.
+- [Slack Code: Where Your Team and Agents Build Together | Slack](https://slack.com/blog/news/slack-code-channels-for-agents) - Official Slack blog announcement, August 21, 2026. Founding partners: Claude Code, Devin, GitHub Copilot, Vercel Agent.
+- [Slack wants to drag AI coding out of the terminal and into the group chat | VentureBeat](https://venturebeat.com/orchestration/slack-wants-to-drag-ai-coding-out-of-the-terminal-and-into-the-group-chat) - VentureBeat, August 2026. Frames Slack Code as a form-factor shift for agentic coding.
+- [Slack Code taps into collective vibe, puts AI agents into the group chat | The Register](https://www.theregister.com/saas/2026/08/20/slack-code-taps-into-collective-vibe-puts-ai-agents-into-the-group-chat/5290413) - The Register, August 20, 2026.
+- [Slack Code Puts AI Coding Agents in Dedicated Project Channels | Unite.AI](https://www.unite.ai/slack-code-puts-ai-coding-agents-in-dedicated-project-channels/) - Unite.AI, August 2026. Describes the four-tab channel layout: Conversation, Plan, Code Diffs, Live Preview.
+- [New 'Slack Code' turns AI coding into a team activity | Computerworld](https://www.computerworld.com/article/4212446/new-slack-code-turns-ai-coding-into-a-team-activity.html) - Computerworld, August 2026.
+
+### Competition check
+
+Searching "Slack Code setup guide engineering team" and "Slack Code Claude Code tutorial" returns the official Slack blog post, news coverage (VentureBeat, The Register, Computerworld, TNW, Dataconomy, iTechPost, Enterprise DNA), and several Claude-in-Slack guides that predate this launch. Every piece describes WHAT Slack Code is and lists its features. None walk through the engineering team workflow: creating a code channel and connecting it to Claude Code vs Copilot, configuring merge approval gates for different repo sensitivity levels, understanding the four-tab workspace (Conversation, Plan, Code Diffs, Live Preview) for code review, managing agent costs when multiple team members trigger sessions from the same channel, comparing Slack Code channels against Claude Tag (persistent Slack teammate) and terminal-based Claude Code for different task types, or integrating Slack Code into an existing CI/CD workflow where PRs still need to pass automated checks. The blog already covers Claude Tag (claude-tag-engineering-teams-guide), Claude Code workflows, and terminal-based agent usage - a Slack Code practitioner guide creates the natural "where should my team run agents" comparison post.
+
+### Suggested next step
+
+`/research-topic "slack-code-engineering-teams-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
