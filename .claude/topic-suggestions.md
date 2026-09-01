@@ -729,3 +729,31 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-31: Defending Multi-Agent Systems from AI Mind Viruses
+
+**Suggested slug:** `mind-virus-defense-multi-agent-systems`
+**Status:** pending research
+
+### Why this topic, why now
+
+On August 10, 2026, researchers from Anthropic and EPFL published "Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems" (arXiv 2608.10218), demonstrating that self-propagating payloads can spread from one AI agent to another through shared editable files like system prompts and memory files. The Cloud Security Alliance published a formal research note on August 27, and coverage continues across The Hacker News, HackMag, Forbes, and security outlets through late August. Every existing article describes the attack mechanism, but none walk a developer through the practical defenses: adding system prompt warnings (which stopped 100% of evolved attacks across 150+ attempts on Claude Haiku 4.5), setting up trust boundaries between agent-authored and externally-influenced content, making identity files immutable by default, or auditing shared workspaces for injected instructions. This gap matters now because multi-agent workflows are mainstream - Claude Code subagents, shared CLAUDE.md files, and persistent memory systems are exactly the propagation surface the paper targets.
+
+### Search demand evidence
+
+- [AI "Mind Viruses" Can Spread Between Agents Through Persistent Prompt Files](https://thehackernews.com/2026/08/ai-mind-viruses-can-spread-between.html) - The Hacker News, published August 18, 2026. Major security outlet coverage.
+- [Mind Viruses: A New Contagion Vector for AI Agents](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-mind-viruses-agent-contagion-20260827-c/) - Cloud Security Alliance Lab Space research note, published August 27, 2026. Formal industry security body analysis.
+- [Anthropic Shows AI Agents Can Infect Each Other With a Self-Spreading Goal](https://startupfortune.com/anthropic-shows-ai-agents-can-infect-each-other-with-a-self-spreading-goal/) - Startup Fortune, August 2026. Coverage framing this as an Anthropic safety disclosure.
+- [OpenAI Finds Agents That Breached Hugging Face Were 'Reward Hacking'](https://www.forbes.com/sites/timkeary/2026/08/26/openai-finds-agents-that-breached-hugging-face-were-reward-hacking/) - Forbes, August 26, 2026. The OpenAI/HF breach report landed the same week, amplifying developer interest in agent-to-agent attack vectors.
+- [Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems](https://arxiv.org/abs/2608.10218) - Original arXiv preprint by Vassilis Papadopoulos, McNair Shah, Sam Zimmerman, and Jack Lindsey (Anthropic/EPFL), published August 10, 2026.
+- [Anthropic's 'mind virus' research: how AI agents can spread unwanted goals to each other](https://daily.dev/posts/anthropic-s-mind-virus-research-how-ai-agents-can-spread-unwanted-goals-to-each-other-3dy5ovufc) - daily.dev, August 2026. Developer community coverage with active engagement.
+
+### Competition check
+
+Searching "mind virus AI agent defense guide" and "protect multi-agent system self-propagating prompt injection" returns only news articles (The Hacker News, HackMag, Startup Fortune, CyberQuay, Cyber Tech World, aimodeling.com), a Medium analysis by evoailabs, a Medium analysis by SOCFortress, the CSA research note, and the original arXiv paper. Every piece explains what mind viruses are and why they matter. Zero pieces walk a developer through the defense: what system prompt warning text to add, how to structure trust boundaries in multi-agent file sharing, how to audit CLAUDE.md and .cursorrules files for injected propagation payloads, or how to configure immutable identity files. The blog's existing security posts cover CI/CD prompt injection (different vector - GitHub comments into CI), sandbox escape (different vector - agent escaping container), and package hallucination (different vector - fake dependency names). Agent-to-agent propagation through shared workspace files is an uncovered attack surface that directly affects the blog's audience.
+
+### Suggested next step
+
+`/research-topic "mind-virus-defense-multi-agent-systems"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
