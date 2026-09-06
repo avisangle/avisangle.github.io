@@ -729,3 +729,30 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-08-28: Getting Started with Muse Code - Meta's Multi-Agent Terminal Coding Agent
+
+**Suggested slug:** `muse-code-getting-started-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Meta shipped Muse Code on August 5, 2026 - its first standalone terminal coding agent, built on the purpose-trained Muse Spark 1.2 model. The blog has getting-started guides for every other major terminal coding agent (Qwen Code, DeepSeek V4 Flash, Gemini CLI/Antigravity, Kimi K3, GLM-5.2) but nothing for Meta's entry. Muse Code's architecture is genuinely different: multi-agent orchestration is the default (workers execute in parallel, a reviewer runs in the background on every task), and a full event log captures every file edit, tool call, and decision for replay. The JetBrains August 2026 developer survey shows 90% of professional developers now use AI coding agents weekly, with Claude Code at 39% adoption and search queries like "Muse Code vs Claude Code" actively growing. Three weeks post-launch, community adoption is still early-beta, and developers searching for practitioner-level setup guides are finding feature overviews instead of workflow walkthroughs.
+
+### Search demand evidence
+
+- [Muse Code and Muse Spark 1.2 - Hacker News](https://news.ycombinator.com/item?id=49187575) - Active HN discussion thread from launch week (August 2026)
+- [Meta launches Muse Code, an AI agent for large code bases - TechCrunch](https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/) - Major tech press coverage, August 5, 2026
+- [Introducing Muse Code and Muse Spark 1.2 - Meta AI Research](https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2) - Official announcement with technical details
+- [Meta Debuts AI Coding Agent Muse: Here's How It Compares to Claude Code and Codex - Decrypt](https://decrypt.co/375001/muse-code-meta-ai-coding-agent-claude-codex) - Comparison coverage showing active search interest in "Muse Code vs Claude Code"
+- [AI Coding Agents: Adoption Trends - JetBrains Blog](https://blog.jetbrains.com/research/2026/08/ai-coding-agent-adoption-2026/) - August 2026 survey of 15,000+ developers showing 90% weekly AI agent adoption and Claude Code leading at 39%
+
+### Competition check
+
+Searching "Muse Code getting started guide" returns SitePoint's getting-started walkthrough, Layer3Labs' overview and how-to pages, CoderSera's install guide, and several wiki-style reference sites. All cover installation and first-run basics. None approach it from a practitioner's workflow perspective: cost-per-task tracking against Claude Code and Codex, AGENTS.md configuration patterns (Muse Code's equivalent of CLAUDE.md), when multi-agent-by-default helps vs. hurts on real codebases, event log analysis for debugging failed tasks, or MCP server integration. The blog's established pattern of competitor coding agent guides with cost analysis and Claude Code comparison creates a natural angle that no current result covers.
+
+### Suggested next step
+
+`/research-topic "muse-code-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
