@@ -729,3 +729,31 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-09-07: GPT-6 Astra Agentic Coding Guide - Async Tools, Computer Use, and Cost-Per-Task Efficiency
+
+**Suggested slug:** `gpt-6-astra-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+OpenAI released GPT-6 Astra on September 3, 2026 - the same week Anthropic shipped Fable 5.1/Mythos 5.1, Google launched Gemini 3.8 Flash, and Meta dropped Muse Spark 1.3. The four-way release triggered a CNBC "model fatigue" story on September 6 as developers struggle to evaluate the flood. Astra introduces two genuinely new developer patterns: async tool calling (the model continues reasoning while your application executes tools, set via `async: true` on function definitions) and API-level computer use scoring 72.6% on OSWorld 2.0. The cost efficiency story is also strong - Artificial Analysis reports Astra matches Fable 5's coding-agent score at roughly half the cost per task, despite identical list pricing ($10/$50 per million tokens). The blog has GPT-5.6 coverage (programmatic tool calling, Sol subagents) but nothing on GPT-6. There is no practitioner-focused agentic coding guide for Astra yet - only benchmark roundups and generic API tutorials.
+
+### Search demand evidence
+
+- [GPT-6 Astra: A new generation of intelligence](https://openai.com/index/gpt-6-astra/) - OpenAI official announcement, September 3, 2026. 1M-token context, async tool calling, computer use, Codex integration.
+- [OpenAI announces rollout of GPT-6 Astra model](https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html) - CNBC, September 3, 2026. Covers Critical-level cybersecurity, Daybreak program gating, developer API availability.
+- ['Model fatigue' sets in as AI labs race to roll out new versions at frenetic pace](https://www.cnbc.com/2026/09/06/meta-google-openai-anthropic-ai-model-fatigue.html) - CNBC, September 6, 2026. Median gap between frontier releases has shrunk from 37.5 days to 11. Developers need practical setup guides, not more benchmark comparisons.
+- [GPT-6 Astra Benchmarks: Is It Really Better Than Fable 5.1?](https://www.mindstudio.ai/blog/gpt-6-astra-benchmarks-analysis) - MindStudio, September 2026. Artificial Analysis Coding Agent Index puts Astra at 67 vs Fable 5.1's 70, but Astra wins on cost per task.
+- [Async tool calling | OpenAI API](https://developers.openai.com/api/docs/guides/async-tool-calling) - OpenAI official docs. Reference documentation exists but no tutorial-style walkthrough for coding workflows.
+- [GPT-6 Astra API Brings Computer Use to Developers](https://www.startuphub.ai/ai-news/technology/2026/gpt-6-astra-api-brings-computer-use-to-developers) - StartupHub.ai, September 2026. Confirms computer use is live in the Responses API alongside web search, code interpreter, and MCP.
+
+### Competition check
+
+Searching "GPT-6 Astra agentic coding guide" and "GPT-6 Astra developer tutorial" returns DataCamp's generic "Build an Agent in Python" tutorial, multiple benchmark comparison articles (MindStudio, ComputingForGeeks, DataCamp Fable-vs-Astra), OpenAI's own API docs, and news roundups from Axios, Bloomberg, and The Hacker News. Nobody has published a practitioner-focused guide covering the agentic coding setup: how to wire async tool calling into a coding agent loop, when to use computer use vs code interpreter for dev tasks, Codex integration patterns, and real cost-per-task numbers. The blog's existing GPT-5.6 posts create a natural upgrade path for readers.
+
+### Suggested next step
+
+`/research-topic "gpt-6-astra-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
