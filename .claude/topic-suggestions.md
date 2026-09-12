@@ -729,3 +729,30 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-09-11: GitHub HydraFusion Guide - Multi-Model Orchestration That Cuts AI Coding Costs 36-67%
+
+**Suggested slug:** `github-hydrafusion-multi-model-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On September 4, 2026, GitHub shipped Project HydraFusion as a research preview inside GitHub Copilot CLI. It is the first major platform to offer runtime multi-model orchestration for coding tasks - dynamically routing each prompt through one of three workflow patterns (single-model, cascade with a quality gate, or cross-family critique) to balance quality, cost, and latency. The announcement landed one day after OpenAI's GPT-6 Astra release, making model selection the dominant developer conversation right now. The blog already covers Claude Code's model routing with Fable 5 (`claude-code-fable-5-model-routing`) from the single-vendor angle. HydraFusion is the cross-vendor counterpart: GitHub picks between Claude, GPT, and other providers per-task, and the developer never sees the routing logic. Zero practitioner guides exist - only news coverage and high-level explainers.
+
+### Search demand evidence
+
+- [Project HydraFusion: Frontier quality via multi-model orchestration](https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/) - Official GitHub Blog, published September 4, 2026. Announces the research preview with benchmark data showing 36-67% cost reduction against Claude Opus 5 baselines.
+- [Project HydraFusion: Frontier quality via multi-model orchestration | Hacker News](https://news.ycombinator.com/item?id=49566788) - 63 points, 30 comments (posted September 4, 2026). Developers debated the quality-cost tradeoff, auto-mode limitations, and cross-vendor critique vs single-vendor self-review.
+- [GitHub's HydraFusion cuts AI coding costs in every benchmark. It only matches quality in one.](https://venturebeat.com/orchestration/githubs-hydrafusion-cuts-ai-coding-costs-in-every-benchmark-it-only-matches-quality-in-one/) - VentureBeat, September 2026. Critical angle: cost savings are real but quality parity is benchmark-dependent.
+- [Research Preview: HydraFusion is live in GitHub Copilot CLI](https://github.com/orgs/community/discussions/206492) - GitHub Community Discussion with active developer feedback on setup, orchestration behavior, and limitations.
+- [GitHub Introduces Project HydraFusion: Runtime Multi-Model Orchestration](https://www.marktechpost.com/2026/09/05/github-introduces-project-hydrafusion-runtime-multi-model-orchestration-that-builds-a-workflow-per-coding-task-in-copilot-cli/) - MarkTechPost, September 5, 2026. Technical overview confirming the three workflow patterns.
+
+### Competition check
+
+Searching "HydraFusion tutorial" and "GitHub HydraFusion guide how to use" returns only the official GitHub blog post, the GitHub Community Discussion, and news articles from VentureBeat, MarkTechPost, SaaS Sentinel, byteiota, and explainx.ai. Every result is either a feature announcement or a high-level explainer. No third-party practitioner guide covers: how to enable and evaluate HydraFusion on your own tasks, when cascade vs critique routing makes sense for different coding workloads, how to interpret which workflow pattern was selected, cost modeling for teams already using Copilot, or a direct comparison with Claude Code's single-vendor model routing and DIY multi-model approaches. The VentureBeat headline ("It only matches quality in one") highlights the exact question developers need answered - which workloads benefit and which lose quality. That nuanced cost-quality analysis is missing from every published article.
+
+### Suggested next step
+
+`/research-topic "github-hydrafusion-multi-model-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
