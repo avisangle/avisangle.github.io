@@ -729,3 +729,30 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-09-16: OpenAI Agents API Getting Started Guide - Build Cloud Agents Without the Plumbing
+
+**Suggested slug:** `openai-agents-api-getting-started-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On September 10, 2026, OpenAI opened its Agents API in public beta - exposing the exact managed harness that powers Codex and ChatGPT for Work to every developer with an API key. The API handles session orchestration, context compaction, crash recovery, subagent coordination, and sandbox isolation, which most teams currently rebuild from scratch. It supports MCP servers natively (an Anthropic-originated protocol now adopted cross-platform), offers nine sandbox compute partners (Vercel, E2B, Cloudflare, DigitalOcean, Modal, and others), and defaults to GPT-6 Astra. This is the single biggest developer-facing AI launch this week and a direct competitor to Claude Managed Agents, which the blog already covers. A practical getting-started guide fills the cross-provider gap in the blog's agentic systems coverage.
+
+### Search demand evidence
+
+- [OpenAI Agents API](https://news.ycombinator.com/item?id=49649213) - Hacker News front page discussion (posted September 10, 2026)
+- [OpenAI Just Opened Its Agents API to Everyone: What It Actually Changes for Developers](https://dev.to/thefluxread/openai-just-opened-its-agents-api-to-everyone-what-it-actually-changes-for-developers-3j1j) - DEV Community, September 2026
+- [Introducing the Agents API](https://openai.com/index/introducing-the-agents-api/) - Official OpenAI announcement, September 10, 2026
+- [OpenAI Launches the Agents API in Public Beta](https://www.marktechpost.com/2026/09/10/openai-launches-the-agents-api-in-public-beta-putting-the-codex-harness-behind-one-api-call/) - MarkTechPost, September 10, 2026
+- [OpenClaw Weekly: Four Releases, OpenAI Agents API, MCP Security](https://www.bighatgroup.com/blog/openclaw-weekly-2026-09-14/) - Big Hat Group, September 14, 2026
+
+### Competition check
+
+Searching "OpenAI Agents API getting started" returns results from tutorial-farm sites (tech-insider.org, juliangoldie.com, explainx.ai, layer3labs.io) that cover the API surface at a high level but don't walk through a practitioner workflow: how to set up an Environment with a specific sandbox provider, how to wire MCP servers into the agent definition, how subagent handoffs work compared to Claude Managed Agents, or what the cost profile looks like for real workloads. The blog's existing Claude Managed Agents coverage creates a natural comparison anchor - readers who built agents with the ant CLI or Claude Agent SDK are the exact audience searching "how does OpenAI's version differ."
+
+### Suggested next step
+
+`/research-topic "openai-agents-api-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
