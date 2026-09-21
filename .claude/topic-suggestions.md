@@ -729,3 +729,30 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-09-21: Jev and System One Models - When to Replace Your LLM Classifier with Typed AI Decisions
+
+**Suggested slug:** `jev-system-one-model-production-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+TypeSafe AI launched Jev on September 15, 2026 - a non-autoregressive "System One model" that returns typed probabilistic decisions instead of generating text. Within a week it became the highest-scoring AI story on Hacker News (1,655 points, 456 comments), five open-source clones appeared (SemIf, Kev, Von, NanoJev, local-jev accumulating 4,000+ GitHub stars combined), and the Latent Space newsletter ran it as a category-defining release. The core pitch hits an active pain point: developers running LLMs as classifiers, routers, and scorers in production pipelines are paying $10+/M tokens for GPT-6 Astra when Jev does the same job at $0.042/M in 70-500ms with typed output and calibrated confidence scores.
+
+### Search demand evidence
+
+- [Introducing System One Models and Jev](https://news.ycombinator.com/item?id=49717558) - 1,655 points, 456 comments (HN, posted 2026-09-15). Half the thread is excitement about the new category, the other half is developers stress-testing the "zero hallucinations" claim.
+- [Kev: Tiny Jev-like family of decision models built on Qwen3.5](https://news.ycombinator.com/item?id=49783999) - Open-source clone thread showing sustained community interest (HN, posted 2026-09-19).
+- [AINews: Jev - a "System One Model" that only decides/classifies/routes/scores](https://www.latent.space/p/ainews-jev-a-system-one-model-that) - Latent Space coverage positioning Jev as a new primitive for production AI pipelines.
+- [Introducing System One Models & Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) - Official TypeSafe announcement. Founded by Diogo Almeida (co-inventor of RLHF and InstructGPT at OpenAI), $40M funding led by DCVC.
+- [Open Source Clones of TypeSafe's Jev Arrive in a Week, Free on an RTX 3090](https://pasqualepillitteri.it/en/news/17263/typesafe-jev-open-source-clones-free-rtx-3090) - Coverage of the open-source response including Von (sub-15ms, MIT-licensed) and Kev (three sizes from 0.8B to 9B on Qwen3.5).
+
+### Competition check
+
+DataCamp, DEV Community, FlavioCopes, and Essa Mamdani already published "what is Jev" explainers within days. Most focus on explaining the API primitives (Noul, Choice, Score) and restating TypeSafe's benchmarks. The gap: no practitioner-focused guide covering when to swap an LLM for a System One model in a real pipeline (classification, intent routing, content scoring, guardrail checks), how the cost math works at scale, and how the open-source alternatives (Von, Kev, SemIf) let you self-host on consumer GPUs without vendor lock-in. The blog's existing cost-tracking and model-routing posts create a natural bridge for readers who already think about inference costs per task.
+
+### Suggested next step
+
+`/research-topic "jev-system-one-model-production-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
