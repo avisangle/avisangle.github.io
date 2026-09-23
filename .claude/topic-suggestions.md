@@ -729,3 +729,30 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-09-23: GitHub Copilot HydraFusion - When Multi-Model Routing Beats a Single Frontier Model
+
+**Suggested slug:** `copilot-hydrafusion-multi-model-routing-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+GitHub shipped HydraFusion on September 4, 2026 as a research preview in Copilot CLI. It dynamically routes coding tasks across multiple models using three patterns (Single, Cascade, Critique), claiming up to 67% cost reduction vs. Claude Opus 5. Three weeks in, getting-started guides exist but nobody has written the practitioner analysis developers actually need: which tasks benefit from each routing pattern, what the mixed benchmark numbers really mean for daily work, and how HydraFusion's approach compares to Claude Code's own model routing with Fable 5.
+
+### Search demand evidence
+
+- [Project HydraFusion: Frontier quality via multi-model orchestration](https://news.ycombinator.com/item?id=49566788) - Active HN discussion (posted 2026-09-04)
+- [[Research Preview] HydraFusion is live in GitHub Copilot CLI](https://github.com/orgs/community/discussions/206492) - 19 comments, 20 participants, multiple reactions; developers asking about cost transparency, Enterprise availability, and intermediate output visibility (GitHub Community, posted 2026-09-04)
+- [Project HydraFusion: Frontier quality via multi-model orchestration](https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/) - Official GitHub blog announcement
+- [GitHub's HydraFusion cuts AI coding costs in every benchmark. It only matches quality in one.](https://venturebeat.com/orchestration/githubs-hydrafusion-cuts-ai-coding-costs-in-every-benchmark-it-only-matches-quality-in-one) - VentureBeat analysis highlighting quality trade-offs (September 2026)
+- [GitHub Copilot HydraFusion: the cost cut, the mixed benchmarks, and whether to enable it](https://pondero.ai/coding/guides/github-copilot-hydrafusion-september-2026/) - Pondero guide (September 2026)
+
+### Competition check
+
+Searching "HydraFusion guide" and "Copilot multi-model routing" returns stephenwthomas.com and aireiter.com with setup walkthroughs (enable /experimental, select model), Pondero and VentureBeat with benchmark analysis, and explainx.ai with a feature explainer. All are either "how to turn it on" or "what the benchmarks say." None compare HydraFusion's Cascade/Critique patterns to Claude Code's Fable 5 model routing, none give task-level guidance on when multi-model orchestration actually helps vs. hurts quality (HydraFusion is currently limited to first-turn single-prompt tasks), and none address the billing transparency questions developers raised in the GitHub discussion. The blog's existing "Claude Code Fable 5: Model Routing, Fallbacks, Cost Control" post creates a natural bridge for readers comparing multi-model routing approaches across tools.
+
+### Suggested next step
+
+`/research-topic "copilot-hydrafusion-multi-model-routing-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
