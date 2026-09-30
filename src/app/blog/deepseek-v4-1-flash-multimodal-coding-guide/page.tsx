@@ -484,7 +484,7 @@ export default function DeepSeekV41FlashMultimodalCodingGuidePage() {
           <p className="text-lg leading-relaxed mb-6">
             The DeepSWE jump from 54.4 to 74.2 is the headline. The model card also puts it at 90.6
             on Terminal-Bench 2.1 against 89.1 for Claude Opus 5 and 88.8 for GPT-5.6 Sol. Read
-            those with the usual caution: DeepSeek ran them on its own harness.
+            those with the usual caution: DeepSeek ran them on its own evaluation setup.
           </p>
 
           <p className="text-lg leading-relaxed mb-6">
