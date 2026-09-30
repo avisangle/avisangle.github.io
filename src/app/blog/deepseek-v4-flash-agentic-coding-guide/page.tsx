@@ -338,6 +338,20 @@ export default function DeepSeekV4FlashAgenticCodingGuidePage() {
           </div>
         </header>
 
+        <Card className="card-accent-left mb-12">
+          <CardContent className="pt-6">
+            <p className="leading-relaxed">
+              <strong>Update, September 2026:</strong> V4 Flash was retired on
+              September 10 and <code>deepseek-v4-flash</code> now routes to V4.1
+              Flash. DeepSeek&apos;s Claude Code config has changed too. See{" "}
+              <Link href="/blog/deepseek-v4-1-flash-multimodal-coding-guide" className="project-link">
+                DeepSeek V4.1 Flash in Claude Code
+              </Link>
+              .
+            </p>
+          </CardContent>
+        </Card>
+
         {/* Table of Contents */}
         <Card className="mb-12">
           <CardHeader>

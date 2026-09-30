@@ -457,3 +457,4 @@
 - Facts corrected vs the merged topic suggestion: official site is agent-plugins.org; spec published 2026-08-06, Copilot GA 2026-08-12; TSC is Amazon/Cursor/Microsoft/OpenAI/Vercel + Google, GitHub not a listed core maintainer, Anthropic absent entirely.
 - Dropped from the brief: The New Stack citation (page body would not render on fetch) and any named third-party "translates to Claude Code" CLI (unverified, never run).
 - Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes. Note: `npm run lint` is broken repo-wide (eslint not installed).
+- 2026-09-30 deepseek-v4-1-flash-multimodal-coding-guide: picked from open topic PRs via GSC data, merged #75, researched and published /blog/deepseek-v4-1-flash-multimodal-coding-guide; old V4 Flash post got an update callout

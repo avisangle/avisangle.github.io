@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'deepseek-v4-1-flash-multimodal-coding-guide',
+    title: 'DeepSeek V4.1 Flash in Claude Code: Vision, Routing, Real Costs',
+    description:
+      'DeepSeek V4.1 Flash reads screenshots, beats V4 Pro on coding, and costs $0.15/$0.60 per 1M tokens. Claude Code setup, model-mapping traps, and real costs.',
+    datePublished: '2026-09-30',
+    topics: ['coding-agents', 'claude-code', 'local-inference'],
+    readTime: '13 min read',
+  },
+  {
     slug: 'agent-plugins-getting-started-guide',
     title: 'Agent Plugins 1.0: Build One Plugin for Claude Code and Copilot',
     description:
