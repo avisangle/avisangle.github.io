@@ -729,3 +729,31 @@ Searching "Agent Plugins 1.0 getting started guide" and "build agent plugin MCP 
 ### Suggested next step
 
 `/research-topic "agent-plugins-getting-started-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-09-14: DeepSeek V4.1 Flash - The First Open-Weight Multimodal Model Matching Frontier Agentic Coding Benchmarks
+
+**Suggested slug:** `deepseek-v4-1-flash-multimodal-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+DeepSeek shipped V4.1 Flash on September 10, 2026 - a 552B-parameter MoE model with a brand-new Causal Encoder-Decoder (CED) architecture, native vision input, and MIT open weights. It reports 90.6 on Terminal-Bench 2.1 and 74.2% on DeepSWE v1.1, matching or beating Claude Opus 5 and GPT-5.6 Sol on agentic coding benchmarks at $0.15/MTok input. The blog's existing V4 Flash 0731 post (August 2026) covers a text-only, 284B/13B-active model on a different architecture - its own content brief flagged "no multimodal" as the key limitation. V4.1 Flash directly fixes that gap with a trained-from-scratch vision encoder. On September 14, DeepSeek began routing all V4 Pro API traffic to V4.1 Flash, forcing a model swap that broke regression testing for teams using deepseek-v4-pro in production. Two separate Hacker News threads are active with developer reactions to both the model release and the forced swap.
+
+### Search demand evidence
+
+- [DeepSeek v4.1 Flash](https://news.ycombinator.com/item?id=49639090) - Active HN thread (posted around Sep 10-11, 2026). Developers discussing benchmarks, pricing, and the CED architecture.
+- [DeepSeek launching v4.1 flash cheaper and more capable than v4 pro](https://news.ycombinator.com/item?id=49624603) - Second HN thread covering the pricing disruption and V4 Pro replacement. Comments debate whether silently swapping models behind an API identifier invalidates regression testing.
+- [DeepSeek V4.1 Flash: V4 Pro Routing Explained](https://shattered.io/deepseek-v4-1-flash-v4-pro-retirement-2026/) - Developer-oriented explainer on the forced routing change starting Sep 14.
+- [DeepSeek-V4.1-Flash debuts with $0.003/1M off-peak cached-input rate](https://venturebeat.com/technology/deepseek-v4-1-flash-debuts-with-0-003-1m-off-peak-cached-input-rate-and-benchmarks-eclipsing-gpt-5-6-sol-claude-opus-5) - VentureBeat coverage of the benchmark claims and pricing.
+- [DeepSeek V4.1 Flash Benchmarks: Open-Weights Model Beats GPT-5.6 Sol at Agentic Coding](https://flowtivity.ai/blog/deepseek-v4-1-flash-benchmarks/) - Independent benchmark analysis.
+- [deepseek-ai/DeepSeek-V4.1-Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) - MIT-licensed weights on Hugging Face (510 GB checkpoint).
+
+### Competition check
+
+Searching "DeepSeek V4.1 Flash guide" returns a Baseten inference optimization post, an evolink.ai migration guide focused on API endpoint changes, a tech-insider 12-step API setup, and several specs-and-pricing roundups. None approach V4.1 Flash from a practitioner coding-agent perspective: how the native vision encoder changes what a coding agent can do (screenshot validation, diagram parsing, visual debugging), how the CED architecture's split prefill/decode activation (8B input / 16B output) affects agent loop costs differently from V4 Flash 0731, or how to handle the forced V4 Pro model swap in a production pipeline. The blog's existing V4 Flash post creates a natural upgrade path for readers.
+
+### Suggested next step
+
+`/research-topic "deepseek-v4-1-flash-multimodal-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
