@@ -757,3 +757,31 @@ Searching "DeepSeek V4.1 Flash guide" returns a Baseten inference optimization p
 ### Suggested next step
 
 `/research-topic "deepseek-v4-1-flash-multimodal-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-02: Gemini 4 Argon Agentic Coding Guide - Google's 1M-Output Model That Tops DeepSWE
+
+**Suggested slug:** `gemini-4-argon-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Google unveiled Gemini 4 Argon on September 30, 2026, and it immediately became the most-discussed AI story of the week. Two things set Argon apart from the flood of frontier model updates: a 1-million-token output limit (15x the previous 64K ceiling) that lets the model sustain deep reasoning across an entire codebase in a single pass, and a 77.9% score on DeepSWE v1.1 - beating both GPT-6.1 Sol (75.2%) and GPT-6 Astra (74.1%) on long-horizon software engineering tasks. Introductory API pricing lands at $2/MTok input and $10/MTok output, with a 95% cached-input discount that undercuts most frontier models for agentic workloads. Google is rolling out to paid API customers and AI Ultra subscribers first, making this actionable for developers who pay for access. The existing blog post on Gemini 3.5 Flash (May 2026) covers a flash-tier model with different strengths - Argon targets an entirely different use case: long-running, multi-step agentic coding and enterprise reasoning at frontier quality.
+
+### Search demand evidence
+
+- [Gemini 4 Argon](https://news.ycombinator.com/item?id=49913571) - 1641 points, 1126 comments on Hacker News (Oct 1-2, 2026). Developer discussion covers benchmark skepticism, pricing comparisons to GPT-6.1 Sol and Claude Opus 5.5, and the practical implications of 1M output tokens for codebase migrations and multi-file refactors.
+- [Google announces Gemini 4 Argon, its new frontier model](https://www.thedailystar.net/news/technology/news/google-announces-gemini-4-argon-its-new-frontier-model-4287686) - mainstream tech coverage, Sep 30
+- [Google says Gemini 4 Argon can find and patch critical software flaws](https://www.helpnetsecurity.com/2026/10/01/google-gemini-4-argon/) - Help Net Security, Oct 1, covering the autonomous vulnerability-scanning capability
+- [Google DeepMind Unveils Gemini 4 Argon with 1M Output Tokens for Coding, Knowledge Work and Cyber Defense](https://www.marktechpost.com/2026/09/30/google-deepmind-unveils-gemini-4-argon-with-1m-output-tokens-for-coding-knowledge-work-and-cyber-defense/amp/) - MarkTechPost, Sep 30
+- [Gemini 4 Argon: Surprising 1M Output, Powerful Coding SOTA](https://www.progressiverobot.com/2026/10/01/gemini-4-argon-google-tests-1m-output-tokens-coding-sota/) - Progressive Robot, Oct 1
+- DevDay week context: GPT-6.1 Sol (1050 HN pts), OpenAI Dots (750 HN pts), and Ember-1 (587 HN pts) all launched the same week, but Argon drew the most developer attention by a wide margin.
+
+### Competition check
+
+Searching "Gemini 4 Argon developer guide" or "Gemini 4 Argon agentic coding" returns news recap articles (MarkTechPost, Progressive Robot, The Daily Star), a Developers Digest overview, a CallMissed migration checklist, and pricing/benchmark roundups. None approach Argon from a practitioner agentic-coding angle: how the 1M output window changes agent loop architecture (single-pass full-repo refactors vs multi-turn chunking), what the $2/MTok input + 95% cache discount means for long-context agent costs compared to GPT-6.1 Sol ($2/$10) and Opus 5.5, or how the cybersecurity scanning capability slots into an existing CI/CD pipeline. The blog's Gemini 3.5 Flash post creates a natural upgrade path for readers.
+
+### Suggested next step
+
+`/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
