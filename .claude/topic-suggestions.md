@@ -757,3 +757,32 @@ Searching "DeepSeek V4.1 Flash guide" returns a Baseten inference optimization p
 ### Suggested next step
 
 `/research-topic "deepseek-v4-1-flash-multimodal-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-09-30: Deadbugz MCP Defense Guide - Detecting and Blocking Runtime-Gated Metadata Poisoning in AI Coding Agents
+
+**Suggested slug:** `deadbugz-mcp-metadata-poisoning-defense`
+**Status:** pending research
+
+### Why this topic, why now
+
+On August 10, 2026, Pillar Security disclosed Deadbugz - an active supply chain campaign that files pull requests adding a malicious MCP server to developer projects. The server ships two harmless text-formatting tools, then after exactly three tool calls, rewrites its own metadata to instruct the connected AI agent to hunt for SSH keys, AWS credentials, shell history, and Kubernetes config while hiding the activity from the user. Twenty-three PRs went out to unrelated repos in a 74-minute window. Adversa.ai's September 2026 MCP security roundup brought it back into active discussion alongside three new MCP server CVEs (path traversal, cleartext token leak, and SSRF). Every article published so far describes the attack mechanism. Not one walks a developer through the defense: how to detect if you were targeted, how to pin tool schemas at approval time and verify them at runtime, how to monitor for metadata drift across call counts, or how to configure Claude Code and other AI coding agents to block credential-seeking tool calls. With MCP at 97M+ monthly SDK downloads and only 8.5% of public servers using OAuth, the attack surface is massive and growing.
+
+### Search demand evidence
+
+- [Deadbugz: Currently Active MCP Supply-Chain Campaign](https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign) - Pillar Security original disclosure (August 2026). Documents the 23-PR campaign by the zellkernel GitHub account, the call-count gating mechanism, and the credential-exfiltration payload.
+- [Deadbugz: Runtime-Gated MCP Metadata Poisoning as Supply-Chain Attack](https://labs.cloudsecurityalliance.org/research/csa-research-note-deadbugz-mcp-metadata-poisoning-20260902-c/) - Cloud Security Alliance research note (September 2, 2026). Technical analysis of the runtime gating pattern and why connect-and-check audits never cross the threshold.
+- [MCP security September 2026: Deadbugz + 3 server CVEs](https://adversa.ai/blog/top-mcp-security-resources-september-2026/) - Adversa.ai roundup (September 2026). Groups Deadbugz with three new MCP server CVEs, framing September as the month MCP security broke into the mainstream conversation.
+- [toolfence-deadbugz-guard](https://github.com/furyheimdall/toolfence-deadbugz-guard) - Open-source sidecar tool on GitHub. Pins tool schemas at approval and diffs against runtime tools/list responses, proving developer demand for defense tooling.
+- [mcp-behaviour-guard](https://github.com/hacker-vs-cracker/mcp-behaviour-guard) - Second open-source defense tool on GitHub. Defines permitted behavior, runs controlled tests, and reports deviations with reproducible evidence.
+- [MCP Security Statistics 2026: What the Vulnerability Data Reveals About AI Agent Risk](https://blog.bonfy.ai/mcp-security-statistics-2026-what-the-vulnerability-data-reveals-about-ai-agent-risk) - Bonfy.ai (2026). Reports that 30-82% of public MCP servers carry exploitable flaws, with only 8.5% using OAuth - the statistical backdrop that makes Deadbugz-style attacks viable at scale.
+- [Deadbugz shows how MCP metadata poisoning evades AI agent trust](https://nhimg.org/articles/deadbugz-shows-how-mcp-metadata-poisoning-evades-ai-agent-trust/) - NHImg analysis explaining why the delayed-trigger pattern defeats one-time security reviews by construction.
+
+### Competition check
+
+Searching "Deadbugz MCP defense guide" and "MCP metadata poisoning how to protect" returns the Pillar Security disclosure, two CSA research notes, the Adversa.ai roundup, a ByteIota attack explainer, and two DEV Community articles on general MCP tool poisoning defense. Every piece either describes the attack mechanism or offers high-level enterprise recommendations ("treat MCP configs as high-risk changes"). None walk a developer through the specific defense playbook: checking your repos for the productivity-suite-mcp.onrender.com indicator, auditing past MCP-related PRs from unknown contributors, pinning tool schemas with hash verification at approval time, configuring runtime metadata drift detection using toolfence or mcp-behaviour-guard, setting Claude Code permission modes to block unexpected credential access patterns, or establishing call-count monitoring to detect the three-call gating pattern. The blog's existing MCP content (mcp-code-execution-pattern, mcp-stateless-spec-migration-guide, litellm-mcp-exploit-response-guide) and security cluster (hardening-ai-agents-cicd-prompt-injection, hallusquatting-defense-ai-coding-agents) make it a natural home for the first hands-on Deadbugz defense walkthrough.
+
+### Suggested next step
+
+`/research-topic "deadbugz-mcp-metadata-poisoning-defense"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
