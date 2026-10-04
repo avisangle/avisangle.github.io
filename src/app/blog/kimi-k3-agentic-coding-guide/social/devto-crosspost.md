@@ -72,7 +72,7 @@ If you'd rather run Moonshot's native agent, Kimi Code CLI is the open-source te
 
 ```bash
 # Recommended: official install script, no Node required
-curl -fsSL https://install.kimi.com/cli | bash
+curl -fsSL https://code.kimi.com/kimi-code/install.sh | bash
 
 # Alternative: global npm install
 npm install -g kimi
