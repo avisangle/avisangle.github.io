@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Does Roundhand send my audio to the cloud?",
-    a: "Speech is recognised on your Mac. Your audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.",
+    a: "Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.",
   },
   {
     q: "Is rules-based cleanup better than an LLM?",
@@ -332,7 +332,7 @@ export default function RulesVsLlmDictationCleanupPage() {
           <ol className="list-decimal pl-6 space-y-3 mb-6 text-lg leading-relaxed">
             <li>
               Recognition. NVIDIA&apos;s Parakeet model turns audio into a transcript. This runs on
-              your Mac, on the Neural Engine, through CoreML. Speech is recognised on your Mac. Your
+              your Mac, on the Neural Engine, through CoreML. Speech is recognised on your Mac. Dictation
               audio is never uploaded or saved to disk.
             </li>
             <li>

@@ -37,7 +37,7 @@ Roundhand is a menu-bar dictation app for Apple silicon Macs. You hold a key, ta
 
 Two things happen between your voice and the text field:
 
-1. Recognition. NVIDIA's Parakeet model turns audio into a transcript. This runs on your Mac, on the Neural Engine, through CoreML. Speech is recognised on your Mac. Your audio is never uploaded or saved to disk.
+1. Recognition. NVIDIA's Parakeet model turns audio into a transcript. This runs on your Mac, on the Neural Engine, through CoreML. Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk.
 2. Cleanup. The transcript is cleaned and shaped for the destination app. This is the step the rest of this post is about.
 
 Here's a 60-second demo: https://www.youtube.com/watch?v=DUsTHgtK1wI
@@ -99,7 +99,7 @@ That is the pattern I keep landing on. If the job is well defined, write the rul
 
 ### Does Roundhand send my audio to the cloud?
 
-Speech is recognised on your Mac. Your audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.
+Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.
 
 ### Is rules-based cleanup better than an LLM?
 
