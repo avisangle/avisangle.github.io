@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'rules-vs-llm-dictation-cleanup',
+    title: 'Rules vs LLM for Dictation Cleanup: What I Measured on My Speech',
+    description:
+      'I built a Mac dictation app, hand-checked my own dictations, and compared offline rules to two cloud LLMs. On everyday speech the rules won.',
+    datePublished: '2026-10-04',
+    topics: ['local-inference'],
+    readTime: '8 min read',
+  },
+  {
     slug: 'deepseek-v4-1-flash-multimodal-coding-guide',
     title: 'DeepSeek V4.1 Flash in Claude Code: Vision, Routing, Real Costs',
     description:

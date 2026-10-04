@@ -457,4 +457,10 @@
 - Facts corrected vs the merged topic suggestion: official site is agent-plugins.org; spec published 2026-08-06, Copilot GA 2026-08-12; TSC is Amazon/Cursor/Microsoft/OpenAI/Vercel + Google, GitHub not a listed core maintainer, Anthropic absent entirely.
 - Dropped from the brief: The New Stack citation (page body would not render on fetch) and any named third-party "translates to Claude Code" CLI (unverified, never run).
 - Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt. Build passes. Note: `npm run lint` is broken repo-wide (eslint not installed).
+- 2026-08-20 Generated OG image + 6 social drafts for agent-plugins-getting-started-guide (commit 8c7ebcd). Reddit targets: r/ClaudeAI (score 12) + r/mcp (score 6), chosen from the registry scoring.
+- BLOCKER for Reddit posting: `scripts/list_reddit_flairs.py` returns 401 for every sub, so flair IDs could not be looked up. Drafts carry flair NAMES from the registry ("Tutorial"), not verified IDs. Reddit credentials need refreshing before /post-blogpost reddit, or the post will likely fail flair validation. Prior POSTED.md shows r/ClaudeAI accepted a "Claude Code" flair that isn't in the registry list, so the registry's flair names may also be stale.
+- Also fixed a banned word that had shipped in the published article: "test harness" -> "test setup" (page.tsx + devto crosspost).
+- Sitemap resubmitted to Google Search Console.
 - 2026-09-30 deepseek-v4-1-flash-multimodal-coding-guide: picked from open topic PRs via GSC data, merged #75, researched and published /blog/deepseek-v4-1-flash-multimodal-coding-guide; old V4 Flash post got an update callout
+- 2026-09-30 deepseek-v4-1-flash-multimodal-coding-guide: OG image + 6 social drafts (Reddit: ClaudeAI, LLMDevs, vibecoding; flair lookup still 401) (f55b2b9)
+- 2026-10-04 rules-vs-llm-dictation-cleanup: built /blog/rules-vs-llm-dictation-cleanup from docs/blog-rules-vs-llm-cleanup.md, build passes, not yet committed or pushed (no OG image yet)

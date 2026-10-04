@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Rules vs LLM for Dictation Cleanup: What I Measured on My Speech",
+                url: "https://avinashsangle.com/blog/rules-vs-llm-dictation-cleanup",
+                datePublished: "2026-10-04",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "DeepSeek V4.1 Flash in Claude Code: Vision, Routing, Real Costs",
                 url: "https://avinashsangle.com/blog/deepseek-v4-1-flash-multimodal-coding-guide",
                 datePublished: "2026-09-30",
@@ -316,23 +323,23 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ScanEye" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Mic" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">DeepSeek V4.1 Flash in Claude Code: Vision, Routing, Real Costs</h3>
+                <h3 className="text-2xl font-bold mb-4">Rules vs LLM for Dictation Cleanup: What I Measured on My Speech</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  A new encoder-decoder model that reads screenshots and beats
-                  DeepSeek&apos;s own V4 Pro on coding. The Claude Code config DeepSeek
-                  quietly changed, the model-name mapping that sends you to V4 Pro,
-                  and what the V4 Pro reversal means for your pipeline.
+                  I built a Mac dictation app, hand-checked my own dictations, and
+                  compared offline rules to two cloud LLMs. On everyday speech the
+                  rules won, and a word-count gate skips the LLM calls that would
+                  have returned the same text.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Sep 30, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Oct 4, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 13 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 8 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/deepseek-v4-1-flash-multimodal-coding-guide">Read Article →</Link>
+                  <Link href="/blog/rules-vs-llm-dictation-cleanup">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -345,6 +352,27 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Mic" size="lg" animation="pulse" />
+                <CardTitle>Rules vs LLM for Dictation Cleanup: What I Measured on My Speech</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Offline rules beat two cloud LLMs on my everyday dictations. 50 of
+                  146 LLM calls returned what the rules already had, so a 6-word gate
+                  skips the model for short transcripts.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Oct 4, 2026</span>
+                  <span>•</span>
+                  <span>8 min read</span>
+                </div>
+                <Link href="/blog/rules-vs-llm-dictation-cleanup" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ScanEye" size="lg" animation="pulse" />
