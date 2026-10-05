@@ -464,3 +464,4 @@
 - 2026-09-30 deepseek-v4-1-flash-multimodal-coding-guide: picked from open topic PRs via GSC data, merged #75, researched and published /blog/deepseek-v4-1-flash-multimodal-coding-guide; old V4 Flash post got an update callout
 - 2026-09-30 deepseek-v4-1-flash-multimodal-coding-guide: OG image + 6 social drafts (Reddit: ClaudeAI, LLMDevs, vibecoding; flair lookup still 401) (f55b2b9)
 - 2026-10-04 rules-vs-llm-dictation-cleanup: built /blog/rules-vs-llm-dictation-cleanup from docs/blog-rules-vs-llm-cleanup.md, build passes, not yet committed or pushed (no OG image yet)
+- 2026-10-05 roundhand: added /projects/roundhand page, project data entry (featured), sitemap, llms.txt, OG image

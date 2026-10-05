@@ -21,6 +21,7 @@ export type IconName =
   | 'Wrench'
   | 'Database'
   | 'Settings'
+  | 'Mic'
 
 export interface Project {
   id: string
@@ -56,6 +57,26 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'roundhand',
+    title: 'Roundhand',
+    description: 'Menu-bar dictation app for Apple silicon Macs. Speech is recognised on-device with Parakeet through CoreML, and the text is cleaned and shaped for the app you are typing into. Offline rules are the default, with optional cloud cleanup behind a word-count gate.',
+    shortDescription: 'On-device Mac dictation that writes for the app that has focus',
+    category: 'Mac App',
+    badge: 'Free Download',
+    icon: 'Mic',
+    technologies: ['Swift', 'CoreML', 'Parakeet'],
+    tags: ['Mac', 'Dictation', 'On-Device AI', 'Swift', 'CoreML', 'Speech to Text'],
+    route: '/projects/roundhand',
+    liveUrl: 'https://roundhand.dev',
+    blogUrl: '/blog/rules-vs-llm-dictation-cleanup',
+    youtubeUrl: 'https://www.youtube.com/watch?v=DUsTHgtK1wI',
+    featured: true,
+    status: 'active',
+    date: '2026-10-05',
+    order: 0,
+    year: 2026
+  },
   {
     id: 'trending-repo-scout',
     title: 'Trending Repo Scout',
