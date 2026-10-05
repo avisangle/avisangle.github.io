@@ -757,3 +757,31 @@ Searching "DeepSeek V4.1 Flash guide" returns a Baseten inference optimization p
 ### Suggested next step
 
 `/research-topic "deepseek-v4-1-flash-multimodal-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-05: Apple macOS Full Disk Access Changes - What AI Coding Agent Developers Need to Know
+
+**Suggested slug:** `macos-full-disk-access-ai-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+On October 2, 2026, Apple announced it will tighten macOS Full Disk Access controls, explicitly naming autonomous AI agents as the reason - the first time a major OS vendor has introduced security controls specifically targeting AI coding agents. This directly affects every developer running Claude Code, Codex, Cursor, Gemini CLI, or any terminal-based AI coding agent on macOS, since these tools typically request FDA to read project files, access terminal history, and interact with the filesystem. The announcement follows a patched ChatGPT macOS vulnerability (September 25) and Meta's Muse agent controversy around reading personal messages without clear consent boundaries.
+
+### Search demand evidence
+
+- [Apple Announces 'Full Disk Access' Changes on macOS Due to AI Agents](https://www.macrumors.com/2026/10/02/apple-announces-macos-full-disk-access-changes/) - MacRumors coverage (posted 2026-10-02)
+- [Apple says it's tightening macOS 'Full Disk Access' controls due to new risks from AI agents](https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/) - TechCrunch coverage (posted 2026-10-02)
+- [Apple Plans Tighter macOS Full Disk Access Controls Over AI Agent Data Access](https://thehackernews.com/2026/10/apple-plans-tighter-macos-full-disk.html) - The Hacker News (posted 2026-10-02)
+- [Apple tightens macOS disk access as AI agents become more powerful](https://www.helpnetsecurity.com/2026/10/05/macos-full-disk-access-updates/) - Help Net Security (posted 2026-10-05)
+- HN trending Oct 4-5: "Security in the LLM Age" by Greg Kroah-Hartman - 336 points, 128 comments; "Pop!_OS bans AI-generated code" - 116 points, 166 comments. Both show the developer community is focused on AI agent security this week.
+- HN trending Oct 5: "Apple tightening macOS Full Disk Access due to AI agents" appeared in multiple HN AI digests for the week.
+
+### Competition check
+
+Searching "macOS full disk access AI agents developer" returns news articles from MacRumors, TechCrunch, The Hacker News, and Help Net Security - all covering what Apple announced. One Medium article and a Gadget Hacks "what to check now" piece exist, but neither provides a developer-focused guide on how AI coding agents use FDA, what breaks when Apple restricts it, how to audit your agent's filesystem access, or how to structure your dev environment to minimize FDA exposure. No practitioner guide exists for the audience that actually runs these agents daily.
+
+### Suggested next step
+
+`/research-topic "macos-full-disk-access-ai-coding-agents"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
