@@ -8,6 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'macos-full-disk-access-ai-coding-agents',
+      lastModified: '2026-10-06',
+    },
+    {
       slug: 'rules-vs-llm-dictation-cleanup',
       lastModified: '2026-10-04',
     },

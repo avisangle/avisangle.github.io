@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'macos-full-disk-access-ai-coding-agents',
+    title: "Apple's Full Disk Access Change: Audit Your AI Coding Agent",
+    description:
+      'Apple will tighten macOS Full Disk Access over AI agents. How Claude Code inherits it from your terminal, what I saw on my Mac, and the sandbox config that shrinks it.',
+    datePublished: '2026-10-06',
+    topics: ['ai-security', 'claude-code'],
+    readTime: '10 min read',
+  },
+  {
     slug: 'rules-vs-llm-dictation-cleanup',
     title: 'Rules vs LLM for Dictation Cleanup: What I Measured on My Speech',
     description:

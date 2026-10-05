@@ -465,3 +465,11 @@
 - 2026-09-30 deepseek-v4-1-flash-multimodal-coding-guide: OG image + 6 social drafts (Reddit: ClaudeAI, LLMDevs, vibecoding; flair lookup still 401) (f55b2b9)
 - 2026-10-04 rules-vs-llm-dictation-cleanup: built /blog/rules-vs-llm-dictation-cleanup from docs/blog-rules-vs-llm-cleanup.md, build passes, not yet committed or pushed (no OG image yet)
 - 2026-10-05 roundhand: added /projects/roundhand page, project data entry (featured), sitemap, llms.txt, OG image
+
+## 2026-10-06
+
+- Merged topic-suggestion PR #84 (squash 8e586f8), then ran /research-topic + /write-blogpost.
+- Published blog post: "Apple's Full Disk Access Change: Audit Your AI Coding Agent" at /blog/macos-full-disk-access-ai-coding-agents (Claude Code, ~2,100 words, 10 min, 8 FAQ items, 4 code blocks). Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo.
+- metadata.title 40 chars (rendered 57); description 150; OG/H1 59.
+- Apple gave no date, version or mechanism; post says so and omits unsourced "Sequoia 15.2 / Dec 1" claims from search snippets. Evidence from own Mac (macOS 26.6.2, iTerm2 without FDA): Messages/Safari/Mail and TCC.db refused, ~/.ssh readable. With-grant behaviour and the tccutil reset line were not run against a real grant. Update the post when Apple publishes details.
+- Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.
