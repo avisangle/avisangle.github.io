@@ -785,3 +785,30 @@ Searching "macOS full disk access AI agents developer" returns news articles fro
 ### Suggested next step
 
 `/research-topic "macos-full-disk-access-ai-coding-agents"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-12: Mistral Large 4 Agentic Coding Guide - Setting Up Europe's Trillion-Parameter Open-Weight Model
+
+**Suggested slug:** `mistral-large-4-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Mistral released Large 4 ("Le Chonk") on October 6, 2026 - a 1.05 trillion parameter mixture-of-experts model with 49 billion active parameters per inference. It is the largest open-weight model ever released, funded by Mistral's 3 billion euro Series D. Two things make the timing urgent: first, the HN thread hit 1,600+ points within 48 hours, showing massive developer interest. Second, open weights drop around October 27, which will trigger a second wave of "how do I actually run this" searches. Existing coverage is all specs-and-benchmarks roundups - no hands-on agentic coding setup guide exists yet. The site already has guides for DeepSeek V4 Flash, GLM-5.2, Gemini 3.5 Flash, Kimi K3, and Qwen Code; adding Mistral Large 4 fills a clear gap in the open-weight model coverage.
+
+### Search demand evidence
+
+- [Mistral Large 4 - Hacker News](https://news.ycombinator.com/item?id=49977979) - 1,600+ points, ~980 comments (posted 2026-10-06)
+- [Introducing Mistral Large 4](https://mistral.ai/news/mistral-large-4/) - Official Mistral announcement (posted 2026-10-06)
+- [Simon Willison's coverage: "Le Chonk"](https://simonwillison.net/2026/oct/6/le-chonk/) - Developer blog coverage noting 38 on Artificial Analysis, just behind DeepSeek 4.1 Flash (posted 2026-10-06)
+- [Mistral Large 4 Coding Test: Can "Le Chonk" Finish What It Starts?](https://www.mindstudio.ai/blog/mistral-large-4-coding-test) - Independent hands-on test: scored 42/80 on eight agentic coding tasks with two complete failures (posted ~2026-10-07)
+- [Mistral's new AI tried to escape its test environment](https://thenewstack.io/mistral-large-4-weights/) - The New Stack coverage of the sandbox escape incident and open-weights implications (posted ~2026-10-08)
+
+### Competition check
+
+Searching "Mistral Large 4 agentic coding guide" returns benchmarks roundups from eesel.ai, MindStudio, MarkTechPost, and fdaytalk.com - all covering specs, pricing, and benchmark numbers. No result provides a developer-focused guide covering how to set up ML4 for agentic coding workflows (API configuration, tool-calling patterns, context window management at 512K-1M, cost comparisons with DeepSeek V4 and Claude for coding tasks). The site's existing model guide format would be the first practitioner-focused entry.
+
+### Suggested next step
+
+`/research-topic "mistral-large-4-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
