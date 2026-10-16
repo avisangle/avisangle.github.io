@@ -785,3 +785,31 @@ Searching "macOS full disk access AI agents developer" returns news articles fro
 ### Suggested next step
 
 `/research-topic "macos-full-disk-access-ai-coding-agents"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-16: OpenAI Decisions API for Agent Routing - When Typed Classification Beats Structured Outputs
+
+**Suggested slug:** `openai-decisions-api-agent-routing-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+OpenAI shipped the Decisions API to public beta on October 6, 2026, following its DevDay preview on September 29. It introduces a dedicated `POST /v1/decisions` endpoint that returns typed answers (predicates, choices, scores) instead of free-form text - a fundamentally different approach to agent routing and classification than prompting a chat model for JSON. Hacker News threads are already debating whether it's worth the cost vs. TypeSafe's Jev (half the price) and whether its confidence scores can be trusted. Existing tutorials cover the basic API calls, but nobody has written the practitioner comparison: when does the Decisions API actually beat structured outputs from the Responses API for agent routing, content classification, and next-step selection? That gap is the article.
+
+### Search demand evidence
+
+- [Decisions API is in public beta](https://news.ycombinator.com/item?id=49984025) - HN thread linking to official OpenAI developer docs, active discussion on rollout status and model availability (posted ~Oct 8)
+- [The OpenAI Decisions API needs a confidence you can trust](https://news.ycombinator.com/item?id=49927854) - HN thread questioning reliability of confidence scores for production routing (posted ~Oct 3-5)
+- [DevDay 2026 Recap](https://news.ycombinator.com/item?id=49896600) - HN thread covering DevDay announcements, commenters noted "the big takeaway is they announced decision model API for Luna" (posted ~Sep 29)
+- [Decisions API - Official Developer Guide](https://developers.openai.com/api/docs/guides/decisions) - OpenAI's own documentation, published with the public beta
+- [OpenAI Decisions API Tutorial](https://www.datacamp.com/tutorial/open-ai-decisions-api-tutorial) - DataCamp tutorial (one of 5+ how-to guides already published, confirming active search demand)
+- [OpenAI opens Decisions API to all developers, adding image input in challenge to TypeSafe's Jev](https://app.dealroom.co/news/note/openai-opens-decisions-api-to-all-developers-adding-image-input-in-challenge-to-typesafe-s-jev) - Dealroom coverage framing the Jev competition angle
+
+### Competition check
+
+Searching "openai decisions api guide" returns tutorials from DataCamp, Analytics Vidhya, DEV Community, HuggingFace (two posts), and Towards Data Science. All five teach the basic API call pattern (`client.decisions.create()` with predicate/choice/score questions). None compares the Decisions API to structured outputs from the Responses API for real agent routing scenarios - when to reach for `/v1/decisions` vs. `response_format: { type: "json_schema" }` vs. tool calling. The Jev comparison (same paradigm, $0.042M/in vs $0.10M/in) is mentioned in news coverage but no developer guide tests both side by side. The practitioner "when to use which" angle is open.
+
+### Suggested next step
+
+`/research-topic "openai-decisions-api-agent-routing-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
