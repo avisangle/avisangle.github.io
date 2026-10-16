@@ -785,3 +785,31 @@ Searching "macOS full disk access AI agents developer" returns news articles fro
 ### Suggested next step
 
 `/research-topic "macos-full-disk-access-ai-coding-agents"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-09: Mistral Large 4 Agentic Coding Guide - Getting Started with Europe's Trillion-Parameter Open-Weight Model
+
+**Suggested slug:** `mistral-large-4-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Mistral released Large 4 ("Le Chonk") as a public API preview on October 6, 2026 - their first trillion-parameter model (1.05T total, ~49B active via MoE) and the largest open-weight model from a European lab. Open weights are expected by the end of October. The blog has getting-started guides for every other major model family (DeepSeek, Gemini, Qwen, GLM, Gemma, Kimi) but zero Mistral content, making this the most obvious coverage gap. Mistral reports 61.7% on DeepSWE v1.1, putting it in range of frontier models for agentic coding tasks, and the model supports function calling, structured outputs, and a 1M-token context window - all features relevant to agentic coding workflows.
+
+### Search demand evidence
+
+- [Mistral Large 4 official announcement](https://mistral.ai/news/mistral-large-4/) - Mistral AI (posted 2026-10-06)
+- [Europe's Mistral launches Large 4 to challenge China's lead in open AI models](https://thenextweb.com/news/mistral-releases-large-4-a-1-trillion-parameter-open-weight-ai-model) - The Next Web (posted 2026-10-06)
+- [Mistral unveils Le Chonk, says "significantly outperforms" any open-weight models in US or Europe](https://tech.eu/2026/10/06/mistral-unveils-le-chonk-says-outperforms-any-open-weight-model-developed-in-the-us-or-europe/) - Tech.eu (posted 2026-10-06)
+- [How Does Mistral Large 4 Compare To Its Competitors?](https://aimagazine.com/news/how-does-mistral-large-4-compare-to-its-competitors) - AI Magazine
+- Hacker News front page October 7, 2026 - listed as a main AI story in HN daily digests and commentary
+- Multiple comparison articles (vs GPT-6 Sol, vs DeepSeek V4 Pro) already indexed, indicating active search interest
+
+### Competition check
+
+Searching "Mistral Large 4 getting started guide" and "Mistral Large 4 coding tutorial" returns overview articles from MindStudio, Apidog, Cellcog, Connic, and AI Magazine - all covering specs, benchmarks, and pricing. None provide a practitioner guide for agentic coding: how to set up the API, configure function calling for coding tasks, compare its coding performance against DeepSeek V4 and Claude Opus 5 on real-world tasks, or prepare for the open-weight release. The blog's established model guide format (see DeepSeek V4 Flash, Gemini 3.5 Flash, Kimi K3 guides) provides a ready template.
+
+### Suggested next step
+
+`/research-topic "mistral-large-4-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
