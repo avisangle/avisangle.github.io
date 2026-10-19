@@ -785,3 +785,31 @@ Searching "macOS full disk access AI agents developer" returns news articles fro
 ### Suggested next step
 
 `/research-topic "macos-full-disk-access-ai-coding-agents"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-19: Gemini 4 Argon Agentic Coding Guide - Google's Frontier Model at $2/MTok for Developer Workflows
+
+**Suggested slug:** `gemini-4-argon-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Google made Gemini 4 Argon broadly available on October 13, 2026 - six days ago - opening API access, AI Studio, and Antigravity integration to all Pro and Ultra subscribers. The model scored 77.9% on DeepSWE v1.1 (beating both GPT-6 Astra and Claude Opus 5.5) and introduced a `thinking_level` control (Low/Medium/High) that lets developers trade latency for code quality, similar to Claude's effort levels. The pricing is the real story: $2/$10 per million tokens introductory through November 30, then $4/$20 standard. That is 2.5x cheaper than Claude Opus and 5x cheaper than GPT-6 Astra or Fable 5 at introductory rates. Developers have a 6-week window to evaluate before prices double. The Hacker News launch thread drew 1,461 points and 1,040 comments, with developers debating coding quality, reasoning loops, and when the pricing advantage justifies switching from Claude or GPT. The blog already covers Gemini 3.5 Flash and the Gemini CLI-to-Antigravity migration but has no Gemini 4 content. Existing third-party coverage is either thin benchmark comparison tables or generic "12 Steps to Use Argon" setup posts. Nobody has written the practitioner guide covering which coding tasks Argon wins on, where it falls short (Terminal-Bench 4.0: 57.4% vs Opus 5.5's 66.4%), and how to route work between models based on task type and cost.
+
+### Search demand evidence
+
+- [Gemini 4 Argon - Hacker News](https://news.ycombinator.com/item?id=49913571) - 1,461 points, 1,040 comments (posted October 13, 2026). Developers debating coding quality, pricing, and access tiers. One user reported Argon sits "roughly in between Fable 5 and Fable 5.1" on coding, and flagged infinite reasoning loops as a recurring issue.
+- [Gemini 4 Argon: Built to solve your hardest problems](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/) - Official Google blog (September 30, 2026). Describes the staged rollout from limited preview to broad availability.
+- [Google makes Gemini 4 Argon broadly available with limited-time low API pricing of $2/$10 per 1M token](https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token) - VentureBeat (October 13, 2026). Confirms the introductory pricing and November 30 deadline.
+- [Gemini 4 Argon Wins 12 of 18 Benchmarks. Code Isn't One.](https://dev.to/max_quimby/gemini-4-argon-wins-12-of-18-benchmarks-code-isnt-one-2h70) - DEV Community (October 2026). Independent analysis showing Argon's coding weakness despite overall benchmark dominance.
+- [Gemini 4 Argon model card](https://deepmind.google/models/model-cards/gemini-4-argon/) - Google DeepMind (October 2026). Primary source for DeepSWE 77.9%, Terminal-Bench 57.4%, FrontierSWE 55.0% figures.
+- [Gemini 4 Argon vs Claude Opus 5.5: Benchmarks and Test](https://www.datacamp.com/blog/gemini-4-argon-vs-claude-opus-5-5) - DataCamp comparison (October 2026). Benchmark table but no agentic workflow guidance.
+
+### Competition check
+
+Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tutorial" returns Google's official API docs and developer guide (aistudio.google.com), Google Cloud enterprise setup docs, a tech-insider "12 Steps" tutorial, a promptessor.com prompting guide, and DataCamp/MindStudio/aiidelist benchmark comparison articles. The official docs cover API authentication, SDK minimum versions, and basic generate_content calls. The third-party articles are either generic setup walkthroughs or benchmark tables copied from Google's model card. None are written from a coding-agent practitioner's perspective: how thinking_level settings affect code quality on real refactoring tasks, cost-per-task analysis at the $2/$10 introductory rate vs Claude Opus and GPT-6 Astra, which coding workflows (multi-file refactors, test generation, code review, bug fixes) Argon wins on and which it loses, how to integrate Argon into Antigravity CLI alongside existing Claude Code workflows, or the November 30 pricing deadline that developers need to evaluate against. The blog's existing `gemini-3-5-flash-agentic-coding-guide` and `gemini-cli-to-antigravity-cli-guide` create a natural content cluster, and `claude-code-cost-tracking` provides the cost-optimization context for readers already tracking per-model economics.
+
+### Suggested next step
+
+`/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
