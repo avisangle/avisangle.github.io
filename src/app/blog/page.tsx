@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Gemini 4 Argon for Agentic Coding: When It Beats Opus 5.5",
+                url: "https://avinashsangle.com/blog/gemini-4-argon-agentic-coding-guide",
+                datePublished: "2026-10-20",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "Apple's Full Disk Access Change: Audit Your AI Coding Agent",
                 url: "https://avinashsangle.com/blog/macos-full-disk-access-ai-coding-agents",
                 datePublished: "2026-10-06",
@@ -330,22 +337,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ShieldCheck" size="xl" className="mx-auto" />
+              <CategoryIcon icon="Scale" size="xl" className="mx-auto" />
               <div>
-                <p className="text-accent font-semibold mb-2">CLAUDE CODE</p>
-                <h3 className="text-2xl font-bold mb-4">Apple&apos;s Full Disk Access Change: Audit Your AI Coding Agent</h3>
+                <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
+                <h3 className="text-2xl font-bold mb-4">Gemini 4 Argon for Agentic Coding: When It Beats Opus 5.5</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Apple says it will make Full Disk Access harder to grant because of AI
-                  agents, and gave no date. What Claude Code inherits from your terminal,
-                  what I saw on my own Mac, and the sandbox config that shrinks it.
+                  Argon is half Opus 5.5&apos;s price until November 30, then the same. Where it
+                  wins on code, what thinking_level really costs, and the tested LiteLLM setup
+                  that runs it inside Claude Code.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Oct 6, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Oct 20, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 10 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/macos-full-disk-access-ai-coding-agents">Read Article →</Link>
+                  <Link href="/blog/gemini-4-argon-agentic-coding-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -358,6 +365,26 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="Scale" size="lg" animation="pulse" />
+                <CardTitle>Gemini 4 Argon for Agentic Coding: When It Beats Opus 5.5</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  $2/$10 until November 30, then Opus 5.5 pricing. Benchmarks, a thinking_level
+                  cost test, and the DISABLE_PROMPT_CACHING fix for Claude Code via LiteLLM.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Oct 20, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/gemini-4-argon-agentic-coding-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ShieldCheck" size="lg" animation="pulse" />

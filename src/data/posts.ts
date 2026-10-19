@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'gemini-4-argon-agentic-coding-guide',
+    title: 'Gemini 4 Argon for Agentic Coding: When It Beats Opus 5.5',
+    description:
+      'Gemini 4 Argon for agentic coding: $2/$10 until Nov 30, then Opus 5.5 pricing. Where it beats Opus, where it loses, and how to run it from Claude Code.',
+    datePublished: '2026-10-20',
+    topics: ['coding-agents', 'claude-code'],
+    readTime: '11 min read',
+  },
+  {
     slug: 'macos-full-disk-access-ai-coding-agents',
     title: "Apple's Full Disk Access Change: Audit Your AI Coding Agent",
     description:

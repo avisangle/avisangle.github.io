@@ -8,6 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'gemini-4-argon-agentic-coding-guide',
+      lastModified: '2026-10-20',
+    },
+    {
       slug: 'macos-full-disk-access-ai-coding-agents',
       lastModified: '2026-10-06',
     },

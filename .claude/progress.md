@@ -473,3 +473,9 @@
 - metadata.title 40 chars (rendered 57); description 150; OG/H1 59.
 - Apple gave no date, version or mechanism; post says so and omits unsourced "Sequoia 15.2 / Dec 1" claims from search snippets. Evidence from own Mac (macOS 26.6.2, iTerm2 without FDA): Messages/Safari/Mail and TCC.db refused, ~/.ssh readable. With-grant behaviour and the tccutil reset line were not run against a real grant. Update the post when Apple publishes details.
 - Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.
+
+## 2026-10-20
+- Published blog post: "Gemini 4 Argon for Agentic Coding: When It Beats Opus 5.5" at /blog/gemini-4-argon-agentic-coding-guide (AI Development, ~2,800 words, 11 min, 8 FAQ items). Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo.
+- metadata.title 39 chars (rendered 56); description 151; OG/H1 57.
+- Original data from live API calls on 2026-10-20: minimal -> 400, thinkingBudget -> 200 (contradicts groundy/apiyi 400 claim); 6-run SemVer task sweep across low/medium/high; Claude Code 2.1.303 via LiteLLM 1.106.0 end to end, which surfaced the explicit-caching 400 and the DISABLE_PROMPT_CACHING=1 fix. Total API spend under $0.50.
+- Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.
