@@ -774,7 +774,7 @@ npm install -g @anthropic-ai/sandbox-runtime
             built-in sandbox is proportionate. For unattended runs, wrap the whole
             Claude Code process rather than just its Bash calls, either with a dev
             container or with the standalone{" "}
-            <a href="https://github.com/anthropic-experimental/sandbox-runtime" target="_blank" rel="noopener noreferrer" className="project-link">@anthropic-ai/sandbox-runtime</a>{" "}
+            <a href="https://github.com/anthropics/sandbox-runtime" target="_blank" rel="noopener noreferrer" className="project-link">@anthropic-ai/sandbox-runtime</a>{" "}
             package. For anything that executes code you have not reviewed, you want a
             hardware boundary: Firecracker or Kata Containers.
           </p>

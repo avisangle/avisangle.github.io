@@ -1146,18 +1146,10 @@ agy skills list`}
               lose the free first-party endpoints, not the toolchain.
             </li>
             <li>
-              Want to play without Google&apos;s rate limits at all - look at{" "}
-              <a
-                href="https://github.com/ab-613/OpenGravity"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                OpenGravity
-              </a>
-              , a community BYOK clone of the Antigravity UI. It is alpha,
-              GPL-3.0, and does not pretend to match Antigravity CLI on
-              capability - but it does sidestep the weekly cap.
+              Want to play without Google&apos;s rate limits at all - look at
+              OpenGravity, a community BYOK clone of the Antigravity UI. Note:
+              the original repo was taken down for a trademark policy violation,
+              so check for an active fork or alternative before relying on it.
             </li>
           </ul>
         </section>
