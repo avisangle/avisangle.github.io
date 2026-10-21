@@ -30,7 +30,7 @@ You can't know in advance which calls are redundant, but they cluster in short u
 
 Two details that bit me: the gate counts words in the raw transcript, not the rules output (a numeral pass can shorten the text below what was spoken), and a flag, path or dotted identifier counts as one word.
 
-I'm the author of the app (Roundhand, Mac only). The full write-up is here: https://avinashsangle.com/blog/rules-vs-llm-dictation-cleanup
+I'm the author of the app (Roundhand, for Mac and Windows). The full write-up is here: https://avinashsangle.com/blog/rules-vs-llm-dictation-cleanup
 
 Happy to answer questions, and I'd like to hear if you've found a cheap signal that predicts redundant calls better than length.
 
@@ -49,7 +49,7 @@ I wanted to know whether an LLM was worth putting behind my dictation app's tran
 
 So the free offline cleanup is the default and cloud cleanup is optional. For people who do turn it on, 50 of 146 of the calls I examined returned exactly what the rules had already produced, so under 6 words the model is skipped. That cost-saving gate is covered in the write-up.
 
-Disclosure: I made the app. It's Mac only (Apple silicon, macOS 14 or later) and closed source, so this isn't a local-model release. I'm posting the measurement because the rules-first result might be useful to anyone building a local dictation pipeline.
+Disclosure: I made the app. It runs on Mac (Apple silicon, macOS 14 or later) and Windows 11 (x64), and it's closed source, so this isn't a local-model release. I'm posting the measurement because the rules-first result might be useful to anyone building a local dictation pipeline.
 
 Write-up: https://avinashsangle.com/blog/rules-vs-llm-dictation-cleanup
 

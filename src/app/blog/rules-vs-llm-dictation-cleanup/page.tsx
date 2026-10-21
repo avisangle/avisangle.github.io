@@ -13,8 +13,9 @@ const POST_URL = `https://avinashsangle.com/blog/${SLUG}`
 const OG_IMAGE = `https://avinashsangle.com/og-${SLUG}.png`
 const HEADLINE = "Rules vs LLM for Dictation Cleanup: What I Measured on My Speech"
 const DESCRIPTION =
-  "I built a Mac dictation app, hand-checked my own dictations, and compared offline rules to two cloud LLMs. On everyday speech the rules won."
+  "I built a dictation app for Mac and Windows, hand-checked my own dictations, and compared offline rules to two cloud LLMs. On everyday speech the rules won."
 const PUBLISHED = "2026-10-04"
+const MODIFIED = "2026-10-21"
 
 export const metadata: Metadata = {
   // 41 chars: the layout template adds 17, so the rendered title is 58
@@ -24,12 +25,14 @@ export const metadata: Metadata = {
     "dictation cleanup",
     "rules vs LLM",
     "Mac dictation app",
+    "Windows dictation app",
     "on-device dictation",
     "LLM vs rules",
     "skip LLM calls to save tokens",
     "offline dictation cleanup",
     "speech to text cleanup",
     "Parakeet CoreML",
+    "Parakeet ONNX",
     "Roundhand",
   ],
   authors: [{ name: "Avinash Sangle", url: "https://avinashsangle.com" }],
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "Avinash Sangle",
     type: "article",
     publishedTime: `${PUBLISHED}T00:00:00.000Z`,
-    modifiedTime: `${PUBLISHED}T00:00:00.000Z`,
+    modifiedTime: `${MODIFIED}T00:00:00.000Z`,
     authors: ["Avinash Sangle"],
     images: [
       {
@@ -77,23 +80,23 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "Does Roundhand send my audio to the cloud?",
-    a: "Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.",
+    a: "Speech is recognised on your computer. Dictation audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your computer, apart from update checks.",
   },
   {
     q: "Is rules-based cleanup better than an LLM?",
     a: "On my own hand-checked everyday dictations, the rules did better than both cloud LLMs I tested. The LLMs came out ahead on edge cases. It is one person's dataset, so treat it as a direction and test your own speech.",
   },
   {
-    q: "Which Macs does it run on?",
-    a: "Apple silicon Macs on macOS 14 or later. A Windows version is in development.",
+    q: "Does it run on Windows?",
+    a: "Yes. Roundhand runs on Macs with Apple silicon on macOS 14 or later, and on Windows 11 PCs with an x64 (Intel or AMD) processor. The Windows version installs from the Microsoft Store. One account and one plan cover both, on up to three computers.",
   },
   {
     q: "Is it free?",
     a: "Download is free with no account needed, and dictation with the offline cleanup stays free. See the pricing page for what the optional cloud cleanup adds.",
   },
   {
-    q: "Will it type into password fields?",
-    a: "No. It will not read or type into password fields.",
+    q: "Does it touch password fields?",
+    a: "On a Mac, Roundhand will not read or type into password fields. On Windows it never reads a password field, and anything you dictate into one stays out of history and is never sent to the cloud model, but the text is still typed in.",
   },
   {
     q: "Is it open source?",
@@ -127,10 +130,10 @@ const techArticleSchema = JSON.stringify({
   },
   publisher: { "@type": "Person", name: "Avinash Sangle", url: "https://avinashsangle.com" },
   datePublished: PUBLISHED,
-  dateModified: PUBLISHED,
+  dateModified: MODIFIED,
   mainEntityOfPage: { "@type": "WebPage", "@id": POST_URL },
   keywords:
-    "dictation cleanup, rules vs LLM, Mac dictation app, on-device dictation, skip LLM calls to save tokens",
+    "dictation cleanup, rules vs LLM, Mac dictation app, Windows dictation app, on-device dictation, skip LLM calls to save tokens",
   articleSection: "AI Development",
   wordCount: 1750,
 })
@@ -192,7 +195,7 @@ export default function RulesVsLlmDictationCleanupPage() {
             <a href="https://roundhand.dev" className="project-link">
               Roundhand
             </a>
-            , a Mac dictation app. This post is about one decision in it.
+            , a dictation app for Mac and Windows. This post is about one decision in it.
           </p>
           <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm">
             <span className="flex items-center gap-1">
@@ -203,10 +206,10 @@ export default function RulesVsLlmDictationCleanupPage() {
               <CategoryIcon icon="Clock" size="sm" /> 8 min read
             </span>
             <span>-</span>
-            <span>Last updated: {PUBLISHED}</span>
+            <span>Last updated: {MODIFIED}</span>
           </div>
           <div className="flex gap-2 mt-4 flex-wrap">
-            {["Dictation Cleanup", "Mac Dictation App", "On-Device", "LLM vs Rules", "Token Cost"].map(
+            {["Dictation Cleanup", "Mac and Windows", "On-Device", "LLM vs Rules", "Token Cost"].map(
               (tag) => (
                 <Badge key={tag} variant="secondary">
                   {tag}
@@ -319,8 +322,8 @@ export default function RulesVsLlmDictationCleanupPage() {
           </div>
 
           <p className="text-lg leading-relaxed mb-6">
-            Roundhand is a menu-bar dictation app for Apple silicon Macs. You hold a key, talk,
-            let go, and the text lands at your cursor. It writes for the app that has focus: a
+            Roundhand is a dictation app for Mac and Windows that sits in the menu bar or the
+            system tray. You hold a key, talk, let go, and the text lands at your cursor. It writes for the app that has focus: a
             short message in Slack, a greeting and a sign-off on their own lines in Mail, a list in
             Notes, one line with no trailing full stop in a terminal.
           </p>
@@ -331,25 +334,31 @@ export default function RulesVsLlmDictationCleanupPage() {
 
           <ol className="list-decimal pl-6 space-y-3 mb-6 text-lg leading-relaxed">
             <li>
-              Recognition. NVIDIA&apos;s Parakeet model turns audio into a transcript. This runs on
-              your Mac, on the Neural Engine, through CoreML. Speech is recognised on your Mac. Dictation
-              audio is never uploaded or saved to disk.
+              Recognition. NVIDIA&apos;s Parakeet model turns audio into a transcript on your
+              computer: through CoreML on the Mac&apos;s Neural Engine, and through ONNX Runtime on
+              the CPU on Windows. Dictation audio is never uploaded or saved to disk.
             </li>
             <li>
               Cleanup. The transcript is cleaned and shaped for the destination app. This is the
-              step the rest of this post is about.
+              step the rest of this post is about. I measured it on the Mac build. The Windows
+              version runs a port of the same rules, and a test pins its output to the Mac&apos;s.
             </li>
           </ol>
 
           <Card className="card-accent-left">
             <CardContent className="pt-6">
               <p className="text-lg leading-relaxed">
-                Try it. Roundhand is free to download, with no account needed. It needs an Apple
-                silicon Mac on macOS 14 or later.{" "}
-                <a href="https://roundhand.dev" className="project-link">
-                  Download Roundhand for Mac
-                </a>
-                .
+                Try it. Roundhand is free to download, with no account needed. It runs on an Apple
+                silicon Mac on macOS 14 or later, or a Windows 11 PC with an x64 (Intel or AMD)
+                processor.{" "}
+                <a href="https://roundhand.dev/download/mac" className="project-link">
+                  Download for Mac
+                </a>{" "}
+                or{" "}
+                <a href="https://roundhand.dev/download/windows" className="project-link">
+                  get it for Windows
+                </a>{" "}
+                from the Microsoft Store.
               </p>
             </CardContent>
           </Card>
@@ -363,7 +372,7 @@ export default function RulesVsLlmDictationCleanupPage() {
           </h2>
 
           <p className="text-lg leading-relaxed mb-6">
-            Rules. A set of deterministic rules that run on the Mac. They drop fillers like
+            Rules. A set of deterministic rules that run on your computer. They drop fillers like
             &quot;um&quot; and &quot;uh&quot;, keep the version you meant when you restart a
             sentence (&quot;Tuesday, scratch that, Wednesday&quot; becomes Wednesday), and fix
             capitals and punctuation. No network, no cost per use, and the same input always
@@ -561,17 +570,22 @@ export default function RulesVsLlmDictationCleanupPage() {
             </CardHeader>
             <CardContent>
               <p className="text-lg leading-relaxed mb-4">
-                If you talk to your Mac more than you type, give it a day. Hold a key, say a
+                If you talk to your computer more than you type, give it a day. Hold a key, say a
                 sentence with an &quot;um&quot; and a &quot;scratch that&quot; in it, and see what
                 lands.
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                <a href="https://roundhand.dev" className="project-link">
+                <a href="https://roundhand.dev/download/mac" className="project-link">
                   Download Roundhand for Mac
+                </a>{" "}
+                or{" "}
+                <a href="https://roundhand.dev/download/windows" className="project-link">
+                  get it for Windows
                 </a>
               </p>
               <p className="text-lg leading-relaxed mb-4">
-                Or with Homebrew: <code>brew install --cask avisangle/roundhand/roundhand</code>
+                On a Mac you can also use Homebrew:{" "}
+                <code>brew install --cask avisangle/roundhand/roundhand</code>
               </p>
               <p className="text-lg leading-relaxed mb-4">
                 I built Roundhand solo, with a lot of help from Claude Code. I would most like to

@@ -11,35 +11,38 @@ import { ExternalLink, AppWindow, Cpu, ListChecks, Filter, Hash, ShieldCheck } f
 const PAGE_URL = "https://avinashsangle.com/projects/roundhand"
 const OG_IMAGE = "https://avinashsangle.com/og-project-roundhand.png"
 const DESCRIPTION =
-  "Roundhand is a menu-bar dictation app for Apple silicon Macs. Speech is recognised on-device and the text is shaped for the app you type into. Free to download."
+  "Roundhand is a dictation app for Mac and Windows. Speech is recognised on-device and the text is shaped for the app you type into. Free to download."
 
 export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
-  // 38 chars: the layout template appends " | Avinash Sangle" (+17) -> 55 rendered.
-  title: "Roundhand: On-Device Mac Dictation App",
+  // 40 chars: the layout template appends " | Avinash Sangle" (+17) -> 57 rendered.
+  title: "Roundhand: Mac and Windows Dictation App",
   description: DESCRIPTION,
   keywords: [
     "Mac dictation app",
+    "Windows dictation app",
     "Roundhand",
     "on-device dictation",
     "dictation cleanup",
     "Parakeet CoreML",
+    "Parakeet ONNX",
     "Apple silicon dictation",
     "speech to text Mac",
+    "speech to text Windows",
     "offline dictation",
     "menu bar app",
   ],
   openGraph: {
     // No template suffix here, so this carries the fuller 55-65 char descriptive title.
-    title: "Roundhand: On-Device Mac Dictation App That Writes for Each App",
+    title: "Roundhand: Private On-Device Dictation for Mac and Windows",
     description: DESCRIPTION,
     url: PAGE_URL,
     type: "article",
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Roundhand Mac dictation app" }],
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "Roundhand dictation app for Mac and Windows" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Roundhand: On-Device Mac Dictation App",
+    title: "Roundhand: Mac and Windows Dictation App",
     description: DESCRIPTION,
     images: [OG_IMAGE],
   },
@@ -48,15 +51,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is Roundhand?",
-    a: "Roundhand is a menu-bar dictation app for Apple silicon Macs. You hold a key, talk, let go, and the text lands at your cursor. It writes for the app that has focus: a short message in Slack, a greeting and sign-off on separate lines in Mail, a list in Notes, one line with no trailing full stop in a terminal.",
+    a: "Roundhand is a dictation app for Mac and Windows that sits in the menu bar or the system tray. You hold a key, talk, let go, and the text lands at your cursor. It writes for the app that has focus: a short message in Slack, a greeting and sign-off on separate lines in Mail, a list in Notes, one line with no trailing full stop in a terminal.",
   },
   {
     q: "Does Roundhand send my audio to the cloud?",
-    a: "Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk. If you turn on optional cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.",
+    a: "Speech is recognised on your computer. Dictation audio is never uploaded or saved to disk. If you turn on optional cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your computer, apart from update checks.",
   },
   {
-    q: "Which Macs does Roundhand run on?",
-    a: "Apple silicon Macs on macOS 14 or later. A Windows version is in development.",
+    q: "Which computers does Roundhand run on?",
+    a: "Macs with Apple silicon on macOS 14 or later, and Windows 11 PCs with an x64 (Intel or AMD) processor. The Windows version installs from the Microsoft Store. One account and one plan cover both, on up to three computers.",
   },
   {
     q: "Is Roundhand free?",
@@ -67,8 +70,8 @@ const faqs = [
     a: "On my own hand-checked everyday dictations, the offline rules did better than both cloud LLMs I tested, and the LLMs only came out ahead on edge cases. It is one person's speech and I have not published a benchmark, so treat it as a direction and test your own.",
   },
   {
-    q: "Will Roundhand type into password fields?",
-    a: "No. It will not read or type into password fields.",
+    q: "Does Roundhand touch password fields?",
+    a: "On a Mac, Roundhand will not read or type into password fields. On Windows it never reads a password field, and anything you dictate into one stays out of history and is never sent to the cloud model, but the text is still typed in.",
   },
   {
     q: "Is Roundhand open source?",
@@ -81,12 +84,12 @@ const softwareSchema = JSON.stringify({
   "@type": "SoftwareApplication",
   name: "Roundhand",
   description:
-    "Menu-bar dictation app for Apple silicon Macs. Speech is recognised on-device with NVIDIA Parakeet through CoreML, and the transcript is cleaned and shaped for the app that has focus.",
+    "Dictation app for Mac and Windows. Speech is recognised on-device with NVIDIA Parakeet (through CoreML on the Mac, ONNX Runtime on Windows), and the transcript is cleaned and shaped for the app that has focus.",
   url: "https://roundhand.dev",
   applicationCategory: "UtilitiesApplication",
   applicationSubCategory: "Dictation, Speech to Text",
-  operatingSystem: "macOS 14 or later (Apple silicon)",
-  programmingLanguage: ["Swift"],
+  operatingSystem: "macOS 14 or later (Apple silicon), Windows 11 (x64)",
+  programmingLanguage: ["Swift", "C#"],
   author: { "@type": "Person", name: "Avinash Sangle", url: "https://avinashsangle.com" },
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
 })
@@ -133,15 +136,16 @@ export default function RoundhandPage() {
       <section className="section">
         <div className="container-project">
           <div className="hero-content">
-            <p className="text-accent font-semibold mb-4">MAC DICTATION APP</p>
+            <p className="text-accent font-semibold mb-4">DICTATION FOR MAC AND WINDOWS</p>
             <h1 className="hero-title mb-6">Roundhand</h1>
             <p className="hero-description">
-              A menu-bar dictation app for Apple silicon Macs. Hold a key, talk, let go, and the
-              text lands at your cursor, written for the app that has focus.
+              A dictation app for Mac and Windows that sits in the menu bar or the system tray.
+              Hold a key, talk, let go, and the text lands at your cursor, written for the app that
+              has focus.
             </p>
 
             <div className="flex flex-wrap gap-3 my-6">
-              <Badge variant="secondary" className="text-sm py-1.5 px-3">Apple Silicon</Badge>
+              <Badge variant="secondary" className="text-sm py-1.5 px-3">Mac and Windows</Badge>
               <Badge variant="secondary" className="text-sm py-1.5 px-3">On-Device Recognition</Badge>
               <Badge variant="secondary" className="text-sm py-1.5 px-3">Free Download</Badge>
               <Badge variant="secondary" className="text-sm py-1.5 px-3">No Account</Badge>
@@ -149,8 +153,13 @@ export default function RoundhandPage() {
 
             <div className="hero-cta flex flex-wrap gap-4">
               <Button asChild>
-                <a href="https://roundhand.dev" target="_blank" rel="noopener noreferrer">
+                <a href="https://roundhand.dev/download/mac" target="_blank" rel="noopener noreferrer">
                   Download for Mac <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button asChild>
+                <a href="https://roundhand.dev/download/windows" target="_blank" rel="noopener noreferrer">
+                  Get it for Windows <ExternalLink className="ml-2 h-4 w-4" />
                 </a>
               </Button>
               <Button variant="outline" asChild>
@@ -193,9 +202,9 @@ export default function RoundhandPage() {
               </p>
               <p className="text-lg leading-relaxed mb-6">
                 Roundhand does two things between your voice and the text field. First,
-                recognition: NVIDIA&apos;s Parakeet model turns audio into a transcript on your Mac,
-                on the Neural Engine, through CoreML. Speech is recognised on your Mac. Dictation
-                audio is never uploaded or saved to disk.
+                recognition: NVIDIA&apos;s Parakeet model turns audio into a transcript on your
+                computer, through CoreML on the Mac&apos;s Neural Engine and through ONNX Runtime on
+                the CPU on Windows. Dictation audio is never uploaded or saved to disk.
               </p>
               <p className="text-lg leading-relaxed">
                 Second, cleanup: the transcript is cleaned and shaped for the destination app.
@@ -212,10 +221,10 @@ export default function RoundhandPage() {
                 <CardDescription>What you need to run it</CardDescription>
               </CardHeader>
               <CardContent className="space-y-2 text-muted-foreground">
-                <p>Apple silicon Mac on macOS 14 or later</p>
+                <p>Mac: Apple silicon on macOS 14 or later</p>
+                <p>Windows: Windows 11 on x64 (Intel or AMD), from the Microsoft Store</p>
                 <p>Free download, no account needed</p>
                 <p>Dictation and offline cleanup are free, with no time or word limit</p>
-                <p>Windows version in development</p>
                 <p>
                   <a href="https://roundhand.dev/pricing" className="project-link">
                     Pricing for optional cloud cleanup
@@ -252,8 +261,9 @@ export default function RoundhandPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Parakeet TDT 0.6B v3 runs on the Neural Engine through CoreML. After the one-time
-                  model download, the default mode runs on your Mac, apart from update checks.
+                  Parakeet TDT 0.6B v3 runs on your computer: through CoreML on the Mac&apos;s
+                  Neural Engine, and as an int8 ONNX model on the CPU on Windows. After the one-time
+                  model download, the default mode runs locally, apart from update checks.
                 </p>
               </CardContent>
             </Card>
@@ -303,11 +313,13 @@ export default function RoundhandPage() {
             <Card>
               <CardHeader>
                 <ShieldCheck className="h-8 w-8 text-accent mb-2" />
-                <CardTitle>Password Fields Are Off Limits</CardTitle>
+                <CardTitle>Password Fields Stay Private</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Roundhand will not read or type into password fields.
+                  Roundhand never reads a password field. On a Mac it will not type into one
+                  either. On Windows the text is typed in, but kept out of history and never sent to
+                  the cloud model.
                 </p>
               </CardContent>
             </Card>
@@ -415,9 +427,11 @@ export default function RoundhandPage() {
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Built With</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Swift: the app and its cleanup pipeline</li>
+                    <li>• Swift: the Mac app and its cleanup pipeline</li>
+                    <li>• C# on .NET 10 and WinUI 3: the Windows app, with the cleanup rules ported from Swift</li>
                     <li>• NVIDIA Parakeet TDT 0.6B v3: speech recognition</li>
-                    <li>• CoreML and the Neural Engine: on-device inference</li>
+                    <li>• CoreML and the Neural Engine: on-device inference on the Mac</li>
+                    <li>• ONNX Runtime via sherpa-onnx: on-device inference on Windows</li>
                     <li>• Built with Claude Code: AI-assisted development</li>
                   </ul>
                 </div>
@@ -437,8 +451,13 @@ export default function RoundhandPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" asChild>
-              <a href="https://roundhand.dev" target="_blank" rel="noopener noreferrer">
+              <a href="https://roundhand.dev/download/mac" target="_blank" rel="noopener noreferrer">
                 Download for Mac <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button size="lg" asChild>
+              <a href="https://roundhand.dev/download/windows" target="_blank" rel="noopener noreferrer">
+                Get it for Windows <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>

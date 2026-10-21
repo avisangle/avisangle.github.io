@@ -10,7 +10,7 @@ Everything below the `---BODY---` marker is the article body. Header fields abov
 are parsed by both posting scripts.
 
 TITLE: Rules vs LLM for Dictation Cleanup: What I Measured on My Speech
-DESCRIPTION: I built a Mac dictation app, hand-checked my own dictations, and compared offline rules to two cloud LLMs. On everyday speech the rules won.
+DESCRIPTION: I built a dictation app for Mac and Windows, hand-checked my own dictations, and compared offline rules to two cloud LLMs. On everyday speech the rules won.
 TAGS: ai, llm, macos, productivity
 CANONICAL_URL: https://avinashsangle.com/blog/rules-vs-llm-dictation-cleanup
 COVER_IMAGE: https://avinashsangle.com/og-rules-vs-llm-dictation-cleanup.png
@@ -19,7 +19,7 @@ PUBLISHED: false
 ---BODY---
 > This article was originally published on [avinashsangle.com](https://avinashsangle.com/blog/rules-vs-llm-dictation-cleanup).
 
-I built [Roundhand](https://roundhand.dev), a Mac dictation app. This post is about one decision in it.
+I built [Roundhand](https://roundhand.dev), a dictation app for Mac and Windows. This post is about one decision in it.
 
 ## The problem with raw speech-to-text
 
@@ -33,16 +33,16 @@ The usual fix in 2026 is to hand the transcript to a language model and ask it t
 
 ## What I built
 
-Roundhand is a menu-bar dictation app for Apple silicon Macs. You hold a key, talk, let go, and the text lands at your cursor. It writes for the app that has focus: a short message in Slack, a greeting and a sign-off on their own lines in Mail, a list in Notes, one line with no trailing full stop in a terminal.
+Roundhand is a dictation app for Mac and Windows that sits in the menu bar or the system tray. You hold a key, talk, let go, and the text lands at your cursor. It writes for the app that has focus: a short message in Slack, a greeting and a sign-off on their own lines in Mail, a list in Notes, one line with no trailing full stop in a terminal.
 
 Two things happen between your voice and the text field:
 
-1. Recognition. NVIDIA's Parakeet model turns audio into a transcript. This runs on your Mac, on the Neural Engine, through CoreML. Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk.
-2. Cleanup. The transcript is cleaned and shaped for the destination app. This is the step the rest of this post is about.
+1. Recognition. NVIDIA's Parakeet model turns audio into a transcript on your computer: through CoreML on the Mac's Neural Engine, and through ONNX Runtime on the CPU on Windows. Dictation audio is never uploaded or saved to disk.
+2. Cleanup. The transcript is cleaned and shaped for the destination app. This is the step the rest of this post is about. I measured it on the Mac build. The Windows version runs a port of the same rules, and a test pins its output to the Mac's.
 
 Here's a 60-second demo: https://www.youtube.com/watch?v=DUsTHgtK1wI
 
-Roundhand is free to download, with no account needed. It needs an Apple silicon Mac on macOS 14 or later. [Download Roundhand for Mac](https://roundhand.dev).
+Roundhand is free to download, with no account needed. It runs on an Apple silicon Mac on macOS 14 or later, or a Windows 11 PC with an x64 (Intel or AMD) processor. [Download for Mac](https://roundhand.dev/download/mac) or [get it for Windows](https://roundhand.dev/download/windows) from the Microsoft Store.
 
 ## Two ways to do dictation cleanup
 
@@ -99,23 +99,23 @@ That is the pattern I keep landing on. If the job is well defined, write the rul
 
 ### Does Roundhand send my audio to the cloud?
 
-Speech is recognised on your Mac. Dictation audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your Mac, apart from update checks.
+Speech is recognised on your computer. Dictation audio is never uploaded or saved to disk. If you turn on cloud cleanup, the transcript text, never the audio, goes to the language model provider. In the default mode, after the one-time model download, dictation and cleanup run on your computer, apart from update checks.
 
 ### Is rules-based cleanup better than an LLM?
 
 On my own hand-checked everyday dictations, the rules did better than both cloud LLMs I tested. The LLMs came out ahead on edge cases. It is one person's dataset, so treat it as a direction and test your own speech.
 
-### Which Macs does it run on?
+### Does it run on Windows?
 
-Apple silicon Macs on macOS 14 or later. A Windows version is in development.
+Yes. Roundhand runs on Macs with Apple silicon on macOS 14 or later, and on Windows 11 PCs with an x64 (Intel or AMD) processor. The Windows version installs from the Microsoft Store. One account and one plan cover both, on up to three computers.
 
 ### Is it free?
 
 Download is free with no account needed, and dictation with the offline cleanup stays free. See the [pricing page](https://roundhand.dev/pricing) for what the optional cloud cleanup adds.
 
-### Will it type into password fields?
+### Does it touch password fields?
 
-No. It will not read or type into password fields.
+On a Mac, Roundhand will not read or type into password fields. On Windows it never reads a password field, and anything you dictate into one stays out of history and is never sent to the cloud model, but the text is still typed in.
 
 ### Is it open source?
 
@@ -123,11 +123,11 @@ No.
 
 ## Try Roundhand
 
-If you talk to your Mac more than you type, give it a day. Hold a key, say a sentence with an "um" and a "scratch that" in it, and see what lands.
+If you talk to your computer more than you type, give it a day. Hold a key, say a sentence with an "um" and a "scratch that" in it, and see what lands.
 
-[Download Roundhand for Mac](https://roundhand.dev)
+[Download Roundhand for Mac](https://roundhand.dev/download/mac) or [get it for Windows](https://roundhand.dev/download/windows)
 
-Or with Homebrew: `brew install --cask avisangle/roundhand/roundhand`
+On a Mac you can also use Homebrew: `brew install --cask avisangle/roundhand/roundhand`
 
 I built Roundhand solo, with a lot of help from Claude Code. I would most like to hear which technical words it mishears and which apps misbehave when it inserts text. You can reach me through the [blog](https://avinashsangle.com/blog).
 
