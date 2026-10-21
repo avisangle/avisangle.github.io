@@ -813,3 +813,31 @@ Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tu
 ### Suggested next step
 
 `/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-21: Nemotron 3.5 Super VL - Nvidia's Open 120B Multimodal Model for AI Coding Agents
+
+**Suggested slug:** `nemotron-3-5-super-vl-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Nvidia released Nemotron 3.5 Super VL on October 19, 2026 - a 120B-parameter mixture-of-experts model (12B active) with native vision, document understanding, and first-class tool calling, all under open weights. It's Nvidia's first model explicitly positioned as a "default agentic execution model," and it ships with vLLM day-0 support, Unsloth GGUF quantizations (46-132 GB), and hosted access on OpenRouter, NIM, and build.nvidia.com. The blog covers open-weight models from every major lab (DeepSeek, Qwen, Google Gemma, GLM) but has zero Nvidia model content. Nemotron 3.5 Super VL fills that gap and adds a new dimension: it's the first open agentic model with native multimodal input, meaning a coding agent can read screenshots, parse diagrams, and OCR documents in the same model that makes tool calls - no separate vision pipeline needed.
+
+### Search demand evidence
+
+- [Nvidia launches new open models to run agents in the enterprise and on PCs](https://techcrunch.com/2026/10/19/nvidia-launches-new-open-models-to-run-agents-in-the-enterprise-and-on-pcs/) - TechCrunch, published October 19, 2026. Covers the Super VL and Bolt launches alongside the DGX Spark local deployment story.
+- [Nvidia Launches Three Nemotron AI Models, Including Two for Local AI Agents](https://www.techrepublic.com/article/news-nvidia-nemotron-3-5-super-vl-bolt-ai-models/) - TechRepublic, October 2026. Notes Skydance, EY, Ramp, CrowdStrike, Perplexity, and Salesforce as early enterprise adopters.
+- [Announcing Day 0 Support for NVIDIA Nemotron 3.5 Super VL on vLLM](https://vllm.ai/blog/2026-10-15-nemotron-3-5-super-vl-vllm) - vLLM blog, October 15, 2026. Confirms production-ready serving with tool-calling flags and 1M-token context support.
+- [Extending Nemotron 3.5 Super 120B VL with Agentic Web Development Capabilities](https://huggingface.co/blog/tngtech/nvidia-nemotron-3-5-super-vl-agentic-web-dev-rl) - TNG Tech on Hugging Face, October 2026. Fine-tuned version hit 85% on their web-dev eval, showing active community experimentation with the model for coding tasks.
+- [Optimized support for Open NVIDIA Nemotron 3.5 Super VL](https://developers.redhat.com/articles/2026/10/15/optimized-support-open-nvidia-nemotron-3-5-super-vl) - Red Hat Developer, October 15, 2026. Enterprise-grade deployment support confirms serious adoption interest.
+- Harrison Kinsley (Sentdex) noted Super VL as "a solid choice for a fast local coding agent" in early testing, and Peter Dedene's independent benchmark showed strong tool calling and instruction following comparable to Qwen 3.8.
+
+### Competition check
+
+Searching "Nemotron 3.5 Super VL coding guide" and "Nemotron 3.5 Super VL agentic setup" returns a tech-insider 12-step generic tutorial, an eesel.ai specs-and-pricing page, a miraflow.ai explainer, an explainx.ai overview, and two OpenCode integration posts (juliangoldie.com and aiprofitboardroom.com). The OpenCode posts are the closest to a practitioner guide but are thin on benchmarks and don't compare the experience against the blog's existing model coverage (DeepSeek V4.1 Flash, Qwen Code, Claude Code). No article covers: how Super VL's native vision input changes what a coding agent can do (screenshot-driven debugging, diagram-to-code, visual regression testing), cost-per-task analysis against DeepSeek V4.1 Flash and hosted APIs, the prompt injection tradeoff (37/200 AgentDojo failures vs. Qwen's 2/200 in Peter Dedene's testing), or how to integrate it into an existing MCP-based workflow alongside Claude Code. The blog's open-weight model cluster (deepseek-v4-flash, deepseek-v4-1-flash, qwen-code, glm-5-2, gemma-4) creates a natural home, and this would be the first Nvidia entry.
+
+### Suggested next step
+
+`/research-topic "nemotron-3-5-super-vl-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
