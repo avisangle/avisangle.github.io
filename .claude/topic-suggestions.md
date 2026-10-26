@@ -813,3 +813,31 @@ Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tu
 ### Suggested next step
 
 `/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-26: AGENTS.md Config File Poisoning - Defending AI Coding Agents from Malicious Instruction Files
+
+**Suggested slug:** `agents-md-config-poisoning-defense-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On October 22, 2026, security firm Forever Security disclosed a real-world incident where a malicious AGENTS.md file was found in a developer's Downloads folder, attempting to trick OpenAI Codex into installing a known-malicious npm package. The attack was caught before execution, but the researchers built a proof-of-concept showing that a web page can silently drop an AGENTS.md or CLAUDE.md file into ~/Downloads via Chrome, Edge, or Firefox - and that Codex followed malicious instructions in over 90% of controlled tests. A related technique against Claude Code leaked OAuth tokens and allowed account hijacking in roughly 50% of tests. The firm's telemetry shows over 1,300 Claude Code sessions launched from ~/Downloads, confirming a real attack surface. This is a fundamentally different threat from the prompt injection and hallusquatting attacks the blog already covers - it exploits the trust model that coding agents place in configuration files (AGENTS.md, CLAUDE.md, .cursorrules) found in the working directory. Coverage broke across BleepingComputer, The Hacker News, CSO Online, InfoWorld, and CybersecurityNews between October 22-26. Every article describes WHAT the attack does. Not one walks a developer through the defense: how to audit for poisoned config files, how to configure Claude Code's trust boundaries, which permission and sandbox settings prevent this class of attack, and how the major coding agents compare in their defenses.
+
+### Search demand evidence
+
+- [AI coding agents hijacked using AGENTS.md file in Downloads folder](https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/) - BleepingComputer (posted October 25, 2026). Primary coverage reporting the Forever Security findings. Describes the proof-of-concept browser download and 90%+ Codex compliance rate.
+- [Malicious File in Downloads Folder Tries to Trick AI Coding Agent Into Installing Malware](https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html) - The Hacker News (posted October 2026). Covers both the Codex AGENTS.md attack and the Claude Code OAuth token exfiltration technique.
+- [How malicious downloads can trick AI coding agents into compromising themselves](https://www.infoworld.com/article/4240233/how-malicious-downloads-can-trick-ai-coding-agents-into-compromising-themselves.html) - InfoWorld (posted October 2026). Developer-focused reporting noting that "there is nothing here for OpenAI or Anthropic to patch."
+- [Malicious downloads can trick AI coding agents into compromising themselves](https://www.csoonline.com/article/4240222/malicious-downloads-can-trick-ai-coding-agents-into-compromising-themselves.html) - CSO Online (posted October 2026). Enterprise security audience, quotes the Forever Security conclusion that the attack exploits intended behavior, not a bug.
+- [Towards a Risk Assessment of Malicious Skill Files in Coding Agents](https://arxiv.org/pdf/2608.05223) - arXiv paper (August 2026). Earlier academic research on the same attack class, providing formal risk assessment of malicious skill/config files.
+- [AI Agents Went Rogue? Top 5 AI News This Week (Oct 2026)](https://dev.to/tekthrill/ai-agents-went-rogue-top-5-ai-news-this-week-oct-2026-pm0) - DEV Community roundup listing this as a top AI news story of the week.
+
+### Competition check
+
+Searching "AGENTS.md attack defense guide" and "protect AI coding agent from malicious config files" returns only news articles (BleepingComputer, The Hacker News, CSO Online, InfoWorld, CyberPress, CybersecurityNews, Aviatrix, BastionZero) and the arXiv paper. Every article describes the attack mechanism and quotes Forever Security's finding that there is nothing to patch - the agents are doing what they're designed to do. None provide the practitioner defense: how to audit your system for poisoned AGENTS.md/CLAUDE.md/.cursorrules files, step-by-step configuration of Claude Code's permission modes and trust boundaries to prevent config file exploitation, how to set up directory-level trust policies, which sandbox and approval settings block this attack, or a comparison of each major coding agent's (Claude Code, Codex, Cursor, Gemini CLI) built-in defenses against this specific class of attack. The blog's existing security cluster (hallusquatting-defense, hardening-ci-cd-prompt-injection, sandbox-after-breach, litellm-mcp-exploit) covers different attack vectors. This post fills the gap for config file trust exploitation - the attack that works because the agent is doing exactly what it was built to do.
+
+### Suggested next step
+
+`/research-topic "agents-md-config-poisoning-defense-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
