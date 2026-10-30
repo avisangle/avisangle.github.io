@@ -813,3 +813,30 @@ Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tu
 ### Suggested next step
 
 `/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-10-30: Self-Hosting Mistral Large 4 for Coding Agents - Hardware, Cost, and When the API Wins
+
+**Suggested slug:** `mistral-large-4-self-hosting-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Mistral released the open weights for Large 4 ("Le Chonk") in late October 2026, making it the first 1-trillion-parameter model available for self-hosting. At 1.05T total parameters (52B active per token via MoE), it is the largest open-weight model to claim frontier-class agentic coding performance - scoring 61.7% on DeepSWE v1.1 and leading open-weight models on Terminal-Bench 4.0. The Hacker News announcement hit 1,213 points, the top AI story of the week. Developers are actively debating whether self-hosting a model this large makes economic sense vs. the API ($0.68/$2.09 per million tokens), what GPU configurations can actually run it (minimum ~500 GB VRAM at INT4), and how it stacks up against DeepSeek V4.1 Flash and GLM-5.3 for coding workflows. No practitioner guide exists that walks through the real hardware math, vLLM setup, and cost breakeven analysis.
+
+### Search demand evidence
+
+- [Mistral Large 4 (Le Chonk) is now open weight](https://mistral.ai/news/mistral-large-4-oss/) - Official Mistral announcement of open-weight release (late October 2026)
+- [Mistral Large 4 open weight - Hacker News](https://news.ycombinator.com/item?id=mistral-large-4) - 1,213 points on the HN front page (October 2026). Top AI story of the week, with active debate on self-hosting feasibility and licensing terms.
+- [Self-Host Mistral Large 4 for Coding Agents: GPU, vLLM, Cost](https://www.qovery.com/blog/self-host-mistral-large-4-coding-agents-gpu-vllm-cost) - Qovery blog (October 2026). Vendor-written but shows active developer search demand for self-hosting guidance.
+- [Mistral Large 4 Hardware Requirements: GPU Memory 2026](https://www.yottalabs.ai/post/mistral-large-4-hardware-requirements-gpu-memory-2026) - YottaLabs analysis (October 2026). Estimates 525 GB at INT4, 1.05 TB at FP8, 2.1 TB at BF16.
+- [Introducing Mistral Large 4](https://mistral.ai/news/mistral-large-4/) - Original model announcement (October 6, 2026). API preview with benchmark claims.
+
+### Competition check
+
+Searching "Mistral Large 4 self-hosting guide" and "Mistral Large 4 coding agents setup" returns the Qovery vendor blog (GPU cloud sales pitch), Spheron's deployment tutorial (another cloud vendor), a Towards AI member-only article, and YottaLabs hardware estimates. The official Mistral docs cover API access but not self-hosting. No result offers a practitioner's perspective: real cost-per-task math comparing self-hosted vs. API at different utilization rates, head-to-head coding benchmarks against DeepSeek V4.1 Flash and GLM-5.3 (the two open-weight models it competes with), quantization tradeoffs (FP8 vs. INT4 on coding accuracy), or integration with existing agentic coding tools like Claude Code and Codex via LiteLLM or OpenRouter. The blog's existing guides for DeepSeek V4.1 Flash and GLM-5.2 create a natural comparison point, and `claude-code-cost-tracking` sets up the cost-analysis angle.
+
+### Suggested next step
+
+`/research-topic "mistral-large-4-self-hosting-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
