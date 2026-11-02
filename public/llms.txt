@@ -61,6 +61,7 @@
 - [AWS EC2 Agent](https://avinashsangle.com/projects/aws-ec2-agent): AI agent for managing AWS EC2 instances through conversational interfaces.
 - [Twitter OAuth](https://avinashsangle.com/projects/twitter-oauth): OAuth implementation for Twitter/X API integration.
 - [Method CRM MCP Server](https://avinashsangle.com/projects/method-crm-mcp): MCP server for Method CRM enabling AI-powered CRM interactions.
+- [Lead Scoring Agent for Twenty CRM](https://avinashsangle.com/projects/lead-scoring-agent): Free, open-source (MIT) Twenty CRM app that scores every person and opportunity 0-100 with a short reason using the workspace default AI model. Adds score, summary, scored-at and status fields plus score-sorted views; new records score in seconds, imports and existing records go through a queue at 20 per object per minute. Requires Twenty server 2.49+. Published on npm as lead-scoring-agent.
 
 ## Topics
 - [All Topics](https://avinashsangle.com/topics): Index of every subject area covered on this site, with post counts.

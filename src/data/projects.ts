@@ -58,6 +58,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'lead-scoring-agent',
+    title: 'Lead Scoring Agent for Twenty CRM',
+    description: 'Free, open-source Twenty CRM app that scores every person and opportunity from 0 to 100 with a short reason, using the workspace default AI model. New records score in seconds, imports and existing records go through a throttled queue, and score-sorted views put the best leads first.',
+    shortDescription: 'Open-source Twenty CRM app that scores every lead 0 to 100 with a reason',
+    category: 'AI Automation',
+    badge: 'Open Source',
+    icon: 'Bot',
+    technologies: ['TypeScript', 'Twenty SDK', 'Twenty CRM', 'AI Agent'],
+    tags: ['Twenty CRM', 'Lead Scoring', 'AI Agent', 'TypeScript', 'Open Source', 'CRM', 'Sales'],
+    route: '/projects/lead-scoring-agent',
+    githubUrl: 'https://github.com/avisangle/lead-scoring-agent',
+    featured: true,
+    status: 'active',
+    date: '2026-11-02',
+    order: 0,
+    year: 2026
+  },
+  {
     id: 'roundhand',
     title: 'Roundhand',
     description: 'Dictation app for Mac and Windows. Speech is recognised on-device with Parakeet (through CoreML on the Mac, ONNX Runtime on Windows), and the text is cleaned and shaped for the app you are typing into. Offline rules are the default, with optional cloud cleanup behind a word-count gate.',
