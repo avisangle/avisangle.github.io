@@ -813,3 +813,30 @@ Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tu
 ### Suggested next step
 
 `/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-11-02: GPT-6.1 Terra Agentic Coding Guide - OpenAI's Cost-Efficient Model for Computer Use and Visual Reasoning
+
+**Suggested slug:** `gpt-6-1-terra-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+OpenAI released GPT-6.1 Terra on October 26, 2026, replacing GPT-5.6 Terra as its mid-tier model. At $1/$5 per million tokens (half of Sol's price), it brings computer use, visual reasoning, and a 1M+ token context window to the cost tier where most day-to-day coding work happens. The site already has two GPT-5.6 guides (`gpt-5-6-sol-ultra-cooperative-subagents` and `gpt-5-6-programmatic-tool-calling-guide`) but nothing in the GPT-6.x generation - and developers who followed those guides need to know when Terra replaces their existing Sol/Terra routing decisions.
+
+### Search demand evidence
+
+- [OpenAI launches GPT-6.1 Terra with 3x faster AI agents, 50% lower pricing](https://www.bleepingcomputer.com/news/artificial-intelligence/openai-launches-gpt-61-terra-with-3x-faster-ai-agents-50-percent-lower-pricing/) - BleepingComputer, Oct 26, 2026. Major tech outlet coverage with full technical breakdown of computer use, visual reasoning, and Terminal-Bench 4.0 scores.
+- [GitHub Copilot adds GPT-6.1 Terra for lower-cost agentic coding](https://visualstudiomagazine.com/articles/2026/10/28/github-copilot-adds-gpt-6-1-terra-for-lower-cost-agentic-coding.aspx) - Visual Studio Magazine, Oct 28, 2026. Copilot integration confirmed, signals dev tool ecosystem adoption.
+- [GPT-6.1 Terra now available on AI Gateway](https://vercel.com/changelog/gpt-6-1-terra-now-available-on-ai-gateway) - Vercel changelog entry. Infrastructure providers adding same-week support shows immediate developer demand.
+- [GPT-6.1 Terra: $1/$5 Pricing, Benchmarks, and When to Pick It](https://www.developersdigest.tech/blog/gpt-6-1-terra-release-guide-2026) - DevelopersDigest guide, one of 10+ third-party tutorials published within 7 days of launch.
+- [OpenAI's GPT-6.1 Terra Enters Orbit with 50% Cheaper Tokens](https://aimagazine.com/news/how-openais-gpt-6-1-terra-is-much-faster-and-50-cheaper) - AI Magazine, Oct 26, 2026. Confirmed pricing, speed claims, and API availability.
+
+### Competition check
+
+Existing guides fall into two buckets: (1) API setup walkthroughs that show how to make a first call (Tech Insider "13 Steps," Apidog, CometAPI) and (2) benchmark comparison tables with no practitioner context (DevelopersDigest, Emergent, SmartScope). None answer the question a developer running Claude Code or Codex daily actually has: "When does routing tasks to GPT-6.1 Terra save me money without quality loss, and how do I set up that routing?" The gap is a practitioner guide that covers cost-per-task analysis against Claude Opus and Gemini 4 Argon, computer use comparison across providers, and migration guidance from GPT-5.6 Terra workflows.
+
+### Suggested next step
+
+`/research-topic "gpt-6-1-terra-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
