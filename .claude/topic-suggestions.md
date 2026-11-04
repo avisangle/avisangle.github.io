@@ -813,3 +813,32 @@ Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tu
 ### Suggested next step
 
 `/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-11-04: IDE Extension Marketplace Security for AI Coding Tools - Lessons from the Cursor Claude Code Backdoor
+
+**Suggested slug:** `ide-extension-security-ai-coding-tools`
+**Status:** pending research
+
+### Why this topic, why now
+
+On October 29, 2026, a tampered build of the official Claude Code extension (versions 2.1.312 and 2.1.313) appeared on the Cursor marketplace for roughly 11 hours before removal, planting a persistent SSH backdoor on up to 5,000 developer machines. Microsoft's security team published a technical breakdown, Cursor shut down and rebuilt its entire marketplace, and Anthropic fast-tracked version 2.1.314. The incident is the highest-profile attack yet in a pattern that ran all year: malicious AI coding extensions exfiltrating source code (January), a VS Code plugin giving attackers access to GitHub's source (May), a Cloud Security Alliance research note calling IDE plugin ecosystems the primary attack surface for AI credential theft (June), and researchers finding that several trusted extension identifiers recommended by AI IDE forks were unclaimed on Open VSX, meaning attackers could register them. Every article covering the Cursor incident describes the attack. Not one walks a developer through the full defense: auditing installed extensions against known-bad versions, understanding why Cursor's marketplace (Open VSX) has fundamentally weaker vetting than Microsoft's, configuring extension update policies and install allowlists, monitoring for post-compromise indicators, and locking down AI IDE extensions across a team.
+
+### Search demand evidence
+
+- [Backdoor in Claude Code for VS Code extension on the Cursor Marketplace](https://news.ycombinator.com/item?id=50300683) - Hacker News front page thread (posted late October 2026). Multiple HN AI digests tracked this as a top story for the week, with one reporting approximately 994 points and 553 comments.
+- [Inside a malicious Claude Code-branded extension and its persistent SSH backdoor](https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/) - Microsoft Security Blog (October 30, 2026). Full technical teardown of the payload, persistence mechanism, and indicators of compromise.
+- [Official Claude Code VS Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor](https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html) - The Hacker News (October 2026). Primary security media coverage.
+- [Malicious Claude Code Extension Served in Cursor Supply Chain Attack](https://www.securityweek.com/malicious-claude-code-extension-served-in-cursor-supply-chain-attack/) - SecurityWeek (October 2026).
+- [Cursor Confirms Anthropic Claude Code Extension Compromised](https://www.bankinfosecurity.com/cursor-confirms-anthropic-claude-code-extension-compromised-a-33263) - BankInfoSecurity (October 2026).
+- [AI Toolchain Hijacked: IDE Plugin API Key Theft](https://labs.cloudsecurityalliance.org/research/csa-research-note-ai-developer-toolchain-supply-chain-202606/) - Cloud Security Alliance research note (June 2026). Broader pattern: IDE plugin ecosystems as the primary attack surface for AI credential theft.
+- [Trusted Tool, Malicious Build: What the Trojanized Claude Code Extension Means for Developer Endpoints](https://www.morphisec.com/blog/trusted-tool-malicious-build-what-the-trojanized-claude-code-extension-means-for-developer-endpoints/) - Morphisec (October 2026). Endpoint security perspective on the broader implications.
+
+### Competition check
+
+Searching "Claude Code extension backdoor developer guide" and "securing AI IDE extensions supply chain" returns 15+ news articles (The Hacker News, SecurityWeek, BleepingComputer, Help Net Security, CSO Online, BankInfoSecurity), Microsoft's technical blog post, vendor advisories from OX Security and StepSecurity, and Cursor's own security notice. Every piece either reports what happened or provides a narrow remediation checklist (check for svc-telemetry SSH key, run Cursor's cleanup script, update to 2.1.314). No article steps back to the bigger picture: why Open VSX has weaker publisher verification than the VS Code Marketplace, how AI IDE forks inherit that weaker trust model, what extension update and install policies a team should enforce across Cursor/Windsurf/other forks, how to audit which extensions have filesystem and network access to your codebase and credentials, or how this incident connects to the CSA's June 2026 finding that IDE plugins are now the primary AI credential theft vector. The blog's security cluster (hallusquatting-defense, litellm-mcp-exploit-response, hardening-ai-agents-cicd, sandbox-ai-agents-hugging-face-breach) covers prompt injection, MCP vulnerabilities, runtime containment, and hallucinated packages. IDE extension marketplace security is a distinct, uncovered attack surface that completes the developer security picture.
+
+### Suggested next step
+
+`/research-topic "ide-extension-security-ai-coding-tools"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
