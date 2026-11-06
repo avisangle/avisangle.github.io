@@ -479,3 +479,9 @@
 - metadata.title 39 chars (rendered 56); description 151; OG/H1 57.
 - Original data from live API calls on 2026-10-20: minimal -> 400, thinkingBudget -> 200 (contradicts groundy/apiyi 400 claim); 6-run SemVer task sweep across low/medium/high; Claude Code 2.1.303 via LiteLLM 1.106.0 end to end, which surfaced the explicit-caching 400 and the DISABLE_PROMPT_CACHING=1 fix. Total API spend under $0.50.
 - Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.
+
+## 2026-11-07
+- Published blog post: "How to Set Up DeepSeek Super-Agent (dsh-superagent) Safely" at /blog/deepseek-super-agent-setup-guide (AI Development, ~2,950 words, 12 min, 8 FAQ items). Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo.
+- metadata.title 39 chars (rendered 56); description 148; OG/H1 58.
+- Original data from reading commit 8c32a9d: follow-up comments from any human GitHub login reach a Ticket's Executor and can resume an ended Ticket with no allowed-list check (src/core/intake.ts); danger-full-access is hard-coded (src/app/sessions.ts:152). Not run end to end (no model key / second GitHub account); the post says so.
+- Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.

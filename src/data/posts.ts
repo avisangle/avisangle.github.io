@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'deepseek-super-agent-setup-guide',
+    title: 'How to Set Up DeepSeek Super-Agent (dsh-superagent) Safely',
+    description:
+      'Set up DeepSeek Super-Agent (dsh-superagent) step by step: agent GitHub account, gh wrapper, observe mode, and the permission gap other guides miss.',
+    datePublished: '2026-11-07',
+    topics: ['coding-agents', 'ai-security'],
+    readTime: '12 min read',
+  },
+  {
     slug: 'gemini-4-argon-agentic-coding-guide',
     title: 'Gemini 4 Argon for Agentic Coding: When It Beats Opus 5.5',
     description:

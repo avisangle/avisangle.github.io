@@ -8,6 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts with metadata
   const blogPosts = [
     {
+      slug: 'deepseek-super-agent-setup-guide',
+      lastModified: '2026-11-07',
+    },
+    {
       slug: 'gemini-4-argon-agentic-coding-guide',
       lastModified: '2026-10-20',
     },
