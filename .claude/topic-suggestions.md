@@ -813,3 +813,32 @@ Searching "Gemini 4 Argon agentic coding guide" and "Gemini 4 Argon developer tu
 ### Suggested next step
 
 `/research-topic "gemini-4-argon-agentic-coding-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-11-06: DeepSeek Super-Agent Setup Guide - The First Open-Source Proactive Coding Agent
+
+**Suggested slug:** `deepseek-super-agent-setup-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On November 1, 2026, DeepSeek's Harness team open-sourced dsh-superagent - the first coding agent designed to proactively monitor developer conversations on GitHub and team chat (Feishu), then autonomously file issues, write code, and submit PRs without being explicitly invoked. Bloomberg framed it as DeepSeek's direct challenge to Claude Code. It's MIT-licensed, runs as a service alongside your repo (not in your terminal), and routes authorized GitHub coding requests to parallel isolated worker sessions. Five days in, news coverage is wall-to-wall but zero English-language practitioner guides exist for actually setting it up and evaluating it against existing coding agents.
+
+### Search demand evidence
+
+- [DeepSeek Drops Enhanced Coding Agent With Aim to Rival Anthropic](https://www.bloomberg.com/news/articles/2026-11-01/deepseek-drops-enhanced-coding-agent-with-aim-to-rival-anthropic) - Bloomberg, November 1, 2026. Positions dsh-superagent as a direct Claude Code competitor.
+- [DeepSeek unveils AI 'super agent' in coding race with OpenAI, Anthropic](https://www.scmp.com/tech/article/3372884/deepseek-unveils-ai-super-agent-coding-race-openai-anthropic) - South China Morning Post, November 1, 2026. Covers the competitive positioning and proactive design.
+- [DeepSeek open-sources Super-Agent, a coding agent that reads team chats](https://thenextweb.com/news/deepseek-super-agent-open-source-coding-agent) - The Next Web, November 2, 2026. Covers the open-source release and MIT license.
+- [DeepSeek Open-Sources dsh-superagent, a Router-Worker Coding Agent](https://marktechpost.com/2026/11/01/deepseek-dsh-superagent-router-worker-coding-agent) - MarkTechPost, November 1, 2026. Technical breakdown of the router-worker architecture.
+- [DeepSeek open-sources dsh-superagent, a coding agent largely built by agents](https://hackernews-dynamic.seasondane.workers.dev/news/48216937) - Hacker News discussion thread, early November 2026. Active developer discussion.
+- Reddit r/singularity thread reportedly hit 440+ upvotes within hours of release (reported via secondary coverage).
+- [dsh-superagent on TrendShift](https://trendshift.io/repositories/328842) - Tracking the repo's GitHub trending metrics.
+
+### Competition check
+
+Searching "deepseek super agent setup guide" and "dsh-superagent getting started tutorial" returns a Chinese-language LaoZhang AI walkthrough, a TeamoRouter feature overview, a Railway one-click deploy template, and a SmartScope architecture analysis. All focus either on the news angle or surface-level feature descriptions. No English-language guide walks through the full practitioner workflow: cloning the repo, creating the dedicated GitHub service account, configuring observe-vs-active mode, understanding the router-worker architecture, setting security boundaries (the agent runs with full OS access), testing on a real repo, and honestly comparing the experience against Claude Code and Codex for the same GitHub workflows. The blog's existing DeepSeek content (V4 Flash, V4.1 Flash) and the broader agentic coding guide series create a natural content cluster.
+
+### Suggested next step
+
+`/research-topic "deepseek-super-agent-setup-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
