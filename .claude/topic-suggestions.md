@@ -842,3 +842,31 @@ Searching "deepseek super agent setup guide" and "dsh-superagent getting started
 ### Suggested next step
 
 `/research-topic "deepseek-super-agent-setup-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-11-09: Google Elephant-Goldfish Model - Spec-First Development for AI Coding Agents
+
+**Suggested slug:** `elephant-goldfish-model-spec-first-coding-agents`
+**Status:** pending research
+
+### Why this topic, why now
+
+Google open-sourced the Elephant-Goldfish Model (EGM) plugin on October 22, 2026, and it's still gaining traction with fresh coverage through early November (MarkTechPost published a breakdown on November 8). The plugin enforces a spec-first workflow where a context-rich "Elephant" agent drafts a design document and stateless "Goldfish" reviewers critique it before any code is written. Google says thousands of its engineers use this pattern daily to ship production code. It works with Claude Code, Codex, and Antigravity, making it directly relevant to the blog's audience. The core idea - that the agent that knows least reviews best - is a practical, testable workflow improvement that any AI coding agent user can adopt today.
+
+### Search demand evidence
+
+- [Google Open Sources the Elephant-Goldfish Model Plugin](https://opensource.googleblog.com/2026/10/introducing-elephant-goldfish-model-plugin.html) - Official Google Open Source Blog announcement (Oct 22, 2026)
+- [Google AI Releases Elephant-Goldfish Model Plugin for Spec-First Coding](https://www.marktechpost.com/2026/11/08/google-elephant-goldfish-model-plugin-spec-review-coding-agents/) - MarkTechPost coverage (Nov 8, 2026), still generating fresh discussion
+- [Google's Elephant-Goldfish Model Stops Coding Agents from Inheriting Their Own Blind Spots](https://alphasignal.ai/news/google-s-elephant-goldfish-model-stops-coding-agents-from-inheriting-their-own) - AlphaSignal AI newsletter pickup
+- [Install EGM for Claude Code and Codex](https://www.mindstudio.ai/blog/install-egm-claude-code-codex/) - MindStudio setup guide showing active developer interest
+- [Elephant-Goldfish Model: A Design-First Workflow for Coding Agents](https://daily.dev/posts/google-s-elephant-goldfish-model-a-design-first-workflow-for-coding-agents-f1cg5pptd) - daily.dev featured post
+- Reddit community members have built spin-off command sets based on the Elephant/Goldfish pattern for cross-agent review workflows
+
+### Competition check
+
+Searching "elephant goldfish model Claude Code setup" and "EGM spec-first coding agent guide" returns thin installation guides from SmartScope, MindStudio, and DigitalApplied. These cover the `claude plugin marketplace add` commands but don't walk through the full practitioner workflow: configuring the brainstorm/draft/review cycle, understanding why stateless reviewers catch blind spots that the drafting agent misses, tuning the review depth, comparing the spec-first approach against direct-to-code prompting on a real project, or honestly evaluating the token cost tradeoff. No English-language guide connects EGM to the broader "how to get better output from AI coding agents" question that developers are actively searching for. The blog's existing coverage of Claude Code workflows, dynamic workflows, and regression-proofing creates a natural content cluster.
+
+### Suggested next step
+
+`/research-topic "elephant-goldfish-model-spec-first-coding-agents"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
