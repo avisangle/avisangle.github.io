@@ -842,3 +842,31 @@ Searching "deepseek super agent setup guide" and "dsh-superagent getting started
 ### Suggested next step
 
 `/research-topic "deepseek-super-agent-setup-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-11-11: How to Detect LLM Model Nerfs - LiveNerf, NerfBench, and DIY Regression Testing
+
+**Suggested slug:** `detect-llm-model-nerfs-regression-testing`
+**Status:** pending research
+
+### Why this topic, why now
+
+The "did Opus 5.5 get nerfed?" debate reignited in early November 2026 with a fresh HN thread (137 points in 3 hours) citing changed thinking patterns as of November 3. This follows the LiveNerf project's 923-point HN launch thread and months of recurring "model nerf" complaints across providers. Two open-source benchmarks - LiveNerf and NerfBench - now exist specifically to track post-launch model degradation, yet no developer guide explains how to use them, interpret their results, or build your own regression tests for LLM-powered workflows. The existing blog post "Regression-Proof Claude Code Workflows" covers CLI version pinning and effort-level locks, not model-level quality monitoring - so this is a distinct, complementary topic.
+
+### Search demand evidence
+
+- [Livenerf: Has Opus 5.5 been nerfed yet?](https://news.ycombinator.com/item?id=49901736) - 923 points on Hacker News (posted late September 2026, discussion ongoing through November)
+- [Is Opus 5.5 nerfed? What the November 3 data shows](https://aitoolranked.com/news/claude-opus-5-5-nerf-november-3-thinking-summaries) - Follow-up analysis showing 137-point HN thread, posted November 2026
+- [Is Anthropic Nerfing Claude? Users Increasingly Report Performance Degradation](https://venturebeat.com/technology/is-anthropic-nerfing-claude-users-increasingly-report-performance) - VentureBeat coverage of the broader pattern
+- [r/ClaudeAI Performance and Bugs Megathread](https://www.reddit.com/r/ClaudeAI/comments/1s7f72l/claude_performance_and_bugs_megathread_ongoing/) - Ongoing community discussion with hundreds of comments
+- [GPT-5.5 and Opus 4.7: OpenAI and Anthropic Both Admit Post-Launch Quality Issues](https://aiscroll.pages.dev/article/general/gpt55-opus47-degradation-admission/) - Multi-provider pattern, not just a Claude problem
+- [LiveNerf GitHub repo](https://github.com/ninjahawk/livenerf) - Open-source tool with active development
+
+### Competition check
+
+Searching "how to detect LLM model nerf" and "LLM regression testing tools" returns the LiveNerf author's blog post, several news articles about the Opus 5.5 controversy, and a blog post titled "Is Claude Nerfed, or Is Your Harness Flat?" that argues harness settings explain most complaints. No result walks a developer through the practical steps: setting up LiveNerf or NerfBench against your provider, building a custom eval suite from your own production tasks, choosing the right metrics (accuracy on fixed tasks, output token counts, reasoning depth), understanding detection floors and confidence intervals, and establishing a monitoring cadence. The topic also naturally spans providers - GPT and Gemini users report the same concerns - making it a broader resource than the Claude-specific coverage that dominates results today.
+
+### Suggested next step
+
+`/research-topic "detect-llm-model-nerfs-regression-testing"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
