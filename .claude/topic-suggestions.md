@@ -842,3 +842,31 @@ Searching "deepseek super agent setup guide" and "dsh-superagent getting started
 ### Suggested next step
 
 `/research-topic "deepseek-super-agent-setup-guide"` to produce the full content brief with Context7-validated facts, keyword strategy, and outline.
+
+---
+
+## 2026-11-16: Gemini Decisions API Guide - Near-Free Routing and Classification for AI Agent Workflows
+
+**Suggested slug:** `gemini-decisions-api-agent-routing-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+On November 11, 2026, Google launched the Gemini Decisions API - a new endpoint powered by the Gemini Decision 1 model that handles bounded classification and routing tasks (tool selection, model routing, policy checks, content grading) without generating text. It evaluates up to 1,000 yes/no, multiple-choice, and rubric-scoring questions in a single pass across text, images, audio, video, and PDFs at $0.10 per million input tokens with zero output tokens billed. That is roughly 50x cheaper than using Gemini 3.5 Flash-Lite for the same routing decisions. For AI engineers building multi-step agent workflows, this is the first purpose-built decision primitive from a major vendor - a fundamentally different tool than "use a cheap model for classification." Vercel added Gemini Decision 1 to its AI Gateway the same week. The API is five days old and the competition gap is wide.
+
+### Search demand evidence
+
+- [Gemini Decisions API: Fast, calibrated multimodal decisions](https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/) - Official Google blog announcement (November 11, 2026). Describes the API as purpose-built for bounded decisions in agent loops.
+- [Simon Willison's link blog coverage](https://simonwillison.net/2026/Nov/11/gemini-decisions-api/) - Simon Willison linked the announcement on November 11, 2026, signaling developer interest.
+- [Gemini Decision 1 now available on AI Gateway](https://vercel.com/changelog/gemini-decision-1-now-available-on-ai-gateway) - Vercel Changelog, November 2026. Vercel added the model to its AI Gateway for routing, policy checks, tool filtering, and result ranking.
+- [Google Gemini Decisions API: Gemini Decision 1](https://www.marktechpost.com/2026/11/11/google-gemini-decisions-api-gemini-decision-1/) - MarkTechPost coverage (November 11, 2026). Notes the API is limited to Google-hosted inference with no open weights or self-hosting option.
+- [Google Launches Gemini Decisions API at $0.10 per 1M Tokens](https://aiweekly.co/alerts/google-launches-gemini-decisions-api-at-010-per-1m-tokens) - AI Weekly alert (November 2026). Highlights the pricing as the key differentiator for high-volume agent routing.
+- [How to use the Gemini Decisions API](https://flaviocopes.com/gemini-decisions-api/) - Flavio Copes tutorial (November 2026). Basic Node.js walkthrough showing a single POST to the /v1beta/decisions endpoint.
+
+### Competition check
+
+Searching "Gemini Decisions API guide" and "Gemini Decision 1 agent routing tutorial" returns Google's official announcement, one Flavio Copes Node.js tutorial (a basic hello-world walkthrough, not an agent integration guide), a Xenospectrum overview, a MarkTechPost news article, and a RuntimeWire launch summary. No practitioner guide covers: how to wire the Decisions API into an existing agent loop for tool selection (replacing the "ask the LLM which tool to use" pattern), cost-per-decision math comparing it against Gemini Flash-Lite or Claude Haiku for routing, how the rubric-scoring mode works for content grading and RAG relevance filtering, multimodal classification patterns (image-based routing, video content moderation), or the practical limits (256K token input cap, 1,000 questions per request, text-only question instructions). The blog's existing model routing content (claude-code-fable-5-model-routing) and cost optimization content (claude-code-cost-tracking) create a natural content cluster for readers already building multi-model agent workflows.
+
+### Suggested next step
+
+`/research-topic "gemini-decisions-api-agent-routing-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
