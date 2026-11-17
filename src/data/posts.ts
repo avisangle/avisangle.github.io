@@ -98,6 +98,15 @@ export const topics: Topic[] = [
 
 export const posts: Post[] = [
   {
+    slug: 'gemini-decisions-api-agent-routing-guide',
+    title: 'Gemini Decisions API: Cheap, Calibrated Routing for AI Agents',
+    description:
+      "Use the Gemini Decisions API as your agent's router: question types, confidence thresholds, cost per decision, OpenAI and Jev comparison, and its limits.",
+    datePublished: '2026-11-17',
+    topics: ['agent-platforms', 'coding-agents'],
+    readTime: '11 min read',
+  },
+  {
     slug: 'deepseek-super-agent-setup-guide',
     title: 'How to Set Up DeepSeek Super-Agent (dsh-superagent) Safely',
     description:

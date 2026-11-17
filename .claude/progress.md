@@ -485,3 +485,9 @@
 - metadata.title 39 chars (rendered 56); description 148; OG/H1 58.
 - Original data from reading commit 8c32a9d: follow-up comments from any human GitHub login reach a Ticket's Executor and can resume an ended Ticket with no allowed-list check (src/core/intake.ts); danger-full-access is hard-coded (src/app/sessions.ts:152). Not run end to end (no model key / second GitHub account); the post says so.
 - Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.
+
+## 2026-11-17
+- Published blog post: "Gemini Decisions API: Cheap, Calibrated Routing for AI Agents" at /blog/gemini-decisions-api-agent-routing-guide (AI Development, ~2,700 words, 11 min, 8 FAQ items). Schemas: TechArticle, BreadcrumbList, FAQPage, HowTo.
+- metadata.title 41 chars (rendered 58); description 153; OG/H1 61.
+- No live API calls (no Gemini key; Google docs hosts blocked in the session). Facts from Google's launch post as reported in search results and secondary coverage; the post says so and labels OpenAI/Jev figures as reported. Corrected the "50x cheaper" claim from topic PR #103 to Google's ~5x with worked cost math.
+- Updated src/data/posts.ts, blog index (featured + grid + JSON-LD), sitemap.ts, public/llms.txt.

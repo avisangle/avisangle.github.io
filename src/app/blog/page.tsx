@@ -57,6 +57,13 @@ export default function BlogPage() {
             blogPost: [
               {
                 "@type": "BlogPosting",
+                headline: "Gemini Decisions API: Cheap, Calibrated Routing for AI Agents",
+                url: "https://avinashsangle.com/blog/gemini-decisions-api-agent-routing-guide",
+                datePublished: "2026-11-17",
+                author: { "@type": "Person", name: "Avinash Sangle" },
+              },
+              {
+                "@type": "BlogPosting",
                 headline: "How to Set Up DeepSeek Super-Agent (dsh-superagent) Safely",
                 url: "https://avinashsangle.com/blog/deepseek-super-agent-setup-guide",
                 datePublished: "2026-11-07",
@@ -344,22 +351,22 @@ export default function BlogPage() {
           <h2 className="section-title mb-8">Featured Article</h2>
           <Card className="p-6">
             <div className="grid md:grid-cols-[1fr_2fr] gap-8 items-center">
-              <CategoryIcon icon="ShieldAlert" size="xl" className="mx-auto" />
+              <CategoryIcon icon="GitFork" size="xl" className="mx-auto" />
               <div>
                 <p className="text-accent font-semibold mb-2">AI DEVELOPMENT</p>
-                <h3 className="text-2xl font-bold mb-4">How to Set Up DeepSeek Super-Agent (dsh-superagent) Safely</h3>
+                <h3 className="text-2xl font-bold mb-4">Gemini Decisions API: Cheap, Calibrated Routing for AI Agents</h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                  DeepSeek&apos;s proactive coding agent installs in five commands. The setup,
-                  the safe defaults, and the permission gap other guides miss: any GitHub user
-                  who comments on its pull request reaches a full-access session.
+                  Google&apos;s new decision model answers yes/no, choice and rubric questions with
+                  a probability and no output tokens. How to put it in an agent&apos;s router slot,
+                  set confidence bands, and what a decision really costs.
                 </p>
                 <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Nov 7, 2026</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Nov 17, 2026</span>
                   <span>•</span>
-                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 12 min read</span>
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Clock" size="sm" /> 11 min read</span>
                 </div>
                 <Button asChild>
-                  <Link href="/blog/deepseek-super-agent-setup-guide">Read Article →</Link>
+                  <Link href="/blog/gemini-decisions-api-agent-routing-guide">Read Article →</Link>
                 </Button>
               </div>
             </div>
@@ -372,6 +379,26 @@ export default function BlogPage() {
         <div className="container-project">
           <h2 className="section-title mb-8">All Articles</h2>
           <div className="grid-2">
+            <Card className="card-hover">
+              <CardHeader>
+                <CategoryIcon icon="GitFork" size="lg" animation="pulse" />
+                <CardTitle>Gemini Decisions API: Cheap, Calibrated Routing for AI Agents</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Use gemini-decision-1 to pick the tool and model tier before any generative call,
+                  act only on confident answers, and compare it with OpenAI&apos;s and Jev&apos;s decision APIs.
+                </p>
+                <div className="flex gap-4 items-center flex-wrap text-muted-foreground text-sm mb-4">
+                  <span className="flex items-center gap-1"><CategoryIcon icon="Calendar" size="sm" /> Nov 17, 2026</span>
+                  <span>•</span>
+                  <span>11 min read</span>
+                </div>
+                <Link href="/blog/gemini-decisions-api-agent-routing-guide" className="project-link">
+                  Read Article →
+                </Link>
+              </CardContent>
+            </Card>
             <Card className="card-hover">
               <CardHeader>
                 <CategoryIcon icon="ShieldAlert" size="lg" animation="pulse" />
