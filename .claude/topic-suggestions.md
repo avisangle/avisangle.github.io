@@ -870,3 +870,31 @@ Searching "Gemini Decisions API guide" and "Gemini Decision 1 agent routing tuto
 ### Suggested next step
 
 `/research-topic "gemini-decisions-api-agent-routing-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-11-18: MAI Code 2 in GitHub Copilot - Microsoft's "96% of Opus at 5% Cost" Claim Explained
+
+**Suggested slug:** `mai-code-2-github-copilot-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Microsoft launched MAI Code 2 and MAI Code 2 Flash at Ignite on November 17, 2026 - its first generation-2 in-house coding model, now live in GitHub Copilot for Pro, Pro+, Max, Business, and Enterprise users. The headline claim is loud: 96% of Claude Opus 5.5's coding quality at roughly 5% of the price, averaged across DeepSWE 1.1, Terminal-Bench 2.1, SWE-Atlas, and FrontierCode v1.1. But the 5% figure relies on a 50%-off promotional rate that expires May 2027 - at list price the ratio is closer to 10%. The model card also explicitly states it is "not yet tuned for very long-horizon agent work." For developers choosing between Claude Code, Copilot, and Codex, this is the first time a vendor-subsidized model inside Copilot claims near-frontier coding performance, and the gap between the marketing number and the fine print is exactly the kind of analysis the blog's audience searches for.
+
+### Search demand evidence
+
+- [Introducing MAI Code 2 and MAI Code 2 Flash](https://microsoft.ai/news/microsoft-ignite-2026/) - Microsoft AI official announcement (November 17, 2026). Part of seven new MAI models launched at Ignite 2026, positions Code 2 as flagship enterprise coding model.
+- [MAI Code 2 and MAI Code 2 Flash in GitHub Copilot](https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/) - GitHub Changelog (November 17, 2026). Confirms immediate availability in Copilot CLI, coding agent, and GitHub.com.
+- [MAI Code 2 vs Claude Opus 5.5 vs GPT-6.1 Sol: "5% of the Cost" Is a Promo Price](https://dev.to/alanwest/mai-code-2-vs-claude-opus-55-vs-gpt-61-sol-5-of-the-cost-is-a-promo-price-4o4b) - DEV Community (November 2026). Breaks down that the 5% claim depends on promotional pricing, with list-price ratio closer to 10%.
+- [Microsoft Built Its Own Coding Model, and the Price Is the Point](https://dev.to/hassan_devs/microsoft-built-its-own-coding-model-and-the-price-is-the-point-2l0m) - DEV Community (November 2026). Developer reaction arguing Microsoft is competing on cost, not frontier capability.
+- [Microsoft Brings MAI Code 2 to GitHub Copilot at 5% of Claude's Cost](https://alphasignal.ai/news/microsoft-brings-mai-code-2-to-github-copilot-at-5-of-claude-s-cost) - AlphaSignal (November 2026). Notes that benchmark figures are vendor-reported with no independent verification yet.
+- [MAI Code 2 pricing: promo rates, Copilot credits, and cost per task](https://www.eesel.ai/blog/mai-code-2-pricing) - Eesel (November 2026). Detailed pricing breakdown comparing promo vs list rates across Copilot plan tiers.
+
+### Competition check
+
+Searching "MAI Code 2 guide" and "MAI Code 2 vs Claude Opus Copilot" returns launch-day news coverage from AlphaSignal, Techzine, DEV Community, and WindowsForum, plus Microsoft's own announcement and model card. All are surface-level: they repeat the benchmark numbers and pricing without independent verification. No article covers: what the model can and cannot do in practice (the model card's "not for long-horizon agentic work" caveat), how to select between Code 2 and Code 2 Flash in Copilot settings, real cost-per-task math comparing a full Copilot workflow against Claude Code or OpenAI Codex for the same repository, what "supervised agentic workflows" means concretely vs the fully autonomous patterns readers use with Claude Code, or how the 50% promo discount changes the ROI calculation after May 2027. The blog covers every other major AI coding model provider (Claude, GPT, Gemini, DeepSeek, Qwen, Kimi, GLM) but has zero Microsoft/MAI coverage - this fills a clear gap.
+
+### Suggested next step
+
+`/research-topic "mai-code-2-github-copilot-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
