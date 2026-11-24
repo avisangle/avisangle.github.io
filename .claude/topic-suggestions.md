@@ -870,3 +870,31 @@ Searching "Gemini Decisions API guide" and "Gemini Decision 1 agent routing tuto
 ### Suggested next step
 
 `/research-topic "gemini-decisions-api-agent-routing-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-11-23: MAI Code 2 Agentic Coding Guide - Microsoft's First-Party Model at 5% of Opus 5.5's Cost
+
+**Suggested slug:** `mai-code-2-agentic-coding-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Microsoft launched MAI Code 2 and MAI Code 2 Flash at Ignite on November 17, 2026 - its first coding-specific model family, running on the custom Maia 200 AI chip. The headline claim: 96% of Claude Opus 5.5's coding performance at roughly 5% of the cost, and 98% of GPT-6.1 Sol at 40% of the cost. MAI Code 2 is available inside GitHub Copilot across Pro, Pro+, Max, Business, and Enterprise plans. Flash reaches Copilot Free and Student plans, making it the first near-frontier coding model available at zero cost to students. The blog has covered models from OpenAI, Google, DeepSeek, Qwen, Kimi, and GLM but has zero Microsoft model content. The promotional pricing ($0.50/$2.50 per MTok) runs until May 17, 2027, giving developers a window to evaluate the cost-performance tradeoff before rates change.
+
+### Search demand evidence
+
+- [Microsoft launches MAI Code 2 models to challenge OpenAI and Anthropic in AI coding](https://www.infoworld.com/article/4250152/microsoft-launches-mai-code-2-models-to-challenge-openai-and-anthropic-in-ai-coding.html) - InfoWorld, November 17, 2026. Reports MAI Code 2 averages 63.2% across four benchmarks vs Opus 5.5's 65.3%, leads on DeepSWE and Terminal-Bench but trails badly on SWE-Atlas (43.1% vs 57.5%).
+- [Microsoft's MAI Code 2 claims 98% of GPT-6.1 Sol's performance at 40% of the cost](https://tbreak.com/microsoft-mai-code-2-enterprise-coding-models/) - tbreak, November 2026. Notes the cost claims assume a 50% promotional price and that no independent validation has been published.
+- [Microsoft's new AI coder is gunning for Claude and ChatGPT - it's coming with a price advantage](https://digitaltrends.com/computing/microsofts-new-ai-coder-is-gunning-for-claude-and-chatgpt-its-coming-with-a-price-advantage) - Digital Trends, November 2026. Frames the launch as Microsoft reducing dependence on OpenAI and Anthropic inside Copilot.
+- [MAI Code 2 Flash Benchmarks: Cost per Task vs GPT-6 Luna and Claude Haiku 5.5](https://agentspulse.github.io/tutorials/mai-code-2-flash/) - AgentsPulse, November 2026. Developer benchmark analysis of Flash variant vs existing lightweight models.
+- [MAI Code 2 and Code 2 Flash: What the Benchmarks Assume](https://braindetox.kr/en/posts/microsoft_mai_code_2_flash_2026.html) - BrainDetox, November 2026. Skeptical analysis noting the benchmark sets differ between models and that cost figures depend on promotional pricing.
+- [Microsoft AI Releases MAI Code 2 and MAI Code 2 Flash for Enterprises](https://www.unite.ai/microsoft-ai-releases-mai-code-2-and-mai-code-2-flash-for-enterprises/) - Unite.AI, November 2026. Reports Flash averages 61.0% on three benchmarks, ahead of GPT-6 Luna (55.1%) and Claude Haiku 5.5 (53.9%).
+
+### Competition check
+
+Searching "MAI Code 2 guide" and "MAI Code 2 tutorial getting started" returns an Activepieces pricing overview, an eesel.ai benchmark summary, a PromptZone feature comparison, and several "what is MAI Code 2" explainer posts. All are surface-level: pricing tables, benchmark charts copied from Microsoft's announcement, and feature lists. No practitioner guide covers how to select and evaluate MAI Code 2 inside GitHub Copilot for real coding tasks, which task types it wins on (DeepSWE, Terminal-Bench) vs where it falls short (SWE-Atlas at 43.1% vs Opus 5.5's 57.5%), how Flash changes the Copilot Free tier for students and hobbyists, honest cost-per-task math accounting for the promotional pricing expiration in May 2027, what the Maia 200 chip connection means for inference latency and availability, or how to route between MAI Code 2 and other Copilot models based on task type. The blog's existing cost-tracking content (claude-code-cost-tracking) and model routing content (claude-code-fable-5-model-routing) create a natural content cluster for readers comparing per-model economics across vendors.
+
+### Suggested next step
+
+`/research-topic "mai-code-2-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
