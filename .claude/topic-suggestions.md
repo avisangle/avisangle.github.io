@@ -898,3 +898,31 @@ Searching "MAI Code 2 guide" and "MAI Code 2 tutorial getting started" returns a
 ### Suggested next step
 
 `/research-topic "mai-code-2-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-11-25: Claude Ship - AI-Powered PR Review, Fix, and Approval for Teams
+
+**Suggested slug:** `claude-ship-pr-review-approval-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+Anthropic launched Claude Ship on November 23, 2026 - a bundle of three agents (Code Review, PR Steward, and Claude Approvals) that automate the full pull request pipeline from review through merge approval. Code Review is generally available; PR Steward (auto-fixes CI failures and merge conflicts) and Claude Approvals (approves PRs under team-written policy files) are in beta for Team and Enterprise customers. This is Anthropic's most aggressive move into the CI/CD pipeline yet, and it dropped two days after a Harvard study on HN (124 points) showed coding agents are shifting the development bottleneck from writing code to reviewing it.
+
+### Search demand evidence
+
+- [Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes](https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/) - TechCrunch, November 23, 2026. Reports Code Review GA, PR Steward and Claude Approvals in beta for Team/Enterprise.
+- [Claude Ship puts AI at the helm of pull request approvals](https://www.theregister.com/ai-and-ml/2026/11/24/claude-ship-puts-ai-at-the-helm-of-pull-request-approvals/5311883) - The Register, November 24, 2026. Covers the approval policy file mechanism and spend-limit controls.
+- [Anthropic's Claude Ship automates the final stage of the software development pipeline](https://siliconangle.com/2026/11/23/anthropics-claude-ship-automates-the-final-stage-of-the-software-development-pipeline/) - SiliconANGLE, November 23, 2026. Frames it as automating the last manual step in the dev workflow.
+- [Claude Ship explained: Code Review, PR Steward, Approvals, cost](https://www.eesel.ai/blog/claude-ship) - eesel.ai, late November 2026. Quick overview with pricing details.
+- HN front page Nov 24: "Anthropic breaks below $83 IPO price" drew 398 points, 765 comments - Anthropic mindshare is high this week.
+- HN Nov 18: Harvard study on coding agents shifting the bottleneck to code review - 124 points. Directly validates the problem Claude Ship addresses.
+
+### Competition check
+
+Searching "Claude Ship setup guide" and "Claude Ship getting started" returns only news articles (TechCrunch, The Register, SiliconANGLE) and a quick eesel.ai explainer. No practitioner guide covers how to write a Claude Approvals policy file, what decision signals (Code Review findings, natural-language classifiers) are available, how PR Steward interacts with existing CI checks, the recommended rollout path (single repo -> manual PR Steward -> observe-only Approvals -> enforced), spend-limit configuration for Code Review and PR Steward, or how /ship in Claude Code ties the three agents together. The blog's existing posts on claude-code-security-review-github-actions and ultrareview-ci-cd-pipelines create a natural content cluster, and this would be the definitive "how to adopt Claude Ship" piece filling the gap between Anthropic's docs and the news coverage.
+
+### Suggested next step
+
+`/research-topic "claude-ship-pr-review-approval-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
