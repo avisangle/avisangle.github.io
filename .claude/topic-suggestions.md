@@ -898,3 +898,32 @@ Searching "MAI Code 2 guide" and "MAI Code 2 tutorial getting started" returns a
 ### Suggested next step
 
 `/research-topic "mai-code-2-agentic-coding-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
+
+---
+
+## 2026-11-27: Agentic Commerce Payment Protocols - How to Wire Up AI Agent Purchases
+
+**Suggested slug:** `agentic-commerce-payment-protocols-guide`
+**Status:** pending research
+
+### Why this topic, why now
+
+ChatGPT Wallet launched on November 13, 2026, letting OpenAI's "dots" agents make real purchases for users with tokenized card credentials. This triggered a wave of developer interest in how AI agents handle payments. The infrastructure side is maturing fast: Stripe's Agentic Commerce Protocol (ACP) with Shared Payment Tokens, Coinbase's x402 protocol for machine-to-machine payments, Google's Agent Payments Protocol (AP2), Mastercard Agent Pay, and Visa Intelligent Commerce all went live or expanded in 2026. Developer toolkits like Crossmint's Agent Commerce Toolkit, AgentsPay, and Prava now offer APIs and MCP servers for wiring up agent wallets, spend policies, and virtual cards. There is no single developer-focused guide comparing these protocols, showing integration patterns, and covering the security model (tokenized credentials, PCI scope, spend limits). This is the kind of "how do I actually build this" post the blog does well.
+
+### Search demand evidence
+
+- [OpenAI launches ChatGPT Wallet, AI agents pay for purchases](https://news.ycombinator.com/item?id=50487510) - Hacker News thread (posted 2026-11-13)
+- [ChatGPT Wallet](https://news.ycombinator.com/item?id=50518501) - second HN thread (posted Nov 2026)
+- [ChatGPT's new Wallet lets AI agents shop and check out for you](https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/) - TechCrunch coverage (2026-11-13)
+- [OpenAI launches ChatGPT Wallet, allowing its AI agents to make purchases for users](https://www.cnbc.com/2026/11/13/openai-chatgpt-wallet-dot-purchases.html) - CNBC (2026-11-13)
+- [Crossmint Launches Agent Commerce Toolkit](https://www.crossmint.com/announcement/agent-commerce-toolkit-launch) - developer toolkit launch (2026-10-08)
+- [Stripe Agentic Commerce Protocol docs](https://docs.stripe.com/agentic-commerce/protocols/acp) - Stripe's protocol documentation
+- [Developer Guide to Agentic Commerce](https://www.descope.com/blog/post/developer-guide-agentic-commerce) - Descope overview comparing ACP, UCP, AP2, x402, MPP
+
+### Competition check
+
+Searching "agentic commerce developer guide" and "AI agent payment integration tutorial" returns Stripe's own docs (vendor-specific, not cross-protocol), Descope's overview (high-level comparison, not a hands-on integration guide), and several marketing pages from payment startups. No practitioner guide walks through the actual integration patterns across protocols, compares the security models (tokenized credentials vs. stablecoin wallets vs. pre-authorized spend limits), explains PCI scope implications for developers, or shows code-level examples of wiring up agent payments. The blog's existing agent security content (hardening-ai-agents-cicd-prompt-injection, sandbox-ai-agents-hugging-face-breach) gives readers context on agent trust boundaries, making a payment-focused post a natural next piece in the cluster.
+
+### Suggested next step
+
+`/research-topic "agentic-commerce-payment-protocols-guide"` to produce the full content brief with keyword strategy, FAQ candidates, and outline.
